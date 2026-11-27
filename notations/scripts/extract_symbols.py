@@ -775,6 +775,62 @@ def classify(atom, children):
     return 'nu', False
 
 
+STRUCT_RE = re.compile(r'\\(frac|dfrac|tfrac|sum|prod|int|sqrt|left|bigl?|in|le|leq|ge|geq|to|mapsto|cup|cap)(?![A-Za-z])')
+
+
+def secondary_attributes(atom, children):
+    """Attributs secondaires (B2a) : n'influencent pas la classe principale.
+
+    Renvoie dict(composite_portee, motifs_composite, composants_indice, composants_exposant,
+    attributs_secondaires). Les motifs sont évalués séparément sur l'indice et sur l'exposant.
+    """
+    lvl = atom['niveau']
+    direct = [c for c in children if c['niveau'] == lvl + 1]
+    motifs = {'indice': [], 'exposant': []}
+    comp = {}
+    for pos in ('indice', 'exposant'):
+        d = [c for c in direct if c['position'] == pos]
+        comp[pos] = ' '.join(c['glyphe'] for c in d)
+        ids = {c['ref'] for c in d}
+        deeper = [c for c in children if c['niveau'] > lvl + 1]
+        # un descendant plus profond appartient à cette position si son ancêtre direct y est
+        if any(c.get('parent_ref') in ids for c in deeper):
+            motifs[pos].append('script_imbrique')
+        if len(d) >= 2 and any(c['nature'] not in SIMPLE_INDEX_ATOM for c in d):
+            motifs[pos].append('composants_multiples_non_latins')
+        if atom[pos] and STRUCT_RE.search(atom[pos]):
+            motifs[pos].append('structure')
+        if any(c['decoration'] for c in d):
+            motifs[pos].append('decoration')
+    portee = [p for p in ('indice', 'exposant') if motifs[p]]
+    allm = ['%s:%s' % (p, m) for p in ('indice', 'exposant') for m in motifs[p]]
+    # critère porté par la combinaison indice + exposant (ex. \mathcal R_X^\rho)
+    if not portee and len(direct) >= 2 and any(c['nature'] not in SIMPLE_INDEX_ATOM for c in direct):
+        portee = ['indice+exposant']
+        allm.append('combinaison:composants_multiples_non_latins')
+    if atom.get('composite_force'):
+        portee = ['argument_decoration'] + portee
+        allm = ['argument_decoration:expression_decoree'] + allm
+    sec = []
+    if atom['police'] and atom['police'] not in ('mathrm', 'operatorname'):
+        sec.append('police=' + atom['police'])
+    if atom['var']:
+        sec.append('variante_var')
+    if atom['decoration']:
+        sec.append('decoration=' + atom['decoration'])
+    if atom['primes']:
+        sec.append('primes=%d' % atom['primes'])
+    if atom['indice']:
+        sec.append('indice')
+    if atom['exposant']:
+        sec.append('exposant')
+    if atom['nature'] == 'macro_utilisateur':
+        sec.append('macro')
+    return dict(composite_portee='+'.join(portee), motifs_composite=';'.join(allm),
+                composants_indice=comp['indice'], composants_exposant=comp['exposant'],
+                attributs_secondaires=';'.join(sec))
+
+
 # ---------------------------------------------------------------------------
 # Structure du document : sections, environnements, labels
 # ---------------------------------------------------------------------------
@@ -923,6 +979,7 @@ def extract_file(path, relpath, corpus, volume, macros, stats):
         expr_seen[expr_key] += 1
         for a in sorted(atoms, key=lambda a: (a['start'], a['niveau'])):
             cls, variant = classify(a, children.get(a['ref'], []))
+            sec_attr = secondary_attributes(a, children.get(a['ref'], []))
             if a['nature'] == 'non_reconnu':
                 cls = 'non_classe'
             la, ca = li.line_col(a['start'])
@@ -944,7 +1001,7 @@ def extract_file(path, relpath, corpus, volume, macros, stats):
                 indice=norm_ws(a['indice']), exposant=norm_ws(a['exposant']), classe_lexicale=cls,
                 variante=int(variant), niveau=a['niveau'], position=a['position'],
                 porteur='' if a.get('parent_ref') is None or a['parent_ref'] not in by_ref else norm_ws(by_ref[a['parent_ref']]['glyphe']),
-                statut_extraction=a.get('statut', 'ok'), empreinte=fp, extrait=excerpt, _ref=a['ref'],
+                statut_extraction=a.get('statut', 'ok'), empreinte=fp, extrait=excerpt, _ref=a['ref'], **sec_attr,
                 _parent=a.get('parent_ref')))
     stats['unknown'][relpath] = unknown
     stats['math_chars'][relpath] = sum(s['inner_end'] - s['inner_start'] for s in kept if not s['kind'].startswith('commentaire'))
@@ -974,7 +1031,10 @@ OCC_FIELDS = ['id', 'corpus', 'volume', 'fichier', 'ligne', 'colonne', 'expr_lig
               'label_stable', 'type_ancre', 'section', 'environnement', 'contexte', 'expr_id',
               'symbole_source', 'forme_developpee', 'glyphe', 'famille_lexicale', 'nature', 'police',
               'variante_var', 'decoration', 'primes', 'indice', 'exposant', 'classe_lexicale', 'variante',
-              'niveau', 'position', 'porteur', 'parent_id', 'statut_extraction', 'empreinte', 'extrait']
+              'niveau', 'position', 'porteur', 'parent_id', 'statut_extraction', 'empreinte', 'extrait',
+              # attributs secondaires (décision B2a), ajoutés après les colonnes de référence G0.1
+              'composite_portee', 'motifs_composite', 'composants_indice', 'composants_exposant',
+              'attributs_secondaires']
 
 
 def run(root, out):

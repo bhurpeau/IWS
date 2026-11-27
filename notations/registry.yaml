@@ -1,0 +1,4794 @@
+{
+ "_meta": {
+  "titre": "Registre sémantique CANDIDAT INTERMÉDIAIRE — G0.2 (itération 1)",
+  "statut": "candidat intermédiaire ; non normatif ; non validé ; G0.2 non clôturée (lecture partielle du volume I, R-G0-10) ; enrichissement en G0.2bis",
+  "etat_reference": "audits/G0/G0_02_semantic/reference_95/registry_G0_02_iter1.json (copie figée des 95 objets, base du différentiel G0.2bis)",
+  "format": "JSON (sous-ensemble de YAML 1.2), lisible par tout analyseur YAML et par le module json de Python",
+  "commit_sources": "c74fa047171ff51e308f1855d8f636add2ac33ca",
+  "inventaire_reference": "audits/G0/G0_01_inventory (commit 05afddd)",
+  "regles": [
+   "Identifiant indépendant du glyphe ; préfixe de volume (I, II, C pour compagnons) : aucune identité intervolumes n'est établie (G0.3).",
+   "Les champs type, domaine, codomaine ne sont renseignés que lorsqu'ils figurent dans la source ; sinon null.",
+   "statut_definition : EXPLICIT | IMPLICIT | AMBIGUOUS | UNDEFINED ; motif_statut justifie l'attribution.",
+   "confiance : haute (passage définitionnel lu intégralement) | moyenne (passage lu partiellement ou définition dispersée) | faible (identification sur indices contextuels).",
+   "notation_canonique : toujours vide en G0.2.",
+   "selecteurs : critères lexicaux reliant l'objet aux occurrences de l'inventaire G0.1 (glyphe exact, indice/exposant en expression régulière, fichier, plage de lignes). Un sélecteur borne une portée ; il ne prouve pas l'identité de chaque occurrence."
+  ]
+ },
+ "objets": [
+  {
+   "id": "II.HYB.BASE_SYSTEM",
+   "phase": "G0.2a",
+   "designation": "Système hybride de base",
+   "notations": [
+    {
+     "forme": "S=(\\X,C,F,D,K;\\Exec)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "structure (n-uplet de données hybrides)",
+   "type": "système S=(\\X,C,F,D,K;\\Exec)",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     75,
+     81
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "aucune décomposition en produit ni structure fibrée sur \\X n'est imposée"
+   ],
+   "portee": "globale (volume II)",
+   "dependances": [
+    "II.HYB.STATE_SPACE",
+    "II.HYB.FLOW_SET",
+    "II.HYB.FLOW_GENERATOR",
+    "II.HYB.JUMP_SET",
+    "II.HYB.JUMP_OPERATOR",
+    "II.HYB.EXEC_SEMANTICS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "S",
+     "indice": "^$",
+     "lignes": [
+      62,
+      600
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition « Système hybride de base »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.STATE_SPACE",
+   "phase": "G0.2a",
+   "designation": "Ensemble des états complets",
+   "notations": [
+    {
+     "forme": "\\X (macro → \\mathcal X)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "ensemble",
+   "type": "ensemble",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "un état comprend variables continues, configuration structurelle et mémoire nécessaires",
+    "aucune structure fibrée"
+   ],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{X}",
+     "nature": "macro_utilisateur"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« où \\X est l'ensemble des états complets »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.FLOW_SET",
+   "phase": "G0.2a",
+   "designation": "Ensemble de flot",
+   "notations": [
+    {
+     "forme": "C",
+     "portee": "volume II, réservé (audit V5.16)"
+    },
+    {
+     "forme": "C_S, C_T",
+     "portee": "morphismes (indice du système)"
+    }
+   ],
+   "nature": "sous-ensemble",
+   "type": "C ⊆ \\X",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale ; réservé selon l'audit V5.16",
+   "dependances": [
+    "II.HYB.STATE_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "C",
+     "indice": "^$|^S$|^T$",
+     "exposant": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« C\\subseteq\\X l'ensemble de flot »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Le sélecteur exclut C^1, C^2 (classes de régularité) et C0, C1, C23 (conditions du candidat) ; les occurrences de C restantes ne sont pas toutes vérifiées individuellement."
+  },
+  {
+   "id": "II.HYB.FLOW_GENERATOR",
+   "phase": "G0.2a",
+   "designation": "Générateur continu",
+   "notations": [
+    {
+     "forme": "F",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "donnée de flot",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.STATE_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "F",
+     "indice": "^$",
+     "lignes": [
+      75,
+      440
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« F le générateur continu » ; type non précisé",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.JUMP_SET",
+   "phase": "G0.2a",
+   "designation": "Ensemble de saut",
+   "notations": [
+    {
+     "forme": "D",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "sous-ensemble",
+   "type": "D ⊆ \\X",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.STATE_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "D",
+     "indice": "^$",
+     "lignes": [
+      75,
+      700
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« D\\subseteq\\X l'ensemble de saut »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.JUMP_OPERATOR",
+   "phase": "G0.2a",
+   "designation": "Opérateur de saut (élémentaire, granularité G0)",
+   "notations": [
+    {
+     "forme": "K",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "K",
+     "indice": "^$",
+     "exposant": "^$",
+     "lignes": [
+      75,
+      600
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« K l'opérateur de saut » ; domaine non précisé (K(C\\cap D)\\subseteq C cité comme condition suffisante l. 97)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.CASCADE_MAP",
+   "phase": "G0.2a",
+   "designation": "Application de cascade (saut agrégé à granularité G1)",
+   "notations": [
+    {
+     "forme": "K^*",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     407,
+     478
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "cascade déterministe et finie (l. 478)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.JUMP_OPERATOR",
+    "II.GRAN.G1"
+   ],
+   "relations_intra": [
+    {
+     "type": "derive_de",
+     "cible": "II.HYB.JUMP_OPERATOR",
+     "source": "l. 407 : « au niveau G0, le même rôle est joué par les sauts élémentaires K »"
+    }
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "K",
+     "exposant": "^\\*$|^\\\\ast$"
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "aucune définition autonome ; rôle fixé par γ^+(t)=K^*(γ^-(t)) (l. 478) et par l. 407",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.EXEC_SEMANTICS",
+   "phase": "G0.2a",
+   "designation": "Sémantique d'exécution",
+   "notations": [
+    {
+     "forme": "\\Exec (macro → \\operatorname{Exec})",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application (sémantique)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     80,
+     80
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "présente lorsque l'exécution ne se déduit pas sans ambiguïté de (C,F,D,K)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Exec}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« \\Exec la sémantique d'exécution »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.EXECUTION",
+   "phase": "G0.2a",
+   "designation": "Exécution hybride issue de x sous l'histoire H",
+   "notations": [
+    {
+     "forme": "\\gamma_{x,\\mathcal H}",
+     "portee": "volume II (« utilisée dans toute la suite »)"
+    },
+    {
+     "forme": "\\gamma",
+     "portee": "exécution générique (G1, morphismes)"
+    }
+   ],
+   "nature": "exécution hybride",
+   "type": "γ_{x,H}:=Exec(x,H)",
+   "domaine": "dom γ_{x,H} ⊆ R_{≥0}×N",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     85,
+     89
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "x ∈ C, H ∈ \\Madm_x"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.EXEC_SEMANTICS",
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\gamma",
+     "indice": "x|\\\\mathcal H|^$",
+     "lignes": [
+      80,
+      600
+     ],
+     "exposant": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition encadrée γ_{x,H}:=Exec(x,H)",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "γ_1 (paramètre du noyau, l. 616 et suiv.) est exclu par la plage et l'indice."
+  },
+  {
+   "id": "II.HYB.WELL_POSEDNESS",
+   "phase": "G0.2a",
+   "designation": "Socle de bonne position H1–H4",
+   "notations": [
+    {
+     "forme": "H1--H4",
+     "portee": "volume II (texte)"
+    }
+   ],
+   "nature": "famille d'hypothèses",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     91,
+     91
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "contenu décrit en prose (existence et unicité du flot, déterminisme des événements, priorité au saut, absence de Zénon), « regroupées provisoirement sous les noms H1--H4 » sans répartition explicite entre H1, H2, H3, H4",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.ADMISSIBILITY_INVARIANCE",
+   "phase": "G0.2a",
+   "designation": "Invariance d'admissibilité",
+   "notations": [
+    {
+     "forme": "(propriété encadrée)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "propriété (hypothèse du socle)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     91,
+     97
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.EXECUTION",
+    "II.HYB.FLOW_SET"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "énoncé encadré x_0∈C, H∈\\Madm_{x_0} ⇒ γ_{x_0,H}(t,j)∈C",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HYB.AMBIENT_CLASS",
+   "phase": "G0.2a",
+   "designation": "Classe ambiante des systèmes hybrides bien posés",
+   "notations": [
+    {
+     "forme": "\\Hyb (macro → \\mathfrak H)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "classe",
+   "type": "classe de systèmes",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     99,
+     104
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "relative à la famille (\\Madm_x) déclarée avec la présentation"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.WELL_POSEDNESS",
+    "II.HYB.ADMISSIBILITY_INVARIANCE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{H}",
+     "nature": "macro_utilisateur",
+     "indice": "^$",
+     "exposant": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition encadrée \\Hyb := {S | H1–H4 et invariance}",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.MOR.AMBIENT_CATEGORY",
+   "phase": "G0.2a",
+   "designation": "Catégorie ambiante à granularité G et couche observationnelle",
+   "notations": [
+    {
+     "forme": "\\Hyb_G, \\Hyb_{G_0}, \\Hyb_{G_1}, \\Hyb_G^{\\mathrm{obs}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "catégorie",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     504,
+     569
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "sections Granularités et Morphismes",
+   "dependances": [
+    "II.MOR.DYNAMIC_MORPHISM"
+   ],
+   "relations_intra": [
+    {
+     "type": "distinct_de",
+     "cible": "II.HYB.AMBIENT_CLASS",
+     "source": "même glyphe \\Hyb indexé par G ; l. 506 inclusion \\Hyb_{G_0}\\subseteq\\Hyb_{G_1} « provisoirement »"
+    }
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{H}",
+     "nature": "macro_utilisateur",
+     "indice": "G"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On note \\Hyb_G la catégorie ambiante » (l. 569)",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Usage du même glyphe pour une classe (l. 99) et une catégorie indexée (l. 569) : relevé, non arbitré."
+  },
+  {
+   "id": "II.HIST.MONOID",
+   "phase": "G0.2a",
+   "designation": "Monoïde des histoires (épisodes)",
+   "notations": [
+    {
+     "forme": "(\\M,\\cdot,\\varepsilon)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\M_S, \\M_T",
+     "portee": "morphismes"
+    }
+   ],
+   "nature": "monoïde",
+   "type": "monoïde",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     108,
+     108
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "provenance_externe": "« Conformément à l'Annexe G du manuscrit » : renvoi explicite au volume I (relation à instruire en G0.3)",
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{M}",
+     "nature": "macro_utilisateur",
+     "symbole": "^\\\\M(?!adm)"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« une histoire finie est un mot d'un monoïde d'épisodes (\\M,·,ε) » ; la construction est déléguée à l'annexe G",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.ADMISSIBLE_FAMILY",
+   "phase": "G0.2a",
+   "designation": "Famille des histoires admissibles depuis chaque état",
+   "notations": [
+    {
+     "forme": "(\\Madm_x)_{x\\in C}, \\Madm_x",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "famille d'ensembles",
+   "type": "\\Madm_x ⊆ \\M pour x ∈ C",
+   "domaine": "C (indice)",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     83,
+     112
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale ; donnée constitutive de la présentation",
+   "dependances": [
+    "II.HIST.MONOID",
+    "II.HYB.FLOW_SET"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{M}",
+     "nature": "macro_utilisateur",
+     "symbole": "^\\\\Madm_"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition l. 83, rappel encadré l. 110",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.ADMISSIBLE_UNION",
+   "phase": "G0.2a",
+   "designation": "Union des histoires admissibles quelque part",
+   "notations": [
+    {
+     "forme": "\\Madm",
+     "portee": "volume II, usage restreint"
+    }
+   ],
+   "nature": "ensemble",
+   "type": "\\Madm=\\bigcup_x \\Madm_x ⊆ \\M",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     83,
+     83
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "« ne sera jamais utilisée seule pour typer une exécution »"
+   ],
+   "portee": "restreinte",
+   "dependances": [
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{M}",
+     "nature": "macro_utilisateur",
+     "indice": "^$",
+     "symbole": "^\\\\Madm$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On peut noter \\Madm=\\bigcup... »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.END_STATE",
+   "phase": "G0.2a",
+   "designation": "État terminal d'une histoire exécutée",
+   "notations": [
+    {
+     "forme": "\\End(x,\\mathcal H)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application partielle",
+   "type": null,
+   "domaine": "paires (x,H) exécutables ; \\mathcal E_I^{adm} dans la tour",
+   "codomaine": "\\X",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     114,
+     118
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "à G1 : état post-cascade par convention"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.EXECUTION"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{End}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on note \\End(x,H) l'état terminal correspondant »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.CONTINUATIONS",
+   "phase": "G0.2a",
+   "designation": "Continuations admissibles après un préfixe",
+   "notations": [
+    {
+     "forme": "\\mathcal H_0^{-1}\\Madm_{x_0}",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\mathcal H_k^{-1}\\mathcal B_{x_0}",
+     "portee": "régime (I,\\mathcal B)"
+    }
+   ],
+   "nature": "ensemble (quotient à gauche)",
+   "type": "{H∈\\M : H_0·H ∈ \\Madm_{x_0}}",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     118,
+     123
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HIST.ADMISSIBLE_FAMILY",
+    "II.HIST.MONOID"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{H}",
+     "exposant": "^-1$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition ensembliste l. 120–123 ; variante relative à \\mathcal B l. 225–226",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.PREFIX_STATE_COMPATIBILITY",
+   "phase": "G0.2a",
+   "designation": "Compatibilité préfixe–état",
+   "notations": [
+    {
+     "forme": "\\mathcal H_0^{-1}\\Madm_{x_0}=\\Madm_{\\End(x_0,\\mathcal H_0)}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "propriété (hypothèse imposée)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     124,
+     131
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HIST.CONTINUATIONS",
+    "II.HIST.END_STATE"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "égalité encadrée « On impose en outre »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.PRESENTATION",
+   "phase": "G0.2a",
+   "designation": "Présentation IWS candidate",
+   "notations": [
+    {
+     "forme": "\\mathbf S=(S,\\rho_X,(\\Madm_x)_{x\\in C})",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "structure (triplet)",
+   "type": "triplet",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     136,
+     146
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "π_s constante pendant chaque phase de flot"
+   ],
+   "portee": "globale ; « provisoirement »",
+   "dependances": [
+    "II.HYB.BASE_SYSTEM",
+    "II.PRES.READOUT",
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathbf{S}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition « Présentation IWS candidate »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.READOUT",
+   "phase": "G0.2a",
+   "designation": "Lecture séparée (lecture complète de l'état)",
+   "notations": [
+    {
+     "forme": "\\rho_X=(\\pi_s,\\rho_{\\mathrm{int}})",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\rho_{X,S}, \\rho_{X,T}",
+     "portee": "morphismes (système source/cible)"
+    }
+   ],
+   "nature": "application",
+   "type": "\\X → \\Sstruct × Y_{int}",
+   "domaine": "\\X",
+   "codomaine": "\\Sstruct × Y_{int} = Y",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     141,
+     145
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "décompose le codomaine observable, non l'espace des états (l. 151–161)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.STRUCT_READOUT",
+    "II.PRES.INTERNAL_READOUT",
+    "II.PRES.OBS_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\rho",
+     "indice": "^X$|^X,S$|^X,T$",
+     "exposant": "^(?!-1$)"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition encadrée avec domaine et codomaine",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.STRUCT_READOUT",
+   "phase": "G0.2a",
+   "designation": "Lecture structurelle",
+   "notations": [
+    {
+     "forme": "\\pi_s",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application",
+   "type": "\\X → \\Sstruct",
+   "domaine": "\\X",
+   "codomaine": "\\Sstruct",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     143,
+     145
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "constante pendant chaque phase de flot"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.STRUCT_PROJECTION"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\pi",
+     "indice": "^s$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« La composante π_s est la lecture structurelle » ; π_s = r_s∘ρ_X",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.INTERNAL_READOUT",
+   "phase": "G0.2a",
+   "designation": "Lecture non structurelle (interne)",
+   "notations": [
+    {
+     "forme": "\\rho_{\\mathrm{int}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application",
+   "type": "\\X → Y_{int}",
+   "domaine": "\\X",
+   "codomaine": "Y_{int}",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     143,
+     145
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\rho",
+     "indice": "mathrm\\{int\\}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« ρ_int est la lecture non structurelle »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.STRUCT_VALUES",
+   "phase": "G0.2a",
+   "designation": "Espace des valeurs structurelles",
+   "notations": [
+    {
+     "forme": "\\Sstruct (macro → \\mathcal S)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "ensemble",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     143,
+     143
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{S}",
+     "nature": "macro_utilisateur"
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "introduit seulement comme codomaine de π_s ; aucune définition autonome",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.INTERNAL_OBS_SPACE",
+   "phase": "G0.2a",
+   "designation": "Espace des lectures internes",
+   "notations": [
+    {
+     "forme": "Y_{\\mathrm{int}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "ensemble",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     143,
+     143
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "Y",
+     "indice": "mathrm\\{int\\}"
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "introduit seulement comme second facteur du codomaine de ρ_X",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.OBS_SPACE",
+   "phase": "G0.2a",
+   "designation": "Espace des lectures (codomaine observable)",
+   "notations": [
+    {
+     "forme": "Y=\\Sstruct\\times Y_{\\mathrm{int}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "ensemble produit",
+   "type": "\\Sstruct × Y_{int}",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     145,
+     145
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "le produit est dans l'espace des lectures et ne confère aucune structure fibrée à \\X"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.STRUCT_VALUES",
+    "II.PRES.INTERNAL_OBS_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "Y",
+     "indice": "^$",
+     "lignes": [
+      140,
+      900
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On pose explicitement Y=\\Sstruct×Y_int »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.STRUCT_PROJECTION",
+   "phase": "G0.2a",
+   "designation": "Projection structurelle dans l'espace des lectures",
+   "notations": [
+    {
+     "forme": "r_s=\\operatorname{pr}_1",
+     "portee": "volume II"
+    },
+    {
+     "forme": "r_{s,S}, r_{s,T}",
+     "portee": "morphismes"
+    }
+   ],
+   "nature": "application (projection de produit)",
+   "type": "Y → \\Sstruct",
+   "domaine": "Y",
+   "codomaine": "\\Sstruct",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     145,
+     145
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.OBS_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "r",
+     "indice": "^s$|^s,S$|^s,T$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« r_s=pr_1:Y→\\Sstruct »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.EXP.REGIME",
+   "phase": "G0.2a",
+   "designation": "Régime expérimental : états initiaux et classe d'histoires",
+   "notations": [
+    {
+     "forme": "(I,\\mathcal B), I\\subseteq C, \\mathcal B\\subseteq\\M",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "paire d'ensembles",
+   "type": "I ⊆ C, \\mathcal B ⊆ \\M",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     163,
+     167
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "régime maximal I=C, \\mathcal B=\\M"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.FLOW_SET",
+    "II.HIST.MONOID"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{B}",
+     "indice": "^$|^x$|^x_0$|^\\{x_0\\}$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "I",
+     "indice": "^$",
+     "lignes": [
+      160,
+      375
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "I",
+     "indice": "^$",
+     "lignes": [
+      435,
+      600
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "encadré l. 165 ; \\mathcal B_x:=\\mathcal B\\cap\\Madm_x l. 202",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "I est aussi utilisé dans les noms de témoins I1, I2 (l. 376–433) : exclus par la plage partielle seulement ; à vérifier."
+  },
+  {
+   "id": "II.PRES.ADMISSIBLE_PAIRS",
+   "phase": "G0.2a",
+   "designation": "Domaine des paires admissibles",
+   "notations": [
+    {
+     "forme": "\\mathcal E_I^{\\mathrm{adm}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "ensemble",
+   "type": "{(x,H): x∈I, H∈\\Madm_x}",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     178,
+     182
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "purement ensembliste ; aucune structure fibrée"
+   ],
+   "portee": "tour des projections",
+   "dependances": [
+    "II.EXP.REGIME",
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{E}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition par := l. 180",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.ORGANISATION_FIBRE",
+   "phase": "G0.2a",
+   "designation": "Fibre d'organisation",
+   "notations": [
+    {
+     "forme": "X_s=\\pi_s^{-1}(s)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "X_A, X_{A'}",
+     "portee": "noyau (structure = graphe)"
+    }
+   ],
+   "nature": "sous-ensemble (préimage)",
+   "type": "π_s^{-1}(s) ⊆ \\X",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     184,
+     185
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "« fibre » = préimage, sans structure de fibré (l. 149)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.STRUCT_READOUT"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "X",
+     "indice": "^s$|^s'$|^A$|^\\{A'\\}$|^A'$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« la fibre d'organisation X_s=π_s^{-1}(s) »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.PRES.OPACITY_FIBRE_READOUT",
+   "phase": "G0.2a",
+   "designation": "Fibre d'opacité au sens de la tour (préimage dans \\X)",
+   "notations": [
+    {
+     "forme": "\\rho_X^{-1}(s,y_{\\mathrm{int}})",
+     "portee": "section tour des projections"
+    }
+   ],
+   "nature": "sous-ensemble (préimage)",
+   "type": "ρ_X^{-1}(s,y_int) ⊆ X_s",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     185,
+     194
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "section 3",
+   "dependances": [
+    "II.PRES.READOUT",
+    "II.PRES.ORGANISATION_FIBRE"
+   ],
+   "relations_intra": [
+    {
+     "type": "variante_terminologique",
+     "cible": "II.OPAC.OPACITY_FIBRE",
+     "source": "même terme « fibre d'opacité » ; l. 863 ajoute l'intersection avec C"
+    }
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\rho",
+     "indice": "^X$",
+     "exposant": "^-1$",
+     "lignes": [
+      140,
+      860
+     ]
+    }
+   ],
+   "statut_definition": "AMBIGUOUS",
+   "motif_statut": "le même terme désigne ρ_X^{-1}(s,y_int) (l. 185) puis ρ_X^{-1}(y)∩C (l. 863) : deux ensembles qui coïncident seulement si la préimage est incluse dans C",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "anomalie": "A-G02-01"
+  },
+  {
+   "id": "II.OPAC.OPACITY_FIBRE",
+   "phase": "G0.2a",
+   "designation": "Fibre d'opacité (états admissibles de lecture y)",
+   "notations": [
+    {
+     "forme": "\\mathcal O_y",
+     "portee": "section exploration à profondeur finie"
+    }
+   ],
+   "nature": "sous-ensemble",
+   "type": "\\mathcal O_y := ρ_X^{-1}(y) ∩ C",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     861,
+     865
+    ],
+    "label": "sec:opacity-finite-depth",
+    "environnement": null
+   },
+   "hypotheses": [
+    "y ∈ Y"
+   ],
+   "portee": "section 13 et suivantes",
+   "dependances": [
+    "II.PRES.READOUT",
+    "II.HYB.FLOW_SET"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{O}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition par := l. 863",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "anomalie": "A-G02-01"
+  },
+  {
+   "id": "II.HIST.EFFECTIVE_HISTORICITY",
+   "phase": "G0.2a",
+   "designation": "Historicité effective générale",
+   "notations": [
+    {
+     "forme": "H_{\\rho,I,\\mathcal B}",
+     "portee": "volume II"
+    },
+    {
+     "forme": "H_\\rho^{\\max}",
+     "portee": "régime maximal"
+    }
+   ],
+   "nature": "propriété (existentielle)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     200,
+     239
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "régime (I,\\mathcal B)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.EXP.REGIME",
+    "II.PRES.READOUT",
+    "II.HIST.CONTINUATIONS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "H",
+     "indice": "rho",
+     "exposant": "^$|^\\\\max$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "conditions énoncées l. 204–227, mais annoncées comme « schématiques » ; « deux trajectoires lues différentes » n'est pas formalisé",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Le sélecteur regroupe aussi H_ρ^{s,ord} (objet distinct, II.HIST.ORDINAL_HISTORICITY) : la répartition par exposant est faite par ce dernier."
+  },
+  {
+   "id": "II.HIST.CHRONOLOGICAL_HISTORICITY",
+   "phase": "G0.2a",
+   "designation": "Historicité structurelle chronologique",
+   "notations": [
+    {
+     "forme": "H_t^s",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "propriété",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     243,
+     245
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "locale ; non retenue comme constitutive",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "H",
+     "indice": "^t$"
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "décrite en prose (« deux histoires … fassent évoluer la structure à des dates différentes »), sans formule",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.STRUCTURAL_WORD",
+   "phase": "G0.2a",
+   "designation": "Mot structurel d'une exécution",
+   "notations": [
+    {
+     "forme": "\\Word_s(\\gamma)=\\operatorname{red}(\\pi_s\\circ\\gamma)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\mathbf w, w",
+     "portee": "mots (génériques ou fixés)"
+    }
+   ],
+   "nature": "application (exécution ↦ mot)",
+   "type": null,
+   "domaine": "exécutions",
+   "codomaine": "mots sur \\Sstruct (implicite)",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     249,
+     251
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "π_s constante pendant les phases de flot"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.STRUCT_READOUT"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Word}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathbf{w}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On définit son mot structurel » ; red (suppression des répétitions consécutives) défini en prose",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.HIST.PREFIX_ORDER",
+   "phase": "G0.2a",
+   "designation": "Ordre préfixe et incomparabilité des mots",
+   "notations": [
+    {
+     "forme": "\\preceq_{\\mathrm{pref}}, \\perp",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "relations binaires",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     253,
+     257
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.HIST.STRUCTURAL_WORD"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on écrit … lorsque w1 est un préfixe de w2 », « ⊥ lorsqu'ils sont incomparables »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Relations non inventoriées par G0.1 (relations exclues) : aucune occurrence associée."
+  },
+  {
+   "id": "II.HIST.ORDINAL_HISTORICITY",
+   "phase": "G0.2a",
+   "designation": "Historicité structurelle ordinale",
+   "notations": [
+    {
+     "forme": "H_\\rho^{s,\\mathrm{ord}}, H_\\rho^{s,\\mathrm{ord},\\max}, H^{s,\\mathrm{ord}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "propriété (existentielle)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     259,
+     276
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [
+    "régime (I,\\mathcal B)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HIST.STRUCTURAL_WORD",
+    "II.HIST.PREFIX_ORDER",
+    "II.HIST.CONTINUATIONS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "H",
+     "exposant": "s,\\\\mathrm\\{ord"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition « Historicité structurelle ordinale »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.EFF.INTERNAL_RESPONSE",
+   "phase": "G0.2a",
+   "designation": "Application partielle de réponse interne",
+   "notations": [
+    {
+     "forme": "R_x^{\\rho_{\\mathrm{int}}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "application partielle",
+   "type": "\\Madm_x → Traj(Y_int), H ↦ ρ_int∘γ_{x,H}",
+   "domaine": "\\Madm_x (fait partie de l'application)",
+   "codomaine": "\\operatorname{Traj}(Y_{\\mathrm{int}})",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     290,
+     298
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "x ∈ C"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.INTERNAL_READOUT",
+    "II.HYB.EXECUTION",
+    "II.HIST.ADMISSIBLE_FAMILY"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "R",
+     "exposant": "rho"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on définit l'application partielle de réponse interne » ; Traj(·) non défini séparément",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.EFF.MAX_REPERTOIRE",
+   "phase": "G0.2a",
+   "designation": "Répertoire comportemental maximal d'une structure",
+   "notations": [
+    {
+     "forme": "\\Rep^{\\max}(s)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\Rep_{I,\\mathcal B}(s)",
+     "portee": "régime restreint"
+    }
+   ],
+   "nature": "ensemble d'applications",
+   "type": "{R_x^{ρ_int} | x ∈ X_s∩C}",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     300,
+     312
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "régime maximal constitutif I=C"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.EFF.INTERNAL_RESPONSE",
+    "II.PRES.ORGANISATION_FIBRE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Rep}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définition encadrée de \\Rep^{max} ; \\Rep_{I,B} seulement annoncé (« on peut de même définir »)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.EFF.SUPPORT_REACH",
+   "phase": "G0.2a",
+   "designation": "Support et ensembles atteints (régime, granularité G1)",
+   "notations": [
+    {
+     "forme": "\\Supp, \\Supp^{G_1}_{\\mathcal B}(I)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\Reach^{G_1}_{\\mathcal B}(I), \\Reach^{\\mathrm{flow}}_{\\mathcal B}(I)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "sous-ensembles",
+   "type": "\\Supp^{G_1}_{\\mathcal B}(I)=I∪\\Reach^{G_1}_{\\mathcal B}(I)",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     480,
+     490
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "sections efficacité et granularités",
+   "dependances": [
+    "II.EXP.REGIME",
+    "II.GRAN.G1"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Supp}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Reach}"
+    }
+   ],
+   "statut_definition": "AMBIGUOUS",
+   "motif_statut": "\\Supp est employé l. 300 (\\Supp=C) avant toute définition ; \\Supp^{G_1} est défini l. 489 via \\Reach^{flow}, lui-même non défini",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "anomalie": "A-G02-02"
+  },
+  {
+   "id": "II.CLASS.IWS_CANDIDATE",
+   "phase": "G0.2a",
+   "designation": "Classe IWS — candidat courant (C0, C1, C23^pot, C4)",
+   "notations": [
+    {
+     "forme": "\\IWS (macro → \\mathfrak{IWS})",
+     "portee": "volume II"
+    },
+    {
+     "forme": "C0, C1, C23^{\\mathrm{pot}}, C4",
+     "portee": "conditions"
+    }
+   ],
+   "nature": "classe (candidate)",
+   "type": "classe de présentations",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     323,
+     344
+    ],
+    "label": null,
+    "environnement": "candidate"
+   },
+   "hypotheses": [
+    "« appartient provisoirement » ; « ne définit pas encore définitivement \\IWS » (l. 316)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.PRES.PRESENTATION",
+    "II.HYB.AMBIENT_CLASS",
+    "II.HIST.ORDINAL_HISTORICITY",
+    "II.EFF.MAX_REPERTOIRE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathfrak{IWS}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement candidate ; statut scientifique : candidat, non définition arrêtée",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Les étiquettes C0, C1, C23^{pot}, C4 sont lexicalement des lettres C suivies de chiffres : non rattachables par sélecteur."
+  },
+  {
+   "id": "II.CLASS.C23_ACT",
+   "phase": "G0.2a",
+   "designation": "Renforcement actualisé de C23",
+   "notations": [
+    {
+     "forme": "C23^{\\mathrm{act}}",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "propriété",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     362,
+     371
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "globale",
+   "dependances": [
+    "II.CLASS.IWS_CANDIDATE",
+    "II.EFF.INTERNAL_RESPONSE",
+    "II.EFF.MAX_REPERTOIRE"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition « Renforcement actualisé de C23 » ; formulation « par exemple … (ou symétriquement) »",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.TAX.MECHANISM_WITNESSES",
+   "phase": "G0.2a",
+   "designation": "Témoins mécanistiques I1_ρ et I2 (F, D, K^*)",
+   "notations": [
+    {
+     "forme": "I1_\\rho^F, I1_\\rho^D, I1_\\rho^{K^*}, I2^F, I2^D, I2^{K^*}",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\mathcal L_F",
+     "portee": "dérivée de la lecture le long du flot"
+    }
+   ],
+   "nature": "propriétés diagnostiques (existentielles)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     376,
+     434
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "\\mathcal L_F ρ_X défini lorsque l'expression a un sens"
+   ],
+   "portee": "section taxonomie ; non constitutif",
+   "dependances": [
+    "II.PRES.READOUT",
+    "II.HYB.CASCADE_MAP"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "I",
+     "lignes": [
+      376,
+      434
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{L}",
+     "indice": "^F$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Les six témoins sont définis explicitement » ; formules encadrées",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.GRAN.G1",
+   "phase": "G0.2a",
+   "designation": "Granularités G0 et G1 ; trajectoire G1, temps événementiels, bords de cascade",
+   "notations": [
+    {
+     "forme": "G_0, G_1",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\bar\\gamma, \\mathcal T_{\\mathrm{ev}}(\\gamma), \\gamma^-(t), \\gamma^+(t)",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "conventions de granularité et objets dérivés d'une exécution",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     461,
+     478
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "γ^-(0):=x_0 si t=0 et x_0∈D (convention)"
+   ],
+   "portee": "globale",
+   "dependances": [
+    "II.HYB.EXECUTION"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "G",
+     "indice": "^0$|^1$|^2$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{T}",
+     "indice": "mathrm\\{ev\\}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\gamma",
+     "exposant": "^[+-]$",
+     "lignes": [
+      460,
+      520
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définitions encadrées de \\mathcal T_ev et de γ^±(t) ; G0/G1 décrites en prose",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.MOR.DYNAMIC_MORPHISM",
+   "phase": "G0.2a",
+   "designation": "Morphisme dynamique, flèches observationnelles et structurelles",
+   "notations": [
+    {
+     "forme": "(f,\\eta):S\\to T",
+     "portee": "volume II"
+    },
+    {
+     "forme": "\\psi_X, \\psi_X=\\psi_s\\times\\psi_{\\mathrm{int}}",
+     "portee": "transport de lecture"
+    }
+   ],
+   "nature": "morphisme (paire application d'états, transport d'histoires)",
+   "type": "(f,η) avec η:\\M_S→\\M_T morphisme de monoïdes",
+   "domaine": "S",
+   "codomaine": "T",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     521,
+     567
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "f(C_S)⊆C_T ; η(ε_S)=ε_T ; η multiplicatif ; η(\\Madm_{S,x})⊆\\Madm_{T,f(x)} ; préservation des exécutions à la granularité déclarée",
+    "flèche structurelle : ψ_s injective sur les valeurs pertinentes"
+   ],
+   "portee": "sections flèches et morphismes",
+   "dependances": [
+    "II.HIST.MONOID",
+    "II.HIST.ADMISSIBLE_FAMILY",
+    "II.PRES.READOUT"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\psi"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\eta",
+     "lignes": [
+      545,
+      580
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "f",
+     "lignes": [
+      490,
+      580
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "conditions énumérées l. 556–567 ; flèche structurelle encadrée l. 527",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Flèche événementielle (l. 543) : définie seulement par « transport explicite des macro-transitions », sans formule."
+  },
+  {
+   "id": "II.DEPTH.DEPTH_RANK",
+   "phase": "G0.2a",
+   "designation": "Profondeur comportementale k et rang local r d'un Kairos",
+   "notations": [
+    {
+     "forme": "k",
+     "portee": "profondeur (partitions, mots)"
+    },
+    {
+     "forme": "r, 1\\le r\\le k",
+     "portee": "bloc « Murs actifs » et suivants"
+    }
+   ],
+   "nature": "indices entiers",
+   "type": "k ∈ N ; 1 ≤ r ≤ k",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     320,
+     320
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "à G1, k compte les Kairos et ne se confond pas avec l'indice discret j"
+   ],
+   "portee": "sections 8 et 13 ; convention k/r à partir de l. 1299",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "k",
+     "niveau": "0",
+     "lignes": [
+      314,
+      1925
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "r",
+     "niveau": "0",
+     "lignes": [
+      1297,
+      1925
+     ],
+     "indice": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "l. 320 pour k ; l. 1299 « k désigne la profondeur … et r le rang local »",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Les sélecteurs couvrent toutes les occurrences de niveau 0 dans les plages ; une partie des k est un indice muet (sommes, polynômes) ; voir l'échantillon de contrôle."
+  },
+  {
+   "id": "II.OPAC.SECTION_PARAM",
+   "phase": "G0.2a",
+   "designation": "Coupe d'une fibre d'opacité et sa paramétrisation (Σ, Ω, Φ, ϑ)",
+   "notations": [
+    {
+     "forme": "\\Sigma\\subset\\mathcal O_y",
+     "portee": "coupe"
+    },
+    {
+     "forme": "\\Omega",
+     "portee": "domaine paramétrique"
+    },
+    {
+     "forme": "\\Phi:\\Omega\\to\\Sigma",
+     "portee": "homéomorphisme"
+    },
+    {
+     "forme": "\\vartheta\\in\\Omega",
+     "portee": "paramètre caché"
+    }
+   ],
+   "nature": "sous-ensemble, domaine, homéomorphisme, paramètre",
+   "type": "Φ:Ω→Σ homéomorphisme",
+   "domaine": "Ω",
+   "codomaine": "Σ",
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     871,
+     875
+    ],
+    "label": "sec:opacity-finite-depth",
+    "environnement": null
+   },
+   "hypotheses": [
+    "coupes bidimensionnelles (l. 871)",
+    "Ω semi-algébrique dans le bloc dédié (audit V5.16)"
+   ],
+   "portee": "section 13",
+   "dependances": [
+    "II.OPAC.OPACITY_FIBRE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\Sigma"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Omega",
+     "indice": "^$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Phi"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\vartheta"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on se donne un domaine Ω et un homéomorphisme Φ:Ω→Σ. Le paramètre caché est noté ϑ∈Ω »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Réservations V5.16 confirmées lexicalement (28 Σ, 25 Ω, 11 Φ ; ϑ 27 contre 26 en V5.16)."
+  },
+  {
+   "id": "II.OPAC.WORD_PARTITION",
+   "phase": "G0.2a",
+   "designation": "Partition expérimentale à profondeur k ; classes de mot ; chambres",
+   "notations": [
+    {
+     "forme": "\\mathcal P_k(\\Sigma), \\mathcal P_k",
+     "portee": "partition"
+    },
+    {
+     "forme": "\\Xi",
+     "portee": "chambre = composante connexe d'une classe de mot"
+    },
+    {
+     "forme": "\\pi_0(\\mathcal P_{k-1}), \\mathcal P_k^{\\mathrm{conn}}",
+     "portee": "composantes connexes"
+    },
+    {
+     "forme": "\\Omega_w",
+     "portee": "paramètres réalisant le mot w"
+    }
+   ],
+   "nature": "partition, classes, composantes connexes",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     873,
+     875
+    ],
+    "label": "sec:opacity-finite-depth",
+    "environnement": null
+   },
+   "hypotheses": [
+    "protocole de continuation fixé",
+    "« approximation expérimentale ; non identifiée au quotient comportemental complet ni à une équivalence de Nerode »"
+   ],
+   "portee": "section 13",
+   "dependances": [
+    "II.OPAC.SECTION_PARAM",
+    "II.DEPTH.DEPTH_RANK"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{P}",
+     "lignes": [
+      856,
+      1925
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Xi"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Omega",
+     "indice": "^w"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on note provisoirement \\mathcal P_k(Σ) » ; « on réserve le terme chambre et le symbole Ξ » ; \\mathcal P_k^{conn} l. 1643 ; π_0 l. 1343",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Distinction chambre / classe de mot conforme à l'audit V5.16."
+  },
+  {
+   "id": "II.OPAC.DEPTH_EQUIVALENCE",
+   "phase": "G0.2a",
+   "designation": "Équivalence à profondeur k sous une histoire commune",
+   "notations": [
+    {
+     "forme": "x\\equiv_k^{\\mathcal H}x'",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "relation",
+   "type": null,
+   "domaine": "\\mathcal O_y × \\mathcal O_y",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1116,
+     1120
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "granularité G1 ; terminaison incluse dans le préfixe observé"
+   ],
+   "portee": "section 13",
+   "dependances": [
+    "II.OPAC.OPACITY_FIBRE",
+    "II.DEPTH.DEPTH_RANK"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on note x≡_k^H x' lorsque … »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.OPAC.NERODE_EQUIVALENCE",
+   "phase": "G0.2a",
+   "designation": "Équivalence comportementale de Nerode dans une fibre d'opacité",
+   "notations": [
+    {
+     "forme": "x\\sim_N x'",
+     "portee": "volume II"
+    }
+   ],
+   "nature": "relation d'équivalence",
+   "type": null,
+   "domaine": "\\mathcal O_y × \\mathcal O_y",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1137,
+     1148
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "section 13",
+   "dependances": [
+    "II.HIST.ADMISSIBLE_FAMILY",
+    "II.EFF.INTERNAL_RESPONSE"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.OPAC.SEPARATING_FAMILY",
+   "phase": "G0.2a",
+   "designation": "Famille séparante ; familles emboîtées de protocoles du noyau",
+   "notations": [
+    {
+     "forme": "\\mathcal U",
+     "portee": "famille séparante"
+    },
+    {
+     "forme": "\\mathcal U_5\\subset\\mathcal U_4\\subset\\mathcal U_3",
+     "portee": "familles du noyau (témoins)"
+    }
+   ],
+   "nature": "famille d'histoires",
+   "type": "\\mathcal U ⊆ \\M",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1180,
+     1195
+    ],
+    "label": null,
+    "environnement": "definition"
+   },
+   "hypotheses": [],
+   "portee": "section 13",
+   "dependances": [
+    "II.OPAC.NERODE_EQUIVALENCE",
+    "II.OPAC.DEPTH_EQUIVALENCE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{U}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "environnement definition « Famille séparante » ; \\mathcal U_5, \\mathcal U_4, \\mathcal U_3 décrites en prose l. 1195",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.WALLS.SCORES_WALLS",
+   "phase": "G0.2a",
+   "designation": "Scores cosinus, candidats, murs actifs et lieux dégénérés au k-ième Kairos",
+   "notations": [
+    {
+     "forme": "c_j^{(k)}(x)",
+     "portee": "score"
+    },
+    {
+     "forme": "J_k^-, J_k^+ (puis J_r^\\pm)",
+     "portee": "candidats retrait / ajout"
+    },
+    {
+     "forme": "W_{ij}^{(k)}(\\Xi)",
+     "portee": "mur actif"
+    },
+    {
+     "forme": "\\mathcal D_k",
+     "portee": "dégénérescences"
+    },
+    {
+     "forme": "g_{ij}^{(r)}",
+     "portee": "différence de scores (l. 1360)"
+    }
+   ],
+   "nature": "fonctions et sous-ensembles",
+   "type": "c_j^{(k)}(x):=cos(τ_{i_k^*}^{(k)}(x), τ_j^{(k)}(x))",
+   "domaine": "Ξ",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1299,
+     1326
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "noyau du volume I ; s(i,j)=0 si une trace est nulle (l. 1326)"
+   ],
+   "portee": "bloc « Murs actifs » (spécifique au noyau)",
+   "dependances": [
+    "II.OPAC.WORD_PARTITION",
+    "II.DEPTH.DEPTH_RANK"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "c",
+     "lignes": [
+      1297,
+      1925
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "J",
+     "indice": "^k$|^r$",
+     "lignes": [
+      1297,
+      1925
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "W"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{D}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "g",
+     "indice": "ij"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définitions par := l. 1306, 1311, 1360 ; \\mathcal D_k par réunion explicite l. 1317",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Passage de l'indice k à r pour J (l. 1303 → 1458) conforme à la convention l. 1299 ; c sans indice ailleurs est exclu par la plage."
+  },
+  {
+   "id": "II.SA.DEPENDENCE_SUPPORT",
+   "phase": "G0.2a",
+   "designation": "Support nodal de dépendance d'une coupe et comptages associés",
+   "notations": [
+    {
+     "forme": "\\operatorname{Dep}(\\Sigma)",
+     "portee": "volume II"
+    },
+    {
+     "forme": "n_r^\\varepsilon, \\nu_r^\\varepsilon",
+     "portee": "comptages par rang"
+    }
+   ],
+   "nature": "ensemble d'indices ; cardinaux",
+   "type": "Dep(Σ):={i : ϑ↦τ_i(0;Φ(ϑ)) non constante sur Ω}",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1441,
+     1462
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "bloc trace affine",
+   "dependances": [
+    "II.OPAC.SECTION_PARAM",
+    "II.WALLS.SCORES_WALLS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\operatorname{Dep}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "n",
+     "indice": "^r$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\nu",
+     "indice": "^r$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définitions par := l. 1443, 1460, 1462",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.SA.SEMIALGEBRAIC_BLOCK",
+   "phase": "G0.2a",
+   "designation": "Bloc semi-algébrique : trace du déclencheur, coefficients, normes, polynômes de signe",
+   "notations": [
+    {
+     "forme": "\\tau_\\star:=\\tau_{i_r^*}^{(r)}(z)",
+     "portee": "trace du déclencheur"
+    },
+    {
+     "forme": "a_i, s_i, \\chi_{ij}",
+     "portee": "coefficients, normes carrées, déterminants"
+    },
+    {
+     "forme": "\\mathscr F_w",
+     "portee": "famille de polynômes"
+    },
+    {
+     "forme": "b_{i,w}, \\lambda_{r,w}",
+     "portee": "coefficients dépendant du mot"
+    }
+   ],
+   "nature": "fonctions polynomiales et familles",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1519,
+     1615
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "mot structurel fixé"
+   ],
+   "portee": "sous-sections 13.13–13.14",
+   "dependances": [
+    "II.SA.DEPENDENCE_SUPPORT",
+    "II.DEPTH.DEPTH_RANK"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\tau",
+     "indice": "\\\\star|\\\\ast|^\\*$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "a",
+     "indice": "^i$|^j$",
+     "lignes": [
+      1519,
+      1660
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "s",
+     "indice": "^i$|^j$|star",
+     "lignes": [
+      1519,
+      1660
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\chi"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathscr{F}"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "b",
+     "indice": ",w",
+     "lignes": [
+      1519,
+      1658
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\lambda",
+     "indice": ",w",
+     "lignes": [
+      1519,
+      1658
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "définitions par := l. 1545, 1547, 1549, 1567 ; « notée \\mathscr F_w » l. 1615 ; lecture partielle du bloc",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "b_{i,w}, λ_{r,w} : 15 occurrences en V5.17 contre 8 indiquées par V5.16 ; à confronter en G0.4."
+  },
+  {
+   "id": "II.KERNEL.DECOUPLED_READOUT",
+   "phase": "G0.2a",
+   "designation": "Lecture du noyau dans le régime découplé",
+   "notations": [
+    {
+     "forme": "\\rho_X=(A,H,V,P), \\gamma_1=\\lambda=0",
+     "portee": "section 13"
+    },
+    {
+     "forme": "y=(A,H,V,P)",
+     "portee": "lecture présente fixée"
+    }
+   ],
+   "nature": "spécialisation d'une lecture",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     865,
+     871
+    ],
+    "label": "sec:opacity-finite-depth",
+    "environnement": null
+   },
+   "hypotheses": [
+    "régime γ_1=λ=0 ; la trace τ est cachée par la lecture"
+   ],
+   "portee": "section 13",
+   "dependances": [
+    "II.PRES.READOUT"
+   ],
+   "relations_intra": [
+    {
+     "type": "specialisation_de",
+     "cible": "II.PRES.READOUT",
+     "source": "l. 869"
+    }
+   ],
+   "provenance_externe": "variables A, H, V, P, τ du noyau du volume I (relation à instruire en G0.3)",
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "égalité affichée l. 869",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Les variables du noyau (A, H, V, P, τ, Θ, γ_1, λ, ζ…) employées par le volume II ne sont pas redéfinies dans ce volume : elles sont listées comme usages externes non résolus (rapport, § 5)."
+  },
+  {
+   "id": "I.CORE.HYBRID_SYSTEM",
+   "phase": "G0.2b",
+   "designation": "Système hybride du noyau : données (\\mathcal X, C, F, D, \\mathcal K)",
+   "notations": [
+    {
+     "forme": "(\\mathcal X,C,F,D,\\mathcal K)",
+     "portee": "livre I"
+    }
+   ],
+   "nature": "structure",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     55,
+     69
+    ],
+    "label": null,
+    "environnement": "itemize"
+   },
+   "hypotheses": [],
+   "portee": "volume I",
+   "dependances": [
+    "I.CORE.STATE_SPACE",
+    "I.CORE.FLOW_JUMP_SETS",
+    "I.CORE.KAIROS_OPERATOR"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "liste « Dans cette écriture : \\mathcal X est l'espace des états ; C … ; F … ; D … ; \\mathcal K décrit l'effet de ce saut »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.STATE_SPACE",
+   "phase": "G0.2b",
+   "designation": "Espace des états du noyau",
+   "notations": [
+    {
+     "forme": "\\mathcal X",
+     "portee": "volume I (livres I–II, annexes A–F)"
+    }
+   ],
+   "nature": "ensemble produit",
+   "type": "R^{N×d}×R^{N×d}×R^{N×d}×R_+^N×\\mathfrak G_N",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     147,
+     165
+    ],
+    "label": "t1-pression-p_i",
+    "environnement": "encadre"
+   },
+   "hypotheses": [],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.NODAL_VARIABLES",
+    "I.CORE.GRAPH"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{X}",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "encadré « L'état complet est x=(H,V,τ,P,A) et l'espace des états est … »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.NODAL_VARIABLES",
+   "phase": "G0.2b",
+   "designation": "Variables nodales : état rapide, vitesse, trace, pression",
+   "notations": [
+    {
+     "forme": "H_i, V_i, \\tau_i\\in\\mathbb R^d ; P_i\\in\\mathbb R_+",
+     "portee": "noyau"
+    },
+    {
+     "forme": "x=(H,V,\\tau,P,A)",
+     "portee": "état complet"
+    }
+   ],
+   "nature": "variables d'état",
+   "type": "H_i, V_i, τ_i ∈ R^d ; P_i ∈ R_+",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     100,
+     165
+    ],
+    "label": "t1-variables-nodales",
+    "environnement": null
+   },
+   "hypotheses": [
+    "« pression » ne désigne pas une pression physique ; V_i n'est pas nécessairement une vitesse physique"
+   ],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.GRAPH"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "H",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "V",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\tau",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]",
+     "indice": "^i$|^j$|^$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "P",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]",
+     "indice": "^i$|^j$|^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "section « Variables nodales » et encadré de l'état complet",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Les sélecteurs sont larges (glyphes H, V, P, τ dans le noyau) : P sert aussi ailleurs (p. ex. \\mathcal P protocole, distinct par le glyphe). Contrôle par échantillon."
+  },
+  {
+   "id": "I.CORE.GRAPH",
+   "phase": "G0.2b",
+   "designation": "Nœuds, graphe, matrice d'adjacence et matrice relationnelle normalisée",
+   "notations": [
+    {
+     "forme": "\\mathcal V=\\{1,\\ldots,N\\}, N, d",
+     "portee": "noyau"
+    },
+    {
+     "forme": "A\\in\\{0,1\\}^{N\\times N}",
+     "portee": "adjacence"
+    },
+    {
+     "forme": "\\mathfrak G_N",
+     "portee": "graphes simples"
+    },
+    {
+     "forme": "\\widetilde A(A)=\\operatorname{Deg}(A+I)^{-1}(A+I)",
+     "portee": "matrice relationnelle"
+    }
+   ],
+   "nature": "ensembles, matrices",
+   "type": "A ∈ {0,1}^{N×N}, A^T=A, A_ii=0",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     72,
+     190
+    ],
+    "label": "t1-graphe-et-dimensions",
+    "environnement": null
+   },
+   "hypotheses": [
+    "N ≥ 2 fixe ; d ≥ 1"
+   ],
+   "portee": "noyau",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "A",
+     "fichier": "IWS_PART_I|ANNEXE_[AB]",
+     "niveau": "0"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathfrak{G}"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "N",
+     "fichier": "IWS_PART_I|IWS_PART_II|ANNEXE_[A-F]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On note \\mathcal V … l'ensemble des nœuds » ; « Sa matrice d'adjacence est A » ; définition affichée de \\widetilde A",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.FLOW_JUMP_SETS",
+   "phase": "G0.2b",
+   "designation": "Seuil, ensemble de flot et ensemble de saut du noyau",
+   "notations": [
+    {
+     "forme": "\\Theta>0",
+     "portee": "seuil"
+    },
+    {
+     "forme": "C=\\{x:P_i\\le\\Theta\\ \\forall i\\}",
+     "portee": "ensemble de flot"
+    },
+    {
+     "forme": "D=\\{x:\\exists i,P_i\\ge\\Theta\\}",
+     "portee": "ensemble de saut"
+    }
+   ],
+   "nature": "paramètre ; sous-ensembles",
+   "type": "C, D ⊆ \\mathcal X",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     525,
+     548
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "priorité au saut sur C∩D"
+   ],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.STATE_SPACE",
+    "I.CORE.NODAL_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\Theta"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "C",
+     "fichier": "IWS_PART_I",
+     "lignes": [
+      1,
+      1000
+     ],
+     "indice": "^$",
+     "exposant": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On fixe un seuil Θ>0 » l. 525 ; ensembles affichés l. 538–546",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "C=b/(2a) (livre I, l. 1057) est un réemploi local distinct, exclu par la plage ; candidat G0.4."
+  },
+  {
+   "id": "I.CORE.KAIROS_OPERATOR",
+   "phase": "G0.2b",
+   "designation": "Opérateurs de Kairos nodaux et opérateur sélectionné",
+   "notations": [
+    {
+     "forme": "\\mathcal K_i:\\mathcal D_i\\to\\mathcal X",
+     "portee": "noyau"
+    },
+    {
+     "forme": "\\iota(x), \\mathcal K(x)=\\mathcal K_{\\iota(x)}(x)",
+     "portee": "noyau"
+    }
+   ],
+   "nature": "applications",
+   "type": "\\mathcal K_i:\\mathcal D_i → \\mathcal X",
+   "domaine": "\\mathcal D_i={x : P_i≥Θ}",
+   "codomaine": "\\mathcal X",
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     555,
+     568
+    ],
+    "label": "t1-operateurs-nodaux",
+    "environnement": null
+   },
+   "hypotheses": [
+    "départage par le plus petit indice : déterminisme à entrée donnée"
+   ],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.FLOW_JUMP_SETS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{K}"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\iota"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« on définit un opérateur de Kairos \\mathcal K_i » ; ι et \\mathcal K affichés",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.REWIRING",
+   "phase": "G0.2b",
+   "designation": "Recâblage conservatif : nœud sélectionné, voisinages, similarité, nombre d'arêtes modifiées",
+   "notations": [
+    {
+     "forme": "i^\\ast, \\mathcal N(i^\\ast), \\mathcal N^c(i^\\ast)",
+     "portee": "noyau"
+    },
+    {
+     "forme": "s(i,j)",
+     "portee": "similarité des traces"
+    },
+    {
+     "forme": "m=\\min(2,|\\mathcal N(i^\\ast)|,|\\mathcal N^c(i^\\ast)|)",
+     "portee": "noyau"
+    }
+   ],
+   "nature": "fonctions et ensembles",
+   "type": "s(i,j)=⟨τ_i,τ_j⟩/(‖τ_i‖‖τ_j‖), 0 si une norme est nulle",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     580,
+     600
+    ],
+    "label": "t1-recablage-conservatif",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.KAIROS_OPERATOR",
+    "I.CORE.NODAL_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{N}",
+     "fichier": "IWS_PART_I|ANNEXE_[A-F]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Soit i^* le nœud sélectionné. On note \\mathcal N(i^*) … » ; s(i,j) et m affichés",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.DISSIPATION_PRECONDITIONER",
+   "phase": "G0.2b",
+   "designation": "Friction et préconditionneur dépendant de la trace",
+   "notations": [
+    {
+     "forme": "\\Gamma(\\tau)=\\gamma_0+\\gamma_1\\|\\tau\\|",
+     "portee": "friction"
+    },
+    {
+     "forme": "M(\\tau)=Q(\\tau)^{-1}",
+     "portee": "préconditionneur anisotrope historique"
+    },
+    {
+     "forme": "Q(\\tau)=I_d+\\frac{\\lambda}{1+\\|\\tau\\|^2}\\tau\\tau^\\top, \\lambda\\ge0 ; m_0=\\frac1{1+\\lambda}",
+     "portee": "livre I, annexes A–B"
+    }
+   ],
+   "nature": "fonctions de la trace",
+   "type": null,
+   "domaine": "R^d",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     306,
+     400
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "γ_0>0 (l. 397)"
+   ],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.NODAL_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\Gamma",
+     "fichier": "IWS_PART_I|ANNEXE_[A-F]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "M",
+     "fichier": "IWS_PART_I|ANNEXE_[A-F]",
+     "indice": "^$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\gamma",
+     "indice": "^0$|^1$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "Q",
+     "fichier": "IWS_PART_I|ANNEXE_[AB]",
+     "indice": "^$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\lambda",
+     "fichier": "IWS_PART_I|ANNEXE_[AB]",
+     "indice": "^$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "m",
+     "indice": "^0$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "M(τ)=Q(τ)^{-1} l. 310 et « M est appelé préconditionneur anisotrope historique » l. 386 ; Γ affiché l. 393–397 ; Q(τ) et λ≥0 affichés l. 286–296 ; m_0 l. 382",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Q(τ) non relu ; M sans argument peut désigner d'autres objets dans les annexes (contrôle par échantillon)."
+  },
+  {
+   "id": "I.CORE.DYNAMICS_PARAMETERS",
+   "phase": "G0.2b",
+   "designation": "Paramètres d'écriture et de couplage de la dynamique nodale",
+   "notations": [
+    {
+     "forme": "\\alpha, \\beta (trace)",
+     "portee": "noyau"
+    },
+    {
+     "forme": "\\zeta (couplage \\tanh)",
+     "portee": "noyau"
+    }
+   ],
+   "nature": "paramètres scalaires",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     230,
+     431
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "noyau",
+   "dependances": [
+    "I.CORE.NODAL_VARIABLES",
+    "I.CORE.GRAPH"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\alpha",
+     "fichier": "IWS_PART_I|ANNEXE_[A-C]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\beta",
+     "fichier": "IWS_PART_I|ANNEXE_[A-C]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\zeta",
+     "fichier": "IWS_PART_I|ANNEXE_[A-D]"
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "rôle fixé par τ̇_i=α(\\widetilde A H)_i−βτ_i (l. 281) et par le terme ζ tanh(…) de V̇_i (l. 425–431) ; aucune déclaration autonome relue",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.B.ENERGY",
+   "phase": "G0.2b",
+   "designation": "Énergie sans terme croisé (annexe B)",
+   "notations": [
+    {
+     "forme": "E",
+     "portee": "annexe B"
+    }
+   ],
+   "nature": "fonctionnelle scalaire",
+   "type": null,
+   "domaine": "\\mathcal X (implicite)",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_B.tex",
+    "lignes": [
+     109,
+     116
+    ],
+    "label": "annexe-energie-deux-fonctionnelles",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "annexe B",
+   "dependances": [
+    "I.CORE.NODAL_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "E",
+     "fichier": "ANNEXE_B",
+     "indice": "^$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On définit d'abord l'énergie sans terme croisé : E=… »",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Une seconde fonctionnelle (titre de section « deux fonctionnelles ») n'a pas été relue."
+  },
+  {
+   "id": "I.R1.PERMEABILITY",
+   "phase": "G0.2b",
+   "designation": "Perméabilité dynamique de l'interface (R1)",
+   "notations": [
+    {
+     "forme": "q",
+     "portee": "livre II R1, annexes E–F"
+    },
+    {
+     "forme": "\\dot q=\\rho(1-q)-\\eta qgw",
+     "portee": "équation"
+    }
+   ],
+   "nature": "variable d'état scalaire",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_II.tex",
+    "lignes": [
+     882,
+     895
+    ],
+    "label": "t2-equation-de-permeabilite",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "R1",
+   "dependances": [
+    "I.R1.REOPENING_RATE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "q",
+     "fichier": "IWS_PART_II",
+     "lignes": [
+      880,
+      990
+     ]
+    },
+    {
+     "vol": "volI",
+     "glyphe": "q",
+     "fichier": "ANNEXE_E",
+     "lignes": [
+      40,
+      480
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On pose q̇=ρ(1−q)−ηqgw » ; rôle de q explicité par la phrase suivante",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.R1.REOPENING_RATE",
+   "phase": "G0.2b",
+   "designation": "Coefficient de réouverture de la perméabilité (R1)",
+   "notations": [
+    {
+     "forme": "\\rho",
+     "portee": "livre II 889–983, annexe E 55–475 et 1554, annexe F 158 (audit ρ)"
+    }
+   ],
+   "nature": "paramètre scalaire",
+   "type": "ρ ∈ R_{>0} (annexe E)",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_E.tex",
+    "lignes": [
+     50,
+     70
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "ρ>0 (écrit seulement en annexe E)"
+   ],
+   "portee": "R1",
+   "dependances": [],
+   "provenance": "audit historique diag_rho_volI.md, § 1, vérifié sur c74fa04 (48/48)",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "IWS_PART_II",
+     "lignes": [
+      889,
+      983
+     ]
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "ANNEXE_E",
+     "lignes": [
+      55,
+      475
+     ]
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "ANNEXE_E",
+     "lignes": [
+      1554,
+      1554
+     ]
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "ANNEXE_F",
+     "lignes": [
+      158,
+      158
+     ]
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "premier usage l. 889 du livre II sans déclaration de type ; contrainte ρ>0 explicitée seulement en annexe E (audit ρ : « définition avant usage imparfaite »)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.C.MODAL_EIGENVALUE",
+   "phase": "G0.2b",
+   "designation": "Valeur propre de la matrice relationnelle (mode du réseau)",
+   "notations": [
+    {
+     "forme": "\\rho",
+     "portee": "annexe C, l. 1844–1888"
+    }
+   ],
+   "nature": "scalaire réel",
+   "type": "ρ ∈ σ(\\widetilde A) ⊆ R",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_C.tex",
+    "lignes": [
+     1844,
+     1844
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "graphe non orienté : \\widetilde A semblable à une matrice symétrique"
+   ],
+   "portee": "strictement locale",
+   "dependances": [
+    "I.CORE.GRAPH"
+   ],
+   "provenance": "audit ρ § 2, vérifié (8/8)",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "ANNEXE_C",
+     "lignes": [
+      1844,
+      1888
+     ]
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Soit ρ l'une d'elles »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.E.SPECTRAL_RADIUS",
+   "phase": "G0.2b",
+   "designation": "Rayon spectral (analyse de Floquet de R2)",
+   "notations": [
+    {
+     "forme": "\\rho_{\\mathrm{sp}}",
+     "portee": "annexes E et F"
+    }
+   ],
+   "nature": "fonction sur les matrices carrées",
+   "type": "M ↦ ρ_sp(M) ∈ R_{≥0}",
+   "domaine": "matrices carrées",
+   "codomaine": "R_{≥0}",
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_E.tex",
+    "lignes": [
+     1238,
+     1241
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "annexes E–F",
+   "dependances": [
+    "I.E.MONODROMY"
+   ],
+   "provenance": "audit ρ § 3, vérifié (4/4)",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "indice": "mathrm\\{sp\\}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« où ρ_sp désigne le rayon spectral » (définition postposée d'une phrase)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.E.MONODROMY",
+   "phase": "G0.2b",
+   "designation": "Matrice fondamentale et matrice de monodromie du bloc réduit (R2)",
+   "notations": [
+    {
+     "forme": "\\Phi_g(t)",
+     "portee": "annexe E"
+    },
+    {
+     "forme": "\\mathcal M_g",
+     "portee": "annexes E–F"
+    }
+   ],
+   "nature": "matrices",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_E.tex",
+    "lignes": [
+     1195,
+     1241
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "annexes E–F",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\Phi",
+     "indice": "^g$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{M}",
+     "indice": "^g$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Notons Φ_g(t) la matrice fondamentale définie par » l. 1195",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Définition de \\mathcal M_g non relue intégralement."
+  },
+  {
+   "id": "I.D.APPROPRIATION",
+   "phase": "G0.2b",
+   "designation": "Appropriation d'une interaction (changement de bassin autonome) et protocole de mise sous contact",
+   "notations": [
+    {
+     "forme": "(g,T,\\mathcal P)",
+     "portee": "livre II, annexe D"
+    },
+    {
+     "forme": "\\mathcal P",
+     "portee": "protocole de mise sous contact"
+    }
+   ],
+   "nature": "propriété d'une interaction ; protocole",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_D.tex",
+    "lignes": [
+     1360,
+     1435
+    ],
+    "label": "def:D-appropriation",
+    "environnement": "resultheading"
+   },
+   "hypotheses": [],
+   "portee": "livre II et annexe D",
+   "dependances": [],
+   "relations_intra": [
+    {
+     "type": "double_definition",
+     "cible": "I.D.APPROPRIATION",
+     "source": "def:t2-appropriation (livre II, l. 640) et def:D-appropriation (annexe D, l. 1429) : deux énoncés de définition ; leur équivalence n'est pas vérifiée en G0.2"
+    }
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{P}",
+     "fichier": "IWS_PART_II|ANNEXE_D"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "\\resultheading{Définition}{def:D-appropriation} ; \\mathcal P « désigne le protocole de mise sous contact » (D l. 1360, livre II l. 571)",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "anomalie": "A-G02-03"
+  },
+  {
+   "id": "I.III.EPISODES_HISTORIES",
+   "phase": "G0.2c",
+   "designation": "Épisodes, transitions et histoires (livre III)",
+   "notations": [
+    {
+     "forme": "\\mathcal E, e\\in\\mathcal E",
+     "portee": "livre III"
+    },
+    {
+     "forme": "\\Phi_e:\\mathfrak X\\to\\mathfrak X, \\Phi_{\\mathcal H}=\\Phi_{e_n}\\circ\\cdots\\circ\\Phi_{e_1}",
+     "portee": "livre III"
+    },
+    {
+     "forme": "\\mathcal H=e_1e_2\\cdots e_n, \\varepsilon, \\mathcal H_1\\cdot\\mathcal H_2",
+     "portee": "livre III"
+    }
+   ],
+   "nature": "ensemble, applications, mots",
+   "type": "Φ_e:\\mathfrak X→\\mathfrak X",
+   "domaine": "\\mathfrak X",
+   "codomaine": "\\mathfrak X",
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_III.tex",
+    "lignes": [
+     124,
+     165
+    ],
+    "label": "t3-histoires-episodes-composition",
+    "environnement": null
+   },
+   "hypotheses": [
+    "ordre d'écriture de gauche à droite ; Φ_{H1·H2}=Φ_{H2}∘Φ_{H1}"
+   ],
+   "portee": "livre III",
+   "dependances": [
+    "I.III.REALIZATION_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\Phi",
+     "fichier": "IWS_PART_III",
+     "indice": "^e|mathcal H|^\\\\varepsilon"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{H}",
+     "fichier": "IWS_PART_III"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{E}",
+     "fichier": "IWS_PART_III"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Soit \\mathcal E l'ensemble des épisodes admissibles … Une histoire finie est un mot … La transformation induite … est Φ_H »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.III.REALIZATION_SPACE",
+   "phase": "G0.2c",
+   "designation": "Espace des réalisations du système (livre III)",
+   "notations": [
+    {
+     "forme": "\\mathfrak X",
+     "portee": "livre III"
+    }
+   ],
+   "nature": "ensemble",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_III.tex",
+    "lignes": [
+     132,
+     132
+    ],
+    "label": "t3-histoires-episodes-composition",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "livre III",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathfrak{X}",
+     "fichier": "IWS_PART_III"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« où \\mathfrak X désigne l'espace dans lequel est représentée la réalisation du système »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.III.READING",
+   "phase": "G0.2c",
+   "designation": "Lecture (résolution d'observation) d'une sonde",
+   "notations": [
+    {
+     "forme": "\\rho",
+     "portee": "livre III, annexes G–L ; variantes \\rho_1, \\rho_2, \\rho_3"
+    }
+   ],
+   "nature": "élément du protocole (choix de ce qui est retenu d'une exécution)",
+   "type": null,
+   "domaine": "exécutions (annexe G)",
+   "codomaine": "\\mathcal Y_\\rho (annexe G)",
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_III.tex",
+    "lignes": [
+     298,
+     302
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "ρ ne décrit pas une variable interne du système ; il appartient au protocole"
+   ],
+   "portee": "livre III, annexes G–L, main.tex l. 170",
+   "dependances": [
+    "I.III.EXECUTION"
+   ],
+   "provenance": "audit ρ § 4 (395 occurrences), vérifié sur c74fa04",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\rho",
+     "fichier": "main|IWS_PART_III|ANNEXE_[G-L]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On note ρ le choix de ce qui est ainsi retenu … ρ désignera donc une lecture, ou … une résolution d'observation »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Formalisée en annexe G (I.G.RESOLUTION) : relation intra-volume à confirmer, non fusionnée."
+  },
+  {
+   "id": "I.III.EXECUTION",
+   "phase": "G0.2c",
+   "designation": "Exécution d'une sonde",
+   "notations": [
+    {
+     "forme": "\\operatorname{Exec}_{\\mathcal H}(X)",
+     "portee": "livre III, annexes G–L"
+    }
+   ],
+   "nature": "exécution (trajectoire, événements, états pré/post-saut, état terminal)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_III.tex",
+    "lignes": [
+     274,
+     280
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "livre III et annexes G–L",
+   "dependances": [
+    "I.III.EPISODES_HISTORIES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\operatorname{Exec}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "description extensive l. 276–280 ; axiome de concaténation formalisé en annexe G (l. 203)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.III.RESPONSE",
+   "phase": "G0.2c",
+   "designation": "Réponse observée d'une réalisation sous une sonde et une lecture",
+   "notations": [
+    {
+     "forme": "\\mathcal R_X^\\rho(\\mathcal H)",
+     "portee": "livre III, annexes G–L"
+    },
+    {
+     "forme": "\\mathcal R_{\\mathcal H_0}(u)",
+     "portee": "abréviation (fin du livre II)"
+    }
+   ],
+   "nature": "élément de \\mathcal Y_\\rho",
+   "type": "\\mathcal R_X^ρ(H)=τ_ρ(Φ_H(X)) ou ω_ρ(Exec_H(X)) (annexe G)",
+   "domaine": null,
+   "codomaine": "\\mathcal Y_\\rho",
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_III.tex",
+    "lignes": [
+     304,
+     345
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "livre III, annexes G–L",
+   "dependances": [
+    "I.III.READING",
+    "I.III.EXECUTION"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{R}",
+     "fichier": "IWS_PART_III|ANNEXE_[G-L]",
+     "exposant": "^(?!.*mathfrak B)"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« la réponse observée est notée \\mathcal R_X^ρ(H) » ; abréviation explicitée l. 336–345",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.G.HISTORY_MONOID",
+   "phase": "G0.2d",
+   "designation": "Monoïde libre des histoires sur l'alphabet des épisodes (actifs et délais)",
+   "notations": [
+    {
+     "forme": "\\mathfrak M=\\mathcal E^\\ast, (\\mathfrak M,\\cdot,\\varepsilon)",
+     "portee": "annexes G–L"
+    },
+    {
+     "forme": "\\mathcal E=\\mathcal E_{\\mathrm{act}}\\cup\\mathcal D",
+     "portee": "annexe G"
+    }
+   ],
+   "nature": "monoïde libre",
+   "type": "\\mathcal E^\\ast",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_G.tex",
+    "lignes": [
+     46,
+     66
+    ],
+    "label": "annexe-histoires-monoide",
+    "environnement": null
+   },
+   "hypotheses": [
+    "décision D-06 : les délais sont des épisodes"
+   ],
+   "portee": "annexes G–L",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathfrak{M}"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{E}",
+     "fichier": "ANNEXE_[G-L]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Une histoire finie est un mot de l'ensemble \\mathfrak M=\\mathcal E^* … le monoïde libre engendré par \\mathcal E »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.G.REALIZATION_SPACE",
+   "phase": "G0.2d",
+   "designation": "Ensemble des états complets ou des présentations admises (annexe G)",
+   "notations": [
+    {
+     "forme": "\\mathfrak X",
+     "portee": "annexes G–L"
+    }
+   ],
+   "nature": "ensemble",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_G.tex",
+    "lignes": [
+     46,
+     47
+    ],
+    "label": "annexe-histoires-monoide",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "annexes G–L",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathfrak{X}",
+     "fichier": "ANNEXE_[G-L]"
+    }
+   ],
+   "statut_definition": "AMBIGUOUS",
+   "motif_statut": "« l'ensemble des états complets ou, plus généralement, des présentations de systèmes » : deux lectures possibles de l'élément de \\mathfrak X",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.G.ADMISSIBLE_CLASS",
+   "phase": "G0.2d",
+   "designation": "Classe admissible d'histoires (déclarée) et continuations après un préfixe",
+   "notations": [
+    {
+     "forme": "\\mathfrak B\\subseteq\\mathfrak M",
+     "portee": "annexes G–L, livre III"
+    },
+    {
+     "forme": "\\mathcal H_0^{-1}\\mathfrak B",
+     "portee": "continuations"
+    }
+   ],
+   "nature": "ensemble d'histoires",
+   "type": "\\mathfrak B ⊆ \\mathfrak M",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_G.tex",
+    "lignes": [
+     120,
+     178
+    ],
+    "label": "annexe-histoires-continuations-prefixe",
+    "environnement": null
+   },
+   "hypotheses": [
+    "fermeture par préfixes ; stabilité par continuation (propriétés distinguées l. 165)"
+   ],
+   "portee": "annexes G–L",
+   "dependances": [
+    "I.G.HISTORY_MONOID"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathfrak{B}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "\\mathfrak B\\subseteq\\mathfrak M l. 122 ; quotient à gauche défini l. 170–178 (eq:annexe-G-quotient-gauche)",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.G.RESOLUTION",
+   "phase": "G0.2d",
+   "designation": "Résolution : lecture terminale, lecture de chemin, espace d'observation",
+   "notations": [
+    {
+     "forme": "\\mathcal Y_\\rho",
+     "portee": "espace d'observation"
+    },
+    {
+     "forme": "\\tau_\\rho:\\mathfrak X\\to\\mathcal Y_\\rho",
+     "portee": "lecture terminale"
+    },
+    {
+     "forme": "\\omega_\\rho:\\operatorname{Exec}\\to\\mathcal Y_\\rho, \\omega_\\rho^{\\mathrm{fin}}",
+     "portee": "lecture de chemin, compatible au suffixe"
+    }
+   ],
+   "nature": "applications",
+   "type": "τ_ρ:\\mathfrak X→\\mathcal Y_ρ ; ω_ρ:Exec→\\mathcal Y_ρ",
+   "domaine": "\\mathfrak X ou Exec",
+   "codomaine": "\\mathcal Y_\\rho",
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_G.tex",
+    "lignes": [
+     218,
+     260
+    ],
+    "label": "annexe-histoires-observation",
+    "environnement": null
+   },
+   "hypotheses": [
+    "τ_ρ invariante par prolongation de la relaxation",
+    "ω_ρ compatible au suffixe (eq:annexe-G-compatibilite-suffixe)"
+   ],
+   "portee": "annexes G–L",
+   "dependances": [
+    "I.III.EXECUTION",
+    "I.G.REALIZATION_SPACE"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{Y}"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\tau",
+     "indice": "rho"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\omega",
+     "indice": "rho"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Une résolution ρ associe à une exécution une observation dans un espace \\mathcal Y_ρ » ; deux applications affichées",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "τ_ρ (lecture terminale) partage le glyphe τ avec la trace du noyau : distinction par l'indice ρ ; candidat G0.4."
+  },
+  {
+   "id": "I.G.OBS_EQUIVALENCE",
+   "phase": "G0.2d",
+   "designation": "Équivalence observationnelle relative à (\\mathfrak B,ρ) et quotient d'observation",
+   "notations": [
+    {
+     "forme": "X\\sim_{\\mathfrak B,\\rho}Y",
+     "portee": "annexes G–L"
+    },
+    {
+     "forme": "\\mathfrak X/{\\sim_{\\mathfrak B,\\rho}}, [X]_{\\mathfrak B,\\rho}",
+     "portee": "quotient, classes"
+    }
+   ],
+   "nature": "relation d'équivalence ; ensemble quotient",
+   "type": null,
+   "domaine": "\\mathfrak X × \\mathfrak X",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_G.tex",
+    "lignes": [
+     300,
+     326
+    ],
+    "label": "eq:annexe-G-equivalence",
+    "environnement": "equation"
+   },
+   "hypotheses": [],
+   "portee": "annexes G–L",
+   "dependances": [
+    "I.G.ADMISSIBLE_CLASS",
+    "I.III.RESPONSE"
+   ],
+   "selecteurs": [],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "équivalence définie par ∀H∈\\mathfrak B, \\mathcal R_X^ρ(H)=\\mathcal R_Y^ρ(H)",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.H.SLOW_SUMMARY_VARIABLES",
+   "phase": "G0.2d",
+   "designation": "Variables du résumé lent : charge résiduelle, interface rapide, horloge lente, contenu mnésique",
+   "notations": [
+    {
+     "forme": "p, \\chi, \\theta, \\mathbf s",
+     "portee": "annexes H–K"
+    },
+    {
+     "forme": "z_4=(p,\\chi,\\theta,s)",
+     "portee": "annexe K"
+    }
+   ],
+   "nature": "variables",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_H.tex",
+    "lignes": [
+     52,
+     57
+    ],
+    "label": null,
+    "environnement": "itemize"
+   },
+   "hypotheses": [],
+   "portee": "annexes H–K",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "p",
+     "fichier": "ANNEXE_[H-K]",
+     "indice": "^$"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\chi",
+     "fichier": "ANNEXE_[H-K]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\theta",
+     "fichier": "ANNEXE_[H-K]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\mathbf{s}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "liste « p désigne la pression ou la charge résiduelle ; χ … ; θ … ; \\mathbf s … »",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "χ et θ ont aussi d'autres rôles dans les annexes A–F (hors sélecteur) ; s non gras (z_4) : forme distincte de \\mathbf s, relation non établie."
+  },
+  {
+   "id": "I.I.OBSERVATION_DISTANCE",
+   "phase": "G0.2d",
+   "designation": "Distance d'observation implicite (cas d'étude)",
+   "notations": [
+    {
+     "forme": "d_\\rho",
+     "portee": "annexe I, l. 497 (occurrence unique)"
+    }
+   ],
+   "nature": "distance (présumée par le contexte)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_I.tex",
+    "lignes": [
+     492,
+     505
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "contexte : borne d_ρ(\\widehat Ω(p,χ,θ,s), Ω(s)) ≤ L_p|p|+L_χ|χ|+L_θ|θ| pour une observable pré-binaire ; « une lecture binaire munie de la distance discrète »"
+   ],
+   "portee": "locale (une occurrence)",
+   "dependances": [
+    "I.III.READING"
+   ],
+   "provenance": "anomalie signalée par l'audit ρ (« d_ρ — Annexe I »)",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "d",
+     "indice": "^\\\\rho$"
+    }
+   ],
+   "statut_definition": "UNDEFINED",
+   "motif_statut": "aucune définition de d_ρ ni d'une distance sur \\mathcal Y_ρ dans le corpus (recherche « distance », « métrique » dans les annexes G–L et le livre III) ; le contexte suggère une distance sur l'espace d'observation, sans que celui-ci soit muni d'une métrique ailleurs",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "anomalie": "A-G02-04",
+   "remarques": "Ne pas confondre avec d_{c,\\mathfrak B,\\rho} (annexe L, l. 172 et suiv.), pseudo-ultramétrique entre systèmes définie par la profondeur de séparabilité : objet distinct, défini, portant sur des systèmes et non sur des observations."
+  },
+  {
+   "id": "I.K.CLASS_RESPONSE",
+   "phase": "G0.2d",
+   "designation": "Réponse relative à une classe (\\mathfrak B, ρ) sans réalisation indiquée (cas d'étude)",
+   "notations": [
+    {
+     "forme": "\\mathcal R^{\\mathfrak B,\\rho}",
+     "portee": "annexe K, l. 101 et 348 (deux occurrences)"
+    }
+   ],
+   "nature": "indéterminée",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_K.tex",
+    "lignes": [
+     99,
+     103
+    ],
+    "label": null,
+    "environnement": "description (P5)"
+   },
+   "hypotheses": [
+    "(P5) « La lecture ω_ρ et la réponse \\mathcal R^{\\mathfrak B,ρ} dépendent de l'exécution produite » ; D-08 : « ne constitue pas un invariant de \\mathcal R^{\\mathfrak B,ρ} »"
+   ],
+   "portee": "annexe K",
+   "dependances": [
+    "I.III.RESPONSE",
+    "I.G.ADMISSIBLE_CLASS"
+   ],
+   "provenance": "anomalie signalée par l'audit ρ (« \\mathcal R^{\\mathfrak B,ρ} — Annexe K »)",
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{R}",
+     "fichier": "ANNEXE_K",
+     "exposant": "mathfrak B"
+    }
+   ],
+   "statut_definition": "AMBIGUOUS",
+   "motif_statut": "forme non définie ; ailleurs la réponse est \\mathcal R_X^ρ(\\mathcal H) (annexe G) et l'annexe K emploie aussi \\mathcal R_{pl}^ρ, \\mathcal R_{fig}^ρ, \\mathcal R^ρ_{z_5} ; au moins deux lectures : famille des réponses X↦(H↦\\mathcal R_X^ρ(H)) restreinte à \\mathfrak B, ou réponse générique d'une présentation sur la classe",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "anomalie": "A-G02-05"
+  },
+  {
+   "id": "I.K.AUGMENTED_STATE",
+   "phase": "G0.2d",
+   "designation": "État augmenté d'une présentation plastique et exécutions plastique / figée",
+   "notations": [
+    {
+     "forme": "\\widetilde x=(x,\\gamma)\\in\\widetilde X:=X\\times\\Gamma",
+     "portee": "annexe K"
+    },
+    {
+     "forme": "\\operatorname{Exec}_{\\mathrm{pl}}, \\operatorname{Exec}_{\\mathrm{fig}}",
+     "portee": "annexe K"
+    }
+   ],
+   "nature": "ensemble produit ; exécutions",
+   "type": "\\widetilde X := X×Γ",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_K.tex",
+    "lignes": [
+     50,
+     122
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "γ variable interne modifiant la loi d'action"
+   ],
+   "portee": "annexe K",
+   "dependances": [
+    "I.III.EXECUTION"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "X",
+     "fichier": "ANNEXE_K"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "\\Gamma",
+     "fichier": "ANNEXE_K"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On définit l'état augmenté \\widetilde x=(x,γ)∈\\widetilde X:=X×Γ » ; « notons Exec_pl … Exec_fig »",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "C.CERT.KERNEL_STATE_PARAMS",
+   "phase": "G0.2e",
+   "designation": "État, paramètre caché et données du protocole kept1 (compagnons)",
+   "notations": [
+    {
+     "forme": "x'=(H,V,\\tau)\\in\\R^{36}, P\\in\\R^6",
+     "portee": "transmission_profondeur_finie_V2"
+    },
+    {
+     "forme": "q=(\\vth,\\varepsilon)\\in\\R^{12}\\times\\R",
+     "portee": "paramètre"
+    },
+    {
+     "forme": "\\zeta, \\alpha, \\beta, \\gamma_0, \\kappa_{1,2,3}, \\Theta, r_P, r_V, u_0",
+     "portee": "certification_huit_episodes_V2 (valeurs numériques)"
+    }
+   ],
+   "nature": "variables d'état, paramètres",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex",
+    "lignes": [
+     26,
+     26
+    ],
+    "label": null,
+    "environnement": "paragraph"
+   },
+   "hypotheses": [
+    "N=6, d=2 ; graphe initial kept1"
+   ],
+   "portee": "compagnons (corpus auxiliaire)",
+   "dependances": [],
+   "provenance": "corpus auxiliaire, à ne mobiliser qu'avec mention de provenance (B4)",
+   "selecteurs": [
+    {
+     "vol": "compagnons",
+     "glyphe": "q"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "\\vartheta"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "\\kappa"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "\\Theta"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "paragraphe « État » (transmission, l. 26) et « Données » (certification, l. 44)",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "q désigne ici un paramètre (ϑ,ε), sans rapport établi avec la perméabilité q de R1 (volume I) : même glyphe, objets à ne pas fusionner."
+  },
+  {
+   "id": "C.CERT.IMPACT_SEQUENCE",
+   "phase": "G0.2e",
+   "designation": "Temps d'impact, nœud déclencheur, état post-saut et recâblage par rang (compagnons)",
+   "notations": [
+    {
+     "forme": "T_r(q)=\\inf\\{t>0:\\max_jP_j(t)=\\Theta\\}",
+     "portee": "compagnons"
+    },
+    {
+     "forme": "i_r",
+     "portee": "indice atteignant Θ"
+    },
+    {
+     "forme": "y_r^+(q)\\in\\R^{42}",
+     "portee": "état après le r-ième saut"
+    },
+    {
+     "forme": "A_{r+1}=\\mathrm{Rew}(A_r,\\tau(T_r))",
+     "portee": "recâblage"
+    }
+   ],
+   "nature": "fonctions du paramètre ; indices",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex",
+    "lignes": [
+     35,
+     35
+    ],
+    "label": null,
+    "environnement": "paragraph"
+   },
+   "hypotheses": [],
+   "portee": "compagnons",
+   "dependances": [
+    "C.CERT.KERNEL_STATE_PARAMS"
+   ],
+   "provenance": "corpus auxiliaire ; correspondance i_r ↔ i_r^* signalée par le volume II l. 1262 (« i_r^* (noté i_r dans la certification) »)",
+   "selecteurs": [
+    {
+     "vol": "compagnons",
+     "glyphe": "T",
+     "indice": "^r$|r\\+1"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "i",
+     "indice": "^r$"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "y",
+     "indice": "^r$|^0$"
+    },
+    {
+     "vol": "compagnons",
+     "glyphe": "\\mathrm{Rew}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "paragraphe « Impact » : définitions affichées",
+   "confiance": "moyenne",
+   "notation_canonique": ""
+  },
+  {
+   "id": "II.KERNEL.EXTERNAL_VARIABLES",
+   "phase": "G0.2a",
+   "designation": "Variables et paramètres du noyau employés par le volume II sans redéfinition",
+   "notations": [
+    {
+     "forme": "A, H, V, P, \\tau, \\tau_i, N, d, \\Theta, \\gamma_1, \\lambda, \\zeta",
+     "portee": "crash-tests, témoins N=6 et N=9, section 13"
+    }
+   ],
+   "nature": "variables d'état et paramètres (usage)",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     580,
+     1925
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "« noyau du Volume I » invoqué explicitement (l. 1159, 1326)"
+   ],
+   "portee": "volume II, sections sur le noyau",
+   "dependances": [
+    "II.KERNEL.DECOUPLED_READOUT"
+   ],
+   "provenance_externe": "définitions au volume I (livre I) ; relation à instruire en G0.3, aucune identité établie ici",
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "A",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "H",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0",
+     "indice": "^(?!t$)",
+     "exposant": "^(?!s)"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "V",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "P",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "N",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Theta",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\zeta",
+     "lignes": [
+      580,
+      1925
+     ],
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\tau",
+     "lignes": [
+      580,
+      1925
+     ],
+     "indice": "^$|^i$|^j$|^0$|^k$|^\\{i_",
+     "niveau": "0"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\gamma",
+     "indice": "^1$|^0$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\lambda",
+     "indice": "^$",
+     "lignes": [
+      580,
+      1500
+     ]
+    }
+   ],
+   "statut_definition": "IMPLICIT",
+   "motif_statut": "le volume II emploie ces symboles en renvoyant au noyau du volume I sans les redéfinir ; leur sens est déterminable par ce renvoi",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "Sélecteurs larges (niveau 0, sections du noyau) : A sert aussi d'étiquette de paire (« paire miroir A », l. 1211) ; contrôle par échantillon."
+  },
+  {
+   "id": "II.CONIC.BLOCK",
+   "phase": "G0.2a",
+   "designation": "Bloc de bifurcation conique : paramètre visible, translation, rayon, discriminant",
+   "notations": [
+    {
+     "forme": "\\mu, \\mu_*",
+     "portee": "paramètre réel de la lecture visible ; racine"
+    },
+    {
+     "forme": "b_{j,w}^{(r)}(\\mu), R_j(\\mu)=\\lambda_{r,w}(\\mu)\\rho_j",
+     "portee": "translation, rayon"
+    },
+    {
+     "forme": "\\rho_j>0",
+     "portee": "norme initiale de la trace angulaire"
+    },
+    {
+     "forme": "\\Delta_{j,w}^{(r)}(\\mu), \\varphi, \\varphi_*, e(\\varphi), \\mathcal V_{w^-}",
+     "portee": "discriminant, angle, région du préfixe"
+    }
+   ],
+   "nature": "paramètres, fonctions du paramètre, région",
+   "type": "τ_j^{(r)}(φ,μ)=b_{j,w}^{(r)}(μ)+R_j(μ)e(φ)",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex",
+    "lignes": [
+     1659,
+     1672
+    ],
+    "label": "prop:annulation-conique",
+    "environnement": null
+   },
+   "hypotheses": [
+    "préfixe événementiel fixé ; R_j(μ)>0"
+   ],
+   "portee": "sous-section « Bifurcation conique »",
+   "dependances": [
+    "II.SA.SEMIALGEBRAIC_BLOCK",
+    "II.DEPTH.DEPTH_RANK"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volII",
+     "glyphe": "\\mu"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "b",
+     "indice": "j,w"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "R",
+     "indice": "^j$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\rho",
+     "indice": "^j$"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\Delta",
+     "indice": "j,w"
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\varphi",
+     "lignes": [
+      1659,
+      1772
+     ]
+    },
+    {
+     "vol": "volII",
+     "glyphe": "\\mathcal{V}"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« faisons dépendre une composante initiale visible de y d'un paramètre réel μ » ; Δ et φ_* définis par := ; ρ_j « norme fixe ρ_j>0 »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "ρ_j (norme initiale) appartient lexicalement à la famille rho ; V5.16 conserve R_j pour éviter la quasi-collision avec ρ_j. Relevé, non arbitré (G0.4)."
+  },
+  {
+   "id": "I.CORE.INPUT",
+   "phase": "G0.2b",
+   "designation": "Entrée exogène du noyau",
+   "notations": [
+    {
+     "forme": "u_i(t), u, \\|u_i(t)\\|\\le u_{\\max}",
+     "portee": "livre I et annexes"
+    }
+   ],
+   "nature": "fonction du temps",
+   "type": "exogène, mesurable, bornée",
+   "domaine": "temps",
+   "codomaine": "R^d (implicite)",
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     455,
+     460
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "cas autonome u≡0"
+   ],
+   "portee": "noyau",
+   "dependances": [],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "u",
+     "fichier": "IWS_PART_I|ANNEXE_[A-C]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« L'entrée u_i(t) est exogène, mesurable et bornée »",
+   "confiance": "haute",
+   "notation_canonique": ""
+  },
+  {
+   "id": "I.CORE.LYAPUNOV",
+   "phase": "G0.2b",
+   "designation": "Fonction de Lyapunov pour le flot et sa variation au saut",
+   "notations": [
+    {
+     "forme": "\\mathcal L, \\Delta\\mathcal L",
+     "portee": "livre I, annexe B"
+    }
+   ],
+   "nature": "fonctionnelle scalaire",
+   "type": null,
+   "domaine": "\\mathcal X (implicite)",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_I.tex",
+    "lignes": [
+     924,
+     935
+    ],
+    "label": "t1-fonction-de-lyapunov-pour-le-flot",
+    "environnement": null
+   },
+   "hypotheses": [],
+   "portee": "livre I, annexe B",
+   "dependances": [
+    "I.CORE.NODAL_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\mathcal{L}",
+     "fichier": "IWS_PART_I|ANNEXE_B"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "section « Fonction de Lyapunov pour le flot » : « On considère \\mathcal L = … »",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "\\mathcal L du livre III (hors sélecteur) n'est pas instruit."
+  },
+  {
+   "id": "I.II.TWO_SYSTEM_COUPLING",
+   "phase": "G0.2b",
+   "designation": "Couplage unidirectionnel d'un système source A vers un système B ; intensité du couplage",
+   "notations": [
+    {
+     "forme": "g\\ge0",
+     "portee": "livre II, annexes C–F"
+    },
+    {
+     "forme": "h_X, v_X, \\tau_X, X\\in\\{A,B\\}",
+     "portee": "systèmes réduits source / cible"
+    }
+   ],
+   "nature": "paramètre scalaire ; variables réduites",
+   "type": "g ≥ 0",
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_II.tex",
+    "lignes": [
+     113,
+     147
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "A sur un attracteur actif (source), B proche du repos"
+   ],
+   "portee": "livre II, annexes C–F",
+   "dependances": [
+    "I.CORE.DISSIPATION_PRECONDITIONER",
+    "I.CORE.DYNAMICS_PARAMETERS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "g",
+     "indice": "^$",
+     "fichier": "IWS_PART_II|ANNEXE_[C-F]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "h",
+     "indice": "^A$|^B$|^X$",
+     "fichier": "IWS_PART_II|ANNEXE_[C-F]"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "v",
+     "indice": "^A$|^B$|^X$",
+     "fichier": "IWS_PART_II|ANNEXE_[C-F]"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« Le paramètre g≥0 mesure l'intensité du couplage » (l. 147)",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "A et B désignent ici des systèmes, alors que A désigne la matrice d'adjacence au livre I : réemploi de glyphe relevé pour G0.4. La relation entre g sans indice dans les annexes C–F et ce paramètre n'est vérifiée que par portée."
+  },
+  {
+   "id": "I.II.CRITICAL_COUPLING",
+   "phase": "G0.2b",
+   "designation": "Seuil critique de couplage (perte de stabilité du repos)",
+   "notations": [
+    {
+     "forme": "g_c=\\frac{\\beta\\tau_{\\mathrm{ign}}}{\\sqrt2\\,w}",
+     "portee": "livre II, annexes D, F, table des énoncés"
+    }
+   ],
+   "nature": "seuil scalaire",
+   "type": null,
+   "domaine": null,
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/IWS_PART_II.tex",
+    "lignes": [
+     296,
+     312
+    ],
+    "label": null,
+    "environnement": null
+   },
+   "hypotheses": [
+    "√2 θ_∞=τ_ign"
+   ],
+   "portee": "livre II, annexes D, F",
+   "dependances": [
+    "I.II.TWO_SYSTEM_COUPLING"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "g",
+     "indice": "^c$"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "formule encadrée l. 306–310",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Les autres seuils indexés de g (g_ign, g_eff, g_app, g_F^{qs}…) ne sont pas instruits ; E l. 1362 précise que g_F^{qs} « ne désigne pas un cinquième seuil »."
+  },
+  {
+   "id": "I.H.RESPONSE_MAP",
+   "phase": "G0.2d",
+   "designation": "Carte de réponse d'une sonde en fonction du contenu survivant",
+   "notations": [
+    {
+     "forme": "\\Omega_{\\mathcal P,\\rho}",
+     "portee": "annexes H, I, K"
+    },
+    {
+     "forme": "\\mathbf s_{\\mathrm r}",
+     "portee": "contenu survivant"
+    }
+   ],
+   "nature": "application",
+   "type": "\\mathcal R_X^ρ(\\mathcal P)=Ω_{P,ρ}(\\mathbf s_r)",
+   "domaine": "contenus survivants (implicite)",
+   "codomaine": "\\mathcal Y_\\rho (implicite)",
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_H.tex",
+    "lignes": [
+     24,
+     36
+    ],
+    "label": null,
+    "environnement": "encadre"
+   },
+   "hypotheses": [
+    "régime d'extinction exacte ; (\\mathfrak B,ρ) déclaré ; ρ compatible avec la sonde"
+   ],
+   "portee": "annexes H–K",
+   "dependances": [
+    "I.III.RESPONSE",
+    "I.H.SLOW_SUMMARY_VARIABLES"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\Omega",
+     "indice": "mathcal P,\\\\rho"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "encadré « Résultat directeur » : « Il existe donc une application Ω_{P,ρ} … est la carte de réponse »",
+   "confiance": "haute",
+   "notation_canonique": "",
+   "remarques": "Variantes \\widehat\\Omega_{\\mathcal P,\\rho}, A_{\\mathcal P,\\rho}, \\Sigma_{\\mathcal P,\\rho} (annexe I) non instruites ; relation avec Ω (coupe paramétrique) du volume II : glyphes identiques, objets à ne pas fusionner (G0.3/G0.4)."
+  },
+  {
+   "id": "I.L.SEPARATION_GEOMETRY",
+   "phase": "G0.2d",
+   "designation": "Profondeur de séparabilité et pseudo-ultramétrique d'observation",
+   "notations": [
+    {
+     "forme": "\\ell_{c,\\mathfrak B,\\rho}(X,Y)",
+     "portee": "annexes G, L"
+    },
+    {
+     "forme": "d_{c,\\mathfrak B,\\rho}(X,Y)=\\exp[-\\ell_{c,\\mathfrak B,\\rho}(X,Y)]",
+     "portee": "annexe L"
+    }
+   ],
+   "nature": "fonction de paires de systèmes ; pseudo-ultramétrique",
+   "type": null,
+   "domaine": "\\mathfrak X × \\mathfrak X",
+   "codomaine": null,
+   "definition": {
+    "fichier": "Volume_I/Annexes/IWS_ANNEXE_L.tex",
+    "lignes": [
+     172,
+     180
+    ],
+    "label": "eq:annexe-L-distance",
+    "environnement": "equation"
+   },
+   "hypotheses": [
+    "complexité c des histoires ; ℓ=+∞ si X∼_{B,ρ}Y (annexe G l. 624)"
+   ],
+   "portee": "annexes G et L",
+   "dependances": [
+    "I.G.OBS_EQUIVALENCE",
+    "I.G.ADMISSIBLE_CLASS"
+   ],
+   "selecteurs": [
+    {
+     "vol": "volI",
+     "glyphe": "\\ell",
+     "indice": "c,"
+    },
+    {
+     "vol": "volI",
+     "glyphe": "d",
+     "indice": "c,"
+    }
+   ],
+   "statut_definition": "EXPLICIT",
+   "motif_statut": "« On définit d_{c,B,ρ}(X,Y)=exp[−ℓ_{c,B,ρ}(X,Y)] » (eq:annexe-L-distance) ; ℓ_{c,B,ρ} introduit en annexe G l. 603",
+   "confiance": "moyenne",
+   "notation_canonique": "",
+   "remarques": "La définition de ℓ_{c,B,ρ} en annexe G n'a été lue que partiellement. Objet distinct de d_ρ (annexe I)."
+  }
+ ]
+}

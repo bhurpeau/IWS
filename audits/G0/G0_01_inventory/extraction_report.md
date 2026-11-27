@@ -317,3 +317,28 @@ Points soumis à l'auteur :
 - règle de classe `composite` (§ 2.4) et regroupement des polices dans une même famille lexicale ;
 - traitement des 1 316 occurrences du volume II sans label ;
 - portée de l'extraction limitée des compagnons Markdown.
+
+---
+
+## Addendum B2a — Catégorie principale et attributs secondaires (27 novembre 2026)
+
+À la suite de la décision B2a, cinq colonnes ont été **ajoutées à la fin** des fichiers d'occurrences. Les 34 colonnes de référence ne changent pas.
+
+| Colonne | Contenu |
+|---|---|
+| `composite_portee` | `indice`, `exposant`, `indice+exposant` (motifs sur les deux positions, ou critère tenant à leur combinaison) ou `argument_decoration` ; vide si l'atome n'est pas composite |
+| `motifs_composite` | motifs précis, préfixés par la position : `script_imbrique`, `composants_multiples_non_latins`, `structure`, `decoration`, `combinaison:composants_multiples_non_latins`, `argument_decoration:expression_decoree` |
+| `composants_indice`, `composants_exposant` | glyphes des composants directs de chaque position |
+| `attributs_secondaires` | police, variante `\var…`, décoration, primes, présence d'indice ou d'exposant, macro |
+
+La **catégorie principale** (`classe_lexicale`) reste déterminée par la règle du § 2.4, appliquée dans l'ordre `composite` > `indexe` > `variante_typographique` > `nu`. Les attributs élémentaires restent disponibles dans leurs colonnes : glyphe, police, indice, exposant, structure, liens `parent_id`/`porteur`.
+
+[CTRL] Résultats sur l'inventaire courant :
+
+- chaque atome composite a au moins un motif ;
+- aucun atome non composite n'en a ;
+- répartition de la portée : volume I 203 indice / 51 exposant / 136 indice+exposant / 5 argument_decoration ; volume II 29 / 22 / 38 / 0.
+
+[CTRL] Non-régression : `notations/scripts/check_regression.py` compare l'inventaire au commit de clôture G0.1 `05afddd`, conservé comme référence. On obtient **0 différence** sur les colonnes de référence des 8 fichiers comparés. Un test unitaire couvre les attributs secondaires (16 tests au total).
+
+Rappel B2b : l'appartenance à une même `famille_lexicale` n'implique aucune identité ni proximité sémantique.

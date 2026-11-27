@@ -1,10 +1,10 @@
 # G0 — État d'avancement
 
 **Dernière mise à jour :** 27 novembre 2026
-**Phase courante :** G0.1 **clôturée et validée** ; G0.2 autorisée (B5)
+**Phase courante :** G0.2 **validée comme première itération, non clôturée** ; G0.2bis (complétude) **en cours** ; G0.3 non autorisée (C5)
 **Commit de base :** `c74fa047171ff51e308f1855d8f636add2ac33ca` (IWS, tag `g0-baseline`)
 **Branche de travail :** `harmonisation/g0` (poussée sur `origin`, non fusionnée dans `main`)
-**Dernier commit de travail :** voir `git log harmonisation/g0` (clôture G0.1)
+**Dernier commit de travail :** voir `git log` ; G0.1 : `05afddd` (tag `g0.1-inventaire-ref`, poussé, référence de non-régression) ; G0.2 itération 1 : commit « G0.2 (itération 1) » (registre candidat intermédiaire, 95 objets)
 **PDF de référence :** prépublication [IWS — G0 Baseline](https://github.com/bhurpeau/IWS/releases/tag/g0-baseline) (4 PDF + `SHA256SUMS`, empreintes vérifiées après téléchargement)
 
 ## Références figées
@@ -24,7 +24,8 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 |---|---|---|
 | G0.0 | **Clôturée, validée le 27/11/2026** | `G0_00_manifest.md`, `G0_00_controls/`, `ERRATA_PLAN_G0.md`, ce fichier, README actualisé, release `g0-baseline` |
 | G0.1 | **Clôturée, validée le 27/11/2026** | `G0_01_inventory/` (occurrences, expressions, familles, glyphes, exclusions, couverture, `extraction_report.md`) ; `notations/scripts/extract_symbols.py`, `check_coverage.py`, tests |
-| G0.2 – G0.9 | Non entamées | — |
+| G0.2 | **Itération 1 acceptée (C1) ; non clôturée** | `notations/registry.yaml` (registre candidat **intermédiaire**, 95 objets ; copie figée `G0_02_semantic/reference_95/`), `G0_02_objects_report.md`, `RESERVES.md`, `G0_02_semantic/`, scripts `definition_sites.py`, `link_registry.py` ; addendum G0.1 (B2a) et `check_regression.py` |
+| G0.3 – G0.9 | Non entamées | — |
 
 ## Résultats des contrôles G0.0
 
@@ -55,6 +56,21 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | Déterminisme | Deux exécutions identiques octet pour octet ; 15 tests unitaires passent |
 | Intégrité des sources | `git diff c74fa04 -- Volume_I Volume_II` vide |
 
+## Résultats des contrôles G0.2
+
+| Contrôle | Résultat |
+|---|---|
+| Registre candidat | 95 objets (II : 57 ; I : 36 ; compagnons : 2) ; 82 EXPLICIT, 8 IMPLICIT, 4 AMBIGUOUS, 1 UNDEFINED ; confiance haute 72, moyenne 23 |
+| Validation du schéma | 0 erreur (unicité, statuts, dépendances, notation canonique vide) ; 0 sélecteur vide ; 0 occurrence rattachée à plusieurs objets |
+| Couverture des clés structurantes (≥ 5 occurrences, niveau 0) | Volume II 60,2 % ; volume I 35,3 % ; compagnons 28,8 % ; clés non résolues listées, principales classées à la main |
+| Audit ρ | 4 objets distincts : 48 / 8 / 4 / 395 occurrences, reproduits |
+| Symboles nouveaux dans V5.17 | Aucun glyphe nouveau dans la sous-section ajoutée ; 6 clés nouvelles ; 131 glyphes hors tableau V5.16, tous antérieurs à cette sous-section |
+| Cas d'étude | d_ρ : UNDEFINED (A-G02-04) ; \mathcal R^{\mathfrak B,ρ} : AMBIGUOUS (A-G02-05) |
+| Échantillon de contrôle | 30 rattachements : 28 corrects, 2 recevables avec réserve ; 24 tirages sur les sélecteurs larges cohérents |
+| Addendum B2a | Attributs secondaires ajoutés ; non-régression contre `05afddd` : 0 différence |
+| Intégrité des sources | `git diff c74fa04 -- Volume_I Volume_II` vide |
+
+
 ## Décisions rendues
 
 | Id | Date | Décision |
@@ -69,6 +85,11 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | B3 | 27/11/2026 | Localisation par section et empreinte acceptée pour les occurrences sans label ; aucun label ajouté aux manuscrits ; ajout éventuel de labels aux définitions structurantes du volume II inscrit comme amélioration documentaire à examiner en G0.7 (R-G0-09) |
 | B4 | 27/11/2026 | Extraction Markdown limitée acceptée ; compagnons = corpus auxiliaire distinct, mobilisable avec provenance explicite ; pas d'analyseur Markdown exhaustif |
 | B5 | 27/11/2026 | G0.2 autorisée après clôture de G0.1, ordre G0.2a–f imposé ; registre **candidat**, non normatif ; arrêt avant G0.3 |
+| C1 | 27/11/2026 | G0.2 acceptée comme **première itération** ; commit et poussée autorisés (livrables, B2a, tests) ; tag `g0.1-inventaire-ref` poussé après vérification de sa cible (`05afddd`) ; registre qualifié de candidat **intermédiaire** ; état de référence des 95 objets conservé ; pas de fusion dans `main` |
+| C2 | 27/11/2026 | « Fibre d'opacité » : deux objets distincts, « fibre d'opacité complète » (l. 185) et « fibre d'opacité admissible au flot » \mathcal O_y (l. 863), reliés par O_y = ρ_X^{-1}(y)∩C = (ρ_X\|_C)^{-1}(y) ; égalité non présumée ; désignations provisoires, arbitrage terminologique en G0.5 ; aucun manuscrit modifié |
+| C3 | 27/11/2026 | Correspondance intervolumes non limitée aux objets instruits ; ouverture de **G0.2bis** (complétude et consolidation) : lecture intégrale du volume I, complétude du volume II, environnements formels, matrice de couverture documentaire, classement des non-rattachés, différentiel ; pas de pourcentage lexical cible |
+| C4 | 27/11/2026 | JSON compatible YAML recevable pour le registre intermédiaire ; PyYAML autorisé dans un environnement virtuel dédié, version épinglée, dépendance documentée ; YAML lisible privilégié pour le registre pérenne ; conversion à vérifier sans perte ; aucune installation globale |
+| C5 | 27/11/2026 | G0.3 **non autorisée** avant validation de G0.2bis et clôture de G0.2 |
 
 ## Réserves
 
@@ -83,9 +104,12 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | R-G0-07 | Volume II : 8 avertissements hyperref | Conservée, cosmétique | — |
 | R-G0-08 | README Lean : ventilation 901 pour 905 audités | Reportée, sans intervention Lean | G0.8 |
 | R-G0-09 | Volume II : 19 labels seulement ; 37 % des occurrences sans label pertinent | Amélioration documentaire, non bloquante | G0.7 (B3) |
+| R-G0-10 | Lecture partielle du volume I en G0.2 (couverture 35 %) | Traitée en G0.2bis (C3) | G0.2bis |
+| A-G02-01 à 07 | Anomalies sémantiques G0.2 (détail dans `RESERVES.md`) | Ouvertes, non corrigées | Auteur |
 
-Aucune réserve n'est bloquante pour G0.2.
+Aucune réserve n'est bloquante en l'état ; A-G02-01 et R-G0-10 conditionnent la qualité de G0.3.
 
 ## Prochaine action
 
-G0.2 (inventaire sémantique), en partant de `symbol_glyphs.csv`, `coverage_v517_new_families.csv` et des anomalies localisées (`d_\rho`, annexe I l. 497 ; `\mathcal R^{\mathfrak B,\rho}`, annexe K l. 101 et 348).
+G0.2bis en cours ; arrêt avant G0.3.
+

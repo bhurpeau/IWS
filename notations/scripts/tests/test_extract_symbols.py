@@ -148,6 +148,26 @@ class TestSymbols(unittest.TestCase):
         self.assertEqual(a[-1]['famille'], 'theta')
         self.assertEqual(a[-1]['source'], r'\vth')
 
+    # B2a : la classe principale ne masque pas les attributs ; portée indice / exposant / combinaison
+    def test_secondary_attributes(self):
+        def sec(math):
+            a = atoms_of(math)
+            x = top(a)[0]
+            ch = [y for y in a if y['niveau'] > 0]
+            return x['classe'], ex.secondary_attributes(dict(x, niveau=0), [dict(y) for y in ch])
+        cls, s = sec(r'\mathcal R^{\mathfrak B,\rho}')
+        self.assertEqual(cls, 'composite')
+        self.assertEqual(s['composite_portee'], 'exposant')
+        self.assertIn('exposant:composants_multiples_non_latins', s['motifs_composite'])
+        self.assertEqual(s['composants_exposant'], r'\mathfrak{B} \rho')
+        self.assertIn('police=mathcal', s['attributs_secondaires'])
+        cls, s = sec(r'\mathcal R_X^\rho')
+        self.assertEqual(cls, 'composite')
+        self.assertEqual(s['composite_portee'], 'indice+exposant')
+        self.assertIn('combinaison:', s['motifs_composite'])
+        cls, s = sec(r'\rho_{\mathrm{sp}}')
+        self.assertEqual((cls, s['motifs_composite']), ('indexe', ''))
+
     def test_unknown_command_reported(self):
         a = atoms_of(r'\foobar x')
         self.assertEqual(a[0]['nature'], 'non_reconnu')

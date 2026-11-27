@@ -1,0 +1,56 @@
+corpus,cle,categorie,justification,source_du_constat
+volII,x,VARIABLE_GENERIQUE,"élément générique d'état (x∈C, x∈\mathcal O_y) ; type porté par II.HYB.STATE_SPACE / II.HYB.FLOW_SET",l. 83 ; l. 1138
+volII,t,VARIABLE_GENERIQUE,"temps externe d'une exécution (domaine (t,j))",l. 89 ; l. 469
+volII,y,VARIABLE_GENERIQUE,"lecture présente générique y∈Y ; y=(A,H,V,P) dans le noyau",l. 185 ; l. 861
+volII,\mathcal{H},VARIABLE_GENERIQUE,"histoire générique H∈\Madm_x ; type porté par II.HIST.MONOID",l. 85
+volII,x_{1},VARIABLE_GENERIQUE,"états témoins des définitions d'historicité et des témoins I1/I2",l. 210 ; l. 389
+volII,x_{2},VARIABLE_GENERIQUE,"idem",l. 210 ; l. 389
+volII,x_{0},VARIABLE_GENERIQUE,"condition initiale x_0∈C ou x_0∈I",l. 91 ; l. 204
+volII,s,VARIABLE_GENERIQUE,"valeur structurelle générique s∈\Sstruct (X_s) ; s_i est un autre objet (II.SA.SEMIALGEBRAIC_BLOCK)",l. 184
+volII,w,VARIABLE_GENERIQUE,"mot (chemin visible) ; \mathbf w générique en II.HIST.STRUCTURAL_WORD",l. 1615 ; l. 1663
+volII,i,INDICE_MUET,"indice de nœud",—
+volII,j,INDICE_MUET,"indice de nœud (ou indice discret d'exécution, l. 320)",l. 320
+volII,\cos,OPERATEUR_STANDARD,"fonction usuelle",—
+volII,\sin,OPERATEUR_STANDARD,"fonction usuelle",—
+volII,\deg,OPERATEUR_STANDARD,"degré d'un polynôme",l. 1615
+volII,C^{2},REGULARITE,"classe de régularité C^2 (distincte de l'ensemble de flot C)",l. 631 ; l. 1676
+volII,h,OBJET_LOCAL,"boucle h∈C^2([0,T];(R^d)^N) dans un crash-test",l. 631
+volII,\operatorname{Aut},OBJET_LOCAL_NON_INSTRUIT,"groupe d'automorphismes du graphe ; Aut_k:=Aut(A_k), Aut_k^τ:=Stab(τ_k) (l. 805–807)",l. 793–807
+volII,\sigma,OBJET_LOCAL,"permutation σ∈Aut(A)",l. 793
+volII,v,OBJET_LOCAL,"fonction-score G-invariante du lemme orbital (audit V5.16 : v réservé à ce rôle)",l. 771
+volII,G,AMBIGU_LEXICAL,"groupe G du lemme orbital (l. 771) et granularités G_0/G_1 (indices) : même glyphe, rôles distincts",l. 771 ; l. 461
+volII,\theta,OBJET_LOCAL_NON_INSTRUIT,"angle θ_r(u) de τ_0 au r-ième Kairos (témoin N=9)",l. 1243
+volII,i_{r}^{*},OBJET_LOCAL_NON_INSTRUIT,"déclencheur au rang r (« noté i_r dans la certification »)",l. 1262
+volII,m_{r},OBJET_LOCAL_NON_INSTRUIT,"m_r=min(2,…) au rang r",l. 1262
+volII,\Psi_{j},OBJET_LOCAL_NON_INSTRUIT,"application à laquelle on applique l'inversion locale (bloc conique)",l. 1707
+volII,T,AMBIGU_LEXICAL,"système cible des morphismes (S→T) et horizon temporel (T fini) : même glyphe",l. 549 ; l. 1175
+volII,a,NON_INSTRUIT,"plusieurs usages (a_i bloc semi-algébrique déjà rattaché ; a nu à instruire)",l. 594
+volII,b,AMBIGU_LEXICAL,"point b∈B dans f^{-1}(b) (définition générale de fibre, l. 149) et autres usages nus",l. 149
+volII,m,NON_INSTRUIT,"m dans les crash-tests (nombre d'arêtes modifiées du noyau ?) : non vérifié",l. 697
+volII,q,NON_INSTRUIT,"q dans le bloc premier franchissement (marge mar_q^{(r)})",l. 1262–1265
+volII,\epsilon,NON_INSTRUIT,"ε du bloc conique (distinct de \varepsilon ?) : non vérifié",l. 1712
+volI,x,NON_INSTRUIT,"état réduit ou variable générique selon le livre/annexe (livre II, annexes C–D) : à instruire",—
+volI,t,VARIABLE_GENERIQUE,"temps",—
+volI,s,AMBIGU_LEXICAL,"s(i,j) similarité (livre I l. 586) ; s ailleurs (contenu mnésique s non gras, paramètre) : plusieurs rôles",IWS_PART_I l. 586 ; ANNEXE_K l. 214
+volI,\theta,AMBIGU_LEXICAL,"composante de trace (annexe E l. 570 « θ désigne ici une composante de la trace ») ; horloge lente (annexe H l. 56) ; rattaché pour H–K seulement",ANNEXE_E l. 570 ; ANNEXE_H l. 56
+volI,X,VARIABLE_GENERIQUE,"réalisation générique X∈\mathfrak X (livre III, annexes G–L) ; index de système X∈{A,B} (livre II)",IWS_PART_III l. 274 ; IWS_PART_II l. 118
+volI,\mathcal{H},VARIABLE_GENERIQUE,"histoire générique ; partiellement rattachée (livre III)",IWS_PART_III l. 134
+volI,\tanh,OPERATEUR_STANDARD,"fonction usuelle (σ=tanh dans la dynamique)",—
+volI,\lambda,AMBIGU_LEXICAL,"paramètre de Q(τ) (livre I l. 294, rattaché pour livre I et A–B) ; autres usages en C–F non instruits",IWS_PART_I l. 294
+volI,Y,AMBIGU_LEXICAL,"Y(t) (livre I l. 734) ; réalisation Y (annexe G, X∼Y) : rôles distincts",IWS_PART_I l. 734 ; ANNEXE_G l. 307
+volI,v,VARIABLE_GENERIQUE,"valeur de V_i sur la variété homogène (V_i=v) ; v_X système réduit",IWS_PART_I l. 1446
+volI,h,VARIABLE_GENERIQUE,"valeur de H_i sur la variété homogène (H_i=h) ; h_X système réduit",IWS_PART_I l. 1445
+volI,w,NON_INSTRUIT,"w=tanh(x_A) (sortie de la source, livre II l. 167) ; poids w_k (livre III l. 667) : rôles distincts",IWS_PART_II l. 167 ; IWS_PART_III l. 667
+volI,c,NON_INSTRUIT,"constantes c, c^- (annexe B) et autres",ANNEXE_B l. 228
+volI,m,NON_INSTRUIT,"m nombre d'arêtes modifiées (livre I l. 593) et autres usages",IWS_PART_I l. 593
+volI,\Delta,AMBIGU_LEXICAL,"variation au saut ΔL (livre I l. 963), période Δ (annexes E–F), ensemble Δ (annexe C l. 196)",IWS_PART_I l. 963 ; ANNEXE_C l. 196 ; ANNEXE_F l. 220
+volI,z,NON_INSTRUIT,"état z (annexe D l. 1420, annexe I) et résumés z_4, z_5 (annexe K)",ANNEXE_D l. 1420
+volI,D,AMBIGU_LEXICAL,"ensemble de saut (livre I) ; domaine D:=D_r (annexe J l. 65) ; domaine réalisable D⊆X×Γ (annexe K l. 79)",IWS_PART_I l. 545 ; ANNEXE_J l. 65 ; ANNEXE_K l. 79
+volI,\gamma,AMBIGU_LEXICAL,"γ_0, γ_1 (friction, rattachés) ; famille continue γ:I→D (annexe J l. 253) ; variable interne γ (annexe K l. 19)",ANNEXE_J l. 253 ; ANNEXE_K l. 19
+volI,C,AMBIGU_LEXICAL,"ensemble de flot (livre I l. 538) ; constante C=b/(2a) (livre I l. 1057) ; autres",IWS_PART_I l. 538 ; l. 1057
+volI,\varepsilon,AMBIGU_LEXICAL,"paramètre du terme croisé de la fonction de Lyapunov (livre I l. 860) ; histoire vide ε (livre III, annexe G)",IWS_PART_I l. 860 ; IWS_PART_III l. 146
+volI,B,AMBIGU_LEXICAL,"argument de Deg(B) (livre I l. 188) ; système B (livre II) ; borne B:=ζ√d+u_max (annexe B l. 62)",IWS_PART_I l. 188 ; ANNEXE_B l. 62
+volI,u,VARIABLE_GENERIQUE,"entrée ; rattachée pour livre I et A–C ; paramètre de sonde u (livre III l. 339) hors sélecteur",IWS_PART_III l. 339
+volI,x^{\ast},NON_INSTRUIT,"équilibre réduit (livre II l. 359)",IWS_PART_II l. 359
+volI,\eta,NON_INSTRUIT,"coefficient de fermeture de la perméabilité R1 (livre II l. 891) ; autres usages (annexe H)",IWS_PART_II l. 891
+volI,\mathcal{L},AMBIGU_LEXICAL,"fonction de Lyapunov (livre I, rattachée) ; \mathcal L au livre III non instruit",IWS_PART_I l. 928

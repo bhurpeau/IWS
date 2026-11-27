@@ -1,0 +1,257 @@
+fichier,ligne,indices,cles_ligne,cles_ligne_suivante,extrait
+Volume_I/Annexes/IWS_ANNEXE_A.tex,270,on_pose,,,On pose
+Volume_I/Annexes/IWS_ANNEXE_A.tex,373,affectation,m_{0} \lambda,,m_0:=\frac{1}{1+\lambda}.
+Volume_I/Annexes/IWS_ANNEXE_A.tex,400,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_A.tex,444,on_definit,\tau,\tau M,"Cette expression est définie et continue pour tout \(\tau\), y"
+Volume_I/Annexes/IWS_ANNEXE_A.tex,534,affectation,,\max_{i} \max \tau_{i} t_{0},:=
+Volume_I/Annexes/IWS_ANNEXE_A.tex,561,on_note,\mu,,C'est la constante notée \(\mu\) dans l'annexe consacrée à l'énergie.
+Volume_I/Annexes/IWS_ANNEXE_A.tex,729,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_A.tex,888,on_definit,\Theta,,Au moins une pression atteint \(\Theta\). On définit
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1055,affectation,,R_{T},=:
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1083,affectation,,K_{T},=:
+Volume_I/Annexes/IWS_ANNEXE_B.tex,62,affectation,B \zeta d u_{\max},,B:=\zeta\sqrt d+u_{\max}.
+Volume_I/Annexes/IWS_ANNEXE_B.tex,111,on_definit,,,On définit d'abord l'énergie sans terme croisé :
+Volume_I/Annexes/IWS_ANNEXE_B.tex,228,designe,c^{-} E,E,"Le symbole \(c^{-}\,E\) désigne le produit de la constante \(c^{-}\) par"
+Volume_I/Annexes/IWS_ANNEXE_B.tex,486,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_B.tex,745,affectation,\nu K,,=:\nu(K).
+Volume_I/Annexes/IWS_ANNEXE_B.tex,810,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_B.tex,910,on_definit,a b c^{-} q r_{J} R,R,"définissons \(a\), \(b\), \(c^{-}\), \(q\), \(r_J\), \(R\) et"
+Volume_I/Annexes/IWS_ANNEXE_C.tex,36,on_definit,N,,"Pour un réseau de \(N\) nœuds, on définit"
+Volume_I/Annexes/IWS_ANNEXE_C.tex,126,soit,i,,"pour tout \(i\), et que l'entrée soit uniforme :"
+Volume_I/Annexes/IWS_ANNEXE_C.tex,196,soit,\Delta,,Supposons maintenant que l'état soit dans \(\Delta\) et que
+Volume_I/Annexes/IWS_ANNEXE_C.tex,350,on_appelle,,h v \theta,Nous appelons ici \emph{équilibre structurel} un équilibre du
+Volume_I/Annexes/IWS_ANNEXE_C.tex,353,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_C.tex,479,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_C.tex,857,soit,h v,,"quelle que soit la trace. Le sous-système \((h,v)\) vérifie"
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1018,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1348,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1369,on_note,,,Notons
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1722,designe,\mathcal{A},,l'attracteur autonome \(\mathcal A\) désigne cet ensemble hybride.
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1844,soit,\rho,,Ses valeurs propres sont donc réelles. Soit \(\rho\) l'une d'elles.
+Volume_I/Annexes/IWS_ANNEXE_D.tex,133,soit,\theta t,,"Alors, quelle que soit la valeur de \(\theta(t)\),"
+Volume_I/Annexes/IWS_ANNEXE_D.tex,330,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_D.tex,353,on_definit,,,On définit le résidu
+Volume_I/Annexes/IWS_ANNEXE_D.tex,889,soit,,,Soit un équilibre
+Volume_I/Annexes/IWS_ANNEXE_D.tex,897,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1287,on_definit,,,est défini par une égalité spectrale :
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1306,on_definit,,,est défini par la condition
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1360,designe,\mathcal{P},,où \(\mathcal P\) désigne le protocole de mise sous contact.
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1409,soit,,,Soit
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1420,on_note,z,,"un état \(z\), notons"
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1429,resultheading,,,\resultheading{Définition}{def:D-appropriation}{}
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1456,soit,,,Cette définition ne demande pas que les attracteurs soient des points
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1475,on_definit,\mathcal{P},,"protocole \(\mathcal P\), on définit"
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1609,on_note,,,Notons
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1623,soit,,,la trajectoire linéarisée atteint ce seuil avant que la charge ne soit
+Volume_I/Annexes/IWS_ANNEXE_E.tex,43,designe,,,désigne l'intensité projetée par composante.
+Volume_I/Annexes/IWS_ANNEXE_E.tex,105,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_E.tex,216,soit,,,Soit
+Volume_I/Annexes/IWS_ANNEXE_E.tex,225,on_definit,,,Le seuil quasi-statique de R1 est défini par
+Volume_I/Annexes/IWS_ANNEXE_E.tex,331,soit,,,"allumage quasi-statique, quelle que soit l'amplitude extérieure brute."
+Volume_I/Annexes/IWS_ANNEXE_E.tex,570,designe,\theta,,La variable \(\theta\) désigne ici une composante de la trace
+Volume_I/Annexes/IWS_ANNEXE_E.tex,605,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_E.tex,634,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_E.tex,770,on_definit,,,Le seuil limite est défini par
+Volume_I/Annexes/IWS_ANNEXE_E.tex,809,on_note,,,Notons
+Volume_I/Annexes/IWS_ANNEXE_E.tex,876,on_pose,,,Posons
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1195,on_note;on_definit,\Phi_{g} t,,Notons \(\Phi_g(t)\) la matrice fondamentale définie par
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1241,designe,\rho_{\mathrm{sp}},,où \(\rho_{\mathrm{sp}}\) désigne le rayon spectral.
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1274,soit,,,repos. Une analyse de saltation complète demanderait soit une
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1275,soit,,,"régularisation, soit une étude directionnelle de cette dépendance des"
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1362,designe,g_{F}^{qs},g_{F},Le symbole \(g_F^{qs}\) ne désigne pas un cinquième seuil. Il s'agit
+Volume_I/Annexes/IWS_ANNEXE_F.tex,83,soit,,,"Pour qu'un résultat numérique soit reproductible, une archive de"
+Volume_I/Annexes/IWS_ANNEXE_F.tex,231,on_definit,,,La branche résistante du modèle continu R0 est définie par le résidu
+Volume_I/Annexes/IWS_ANNEXE_F.tex,295,soit,,,soit une période proche de
+Volume_I/Annexes/IWS_ANNEXE_F.tex,698,soit,,,"un décalage d'environ \(2\) unités de délai, soit la résolution du"
+Volume_I/Annexes/IWS_ANNEXE_F.tex,883,soit,,,"soit \(7{,}6\,\"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,46,soit,\mathfrak{X},,"Soit \(\mathfrak X\) l'ensemble des états complets ou, plus"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,48,on_note,\mathcal{E},,On note \(\mathcal E\) l'ensemble des épisodes élémentaires. Conformément
+Volume_I/Annexes/IWS_ANNEXE_G.tex,54,designe,\mathcal{D},,où \(\mathcal D\) désigne les générateurs d'attente. Un délai est donc
+Volume_I/Annexes/IWS_ANNEXE_G.tex,63,on_note,\varepsilon,\mathcal{H}_{1} \mathcal{H}_{2},L'histoire vide est notée \(\varepsilon\). La concaténation de deux
+Volume_I/Annexes/IWS_ANNEXE_G.tex,64,on_note,\mathcal{H}_{1} \mathcal{H}_{2},\mathcal{H}_{1} \mathcal{H}_{2},histoires \(\mathcal H_1\) et \(\mathcal H_2\) est notée
+Volume_I/Annexes/IWS_ANNEXE_G.tex,80,on_definit,,,on définit
+Volume_I/Annexes/IWS_ANNEXE_G.tex,125,on_definit,,,"être fini, paramétré par une borne de durée ou défini par plusieurs"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,170,on_definit,\mathcal{H}_{0} \mathfrak{M},\mathcal{H}_{0},"Pour \(\mathcal H_0\in\mathfrak M\), on définit la classe des"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,192,on_note,\mathcal{H},,"Pour une histoire \(\mathcal H\), on note"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,214,designe,,\mathcal{H}_{2},où \(\frown\) désigne la concaténation chronologique de deux segments
+Volume_I/Annexes/IWS_ANNEXE_G.tex,302,soit,\mathfrak{B},\rho X Y \mathfrak{X},Soient une classe admissible \(\mathfrak B\) et une résolution
+Volume_I/Annexes/IWS_ANNEXE_G.tex,324,on_note,X,,La classe de \(X\) est notée
+Volume_I/Annexes/IWS_ANNEXE_G.tex,353,soit,\rho,X \mathfrak{X},Soit \(\rho\) une lecture terminale ou une lecture de chemin compatible
+Volume_I/Annexes/IWS_ANNEXE_G.tex,358,on_note,,,correspondant dans l'exécution composée. On note cette identité
+Volume_I/Annexes/IWS_ANNEXE_G.tex,366,designe,,\mathcal{H},où le membre de droite désigne la lecture ancrée sur le suffixe produit
+Volume_I/Annexes/IWS_ANNEXE_G.tex,389,soit,\mathfrak{B},,l'équivalence sur \(\mathfrak B\) soit définie avec la même convention
+Volume_I/Annexes/IWS_ANNEXE_G.tex,466,soit,\rho,,Soit \(\rho\) une lecture terminale ou une lecture de chemin compatible
+Volume_I/Annexes/IWS_ANNEXE_G.tex,583,on_definit,,,"lui-même défini par la complexité, par exemple"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,634,on_note,\rho_{1},,"\(\rho_1\), et l'on note"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,662,soit,X Y \mathfrak{X},X Y,"Soient \(X,Y\in\mathfrak X\) tels que"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,771,soit,,,Soit
+Volume_I/Annexes/IWS_ANNEXE_G.tex,821,soit,,\mathfrak{B},& Il suffit que les réponses soient définies sur
+Volume_I/Annexes/IWS_ANNEXE_H.tex,54,designe,p,\chi,\item $p$ désigne la pression ou la charge résiduelle ;
+Volume_I/Annexes/IWS_ANNEXE_H.tex,55,designe,\chi,\theta,\item $\chi$ désigne la variable d'interface rapide ;
+Volume_I/Annexes/IWS_ANNEXE_H.tex,56,designe,\theta,\mathbf{s},\item $\theta$ désigne l'horloge ou la phase lente intermédiaire ;
+Volume_I/Annexes/IWS_ANNEXE_H.tex,57,designe,\mathbf{s},,\item $\mathbf s$ désigne le contenu mnésique survivant.
+Volume_I/Annexes/IWS_ANNEXE_H.tex,86,on_note,\mathcal{G},y_{0},On note $\mathcal G$ l'épisode de regraine et l'on suppose qu'il impose
+Volume_I/Annexes/IWS_ANNEXE_H.tex,106,on_appelle,,,"On appelle \emph{régime d'extinction exacte} l'ensemble des états qui,"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,116,on_note,,,On le note
+Volume_I/Annexes/IWS_ANNEXE_H.tex,135,soit,,,comportementale exige encore que toute variable interne omise soit
+Volume_I/Annexes/IWS_ANNEXE_H.tex,167,soit,,,"incluse dans ce résumé est soit fixée par le protocole, soit"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,173,soit,,,"variables internes, mais que les variables omises soient"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,198,soit,\mathcal{P} \rho,,Soient $\mathcal P$ une sonde admissible et $\rho$ une résolution
+Volume_I/Annexes/IWS_ANNEXE_H.tex,221,soit,X,,Soit $X$ un système issu d'une histoire quelconque et supposons que son
+Volume_I/Annexes/IWS_ANNEXE_H.tex,242,on_definit,\omega_{\rho},,"application avec la lecture $\omega_\rho$, on définit"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,246,affectation,,\omega_{\rho},:=
+Volume_I/Annexes/IWS_ANNEXE_H.tex,313,designe,,,"désigne le protocole préfixe complet : épisodes actifs, délai"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,486,soit,,,Soit une histoire
+Volume_I/Annexes/IWS_ANNEXE_H.tex,497,soit,\mathbf{s},,Supposons de plus que la loi d'évolution de $\mathbf s$ soit linéaire
+Volume_I/Annexes/IWS_ANNEXE_H.tex,629,on_note,p \chi \theta,,"variables $(p,\chi,\theta)$ peuvent n'être que petites. On note"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,649,soit,,,"à l'état initial une observable réelle pré-binaire soit continue, et que"
+Volume_I/Annexes/IWS_ANNEXE_H.tex,650,soit,,,la frontière de commutation soit traversée transversalement hors des
+Volume_I/Annexes/IWS_ANNEXE_H.tex,849,on_definit,S_{\mathcal A} s_{0} \delta_{\mathcal A},s^{\star},& écriture nette définie par $S_{\mathcal A}(s_0)=s_0+\delta_{\mathcal A}(s_0)$ \\
+Volume_I/Annexes/IWS_ANNEXE_I.tex,49,on_note,,,On note l'état complet du modèle canonique
+Volume_I/Annexes/IWS_ANNEXE_I.tex,96,on_definit,,,On définit l'injection canonique
+Volume_I/Annexes/IWS_ANNEXE_I.tex,167,soit,,,flot et les règles événementielles soient équivariants sous cette
+Volume_I/Annexes/IWS_ANNEXE_I.tex,225,on_pose,s c_{0},,$ssc_0$ et posons
+Volume_I/Annexes/IWS_ANNEXE_I.tex,229,affectation,,\omega_{\rho},:=
+Volume_I/Annexes/IWS_ANNEXE_I.tex,245,soit,,,Soit la section éteinte
+Volume_I/Annexes/IWS_ANNEXE_I.tex,288,on_definit,,,"Pour une lecture binaire, définissons"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,310,soit,H I Z a,,Soit $H:I\to Z$ la carte qui associe à un paramètre initial $a$ l'état
+Volume_I/Annexes/IWS_ANNEXE_I.tex,347,soit,,,soit active pour toute sonde. Il faut distinguer la structure
+Volume_I/Annexes/IWS_ANNEXE_I.tex,351,on_note,z_{i} \operatorname{abl}_{i} z,z_{i},"Pour une coordonnée $z_i$, notons $\operatorname{abl}_i(z)$ l'état obtenu"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,352,affectation,z_{i},,"par l'intervention déclarée d'ablation, généralement $z_i:=0$, les autres"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,448,soit,"\Omega_{\mathcal P,\rho}","A_{\mathcal P,\rho}","\item que $\widehat\Omega_{\mathcal P,\rho}$ soit continue ;"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,449,soit,"A_{\mathcal P,\rho}","\Sigma_{\mathcal P,\rho}","\item que $A_{\mathcal P,\rho}$ soit connexe ;"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,450,soit,"\Sigma_{\mathcal P,\rho}",s \theta \chi p,"\item que $\Sigma_{\mathcal P,\rho}$ soit une variété lisse ;"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,451,soit,s \theta \chi p,z,"\item que la réponse soit monotone en $s$, $\theta$, $\chi$ ou $p$ ;"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,452,soit,z,,\item que toutes les coordonnées de $z$ soient actives ;
+Volume_I/Annexes/IWS_ANNEXE_J.tex,37,soit,Q,,"Soit $Q$ un espace de paramètres regroupant, selon la famille étudiée,"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,40,on_definit,Q,Q,Q$ contient les paramètres pour lesquels le protocole est défini sans
+Volume_I/Annexes/IWS_ANNEXE_J.tex,43,soit,,,soit fixée avant l'exécution correspondante.
+Volume_I/Annexes/IWS_ANNEXE_J.tex,65,affectation,D D_{\mathrm r},,"D:=D_{\mathrm r},"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,73,on_note,q D,,"Pour $q\in D$, notons"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,93,on_pose,k \mathcal{K},,"Pour $k\in\mathcal K$, posons"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,119,soit,,,Soit
+Volume_I/Annexes/IWS_ANNEXE_J.tex,147,soit,E_{C},L_{C},Cette factorisation ne prétend pas que $E_C$ soit injective ni que
+Volume_I/Annexes/IWS_ANNEXE_J.tex,148,soit,L_{C},,$L_C$ soit continue pour une sortie binaire.
+Volume_I/Annexes/IWS_ANNEXE_J.tex,155,soit,g_{C},,"telle que l'issue soit donnée par le signe de $g_C$, hors éventuel"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,253,soit,\gamma I D t_{*},,Soit $\gamma:I\to D$ une famille continue. Un point $t_*$ est une
+Volume_I/Annexes/IWS_ANNEXE_J.tex,295,designe,\Psi,T,où $\Psi$ désigne l'évolution post-coupure. Tant qu'aucun événement
+Volume_I/Annexes/IWS_ANNEXE_J.tex,405,soit,K_{\kappa},\Sigma,\item que $K_\kappa$ soit une variété ;
+Volume_I/Annexes/IWS_ANNEXE_J.tex,406,soit,\Sigma,,\item que $\Sigma$ soit globalement lisse ou connexe ;
+Volume_I/Annexes/IWS_ANNEXE_J.tex,409,soit,,,\item que les dates des événements soient constantes dans une cellule ;
+Volume_I/Annexes/IWS_ANNEXE_J.tex,410,soit,,,\item que les catégories C et K soient exclusives aux points
+Volume_I/Annexes/IWS_ANNEXE_J.tex,412,soit,,,\item qu'un axe soit uniformément C ou K sur toute sa plage ;
+Volume_I/Annexes/IWS_ANNEXE_K.tex,19,soit,\gamma,\gamma \mathfrak{B} \rho,"Soit une présentation plastique dans laquelle une variable interne $\gamma$ modifie la loi d'action. Si $\gamma$ possède une dynamique causale, markovienne et réalisable, alors cette présentation est équivalente, pour to"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,45,designe,,\gamma,L'expression ``la loi change'' désigne ici la convention selon laquelle
+Volume_I/Annexes/IWS_ANNEXE_K.tex,50,on_definit,,,On définit l'état augmenté
+Volume_I/Annexes/IWS_ANNEXE_K.tex,52,affectation,x \gamma X \Gamma,,"\widetilde x=(x,\gamma)\in \widetilde X:=X\times\Gamma."
+Volume_I/Annexes/IWS_ANNEXE_K.tex,71,designe,,,désignent pas deux dynamiques différentes. Ils désignent deux découpages
+Volume_I/Annexes/IWS_ANNEXE_K.tex,79,soit,D X \Gamma,,Soit $D\subseteq X\times\Gamma$ le domaine réalisable des conditions
+Volume_I/Annexes/IWS_ANNEXE_K.tex,118,on_note,\mathcal{H} \mathfrak{B},,"Pour une histoire admissible $\mathcal H\in\mathfrak B$, notons"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,200,soit,\gamma,,"Le théorème ne suppose ni que $\gamma$ soit scalaire, ni qu'elle soit"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,201,soit,,\gamma,"lente, ni que sa dynamique soit linéaire, ni que la sortie soit binaire."
+Volume_I/Annexes/IWS_ANNEXE_K.tex,202,soit,\gamma,,Il ne suppose pas non plus que $\gamma$ soit directement observable. Il
+Volume_I/Annexes/IWS_ANNEXE_K.tex,214,soit,z_{4} p \chi \theta s,,"Soit $z_4=(p,\chi,\theta,s)$ le résumé lent de l'Appendice I et"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,305,on_pose,,,"Pour une sortie binaire, posons"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,72,on_pose,,,On pose
+Volume_I/Annexes/IWS_ANNEXE_L.tex,118,on_note,,,Notons
+Volume_I/Annexes/IWS_ANNEXE_L.tex,158,soit,,,Soit
+Volume_I/Annexes/IWS_ANNEXE_L.tex,172,on_definit,,,On définit
+Volume_I/Annexes/IWS_ANNEXE_L.tex,213,soit,,,"Elle ne suppose pas que l'infimum soit atteint, que les histoires soient"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,214,soit,,,"indexées par des entiers, que la complexité soit additive, que les"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,215,soit,,c,"budgets soient finis, ni que les systèmes possèdent une représentation"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,280,soit,,,"Dans tout espace ultramétrique, deux boules de même rayon sont soit"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,281,soit,,,"disjointes, soit identiques ; plus généralement, deux boules qui se"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,323,on_definit,c \mathfrak{B}_{2},,"Si une même complexité \(c\) est définie sur \(\mathfrak B_2\), alors"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,348,soit,P,,"Soient deux présentations \(P\) et \(P'\) telles que, pour toute histoire"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,389,soit,\mathfrak{B} \rho,\mathcal{R}_{z}^{\rho},"soit suffisant pour la classe \((\mathfrak B,\rho)\), c'est-à-dire qu'il"
+Volume_I/IWS_PART_I.tex,66,designe,F,,\(F\) désigne le champ de vecteurs suivi entre deux événements ;
+Volume_I/IWS_PART_I.tex,79,on_note,,,On note
+Volume_I/IWS_PART_I.tex,143,designe,P_{i},,"\(P_i\) est un accumulateur local utilisé pour déclencher les Kairos. Le mot « pression » ne désigne pas une pression physique. Il résume ici une combinaison de l'amplitude de l'état, de la vitesse et d'une relaxation."
+Volume_I/IWS_PART_I.tex,168,designe,\mathfrak{G}_{N},\mathcal{V},où \(\mathfrak G_N\) désigne l'ensemble des graphes simples non orientés
+Volume_I/IWS_PART_I.tex,273,affectation,\tau_{i},,:=\bar\tau_i.
+Volume_I/IWS_PART_I.tex,386,on_appelle,M,,"Pour cette raison, \(M\) est appelé \textbf{préconditionneur anisotrope historique}. Le mot « métrique » n'est pas employé dans les énoncés mathématiques : la dynamique ne contient pas les termes qu'exigerait une véritab"
+Volume_I/IWS_PART_I.tex,501,soit,,,"permet d'étudier une sollicitation, un bruit imposé ou, plus tard, une interaction passant par une interface. Le noyau ne suppose pas que cette entrée soit optimisée ou porte une récompense."
+Volume_I/IWS_PART_I.tex,558,on_definit,i,,"Pour chaque nœud \(i\), on définit un opérateur de Kairos"
+Volume_I/IWS_PART_I.tex,582,on_note;soit,i^{\ast} \mathcal{N} \mathcal{N}^{c},,"Soit \(i^\ast\) le nœud sélectionné. On note \(\mathcal N(i^\ast)\) son voisinage et \(\mathcal N^c(i^\ast)\) l'ensemble de ses non-voisins, en excluant \(i^\ast\)."
+Volume_I/IWS_PART_I.tex,709,on_pose,,,Posons
+Volume_I/IWS_PART_I.tex,864,designe,,,permet d'obtenir une estimation de type \emph{input-to-state stability}\footnote{\emph{Input-to-state stability} est le terme usuel. Il désigne une stabilité pour laquelle la taille de l'état est contrôlée par la conditi
+Volume_I/IWS_PART_I.tex,882,on_pose,,,On pose
+Volume_I/IWS_PART_I.tex,896,on_note,,,On note également
+Volume_I/IWS_PART_I.tex,1052,on_pose,,,Posons
+Volume_I/IWS_PART_I.tex,1238,affectation,R_{T},,=:R_T.
+Volume_I/IWS_PART_I.tex,1266,on_pose,,,Posons
+Volume_I/IWS_PART_I.tex,1396,on_definit,,,Le modèle hybride est défini sans ambiguïté à entrée donnée.
+Volume_I/IWS_PART_II.tex,72,soit,,,La présence d'une variable d'interface n'implique pas qu'elle soit
+Volume_I/IWS_PART_II.tex,273,on_note,\tau_{\mathrm{ign}},,On note \(\tau_{\mathrm{ign}}\) la norme de trace pour laquelle
+Volume_I/IWS_PART_II.tex,511,soit,,,"soit une période d'environ \(18{,}8\)."
+Volume_I/IWS_PART_II.tex,571,designe,\mathcal{P},,où \(\mathcal P\) désigne le protocole de mise sous contact.
+Volume_I/IWS_PART_II.tex,624,soit,z_{0} B,g T,Soit \(z_0\) l'état de \(B\) avant l'interaction. On applique le
+Volume_I/IWS_PART_II.tex,628,on_note,,,On note
+Volume_I/IWS_PART_II.tex,640,resultheading,g T \mathcal{P},z_{0},"\resultheading{Définition}{def:t2-appropriation}{} L'interaction \((g,T,\mathcal P)\) est appropriée"
+Volume_I/IWS_PART_II.tex,671,on_definit,\mathcal{P},,"\(\mathcal P\), on définit"
+Volume_I/IWS_PART_II.tex,884,on_pose,,,On pose
+Volume_I/IWS_PART_II.tex,933,soit,g_{\star}^{0},,Soit \(g_\star^0\) un seuil du modèle continu R0. Le seuil
+Volume_I/IWS_PART_II.tex,1077,soit,,,écrit quelle que soit son orientation.
+Volume_I/IWS_PART_II.tex,1113,designe,\chi_{\ast}^{-},,"Si \(\chi_\ast^-\) désigne la charge immédiatement avant un événement sur le cycle, la composante scalaire de la trace vérifie"
+Volume_I/IWS_PART_II.tex,1379,on_definit,,,On définit la charge nette écrite pendant une exposition par
+Volume_I/IWS_PART_II.tex,1485,resultheading,,,"\resultheading{Définition}{def:t2-amorcage-interface}{} Une exposition produit un \textbf{amorçage d'interface} si, après extinction des variables transitoires et sans changement immédiat de bassin autonome, elle modifie"
+Volume_I/IWS_PART_II.tex,1818,soit,\mathcal{H}_{1} \mathcal{H}_{2},,Soient deux histoires \(\mathcal H_1\) et \(\mathcal H_2\). On associe à
+Volume_I/IWS_PART_III.tex,27,on_appelle,,,"Il faut d'abord préciser ce que l'on appelle une histoire, ce qui en survit dans l'état présent, et selon quelles lectures deux histoires peuvent être considérées comme fonctionnellement distinctes."
+Volume_I/IWS_PART_III.tex,73,soit,X_{0} \mathcal{H},,"Soit une réalisation initiale $X_0$, soumise à une histoire $\mathcal H$. À l'issue de cette histoire, on obtient une réalisation transformée que l'on peut noter provisoirement"
+Volume_I/IWS_PART_III.tex,78,soit,,,"Cette notation ne suppose pas que toute l'histoire soit encodée dans un état instantané, ni qu'elle puisse être reconstruite à partir de celui-ci. Elle indique seulement que les réponses futures du système peuvent dépend"
+Volume_I/IWS_PART_III.tex,105,designe,,,"D'une part, elle décrit une succession effective de transformations. D'autre part, elle désigne ce qui, dans cette succession, demeure encore capable de modifier les réponses futures."
+Volume_I/IWS_PART_III.tex,128,soit,\mathcal{E} e,,Soit $\mathcal E$ l'ensemble des épisodes admissibles. À chaque épisode $e\in\mathcal E$ est associée une application de transition
+Volume_I/IWS_PART_III.tex,132,designe,\mathfrak{X},,où $\mathfrak X$ désigne l'espace dans lequel est représentée la réalisation du système.
+Volume_I/IWS_PART_III.tex,146,on_note,\varepsilon,,L'histoire vide est notée $\varepsilon$ et vérifie
+Volume_I/IWS_PART_III.tex,159,designe,\mathcal{H}_{1} \mathcal{H}_{2},,"désigne l'histoire dans laquelle le système vit d'abord $\mathcal H_1$, puis $\mathcal H_2$. Par conséquent,"
+Volume_I/IWS_PART_III.tex,231,soit,,,"Dans le modèle actuel, l'épisode vécu en dernier peut peser davantage sur l'état lent simplement parce que son effet a subi moins d'atténuation. L'échange de deux épisodes modifie alors la réponse sans qu'il soit encore "
+Volume_I/IWS_PART_III.tex,263,soit,,,Soit
+Volume_I/IWS_PART_III.tex,300,on_note,\rho,,"On note $\rho$ le choix de ce qui est ainsi retenu. Dans la suite, $\rho$ désignera donc une \emph{lecture}, ou de manière équivalente une résolution d'observation."
+Volume_I/IWS_PART_III.tex,304,on_note,,,"Pour une lecture fixée, la réponse observée est notée"
+Volume_I/IWS_PART_III.tex,339,designe,\mathcal{H}_{0} u,,"désigne la réponse obtenue après qu'une réalisation initiale a vécu l'histoire $\mathcal H_0$, puis a été soumise à la sonde associée à $u$."
+Volume_I/IWS_PART_III.tex,351,soit,,,Soient deux réalisations
+Volume_I/IWS_PART_III.tex,412,designe,,,"Ces choix n'introduisent aucune finalité dans la dynamique. Ils ne désignent ni un objectif poursuivi par le système, ni une norme à laquelle il devrait se conformer. Ils déclarent seulement les moyens dont dispose l'obs"
+Volume_I/IWS_PART_III.tex,439,soit,,,Soit une même réalisation initiale
+Volume_I/IWS_PART_III.tex,503,designe,,,Cette expression ne désigne pas une copie abrégée de l'histoire.
+Volume_I/IWS_PART_III.tex,566,soit,,,Soit
+Volume_I/IWS_PART_III.tex,587,soit,,,l'état rapide et sa vitesse soient revenus au repos ;
+Volume_I/IWS_PART_III.tex,595,on_note,,,On note
+Volume_I/IWS_PART_III.tex,611,soit,s_{\mathcal H},,Cette égalité doit être lue dans le régime déclaré. Elle ne signifie pas que l'histoire peut être reconstruite à partir de $\vec s_{\mathcal H}$. Elle signifie que les autres différences pertinentes pour la réponse futur
+Volume_I/IWS_PART_III.tex,667,designe,r e_{k} w_{k},,où $\vec r(e_k)$ désigne la contribution résiduelle de l'épisode $e_k$ et où le poids $w_k$ dépend du temps écoulé depuis cet épisode.
+Volume_I/IWS_PART_III.tex,694,soit,s,,Supposons en outre que la loi d'évolution de $\vec s$ soit linéaire dans le régime considéré et que l'écriture produite par chaque épisode ne dépende pas de la valeur héritée de $\vec s$.
+Volume_I/IWS_PART_III.tex,735,designe,e_{A} e_{B} w_{1} w_{2},,"Considérons deux épisodes $e_A$ et $e_B$. Si $w_1$ désigne le poids résiduel associé à la première position dans l'histoire et $w_2$ celui associé à la seconde, alors"
+Volume_I/IWS_PART_III.tex,821,soit,,,"Un même épisode peut en effet être vécu par deux réalisations issues d'histoires différentes. Il peut alors produire des trajectoires, des événements ou des écritures lentes différents, bien que ses paramètres extérieurs"
+Volume_I/IWS_PART_III.tex,847,soit,,,Soit une réalisation initiale
+Volume_I/IWS_PART_III.tex,883,soit,e,,"Le fait que ces deux états soient différents n'établit pas encore une conditionnalité de l'expérience. Ils pouvaient déjà différer avant l'épisode, et $e$ peut simplement transporter cette différence sans la modifier."
+Volume_I/IWS_PART_III.tex,914,designe,w,,"Dans le régime compressible étudié au chapitre précédent, l'épisode laissait une contribution indépendante de la mémoire déjà présente. Si $w$ désigne le poids de conservation de cette mémoire pendant le protocole, les é"
+Volume_I/IWS_PART_III.tex,948,designe,e s_{j},,désigne la contribution laissée par $e$ lorsqu'il est reçu par une réalisation portant la mémoire $\vec s_j$.
+Volume_I/IWS_PART_III.tex,968,soit,e r,,L'histoire intervient donc dans l'effet de l'épisode lui-même. Cette dépendance rompt la superposition de contributions fixes : il n'est plus possible d'associer à $e$ un unique vecteur $\vec r(e)$ valable quelle que soi
+Volume_I/IWS_PART_III.tex,999,soit,,,Soient deux réalisations au repos
+Volume_I/IWS_PART_III.tex,1161,on_note,,,On note
+Volume_I/IWS_PART_III.tex,1196,soit,,,"peut donc provenir de la rencontre entre deux dynamiques encore actives, sans qu'aucune modification durable de l'organisation interne soit nécessaire."
+Volume_I/IWS_PART_III.tex,1204,on_note,,,On note
+Volume_I/IWS_PART_III.tex,1380,soit,,,Soit une réalisation
+Volume_I/IWS_PART_III.tex,1385,on_note,\mathfrak{B} \rho,,"Pour une classe de sondes $\mathfrak B$ et une lecture $\rho$, on note"
+Volume_I/IWS_PART_III.tex,1467,soit,X_{0},\mathcal{H}_{0},Soit une réalisation initiale $X_0$ et une histoire passée
+Volume_I/IWS_PART_III.tex,1598,soit,,,Soit une réalisation initiale
+Volume_I/IWS_PART_III.tex,1715,on_definit,A,,"Pour une réponse $A$, on définit"
+Volume_I/IWS_PART_III.tex,1733,soit,X_{1} X_{2},,Soient deux réalisations $X_1$ et $X_2$ interrogées par la même famille
+Volume_I/IWS_PART_III.tex,1788,soit,\Omega,,"Cette comparaison ne suppose pas encore que la frontière soit lisse, ni même qu'elle puisse être décrite par une fonction. Elle demande seulement que les régions de réponse soient définies dans le même espace $\Omega$ et"
+Volume_I/IWS_PART_III.tex,1829,soit,,,Le cas le plus simple est celui d'une frontière qui change de position sans que son organisation générale soit modifiée.
+Volume_I/IWS_PART_III.tex,1836,soit,A,,Supposons que la réponse $A$ soit obtenue pour
+Volume_I/IWS_PART_III.tex,1939,soit,,,Deux réalisations peuvent produire des régions de réponse de formes différentes sans que leur organisation générale soit modifiée.
+Volume_I/IWS_PART_III.tex,1950,soit,,,Supposons que les mêmes réponses soient présentes dans les deux cas.
+Volume_I/IWS_PART_III.tex,2061,designe,,,"Nous distinguerons deux situations utiles pour la suite : le pli et la couture. Ces termes décrivent des propriétés locales du découpage dans l'espace des sondes. Ils ne désignent pas, à eux seuls, les mécanismes interne"
+Volume_I/IWS_PART_III.tex,2099,soit,X_{1} X_{2},X_{1} X_{2},Soient deux réalisations $X_1$ et $X_2$ obtenues avant et après le
+Volume_I/IWS_PART_III.tex,2168,on_definit,,,"Le point essentiel n'est pas le nombre de réponses présentes. C'est la manière dont leurs frontières se raccordent localement. Comme pour le pli, la couture est définie relativement à la famille de sondes et à la lecture"
+Volume_I/IWS_PART_III.tex,2170,designe,,,Elle ne désigne pas directement une singularité interne du système. Elle décrit une singularité de l'organisation des réponses observées dans l'espace des sondes.
+Volume_I/IWS_PART_III.tex,2239,soit,\mathfrak{B} \rho,,"Soit un protocole d'observation déclaré \((\mathfrak B,\rho)\), dans"
+Volume_I/IWS_PART_III.tex,2294,soit,,,"Deux histoires peuvent différer sans que cette différence soit visible dans la géométrie de réponse. Inversement, une modification de la géométrie de réponse atteste qu'une propriété observable du système a été transform"
+Volume_I/IWS_PART_III.tex,2305,soit,\mathcal{H} X,X,Soit une histoire \(\mathcal H\) et une réalisation initiale \(X\).
+Volume_I/IWS_PART_III.tex,2401,soit,,,Deux réalisations équivalentes peuvent ainsi demeurer différentes sans que cette différence soit accessible aux sondes considérées. Enrichir la famille de sondes ou modifier la lecture peut alors faire apparaître une sép
+Volume_I/TABLE_ENONCES.tex,31,on_definit,,,\ref{def:t2-appropriation} & \texttt{{[}DEF{]}} & Appropriation définie par changement de bassin autonome & Ann. D.3 \\
+Volume_I/main.tex,144,designe,,,"Ce nom désigne ici une classe de systèmes dynamiques dont l'état présent ne suffit pas nécessairement à déterminer, à lui seul, la manière dont ils répondront à ce qui leur arrive ensuite. Leur histoire peut modifier leu"
+Volume_I/main.tex,146,designe,,,"Le terme \emph{inner world} ne désigne pas un monde intérieur au sens psychologique, phénoménologique ou métaphysique. Il désigne l'organisation interne par laquelle le système reçoit, transforme et conserve certains eff"
+Volume_I/main.tex,170,soit,\mathfrak{B} \rho,,Un second voisinage est celui des \textbf{équivalences comportementales}. La bisimulation et la coinduction fournissent une tradition générale pour comparer des systèmes par leurs comportements plutôt que par l’identité 
+Volume_I/main.tex,251,designe,,,Ce qui reste quand l'autre s'en va n'est donc pas nécessairement une copie de l'autre. Ce peut être une modification de ce que le système est désormais capable de traverser. L'histoire acquiert alors un sens fonctionnel.
+Volume_I/main.tex,273,on_definit,,,"Un IWS n'est donc pas défini par la conservation de son passé. Il l'est, dans le cadre construit ici, par la manière dont ce passé"
