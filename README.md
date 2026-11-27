@@ -56,7 +56,7 @@ Le présent dépôt constitue la référence documentaire et scientifique commun
 
 Le dépôt `iws-lean` formalise les résultats analytiques d'IWS à l'aide de Lean 4, Mathlib et LeanForControl.
 
-État au 26 novembre 2026 :
+État au 26 novembre 2026 (commit `e9fb1a6`, tag `annex-d-certified-v4.36.0`, Lean et Mathlib `v4.36.0`) :
 
 | Annexe | Objet | Statut |
 |---|---|---|
@@ -65,7 +65,7 @@ Le dépôt `iws-lean` formalise les résultats analytiques d'IWS à l'aide de Le
 | D | Résistance et influence extérieure | Formalisation achevée |
 | Autres annexes | Développements complémentaires | À formaliser |
 
-Le corpus comprend 905 théorèmes IWS audités. Les dépendances axiomatiques rapportées sont limitées à `propext`, `Classical.choice` et `Quot.sound`, sans `sorryAx`.
+Le corpus comprend 905 théorèmes IWS audités. Les dépendances axiomatiques rapportées sont limitées à `propext`, `Classical.choice` et `Quot.sound`, sans `sorryAx`. Ce bilan est celui de la sortie d'audit versionnée dans `iws-lean` ; il n'a pas été reconstruit dans le cadre du chantier G0.
 
 La formalisation analytique ne constitue pas une certification systématique des résultats numériques, des conjectures ou des questions ouvertes du manuscrit.
 
@@ -122,7 +122,12 @@ Il comprend :
 
 La formalisation de l'annexe G et des annexes qui en découlent doit s'appuyer sur les conventions stabilisées par G0.
 
-**Statut actuel : chantier préparatoire.**
+- [Programme de travail G0](audits/G0/PLAN_G0.md)
+- [État d'avancement](audits/G0/STATUS.md)
+- [Manifeste des sources (G0.0)](audits/G0/G0_00_manifest.md)
+- [Référentiel notationnel](notations/) (en cours de constitution)
+
+**Statut actuel : phase G0.0 (gel des sources) réalisée, en attente de validation.**
 
 ## 4. Statut scientifique des résultats
 
@@ -163,7 +168,19 @@ latexmk -pdf IWS_volume_II_classe_objets_transformations_v5_17.tex
 
 Les compilations doivent être effectuées depuis les répertoires respectifs des volumes afin de préserver la résolution des chemins relatifs vers les figures et les fichiers inclus.
 
-La reproductibilité des compilations de référence reste à vérifier dans le cadre du chantier G0.
+Le volume I utilise `natbib` et BibTeX (style `unsrt`). Les paquets `appendix`, `tcolorbox`, `xurl`, `enumitem` et les polices `rsfs` (paquet `mathrsfs`) sont requis ; ils sont absents d'une installation BasicTeX minimale.
+
+Les compilations de référence du chantier G0 (27 novembre 2026, pdfTeX, TeX Live 2026) ont été obtenues sans `latexmk`, par la séquence suivante :
+
+```bash
+cd Volume_I && pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+```
+
+```bash
+cd Volume_II && for i in 1 2 3; do pdflatex IWS_volume_II_classe_objets_transformations_v5_17.tex; done
+```
+
+Elles aboutissent sans erreur ni référence non définie ; détails dans le [manifeste G0.0](audits/G0/G0_00_manifest.md).
 
 ## 6. Organisation du dépôt
 
@@ -181,15 +198,21 @@ IWS/
 │   └── fig/
 ├── Volume_II/
 │   ├── IWS_volume_II_classe_objets_transformations_v5_17.tex
-│   ├── IWS_volume_II_classe_objets_transformations_v5_17.pdf
 │   ├── NOTES_V5_17.md
 │   ├── preuves_compagnons/
 │   └── fig/
-├── diag_rho_volI.md
-└── IWS_VolII_audit_notations_v5_16.md
+├── audits/
+│   ├── diag_rho_volI.md
+│   ├── IWS_VolII_audit_notations_v5_16.md
+│   └── G0/
+│       ├── PLAN_G0.md
+│       ├── STATUS.md
+│       ├── G0_00_manifest.md
+│       └── G0_00_controls/
+└── notations/
 ```
 
-Un répertoire `notations/` sera ajouté lors de la constitution du référentiel canonique intervolumes.
+Le PDF du volume II n'est pas versionné ; il est à produire depuis la source canonique. Le répertoire `notations/` accueillera le référentiel canonique intervolumes constitué par le chantier G0.
 
 ## 7. Principes de développement
 

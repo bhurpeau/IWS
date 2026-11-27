@@ -56,6 +56,8 @@ Audits historiques : `audits/diag_rho_volI.md` et `audits/IWS_VolII_audit_notati
 
 ### 2.3. Constats déjà établis
 
+> [Erratum E1, 27/11/2026] Les identifiants qualifiés ci-dessous d'« arbres » sont des commits ; voir `ERRATA_PLAN_G0.md`.
+
 - L'arbre Git `8cdf171a056203268f5dde545a65e691220409d0` du dépôt principal a été inspecté. Il contient les deux volumes, le README et les répertoires `audits/` et `notations/`. Il s'agit d'un identifiant d'arbre, pas d'un commit de gel.
 - Les fichiers inclus par le document maître du volume I étaient tous présents lors de la vérification précédente. Les 455 occurrences du jeton `\rho` ont été recomptées sur l'arbre antérieur `22e14626de715b3a88783f55f89b662594ee9171`, avec concordance des décomptes par fichier. Cela ne certifie pas l'identité sémantique de chaque occurrence ni l'absence de changements ultérieurs.
 - L'audit V5.16 est plus récent que V5.12 ; il doit être réconcilié avec V5.17 et non appliqué aveuglément. En particulier, `\mathscr F_w` désigne la famille de polynômes, alors que les anciennes conventions mentionnaient le compteur `\mu_w`.

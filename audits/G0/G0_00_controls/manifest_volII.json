@@ -1,0 +1,273 @@
+{
+ "files": [
+  {
+   "file": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "parent": null,
+   "depth": 0,
+   "lines": 1925,
+   "sha256": "f11fb4bb7725d840de30d4c8e1e4c98ea91c9011b55449afbe7aac363af6d50f"
+  }
+ ],
+ "graphics": [
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "opacity_walls_protocol_control",
+   "line": 969,
+   "resolved": "fig/opacity_walls_protocol_control.png",
+   "sha256": "0fa4328b65b05f235f9157546fd2cedf52a85862495f93c5d90f28f88edfb604"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "opacity_adaptive_refinement",
+   "line": 1008,
+   "resolved": "fig/opacity_adaptive_refinement.png",
+   "sha256": "aaac7c88328282b4d8b82a65b0dd1a30d3f0b2a52486e7a3980469d7cd97da93"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "opacity_recursive_refinement",
+   "line": 1033,
+   "resolved": "fig/opacity_recursive_refinement.png",
+   "sha256": "9c3cf9946014635b23cc0dc20657328226ff5ed47afcc6c4aa0ef8f0eca42d8a"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "reachability_joint_N9",
+   "line": 1253,
+   "resolved": "fig/reachability_joint_N9.png",
+   "sha256": "be2939a7b92be48a664138e341f35afe2700b70819103a1c7bebb3f2fe465242"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "margin_first_crossing_N9",
+   "line": 1290,
+   "resolved": "fig/margin_first_crossing_N9.png",
+   "sha256": "fb61ed85dfdc7db901b247f64ce7bc7a6591668a4b3807372a5d963a60da7864"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "active_walls_site2_bas_r4",
+   "line": 1378,
+   "resolved": "fig/active_walls_site2_bas_r4.png",
+   "sha256": "1913104ab78ec7d6880e69984d51441dfac6dd25eb5d758bb27395333d9ce31f"
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "via": "includegraphics",
+   "name": "structural_wall_fixsigma",
+   "line": 1395,
+   "resolved": "fig/structural_wall_fixsigma.png",
+   "sha256": "f9d0b2e854eb8a8fadb6bea6199b6fe50b03a4df3779c5221b75bf58ca8bc424"
+  }
+ ],
+ "bib": [],
+ "packages": [
+  "amsmath",
+  "amssymb",
+  "amsthm",
+  "array",
+  "babel",
+  "booktabs",
+  "enumitem",
+  "float",
+  "fontenc",
+  "geometry",
+  "graphicx",
+  "hyperref",
+  "inputenc",
+  "lmodern",
+  "mathrsfs",
+  "mathtools",
+  "microtype",
+  "tikz"
+ ],
+ "macros": [
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "definition",
+   "line": 24
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "candidate",
+   "line": 25
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "proposition",
+   "line": 26
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "propositionthm",
+   "line": 27
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "lemma",
+   "line": 28
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "corollary",
+   "line": 29
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "question",
+   "line": 30
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "remark",
+   "line": 32
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newtheorem",
+   "name": "crashtest",
+   "line": 33
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "IWS",
+   "line": 35
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Hyb",
+   "line": 36
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "X",
+   "line": 37
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Sstruct",
+   "line": 38
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "M",
+   "line": 39
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Madm",
+   "line": 40
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Supp",
+   "line": 41
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Reach",
+   "line": 42
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "End",
+   "line": 43
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Word",
+   "line": 44
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Rep",
+   "line": 45
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Exec",
+   "line": 46
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "Id",
+   "line": 47
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "panelnodes",
+   "line": 710
+  },
+  {
+   "in": "IWS_volume_II_classe_objets_transformations_v5_17.tex",
+   "kind": "newcommand",
+   "name": "commonkept",
+   "line": 718
+  }
+ ],
+ "missing": [],
+ "commented_includes": [],
+ "labels": {
+  "IWS_volume_II_classe_objets_transformations_v5_17.tex": [
+   "fig:temoin-n6-recablage",
+   "sec:opacity-finite-depth",
+   "fig:opacity-walls-control",
+   "fig:opacity-adaptive-refinement",
+   "fig:opacity-recursive-refinement",
+   "fig:reachability-joint-n9",
+   "fig:margin-first-crossing-n9",
+   "fig:active-walls-site2-r4",
+   "fig:structural-wall-fixsigma",
+   "lem:trace-affine-chambre",
+   "cor:borne-paires-mobiles",
+   "lem:signes-determinent-kstar",
+   "prop:complexite-mot-fixe",
+   "cor:borne-croissance-ties",
+   "prop:annulation-conique",
+   "rem:definissabilite-locale",
+   "sec:certification-huit-kairos",
+   "tab:certification-huit-kairos",
+   "cor:transmission-huit-kairos"
+  ]
+ },
+ "unreferenced": [
+  "NOTES_V5_17.md",
+  "preuves_compagnons/audit_cauchy_lemme_V2.md",
+  "preuves_compagnons/certification_huit_episodes_V2.tex",
+  "preuves_compagnons/transmission_profondeur_finie_V2.tex"
+ ],
+ "unreferenced_sha": {
+  "NOTES_V5_17.md": "c98c1bec6c16249f434d16f967dfcc1ff0855e38abe1a0b622aeb1a29e7dccf4",
+  "preuves_compagnons/audit_cauchy_lemme_V2.md": "0a2fc7cc844dca05f7603da48c13971992e1c8ba7624d33478861f0f9488cc92",
+  "preuves_compagnons/certification_huit_episodes_V2.tex": "a1ed397f6ae08f2b35ce6ec31c0d7018c3fae73c6a3851184dcb17f46cda2998",
+  "preuves_compagnons/transmission_profondeur_finie_V2.tex": "0a3f255885e7aed1cf6b5c522fa07c6cae69e3e8268f3310466612c6920bcdda"
+ }
+}
