@@ -35,11 +35,9 @@ Il distingue les propriétés établies des hypothèses constitutives et des dir
 
 - [Sources LaTeX du volume II](Volume_II/)
 - [Source canonique V5.17](Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex)
-- [Manuscrit PDF](Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.pdf)
 - [Notes de consolidation V5.17](Volume_II/NOTES_V5_17.md)
 - [Preuves compagnons](Volume_II/preuves_compagnons/)
 
-Le fichier `IWS_Volume_II_V5_17_source_corrige.tex` constitue une source intermédiaire conservée dans le dépôt. Il ne fait pas autorité sur la source canonique indiquée ci-dessus.
 
 ## 2. Écosystème des dépôts IWS
 
@@ -104,8 +102,8 @@ Toute dérogation doit être explicitement motivée et documentée.
 
 ### Audits disponibles
 
-- [Audit des occurrences de ρ dans le volume I](diag_rho_volI.md)
-- [Audit notation–rôle du volume II V5.16](IWS_VolII_audit_notations_v5_16.md)
+- [Audit des occurrences de ρ dans le volume I](audits/diag_rho_volI.md)
+- [Audit notation–rôle du volume II V5.16](audits/IWS_VolII_audit_notations_v5_16.md)
 
 ### Chantier G0 — Harmonisation intervolumes
 
