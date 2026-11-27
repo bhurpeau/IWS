@@ -1,0 +1,1385 @@
+\section{Objet et statut de l'annexe}
+\label{annexe-num-objet}
+
+Cette annexe rassemble les protocoles numériques utilisés dans les
+Tomes I et II. Elle ne remplace pas les démonstrations des annexes
+précédentes. Elle précise :
+
+\begin{itemize}
+\item
+  quelles quantités ont été calculées ;
+\item
+  comment les seuils et les durées ont été repérés ;
+\item
+  quelles expériences distinguent amplitude, phase et mémoire
+  d'interface ;
+\item
+  quels contrôles empêchent d'attribuer un effet au mauvais
+  mécanisme ;
+\item
+  quelles conclusions sont robustes et quelles questions restent
+  ouvertes.
+\end{itemize}
+
+Dans cette annexe, trois étiquettes de la taxonomie générale sont particulièrement utilisées.
+
+\begin{center}
+\begin{tabular}{p{0.18\linewidth}p{0.70\linewidth}}
+\hline
+\texttt{[PROP-NUM]}
+&
+Un calcul analytique définit l'objet, puis une résolution numérique
+fournit sa valeur : racine, valeur propre, multiplicateur de Floquet,
+période ou seuil.
+\\
+\texttt{[NUM]}
+&
+Le résultat provient d'une intégration, d'un balayage de paramètres ou
+d'une classification de trajectoires.
+\\
+\texttt{[CTRL]}
+&
+Une expérience est construite pour éliminer une interprétation
+concurrente.
+\\
+\hline
+\end{tabular}
+\end{center}
+
+Les simulations ne constituent pas une validation empirique du modèle.
+Elles vérifient sa cohérence interne, testent ses mécanismes et
+délimitent les affirmations permises.
+
+\section{Fichiers de calcul et traçabilité}
+\label{annexe-num-tracabilite}
+
+Les résultats du cycle événementiel, des bandes de phase et de la
+mémoire d'interface ont été produits par les scripts :
+
+\begin{verbatim}
+fii11_cycle.py
+fii12_bands_specificity.py
+\end{verbatim}
+
+Les sorties structurées correspondantes sont :
+
+\begin{verbatim}
+output_theory/fii11_report.json
+output_theory/fii12_report.json
+\end{verbatim}
+
+Les vérifications complémentaires, notamment le prédicteur de signe,
+le contrôle d'habituation douce et la comparaison des mémoires
+scalaire et vectorielle, sont consignées dans l'historique du dépôt.
+
+Le paquet de reproductibilité associé à cette version du manuscrit est
+accessible dans le dépôt public
+\url{https://github.com/bhurpeau/IWS_2}. La révision de référence est le
+commit \href{https://github.com/bhurpeau/IWS_2/commit/a39c2d2b6284964134fdb1052e4556ca6ae5eab3}{\texttt{a39c2d2}}
+(\emph{New repo IWSV2}, 1er septembre 2026). Cette empreinte, plutôt que
+la branche mobile \texttt{main}, fixe le contenu exact auquel se
+rapportent les scripts et sorties mentionnés dans la présente annexe.
+
+Pour qu'un résultat numérique soit reproductible, une archive de
+référence doit conserver ensemble :
+
+\begin{itemize}
+\item le code exact ;
+\item les paramètres du modèle ;
+\item les conditions initiales ;
+\item le protocole d'exposition ;
+\item le maillage des valeurs testées ;
+\item les tolérances du solveur et de la détection d'événements ;
+\item la règle de classification finale ;
+\item le rapport produit par le script.
+\end{itemize}
+
+Cette annexe fixe les éléments conceptuels et les valeurs utilisées.
+Les réglages de bas niveau du solveur doivent rester ceux déclarés dans
+la version archivée des scripts ; ils ne sont pas réinventés ici.
+
+\section{Réduction et conventions numériques}
+\label{annexe-num-conventions}
+
+Sauf mention contraire, les expériences du Tome II utilisent la
+réduction diagonale
+
+\[
+h=(x,x),
+\qquad
+v=(\dot x,\dot x),
+\qquad
+\tau=(\theta,\theta).
+\]
+
+Le système source complet est maintenu sur son puits positif, de sorte
+que la projection transmise par composante est
+
+\[
+w=\tanh(x_A)=0{,}98006>0.
+\]
+Cette valeur est celle mesurée sur l'attracteur source utilisé par le
+protocole ; l'écriture \(x_A\simeq2{,}30\) n'en est qu'un arrondi de
+présentation.
+
+\subsection*{Paramètres de référence}
+
+Sauf mention locale contraire, le jeu de référence utilisé pour le
+noyau et sa réduction bidimensionnelle est le suivant. Les valeurs du
+mécanisme de Kairos sont celles déclarées dans la configuration du
+modèle canonique utilisée par les programmes de référence.
+
+\begin{center}
+\begin{tabular}{p{0.17\linewidth}p{0.18\linewidth}p{0.52\linewidth}}
+\hline
+Paramètre & Valeur & Rôle \\
+\hline
+$d$ & $2$ & dimension de la réduction de référence \\
+$\zeta$ & $0{,}8$ & gain du couplage relationnel \\
+$\lambda$ & $2$ & anisotropie du préconditionneur historique \\
+$\alpha$ & $0{,}45$ & taux d'écriture interne de la trace \\
+$\beta$ & $0{,}12$ & taux d'oubli de la trace \\
+$\gamma_0$ & $0{,}25$ & friction minimale \\
+$\gamma_1$ & $1{,}25$ & dépendance de la friction à la trace \\
+$\kappa_1$ & $0{,}6$ & contribution de $\lVert H\rVert$ à la pression \\
+$\kappa_2$ & $0{,}4$ & contribution de $\lVert V\rVert$ à la pression \\
+$\kappa_3$ & $0{,}5$ & relaxation de la pression \\
+$\Theta$ & $1{,}25$ & seuil de déclenchement des Kairos \\
+$r_P$ & $0{,}35$ & relaxation de la pression au saut \\
+$r_V$ & $0{,}5$ & relaxation de la vitesse au saut \\
+\hline
+\end{tabular}
+\end{center}
+
+Les paramètres propres aux interfaces ne font pas partie de ce socle.
+Pour les expériences correspondantes, les jeux utilisés sont
+
+\[
+\text{R1:}\qquad \rho=0{,}05,\qquad \eta=1,
+\]
+
+\[
+\text{R2:}\qquad
+\lambda_\chi=0{,}2,\qquad
+\kappa_Q=0{,}6,\qquad
+r_\chi=0{,}8,\qquad
+\kappa_\chi=2{,}5.
+\]
+
+L'extension à mémoire lente de l'interface utilise, lorsqu'elle est
+activée,
+\[
+\varepsilon_s=0{,}005,
+\qquad
+c_s=8.
+\]
+Ces valeurs sont des réglages des protocoles d'interface étudiés et ne
+modifient pas le jeu canonique du noyau.
+
+Les deux états autonomes principalement distingués après découplage
+sont :
+
+\[
+x\simeq0
+\]
+
+pour le repos, et
+
+\[
+x\simeq+2{,}30
+\]
+
+pour le puits positif.
+
+La classification d'une interaction ne repose pas sur l'état au moment
+du découplage. Après l'exposition, la trajectoire est poursuivie sous
+la dynamique autonome. Il y a appropriation seulement si elle rejoint
+un attracteur autonome différent de celui associé à la condition
+initiale.
+
+\section{Détection des événements}
+\label{annexe-num-detection-evenements}
+
+Les Kairos sont définis par le franchissement
+
+\[
+p(t)=\Theta.
+\]
+
+Une simulation hybride doit donc :
+
+\begin{enumerate}
+\item intégrer le flot jusqu'au premier franchissement ;
+\item localiser l'instant de l'événement ;
+\item appliquer la loi de saut ;
+\item redémarrer l'intégration depuis l'état post-événement ;
+\item traiter sans avancement de temps toute cascade simultanée.
+\end{enumerate}
+
+Une simple discrétisation par pas fixes sans localisation du seuil
+déforme la période \(\Delta\), la charge pré-événement \(\chi^-\), le
+quantum injecté dans la trace et la phase à laquelle une exposition
+ultérieure rencontre le système.
+
+Cette précision est particulièrement importante pour les bandes de
+phase : un faible décalage des événements peut déplacer les bords des
+bandes sans modifier leur mécanisme.
+
+\section{Continuation de la branche résistante}
+\label{annexe-num-continuation-resistance}
+
+La branche résistante du modèle continu R0 est définie par le résidu
+
+\[
+F_g(x)=0.
+\]
+
+La continuation numérique suit la racine négative issue de la
+bifurcation transcritique en
+
+\[
+g_c=0{,}0327.
+\]
+
+Pour chaque valeur de \(g\) :
+
+\begin{enumerate}
+\item la racine précédente sert d'initialisation à la résolution suivante ;
+\item l'équilibre complet \((x_{\mathrm{res}},0,\theta_{\mathrm{res}})\) est reconstruit ;
+\item le Jacobien tridimensionnel est évalué ;
+\item ses trois valeurs propres sont calculées ;
+\item la plus grande partie réelle est enregistrée.
+\end{enumerate}
+
+Le balayage de référence contient \(281\) valeurs de \(g\). La paire
+complexe dominante vérifie :
+
+\[
+\max\Re\operatorname{spec}(J)
+=
+-0{,}0025
+\quad
+\text{à }g=0{,}120,
+\]
+
+\[
+\max\Re\operatorname{spec}(J)
+=
+0
+\quad
+\text{à }g=0{,}1285,
+\]
+
+\[
+\max\Re\operatorname{spec}(J)
+=
++0{,}0009
+\quad
+\text{à }g=0{,}132.
+\]
+
+La localisation retenue est donc
+
+\[
+\boxed{g_H=0{,}1285}
+\qquad
+\texttt{[PROP-NUM]}.
+\]
+
+La pulsation au franchissement vaut environ
+
+\[
+\omega_H\simeq0{,}334,
+\]
+
+soit une période proche de
+
+\[
+\frac{2\pi}{\omega_H}\simeq18{,}8.
+\]
+
+La racine résistante persiste au-delà du seuil. À \(g=0{,}145\), on
+trouve encore
+
+\[
+x_{\mathrm{res}}=-0{,}2453,
+\]
+
+mais l'équilibre est instable. Le calcul valide donc une
+\emph{rupture de stabilité}, non une disparition de la branche.
+
+\section{Validation du développement asymptotique}
+\label{annexe-num-asymptotique-resistance}
+
+Le développement analytique est
+
+\[
+x_{\mathrm{res}}(g)
+=
+-2{,}1774(g-g_c)
++
+0{,}3220(g-g_c)^2
++
+O\left((g-g_c)^3\right).
+\]
+
+Il est comparé à la racine numérique aux multiples de \(g_c\).
+
+\[
+\begin{array}{c|cc}
+g & \text{développement} & \text{racine numérique}\\
+\hline
+2g_c & -0{,}0709 & -0{,}0710\\
+3g_c & -0{,}1411 & -0{,}1421
+\end{array}
+\]
+
+L'accord confirme que la quasi-linéarité observée sur la branche ne
+vient pas d'un simple ajustement visuel. Elle résulte de la faible
+valeur du terme quadratique après compensation de ses différentes
+contributions.
+
+\section{Durée minimale d'appropriation sous R0}
+\label{annexe-num-tstar-r0}
+
+Pour une intensité \(g\), la durée critique \(T^\ast(g)\) est repérée
+en faisant varier la durée d'une exposition rectangulaire, puis en
+classant la trajectoire après découplage.
+
+Le prédicteur linéaire non autonome est comparé à la dyade complète :
+
+\[
+\begin{array}{c|cc}
+g & T^\ast_{\text{prédit}} & T^\ast_{\text{mesuré}}\\
+\hline
+0{,}05 & +\infty & +\infty\\
+0{,}08 & 31{,}6 & 31{,}7\\
+0{,}10 & 24{,}8 & 24{,}8\\
+0{,}15 & 17{,}8 & 17{,}9\\
+0{,}20 & 14{,}9 & 15{,}0\\
+0{,}30 & 12{,}2 & 12{,}3
+\end{array}
+\]
+
+L'écart relatif reste inférieur à \(0{,}5\,\%\) pour les valeurs
+finies testées. La zone de résistance est correctement classée comme
+non appropriante, même lorsque la durée tend vers l'infini.
+
+Le prédicteur n'est pas ajusté sur ce tableau. Il utilise la charge
+exponentielle de la trace, la stabilité instantanée du repos et la
+position de la selle autonome.
+
+\section{Contrôle par le protocole de montée}
+\label{annexe-num-rampes}
+
+La dépendance du seuil de capture au protocole est testée à cible
+identique :
+
+\[
+g=0{,}10.
+\]
+
+Trois montées sont comparées : contact brutal, rampe courte de durée
+\(20\), et rampe lente de durée \(400\).
+
+Le contact brutal et la rampe courte conduisent à l'appropriation. La
+rampe lente laisse la trajectoire suivre la branche résistante stable
+et conduit à la résistance.
+
+Ce contrôle montre que
+
+\[
+g_{\mathrm{ign}}
+=
+g_{\mathrm{ign}}(x_0,v_0,\theta_0;\mathcal P)
+\]
+
+est une frontière de capture dépendante de l'histoire de chargement.
+Il ne s'agit pas d'un seuil structurel universel.
+
+\section{Calcul du cycle R2}
+\label{annexe-num-cycle-r2}
+
+Pour chaque valeur de \(g>g_K\), le cycle événementiel de R2 est
+calculé en deux étapes.
+
+\subsection{Période de l'interface}
+
+La période \(\Delta(g)\) est la solution positive de l'équation
+transcendante
+
+\[
+p\left(\Delta;\chi_\ast^+(\Delta),r_P\Theta\right)=\Theta.
+\]
+
+Une résolution scalaire fournit \(\Delta\), puis
+\(\chi_\ast^-\), \(\chi_\ast^+\), \(\theta_\infty^+\) et
+\(\theta_\infty^-\).
+
+\subsection{Vérification de la trace moyenne}
+
+La formule analytique est
+
+\[
+\bar\theta
+=
+\frac{\kappa_Q\chi_\ast^-}{\beta\Delta}.
+\]
+
+Quatre contrôles donnent :
+
+\[
+\begin{array}{c|cc}
+ & \text{prédite} & \text{mesurée}\\
+\hline
+1&0{,}1293&0{,}1288\\
+2&0{,}2886&0{,}2885\\
+3&0{,}3953&0{,}3952\\
+4&0{,}7216&0{,}7216
+\end{array}
+\]
+
+L'accord atteint \(10^{-4}\) sur les trois dernières valeurs. Le
+premier écart reste compatible avec les erreurs de régime transitoire,
+de localisation des événements ou de moyenne sur une durée finie.
+
+\section{Multiplicateur de Floquet}
+\label{annexe-num-floquet}
+
+La trace périodique \(\theta_\ast(t)\) produit une matrice linéaire
+périodique \(A_g(t)\) pour le bloc \((x,v)\).
+
+La matrice fondamentale est intégrée sur une période :
+
+\[
+\dot\Phi_g(t)=A_g(t)\Phi_g(t),
+\qquad
+\Phi_g(0)=I_2.
+\]
+
+La relaxation de la vitesse au Kairos est ajoutée par
+
+\[
+R_V=
+\begin{pmatrix}
+1&0\\
+0&r_V
+\end{pmatrix}.
+\]
+
+La monodromie est
+
+\[
+\mathcal M_g=R_V\Phi_g(\Delta(g)).
+\]
+
+Le multiplicateur dominant est
+
+\[
+\mu_{\max}(g)=\rho_{\mathrm{sp}}(\mathcal M_g).
+\]
+
+Le seuil \(g_F\) est repéré par
+
+\[
+\mu_{\max}(g_F)=1.
+\]
+
+Le calcul donne
+
+\[
+\boxed{g_F=0{,}0763}
+\qquad
+\texttt{[PROP-NUM]}.
+\]
+
+Le critère quasi-statique
+
+\[
+\bar\theta(g_F^{qs})=\theta_{\mathrm{ign}}
+\]
+
+donne
+
+\[
+\boxed{g_F^{qs}=0{,}0760.}
+\]
+
+L'écart relatif est d'environ \(0{,}4\,\%\). Ce nombre confirme que la
+moyenne de la trace capture presque entièrement le mécanisme local,
+parce que la période du cycle, environ \(3\) à \(4\), est plus courte
+que le temps d'oubli
+
+\[
+\frac{1}{\beta}\simeq8{,}3.
+\]
+
+Le symbole \(g_F^{qs}\) reste une approximation de \(g_F\), et non un
+seuil supplémentaire.
+
+\section{Rampe sur la résistance pulsée}
+\label{annexe-num-rampe-resistance-pulsee}
+
+Pour rechercher une rupture de la résistance sous R2, la simulation
+est initialisée sur l'attracteur résistant pulsé, puis \(g\) est
+augmenté lentement.
+
+Aucune perte de stabilité n'est observée jusqu'à
+
+\[
+g=0{,}30.
+\]
+
+Le résultat doit être consigné sous la forme
+
+\[
+\boxed{g_H^{R2}>0{,}30}
+\]
+
+et non comme une localisation de seuil.
+
+Ce contrôle ne permet pas de distinguer un seuil plus élevé, une
+résistance stable sur tout le domaine, une autre bifurcation ou un
+changement d'attracteur suivi silencieusement par la rampe.
+
+\section{Protocole des deux expositions}
+\label{annexe-num-deux-expositions}
+
+Les bandes de sommation sont étudiées avec
+
+\[
+g=0{,}18,
+\qquad
+T_{\mathrm{sub}}=41{,}9,
+\qquad
+D\in\{2,4,\ldots,60\}.
+\]
+
+La première exposition ne produit pas d'appropriation. Elle laisse un
+état résiduel qui évolue librement pendant \(D\). Une seconde
+exposition est ensuite appliquée.
+
+L'issue est classée après découplage : \(S\) si la trajectoire rejoint
+le puits positif, et échec sinon.
+
+Le balayage produit la signature :
+
+\begin{verbatim}
+D :  2 ......................................60
+     [S.....SSSS....SSS....SSS......]
+\end{verbatim}
+
+Les bandes ont une période proche de \(14\).
+
+\section{Spirale libre et période prédite}
+\label{annexe-num-spirale-libre}
+
+Après la décroissance suffisante de la trace, le repos autonome est une
+spirale amortie. La linéarisation vérifie
+
+\[
+\ddot x+\gamma_0\dot x+(1-\zeta)x=0.
+\]
+
+La pulsation amortie est
+
+\[
+\boxed{
+\omega
+=
+\sqrt{(1-\zeta)-\frac{\gamma_0^2}{4}}
+}.
+\]
+
+Avec les paramètres de référence,
+
+\[
+\boxed{
+\frac{2\pi}{\omega}=14{,}63.
+}
+\]
+
+Cette période est prédite indépendamment du balayage des délais. Elle
+explique l'espacement des bandes mesurées.
+
+\section{État de découplage et extrapolation libre}
+\label{annexe-num-extrapolation-libre}
+
+L'état mesuré à la fin de la première exposition est
+
+\[
+x_d=-0{,}0061,
+\qquad
+v_d=-0{,}0011,
+\qquad
+\theta_d=0{,}7255.
+\]
+
+Pendant le délai,
+
+\[
+\theta(t)=\theta_de^{-\beta t}.
+\]
+
+La trajectoire libre linéarisée \(x_{\mathrm{lib}}(t)\) est obtenue en
+intégrant
+
+\[
+\ddot x_{\mathrm{lib}}
++
+\Gamma\!\left(\sqrt2\,\theta_de^{-\beta t}\right)
+\dot x_{\mathrm{lib}}
++
+\left[
+m\!\left(\sqrt2\,\theta_de^{-\beta t}\right)-\zeta
+\right]
+x_{\mathrm{lib}}
+=0,
+\]
+
+avec
+
+\[
+x_{\mathrm{lib}}(0)=x_d,
+\qquad
+\dot x_{\mathrm{lib}}(0)=v_d.
+\]
+
+Cette extrapolation utilise l'état mesuré une seule fois à la fin de
+la première exposition. Elle n'est pas ajustée cellule par cellule.
+
+\section{Temps de recharge avant la seconde instabilité}
+\label{annexe-num-temps-charge}
+
+La seconde exposition ne déstabilise pas instantanément le repos.
+L'interface doit d'abord reconstruire une charge suffisante.
+
+Le temps de recharge est mesuré indépendamment sur l'application de
+retour :
+
+\[
+\boxed{t_c=4{,}74.}
+\]
+
+La phase pertinente n'est donc pas celle de l'état au début de la
+seconde exposition, mais celle qu'il aurait au moment où l'instabilité
+devient active : \(D+t_c\).
+
+Le critère testé est
+
+\[
+\boxed{
+\text{sommation}
+\quad\Longleftrightarrow\quad
+x_{\mathrm{lib}}(D+t_c)>0.
+}
+\]
+
+Aucune constante n'est ajustée sur le balayage des délais : \(\omega\)
+vient de la linéarisation autonome, l'état initial vient du découplage
+mesuré et \(t_c\) est mesuré séparément sur la carte.
+
+\section{Performance du prédicteur de phase}
+\label{annexe-num-performance-phase}
+
+Dans le régime
+
+\[
+10\leq D\leq48,
+\]
+
+le prédicteur obtient
+
+\[
+\boxed{18\text{ classifications correctes sur }20.}
+\]
+
+Les deux erreurs se trouvent aux bords de bande. Elles correspondent à
+un décalage d'environ \(2\) unités de délai, soit la résolution du
+balayage.
+
+Tous les cas classés comme sommants rejoignent
+
+\[
+x\simeq+2{,}30.
+\]
+
+Les échecs de phase relaxent vers
+
+\[
+x\simeq0
+\]
+
+en passant par la résistance pulsée.
+
+Une fois l'instabilité ouverte, le taux de croissance est proche de
+\(0{,}2\). Sur la durée de la seconde exposition, l'amplification est
+de l'ordre de
+
+\[
+e^8.
+\]
+
+Dans ce régime, l'amplitude résiduelle décide donc moins que son signe.
+Le côté positif est amplifié vers le puits positif ; le côté négatif
+est capturé par la résistance.
+
+\section{Trois régimes de mémoire temporelle}
+\label{annexe-num-trois-regimes}
+
+Le balayage distingue trois régimes.
+
+\subsection{Mémoire de charge}
+
+Pour
+
+\[
+D\lesssim10,
+\]
+
+les variables \(p\), \(\chi\) et \(\theta\) restent fortement
+chargées. À \(D=2\), par exemple,
+
+\[
+\theta\simeq0{,}72.
+\]
+
+Cette charge peut produire une sommation même lorsque la phase
+mécanique est défavorable.
+
+\subsection{Mémoire de phase}
+
+Pour
+
+\[
+10\lesssim D\lesssim48,
+\]
+
+la charge résiduelle a suffisamment décru pour que le signe de
+
+\[
+x_{\mathrm{lib}}(D+t_c)
+\]
+
+devienne le principal discriminant.
+
+\subsection{Structure fine près de l'oubli}
+
+Pour
+
+\[
+D\gtrsim50,
+\]
+
+l'amplitude résiduelle entre dans une zone où la structure fine des
+bassins redevient déterminante. Le critère de signe seul n'est plus
+suffisant.
+
+La forme générique
+
+\[
+A(D)\cos(\omega D+\varphi_0)>A_{\mathrm{crit}}
+\]
+
+doit donc être lue ainsi : dans le régime de phase,
+\(A_{\mathrm{crit}}\simeq0\) ; près de l'extinction, l'amplitude et la
+structure fine des bassins ne peuvent plus être négligées.
+
+\section{Contrôle à charge livrée comparable}
+\label{annexe-num-controle-charge}
+
+Pour vérifier que les bandes ne sont pas simplement dues à une dose
+totale différente, on calcule
+
+\[
+Q_{\mathrm{net}}
+=
+\sum_n
+\kappa_Q\chi_n^-.
+\]
+
+Deux délais donnent des charges presque identiques :
+
+\[
+D=14
+\quad\Longrightarrow\quad
+Q_{\mathrm{net}}=8{,}255,
+\]
+
+\[
+D=26
+\quad\Longrightarrow\quad
+Q_{\mathrm{net}}=8{,}322.
+\]
+
+Pourtant, \(D=14\) conduit à l'appropriation, tandis que \(D=26\)
+conduit à l'oubli.
+
+\begin{quote}
+\textbf{Contrôle.}
+Une dose livrée presque identique peut produire deux issues opposées.
+La quantité totale de trace injectée ne suffit donc pas à expliquer la
+sommation. La phase de réception est nécessaire.
+\end{quote}
+
+\section{Amorçage scalaire de l'interface}
+\label{annexe-num-amorcage-scalaire}
+
+Une variable lente scalaire est ajoutée :
+
+\[
+\dot s=\varepsilon_s(\chi-s),
+\]
+
+avec
+
+\[
+\varepsilon_s=0{,}005\ll\lambda_\chi.
+\]
+
+Le gain des quanta devient
+
+\[
+\boxed{
+\kappa_Q(s)=\kappa_Q(1+c_ss),
+}
+\]
+
+avec
+
+\[
+c_s=8.
+\]
+
+Une première exposition sous-critique de durée \(41{,}9\) est suivie
+d'un délai d'oubli de \(300\).
+
+Après ce délai :
+
+\[
+|x|\simeq10^{-18},
+\qquad
+\theta\simeq10^{-15},
+\qquad
+\chi\simeq10^{-28},
+\qquad
+p\simeq10^{-17},
+\]
+
+mais
+
+\[
+\boxed{s=0{,}0095.}
+\]
+
+Toutes les variables rapides sont revenues à leur base, tandis que la
+variable lente d'interface conserve une trace. Le gain initial des
+quanta est alors augmenté de
+
+\[
+c_ss=0{,}076,
+\]
+
+soit \(7{,}6\,\%\).
+
+\section{Effet de l'amorçage}
+\label{annexe-num-effet-amorcage}
+
+La seconde exposition est appliquée à
+
+\[
+g=0{,}18.
+\]
+
+Les durées \(T_2\) sont balayées dans une fenêtre où la phase produit
+des bandes d'appropriation.
+
+L'expérience initiale compare deux états strictement identiques, sauf
+pour la valeur de \(s\) au début de la seconde exposition :
+
+\[
+\begin{array}{c|cc}
+ & \text{cellules appropriées} & \text{première durée appropriante}\\
+\hline
+s_0=0 & 17/24 & T_2\simeq75\\
+s_0=0{,}0095 & 24/24 & T_2\leq40
+\end{array}
+\]
+
+La première exposition n'a changé aucun bassin autonome, mais elle a
+modifié l'accessibilité future de ces bassins :
+
+\[
+\boxed{T_2^\ast<T_1^\ast.}
+\]
+
+Le seuil soutenu varie très peu :
+
+\[
+\Delta g_{\mathrm{app}}=-0{,}0014.
+\]
+
+La mémoire d'interface change donc surtout ce qui est accessible dans
+la durée finie d'une rencontre, et non ce qui devient possible après
+une exposition infiniment longue.
+
+\section{Contrôle : gain constant contre boucle dynamique}
+\label{annexe-num-controle-gain-boucle}
+
+L'effet précédent peut venir d'une simple tête d'avance due au gain
+initial de \(7{,}6\,\%\), ou d'une boucle dynamique dans laquelle des
+quanta plus grands accélèrent les variables qui augmenteront les
+quanta suivants.
+
+Trois bras sont comparés pour \(T_2=40,\ldots,155\).
+
+\[
+\begin{array}{l|cc}
+\text{bras} & \text{cellules appropriées} & \text{première durée}\\
+\hline
+\text{sans amorçage} & 17 & 75\\
+\text{gain constant }(+7{,}6\,\%) & 23 & 45\\
+\text{boucle dynamique complète} & 24 & 40
+\end{array}
+\]
+
+Le résultat impose une interprétation prudente :
+
+\[
+\boxed{
+\text{l'essentiel de l'amorçage vient de la tête d'avance.}
+}
+\]
+
+La boucle dynamique ajoute une cellule appropriante et réduit la
+première durée de \(5\) unités. Elle existe, mais elle est secondaire
+pour le paramétrage testé.
+
+\section{Contrôle du signe scalaire}
+\label{annexe-num-controle-signe-scalaire}
+
+Une valeur négative de \(c_s\) devait tester une éventuelle
+habituation.
+
+Avec
+
+\[
+c_s=-8
+\]
+
+sans garde de positivité, certains quanta deviennent négatifs. Le
+système entre alors dans un régime d'anti-écriture qui efface
+directement la trace. Ce comportement est un artefact de la loi
+scalaire, pas une habituation interprétable.
+
+Avec
+
+\[
+c_s=-2,
+\]
+
+le levier résiduel est d'environ \(-1{,}9\,\%\). Aucun effet robuste
+n'est détecté.
+
+Le contrôle négatif ne valide donc pas une habituation scalaire. Il
+montre seulement qu'une comparaison équitable demanderait un levier
+négatif de même ordre que le levier positif, avec une loi maintenant
+les quanta dans un domaine admissible.
+
+\section{Mémoire vectorielle et compatibilité}
+\label{annexe-num-memoire-vectorielle}
+
+La mémoire scalaire \(s\) retient une intensité d'exposition, mais pas
+sa direction.
+
+Pour tester une mémoire spécifique au contenu reçu, on utilise une
+variable vectorielle
+
+\[
+\boldsymbol s\in\mathbb R^2.
+\]
+
+La règle d'écriture au Kairos devient
+
+\[
+\boxed{
+\tau^+
+=
+\tau^-
++
+\max\left(
+1+c_s\left\langle
+\boldsymbol s,
+\widehat{\boldsymbol\chi}
+\right\rangle,
+0
+\right)
+\kappa_Q\boldsymbol\chi^-.
+}
+\]
+
+Le facteur
+
+\[
+\left\langle
+\boldsymbol s,
+\widehat{\boldsymbol\chi}
+\right\rangle
+\]
+
+mesure la compatibilité entre la mémoire laissée par les expositions
+passées et le contenu actuellement présenté.
+
+\section{Protocole de spécificité}
+\label{annexe-num-protocole-specificite}
+
+Le modèle est simulé en dimension deux avec le préconditionneur complet
+\(M(\tau)\).
+
+Le protocole est :
+
+\begin{enumerate}
+\item première exposition dans la direction \(u_1\) ;
+\item délai d'oubli de \(300\) ;
+\item seconde exposition dans l'une des directions
+  \[
+  u_1,
+  \qquad
+  u_\perp,
+  \qquad
+  -u_1;
+  \]
+\item balayage \(T_2=40,\ldots,150\).
+\end{enumerate}
+
+La petite perturbation initiale est appariée au début de la seconde
+exposition dans tous les bras.
+
+Cette précaution est nécessaire : sans elle, l'érosion de la
+perturbation pendant le long délai d'oubli peut masquer la mémoire
+d'interface et produire une différence qui vient seulement de
+l'amplitude initiale disponible.
+
+\section{Résultats de spécificité}
+\label{annexe-num-resultats-specificite}
+
+Le tableau suivant indique le nombre de durées appropriantes parmi
+douze valeurs testées. Le nombre entre parenthèses est la première
+durée appropriante.
+
+\[
+\begin{array}{l|cccc}
+\text{mémoire}
+&
+\text{même direction}
+&
+\text{orthogonale}
+&
+\text{opposée}
+&
+\text{sans amorce}
+\\
+\hline
+\text{scalaire}
+&5/12\;(110)
+&5/12\;(110)
+&5/12\;(110)
+&2/12\;(140)
+\\
+\text{vectorielle}
+&5/12\;(110)
+&2/12\;(140)
+&1/12\;(140)
+&2/12\;(140)
+\end{array}
+\]
+
+Trois conclusions sont permises.
+
+\subsection{La mémoire scalaire produit une sensibilisation globale}
+
+La facilitation est identique pour les trois directions. La variable
+scalaire mémorise qu'une exposition a eu lieu, mais pas son contenu.
+
+\subsection{La mémoire vectorielle est directionnelle}
+
+Pour la même direction, la facilitation est conservée :
+
+\[
+5/12>2/12.
+\]
+
+Pour la direction orthogonale,
+
+\[
+\left\langle\boldsymbol s,u_\perp\right\rangle=0.
+\]
+
+L'amorce devient exactement invisible dans la règle de compatibilité :
+
+\[
+2/12=2/12
+\]
+
+par rapport au bras sans amorce.
+
+\subsection{L'opposition produit une inhibition}
+
+Pour la direction opposée,
+
+\[
+\left\langle\boldsymbol s,-u_1\right\rangle<0.
+\]
+
+Le gain des quanta diminue et le nombre de durées appropriantes devient
+
+\[
+1/12<2/12.
+\]
+
+La même loi géométrique produit donc
+
+\[
+\boxed{
+\text{facilitation}
+\quad\text{ou}\quad
+\text{inhibition},
+}
+\]
+
+selon le signe de la compatibilité.
+
+\section{Interprétation permise}
+\label{annexe-num-interpretation-specificite}
+
+Le résultat démontre numériquement une \emph{mémoire d'interface
+spécifique au contenu reçu} ou une \emph{mémoire directionnellement
+individualisée}.
+
+Il ne démontre pas encore une mémoire de l'identité du partenaire. Deux partenaires distincts produisant la même direction projetée restent indiscernables pour le protocole considéré.
+
+Il reste à tester plusieurs partenaires de directions voisines, la transférabilité d'un amorçage, l'oubli différentiel des composantes de \(\boldsymbol s\), la saturation de la mémoire vectorielle et l'effet de l'ordre de plusieurs amorçages.
+
+\section{Synthèse des contrôles}
+\label{annexe-num-synthese-controles}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.31\linewidth}p{0.32\linewidth}}
+\hline
+\text{Question}
+&
+\text{Contrôle}
+&
+\text{Conclusion}
+\\
+\hline
+Les bandes viennent-elles de la dose ?
+&
+\(D=14\) et \(D=26\), charges \(8{,}255\) et \(8{,}322\)
+&
+Non : issues opposées malgré une dose comparable.
+\\
+L'amorçage vient-il d'une boucle cumulative ?
+&
+Gain constant contre gain dynamique
+&
+Principalement de la tête d'avance ; boucle secondaire.
+\\
+La mémoire scalaire code-t-elle un contenu ?
+&
+Même, orthogonale et opposée
+&
+Non : facilitation identique.
+\\
+La mémoire vectorielle est-elle sélective ?
+&
+Produit scalaire nul ou négatif
+&
+Oui : neutralité orthogonale et inhibition opposée.
+\\
+Une valeur négative de \(c_s\) suffit-elle à produire une habituation
+scalaire ?
+&
+\(c_s=-8\) puis \(c_s=-2\)
+&
+Non concluante : anti-écriture ou effet trop faible.
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Hiérarchie des résultats numériques}
+\label{annexe-num-hierarchie-resultats}
+
+Les résultats du Tome II s'organisent en quatre niveaux.
+
+\subsection{Structure locale}
+
+\[
+g_c=0{,}0327
+\]
+
+pour le modèle continu, et
+
+\[
+g_F=0{,}0763
+\]
+
+pour le cycle R2 réduit.
+
+\subsection{Activité de l'interface}
+
+\[
+g_K=0{,}03608
+\]
+
+marque l'apparition d'une activité événementielle soutenue.
+
+\subsection{Franchissement de bassin}
+
+\[
+g_{\mathrm{app}}^{R2}(x_0;\mathcal P)=0{,}1632
+\]
+
+est une valeur protocolaire.
+
+\subsection{Résistance pulsée}
+
+\[
+g_H^{R2}>0{,}30
+\]
+
+est une borne expérimentale, non un seuil localisé.
+
+La hiérarchie correcte est
+
+\[
+\boxed{
+g_K<g_F<g_{\mathrm{app}}^{R2}<g_H^{R2}.
+}
+\]
+
+\section{Sources d'incertitude}
+\label{annexe-num-incertitudes}
+
+Les principales sources d'incertitude sont :
+
+\begin{itemize}
+\item la résolution du balayage en \(g\), \(T\) ou \(D\) ;
+\item la localisation numérique des Kairos ;
+\item la durée finie utilisée pour classer une trajectoire ;
+\item la proximité d'une séparatrice ;
+\item l'érosion d'une petite perturbation pendant un long délai ;
+\item la sensibilité des bords de bande à la non-linéarité de la capture.
+\end{itemize}
+
+Une valeur de seuil obtenue sur une grille est donc accompagnée de son
+statut : formule, racine numérique, borne ou valeur protocolaire. Cette
+distinction est plus importante qu'un nombre excessif de décimales.
+
+\section{Tests de robustesse recommandés}
+\label{annexe-num-tests-recommandes}
+
+Avant de figer une version destinée à diffusion, les scripts doivent
+permettre les tests suivants :
+
+\begin{enumerate}
+\item division par deux des tolérances du solveur ;
+\item raffinement local du maillage autour des seuils ;
+\item doublement de la durée autonome utilisée pour classifier l'issue ;
+\item déplacement contrôlé de la perturbation initiale ;
+\item répétition avec une localisation d'événements plus stricte ;
+\item vérification des identités analytiques
+  \[
+  \bar\theta=\frac{\kappa_Q\chi_\ast^-}{\beta\Delta}
+  \]
+  et
+  \[
+  p(\Delta)=\Theta;
+  \]
+\item conservation des mêmes perturbations dans les comparaisons appariées ;
+\item export du rapport complet en format structuré.
+\end{enumerate}
+
+Ces tests ne changent pas le mécanisme étudié. Ils vérifient que la
+conclusion ne dépend pas d'un détail de discrétisation.
+
+\section{Questions ouvertes}
+\label{annexe-num-questions-ouvertes}
+
+\subsection{Bords des bandes}
+
+Le prédicteur de signe commet deux erreurs sur vingt, toutes deux aux
+bords. Il reste à relier quantitativement le décalage de phase à la
+non-linéarité de la capture.
+
+\subsection{Habituation scalaire}
+
+Une loi scalaire doit encore être construite pour produire un levier
+négatif comparable au levier positif sans autoriser des quanta
+pathologiques.
+
+\subsection{Rupture de la résistance pulsée}
+
+La valeur exacte de \(g_H^{R2}\), si elle existe, n'est pas connue.
+
+\subsection{Mémoire du partenaire}
+
+La mémoire vectorielle encode une direction projetée, pas une identité.
+Il faut introduire plusieurs partenaires ou plusieurs canaux pour
+tester cette distinction.
+
+\subsection{Validation conditionnelle complète}
+
+La règle de compatibilité vectorielle modifie le quantum lors du saut.
+Elle n'a pas encore été intégrée à toute la théorie de R2. Les valeurs
+
+\[
+g_F,
+\qquad
+g_{\mathrm{app}}^{R2},
+\qquad
+g_H^{R2}
+\]
+
+devront être recalculées sous cette loi.
+
+\subsection*{Raccord avec le Tome III}
+
+La question de l'ordre des histoires n'est plus laissée ouverte ici.
+Le Tome III distingue trois mécanismes susceptibles de produire une
+différence entre deux ordres d'épisodes : la pondération de récence,
+la conditionnalité de l'écriture et le chevauchement des transitoires.
+La présente annexe reste consacrée au soutien numérique des mécanismes
+des Tomes I et II ; l'analyse de la composition des histoires relève
+désormais du Tome III.
+
+\section{Conclusion}
+\label{annexe-num-conclusion}
+
+Les expériences numériques établissent une chaîne cohérente :
+
+\[
+\boxed{
+\begin{minipage}{0.86\linewidth}
+Le paysage autonome fournit les attracteurs et les séparatrices.
+L'interface transforme l'amplitude, la cadence et la phase des
+influences qui donnent accès à ces bassins. Deux expositions de dose
+comparable peuvent produire des issues différentes parce qu'elles
+rencontrent le système à des phases différentes. Une première
+exposition non appropriée peut ensuite modifier durablement
+l'accessibilité future des bassins. Dans la version vectorielle, cette
+modification devient sélective : la même compatibilité géométrique
+produit facilitation, neutralité ou inhibition.
+\end{minipage}
+}
+\]
+
+Ce résultat ne constitue pas une preuve globale de l'individuation. Il
+fournit les briques numériques nécessaires à son étude :
+
+\[
+\text{appropriation des bassins}
+\quad+\quad
+\text{amorçage directionnel des accessibilités}.
+\]

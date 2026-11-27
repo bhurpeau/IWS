@@ -1,0 +1,518 @@
+\section{Objet et portée de l'annexe}
+\label{annexe-L-objet}
+
+Cette annexe ferme la grammaire formelle du Tome III. Les Appendices G à
+K ont successivement défini les histoires admissibles, la réduction au
+contenu survivant, les résumés lents suffisants, la géométrie des
+frontières et l'équivalence de présentation. Il reste à identifier la
+géométrie canonique portée par la question qui les traverse toutes :
+\emph{quelle profondeur de séparabilité associer à deux systèmes ?}
+
+La réponse est la profondeur de séparabilité
+\(
+\ell_{c,\mathfrak B,\rho}
+\)
+déjà introduite dans l'Appendice G. Sa transformation décroissante
+engendre une pseudo-ultramétrique sur les systèmes et une ultramétrique
+sur leur quotient d'observation. Cette géométrie n'est pas une distance
+physique entre états. Elle mesure une profondeur commune de décision.
+
+Tous les résultats sont relatifs à :
+\begin{itemize}
+\item un ensemble de systèmes ou de conditions initiales \(\mathfrak X\) ;
+\item une classe déclarée d'histoires \(\mathfrak B\) ;
+\item une résolution de lecture \(\rho\) ;
+\item une complexité \(c:\mathfrak B\to\mathbb R_+\) à valeurs finies.
+\end{itemize}
+
+\begin{encadre}[title={Résultat directeur}]
+Deux systèmes sont proches lorsque toute histoire simple leur attribue
+la même réponse. Leur distance est gouvernée par la profondeur de
+séparabilité, infimum des complexités des histoires qui les séparent. La propriété ultramétrique exprime alors
+qu'une paire ne peut devenir séparable plus tôt que l'une des deux
+paires obtenues en interposant un troisième système.
+\end{encadre}
+
+\section{Réponses, indiscernabilité et séparateurs}
+\label{annexe-L-separateurs}
+
+Pour \(X\in\mathfrak X\), la carte de réponse à résolution \(\rho\) est
+\[
+\mathcal R_X^\rho:\mathfrak B\longrightarrow\mathcal Y_\rho.
+\]
+Deux systèmes sont équivalents en réponse lorsque
+\[
+X\sim_{\mathfrak B,\rho}Y
+\quad\Longleftrightarrow\quad
+\mathcal R_X^\rho(\mathcal H)
+=
+\mathcal R_Y^\rho(\mathcal H)
+\quad
+\text{pour toute }\mathcal H\in\mathfrak B.
+\]
+
+L'ensemble des histoires séparatrices d'une paire est
+\begin{equation}
+\label{eq:annexe-L-separateurs}
+\operatorname{Sep}_{\mathfrak B,\rho}(X,Y)
+=
+\left\{
+\mathcal H\in\mathfrak B
+\;\middle|\;
+\mathcal R_X^\rho(\mathcal H)
+\neq
+\mathcal R_Y^\rho(\mathcal H)
+\right\}.
+\end{equation}
+Il est symétrique en \(X,Y\), et il est vide exactement lorsque
+\(X\sim_{\mathfrak B,\rho}Y\).
+
+\resultstep{def:L-profondeur-separabilite}
+\paragraph{Définition \theproposition{} --- profondeur de séparabilité.}
+On pose
+\begin{equation}
+\label{eq:annexe-L-ell}
+\boxed{
+\ell_{c,\mathfrak B,\rho}(X,Y)
+=
+\inf\left\{
+ c(\mathcal H)
+ \;\middle|\;
+ \mathcal H\in
+ \operatorname{Sep}_{\mathfrak B,\rho}(X,Y)
+\right\},
+}
+\end{equation}
+avec la convention \(\inf\varnothing=+\infty\).
+
+Ainsi,
+\[
+X\sim_{\mathfrak B,\rho}Y
+\quad\Longleftrightarrow\quad
+\ell_{c,\mathfrak B,\rho}(X,Y)=+\infty.
+\]
+La complexité ne définit pas l'équivalence : elle gradue seulement les
+histoires qui la rompent. À \((\mathfrak B,\rho)\) fixés, changer \(c\)
+ne modifie donc pas le quotient, mais peut modifier sa géométrie.
+
+\section{L'inégalité forte}
+\label{annexe-L-inegalite}
+
+\resultstep{prop:L-inegalite-ultrametrique}
+\begin{encadre}[title={Proposition \theproposition{} --- Inégalité ultramétrique de séparabilité}]
+Pour tous \(X,Y,Z\in\mathfrak X\),
+\begin{equation}
+\label{eq:annexe-L-ell-forte}
+\boxed{
+\ell_{c,\mathfrak B,\rho}(X,Z)
+\geq
+\min\!\left\{
+\ell_{c,\mathfrak B,\rho}(X,Y),
+\ell_{c,\mathfrak B,\rho}(Y,Z)
+\right\}
+}
+\end{equation}
+\end{encadre}
+
+\paragraph{Démonstration.}
+Notons
+\[
+a=
+\min\!\left
+\{
+\ell(X,Y),\ell(Y,Z)
+\right\},
+\]
+les indices étant omis dans la preuve. Pour toute histoire
+\(\mathcal H\in\mathfrak B\) telle que \(c(\mathcal H)<a\), la définition
+de l'infimum impose
+\[
+\mathcal R_X^\rho(\mathcal H)
+=
+\mathcal R_Y^\rho(\mathcal H)
+\quad\text{et}\quad
+\mathcal R_Y^\rho(\mathcal H)
+=
+\mathcal R_Z^\rho(\mathcal H).
+\]
+Par transitivité de l'égalité,
+\[
+\mathcal R_X^\rho(\mathcal H)
+=
+\mathcal R_Z^\rho(\mathcal H).
+\]
+Aucune histoire de complexité strictement inférieure à \(a\) ne sépare
+donc \(X\) et \(Z\). Par définition de la profondeur,
+\(
+\ell(X,Z)\geq a
+\).
+\hfill\(\square\)
+
+La preuve ne requiert ni concaténation des histoires, ni continuité de la
+dynamique, ni sortie binaire. Elle utilise uniquement le fait que chaque
+système définit une fonction de réponse sur une même classe de sondes.
+
+\section{Pseudo-ultramétrique et quotient}
+\label{annexe-L-distance}
+
+Soit
+\(
+\varphi:[0,+\infty]\to[0,+\infty)
+\)
+une fonction strictement décroissante telle que
+\(
+\varphi(+\infty)=0
+\).
+Le choix canonique utilisé ici est
+\[
+\varphi(r)=e^{-r},
+\qquad
+\varphi(+\infty)=0.
+\]
+On définit
+\begin{equation}
+\label{eq:annexe-L-distance}
+\boxed{
+d_{c,\mathfrak B,\rho}(X,Y)
+=
+\exp\!\left[-\ell_{c,\mathfrak B,\rho}(X,Y)\right].
+}
+\end{equation}
+
+\resultstep{cor:L-geometrie-ultrametrique}
+\begin{encadre}[title={Corollaire \theproposition{} --- Géométrie ultramétrique}]
+La fonction \(d_{c,\mathfrak B,\rho}\) est une pseudo-ultramétrique sur
+\(\mathfrak X\) :
+\[
+d(X,Z)
+\leq
+\max\{d(X,Y),d(Y,Z)\}.
+\]
+Elle se factorise en une ultramétrique sur le quotient
+\[
+\mathfrak X/\!\sim_{\mathfrak B,\rho}.
+\]
+\end{encadre}
+
+\paragraph{Démonstration.}
+La symétrie vient de celle de l'ensemble des séparateurs et
+\(d(X,X)=0\) puisque \(\ell(X,X)=+\infty\). Comme l'exponentielle
+négative est décroissante, la Proposition~\ref{prop:L-inegalite-ultrametrique} donne l'inégalité forte.
+Enfin,
+\[
+d(X,Y)=0
+\quad\Longleftrightarrow\quad
+\ell(X,Y)=+\infty
+\quad\Longleftrightarrow\quad
+X\sim_{\mathfrak B,\rho}Y.
+\]
+La séparation des points est donc exacte après passage au quotient.
+\hfill\(\square\)
+
+\begin{encadre}[title={Ce que la proposition ne suppose pas}]
+Elle ne suppose pas que l'infimum soit atteint, que les histoires soient
+indexées par des entiers, que la complexité soit additive, que les
+budgets soient finis, ni que les systèmes possèdent une représentation
+vectorielle commune. La seule exigence métrique est que \(c\) prenne des
+valeurs finies et non négatives sur les histoires admissibles.
+\end{encadre}
+
+\section{Filtration par profondeur}
+\label{annexe-L-filtration}
+
+Pour \(b\geq0\), introduisons le budget strict
+\[
+\mathfrak B_{<b}^{c}
+=
+\left\{
+\mathcal H\in\mathfrak B
+\;\middle|\;
+c(\mathcal H)<b
+\right\}
+\]
+et la relation
+\[
+X\equiv_bY
+\quad\Longleftrightarrow\quad
+X\sim_{\mathfrak B_{<b}^{c},\rho}Y.
+\]
+
+\resultstep{cor:L-boules-budgets}
+\begin{encadre}[title={Corollaire \theproposition{} --- Boules et budgets}]
+Pour tous \(X,Y\in\mathfrak X\),
+\begin{equation}
+\label{eq:annexe-L-boules}
+\boxed{
+X\equiv_bY
+\quad\Longleftrightarrow\quad
+\ell_{c,\mathfrak B,\rho}(X,Y)\geq b
+\quad\Longleftrightarrow\quad
+d_{c,\mathfrak B,\rho}(X,Y)\leq e^{-b}.
+}
+\end{equation}
+La boule fermée de rayon \(e^{-b}\) autour de \([X]\) rassemble donc les
+classes que toutes les histoires de complexité strictement inférieure à
+\(b\) laissent indiscernables de \([X]\).
+\end{encadre}
+
+Cette formulation stricte évite de supposer que l'infimum est atteint.
+Lorsque les niveaux de complexité sont discrets, elle retrouve la lecture
+habituelle par étages : les classes se scindent exactement aux niveaux
+où apparaissent de nouvelles histoires séparatrices.
+
+Si \(b_1\leq b_2\), alors
+\[
+\mathfrak B_{<b_1}^{c}
+\subseteq
+\mathfrak B_{<b_2}^{c}
+\quad\text{et}\quad
+\equiv_{b_2}
+\subseteq
+\equiv_{b_1}.
+\]
+La famille \((\equiv_b)_{b\geq0}\) forme une filtration décroissante de
+relations d'équivalence. Elle est la structure hiérarchique dont
+l'ultramétrique est l'écriture numérique.
+
+\section{Arbre de séparabilité}
+\label{annexe-L-arbre}
+
+Dans tout espace ultramétrique, deux boules de même rayon sont soit
+disjointes, soit identiques ; plus généralement, deux boules qui se
+rencontrent sont emboîtées. Ici, cette propriété a une lecture directe :
+à une profondeur donnée, deux classes d'indiscernabilité ne peuvent se
+recouvrir partiellement. Elles coïncident ou se séparent.
+
+On peut donc représenter un ensemble fini de classes par un dendrogramme :
+\begin{itemize}
+\item les feuilles sont les classes finales du quotient ;
+\item un nœud de hauteur \(b\) représente une classe de \(\equiv_b\) ;
+\item une bifurcation marque l'apparition d'une histoire séparatrice de
+complexité correspondante.
+\end{itemize}
+
+\begin{encadre}[title={Interprétation --- profondeur commune de décision}]
+La hauteur commune de deux feuilles n'est ni une proximité d'état, ni
+une ressemblance de trajectoire. Elle est la quantité d'histoire sous
+laquelle les deux systèmes restent interchangeables pour l'observateur
+déclaré. L'arbre porte ainsi une taxonomie comportementale relative à
+\((\mathfrak B,\rho,c)\).
+\end{encadre}
+
+L'arbre n'ajoute aucun résultat au quotient : il en donne une
+représentation. Il ne doit pas être réifié comme une phylogénie, une
+causalité généalogique ou une distance intrinsèque entre mécanismes.
+
+\section{Monotonie des observateurs}
+\label{annexe-L-monotonie}
+
+Considérons deux cadres d'observation tels que
+\[
+\mathfrak B_1\subseteq\mathfrak B_2,
+\qquad
+\rho_1\preceq\rho_2.
+\]
+Par la Proposition~\ref{prop:G-monotonie-observabilite} de l'Appendice G,
+\[
+\sim_{\mathfrak B_2,\rho_2}
+\subseteq
+\sim_{\mathfrak B_1,\rho_1}.
+\]
+L'observateur enrichi ne peut que scinder les classes anciennes.
+
+Si une même complexité \(c\) est définie sur \(\mathfrak B_2\), alors
+pour toute paire
+\begin{equation}
+\label{eq:annexe-L-monotonie-ell}
+\ell_{c,\mathfrak B_2,\rho_2}(X,Y)
+\leq
+\ell_{c,\mathfrak B_1,\rho_1}(X,Y),
+\end{equation}
+avec la convention que la comparaison porte sur les mêmes lectures
+après projection de \(\rho_2\) vers \(\rho_1\). Par conséquent,
+\[
+d_{c,\mathfrak B_2,\rho_2}(X,Y)
+\geq
+ d_{c,\mathfrak B_1,\rho_1}(X,Y).
+\]
+Plus l'observateur sait agir ou lire, plus les différences peuvent
+apparaître tôt.
+
+Cette monotonie ne compare pas directement deux complexités différentes.
+Un changement de \(c\) regradue les séparateurs et peut réordonner les
+profondeurs sans modifier le quotient à budget fixé.
+
+\section{Invariance sous changement de présentation}
+\label{annexe-L-invariance}
+
+Soient deux présentations \(P\) et \(P'\) telles que, pour toute histoire
+admissible,
+\[
+\mathcal R_P^\rho(\mathcal H)
+=
+\mathcal R_{P'}^\rho(\mathcal H).
+\]
+Elles possèdent exactement les mêmes histoires séparatrices relativement
+à tout troisième système comparé après l'identification déclarée des
+conditions initiales.
+
+\resultstep{cor:L-invariance-rebapteme}
+\begin{encadre}[title={Corollaire \theproposition{} --- Invariance par rebaptême}]
+Toute équivalence de présentation qui conserve les cartes de réponse
+conserve \(\ell_{c,\mathfrak B,\rho}\), donc
+\(d_{c,\mathfrak B,\rho}\). En particulier, les deux présentations du
+Théorème~\ref{thm:K-equivalence-plasticite} induisent la même ultramétrique sur leurs classes
+correspondantes.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Les cartes de réponse étant identiques, les relations
+\(
+\mathcal R_X^\rho(\mathcal H)\neq
+\mathcal R_Y^\rho(\mathcal H)
+\)
+sont identiques histoire par histoire. Les ensembles de séparateurs,
+leurs infima par \(c\), puis leurs images par \(r\mapsto e^{-r}\)
+coïncident. \hfill\(\square\)
+
+L'invariance est donc immédiate, mais conceptuellement décisive : la
+géométrie de séparabilité appartient au comportement observable, non au
+découpage choisi entre état et loi.
+
+\section{Compatibilité avec les résumés suffisants}
+\label{annexe-L-resumes}
+
+Supposons qu'un résumé
+\[
+z:\mathfrak X\longrightarrow Z
+\]
+soit suffisant pour la classe \((\mathfrak B,\rho)\), c'est-à-dire qu'il
+existe des cartes \(\overline{\mathcal R}_z^\rho\) telles que
+\[
+\mathcal R_X^\rho
+=
+\overline{\mathcal R}_{z(X)}^\rho.
+\]
+Alors
+\[
+z(X)=z(Y)
+\quad\Longrightarrow\quad
+\ell(X,Y)=+\infty.
+\]
+Le résumé contracte donc seulement des paires à distance nulle.
+
+Réciproquement, le quotient d'observation fournit le résumé
+comportemental minimal au sens ensembliste ; il coïncide avec le
+quotient de Nerode lorsque le budget est complet : la classe \([X]\) contient exactement
+l'information nécessaire pour reproduire la carte de réponse sur
+\(\mathfrak B\). Cette minimalité ne fournit pas automatiquement une
+coordonnée finie, régulière ou physiquement interprétable. Les
+Appendices H, I et K donnent des conditions supplémentaires sous
+lesquelles un résumé concret \(s\), \(z_4\) ou \(z_5\) réalise cette
+factorisation sur un domaine déclaré.
+
+\section{Exemple fondateur à trois systèmes}
+\label{annexe-L-exemple}
+
+Pour le triplet de cet exemple, avec la complexité égale au nombre
+d'épisodes,
+\[
+\ell(a,b)=2,
+\qquad
+\ell(a,c)=\ell(b,c)=1.
+\]
+Ainsi,
+\[
+d(a,b)=e^{-2}
+<
+ d(a,c)=d(b,c)=e^{-1}.
+\]
+Le triangle est isocèle à base courte, signature caractéristique d'une
+ultramétrique. Au niveau \(b=1\), les trois systèmes appartiennent encore
+à la même classe pour les histoires de complexité strictement inférieure
+à un. Au niveau suivant, le système \(c\) se sépare tandis que \(a\) et \(b\)
+restent groupés jusqu'à l'apparition de leur unique histoire séparatrice
+de complexité deux dans la grille déclarée.
+
+Cet exemple valide une instance finie ; il n'intervient pas dans la
+preuve de la Proposition~\ref{prop:L-inegalite-ultrametrique}.
+
+\section{Limites de portée}
+\label{annexe-L-limites}
+
+\paragraph{Complexité non canonique.}
+La relation d'équivalence dépend de \((\mathfrak B,\rho)\), mais la
+hauteur des branches dépend de \(c\). Deux complexités peuvent produire
+le même quotient et des dendrogrammes métriquement différents. Elles ne
+sont comparables que si une transformation monotone déclarée les relie.
+
+\paragraph{Budgets non emboîtés.}
+Deux familles de sondes incomparables par inclusion ne définissent pas
+une filtration commune. Leurs quotients et leurs arbres peuvent être
+comparés par un cadre englobant, mais aucune monotonie directe ne doit
+être affirmée.
+
+\paragraph{Résolutions incompatibles.}
+La comparaison de deux lectures exige une projection de la résolution fine vers la résolution grossière. Sans cette compatibilité, les sorties n'habitent pas le même espace et la Proposition~\ref{prop:G-monotonie-observabilite} ne s'applique pas.
+
+\paragraph{Pseudo-distance avant quotient.}
+Deux systèmes distincts comme objets de modélisation peuvent être à distance nulle s'ils sont indiscernables dans la classe déclarée. La distance devient séparante seulement sur le quotient d'observation.
+
+\paragraph{Infimum non atteint.}
+Une paire peut posséder des séparateurs de complexité arbitrairement proche de \(b\) sans séparateur minimal. Les formulations par budgets stricts et boules fermées restent exactes ; l'expression « première histoire » ne doit alors pas être utilisée.
+
+\paragraph{Sorties stochastiques.}
+Si la réponse est une loi de probabilité plutôt qu'une valeur, il faut déclarer le critère d'égalité ou de séparation des lois. La preuve reste valide dès que chaque système fournit un objet de réponse déterminé et que l'égalité de ces objets est transitive.
+
+\paragraph{Arbre non causal.}
+Le dendrogramme encode une hiérarchie d'observabilité. Il ne démontre ni ascendance, ni mécanisme commun, ni succession historique entre les systèmes comparés.
+
+\paragraph{Échantillon fini.}
+Un arbre reconstruit numériquement sur une grille finie porte seulement sur les systèmes et histoires effectivement calculés. Il fournit une approximation inférieure de la séparabilité disponible dans une classe plus riche.
+
+\section{Dépendances logiques}
+\label{annexe-L-dependances}
+
+La chaîne formelle est désormais fermée :
+\[
+\boxed{
+\begin{aligned}
+\text{histoires et réponses (G)}
+&\Longrightarrow \text{contenu survivant (H)}\\
+&\Longrightarrow \text{résumé lent (I)}\\
+&\Longrightarrow \text{frontières (J)}\\
+&\Longrightarrow \text{présentations équivalentes (K)}\\
+&\Longrightarrow \text{séparabilité ultramétrique (L)}.
+\end{aligned}
+}
+\]
+
+La flèche vers L n'est toutefois pas une dépendance de preuve à toutes les étapes : la Proposition~\ref{prop:L-inegalite-ultrametrique} ne requiert que les cartes de réponse définies en G. Les Appendices H à K expliquent quels objets concrets peuvent porter ces cartes et pourquoi leur géométrie est stable sous les réductions et rebaptêmes admissibles.
+
+\section{Table des notations}
+\label{annexe-L-notations}
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Symbole & Signification \\
+\hline
+\(\mathfrak X\) & systèmes ou conditions initiales comparés \\
+\(\mathfrak B\) & classe déclarée d'histoires \\
+\(\rho\) & résolution de lecture \\
+\(c\) & complexité des histoires \\
+\(\mathcal R_X^\rho\) & carte de réponse du système \(X\) \\
+\(\operatorname{Sep}(X,Y)\) & histoires séparant \(X\) et \(Y\) \\
+\(\ell(X,Y)\) & profondeur de séparabilité \\
+\(d(X,Y)\) & \(e^{-\ell(X,Y)}\) \\
+\(\equiv_b\) & indiscernabilité sous le budget \(c<b\) \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+\label{annexe-L-conclusion}
+
+La profondeur de séparabilité fournit au quotient d'observation sa géométrie naturelle. Une histoire ne sert plus seulement à produire une issue : elle possède une complexité qui situe le niveau auquel deux intérieurs cessent d'être interchangeables. L'inégalité forte transforme ces niveaux en arbre, les budgets en boules emboîtées et les résumés suffisants en factorisations du quotient.
+
+Cette géométrie est relative à l'observateur, mais non arbitraire. Elle est invariante sous tout changement de présentation qui conserve les exécutions, notamment sous l'équivalence plastique du Théorème~\ref{thm:K-equivalence-plasticite}. Le Tome III peut ainsi se refermer sur une phrase unique : un intérieur se distingue d'un autre par une profondeur de séparabilité, l'infimum des complexités des histoires capables de faire diverger leurs réponses.

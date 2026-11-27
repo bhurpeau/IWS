@@ -1,0 +1,881 @@
+\section{Objet et portée de l'annexe}
+\label{annexe-H-objet}
+
+Cette annexe établit le théorème de réduction au contenu survivant,
+qui constitue le noyau démonstratif de la mécanique des seuils du
+Tome III. L'idée centrale est la suivante : lorsque les variables
+rapides et les horloges intermédiaires se sont exactement éteintes avant
+la sonde, l'histoire antérieure ne peut plus agir sur la réponse que par
+le contenu mnésique qui lui survit.
+
+Le résultat ne postule ni l'existence d'un seuil unique, ni la monotonie
+de la réponse, ni celle de l'écriture produite par le préfixe. Il affirme
+seulement une factorisation de la réponse par l'état survivant. Les
+équations de seuil usuelles, les translations de cartes et la
+classification des motifs non monotones apparaissent ensuite comme des
+conséquences supplémentaires, valables sous des hypothèses explicites.
+
+Dans tout l'appendice, le couple d'observation $(\mathfrak B,\rho)$ est
+déclaré. La classe $\mathfrak B$ peut être minimale : aucune stabilité
+par continuation n'est utilisée. La résolution $\rho$ est supposée
+compatible avec la sonde considérée au sens de l'Appendice~G.
+
+\begin{encadre}[title={Résultat directeur}]
+Dans le régime d'extinction exacte, la réponse à une sonde $\mathcal P$
+ne dépend de l'histoire passée qu'à travers le contenu survivant
+$\mathbf s_{\mathrm r}$. Il existe donc une application
+\[
+\Omega_{\mathcal P,\rho}
+\]
+telle que
+\[
+\mathcal R_X^{\rho}(\mathcal P)
+=
+\Omega_{\mathcal P,\rho}(\mathbf s_{\mathrm r}).
+\]
+La fonction $\Omega_{\mathcal P,\rho}$ est la carte de réponse de la
+sonde nue sur l'espace des contenus survivants.
+\end{encadre}
+
+\section{État de départ de la sonde}
+\label{annexe-H-etat-sonde}
+
+\subsection{Décomposition de l'état hybride}
+\label{annexe-H-decomposition}
+
+On écrit l'état complet sous la forme
+\[
+X=(y,p,\chi,\theta,\mathbf s),
+\]
+où :
+\begin{itemize}
+\item $y$ rassemble les variables mécaniques ou géométriques remises à
+  une graine canonique avant la sonde ;
+\item $p$ désigne la pression ou la charge résiduelle ;
+\item $\chi$ désigne la variable d'interface rapide ;
+\item $\theta$ désigne l'horloge ou la phase lente intermédiaire ;
+\item $\mathbf s$ désigne le contenu mnésique survivant.
+\end{itemize}
+
+Cette écriture est fonctionnelle. Elle ne prétend pas que ces variables
+constituent l'unique paramétrisation possible de l'état ; elle isole les
+composantes dont le statut diffère dans la réduction. Les trois
+variables $(p,\chi,\theta)$ doivent être éteintes, tandis que
+$\mathbf s$ est précisément la composante autorisée à survivre.
+
+Pour une famille alignée dans une direction unitaire $\mathbf u_1$, on
+écrit
+\[
+\mathbf s=s\,\mathbf u_1,
+\qquad s\in I\subseteq\mathbb R.
+\]
+La réduction devient alors scalaire.
+
+\subsection{La regraine comme opération du protocole}
+\label{annexe-H-regraine}
+
+La regraine appartient à l'histoire expérimentale. Elle n'est pas une
+modification silencieuse de l'état initial.
+
+\begin{encadre}[title={A-H1 --- Appartenance de la regraine au protocole}]
+Toute regraine utilisée pour comparer deux histoires est un épisode
+déclaré du protocole. Son action sur chaque composante de l'état est
+spécifiée, et elle est concaténée à l'histoire avant la sonde.
+\end{encadre}
+
+On note $\mathcal G$ l'épisode de regraine et l'on suppose qu'il impose
+une configuration canonique $y_0$ aux variables mécaniques :
+\begin{equation}
+\label{eq:annexe-H-regraine}
+\Phi_{\mathcal G}(y,p,\chi,\theta,\mathbf s)
+=
+(y_0,p,\chi,\theta,\mathbf s).
+\end{equation}
+La regraine ne doit donc pas effacer le contenu que l'on cherche à
+sonder. Dans le modèle considéré, elle réinitialise la position et la
+vitesse de la graine, mais conserve les variables internes héritées.
+
+Cette convention est indispensable. Sans elle, deux expériences
+portant le même nom de sonde pourraient partir de configurations
+mécaniques différentes, et le contenu survivant ne serait pas un résumé
+suffisant de leur état de départ.
+
+\subsection{Régime d'extinction exacte}
+\label{annexe-H-extinction}
+
+On appelle \emph{régime d'extinction exacte} l'ensemble des états qui,
+au moment de la regraine, vérifient
+\begin{equation}
+\label{eq:annexe-H-extinction}
+ p=0,
+ \qquad
+ \chi=0,
+ \qquad
+ \theta=0.
+\end{equation}
+On le note
+\[
+\Sigma_{\mathrm{ext}}
+=
+\left\{
+(y,p,\chi,\theta,\mathbf s)
+\;\middle|\;
+ p=\chi=\theta=0
+\right\}.
+\]
+Après application de la regraine, tout état de ce régime prend la forme
+\begin{equation}
+\label{eq:annexe-H-etat-reduit}
+X_{\mathrm r}(\mathbf s)
+=
+(y_0,0,0,0,\mathbf s).
+\end{equation}
+Deux histoires différentes qui aboutissent au même $\mathbf s$ donnent
+donc le même état réduit au départ de la sonde. La conclusion
+comportementale exige encore que toute variable interne omise soit
+inerte sous la sonde, conformément à (E3) ci-dessous.
+
+Le mot \emph{exacte} est essentiel. L'annulation numérique approchée des
+résidus conduit à un problème de stabilité, traité seulement sous forme
+de proposition conditionnelle à la fin de l'appendice.
+
+\section{Hypothèses de réduction}
+\label{annexe-H-hypotheses}
+
+Le théorème utilise peu d'hypothèses, mais leur rôle doit être séparé.
+
+\paragraph{O1 --- Déterminisme de l'exécution.}
+Pour toute sonde admissible $\mathcal P$ et tout état de départ $X$, il
+existe une exécution unique
+\[
+\operatorname{Exec}_{\mathcal P}(X).
+\]
+La lecture $\omega_\rho$ appliquée à cette exécution est donc elle aussi
+univoque.
+
+\paragraph{(E1) --- Regraine canonique.}
+La regraine impose le même état mécanique $y_0$ à tous les systèmes
+comparés et préserve les variables internes $(p,\chi,\theta,\mathbf s)$,
+comme dans \eqref{eq:annexe-H-regraine}.
+
+\paragraph{(E2) --- Extinction des variables non survivantes.}
+Au départ de la sonde, les variables $(p,\chi,\theta)$ sont nulles.
+
+\paragraph{(E3) --- Suffisance comportementale du résumé.}
+Le résumé $(y,p,\chi,\theta,\mathbf s)$ est suffisant pour déterminer
+l'évolution future sous la sonde déclarée : toute variable interne non
+incluse dans ce résumé est soit fixée par le protocole, soit
+comportementalement inerte sur la classe considérée.
+
+L'hypothèse (E3) est la forme markovienne de la réduction. Elle est à
+vérifier modèle par modèle : elle ne requiert pas que deux histoires
+égalisées en $\mathbf s$ possèdent littéralement toutes les mêmes
+variables internes, mais que les variables omises soient
+comportementalement inertes sous la sonde déclarée. Dans le modèle
+canonique, la seule variable additionnelle, $ssc$, peut différer entre
+deux histoires ; sous la loi $\mathcal G_{\mathrm{lin}}$, elle
+n'apparaît toutefois dans aucune équation active et est donc inerte,
+comme établi dans la preuve de la Proposition~\ref{prop:I-etat-lent-aligne}. Sous une
+loi lisant $ssc$, (E3) exigerait de l'inclure dans le résumé.
+
+\begin{encadre}[title={Ce que le théorème ne suppose pas}]
+Aucune des propriétés suivantes n'est requise :
+\begin{itemize}
+\item monotonie de $\Omega_{\mathcal P,\rho}$ ;
+\item existence ou unicité d'une commutation ;
+\item monotonie de l'écriture du préfixe ;
+\item linéarité de la loi de mémoire ;
+\item stabilité de la classe d'histoires par continuation.
+\end{itemize}
+Ces propriétés n'interviennent que dans certains corollaires.
+\end{encadre}
+
+\section{Réduction au contenu survivant}
+\label{annexe-H-theoreme}
+
+\resultstep{thm:H-contenu-survivant}
+\begin{encadre}[title={Théorème \theproposition{} --- Réduction au contenu survivant}]
+Soient $\mathcal P$ une sonde admissible et $\rho$ une résolution
+d'observation. Sous O1 et (E1)--(E3), pour tout système dont l'état au moment
+de la regraine appartient à $\Sigma_{\mathrm{ext}}$, il existe une
+fonction
+\[
+\Omega_{\mathcal P,\rho}:\mathcal S\longrightarrow\mathcal Y_\rho
+\]
+telle que
+\begin{equation}
+\label{eq:annexe-H-theoreme-reduction}
+\boxed{
+\mathcal R_X^{\rho}(\mathcal P)
+=
+\Omega_{\mathcal P,\rho}(\mathbf s_{\mathrm r}),
+}
+\end{equation}
+où $\mathbf s_{\mathrm r}$ est le contenu survivant à la regraine.
+Pour une famille alignée $\mathbf s=s\mathbf u_1$, la fonction
+$\Omega_{\mathcal P,\rho}$ se réduit à une fonction d'une variable
+réelle.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Soit $X$ un système issu d'une histoire quelconque et supposons que son
+état au moment de la regraine appartienne à
+$\Sigma_{\mathrm{ext}}$. Par (E2), on a
+\[
+p=\chi=\theta=0.
+\]
+Par (E1), la regraine remplace la configuration mécanique par $y_0$ et
+préserve le contenu survivant. L'état complet au départ de la sonde est
+donc
+\[
+X_{\mathrm r}(\mathbf s_{\mathrm r})
+=
+(y_0,0,0,0,\mathbf s_{\mathrm r}).
+\]
+Par (E3), aucune information supplémentaire sur l'histoire n'est requise
+pour déterminer la dynamique future. Par O1, l'exécution
+\[
+\operatorname{Exec}_{\mathcal P}
+\bigl(X_{\mathrm r}(\mathbf s_{\mathrm r})\bigr)
+\]
+est une fonction univoque de $\mathbf s_{\mathrm r}$. En composant cette
+application avec la lecture $\omega_\rho$, on définit
+\begin{equation}
+\label{eq:annexe-H-definition-omega}
+\Omega_{\mathcal P,\rho}(\mathbf s)
+:=
+\omega_\rho\!\left(
+\operatorname{Exec}_{\mathcal P}
+(y_0,0,0,0,\mathbf s)
+\right).
+\end{equation}
+Il vient immédiatement
+\[
+\mathcal R_X^{\rho}(\mathcal P)
+=
+\Omega_{\mathcal P,\rho}(\mathbf s_{\mathrm r}).
+\]
+Dans une famille alignée, $\mathbf s=s\mathbf u_1$ et la restriction de
+$\Omega_{\mathcal P,\rho}$ à cette droite est une fonction du scalaire
+$s$. \hfill$\square$
+
+\subsection{Nature de la fonction \texorpdfstring{$\Omega$}{Omega}}
+\label{annexe-H-nature-Omega}
+
+La fonction $\Omega_{\mathcal P,\rho}$ n'est pas une quantité ajoutée au
+modèle. Elle est la carte de réponse de la sonde nue, obtenue en
+injectant directement un contenu dans un système canonique éteint puis
+en appliquant la sonde :
+\[
+\mathbf s
+\longmapsto
+(y_0,0,0,0,\mathbf s)
+\longmapsto
+\operatorname{Exec}_{\mathcal P}
+\longmapsto
+\mathcal Y_\rho.
+\]
+Elle peut être calculée analytiquement, mesurée numériquement ou estimée
+expérimentalement. Le théorème affirme que cette carte nue suffit ensuite
+à prédire toute expérience préfixée qui rejoint le régime d'extinction.
+
+Pour une lecture binaire d'appropriation, on peut écrire
+\[
+\Omega_{\mathcal P,\rho}(\mathbf s)
+=
+\mathbf 1_{A_{\mathcal P,\rho}}(\mathbf s),
+\]
+où
+\[
+A_{\mathcal P,\rho}
+=
+\left\{
+\mathbf s\in\mathcal S
+\;\middle|\;
+\Omega_{\mathcal P,\rho}(\mathbf s)=1
+\right\}
+\]
+est l'ensemble d'appropriation de la sonde sur la section éteinte. Sa
+frontière
+\[
+\partial A_{\mathcal P,\rho}
+\]
+peut posséder plusieurs composantes. Le théorème~\ref{thm:H-contenu-survivant} ne la suppose ni
+connexe ni réduite à un point.
+
+\section{Préfixes éteints et carte totale d'écriture}
+\label{annexe-H-prefixes}
+
+\subsection{Écriture produite par un préfixe}
+\label{annexe-H-ecriture}
+
+Dans toute cette section, sauf décomposition explicite, $\mathcal A$
+désigne le protocole préfixe complet : épisodes actifs, délai
+d'extinction et regraine déclarée. Lorsque ces trois morceaux doivent
+être distingués, on écrit $\mathcal A_{\mathrm{act}}\cdot\mathcal D\cdot\mathcal G$.
+
+Considérons une famille d'états initiaux alignés
+\[
+X_0(s_0)=(y_{\mathrm{init}},p_{\mathrm{init}},
+\chi_{\mathrm{init}},\theta_{\mathrm{init}},s_0\mathbf u_1)
+\]
+et un préfixe $\mathcal A$ suivi d'un délai d'extinction et d'une
+regraine. Lorsque le protocole rejoint $\Sigma_{\mathrm{ext}}$, il
+induit une application
+\[
+S_{\mathcal A}:I\longrightarrow\mathbb R,
+\]
+appelée \emph{carte totale d'écriture}, telle que
+\begin{equation}
+\label{eq:annexe-H-carte-ecriture}
+\mathbf s_{\mathrm r}
+=
+S_{\mathcal A}(s_0)\,\mathbf u_1.
+\end{equation}
+
+Lorsque l'on souhaite isoler l'apport du préfixe, on écrit
+\begin{equation}
+\label{eq:annexe-H-delta}
+S_{\mathcal A}(s_0)
+=
+s_0+\delta_{\mathcal A}(s_0).
+\end{equation}
+La quantité $\delta_{\mathcal A}$ est l'écriture nette relativement au
+contenu initial. L'objet dynamique pertinent reste toutefois la carte
+totale $S_{\mathcal A}$. En particulier, une propriété de monotonie de
+$\delta_{\mathcal A}$ ne se confond pas avec une propriété de monotonie
+de $S_{\mathcal A}$.
+
+Cette distinction évite une erreur fréquente : le passage d'un motif
+initial à un motif final dépend de
+\[
+\Omega_{\mathcal P,\rho}\circ S_{\mathcal A},
+\]
+et non de $\delta_{\mathcal A}$ considérée isolément.
+
+\subsection{Formule de composition}
+\label{annexe-H-formule-composition}
+
+Le théorème~\ref{thm:H-contenu-survivant} donne immédiatement la formule suivante.
+
+\resultstep{cor:H-prediction-prefixe}
+\begin{encadre}[title={Corollaire \theproposition{} --- Prédiction d'une sonde après un préfixe éteint}]
+Sous les hypothèses du Théorème~\ref{thm:H-contenu-survivant}, pour une lecture compatible avec la
+segmentation déclarée au sens de l'Appendice~G, si le préfixe complet
+$\mathcal A$ conduit au contenu
+$S_{\mathcal A}(s_0)\mathbf u_1$, alors
+\begin{equation}
+\label{eq:annexe-H-composition}
+\boxed{
+\mathcal R_{X_0(s_0)}^{\rho}
+(\mathcal A\cdot\mathcal P)
+=
+\Omega_{\mathcal P,\rho}
+\bigl(S_{\mathcal A}(s_0)\bigr).
+}
+\end{equation}
+Lorsque $S_{\mathcal A}(s_0)=s_0+\delta_{\mathcal A}(s_0)$,
+\[
+\mathcal R_{X_0(s_0)}^{\rho}
+(\mathcal A\cdot\mathcal P)
+=
+\Omega_{\mathcal P,\rho}
+\bigl(s_0+\delta_{\mathcal A}(s_0)\bigr).
+\]
+\end{encadre}
+
+\paragraph{Démonstration.}
+Après le préfixe, le délai et la regraine, l'état complet est
+\[
+(y_0,0,0,0,S_{\mathcal A}(s_0)\mathbf u_1).
+\]
+L'application du Théorème~\ref{thm:H-contenu-survivant} à cet état donne directement
+\eqref{eq:annexe-H-composition}. \hfill$\square$
+
+Cette formule est prédictive : une fois mesurées séparément la carte nue
+$\Omega_{\mathcal P,\rho}$ et la carte d'écriture
+$S_{\mathcal A}$, aucune nouvelle simulation du système préfixé n'est
+nécessaire pour déterminer sa réponse.
+
+\section{Cas à commutation unique et équation de seuil}
+\label{annexe-H-seuil}
+
+\subsection{Hypothèse locale de commutation unique}
+\label{annexe-H-commutation-unique}
+
+Supposons la lecture binaire et considérons un intervalle $J$ de
+contenus parcouru par $S_{\mathcal A}$. On dit que la sonde possède une
+commutation unique sur $J$ s'il existe $s^{\star}\in J$ tel que, à une
+orientation près,
+\begin{equation}
+\label{eq:annexe-H-omega-seuil}
+\Omega_{\mathcal P,\rho}(s)
+=
+\mathbf 1_{[s^{\star},+\infty)}(s)
+\qquad
+\text{pour }s\in J.
+\end{equation}
+Cette hypothèse est locale : la même sonde peut avoir d'autres
+commutations hors de $J$.
+
+\resultstep{cor:H-equation-seuil}
+\begin{encadre}[title={Corollaire \theproposition{} --- Équation de seuil}]
+Sous l'hypothèse de commutation unique
+\eqref{eq:annexe-H-omega-seuil}, les points de bascule $b$ de la famille
+préfixée sont les solutions de
+\begin{equation}
+\label{eq:annexe-H-seuil-general}
+\boxed{
+S_{\mathcal A}(b)=s^{\star},
+\qquad
+b+\delta_{\mathcal A}(b)=s^{\star}.
+}
+\end{equation}
+Si, de plus, l'écriture est constante sur la famille,
+$\delta_{\mathcal A}(s_0)=\delta$, alors $\delta$ est un invariant du
+préfixe complet et l'équation prend sa forme historique
+\begin{equation}
+\label{eq:annexe-H-seuil-translation}
+\boxed{
+b+\delta=s^{\star}.
+}
+\end{equation}
+\end{encadre}
+
+\paragraph{Démonstration.}
+Par le Corollaire~\ref{cor:H-prediction-prefixe}, la réponse préfixée vaut
+$\Omega_{\mathcal P,\rho}(S_{\mathcal A}(s_0))$. Dans la plage où
+\eqref{eq:annexe-H-omega-seuil} est valide, la valeur de la réponse
+change exactement lorsque l'argument de $\Omega$ traverse
+$s^{\star}$. Les points de bascule sont donc les antécédents de
+$s^{\star}$ par $S_{\mathcal A}$. Le cas constant donne
+\eqref{eq:annexe-H-seuil-translation}. \hfill$\square$
+
+L'équation $b+\delta=s^{\star}$ n'est donc pas le résultat fondamental.
+Elle est la forme particulière de
+\[
+\Omega\circ S
+\]
+lorsque la frontière de la sonde est ponctuelle sur la plage étudiée et
+que l'écriture du préfixe est une translation.
+
+\subsection{Nombre de seuils de la famille préfixée}
+\label{annexe-H-nombre-seuils}
+
+Même si $\Omega$ possède une unique commutation, l'équation
+$S_{\mathcal A}(s_0)=s^{\star}$ peut avoir plusieurs solutions lorsque
+$S_{\mathcal A}$ n'est pas injective. Réciproquement, même si
+$S_{\mathcal A}$ est strictement monotone, plusieurs composantes de la
+frontière de $A_{\mathcal P,\rho}$ peuvent engendrer plusieurs
+commutations de la famille préfixée.
+
+Ainsi, l'unicité du seuil final exige au moins deux contrôles distincts :
+\begin{itemize}
+\item la structure de la frontière de la sonde nue sur la plage atteinte ;
+\item la géométrie de la carte totale d'écriture du préfixe.
+\end{itemize}
+
+\section{Proposition~\ref{prop:t3-compression-sous-critique} comme cas de compression}
+\label{annexe-H-compression-sous-critique}
+
+La Proposition~\ref{prop:t3-compression-sous-critique} concerne des histoires sous-critiques séparées par
+des délais assez longs pour ramener les variables non mnésiques à leur
+base. Dans cette classe, la dynamique du contenu est linéaire et les
+résidus des épisodes se superposent avec leurs poids de récence.
+
+Soit une histoire
+\[
+\mathcal H
+=
+E_1\cdot D_1\cdot E_2\cdots D_{n-1}\cdot E_n
+\]
+qui ne change pas de bassin, dont la regraine ramène les systèmes
+comparés au même état autonome, et pour laquelle, avant la sonde,
+\[
+p=\chi=\theta=0.
+\]
+Supposons de plus que la loi d'évolution de $\mathbf s$ soit linéaire
+sur cette classe et que l'épisode courant n'agisse sur la source du
+contenu qu'à travers ses propres paramètres. Il existe alors des
+résidus élémentaires $\mathbf r_i$ et des poids de récence $w_i$ tels
+que
+\begin{equation}
+\label{eq:annexe-H-superposition}
+\mathbf s_{\mathrm r}(\mathcal H)
+=
+\sum_{i=1}^{n}w_i\mathbf r_i.
+\end{equation}
+
+\resultstep{cor:H-compression-sous-critique}
+\begin{encadre}[title={Corollaire \theproposition{} --- Compression sous-critique, Proposition~\ref{prop:t3-compression-sous-critique}}]
+Dans la classe précédente, deux histoires $\mathcal H$ et
+$\mathcal H'$ qui produisent le même contenu survivant vérifient, pour
+toute sonde admissible $\mathcal P$ placée après extinction et regraine,
+\begin{equation}
+\label{eq:annexe-H-compression-equivalence}
+\mathbf s_{\mathrm r}(\mathcal H)
+=
+\mathbf s_{\mathrm r}(\mathcal H')
+\quad\Longrightarrow\quad
+\mathcal R^{\rho}_{X_0}
+(\mathcal H\cdot\mathcal P)
+=
+\mathcal R^{\rho}_{X_0}
+(\mathcal H'\cdot\mathcal P).
+\end{equation}
+En particulier, injecter le contenu
+$\mathbf s_{\mathrm r}(\mathcal H)$ dans un système canonique éteint
+reproduit la réponse de l'histoire complète.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Les hypothèses de sous-criticalité et de séparation assurent que les
+deux histoires rejoignent le régime d'extinction. Par hypothèse, la
+regraine les ramène au même état autonome et leurs contenus survivants sont
+égaux. Leurs états complets au départ de la sonde coïncident donc. Le
+Théorème~\ref{thm:H-contenu-survivant} donne l'égalité des réponses. La formule
+\eqref{eq:annexe-H-superposition} fournit en outre un calcul explicite du
+résumé, mais elle n'est pas nécessaire à l'implication
+\eqref{eq:annexe-H-compression-equivalence}. \hfill$\square$
+
+Ce corollaire précise la portée de \ref{prop:t3-compression-sous-critique}. La linéarité explique comment
+calculer le contenu survivant ; la suffisance comportementale de ce
+contenu vient du Théorème~\ref{thm:H-contenu-survivant}. Dès qu'un épisode change de bassin, que
+les délais laissent survivre une phase ou une pression, ou qu'une autre
+variable interne est active, la réduction à $\mathbf s$ seul n'est plus
+garantie.
+
+\section{Structure générale des motifs}
+\label{annexe-H-motifs}
+
+\subsection{Décomposition des sources de non-monotonie}
+\label{annexe-H-nonmonotonie}
+
+Dans la famille scalaire, la réponse préfixée est exactement
+\[
+f(s_0)
+=
+\Omega_{\mathcal P,\rho}
+\bigl(S_{\mathcal A}(s_0)\bigr).
+\]
+Toute alternance de la réponse est donc produite par l'intersection de
+la courbe $S_{\mathcal A}(I)$ avec la frontière de l'ensemble
+$A_{\mathcal P,\rho}$.
+
+Pour une lecture binaire, deux mécanismes suffisent à engendrer des
+motifs complexes :
+\begin{enumerate}
+\item la frontière de la sonde nue possède plusieurs composantes sur la
+  plage atteinte ;
+\item la carte totale d'écriture revient plusieurs fois sur une même
+  composante de frontière, par exemple parce qu'elle n'est pas
+  monotone.
+\end{enumerate}
+
+Cette dichotomie doit être comprise au niveau de la composition
+$\Omega\circ S$. Elle ne permet pas d'attribuer un motif à la seule
+fonction $\delta$. Une écriture nette $\delta$ croissante peut produire
+une carte totale $S=s_0+\delta(s_0)$ croissante, et la réponse peut
+malgré tout être anti-monotone si $\Omega$ possède une île de repos ou
+d'appropriation. Inversement, une sonde nue monotone peut donner
+plusieurs bascules si $S$ traverse plusieurs fois son seuil.
+
+\resultstep{cor:H-localisation-bascules}
+\begin{encadre}[title={Corollaire \theproposition{} --- Localisation exhaustive des bascules}]
+Sous les hypothèses du Théorème~\ref{thm:H-contenu-survivant}, l'ensemble des points de bascule
+de la famille préfixée est contenu dans
+\begin{equation}
+\label{eq:annexe-H-preimage-frontiere}
+S_{\mathcal A}^{-1}
+\bigl(\partial A_{\mathcal P,\rho}\bigr).
+\end{equation}
+Si $\Omega_{\mathcal P,\rho}$ est localement constante sur chaque
+composante de
+$\mathcal S\setminus\partial A_{\mathcal P,\rho}$ et si
+$S_{\mathcal A}$ est continue, les changements effectifs de réponse ne
+peuvent se produire qu'en ces antécédents.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Si $S_{\mathcal A}(s_0)$ appartient à l'intérieur d'une composante sur
+laquelle $\Omega$ est constante, la continuité de $S_{\mathcal A}$
+garantit que, dans un voisinage assez petit de $s_0$, son image reste
+dans cette composante ; la réponse ne change pas. Toute bascule doit
+donc correspondre à un point dont l'image rencontre la frontière.
+\hfill$\square$
+
+L'inclusion peut être stricte : une tangence à la frontière peut ne pas
+changer la valeur binaire, et certaines composantes de frontière peuvent
+être inaccessibles à la carte d'écriture.
+
+\subsection{Îles de la sonde nue}
+\label{annexe-H-iles}
+
+Une \emph{île d'appropriation} est une composante bornée de
+$A_{\mathcal P,\rho}$ sur l'axe ou la section étudiée. Une \emph{île de
+repos} est une composante bornée de son complément. Ces objets
+appartiennent déjà à la géométrie de la sonde nue. Ils ne sont donc pas,
+en général, des artefacts produits par la composition avec une amorce.
+
+Le rôle du préfixe est de déterminer le chemin suivi dans l'espace des
+contenus. Une carte d'écriture monotone peut traverser successivement
+une entrée puis une sortie d'île et produire un motif apparemment
+anti-monotone, sans aucune inversion de l'écriture.
+
+\section{Extinction approchée}
+\label{annexe-H-extinction-approchee}
+
+Le Théorème~\ref{thm:H-contenu-survivant} est exact sur $\Sigma_{\mathrm{ext}}$. En pratique, les
+variables $(p,\chi,\theta)$ peuvent n'être que petites. On note
+\[
+z=(p,\chi,\theta,\mathbf s),
+\qquad
+z_0=(0,0,0,\mathbf s),
+\]
+et l'on suppose
+\[
+\|(p,\chi,\theta)\|\leq\varepsilon.
+\]
+
+La proximité des états initiaux n'implique pas à elle seule l'égalité
+des lectures binaires : près d'une frontière de commutation, une
+perturbation arbitrairement petite peut changer l'issue. Une formulation
+correcte doit donc exclure un voisinage de la frontière et contrôler la
+continuité de l'exécution et de la lecture avant seuillage.
+
+\resultstep{prop:H-extinction-approchee}
+\begin{encadre}[title={Proposition \theproposition{} --- Extinction approchée, énoncé conditionnel}]
+Supposons que, sur un compact $K$ de contenus, l'application qui associe
+à l'état initial une observable réelle pré-binaire soit continue, et que
+la frontière de commutation soit traversée transversalement hors des
+points de changement de calendrier. Alors il existe une fonction
+$\eta(\varepsilon)\to0$ telle que, si
+\[
+\|(p,\chi,\theta)\|\leq\varepsilon,
+\]
+la réponse du système coïncide avec
+$\Omega_{\mathcal P,\rho}(\mathbf s)$ pour tout contenu situé à une
+distance supérieure à $\eta(\varepsilon)$ de la frontière pertinente.
+Aucune borne uniforme n'est revendiquée au voisinage des changements de
+calendrier de la sonde.
+\end{encadre}
+
+Cette proposition fixe la forme attendue du résultat, mais sa preuve
+quantitative dépend de bornes de stabilité propres au modèle et reste
+rattachée à QO-74. Elle ne doit pas être utilisée comme théorème acquis
+dans le corps du manuscrit.
+
+\section{Vérifications numériques associées}
+\label{annexe-H-verifications}
+
+Les calculs du Tome III ne constituent pas la preuve du Théorème~\ref{thm:H-contenu-survivant},
+mais ils vérifient ses conséquences sur le modèle de référence.
+
+\subsection{Mesure directe de la sonde nue}
+\label{annexe-H-verification-omega}
+
+Pour la sonde de durée $T_2=80$ et la résolution binaire de bassin, le
+scan direct de la famille canonique
+\[
+(y_0,0,0,0,s\mathbf u_1)
+\]
+retrouve une commutation à
+\[
+s_{80}^{\star}\simeq0{,}01627
+\]
+sur la plage étudiée. Cette valeur est obtenue sans préfixe. Elle
+coïncide avec celle qui avait d'abord été inférée à partir de plusieurs
+histoires amorcées, ce qui fournit un contrôle indépendant de la
+réduction.
+
+\subsection{Prédiction par composition}
+\label{annexe-H-verification-prediction}
+
+Pour deux préfixes éteints, la carte d'écriture
+$S_{\mathcal A}(s_0)$ a été mesurée point par point, puis injectée dans
+la carte nue $\Omega_{80,\rho}$. La prédiction
+\[
+s_0
+\longmapsto
+\Omega_{80,\rho}
+\bigl(S_{\mathcal A}(s_0)\bigr)
+\]
+coïncide cellule par cellule avec la carte obtenue en simulant
+l'histoire complète. Cette vérification distingue la réduction d'une
+simple reformulation a posteriori : les deux constituants sont mesurés
+séparément puis recomposés.
+
+\subsection{Commutations multiples}
+\label{annexe-H-verification-iles}
+
+La variation de la durée de sonde montre que la carte nue peut elle-même
+posséder plusieurs composantes. Dans les calculs de référence, une sonde
+présente une île d'appropriation et une autre une île de repos interne.
+La réponse non monotone observée après un préfixe s'explique alors par la
+traversée de cette île par une carte totale d'écriture croissante. Le
+prédicat pointwise
+\[
+\Omega_{\mathcal P,\rho}
+\bigl(S_{\mathcal A}(s_0)\bigr)
+\]
+reproduit toutes les cellules du témoin, tandis qu'un prédicat à seuil
+unique échoue sur une partie d'entre elles.
+
+Les valeurs numériques et scripts de reproductibilité relèvent de
+l'annexe consacrée aux méthodes. Ici, leur fonction est seulement de
+montrer que les deux mécanismes abstraits de la section précédente sont
+effectivement réalisés par le modèle.
+
+\section{Limites de portée}
+\label{annexe-H-limites}
+
+Le Théorème~\ref{thm:H-contenu-survivant} ne s'applique pas dès que l'état au départ de la sonde
+n'est plus déterminé par le seul contenu survivant. Les cas suivants
+sortent notamment de son domaine direct.
+
+\paragraph{Délais courts.}
+Une phase $\theta$, une pression $p$ ou une charge d'interface $\chi$
+peut rester active. Le résumé pertinent devient alors au moins
+$(p,\chi,\theta,\mathbf s)$.
+
+\paragraph{Histoires conditionnelles.}
+Un épisode peut changer de bassin. La regraine mécanique ne ramène pas
+nécessairement les systèmes à un même état autonome, et le bassin atteint
+doit être inclus dans le résumé.
+
+\paragraph{Plasticité de la loi.}
+Si l'histoire modifie une loi d'action ou une variable plastique
+supplémentaire $\gamma$, l'hypothèse (E3) est fausse pour l'état réduit
+utilisé ici. La réduction peut être rétablie dans un état augmenté, mais
+elle ne porte plus sur $\mathbf s$ seul.
+
+\paragraph{Lectures historiques intégrales.}
+Une lecture qui compte des événements produits pendant le préfixe ne se
+réduit pas à la réponse de la sonde nue. Le résultat porte sur la lecture
+de la sonde après regraine, ou sur une lecture terminale compatible avec
+la segmentation déclarée, conformément à l'Appendice~G.
+
+\paragraph{Extinction seulement numérique.}
+Une petite norme résiduelle ne garantit pas une même issue au voisinage
+d'une frontière. La proposition~\ref{prop:H-extinction-approchee} exige des hypothèses de
+stabilité supplémentaires.
+
+\section{Dépendances logiques et usages}
+\label{annexe-H-dependances}
+
+Le rôle des résultats peut être résumé ainsi :
+\[
+\begin{array}{c}
+\text{regraine canonique}
++
+\text{extinction exacte}
++
+\text{fermeture de l'état}
++
+\text{déterminisme}
+\\[2mm]
+\Downarrow
+\\[2mm]
+\mathcal R(\mathcal P)=\Omega_{\mathcal P,\rho}(\mathbf s_{\mathrm r})
+\qquad\text{(Théorème~\ref{thm:H-contenu-survivant})}
+\\[2mm]
+\Downarrow
+\\[2mm]
+\mathcal R(\mathcal A\cdot\mathcal P)
+=
+\Omega_{\mathcal P,\rho}\circ S_{\mathcal A}
+\\[2mm]
+\Downarrow
+\\[2mm]
+\begin{cases}
+S_{\mathcal A}(b)=s^{\star},
+&\text{si la sonde a une commutation unique},\\
+\text{compression par }\mathbf s,
+&\text{pour les histoires sous-critiques séparées},\\
+S_{\mathcal A}^{-1}(\partial A_{\mathcal P,\rho}),
+&\text{pour localiser les bascules générales}.
+\end{cases}
+\end{array}
+\]
+
+Le Théorème~\ref{thm:H-contenu-survivant} est donc plus général que l'équation de seuil et plus
+fondamental que la superposition linéaire de la mémoire. Il sépare trois
+questions qui avaient initialement tendance à se confondre :
+\begin{enumerate}
+\item quel état survit au préfixe ;
+\item comment le préfixe écrit cet état ;
+\item comment la sonde répond à cet état.
+\end{enumerate}
+La première relève du régime d'extinction, la deuxième de la carte
+$S_{\mathcal A}$, la troisième de
+$\Omega_{\mathcal P,\rho}$.
+
+\section{Table des notations}
+\label{annexe-H-notations}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}
+                  >{\raggedright\arraybackslash}p{0.67\textwidth}}
+\toprule
+Notation & Signification \\
+\midrule
+\endfirsthead
+\toprule
+Notation & Signification \\
+\midrule
+\endhead
+$X=(y,p,\chi,\theta,\mathbf s)$
+& état complet utilisé dans la réduction \\
+$y_0$
+& configuration mécanique canonique imposée par la regraine \\
+$\mathcal G$
+& épisode de regraine, appartenant au protocole \\
+$\Sigma_{\mathrm{ext}}$
+& régime d'extinction exacte $p=\chi=\theta=0$ \\
+$\mathbf s_{\mathrm r}$
+& contenu survivant au départ de la sonde \\
+$\mathcal P$
+& sonde appliquée après extinction et regraine \\
+$\Omega_{\mathcal P,\rho}$
+& carte de réponse de la sonde nue à la résolution $\rho$ \\
+$A_{\mathcal P,\rho}$
+& ensemble des contenus donnant l'appropriation pour la sonde nue \\
+$\partial A_{\mathcal P,\rho}$
+& frontière de commutation sur l'espace des contenus \\
+$\mathcal A$
+& préfixe d'histoire étudié avant la sonde \\
+$S_{\mathcal A}$
+& carte totale d'écriture produite par le préfixe \\
+$\delta_{\mathcal A}$
+& écriture nette définie par $S_{\mathcal A}(s_0)=s_0+\delta_{\mathcal A}(s_0)$ \\
+$s^{\star}$
+& commutation de la sonde nue sur une plage où elle est unique \\
+$\eta(\varepsilon)$
+& largeur d'exclusion attendue autour de la frontière en extinction approchée \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+\label{annexe-H-conclusion}
+
+La réduction au contenu survivant repose sur une égalité d'états, non
+sur une approximation phénoménologique. Une fois les variables
+non survivantes éteintes et la configuration mécanique regrainée, deux
+histoires qui laissent le même contenu donnent le même état complet au
+départ de la sonde ; le déterminisme impose alors la même réponse.
+
+La mécanique générale se résume à la composition
+\[
+\boxed{
+\text{réponse préfixée}
+=
+\text{carte de la sonde nue}
+\circ
+\text{carte totale d'écriture du préfixe}.
+}
+\]
+Les seuils uniques, les translations, les îles et les motifs
+anti-monotones sont différentes géométries de cette même composition.
+Le résultat prépare ainsi l'étape suivante : remplacer la section
+éteinte, paramétrée par $\mathbf s$, par l'état lent complet
+$(p,\chi,\theta,\mathbf s)$ et étudier la frontière d'appropriation qui
+s'y déploie.

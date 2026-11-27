@@ -1,0 +1,486 @@
+\section{Objet et portée de l'annexe}
+\label{annexe-K-objet}
+
+Cette annexe formalise l'équivalence de présentation de la plasticité.
+Elle répond à une difficulté de principe : une modification apparente de
+la loi d'action peut toujours, dans une classe causale et markovienne
+déclarée, être représentée comme l'évolution d'une variable d'état
+supplémentaire lue par une loi fixe. L'observation des exécutions peut
+alors détecter qu'un résumé d'état est incomplet, mais elle ne peut pas
+trancher l'emplacement ontologique de la variable manquante.
+
+Le résultat est relatif à une classe d'histoires $\mathfrak B$, à une
+résolution $\rho$ et à un domaine réalisable. Il ne dit pas que toute
+mémoire est de dimension finie, ni que toute dépendance historique est
+markovianisable. Sa frontière exacte est la réalisabilité causale et
+markovienne de la plasticité considérée.
+
+\begin{encadre}[title={Résultat directeur}]
+Soit une présentation plastique dans laquelle une variable interne $\gamma$ modifie la loi d'action. Si $\gamma$ possède une dynamique causale, markovienne et réalisable, alors cette présentation est équivalente, pour toute observation fondée sur les exécutions, à une
+présentation où $\gamma$ est promue coordonnée d'état et où la loi d'action est figée. Les deux présentations engendrent les mêmes exécutions ; elles sont donc équivalentes en réponse pour \((\mathfrak B,\rho)\).
+\end{encadre}
+
+\section{Deux présentations d'un même mécanisme}
+\label{annexe-K-deux-presentations}
+
+\subsection{Présentation plastique}
+
+On considère un état de base $x\in X$ et une variable interne
+$\gamma\in\Gamma$. Dans la présentation dite \emph{plastique}, la loi
+d'action dépend de $\gamma$ :
+\[
+\dot x=F_{\gamma}(x,u),
+\qquad
+x^+=J_{\gamma,e}(x),
+\]
+où $u$ est l'entrée causale et $e$ le type d'événement. Le typage des
+événements --- notamment chargé ou vide dans l'instance canonique --- est
+lui-même une fonction déclarée de l'état et de l'entrée, identique dans
+les deux présentations. La variable $\gamma$ évolue selon
+\[
+\dot\gamma=G(\gamma,x,u),
+\qquad
+\gamma^+=K_e(\gamma,x).
+\]
+L'expression ``la loi change'' désigne ici la convention selon laquelle
+$\gamma$ est rangée du côté de la loi plutôt que dans l'état déclaré.
+
+\subsection{Présentation à loi figée}
+
+On définit l'état augmenté
+\[
+\widetilde x=(x,\gamma)\in \widetilde X:=X\times\Gamma.
+\]
+La loi figée sur $\widetilde X$ est
+\[
+\widetilde F((x,\gamma),u)
+=
+\bigl(F_{\gamma}(x,u),G(\gamma,x,u)\bigr),
+\]
+et, pour chaque événement $e$,
+\[
+\widetilde J_e(x,\gamma)
+=
+\bigl(J_{\gamma,e}(x),K_e(\gamma,x)\bigr).
+\]
+Le symbole de la loi ne varie plus : toute la variation est portée par
+la coordonnée d'état $\gamma$.
+
+\begin{encadre}[title={Convention de présentation}]
+Les termes \emph{loi plastique} et \emph{loi figée à état augmenté} ne
+désignent pas deux dynamiques différentes. Ils désignent deux découpages
+du même mécanisme entre ``état'' et ``loi''. L'équivalence ci-dessous
+porte précisément sur ce rebaptême.
+\end{encadre}
+
+\section{Hypothèses de l'équivalence}
+\label{annexe-K-hypotheses}
+
+Soit $D\subseteq X\times\Gamma$ le domaine réalisable des conditions
+initiales et paramètres de protocole. On suppose :
+
+\begin{description}
+\item[(P1) Causalité.] Les flots, événements et mises à jour de $\gamma$
+ne dépendent que de l'état courant, de l'entrée passée et présente et
+des paramètres déclarés avant l'exécution.
+
+\item[(P2) Fermeture markovienne.] Le couple $(x,\gamma)$ détermine
+l'évolution future sous tout protocole admissible. Aucune information
+historique supplémentaire n'est requise.
+
+\item[(P3) Réalisabilité.] Les états et transitions considérés sont
+atteignables dans le domaine déclaré ; les deux présentations utilisent
+le même ensemble initial et les mêmes protocoles.
+
+\item[(P4) Déterminisme ou couplage commun.] Pour une condition initiale
+et une histoire données, les deux présentations définissent une même
+exécution déterministe. Dans une extension stochastique, elles doivent
+être couplées par la même réalisation du bruit.
+
+\item[(P5) Observation par les exécutions.] La lecture
+$\omega_\rho$ et la réponse $\mathcal R^{\mathfrak B,\rho}$ dépendent de
+l'exécution produite, non de l'étiquette ``état'' ou ``loi'' attachée à
+ses coordonnées.
+
+\item[(P6) Finitude locale des événements.] Toute exécution admissible ne
+contient qu'un nombre fini d'événements sur chaque intervalle de temps
+compact ; les accumulations de type Zeno sont exclues du domaine du
+théorème.
+\end{description}
+
+(P5) est l'axiome d'observation déjà utilisé dans les Appendices G et H.
+Les hypothèses nouvelles sont surtout (P1)--(P3). Elles isolent la limite
+exacte du résultat.
+
+\section{Correspondance trajectorielle}
+\label{annexe-K-correspondance}
+
+Pour une histoire admissible $\mathcal H\in\mathfrak B$, notons
+\[
+\operatorname{Exec}_{\mathrm{pl}}(x_0,\gamma_0;\mathcal H)
+\]
+l'exécution de la présentation plastique et
+\[
+\operatorname{Exec}_{\mathrm{fig}}((x_0,\gamma_0);\mathcal H)
+\]
+celle de la présentation à loi figée.
+
+\resultstep{lem:K-identite-executions}
+\begin{encadre}[title={Lemme \theproposition{} --- Identité des exécutions}]
+Sous (P1)--(P4) et (P6), pour toute condition initiale réalisable et toute
+histoire admissible,
+\[
+\operatorname{Exec}_{\mathrm{pl}}(x_0,\gamma_0;\mathcal H)
+=
+\operatorname{Exec}_{\mathrm{fig}}((x_0,\gamma_0);\mathcal H),
+\]
+après l'identification canonique de la variable interne $\gamma$ avec la
+coordonnée supplémentaire de l'état augmenté.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Entre deux événements, les deux présentations satisfont par construction
+le même système couplé
+\[
+(\dot x,\dot\gamma)
+=
+\bigl(F_{\gamma}(x,u),G(\gamma,x,u)\bigr)
+\]
+avec la même condition initiale et la même entrée. L'unicité locale donne
+la même portion de trajectoire jusqu'au prochain événement. Le prédicat
+d'événement étant évalué sur les mêmes variables, le prochain événement
+survient au même instant et porte le même type. Les deux mises à jour
+sont alors identiques :
+\[
+(x^+,\gamma^+)
+=
+\bigl(J_{\gamma,e}(x),K_e(\gamma,x)\bigr).
+\]
+Par (P6), une induction sur les événements rencontrés sur tout intervalle
+compact donne l'identité de l'exécution sur cet intervalle, puis sur
+l'exécution entière par exhaustion du temps. \hfill$\square$
+
+\section{Théorème d'équivalence de présentation}
+\label{annexe-K-theoreme}
+
+\resultstep{thm:K-equivalence-plasticite}
+\begin{encadre}[title={Théorème \theproposition{} --- Équivalence de présentation de la plasticité}]
+Sous (P1)--(P6), la présentation plastique
+\[
+(\Psi,\mathcal G_{\mathrm{pl}})
+\]
+et la présentation à état augmenté et loi figée
+\[
+(\Psi\oplus\gamma,\mathcal G_{\mathrm{fig}})
+\]
+sont $\mathcal R$-équivalentes pour toute classe d'histoires
+$\mathfrak B$ et toute résolution $\rho$ compatibles avec le domaine
+déclaré :
+\[
+(\Psi,\mathcal G_{\mathrm{pl}})
+\sim_{\mathfrak B,\rho}
+(\Psi\oplus\gamma,\mathcal G_{\mathrm{fig}}).
+\]
+Plus précisément, pour toute $\mathcal H\in\mathfrak B$,
+\[
+\mathcal R_{\mathrm{pl}}^{\rho}(\mathcal H)
+=
+\mathcal R_{\mathrm{fig}}^{\rho}(\mathcal H).
+\]
+\end{encadre}
+
+\paragraph{Démonstration.}
+Le Lemme~\ref{lem:K-identite-executions} donne l'identité des exécutions pour toute histoire
+admissible. Par (P5), la lecture à résolution $\rho$ prend donc la même
+valeur dans les deux présentations. L'égalité vaut point par point sur
+$\mathfrak B$, donc les cartes de réponse et les quotients d'observation
+coïncident. \hfill$\square$
+
+\begin{encadre}[title={Ce que le théorème ne suppose pas}]
+Le théorème ne suppose ni que $\gamma$ soit scalaire, ni qu'elle soit
+lente, ni que sa dynamique soit linéaire, ni que la sortie soit binaire.
+Il ne suppose pas non plus que $\gamma$ soit directement observable. Il
+exige seulement qu'elle puisse être incluse dans un état causal et
+markovien réalisable et que l'observation porte sur les exécutions.
+\end{encadre}
+
+\section{Détection de la plasticité et indécidabilité de son support}
+\label{annexe-K-detection}
+
+L'équivalence de présentation n'empêche pas la détection d'une variable
+active supplémentaire. Elle interdit seulement de décider si cette
+variable ``appartient à la loi'' ou ``appartient à l'état''.
+
+Soit $z_4=(p,\chi,\theta,s)$ le résumé lent de l'Appendice I et
+\[
+z_5=(p,\chi,\theta,s,\gamma)
+\]
+son extension plastique. Supposons qu'il existe deux histoires
+$\mathcal H_1,\mathcal H_2$ telles que
+\[
+z_4(\mathcal H_1)=z_4(\mathcal H_2),
+\qquad
+\gamma(\mathcal H_1)\neq\gamma(\mathcal H_2),
+\]
+et une sonde $\mathcal P$ pour laquelle
+\[
+\widehat\Omega_{\mathcal P,\rho}
+\bigl(z_4,\gamma(\mathcal H_1)\bigr)
+\neq
+\widehat\Omega_{\mathcal P,\rho}
+\bigl(z_4,\gamma(\mathcal H_2)\bigr).
+\]
+Alors $z_4$ n'est pas un résumé suffisant pour cette famille et cette
+résolution. L'expérience détecte l'activité d'une coordonnée manquante.
+En revanche, le Théorème~\ref{thm:K-equivalence-plasticite} montre qu'aucune expérience fondée sur
+les exécutions ne peut décider si cette coordonnée est décrite comme un
+paramètre plastique de la loi ou comme une variable d'état.
+
+\resultstep{cor:K-horloge-ontologie}
+\begin{encadre}[title={Corollaire \theproposition{} --- Détectable comme horloge, indécidable comme ontologie}]
+À $(\mathfrak B,\rho)$ fixés, l'observation peut établir :
+\begin{enumerate}
+\item l'insuffisance d'un résumé déclaré ;
+\item l'activité décisionnelle d'une coordonnée supplémentaire ;
+\item éventuellement sa loi d'usage et son échelle de temps.
+\end{enumerate}
+Elle ne peut pas établir, à partir des seules exécutions, si cette
+coordonnée relève intrinsèquement de la loi ou de l'état.
+\end{encadre}
+
+\section{Fermeture du résumé étendu}
+\label{annexe-K-fermeture}
+
+Sous les hypothèses de l'Appendice I appliquées à l'état augmenté, il
+existe une carte
+\[
+\widehat\Omega^{(5)}_{\mathcal P,\rho}:
+Z_5\longrightarrow\mathcal Y_\rho,
+\qquad
+Z_5\subseteq\mathbb R^5,
+\]
+telle que
+\[
+\mathcal R^{\rho}_{z_5}(\mathcal P)
+=
+\widehat\Omega^{(5)}_{\mathcal P,\rho}(p,\chi,\theta,s,\gamma).
+\]
+Le résumé à quatre coordonnées est la projection
+\[
+\pi_4:Z_5\to Z_4,
+\qquad
+\pi_4(p,\chi,\theta,s,\gamma)=(p,\chi,\theta,s).
+\]
+Il est suffisant si et seulement si la carte de réponse se factorise par
+$\pi_4$ sur le domaine considéré :
+\[
+\widehat\Omega^{(5)}_{\mathcal P,\rho}
+=
+\widehat\Omega^{(4)}_{\mathcal P,\rho}\circ\pi_4.
+\]
+Une paire témoin à même $z_4$ et issues différentes réfute exactement
+cette factorisation.
+
+\resultstep{prop:K-cinquieme-coordonnee}
+\begin{encadre}[title={Proposition \theproposition{} --- Critère de nécessité de la cinquième coordonnée}]
+Si deux états réalisables $z_5,z_5'$ vérifient
+\[
+\pi_4(z_5)=\pi_4(z_5')
+\quad\text{et}\quad
+\widehat\Omega^{(5)}_{\mathcal P,\rho}(z_5)\neq
+\widehat\Omega^{(5)}_{\mathcal P,\rho}(z_5'),
+\]
+alors aucune carte définie seulement sur $Z_4$ ne peut reproduire la
+réponse sur le domaine contenant ces deux états.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Si une telle carte existait, les deux états auraient la même image parce
+qu'ils ont la même projection par $\pi_4$, en contradiction avec les
+issues observées. \hfill$\square$
+
+\section{Frontières de réponse sous présentation plastique}
+\label{annexe-K-frontieres}
+
+Pour une sortie binaire, posons
+\[
+A^{(5)}_{\mathcal P,\rho}
+=
+\{z_5\in Z_5:\widehat\Omega^{(5)}_{\mathcal P,\rho}(z_5)=1\},
+\qquad
+\Sigma^{(5)}_{\mathcal P,\rho}
+=
+\partial_{Z_5}A^{(5)}_{\mathcal P,\rho}.
+\]
+À $\gamma$ fixé, la section
+\[
+\Sigma_{\mathcal P,\rho}^{\gamma}
+=
+\Sigma^{(5)}_{\mathcal P,\rho}
+\cap\{\gamma=\mathrm{constante}\}
+\]
+décrit la frontière vue par un système dont la coordonnée plastique est
+maintenue à cette valeur pendant la sonde. Si la sonde modifie elle-même
+$\gamma$, la réponse doit être calculée dans l'espace complet $Z_5$ : la
+section figée n'est alors qu'un contrôle contrefactuel.
+
+Deux histoires peuvent déposer le même $z_4$ mais des valeurs différentes
+de $\gamma$. Elles interrogent alors des sections différentes de
+$\Sigma^{(5)}$. Le déplacement résiduel de la frontière à $z_4$ égal est
+une preuve d'activité de $\gamma$, non une preuve de sa localisation du
+côté de la loi.
+
+\resultstep{cor:K-invariance-frontiere}
+\begin{encadre}[title={Corollaire \theproposition{} --- Invariance de la frontière complète}]
+Les deux présentations du Théorème~\ref{thm:K-equivalence-plasticite} induisent le même ensemble
+d'appropriation et la même frontière dans l'état augmenté $Z_5$. Ce qui
+change est uniquement la manière de nommer la coordonnée $\gamma$.
+\end{encadre}
+
+\section{Décision de modélisation : frontière espèce/individu}
+\label{annexe-K-espece-individu}
+
+\begin{encadre}[title={D-08 --- Frontière déclarative}]
+La distinction entre une loi d'espèce plastique et un individu doté
+d'un état lent supplémentaire est relative à la présentation déclarée.
+Cette convention est contrainte par l'équivalence dynamique : elle est un
+choix de factorisation, jamais une licence pour modifier les exécutions.
+Elle ne constitue pas un invariant de $\mathcal R^{\mathfrak B,\rho}$.
+L'invariant accessible par le protocole est la structure des coordonnées
+actives nécessaires à la fermeture du comportement sur le domaine et à
+la résolution considérés.
+\end{encadre}
+
+D-08 ne supprime pas les conventions antérieures ; elle en précise la
+portée. On peut continuer à dire qu'une histoire modifie la loi dans une
+présentation donnée, à condition de ne pas transformer cette convention
+en conclusion ontologique absolue.
+
+\section{Spectre des horloges actives}
+\label{annexe-K-spectre}
+
+Le contenu positif laissé par le théorème est le \emph{spectre des
+horloges actives}. À un niveau encore programmatique, il rassemble :
+\begin{enumerate}
+\item le nombre minimal de coordonnées nécessaires pour fermer la carte
+de réponse sur le domaine déclaré ;
+\item leurs échelles de temps caractéristiques ;
+\item leurs lois de recharge, fatigue, oubli ou récupération ;
+\item leur niveau d'activité ponctuelle, locale ou globale au sens de
+l'Appendice I.
+\end{enumerate}
+Ce spectre est relatif à $(\mathfrak B,\rho)$ : une coordonnée inactive
+pour une classe pauvre de sondes peut devenir nécessaire lorsque le
+budget ou la résolution augmentent. La preuve de l'existence et de
+l'unicité d'un spectre minimal dépasse la portée du présent appendice.
+
+\section{Instance canonique à cinq horloges}
+\label{annexe-K-instance}
+
+L'extension canonique introduit un gain plastique $\gamma$ dans la loi
+d'action, avec fatigue lors des événements chargés et récupération lente :
+\[
+\gamma^+=\gamma(1-r_\gamma),
+\qquad
+\dot\gamma=\varepsilon_\gamma(1-\gamma).
+\]
+La hiérarchie temporelle devient
+\[
+p<\chi<\theta<s<\gamma.
+\]
+Dans cette instance, deux histoires d'usage inégal peuvent être égalisées
+en $(p,\chi,\theta,s)$ tout en laissant des valeurs distinctes de
+$\gamma$. Une différence ultérieure de carte de sondes établit que
+$z_4$ ne ferme plus le comportement, tandis que l'injection de
+$z_5=(p,\chi,\theta,s,\gamma)$ reproduit la réponse.
+
+Cette validation numérique est un témoin du Corollaire~\ref{cor:K-horloge-ontologie} et de la
+Proposition~\ref{prop:K-cinquieme-coordonnee}. Elle n'entre pas dans la preuve du Théorème~\ref{thm:K-equivalence-plasticite},
+laquelle repose uniquement sur l'identité des exécutions.
+
+\section{Limites de portée}
+\label{annexe-K-limites}
+
+\paragraph{Mémoire non markovienne.}
+Si la loi dépend d'une fonctionnelle de toute l'histoire qui ne possède
+pas de réalisation d'état dans la classe admise, la construction par
+état augmenté n'est pas disponible. Une réalisation de dimension infinie
+peut parfois exister, mais elle change la catégorie d'espaces considérée.
+
+\paragraph{Dépendance non causale.}
+Une loi lisant une information future ne peut pas être remplacée par une
+variable d'état causale sans modifier le protocole. Le théorème ne couvre
+pas ce cas.
+
+\paragraph{Domaines non réalisables.}
+Une équivalence formelle définie sur des états inatteignables n'a pas de
+portée empirique. Toutes les comparaisons doivent être restreintes au
+domaine réalisable commun.
+
+\paragraph{Bruits et lois de probabilité.}
+Dans un système stochastique, l'identité trajectorielle exige un couplage
+commun. Sans couplage, l'énoncé pertinent devient l'égalité des lois
+d'exécution, puis des lois de réponse.
+
+\paragraph{Observations dépendant de la présentation.}
+Une lecture qui accéderait directement à l'étiquette interne ``paramètre
+de loi'' violerait (P5). Elle ne serait plus une observation du système
+par ses exécutions, mais une inspection du code ou de la convention de
+modélisation.
+
+\paragraph{Minimalité du résumé.}
+Le théorème construit une réalisation, non une réalisation minimale. Plusieurs états augmentés de dimensions différentes peuvent être équivalents en réponse sur une classe de sondes donnée.
+
+\paragraph{Changement de résolution.}
+L'activité de $\gamma$ peut disparaître à résolution grossière et
+réapparaître à résolution fine. Toutes les affirmations de nécessité et
+de suffisance restent indexées par $(\mathfrak B,\rho)$.
+
+\section{Dépendances logiques}
+\label{annexe-K-dependances}
+
+L'annexe utilise :
+\begin{enumerate}
+\item l'axiome d'observation et les équivalences de l'Appendice G ;
+\item la réduction au contenu survivant de l'Appendice H ;
+\item la fermeture du résumé lent et les niveaux d'activité de
+l'Appendice I ;
+\item la géométrie des frontières et la distinction pli/couture de
+l'Appendice J.
+\end{enumerate}
+Elle prépare l'Appendice L : l'ultramétrique devra être formulée sur les
+classes d'observation et rester invariante sous les rebaptêmes de
+présentation établis ici.
+
+\section{Registre de statut}
+\label{annexe-K-registre}
+
+\begin{description}
+\item[Théorème~\ref{thm:K-equivalence-plasticite}.] Équivalence de présentation de la plasticité sous
+réalisabilité causale et markovienne.
+\item[Lemme~\ref{lem:K-identite-executions}.] Identité trajectorielle des deux présentations.
+\item[Corollaire~\ref{cor:K-horloge-ontologie}.] Plasticité détectable comme horloge active et
+indécidable comme ontologie.
+\item[Proposition~\ref{prop:K-cinquieme-coordonnee}.] Critère de nécessité d'une coordonnée
+supplémentaire.
+\item[Corollaire~\ref{cor:K-invariance-frontiere}.] Invariance de l'ensemble d'appropriation et de la
+frontière dans l'état augmenté.
+\item[Décision D-08.] Frontière espèce/individu déclarative.
+\item[Validation.] Instance canonique à cinq horloges ; elle illustre la
+détection mais n'est pas utilisée dans la preuve.
+\item[Question ouverte.] Caractériser les plasticités non réalisables par
+un état causal markovien et définir un spectre minimal invariant des
+horloges actives.
+\end{description}
+
+\section{Conclusion}
+\label{annexe-K-conclusion}
+
+La plasticité possède deux statuts qu'il faut maintenir simultanément.
+Elle est observable lorsqu'elle rend insuffisant un résumé d'état et
+modifie les réponses futures à état réduit égal. Mais sa localisation
+entre loi et état n'est pas observable dès lors que les deux
+présentations produisent les mêmes exécutions. Le résultat ne dissout pas
+la plasticité : il déplace son contenu empirique vers ce qui résiste au
+rebaptême, à savoir les coordonnées actives nécessaires, leurs échelles
+de temps et leurs effets sur les frontières de réponse.

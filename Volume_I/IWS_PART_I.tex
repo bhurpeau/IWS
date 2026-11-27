@@ -1,0 +1,1459 @@
+\chapter*{Statut du document}\label{statut-document}
+\addcontentsline{toc}{chapter}{Statut du document}
+
+La première partie présente le noyau mathématique retenu pour IWS. Elle reprend la \emph{Core Specification} 0.1 en intégrant les corrections de la version 0.1.1. Elle ne retrace pas la succession des corrections : elle expose directement le modèle qui en résulte.
+
+Le but de cette première partie est limité : définir les variables, les équations continues, les événements de Kairos et les propriétés déjà établies. La réduction homogène utilisée dans le Tome II est rappelée à la fin de la partie.
+
+Lorsqu'une étiquette de statut est utilisée dans le corps du texte ou dans les synthèses numériques, elle a le sens indiqué ci-dessous. Cette taxonomie qualifie des définitions, des choix de modélisation, des résultats ou des contrôles ; elle n'est pas apposée systématiquement aux résultats formels des annexes. Dans celles-ci, le type de l'énoncé (définition, lemme, proposition, théorème ou corollaire), ses hypothèses et sa démonstration fixent directement son statut. L'absence d'étiquette dans une annexe ne signifie donc pas que le statut de l'énoncé est indéterminé.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{{[}DEF{]}} : définition ;
+\item
+  \texttt{{[}CHOIX{]}} : choix de modélisation ;
+\item
+  \texttt{{[}PROP{]}} : résultat démontré ;
+\item
+  \texttt{{[}PROP-COND{]}} : résultat démontré sous des conditions
+  explicites ;
+\item
+  \texttt{{[}PROP-NUM{]}} : résultat analytique complété ou contrôlé
+  numériquement ;
+\item
+  \texttt{{[}NUM{]}} : fait observé dans le protocole indiqué ;
+\item
+  \texttt{{[}CTRL{]}} : expérience de contrôle construite pour écarter une interprétation concurrente d'un résultat numérique ;
+\item
+  \texttt{{[}OUVERT{]}} : question non résolue ;
+\item
+  \texttt{{[}CONJ{]}} : conjecture ;
+\item
+  \texttt{{[}INTERP{]}} : interprétation du résultat, distincte de sa
+  démonstration.
+\end{itemize}
+
+\chapter{Question traitée}\label{t1-question-traitee}
+
+IWS cherche à représenter un système dont le comportement présent dépend de son histoire, sans réduire cette histoire à un paramètre fixé une fois pour toutes.
+
+Le noyau repose sur trois idées.
+
+Premièrement, chaque nœud possède un état rapide \(H_i\) et une vitesse \(V_i\). La dynamique n'est donc pas un simple déplacement instantané dans l'espace des états : elle comporte une inertie minimale.
+
+Deuxièmement, chaque nœud possède une trace \(\tau_i\). Cette trace porte une mémoire dissipative et modifie le rappel ainsi que la dissipation. Deux nœuds qui ont les mêmes valeurs de \(H_i\) et \(V_i\) peuvent donc évoluer différemment s'ils n'ont pas la même trace.
+
+Troisièmement, le graphe relationnel ne varie pas continûment. Il change lors d'événements discrets, appelés \textbf{Kairos}, déclenchés lorsqu'une pression locale atteint un seuil.
+
+Le modèle mêle ainsi une dynamique différentielle et des changements discrets. Il appartient à la famille des systèmes dynamiques hybrides \cite{goebel2012hybrid, lakshmikantham1989impulsive}.
+
+Cette classification n'est pas une interprétation. Elle décrit simplement la forme mathématique du système :
+
+\[
+(\mathcal X,C,F,D,\mathcal K).
+\]
+
+Dans cette écriture :
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathcal X\) est l'espace des états ;
+\item
+  \(C\) est l'ensemble dans lequel la dynamique continue est autorisée ;
+\item
+  \(F\) désigne le champ de vecteurs suivi entre deux événements ;
+\item
+  \(D\) est l'ensemble dans lequel un saut doit être effectué ;
+\item
+  \(\mathcal K\) décrit l'effet de ce saut.
+\end{itemize}
+
+\chapter{État du système}\label{t1-etat-du-systeme}
+
+\section{Graphe et dimensions}\label{t1-graphe-et-dimensions}
+
+Le nombre de nœuds \(N\geq 2\) est fixe dans le noyau. La dimension de l'état interne est \(d\geq 1\).
+
+On note
+
+\[
+\mathcal V=\{1,\ldots,N\}
+\]
+
+l'ensemble des nœuds. Le graphe est simple, non orienté et sans boucle. Sa matrice d'adjacence est
+
+\[
+A\in\{0,1\}^{N\times N},
+\qquad
+A^\top=A,
+\qquad
+A_{ii}=0.
+\]
+
+Le nombre de nœuds ne varie donc pas dans ce chapitre. Les mécanismes de suppression ou de création de nœuds appartiennent à des extensions ultérieures.
+
+\section{Variables nodales}\label{t1-variables-nodales}
+
+Chaque nœud \(i\) porte quatre variables :
+
+\[
+H_i\in\mathbb R^d,
+\qquad
+V_i\in\mathbb R^d,
+\qquad
+\tau_i\in\mathbb R^d,
+\qquad
+P_i\in\mathbb R_+.
+\]
+
+Leur rôle est le suivant.
+
+\subsection{État rapide \texorpdfstring{\(H_i\)}{Hi}}\label{t1-etat-rapide-h_i}
+
+\(H_i\) décrit la configuration instantanée du nœud. Le modèle ne lui attribue pas, à ce stade, de contenu symbolique particulier. Selon l'application envisagée, ses composantes pourraient représenter des grandeurs différentes. Le noyau exige seulement qu'elles appartiennent à un espace vectoriel de dimension finie.
+
+\subsection{Vitesse \texorpdfstring{\(V_i\)}{Vi}}\label{t1-vitesse-v_i}
+
+La relation
+
+\[
+\dot H_i=V_i
+\]
+
+introduit une dynamique d'ordre deux. \(V_i\) ne représente pas nécessairement une vitesse physique. Il mesure la variation en cours de l'état et permet de distinguer deux nœuds qui se trouvent au même point \(H_i\), mais qui n'y arrivent pas avec la même dynamique.
+
+\subsection{Trace \texorpdfstring{\(\tau_i\)}{tau i}}\label{t1-trace-tau_i}
+
+La trace est la variable historique du noyau. Elle est alimentée par l'état relationnel reçu par le nœud et décroît en l'absence de nouvelle écriture. Elle intervient ensuite dans deux termes de la dynamique :
+
+\begin{itemize}
+\tightlist
+\item
+  la friction \(\Gamma(\tau_i)\) ;
+\item
+  le préconditionneur \(M(\tau_i)\).
+\end{itemize}
+
+La trace ne pousse donc pas directement \(H_i\). Elle modifie la dissipation et le terme de rappel vers l’origine.
+
+\subsection{Pression \texorpdfstring{\(P_i\)}{Pi}}\label{t1-pression-p_i}
+
+\(P_i\) est un accumulateur local utilisé pour déclencher les Kairos. Le mot « pression » ne désigne pas une pression physique. Il résume ici une combinaison de l'amplitude de l'état, de la vitesse et d'une relaxation.
+
+\begin{encadre}
+L'état complet est
+
+\[
+x=(H,V,\tau,P,A)
+\]
+
+et l'espace des états est
+
+\[
+\mathcal X
+=
+\mathbb R^{N\times d}
+\times
+\mathbb R^{N\times d}
+\times
+\mathbb R^{N\times d}
+\times
+\mathbb R_+^N
+\times
+\mathfrak G_N,
+\]
+
+où \(\mathfrak G_N\) désigne l'ensemble des graphes simples non orientés
+sur \(\mathcal V\).
+\end{encadre}
+
+\chapter{Influence du graphe}\label{t1-influence-du-graphe}
+
+\section{Matrice relationnelle
+normalisée}\label{t1-matrice-relationnelle-normalisee}
+
+Les interactions entre nœuds passent par la matrice
+
+\[
+\widetilde A(A)
+=
+\operatorname{Deg}(A+I)^{-1}(A+I),
+\]
+
+avec
+
+\[
+\operatorname{Deg}(B)
+=
+\operatorname{diag}\!\left(\sum_j B_{ij}\right).
+\]
+
+L'ajout de \(I\) donne à chaque nœud une boucle de calcul, même si le graphe est vide. La matrice \(\widetilde A\) est stochastique par lignes :
+
+\[
+\sum_j \widetilde A_{ij}=1,
+\qquad
+\widetilde A_{ij}\geq 0.
+\]
+
+Par conséquent,
+
+\[
+(\widetilde A H)_i
+=
+\sum_j \widetilde A_{ij}H_j
+\]
+
+est une moyenne pondérée de l'état du nœud et de celui de ses voisins. On dispose immédiatement de la borne
+
+\[
+\|(\widetilde A H)_i\|
+\leq
+\max_j \|H_j\|.
+\]
+
+Cette propriété sera utile pour l'existence des solutions et pour la borne sur la trace.
+
+\section{Ce que le couplage ne fait pas}\label{t1-ce-que-le-couplage-ne-fait-pas}
+
+Le couplage relationnel ne transmet ni la trace \(\tau_j\), ni la pression \(P_j\), ni les paramètres internes du voisin. Il ne transmet que les états \(H_j\) à travers leur moyenne normalisée.
+
+Cette distinction est importante : dans le noyau, l'histoire d'un nœud n'est pas copiée dans un autre nœud. Elle n'agit sur les voisins qu'indirectement, par les effets qu'elle produit sur l'état \(H_i\).
+
+\chapter{Trace et préconditionneur}\label{t1-trace-et-preconditionneur}
+
+\section{Écriture de la trace}\label{t1-ecriture-de-la-trace}
+
+La trace suit l'équation
+
+\[
+\dot\tau_i
+=
+\alpha\,\tanh\!\bigl((\widetilde A H)_i\bigr)
+-
+\beta\tau_i,
+\qquad
+\alpha>0,
+\quad
+\beta>0,
+\]
+
+où \(\tanh\) est appliquée composante par composante.
+
+Le premier terme écrit dans la trace une version saturée de l'état relationnel. Le second terme produit un oubli exponentiel.
+
+Le choix de \(\tanh\) a une conséquence mathématique immédiate :
+
+\[
+\left\|
+\tanh\!\bigl((\widetilde A H)_i\bigr)
+\right\|
+\leq \sqrt d.
+\]
+
+On en déduit, presque partout,
+
+\[
+\frac{\mathrm d}{\mathrm dt}\|\tau_i\|
+\leq
+\alpha\sqrt d-\beta\|\tau_i\|.
+\]
+
+Ainsi,
+
+\[
+\|\tau_i(t)\|
+\leq
+\max\left(
+\|\tau_i(0)\|,
+\frac{\alpha\sqrt d}{\beta}
+\right)
+:=\bar\tau_i.
+\]
+
+La trace est donc bornée indépendamment de \(H\).
+
+Cette saturation est un choix de modélisation, pas une nécessité générale démontrée. Avec une trace linéaire,
+
+\[
+\dot\tau_i=\alpha(\widetilde A H)_i-\beta\tau_i,
+\]
+
+une preuve conjointe que \(H\) et \(\tau\) restent bornés demeure possible en principe. Elle n'est simplement pas disponible dans l'analyse actuelle. La saturation est retenue parce qu'elle donne une borne autonome sur \(\tau\) et simplifie les preuves qui suivent.
+
+\section{Matrice \texorpdfstring{\(Q(\tau)\)}{Q(tau)}}\label{t1-matrice-qtau}
+
+La trace modifie le rappel par la matrice
+
+\[
+Q(\tau)
+=
+I_d+
+\frac{\lambda}{1+\|\tau\|^2}\tau\tau^\top,
+\qquad
+\lambda\geq 0.
+\]
+
+Il s'agit d'une perturbation de rang un de l'identité. Dans toute direction orthogonale à \(\tau\), \(Q(\tau)\) agit comme l'identité. Dans la direction de \(\tau\), sa valeur propre est
+
+\[
+1+\frac{\lambda\|\tau\|^2}{1+\|\tau\|^2}.
+\]
+
+Elle vaut \(1\) si \(\lambda=0\) et appartient à \([1,1+\lambda)\) si \(\lambda>0\).
+
+Le noyau n'utilise pas directement \(Q\), mais son inverse
+
+\[
+M(\tau)=Q(\tau)^{-1}.
+\]
+
+\section{Calcul de \texorpdfstring{\(M(\tau)\)}{M(tau)}}\label{t1-calcul-de-mtau}
+
+La formule de Sherman--Morrison donne l'inverse d'une matrice modifiée
+par un terme de rang un \cite{sherman1950adjustment}. Pour
+
+\[
+Q=I+c\,\tau\tau^\top,
+\qquad
+c=\frac{\lambda}{1+\|\tau\|^2},
+\]
+
+elle s'écrit
+
+\[
+Q^{-1}
+=
+I-
+\frac{c}{1+c\,\tau^\top\tau}
+\tau\tau^\top.
+\]
+
+Le terme \(\tau^\top\tau\) est bien présent. Comme
+
+\[
+\tau^\top\tau=\|\tau\|^2,
+\]
+
+on obtient
+
+\[
+\frac{c}{1+c\|\tau\|^2}
+=
+\frac{
+\dfrac{\lambda}{1+\|\tau\|^2}
+}{
+1+
+\dfrac{\lambda\|\tau\|^2}{1+\|\tau\|^2}
+}
+=
+\frac{\lambda}
+{1+(1+\lambda)\|\tau\|^2}.
+\]
+
+Par conséquent,
+
+\[
+\boxed{
+M(\tau)
+=
+I_d
+-
+\frac{\lambda}
+{1+(1+\lambda)\|\tau\|^2}
+\tau\tau^\top
+}.
+\]
+
+Cette forme permet de lire directement son action.
+
+Dans les directions orthogonales à \(\tau\), \(M(\tau)z=z\).
+
+Dans la direction de \(\tau\), la valeur propre est
+\(
+m_\parallel(\tau)
+=
+\frac{1+\|\tau\|^2}
+{1+(1+\lambda)\|\tau\|^2}.
+\)
+
+Elle décroît de \(1\) vers \(m_0=\frac{1}{1+\lambda}\) lorsque \(\|\tau\|\) augmente.
+
+Le terme \(-M(\tau_i)H_i\) rappelle donc \(H_i\) vers l'origine, mais ce rappel est plus faible dans la direction de la trace. Les directions orthogonales ne sont pas renforcées : elles restent inchangées.
+
+Pour cette raison, \(M\) est appelé \textbf{préconditionneur anisotrope historique}. Le mot « métrique » n'est pas employé dans les énoncés mathématiques : la dynamique ne contient pas les termes qu'exigerait une véritable formulation riemannienne.
+
+\section{Friction dépendant de la trace}\label{t1-friction-dependant-de-la-trace}
+
+La friction est :
+
+\[
+\Gamma(\tau)
+=
+\gamma_0+\gamma_1\|\tau\|,
+\qquad
+\gamma_0>0,
+\quad
+\gamma_1\geq 0.
+\]
+
+Elle augmente avec la norme de la trace. La trace a donc deux effets distincts :
+
+\begin{itemize}
+\tightlist
+\item
+  elle affaiblit le rappel dans sa propre direction ;
+\item
+  elle augmente la dissipation du mouvement.
+\end{itemize}
+
+\(M\) est lisse. En revanche, \(\Gamma\) n'est pas différentiable en \(\tau=0\), car la norme euclidienne ne l'est pas. Elle est toutefois globalement lipschitzienne, ce qui suffit pour l'existence et l'unicité des solutions.
+
+\chapter{Dynamique continue}\label{t1-dynamique-continue}
+
+\section{Équations}\label{t1-equations}
+
+Entre deux Kairos, le graphe reste constant et chaque nœud suit
+
+\[
+\dot H_i=V_i,
+\]
+
+\[
+\dot V_i
+=
+-\Gamma(\tau_i)V_i
+-
+M(\tau_i)H_i
++
+\zeta\,\tanh\!\bigl((\widetilde A H)_i\bigr)
++
+u_i(t),
+\]
+
+\[
+\dot\tau_i
+=
+\alpha\,\tanh\!\bigl((\widetilde A H)_i\bigr)
+-
+\beta\tau_i,
+\]
+
+\[
+\dot P_i
+=
+\kappa_1\|H_i\|
++
+\kappa_2\|V_i\|
+-
+\kappa_3P_i,
+\]
+
+\[
+\dot A=0.
+\]
+
+L'entrée \(u_i(t)\) est exogène, mesurable et bornée :
+
+\[
+\|u_i(t)\|\leq u_{\max}.
+\]
+
+Le cas autonome correspond à \(u\equiv 0\). Un bruit ou un forçage hétérogène particulier peut être introduit par \(u\), mais il ne fait pas partie du mécanisme interne du noyau.
+
+\section{Lecture terme par terme}\label{t1-lecture-terme-par-terme}
+
+L'équation de \(V_i\) contient quatre contributions.
+
+\subsection{Dissipation}\label{t1-dissipation}
+
+\[
+-\Gamma(\tau_i)V_i
+\]
+
+freine le mouvement. La dissipation minimale vaut \(\gamma_0\). Elle augmente avec la trace lorsque \(\gamma_1>0\).
+
+\subsection{Rappel}\label{t1-rappel}
+
+\[
+-M(\tau_i)H_i
+\]
+
+ramène l'état vers l'origine. Ce rappel est anisotrope : il est moins fort dans la direction de \(\tau_i\).
+
+\subsection{Couplage relationnel}\label{t1-couplage-relationnel}
+
+
+\[
+\zeta\,\tanh\!\bigl((\widetilde A H)_i\bigr)
+\]
+
+fait dépendre la dynamique de l'état moyen du voisinage. La saturation borne ce terme par \(\zeta\sqrt d\).
+
+\subsection{Entrée extérieure}\label{t1-entree-exterieure}
+
+\[
+u_i(t)
+\]
+
+permet d'étudier une sollicitation, un bruit imposé ou, plus tard, une interaction passant par une interface. Le noyau ne suppose pas que cette entrée soit optimisée ou porte une récompense.
+
+\section{Pression de Kairos}\label{t1-pression-de-kairos}
+
+La pression vérifie une équation linéaire forcée :
+
+\[
+\dot P_i
+=
+\kappa_1\|H_i\|
++
+\kappa_2\|V_i\|
+-
+\kappa_3P_i.
+\]
+
+Elle est alimentée par l'amplitude de l'état et de la vitesse et possède un terme de relaxation \(-\kappa_3P_i\).
+
+La pression n'agit pas sur la dynamique de \(H_i\), \(V_i\) ou \(\tau_i\) entre deux événements. Son seul rôle dans le noyau est de déterminer quand un Kairos doit avoir lieu.
+
+\chapter{Déclenchement et effet des Kairos}\label{t1-declenchement-et-effet-des-kairos}
+
+\section{Ensemble de flot et ensemble de saut}\label{t1-ensemble-de-flot-et-ensemble-de-saut}
+
+On fixe un seuil \(\Theta>0\).
+
+La dynamique continue est suivie tant que
+
+\[
+P_i\leq\Theta
+\qquad
+\text{pour tout }i.
+\]
+
+L'ensemble correspondant est
+
+\[
+C
+=
+\{x\in\mathcal X:\ P_i\leq\Theta\ \forall i\}.
+\]
+
+Un saut doit être effectué dès qu'au moins une pression atteint le seuil
+:
+
+\[
+D
+=
+\{x\in\mathcal X:\ \exists i,\ P_i\geq\Theta\}.
+\]
+
+Sur la frontière \(C\cap D\), le saut est prioritaire. Comme \(P_i(t)\) est continu pendant le flot, un premier franchissement se produit avec \(P_i=\Theta\).
+
+Le terme anglais \emph{guard} est fréquent dans la littérature sur les systèmes hybrides. Nous utilisons ici « condition de déclenchement » ou « ensemble de saut », qui suffisent à décrire le modèle.
+
+\section{Opérateurs nodaux}\label{t1-operateurs-nodaux}
+
+Pour chaque nœud \(i\), on définit un opérateur de Kairos
+
+\[
+\mathcal{K}_i:\mathcal D_i\longrightarrow\mathcal X,
+\qquad
+\mathcal D_i=\{x:\ P_i\geq\Theta\}.
+\]
+
+L'application effectivement utilisée par le noyau choisit le plus petit indice parmi les nœuds au-dessus du seuil :
+
+\[
+\iota(x)
+=
+\min\{i:\ P_i\geq\Theta\},
+\qquad
+\mathcal{K}(x)
+=
+\mathcal{K}_{\iota(x)}(x).
+\]
+
+Ce départage rend le modèle déterministe à entrée donnée.
+
+\section{Recâblage conservatif}\label{t1-recablage-conservatif}
+
+Soit \(i^\ast\) le nœud sélectionné. On note \(\mathcal N(i^\ast)\) son voisinage et \(\mathcal N^c(i^\ast)\) l'ensemble de ses non-voisins, en excluant \(i^\ast\).
+
+La similarité entre deux traces est
+
+\[
+s(i,j)
+=
+\frac{\langle\tau_i,\tau_j\rangle}
+{\|\tau_i\|\,\|\tau_j\|}
+\]
+
+lorsque les deux normes sont non nulles, et \(s(i,j)=0\) sinon.
+
+Le nombre d'arêtes modifiées est
+
+\[
+m
+=
+\min\bigl(
+2,\,
+|\mathcal N(i^\ast)|,\,
+|\mathcal N^c(i^\ast)|
+\bigr).
+\]
+
+Si \(m>0\), le saut :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  retire les \(m\) arêtes reliant \(i^\ast\) aux voisins de plus faible similarité ;
+\item
+  ajoute \(m\) arêtes vers les non-voisins de plus forte similarité.
+\end{enumerate}
+
+Les égalités sont départagées par ordre d'indice. Si \(m=0\), le graphe ne change pas.
+
+Le recâblage est conservatif : il retire autant d'arêtes qu'il en ajoute. Le nombre total d'arêtes reste donc constant.
+
+\section{Relaxation locale}\label{t1-relaxation-locale}
+
+Après le recâblage,
+
+\[
+P_{i^\ast}^+
+=
+r_P P_{i^\ast}^-,
+\qquad
+V_{i^\ast}^+
+=
+r_V V_{i^\ast}^-,
+\]
+
+avec
+
+\[
+r_P,r_V\in[0,1).
+\]
+
+Les autres composantes ne changent pas :
+
+\[
+H^+=H^-,
+\qquad
+\tau^+=\tau^-,
+\]
+
+et, pour \(j\neq i^\ast\),
+
+\[
+P_j^+=P_j^-,
+\qquad
+V_j^+=V_j^-.
+\]
+
+Le Kairos modifie donc le graphe, relâche la pression du nœud concerné et amortit sa vitesse. Il n'efface pas sa trace et ne déplace pas instantanément son état.
+
+\section{Événements simultanés}\label{t1-evenements-simultanes}
+
+Plusieurs nœuds peuvent atteindre \(\Theta\) au même instant. Les sauts sont alors appliqués l'un après l'autre, sans faire avancer le temps continu.
+
+Après son saut, le nœud sélectionné vérifie
+
+\[
+P_i^+=r_P\Theta<\Theta.
+\]
+
+Comme la pression des autres nœuds n'est pas modifiée, chaque saut enlève au moins un nœud de l'ensemble des pressions au-dessus du seuil. Il y a donc au plus \(N\) sauts au même instant.
+
+\chapter{Premières propriétés mathématiques}\label{t1-premieres-proprietes-mathematiques}
+
+\section{Existence et unicité entre deux événements}\label{t1-existence-et-unicite-entre-deux-evenements}
+
+L'entrée \(u(t)\) est seulement supposée mesurable et bornée. Le champ de vecteurs n'est donc pas nécessairement continu en \(t\). Le cadre adapté est celui des solutions de Carathéodory : les trajectoires sont absolument continues et satisfont les équations presque partout \cite{filippov1988differential}.
+
+Pour une valeur fixée du graphe \(A\), le champ possède les propriétés suivantes :
+
+\begin{itemize}
+\tightlist
+\item
+  il est mesurable en \(t\), car sa seule dépendance temporelle
+  explicite vient de \(u(t)\) ;
+\item
+  il est localement lipschitzien par rapport à l'état ;
+\item
+  il est borné sur tout compact par une fonction intégrable du temps.
+\end{itemize}
+
+Les points à vérifier sont simples :
+
+\begin{itemize}
+\tightlist
+\item
+  \(\tanh\) est continue et sa dérivée est bornée ;
+\item
+  \(M(\tau)\) est continue et sa dérivée est bornée ;
+\item
+  \(\Gamma(\tau)\) est globalement lipschitzienne ;
+\item
+  les produits \(\Gamma(\tau)V\) et \(M(\tau)H\) sont localement lipschitziens.
+\end{itemize}
+
+Il existe donc une solution locale unique entre deux événements.
+
+\section{Absence d'explosion pendant le flot}\label{t1-absence-dexplosion-pendant-le-flot}
+
+Posons
+
+\[
+B=\zeta\sqrt d+u_{\max}.
+\]
+
+Comme \(\|M(\tau)\|\leq 1\),
+
+\[
+\frac{\mathrm d}{\mathrm dt}\|V_i\|
+\leq
+\|H_i\|+B.
+\]
+
+De plus,
+
+\[
+\frac{\mathrm d}{\mathrm dt}\|H_i\|
+\leq
+\|V_i\|.
+\]
+
+En posant
+
+\[
+Y(t)
+=
+\max_i\bigl(\|H_i(t)\|+\|V_i(t)\|\bigr),
+\]
+
+on obtient, presque partout,
+
+\[
+\dot{Y}(t)\leq Y(t)+B.
+\]
+
+L'inégalité de Grönwall donne
+
+\[
+Y(t)
+\leq
+\bigl(Y(0)+B\bigr)e^t-B
+\]
+
+sur tout intervalle de temps fini.
+
+Cette borne ne dit pas que \(H\) et \(V\) restent uniformément bornés lorsque \(t\to\infty\). Elle exclut seulement une explosion en temps fini pendant une phase de flot.
+
+La trace est déjà bornée. La pression satisfait une équation linéaire dont les coefficients restent bornés sur tout intervalle fini. La solution continue peut donc être prolongée jusqu'au prochain événement ou indéfiniment si aucun événement ne survient.
+
+Une condition initiale est dite admissible si
+\[
+P_i(0)\in[0,\Theta]
+\qquad\text{pour tout }i,
+\]
+et si le graphe initial appartient à \(\mathcal G_N\).
+Aucune contrainte supplémentaire n'est imposée à
+\(H(0)\), \(V(0)\) ou \(\tau(0)\).
+
+\begin{quote}
+\resultheading{Proposition}{prop:t1-existence-flot}{ \texttt{{[}PROP{]}}} Pour toute condition initiale admissible et toute entrée mesurable bornée, la dynamique continue admet une unique solution globale au sens de Carathéodory entre les événements.
+\end{quote}
+
+\section{Invariants et bornes immédiates}\label{t1-invariants-et-bornes-immediates}
+
+Les propriétés suivantes valent le long de toute exécution :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  le graphe reste simple et non orienté ;
+\item
+  le nombre total d'arêtes reste constant ;
+\item
+  \(P_i(t)\geq 0\) ;
+\item
+  pendant le flot, \(P_i(t)\leq\Theta\) ;
+\item
+  la trace vérifie \[
+  \|\tau_i(t)\|
+  \leq
+  \max\left(
+  \|\tau_i(0)\|,
+  \frac{\alpha\sqrt d}{\beta}
+  \right).
+  \]
+\end{enumerate}
+
+La positivité de \(P_i\) vient de
+
+\[
+\dot P_i\geq-\kappa_3P_i
+\]
+
+et de \(r_P\geq0\) aux sauts.
+
+La borne sur la trace implique aussi
+
+\[
+\Gamma(\tau_i)
+\leq
+\bar\Gamma
+=
+\gamma_0+\gamma_1\bar\tau,
+\]
+
+où
+
+\[
+\bar\tau
+=
+\max_i\bar\tau_i.
+\]
+
+Elle permet enfin de borner la variation de \(M(\tau_i)\) le long du
+flot.
+
+\chapter{Quand les trajectoires restent-elles bornées ?}\label{t1-quand-les-trajectoires-restent-elles-bornees}
+
+La question est plus difficile que l'existence sur tout intervalle fini. Il faut savoir si \(H\) et \(V\) restent dans un ensemble borné lorsque le temps augmente, malgré la variation de \(M\) et les sauts répétés.
+
+\section{Cas sans préconditionnement historique}\label{t1-cas-sans-preconditionnement-historique}
+
+Lorsque
+
+\[
+\lambda=0,
+\qquad
+\gamma_1=0,
+\]
+
+on a
+
+\[
+M=I,
+\qquad
+\Gamma=\gamma_0.
+\]
+
+Le système en \((H,V)\) est alors un réseau d'oscillateurs amortis soumis à une entrée bornée. Une fonction d'énergie avec un petit terme croisé,
+
+\[
+\mathcal L_\varepsilon
+=
+\sum_i
+\left[
+\frac12\|V_i\|^2
++
+\frac12\|H_i\|^2
++
+\varepsilon H_i\cdot V_i
+\right],
+\]
+
+permet d'obtenir une estimation de type \emph{input-to-state stability}\footnote{\emph{Input-to-state stability} est le terme usuel. Il désigne une stabilité pour laquelle la taille de l'état est contrôlée par la condition initiale et par la taille de l'entrée.}\cite{sontag1989smooth}. Les états restent bornés.
+
+\section{Difficulté créée par \texorpdfstring{\(M(\tau)\)}{M(tau)}}\label{t1-difficulte-creee-par-mtau}
+
+Lorsque \(\lambda>0\), l'énergie naturelle contient
+
+\[
+\frac12 H_i^\top M(\tau_i)H_i.
+\]
+
+Sa dérivée fait apparaître
+
+\[
+\frac12 H_i^\top \dot M(\tau_i)H_i.
+\]
+
+Ce terme peut injecter ou retirer de l'énergie selon la trajectoire de la trace. Il faut donc contrôler la vitesse de variation de \(M\).
+
+On pose
+
+\[
+m_0=\frac{1}{1+\lambda},
+\]
+
+de sorte que
+
+\[
+H_i^\top M(\tau_i)H_i
+\geq
+m_0\|H_i\|^2.
+\]
+
+On note également
+
+\[
+\mu
+=
+L_M(\lambda)
+\bigl(\alpha\sqrt d+\beta\bar\tau\bigr),
+\]
+
+où \(L_M(\lambda)\) borne la différentielle de \(M\).
+
+Une condition suffisante pour que la dissipation domine la variation de \(M\) pendant le flot est
+
+\[
+\boxed{
+\mu
+<
+\frac{3m_0\gamma_0}
+{4\left(1+\bar\Gamma^2/m_0\right)}
+}
+\tag{S}
+\]
+
+Cette condition n'est pas présentée comme nécessaire. Cette condition est volontairement uniforme. Elle combine la borne globale \(m_0\) sur la coercivité de \(M\), les bornes extrêmes sur \(\Gamma\) et une borne uniforme sur \(\dot M\), sans exploiter le fait que ces quantités dépendent de la même variable \(s=\|\tau\|\). Elle doit donc être lue comme une condition suffisante robuste, et non comme une estimation quantitative de la proximité d'une instabilité.
+
+Le conservatisme de ces majorations est discuté plus précisément à l'Annexe~\ref{annexe-energie-limites}.
+
+\section{Fonction de Lyapunov pour le flot}\label{t1-fonction-de-lyapunov-pour-le-flot}
+
+On considère
+
+\[
+\mathcal L
+=
+\sum_i
+\left[
+\frac12\|V_i\|^2
++
+\frac12 H_i^\top M(\tau_i)H_i
++
+\varepsilon H_i\cdot V_i
+\right].
+\]
+
+Pour un choix suffisamment petit de \(\varepsilon>0\), \(\mathcal L\) est équivalente à \(\|H\|^2+\|V\|^2\).
+
+Sous la condition \((S)\), son évolution pendant le flot vérifie une estimation de la forme
+
+\[
+\dot{\mathcal L}
+\leq
+-2a\mathcal L+b,
+\qquad
+a>0,
+\quad
+b>0.
+\]
+
+Elle décroît donc en dehors d'un ensemble borné.
+
+Ce résultat porte uniquement sur les phases continues. Il ne suffit pas encore à conclure pour le système hybride, car \(\mathcal L\) peut augmenter lors d'un saut.
+
+\section{Effet d'un saut sur \texorpdfstring{\(\mathcal L\)}{L}}\label{t1-effet-dun-saut-sur-mathcal-l}
+
+Lors d'un saut, seul \(V_{i^\ast}\) est multiplié par \(r_V\). Pour le nœud concerné,
+
+\[
+\Delta\mathcal L
+=
+\frac12(r_V^2-1)\|V\|^2
++
+\varepsilon(r_V-1)H\cdot V.
+\]
+
+Le premier terme est négatif. Le second est positif lorsque \(H\cdot V<0\). On ne peut donc pas écrire
+
+\[
+\mathcal L^+\leq\mathcal L^-.
+\]
+
+On dispose toutefois de la borne
+
+\[
+\Delta\mathcal L
+\leq
+\frac{1-r_V}{2(1+r_V)}
+\varepsilon^2\|H\|^2.
+\]
+
+Pour séparer le contrôle du flot et celui des sauts, on introduit l'énergie sans terme croisé
+
+\[
+E
+=
+\sum_i
+\left[
+\frac12\|V_i\|^2
++
+\frac12H_i^\top M(\tau_i)H_i
+\right].
+\]
+
+Cette énergie ne peut pas augmenter lors d'un saut :
+
+\[
+E^+
+=
+E^-
+-
+\frac12(1-r_V^2)
+\|V_{i^\ast}\|^2
+\leq E^-.
+\]
+
+Les deux fonctions sont équivalentes. Si
+
+\[
+c^{-}=
+1-\frac{2\varepsilon}{\sqrt{m_0}}>0,
+\]
+
+alors
+
+\[
+c^{-}\,E\leq\mathcal L.
+\]
+
+On en déduit une borne relative sur l'augmentation possible de
+\(\mathcal L\) :
+
+\[
+\mathcal L^+
+\leq
+(1+q)\mathcal L^-,
+\qquad
+q=
+\frac{\varepsilon^2}{c^{-}m_0}.
+\]
+
+\section{Combinaison du flot et des sauts}
+\label{t1-combinaison-du-flot-et-des-sauts}
+
+La décroissance obtenue pendant le flot ne suffit pas, à elle seule,
+à contrôler la dynamique hybride. Un saut peut en effet augmenter
+transitoirement \(\mathcal L\).
+
+Il faut donc distinguer deux niveaux :
+
+\begin{itemize}
+\tightlist
+\item
+  \(R\), borne visée au début et à la fin des fenêtres de contrôle ;
+\item
+  \(R_b\), enveloppe autorisée à l'intérieur de ces fenêtres.
+\end{itemize}
+
+Posons
+
+\[
+r_J=(1+q)^N,
+\qquad
+C=\frac{b}{2a},
+\]
+
+et
+
+\[
+R_b=r_J(R+C).
+\]
+
+Supposons
+
+\[
+\mathcal L(0)\leq R.
+\]
+
+Tant que
+
+\[
+\mathcal L\leq R_b,
+\]
+
+les équivalences de normes fournissent les bornes
+
+\[
+\|H_i\|
+\leq
+\sqrt{\frac{2R_b}{c^-m_0}},
+\qquad
+\|V_i\|
+\leq
+\sqrt{\frac{2R_b}{c^-}}.
+\]
+
+Entre deux sauts d'un même nœud, sa pression doit remonter de
+\(r_P\Theta\) à \(\Theta\). Le temps continu nécessaire est donc
+au moins
+
+\[
+\delta(R_b)
+=
+\frac{(1-r_P)\Theta}
+{
+\kappa_1
+\sqrt{\dfrac{2R_b}{c^-m_0}}
++
+\kappa_2
+\sqrt{\dfrac{2R_b}{c^-}}
+}.
+\]
+
+Dans toute fenêtre semi-ouverte de longueur \(\delta(R_b)\), chaque
+nœud saute au plus une fois. Il y a donc au plus \(N\) sauts dans
+une telle fenêtre.
+
+Sur toute portion de cette fenêtre, la combinaison de l'estimation
+du flot et des augmentations possibles aux sauts donne
+
+\[
+\mathcal L(t)
+\leq
+r_J(R+C)
+=
+R_b.
+\]
+
+Un argument de premier franchissement montre donc que
+\(\mathcal L\) ne peut pas dépasser \(R_b\) à l'intérieur de la
+fenêtre.
+
+À l'extrémité d'une fenêtre complète,
+
+\[
+\mathcal L_{\mathrm{suivante}}
+\leq
+r_J
+\left[
+e^{-2a\delta(R_b)}R+C
+\right].
+\]
+
+Il suffit alors d'imposer
+
+\[
+\boxed{
+r_J e^{-2a\delta(R_b)}
+\leq
+\frac12
+}
+\]
+
+et
+
+\[
+\boxed{
+R
+\geq
+2r_JC
+=
+r_J\frac{b}{a}.
+}
+\tag{\(Z_R^\sharp\)}
+\]
+
+Dans ce cas,
+
+\[
+\mathcal L_{\mathrm{suivante}}
+\leq
+\frac{R}{2}+r_JC
+\leq R.
+\]
+
+L'argument peut être répété sur toutes les fenêtres successives.
+
+\begin{quote}
+\resultheading{Proposition}{prop:t1-bornitude-conditionnelle}{ \texttt{{[}PROP-COND{]}}}
+Sous \((S)\) et \((Z_R^\sharp)\), toute exécution issue de
+\(\mathcal L(0)\leq R\) vérifie
+
+\[
+\mathcal L(t)\leq R_b
+\]
+
+pour tout \(t\). Le système hybride est alors globalement borné.
+\end{quote}
+
+\section{Limite de la preuve}\label{t1-limite-de-la-preuve}
+
+Les conditions précédentes sont suffisantes et utilisent des constantes globales non optimisées. Pour les paramètres de référence de la réduction bidimensionnelle étudiée numériquement, la condition \((S)\) n'est pas satisfaite. Son écart important ne doit toutefois pas être interprété comme une indication d'instabilité du régime considéré.
+
+Une réévaluation des termes intervenant dans \((S)\) montre en effet que l'essentiel de cet écart provient des majorations uniformes utilisées dans sa dérivation : borne globale de la différentielle de \(M\), coercivité remplacée par son minimum uniforme, bornes extrêmes sur la friction et absence de corrélation entre ces quantités, qui dépendent toutes de \(s=\|\tau\|\). Dans la réduction \(d=2\), une localisation ponctuelle de ces termes ramène le déficit de la même famille quadratique à l'ordre de quelques pourcents. Ce calcul ne constitue cependant pas une preuve de bornitude globale : la fonction ainsi optimisée dépend de \(s\), et le contrôle du système hybride doit en outre inclure les sauts.
+
+Il faut donc conserver la distinction suivante :
+\begin{itemize}
+\tightlist
+\item
+les trajectoires hybrides sont démontrées globalement bornées dans une région explicite de l'espace des paramètres, sous les conditions suffisantes \((S)\) et \((Z_R^\sharp)\) ;
+\item
+la bornitude globale du régime principal étudié numériquement reste à établir, même si l'échec de \((S)\) apparaît principalement lié au conservatisme de la preuve actuelle plutôt qu'à une instabilité mise en évidence.
+\end{itemize}
+
+Ce point n'empêche pas de définir ou de simuler le modèle. Il délimite la portée de la théorie actuellement établie.
+
+La condition suffisante de contrôle global et la borne correspondante sont établies à l'Annexe~\ref{annexe-energie-flots-sauts}.
+
+\chapter{Absence d'accumulation de sauts en temps fini}
+\label{t1-absence-daccumulation-de-sauts-en-temps-fini}
+
+L'absence d'accumulation de sauts en temps fini ne demande pas que les trajectoires restent uniformément bornées lorsque \(t\to\infty\). Il suffit de disposer d'une borne sur chaque horizon de temps fini.
+
+Fixons \(T>0\).
+
+Au chapitre précédent, la quantité
+
+\[
+Y(t)
+=
+\max_i
+\bigl(
+\|H_i(t)\|+\|V_i(t)\|
+\bigr)
+\]
+
+a été estimée pendant le flot par
+
+\[
+Y(t)
+\leq
+\bigl(Y(0)+B\bigr)e^t-B,
+\qquad
+B=\zeta\sqrt d+u_{\max}.
+\]
+
+Cette estimation reste valable le long d'une exécution hybride. En effet, lors d'un saut, \(H\) ne change pas et la vitesse du nœud sélectionné est multipliée par \(r_V<1\). Un saut ne peut donc pas augmenter \(Y\).
+
+Par conséquent, pour tout \(0\leq t\leq T\),
+
+\[
+Y(t)
+\leq
+\bigl(Y(0)+B\bigr)e^T-B
+=:R_T.
+\]
+
+Cette borne dépend de \(T\), mais pas du nombre de sauts déjà effectués.
+En particulier,
+
+\[
+\|H_i(t)\|\leq R_T,
+\qquad
+\|V_i(t)\|\leq R_T
+\]
+
+pour tout nœud \(i\) et tout \(t\leq T\).
+
+La pression vérifie alors
+
+\[
+\dot P_i
+=
+\kappa_1\|H_i\|
++
+\kappa_2\|V_i\|
+-
+\kappa_3P_i
+\leq
+(\kappa_1+\kappa_2)R_T.
+\]
+
+Posons
+
+\[
+K_T
+=
+(\kappa_1+\kappa_2)R_T.
+\]
+
+Si \(K_T=0\), aucune pression ne peut remonter après un saut.
+
+Supposons \(K_T>0\). 
+
+Après un saut du nœud \(i\),
+
+\[
+P_i^+=r_P\Theta.
+\]
+
+Pour atteindre à nouveau le seuil \(\Theta\), sa pression doit augmenter d'au moins
+
+\[
+(1-r_P)\Theta.
+\]
+
+Le temps continu séparant deux sauts successifs du même nœud est donc au moins
+
+\[
+\delta_T
+=
+\frac{(1-r_P)\Theta}{K_T}
+>0.
+\]
+
+Sur l'intervalle \([0,T]\), chaque nœud saute ainsi au plus
+
+\[
+1+\frac{T}{\delta_T}
+\]
+
+fois, en comptant un éventuel saut initial. Le nombre total de sauts est donc majoré par
+
+\[
+N
+\left(
+1+\frac{T}{\delta_T}
+\right),
+\]
+
+et reste fini.
+
+Comme \(T>0\) était arbitraire, aucune exécution ne peut contenir une infinité de sauts sur un intervalle de temps continu fini. Il n'y a donc pas de phénomène de Zénon \cite{goebel2012hybrid}.
+
+\begin{quote}
+\resultheading{Proposition}{prop:t1-absence-zenon}{ \texttt{{[}PROP{]}}}
+Sous les hypothèses du noyau, avec \(r_P<1\), toute exécution issue d'une condition initiale admissible comporte un nombre fini de sauts sur tout intervalle de temps continu fini.
+\end{quote}
+
+En combinant ce résultat avec l'existence et l'unicité du flot entre deux événements et avec les règles déterministes de saut, on obtient une exécution hybride unique pour tout temps continu positif.
+
+La démonstration détaillée, incluant la borne sur horizon fini et l'assemblage de l'exécution hybride, est donnée à l'Annexe~\ref{annexe-bornes-existence-unicite}.
+
+Ce résultat ne suppose pas que les trajectoires restent uniformément bornées lorsque \(t\to\infty\). Cette question, étudiée au chapitre précédent, est distincte de l'absence d'accumulation de sauts en temps fini.
+
+\chapter{Deux formes de dépendance à l'histoire}\label{t1-deux-formes-de-dependance-a-lhistoire}
+
+Le noyau contient deux mécanismes distincts de dépendance historique. Le premier passe par la trace. Le second passe par l'ordre des événements.
+
+\section{La trace modifie le futur}\label{t1-la-trace-modifie-le-futur}
+
+Considérons deux conditions initiales ayant les mêmes valeurs de \(H,\quad V,\quad P,\quad A,\) mais des traces différentes.
+
+Si \(\gamma_1>0\), les valeurs initiales de la friction
+
+\[
+\Gamma(\tau)
+=
+\gamma_0+\gamma_1\|\tau\|
+\]
+
+peuvent différer. Les accélérations \(\dot V(0)\) diffèrent alors immédiatement.
+
+Si \(\lambda>0\), les préconditionneurs \(M(\tau)\) peuvent différer. Pour un état \(H_i\) ayant une composante dans la direction de l'une des traces, les termes
+
+\[
+M(\tau_i)H_i
+\]
+
+ne sont pas les mêmes. Là encore, les accélérations initiales diffèrent.
+
+\begin{quote}
+\resultheading{Proposition}{prop:t1-trace-modifie-futur}{ \texttt{{[}PROP{]}}} Si \(\gamma_1>0\) ou \(\lambda>0\), il existe deux conditions initiales identiques en \((H,V,P,A)\), mais différentes en \(\tau\), dont les trajectoires en \((H,V)\) se séparent immédiatement.
+\end{quote}
+
+Ce résultat établit une dépendance qualitative du futur à la trace. Il ne mesure pas encore l'ampleur de cette dépendance sur des observables macroscopiques.
+
+\section{L'ordre des Kairos modifie le graphe}\label{t1-lordre-des-kairos-modifie-le-graphe}
+
+Les opérateurs nodaux \(\mathcal K_i\) ne commutent pas en général.
+Il existe des états pour lesquels
+
+\[
+\mathcal K_i\bigl(\mathcal K_j(x)\bigr)
+\neq
+\mathcal K_j\bigl(\mathcal K_i(x)\bigr).
+\]
+
+La raison est directe : le premier recâblage modifie le voisinage disponible pour le second. Appliquer les mêmes événements locaux dans un autre ordre peut donc produire un autre graphe final.
+
+Le noyau déterministe ne choisit pas librement entre ces ordres lorsqu'ils sont simultanés : il applique la règle d'indice croissant. En revanche, de petites différences de conditions initiales ou d'entrée peuvent déplacer les instants de franchissement des seuils et changer l'ordre effectivement réalisé.
+
+\begin{quote}
+\resultheading{Proposition}{prop:t1-historicite-structurelle}{ \texttt{{[}PROP{]}}} La famille des opérateurs nodaux de Kairos n'est pas commutative. La structure obtenue dépend de l'ordre des événements locaux.
+\end{quote}
+
+Cette propriété sera appelée \textbf{historicité structurelle}.
+
+Elle établit que l'ordre des transformations locales peut modifier la structure atteinte. Elle ne suffit cependant pas à démontrer que le système est non téléologique.
+
+Une dynamique d'optimisation peut elle aussi dépendre du chemin ou comporter des transformations non commutatives. La dépendance à l'histoire et l'absence d'objectif global sont donc deux propriétés distinctes.
+
+Le présent résultat établit la première. Il ne tranche pas la seconde.
+
+\chapter{Ce que ce noyau permet d'affirmer}\label{t1-ce-que-ce-noyau-permet-daffirmer}
+
+À ce stade, cinq points sont établis.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Le modèle hybride est défini sans ambiguïté à entrée donnée.
+\item
+  La dynamique continue possède une solution unique au sens de Carathéodory.
+\item
+  Le graphe reste simple et conserve son nombre d'arêtes.
+\item
+  La trace est bornée par construction.
+\item
+  Le fait que les trajectoires du système complet restent bornées est démontré sous des conditions suffisantes explicites. Pour la réduction bidimensionnelle de référence, ces conditions publiées ne sont pas satisfaites ; leur analyse montre toutefois qu'elles sont fortement conservatives. La bornitude globale du régime hybride correspondant reste à établir.
+\end{enumerate}
+
+Deux formes de dépendance à l'histoire sont également distinguées :
+
+\begin{itemize}
+\tightlist
+\item
+  la trace modifie la dynamique future, même lorsque l'état rapide
+  présent est identique ;
+\item
+  l'ordre des Kairos peut modifier la structure finale.
+\end{itemize}
+
+Ces résultats ne montrent pas encore :
+
+\begin{itemize}
+\tightlist
+\item
+  que le noyau produit une différenciation à partir d'une symétrie
+  exacte ;
+\item
+  qu'il est non téléologique au sens fort ;
+\item
+  qu'il apprend ;
+\item
+  qu'il possède une interface ;
+\item
+  qu'il s'individue.
+\end{itemize}
+
+Ces questions demandent d'autres réductions ou d'autres variables.
+
+\chapter{Réduction homogène utilisée dans le Tome II}\label{t1-reduction-homogene-tome-ii}
+
+Le Tome II utilise la variété homogène
+
+\[
+\Delta
+=
+\{
+H_i=h,\,
+V_i=v,\,
+\tau_i=\theta,\,
+P_i=p
+\text{ pour tout }i
+\}.
+\]
+
+Cette variété est invariante pendant le flot lorsque l'entrée est uniforme. Lors d'une cascade simultanée de Kairos, elle n'est pas nécessairement préservée après chaque saut élémentaire, mais elle est retrouvée à la fin de la cascade complète. Si cette cascade est regroupée en un saut composé, \(\Delta\) est invariante pour la dynamique hybride ainsi regroupée.
+
+Pour les paramètres étudiés, l'analyse des équilibres fait apparaître un repos stable, plusieurs états actifs stables et des équilibres instables intermédiaires. Les bassins des attracteurs stables contiennent des ouverts disjoints ; leur géométrie globale n'est pas déterminée ici.
+
+Ce paysage autonome fournit le cadre dans lequel le Tome II définira la résistance et l'appropriation. Les expériences principales du Tome II spécialisent ensuite cette réduction à \(d=2\). Cette spécialisation appartient au régime étudié numériquement et non à la définition générale du noyau, qui conserve \(d\geq1\).
+
+La réduction homogène, son comportement lors des cascades complètes et l'analyse du paysage autonome sont détaillés à l'Annexe~\ref{annexe-reduction-homogene-paysage}.

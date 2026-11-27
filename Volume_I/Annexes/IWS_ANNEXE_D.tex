@@ -1,0 +1,2092 @@
+\section{Objet de l'annexe}
+\label{annexe-resistance-objet}
+
+Cette annexe développe les calculs qui fondent la triade
+
+\[
+\text{inertie}
+\longrightarrow
+\text{résistance}
+\longrightarrow
+\text{appropriation}
+\]
+
+dans le modèle continu R0.
+
+Elle traite séparément :
+
+\begin{itemize}
+\item
+  la perte de stabilité du repos ;
+\item
+  la naissance et le développement de la branche résistante ;
+\item
+  la stabilité de cette branche ;
+\item
+  la rupture de stabilité de type Hopf ;
+\item
+  le caractère non structurel du seuil \(g_{\mathrm{ign}}\) ;
+\item
+  la définition de l'appropriation par les bassins ;
+\item
+  la construction du prédicteur de la durée minimale
+  \(T^\ast(g)\).
+\end{itemize}
+
+Les calculs analytiques seront distingués des résultats obtenus par
+continuation ou intégration numérique.
+
+\section{Système forcé réduit}
+\label{annexe-resistance-systeme}
+
+Le système source \(A\) est fixé sur son puit positif. Sa projection sur le système receveur \(B\) vaut
+
+\[
+w=\tanh(x_A)>0.
+\]
+
+Pour les paramètres de référence,
+
+\[
+w=0{,}98006.
+\]
+Cette valeur est la projection mesurée du puits positif du système
+source complet utilisé dans les expériences. Elle ne doit pas être
+recalculée à partir de la racine arrondie \(x\simeq2{,}30\) du système
+réduit autonome, même si les deux valeurs sont numériquement très
+proches.
+
+Sur la diagonale interne de \(B\),
+
+\[
+h_B=(x,x),
+\qquad
+v_B=(v,v),
+\qquad
+\tau_B=(\theta,\theta).
+\]
+
+La norme de la trace est
+
+\[
+r=\sqrt2\,|\theta|.
+\]
+
+La dynamique forcée est
+
+\[
+\dot x=v,
+\]
+
+\[
+\dot v
+=
+-\Gamma(r)v
+-
+m(r)x
++
+\zeta\tanh x,
+\]
+
+\[
+\dot\theta
+=
+\alpha\tanh x
++
+gw
+-
+\beta\theta,
+\]
+
+avec
+
+\[
+m(r)
+=
+\frac{1+r^2}
+{1+(1+\lambda)r^2}.
+\]
+
+Dans tout le voisinage de la branche étudiée,
+
+\[
+\theta>0,
+\]
+
+donc
+
+\[
+r=\sqrt2\,\theta.
+\]
+
+\section{Le repos exact reste invariant}
+\label{annexe-resistance-repos-invariant}
+
+Supposons
+
+\[
+x(0)=0,
+\qquad
+v(0)=0.
+\]
+
+Alors, quelle que soit la valeur de \(\theta(t)\),
+
+\[
+\dot x=0,
+\]
+
+et
+
+\[
+\dot v
+=
+-\Gamma(\sqrt2|\theta|)\,0
+-
+m(\sqrt2|\theta|)\,0
++
+\zeta\tanh0
+=
+0.
+\]
+
+Par unicité,
+
+\[
+x(t)=0,
+\qquad
+v(t)=0
+\]
+
+pour tout \(t\).
+
+La trace suit alors l'équation autonome
+
+\[
+\dot\theta
+=
+gw-\beta\theta.
+\]
+
+Sa solution est
+
+\[
+\theta(t)
+=
+e^{-\beta t}\theta(0)
++
+\frac{gw}{\beta}
+\left(
+1-e^{-\beta t}
+\right).
+\]
+
+Ainsi,
+
+\[
+\theta(t)
+\longrightarrow
+\theta_0(g)
+=
+\frac{gw}{\beta}.
+\]
+
+\begin{quote}
+\resultheading{Proposition}{prop:D-repos-invariant}{}
+L'ensemble
+\[
+\{x=0,\;v=0\}
+\]
+est invariant pour toute intensité \(g\). L'influence charge la trace,
+mais elle ne crée pas elle-même un déplacement.
+\end{quote}
+
+\section{Perte de stabilité du repos}
+\label{annexe-resistance-gc}
+
+Autour de
+
+\[
+x=0,
+\qquad
+v=0,
+\qquad
+\theta=\theta_0(g),
+\]
+
+la dynamique de \((x,v)\) est
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\begin{pmatrix}
+x\\ v
+\end{pmatrix}
+=
+\begin{pmatrix}
+0&1\\
+\zeta-m(r_0(g))&-\Gamma(r_0(g))
+\end{pmatrix}
+\begin{pmatrix}
+x\\ v
+\end{pmatrix},
+\]
+
+avec
+
+\[
+r_0(g)
+=
+\sqrt2\,\theta_0(g)
+=
+\frac{\sqrt2\,gw}{\beta}.
+\]
+
+Le polynôme caractéristique est
+
+\[
+s^2
++
+\Gamma(r_0(g))s
++
+m(r_0(g))-\zeta.
+\]
+
+La friction est positive. Le repos est donc localement stable si
+
+\[
+m(r_0(g))>\zeta,
+\]
+
+et instable si
+
+\[
+m(r_0(g))<\zeta.
+\]
+
+Le seuil de trace défini dans l'annexe précédente vérifie
+
+\[
+m(\tau_{\mathrm{ign}})=\zeta.
+\]
+
+Ainsi,
+
+\[
+r_0(g_c)=\tau_{\mathrm{ign}},
+\]
+
+d'où
+
+\[
+\boxed{
+g_c
+=
+\frac{\beta\tau_{\mathrm{ign}}}
+{\sqrt2\,w}.
+}
+\]
+
+Avec
+
+\[
+\tau_{\mathrm{ign}}
+=
+0{,}377964\ldots,
+\]
+
+on obtient
+
+\[
+\boxed{
+g_c
+=
+0{,}03273\ldots
+}
+\]
+
+pour les paramètres de référence.
+
+Le troisième mode, porté par la trace, possède toujours la valeur
+propre \(-\beta\). Le changement de stabilité du repos vient donc bien
+du bloc \((x,v)\).
+
+\section{Équation de la branche d'équilibres}
+\label{annexe-resistance-residu}
+
+À l'équilibre,
+
+\[
+v^\ast=0,
+\]
+
+et
+
+\[
+\theta^\ast(x,g)
+=
+\frac{\alpha\tanh x+gw}{\beta}.
+\]
+
+Posons
+
+\[
+r(x,g)
+=
+\sqrt2\,\theta^\ast(x,g)
+=
+\frac{\sqrt2}{\beta}
+\left(
+\alpha\tanh x+gw
+\right).
+\]
+
+L'équation restante est
+
+\[
+m(r(x,g))x
+-
+\zeta\tanh x
+=
+0.
+\]
+
+On définit le résidu
+
+\[
+\boxed{
+F(x,g)
+=
+m(r(x,g))x
+-
+\zeta\tanh x.
+}
+\]
+
+Comme
+
+\[
+F(0,g)=0
+\]
+
+pour tout \(g\), l'origine forme une branche d'équilibres.
+
+Pour \(x\neq0\), on peut diviser par \(x\) et définir
+
+\[
+G(x,g)
+=
+m(r(x,g))
+-
+\zeta\frac{\tanh x}{x}.
+\]
+
+La fonction \(\tanh x/x\) est prolongée continûment en \(x=0\) par la
+valeur \(1\). On obtient ainsi une fonction lisse au voisinage de
+\((0,g_c)\).
+
+Les équilibres non nuls sont les solutions de
+
+\[
+G(x,g)=0.
+\]
+
+\section{Dérivées utiles}
+\label{annexe-resistance-derivees-m}
+
+La fonction
+
+\[
+m(r)
+=
+\frac{1+r^2}
+{1+(1+\lambda)r^2}
+\]
+
+vérifie
+
+\[
+\boxed{
+m'(r)
+=
+-\frac{2\lambda r}
+{\left[
+1+(1+\lambda)r^2
+\right]^2}.
+}
+\]
+
+Pour \(r>0\),
+
+\[
+m'(r)<0.
+\]
+
+Sa dérivée seconde est
+
+\[
+\boxed{
+m''(r)
+=
+-\frac{
+2\lambda
+\left[
+1-3(1+\lambda)r^2
+\right]
+}{
+\left[
+1+(1+\lambda)r^2
+\right]^3
+}.
+}
+\]
+
+Nous utiliserons les notations
+
+\[
+r_c=\tau_{\mathrm{ign}},
+\]
+
+\[
+m_1=m'(r_c),
+\qquad
+m_2=m''(r_c),
+\]
+
+\[
+A=\frac{\sqrt2\,\alpha}{\beta},
+\qquad
+B=\frac{\sqrt2\,w}{\beta},
+\]
+
+et
+
+\[
+\delta=g-g_c.
+\]
+
+\section{Naissance transcritique de la résistance}
+\label{annexe-resistance-transcritique}
+
+Au voisinage de \((x,\delta)=(0,0)\),
+
+\[
+\tanh x
+=
+x-\frac{x^3}{3}+O(x^5),
+\]
+
+donc
+
+\[
+\frac{\tanh x}{x}
+=
+1-\frac{x^2}{3}+O(x^4).
+\]
+
+Par ailleurs,
+
+\[
+r(x,g)
+=
+r_c
++
+Ax
++
+B\delta
++
+O(x^3).
+\]
+
+Au premier ordre,
+
+\[
+\begin{aligned}
+G(x,g)
+&=
+m_1(Ax+B\delta)
++
+O\left(
+x^2+|x\delta|+\delta^2
+\right).
+\end{aligned}
+\]
+
+Ainsi,
+
+\[
+\frac{\partial G}{\partial x}(0,g_c)
+=
+m_1A
+\neq0.
+\]
+
+Le théorème des fonctions implicites donne une branche unique
+
+\[
+x=x_{\mathrm{res}}(g)
+\]
+
+de solutions non nulles de \(G(x,g)=0\) passant par
+
+\[
+x_{\mathrm{res}}(g_c)=0.
+\]
+
+Sa pente est
+
+\[
+x_{\mathrm{res}}'(g_c)
+=
+-
+\frac{G_g(0,g_c)}
+{G_x(0,g_c)}
+=
+-
+\frac{m_1B}{m_1A}.
+\]
+
+Donc
+
+\[
+\boxed{
+x_{\mathrm{res}}'(g_c)
+=
+-\frac{w}{\alpha}.
+}
+\]
+
+Comme \(w>0\) et \(\alpha>0\),
+
+\[
+x_{\mathrm{res}}(g)<0
+\]
+
+pour \(g>g_c\) suffisamment proche de \(g_c\).
+
+Le résidu complet s'écrit alors
+
+\[
+F(x,g)
+=
+x\,G(x,g).
+\]
+
+La branche \(x=0\) et la branche
+\(x=x_{\mathrm{res}}(g)\) se croisent en \(g=g_c\), avec échange de
+stabilité. Il s'agit de la forme locale d'une bifurcation
+transcritique \cite{kuznetsov2004elements}.
+
+\begin{quote}
+\resultheading{Proposition}{prop:D-bifurcation-transcritique}{}
+La branche résistante naît en \(g=g_c\) par une bifurcation
+transcritique. Pour \(g>g_c\) proche du seuil, elle est
+antiparallèle à l'influence :
+\[
+x_{\mathrm{res}}(g)<0.
+\]
+\end{quote}
+
+\section{Développement au premier ordre}
+\label{annexe-resistance-premier-ordre}
+
+Le calcul précédent donne immédiatement
+
+\[
+\boxed{
+x_{\mathrm{res}}(g)
+=
+-\frac{w}{\alpha}
+(g-g_c)
++
+O\left(
+(g-g_c)^2
+\right).
+}
+\]
+
+Pour les paramètres de référence,
+
+\[
+-\frac{w}{\alpha}
+=
+-2{,}17791\ldots
+\]
+
+La pente vient d'une compensation simple. Près de \(g_c\),
+
+\[
+\theta^\ast
+=
+\frac{
+\alpha x_{\mathrm{res}}
++
+gw
+}{\beta}
++
+O(x_{\mathrm{res}}^3).
+\]
+
+En remplaçant
+
+\[
+x_{\mathrm{res}}
+\approx
+-\frac{w}{\alpha}(g-g_c),
+\]
+
+on obtient
+
+\[
+\alpha x_{\mathrm{res}}+gw
+\approx
+-w(g-g_c)+gw
+=
+g_cw.
+\]
+
+La contre-écriture interne neutralise donc, au premier ordre, l'excès
+de charge externe au-dessus du seuil critique.
+
+\section{Développement au second ordre}
+\label{annexe-resistance-second-ordre}
+
+Pour obtenir le terme quadratique, il faut conserver tous les termes
+de degré total deux dans \(G\).
+
+On a
+
+\[
+G(x,g)
+=
+a_1\delta
++
+a_2x
++
+a_{xx}x^2
++
+a_{xg}x\delta
++
+a_{gg}\delta^2
++
+O\left(
+(|x|+|\delta|)^3
+\right),
+\]
+
+avec
+
+\[
+a_1=m_1B,
+\]
+
+\[
+a_2=m_1A,
+\]
+
+\[
+a_{xx}
+=
+\frac12m_2A^2
++
+\frac{\zeta}{3},
+\]
+
+\[
+a_{xg}
+=
+m_2AB,
+\]
+
+\[
+a_{gg}
+=
+\frac12m_2B^2.
+\]
+
+Cherchons
+
+\[
+x_{\mathrm{res}}(g)
+=
+c_1\delta
++
+c_2\delta^2
++
+O(\delta^3).
+\]
+
+À l'ordre un,
+
+\[
+a_1+a_2c_1=0,
+\]
+
+d'où
+
+\[
+c_1=-\frac{B}{A}=-\frac{w}{\alpha}.
+\]
+
+À l'ordre deux,
+
+\[
+a_2c_2
++
+a_{xx}c_1^2
++
+a_{xg}c_1
++
+a_{gg}
+=
+0.
+\]
+
+Ainsi,
+
+\[
+\boxed{
+c_2
+=
+-
+\frac{
+a_{xx}c_1^2
++
+a_{xg}c_1
++
+a_{gg}
+}{
+a_2
+}.
+}
+\]
+
+Pour les paramètres de référence,
+
+\[
+a_{xx}
+=
+5{,}77917\ldots,
+\]
+
+\[
+a_{xg}
+=
+24{,}01147\ldots,
+\]
+
+\[
+a_{gg}
+=
+26{,}14742\ldots
+\]
+
+Les trois contributions au numérateur valent approximativement
+
+\[
+27{,}40,
+\qquad
+-52{,}31,
+\qquad
+26{,}15.
+\]
+
+Elles s'annulent presque. On obtient
+
+\[
+c_2
+\simeq
+0{,}3220
+\]
+
+à la précision retenue dans les calculs numériques.
+
+Finalement,
+
+\[
+\boxed{
+x_{\mathrm{res}}(g)
+=
+-2{,}1774(g-g_c)
++
+0{,}3220(g-g_c)^2
++
+O\left(
+(g-g_c)^3
+\right).
+}
+\]
+
+La quasi-linéarité de la branche ne vient donc pas d'un oubli du terme
+quadratique. Elle vient d'une compensation entre trois contributions
+distinctes.
+
+\section{La trace n'est pas exactement épinglée au seuil}
+\label{annexe-resistance-marginalite}
+
+À un équilibre non nul,
+
+\[
+m(r^\ast)x^\ast
+=
+\zeta\tanh x^\ast.
+\]
+
+En divisant par \(x^\ast\),
+
+\[
+\boxed{
+m(r^\ast)
+=
+\zeta\frac{\tanh x^\ast}{x^\ast}.
+}
+\]
+
+Pour \(x^\ast\neq0\),
+
+\[
+\left|
+\frac{\tanh x^\ast}{x^\ast}
+\right|
+<1.
+\]
+
+Ainsi,
+
+\[
+m(r^\ast)<\zeta.
+\]
+
+Près de l'origine,
+
+\[
+\frac{\tanh x}{x}
+=
+1-\frac{x^2}{3}+O(x^4),
+\]
+
+donc
+
+\[
+\boxed{
+m(r^\ast)
+=
+\zeta
+-
+\frac{\zeta}{3}(x^\ast)^2
++
+O\left(
+(x^\ast)^4
+\right).
+}
+\]
+
+La résistance ne maintient pas exactement le système sur la marge
+\(m=\zeta\). Elle s'en écarte d'un terme quadratique.
+
+\section{Jacobien sur une branche forcée}
+\label{annexe-resistance-jacobien}
+
+Soit un équilibre
+
+\[
+(x^\ast,0,\theta^\ast),
+\qquad
+\theta^\ast>0.
+\]
+
+Posons
+
+\[
+r^\ast=\sqrt2\,\theta^\ast,
+\]
+
+\[
+\Gamma_\ast=\Gamma(r^\ast),
+\]
+
+\[
+s_\ast=\operatorname{sech}^2x^\ast,
+\]
+
+\[
+c_\ast=\zeta s_\ast,
+\]
+
+\[
+\kappa_\ast
+=
+m(r^\ast)-c_\ast,
+\]
+
+et
+
+\[
+b_\ast
+=
+-\sqrt2\,m'(r^\ast)x^\ast.
+\]
+
+Le Jacobien est
+
+\[
+\boxed{
+J_\ast
+=
+\begin{pmatrix}
+0&1&0\\
+-\kappa_\ast&-\Gamma_\ast&b_\ast\\
+\alpha s_\ast&0&-\beta
+\end{pmatrix}.
+}
+\]
+
+Son polynôme caractéristique est
+
+\[
+p(s)
+=
+s^3+a_2s^2+a_1s+a_0,
+\]
+
+avec
+
+\[
+\boxed{
+a_2
+=
+\Gamma_\ast+\beta,
+}
+\]
+
+\[
+\boxed{
+a_1
+=
+\Gamma_\ast\beta+\kappa_\ast,
+}
+\]
+
+\[
+\boxed{
+a_0
+=
+\beta\kappa_\ast
+-
+\alpha b_\ast s_\ast.
+}
+\]
+
+Les conditions de Routh--Hurwitz pour un polynôme cubique sont
+
+\[
+a_2>0,
+\qquad
+a_1>0,
+\qquad
+a_0>0,
+\qquad
+a_2a_1>a_0.
+\]
+
+\section{Signe des coefficients sur la branche résistante}
+\label{annexe-resistance-signe-coefficients}
+
+Sur la branche résistante,
+
+\[
+x^\ast<0,
+\]
+
+et
+
+\[
+m'(r^\ast)<0.
+\]
+
+Ainsi,
+
+\[
+b_\ast
+=
+-\sqrt2\,m'(r^\ast)x^\ast
+<0.
+\]
+
+Par ailleurs, l'équation d'équilibre donne
+
+\[
+m(r^\ast)
+=
+\zeta\frac{\tanh x^\ast}{x^\ast}.
+\]
+
+Donc
+
+\[
+\kappa_\ast
+=
+\zeta
+\left(
+\frac{\tanh x^\ast}{x^\ast}
+-
+\operatorname{sech}^2x^\ast
+\right).
+\]
+
+Pour \(x\neq0\),
+
+\[
+\frac{\tanh x}{x}
+>
+\operatorname{sech}^2x.
+\]
+
+En effet, pour \(x>0\), cette inégalité équivaut à
+
+\[
+\tanh x
+>
+x\,\operatorname{sech}^2x,
+\]
+
+déjà démontrée lors de l'étude de la fonction
+\(x/\tanh x\). Les deux membres sont pairs après division par \(x\),
+donc le résultat vaut aussi pour \(x<0\).
+
+Ainsi,
+
+\[
+\kappa_\ast>0.
+\]
+
+On obtient alors
+
+\[
+a_2>0,
+\qquad
+a_1>0,
+\]
+
+et
+
+\[
+a_0
+=
+\beta\kappa_\ast
++
+\alpha|b_\ast|s_\ast
+>0.
+\]
+
+La seule condition susceptible de changer de signe est donc
+
+\[
+a_2a_1-a_0.
+\]
+
+Un calcul direct donne
+
+\[
+\boxed{
+a_2a_1-a_0
+=
+\Gamma_\ast^2\beta
++
+\Gamma_\ast\beta^2
++
+\Gamma_\ast\kappa_\ast
++
+\alpha b_\ast s_\ast.
+}
+\]
+
+Comme \(b_\ast<0\), le dernier terme est négatif. Il traduit le fait
+que, sur une branche antiparallèle, la boucle
+trace--état peut déstabiliser l'équilibre par oscillation.
+
+Près de \(g_c\), le terme négatif est d'ordre \(|x^\ast|\), tandis que
+\(\kappa_\ast\) est d'ordre \((x^\ast)^2\). Les termes positifs
+\(\Gamma_\ast^2\beta+\Gamma_\ast\beta^2\) restent non nuls. La branche
+est donc stable immédiatement après sa naissance.
+
+\section{Condition de Hopf}
+\label{annexe-resistance-hopf-condition}
+
+Supposons
+
+\[
+a_2>0,
+\qquad
+a_1>0,
+\qquad
+a_0>0.
+\]
+
+Lorsque
+
+\[
+a_2a_1=a_0,
+\]
+
+le polynôme se factorise :
+
+\[
+p(s)
+=
+(s+a_2)(s^2+a_1).
+\]
+
+Les valeurs propres sont alors
+
+\[
+-a_2,
+\qquad
+\pm i\sqrt{a_1}.
+\]
+
+La pulsation de Hopf est donc
+
+\[
+\boxed{
+\omega_H=\sqrt{a_1}.
+}
+\]
+
+Pour conclure à une bifurcation de Hopf, il faut encore vérifier que la
+paire complexe traverse l'axe imaginaire avec une vitesse non nulle.
+Cette condition de transversalité est évaluée numériquement le long de
+la branche \cite{kuznetsov2004elements}.
+
+\section{Localisation numérique de la rupture}
+\label{annexe-resistance-hopf-numerique}
+
+La branche d'équilibres est poursuivie numériquement en \(g\). Pour
+chaque point, on calcule les trois valeurs propres du Jacobien.
+
+Le changement de signe est observé entre
+
+\[
+g=0{,}120
+\]
+
+et
+
+\[
+g=0{,}132.
+\]
+
+La localisation affinée donne
+
+\[
+\boxed{
+g_H
+=
+0{,}1285.
+}
+\]
+
+À ce point,
+
+\[
+|x_{\mathrm{res}}(g_H)|
+\simeq
+0{,}209,
+\]
+
+et
+
+\[
+\boxed{
+\omega_H
+\simeq
+0{,}334,
+\qquad
+\frac{2\pi}{\omega_H}
+\simeq
+18{,}8.
+}
+\]
+
+La partie réelle dominante vaut approximativement
+
+\[
+-0{,}0025
+\]
+
+à \(g=0{,}120\),
+
+\[
+0
+\]
+
+à \(g=0{,}1285\), et
+
+\[
++0{,}0009
+\]
+
+à \(g=0{,}132\).
+
+Le statut de ces valeurs est \texttt{[PROP-NUM]} :
+
+\begin{itemize}
+\item
+  la condition de Hopf est analytique ;
+\item
+  la valeur \(g_H\) est obtenue par continuation numérique ;
+\item
+  la transversalité est vérifiée numériquement ;
+\item
+  le premier coefficient de Lyapunov n'est pas encore calculé.
+\end{itemize}
+
+La branche ne disparaît pas en \(g_H\). Par exemple, à
+
+\[
+g=0{,}145,
+\]
+
+elle possède encore une racine
+
+\[
+x_{\mathrm{res}}
+=
+-0{,}2453,
+\]
+
+mais sa valeur propre dominante a une partie réelle positive.
+
+Il est donc préférable de parler de \emph{rupture de stabilité} plutôt
+que de disparition de la résistance.
+
+\section{Trois seuils de nature différente}
+\label{annexe-resistance-trois-seuils}
+
+Les valeurs
+
+\[
+g_c,
+\qquad
+g_{\mathrm{ign}},
+\qquad
+g_H
+\]
+
+ne décrivent pas le même phénomène.
+
+\subsection{\texorpdfstring{$g_c$}{gc} : bifurcation locale}
+
+Le seuil
+
+\[
+g_c
+=
+0{,}0327
+\]
+
+est défini par une égalité spectrale :
+
+\[
+m(r_0(g_c))=\zeta.
+\]
+
+Il marque l'échange de stabilité entre le repos et la branche
+résistante.
+
+\subsection{\texorpdfstring{$g_H$}{gH} : rupture de stabilité de la branche}
+
+Le seuil
+
+\[
+g_H
+=
+0{,}1285
+\]
+
+est défini par la condition
+
+\[
+a_2a_1=a_0.
+\]
+
+Il marque la rupture locale de stabilité de la branche résistante par franchissement d'une paire complexe.
+
+\subsection{\texorpdfstring{$g_{\mathrm{ign}}$}{gign} : frontière de bassin}
+
+Fixons une condition initiale et un protocole. Pour la condition
+standard,
+
+\[
+x_0=10^{-3},
+\qquad
+v_0=0,
+\qquad
+\theta_0=0,
+\]
+
+et une mise sous contact brutale, on observe
+
+\[
+\boxed{
+g_{\mathrm{ign}}
+\simeq
+0{,}0556.
+}
+\]
+
+Cette valeur ne correspond à aucune perte d'existence ou de stabilité
+de la branche résistante.
+
+À
+
+\[
+g=g_{\mathrm{ign}}+\varepsilon,
+\]
+
+une condition initiale placée exactement sur la branche résistante y
+reste, tandis que la condition initiale standard s'en échappe.
+
+Le seuil doit donc être écrit
+
+\[
+\boxed{
+g_{\mathrm{ign}}
+=
+g_{\mathrm{ign}}
+(x_0,v_0,\theta_0;\mathcal P),
+}
+\]
+
+où \(\mathcal P\) désigne le protocole de mise sous contact.
+
+La hiérarchie observée est
+
+\[
+\boxed{
+g_c
+<
+g_{\mathrm{ign}}
+(x_0,v_0,\theta_0;\mathcal P)
+<
+g_H.
+}
+\]
+
+\section{Influence du protocole}
+\label{annexe-resistance-protocole}
+
+La dépendance à \(\mathcal P\) peut être montrée sans changer la cible
+finale \(g\).
+
+À
+
+\[
+g=0{,}10,
+\]
+
+trois protocoles ont été comparés :
+
+\begin{itemize}
+\item
+  mise sous contact brutale ;
+\item
+  rampe courte de durée \(20\) ;
+\item
+  rampe lente de durée \(400\).
+\end{itemize}
+
+Les deux premiers conduisent à l'appropriation. La rampe lente permet
+à la trajectoire de suivre la branche résistante stable et conduit à
+la résistance.
+
+Ce résultat ne constitue pas un théorème adiabatique. Il montre
+numériquement que \(g_{\mathrm{ign}}\) est une frontière de capture,
+sensible à l'histoire du chargement.
+
+\section{Définition de l'appropriation par les bassins}
+\label{annexe-resistance-definition-appropriation}
+
+Soit
+
+\[
+\Phi_{g,\mathcal P}^T
+\]
+
+l'application qui associe à l'état initial \(z_0\) l'état obtenu après
+une interaction d'intensité \(g\), de durée \(T\), selon le protocole
+\(\mathcal P\).
+
+Après la fin de l'interaction, on revient à la dynamique autonome. Pour
+un état \(z\), notons
+
+\[
+\omega_0(z)
+\]
+
+son ensemble limite sous cette dynamique.
+
+\begin{quote}
+\resultheading{Définition}{def:D-appropriation}{}
+L'interaction
+\[
+(g,T,\mathcal P)
+\]
+est appropriée depuis \(z_0\) si
+\[
+\omega_0
+\left(
+\Phi_{g,\mathcal P}^T(z_0)
+\right)
+=
+\mathcal A_1,
+\]
+\[
+\omega_0(z_0)
+=
+\mathcal A_0,
+\]
+avec
+\[
+\mathcal A_1\neq\mathcal A_0,
+\]
+où \(\mathcal A_0\) et \(\mathcal A_1\) sont des attracteurs autonomes
+du système receveur.
+\end{quote}
+
+Cette définition ne demande pas que les attracteurs soient des points
+fixes. Elle s'applique aussi aux régimes hybrides invariants décrits
+dans l'annexe précédente.
+
+Elle exclut :
+
+\begin{itemize}
+\item
+  une réponse transitoire qui disparaît après découplage ;
+\item
+  une copie maintenue uniquement par la présence du système source ;
+\item
+  une transmission directe du support de mémoire du système source.
+\end{itemize}
+
+\section{Durée minimale d'exposition}
+\label{annexe-resistance-duree-minimale}
+
+Pour une intensité \(g\), une condition initiale \(z_0\) et un
+protocole \(\mathcal P\), on définit
+
+\[
+\boxed{
+T^\ast
+(g;z_0,\mathcal P)
+=
+\inf
+\left\{
+T>0:
+(g,T,\mathcal P)
+\text{ est appropriée depuis }z_0
+\right\}.
+}
+\]
+
+Lorsque l'ensemble est vide,
+
+\[
+T^\ast=+\infty.
+\]
+
+La notation abrégée
+
+\[
+T^\ast(g)
+\]
+
+suppose donc que la condition initiale et le protocole sont fixés.
+
+\section{Trajectoire de charge utilisée dans le prédicteur}
+\label{annexe-resistance-charge-lineaire}
+
+Le prédicteur est construit près du repos. Dans l'équation de la
+trace, on néglige d'abord la contribution interne
+
+\[
+\alpha\tanh x.
+\]
+
+Pour une exposition rectangulaire de durée \(T\), avec
+
+\[
+\theta(0)=0,
+\]
+
+la charge approchée est
+
+\[
+\theta_{g,T}^{(0)}(t)
+=
+\frac{gw}{\beta}
+\left(
+1-e^{-\beta t}
+\right)
+\]
+
+pour
+
+\[
+0\leq t\leq T.
+\]
+
+Après découplage,
+
+\[
+\theta_{g,T}^{(0)}(t)
+=
+\frac{gw}{\beta}
+\left(
+1-e^{-\beta T}
+\right)
+e^{-\beta(t-T)}
+\]
+
+pour
+
+\[
+t\geq T.
+\]
+
+La norme correspondante est
+
+\[
+r_{g,T}^{(0)}(t)
+=
+\sqrt2
+\left|
+\theta_{g,T}^{(0)}(t)
+\right|.
+\]
+
+\section{Système linéaire non autonome}
+\label{annexe-resistance-systeme-lineaire}
+
+On linéarise la dynamique de \((x,v)\) le long de cette charge :
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\begin{pmatrix}
+x_{\mathrm{lin}}\\
+v_{\mathrm{lin}}
+\end{pmatrix}
+=
+A_{g,T}(t)
+\begin{pmatrix}
+x_{\mathrm{lin}}\\
+v_{\mathrm{lin}}
+\end{pmatrix},
+\]
+
+avec
+
+\[
+\boxed{
+A_{g,T}(t)
+=
+\begin{pmatrix}
+0&1\\
+\zeta-m(r_{g,T}^{(0)}(t))
+&
+-\Gamma(r_{g,T}^{(0)}(t))
+\end{pmatrix}.
+}
+\]
+
+La condition initiale est
+
+\[
+x_{\mathrm{lin}}(0)=x_0,
+\qquad
+v_{\mathrm{lin}}(0)=v_0.
+\]
+
+Notons
+
+\[
+x_u>0
+\]
+
+la position de l'équilibre-selle autonome positif sur la diagonale.
+Pour les paramètres de référence,
+
+\[
+x_u=0{,}0717.
+\]
+
+Le prédicteur considère que l'appropriation devient possible lorsque
+la trajectoire linéarisée atteint ce seuil avant que la charge ne soit
+oubliée.
+
+Une définition opérationnelle sans temps de coupure arbitraire est
+
+\[
+\boxed{
+T_{\mathrm{lin}}^\ast(g)
+=
+\inf
+\left\{
+T>0:
+\sup_{t\geq0}
+x_{\mathrm{lin}}(t;g,T)
+\geq
+x_u
+\right\}.
+}
+\]
+
+Le supremum est fini dans les cas étudiés, car la charge finit par
+décroître et le repos autonome redevient stable.
+
+\section{Statut du prédicteur}
+\label{annexe-resistance-statut-predicteur}
+
+La construction précédente n'est pas une preuve d'équivalence entre le
+système linéaire et la dynamique non linéaire complète.
+
+Elle repose sur trois approximations :
+
+\begin{enumerate}
+\item
+  la contribution interne \(\alpha\tanh x\) est négligée dans la
+  charge de référence ;
+\item
+  la dynamique de \((x,v)\) est linéarisée autour du repos ;
+\item
+  le franchissement de \(x_u\) est utilisé comme approximation du
+  franchissement de la séparatrice complète.
+\end{enumerate}
+
+Le résultat a donc le statut \texttt{[PROP-NUM]}.
+
+Il possède néanmoins deux propriétés importantes :
+
+\begin{itemize}
+\item
+  aucun paramètre n'est ajusté sur les valeurs de \(T^\ast\) ;
+\item
+  le seuil \(x_u\) vient du paysage autonome, calculé indépendamment.
+\end{itemize}
+
+\section{Comparaison avec la dynamique complète}
+\label{annexe-resistance-comparaison-Tstar}
+
+Dans la suite, le protocole de référence est l'exposition rectangulaire à
+mise sous contact brutale.
+
+Pour la condition initiale standard et le protocole rectangulaire, on
+obtient :
+
+\[
+\begin{array}{c|cc}
+g
+&
+T_{\mathrm{lin}}^\ast(g)
+&
+T^\ast(g)\text{ mesuré}
+\\
+\hline
+0{,}05
+&
++\infty
+&
++\infty
+\\
+0{,}08
+&
+31{,}6
+&
+31{,}7
+\\
+0{,}10
+&
+24{,}8
+&
+24{,}8
+\\
+0{,}15
+&
+17{,}8
+&
+17{,}9
+\\
+0{,}20
+&
+14{,}9
+&
+15{,}0
+\\
+0{,}30
+&
+12{,}2
+&
+12{,}3
+\end{array}
+\]
+
+L'écart relatif reste inférieur à \(0{,}5\,\%\) pour les valeurs
+finies testées.
+
+Dans la zone où la trajectoire est capturée par la branche résistante,
+le prédicteur classe correctement
+
+\[
+T^\ast=+\infty.
+\]
+
+Cette concordance montre que la frontière d'appropriation est
+principalement gouvernée par trois ingrédients :
+
+\[
+\boxed{
+\text{charge de la trace}
++
+\text{instabilité temporaire du repos}
++
+\text{franchissement de la selle autonome}.
+}
+\]
+
+\section{Pourquoi prolonger l'exposition ne suffit pas toujours}
+\label{annexe-resistance-prolonger-exposition}
+
+Pour
+
+\[
+g_c<g<g_{\mathrm{ign}}
+\]
+
+selon le protocole de référence, la branche résistante est stable.
+
+Une exposition plus longue ne rapproche donc pas nécessairement la
+trajectoire du bassin du puits positif. Elle laisse au contraire davantage de
+temps au transitoire pour être capturé par l'équilibre résistant.
+
+Après découplage, la charge externe disparaît. La branche résistante
+forcée se déplace puis cesse d'exister comme équilibre du système
+autonome. La trajectoire retourne alors vers le repos.
+
+On obtient ainsi une situation où
+
+\[
+\text{durée de contact}\to\infty
+\]
+
+n'implique pas
+
+\[
+\text{appropriation}.
+\]
+
+Cette propriété distingue la résistance d'un simple retard
+d'allumage.
+
+\section{Réductions exactes sous couplage mutuel}
+\label{annexe-resistance-couplage-mutuel}
+
+Considérons deux systèmes identiques, couplés symétriquement.
+
+\subsection{Sous-espace aligné}
+
+Si
+
+\[
+h_B=h_A=h,
+\]
+
+alors
+
+\[
+\tanh(h_B)=\tanh(h_A).
+\]
+
+L'équation de trace devient
+
+\[
+\dot\tau
+=
+(\alpha+g)\tanh h
+-
+\beta\tau.
+\]
+
+Le couplage est donc exactement équivalent au remplacement
+
+\[
+\boxed{
+\alpha_{\mathrm{eff}}
+=
+\alpha+g.
+}
+\]
+
+Cette réduction est valable seulement dans le sous-espace aligné
+invariant et pour des systèmes identiques avec couplage symétrique.
+
+\subsection{Sous-espace antipodal}
+
+Si
+
+\[
+h_B=-h_A=h,
+\]
+
+alors
+
+\[
+\tanh(h_B)=-\tanh(h_A).
+\]
+
+L'équation de trace devient
+
+\[
+\dot\tau
+=
+(\alpha-g)\tanh h
+-
+\beta\tau.
+\]
+
+On obtient
+
+\[
+\boxed{
+\alpha_{\mathrm{eff}}
+=
+\alpha-g.
+}
+\]
+
+Lorsque \(g>\alpha\), le coefficient effectif devient négatif. Le
+sous-espace reste formellement invariant, mais l'interprétation comme
+écriture interne renforcée n'est plus applicable de la même manière.
+
+\section{Seuil de compétition}
+\label{annexe-resistance-seuil-competition}
+
+Pour une valeur
+
+\[
+k_{\mathrm{eff}}
+=
+\frac{\alpha_{\mathrm{eff}}}{\beta},
+\]
+
+l'équation d'un équilibre actif à \(q\) composantes non nulles est
+
+\[
+x
+=
+\zeta
+\Lambda_q(x;k_{\mathrm{eff}})
+\tanh x,
+\]
+
+avec
+
+\[
+\Lambda_q(x;k)
+=
+1+
+\frac{
+\lambda qk^2\tanh^2x
+}{
+1+qk^2\tanh^2x
+}.
+\]
+
+Pour \(x>0\), cette équation équivaut à
+
+\[
+\zeta
+=
+\frac{x}
+{
+\Lambda_q(x;k_{\mathrm{eff}})
+\tanh x
+}.
+\]
+
+Définissons
+
+\[
+\boxed{
+\zeta_{\min}(k)
+=
+\min_{x>0}
+\frac{x}
+{
+\Lambda_q(x;k)\tanh x
+}.
+}
+\]
+
+Un état actif existe si
+
+\[
+\zeta\geq\zeta_{\min}(k).
+\]
+
+Dans le sous-espace antipodal,
+
+\[
+k
+=
+\frac{\alpha-g}{\beta}.
+\]
+
+Le seuil de compétition vérifie donc
+
+\[
+\boxed{
+\zeta_{\min}
+\left(
+\frac{\alpha-g_{\mathrm{comp}}}{\beta}
+\right)
+=
+\zeta.
+}
+\]
+
+Pour les paramètres de référence et la branche à deux composantes
+actives, la résolution numérique donne
+
+\[
+\boxed{
+g_{\mathrm{comp}}
+=
+0{,}3757.
+}
+\]
+
+Sous ce seuil, les états antipodaux existent encore. Au-dessus, ils ne
+sont plus disponibles.
+
+La formule est analytique ; la valeur numérique vient de la
+minimisation et de la résolution d'une équation scalaire.
+
+\section{Résumé des statuts}
+\label{annexe-resistance-resume-statuts}
+
+Les résultats se répartissent ainsi.
+
+\subsection{Résultats analytiques}
+
+\begin{itemize}
+\item
+  invariance du repos exact ;
+\item
+  formule de \(g_c\) ;
+\item
+  existence locale de la branche résistante ;
+\item
+  caractère transcritique de sa naissance ;
+\item
+  pente
+  \[
+  -w/\alpha;
+  \]
+\item
+  formule du terme quadratique ;
+\item
+  correction de la marginalité exacte ;
+\item
+  Jacobien et conditions de Routh--Hurwitz ;
+\item
+  condition algébrique de Hopf ;
+\item
+  définition de l'appropriation par les bassins ;
+\item
+  réductions exactes
+  \[
+  \alpha_{\mathrm{eff}}=\alpha\pm g.
+  \]
+\end{itemize}
+
+\subsection{Résultats analytiques complétés numériquement}
+
+\begin{itemize}
+\item
+  coefficient quadratique
+  \[
+  0{,}3220;
+  \]
+\item
+  localisation
+  \[
+  g_H=0{,}1285;
+  \]
+\item
+  pulsation
+  \[
+  \omega_H\simeq0{,}334;
+  \]
+\item
+  seuil
+  \[
+  g_{\mathrm{comp}}=0{,}3757;
+  \]
+\item
+  prédicteur de
+  \[
+  T^\ast(g).
+  \]
+\end{itemize}
+
+\subsection{Faits de bassin ou de protocole}
+
+\begin{itemize}
+\item
+  valeur
+  \[
+  g_{\mathrm{ign}}\simeq0{,}0556
+  \]
+  pour la condition initiale standard ;
+\item
+  protection par une rampe lente ;
+\item
+  éjection vers le puits positif après la rupture de stabilité.
+\end{itemize}
+
+\section{Limites}
+\label{annexe-resistance-limites}
+
+Cette annexe ne démontre pas :
+
+\begin{itemize}
+\item
+  la sous-criticité ou la sur-criticité de la bifurcation de Hopf ;
+\item
+  la géométrie globale de la séparatrice ;
+\item
+  une formule fermée pour
+  \(g_{\mathrm{ign}}\) ;
+\item
+  l'exactitude du prédicteur linéaire pour toutes les conditions
+  initiales ;
+\item
+  la persistance de la triade complète hors de la diagonale interne ;
+\item
+  la stabilité des branches sous couplage asymétrique.
+\end{itemize}
+
+Le résultat nécessaire à la suite est néanmoins établi :
+
+\[
+\boxed{
+\begin{minipage}{0.86\linewidth}
+L'influence continue ne crée pas directement un mouvement. Elle
+déplace la stabilité du repos. Au premier seuil, une branche
+antiparallèle stable apparaît et produit une résistance. Une condition
+initiale peut quitter son bassin avant la rupture structurelle de cette
+branche : c'est le seuil de capture \(g_{\mathrm{ign}}\). Lorsque la
+branche perd finalement sa stabilité par Hopf, elle persiste comme
+configuration mais ne peut plus retenir la trajectoire.
+\end{minipage}
+}
+\]

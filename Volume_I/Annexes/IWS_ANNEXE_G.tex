@@ -1,0 +1,962 @@
+\section{Objet et statut de l'annexe}
+\label{annexe-histoires-objet}
+
+Cette annexe fixe le cadre formel utilisé dans le Tome III pour parler
+sans ambiguïté des histoires, des observations et des classes de
+systèmes qu'elles permettent de distinguer. Elle rassemble les
+hypothèses communes aux résultats de séparation et établit les quatre
+propriétés auxquelles les chapitres renvoient ensuite :
+
+\begin{itemize}
+\item
+  le transport d'une équivalence par un préfixe, pour les lectures compatibles ;
+\item
+  la congruence comportementale obtenue lorsque toutes les
+  continuations admissibles sont disponibles ;
+\item
+  la monotonie conjointe par enrichissement du budget d'histoires et
+  raffinement de la résolution ;
+\item
+  l'indépendance du quotient vis-à-vis de la mesure de complexité
+  choisie pour graduer les histoires.
+\end{itemize}
+
+Le point de départ est volontairement abstrait. Les épisodes peuvent
+être des expositions, des attentes, des regraînes ou des protocoles
+composés. Les observations peuvent être binaires, compter certains
+événements ou lire une partie plus riche de l'exécution. Les résultats
+ci-dessous ne dépendent pas de la réalisation numérique particulière
+du modèle, mais seulement de la cohérence de la composition des
+histoires et de la détermination des réponses.
+
+\begin{encadre}[title={Principe de relativité observationnelle}]
+Aucune classe, aucune profondeur de séparabilité et aucun résumé suffisant
+n'est attaché à un système isolément. Ces objets sont toujours relatifs
+au couple
+\[
+(\mathfrak B,\rho),
+\]
+où \(\mathfrak B\) déclare ce que l'on peut faire vivre au système et
+\(\rho\) ce que l'on choisit d'observer.
+\end{encadre}
+
+\section{Systèmes, épisodes et histoires}
+\label{annexe-histoires-monoide}
+
+Soit \(\mathfrak X\) l'ensemble des états complets ou, plus
+généralement, des présentations de systèmes admises dans le Tome III.
+On note \(\mathcal E\) l'ensemble des épisodes élémentaires. Conformément
+à la décision D-06, cet alphabet comprend les épisodes actifs et les
+délais :
+\[
+\mathcal E=\mathcal E_{\mathrm{act}}\cup\mathcal D,
+\]
+où \(\mathcal D\) désigne les générateurs d'attente. Un délai est donc
+une opération du protocole à part entière et non une absence d'action :
+il laisse évoluer les horloges internes et peut modifier la réponse
+ultérieure du système.
+
+Une histoire finie est un mot de l'ensemble
+\[
+\mathfrak M=\mathcal E^{\ast}.
+\]
+L'histoire vide est notée \(\varepsilon\). La concaténation de deux
+histoires \(\mathcal H_1\) et \(\mathcal H_2\) est notée
+\(\mathcal H_1\cdot\mathcal H_2\). Le triplet
+\[
+(\mathfrak M,\cdot,\varepsilon)
+\]
+est le monoïde libre engendré par \(\mathcal E\).
+
+À chaque épisode \(e\in\mathcal E\) est associée une application de
+transition
+\[
+\Phi_e:\mathfrak X\longrightarrow\mathfrak X.
+\]
+Pour une histoire
+\[
+\mathcal H=e_1e_2\cdots e_n,
+\]
+on définit
+\[
+\Phi_{\mathcal H}
+=
+\Phi_{e_n}\circ\cdots\circ\Phi_{e_1},
+\qquad
+\Phi_{\varepsilon}=\operatorname{Id}_{\mathfrak X}.
+\]
+
+La convention de composition adoptée dans l'ensemble du Tome III est
+donc
+\begin{equation}
+\label{eq:annexe-G-composition}
+\boxed{
+\Phi_{\mathcal H_1\cdot\mathcal H_2}
+=
+\Phi_{\mathcal H_2}\circ\Phi_{\mathcal H_1}.
+}
+\end{equation}
+Une histoire se lit de gauche à droite dans l'ordre chronologique : le
+système vit d'abord \(\mathcal H_1\), puis \(\mathcal H_2\).
+
+Cette convention est importante pour les classes de continuations
+introduites plus loin. Elle évite aussi de confondre la composition
+temporelle des protocoles avec la convention usuelle de composition des
+fonctions.
+
+\begin{encadre}[title={A-H1 --- statut de la regraine}]
+Lorsqu'une regraine est appliquée, elle appartient au protocole, donc à
+l'histoire, et non à la description de l'état initial. Deux expériences
+qui diffèrent par leur regraine correspondent ainsi à deux histoires
+distinctes, même lorsqu'elles partent du même état. Cette convention sera
+utilisée dans les annexes consacrées à la réduction et à la suffisance de
+l'état lent.
+\end{encadre}
+
+\section{Protocoles et classes admissibles}
+\label{annexe-histoires-admissibilite}
+
+Un protocole expérimental ne donne pas nécessairement accès à tout
+\(\mathfrak M\). Il déclare une classe
+\[
+\mathfrak B\subseteq\mathfrak M
+\]
+d'histoires admissibles. Dans les applications, \(\mathfrak B\) peut
+être fini, paramétré par une borne de durée ou défini par plusieurs
+contraintes simultanées.
+
+La seule hypothèse requise pour définir un quotient d'observation est
+que chaque histoire de \(\mathfrak B\) possède une exécution et une
+lecture bien définies. Des propriétés de fermeture supplémentaires ne
+sont introduites que lorsqu'un résultat les utilise effectivement.
+
+\subsection{Trois niveaux de fermeture}
+\label{annexe-histoires-fermetures}
+
+On distingue les niveaux suivants.
+
+\paragraph{Classe minimale.}
+Une classe minimale est un sous-ensemble déclaré de \(\mathfrak M\),
+sans hypothèse de fermeture. Elle suffit pour comparer les réponses sur
+un protocole fini, établir la monotonie des quotients et démontrer les
+résultats de réduction qui portent sur une sonde ou une famille de
+sondes explicitement déclarée.
+
+\paragraph{Classe préfixe-fermée.}
+La classe \(\mathfrak B\) est préfixe-fermée si, pour toute
+décomposition
+\[
+\mathcal H=\mathcal H_1\cdot\mathcal H_2\in\mathfrak B,
+\]
+on a \(\mathcal H_1\in\mathfrak B\). Cette propriété garantit que les
+états intermédiaires d'une histoire admissible sont eux-mêmes atteints
+par une histoire du protocole.
+
+Les budgets définis comme ensembles inférieurs d'une complexité croissante par préfixe sont automatiquement préfixe-fermés. C'est notamment le cas des contraintes cumulatives usuelles portant sur le nombre d'épisodes, la durée totale ou la dose reçue. Le niveau préfixe-fermé est donc naturel pour ces budgets sans être requis par la définition générale d'un quotient d'observation.
+
+\paragraph{Classe stable par continuation.}
+La classe est stable par continuation dans le monoïde considéré si,
+pour tous \(\mathcal H_0,\mathcal H\in\mathfrak B\),
+\[
+\mathcal H_0\cdot\mathcal H\in\mathfrak B.
+\]
+Lorsque \(\mathfrak B=\mathfrak M\), cette stabilité est automatique. C'est elle qui permet de transformer l'équivalence en réponse en congruence comportementale complète.
+
+Les deux dernières propriétés sont distinctes. La fermeture par préfixes permet de remonter vers le passé d'une histoire admise ; la stabilité par continuation permet de prolonger un état atteint sans sortir de la classe déclarée.
+
+\subsection{Classe des continuations après un préfixe}
+\label{annexe-histoires-continuations-prefixe}
+
+Pour \(\mathcal H_0\in\mathfrak M\), on définit la classe des
+continuations admissibles après le préfixe \(\mathcal H_0\) par
+\begin{equation}
+\label{eq:annexe-G-quotient-gauche}
+\mathcal H_0^{-1}\mathfrak B
+=
+\left\{
+\mathcal H\in\mathfrak M
+\;\middle|\;
+\mathcal H_0\cdot\mathcal H\in\mathfrak B
+\right\}.
+\end{equation}
+Il s'agit de la classe des continuations qui restent observables après
+le préfixe \(\mathcal H_0\). Cette classe, et non \(\mathfrak B\)
+elle-même, est en général le domaine pertinent lorsque l'on transporte
+une comparaison vers un état déjà transformé. La notation
+\(\mathcal H_0^{-1}\mathfrak B\) est conservée comme notation ensembliste ;
+elle n'est pas employée ici pour qualifier latéralement la congruence.
+
+\section{Exécutions, résolutions et lectures}
+\label{annexe-histoires-observation}
+
+Pour une histoire \(\mathcal H\), on note
+\[
+\operatorname{Exec}_{\mathcal H}(X)
+\]
+l'exécution complète issue de \(X\). Elle peut contenir la trajectoire
+continue, les instants d'événement, les états pré- et post-saut et
+l'état terminal. Le détail de cet objet dépend du modèle, mais il est
+supposé déterminé par \(X\) et \(\mathcal H\).
+
+La composition des transformations d'état est complétée par l'axiome de
+concaténation des exécutions :
+\begin{equation}
+\label{eq:annexe-G-concatenation-executions}
+\boxed{
+\operatorname{Exec}_{\mathcal H_1\cdot\mathcal H_2}(X)
+=
+\operatorname{Exec}_{\mathcal H_1}(X)
+\frown
+\operatorname{Exec}_{\mathcal H_2}
+\!\left(\Phi_{\mathcal H_1}(X)\right),
+}
+\end{equation}
+où \(\frown\) désigne la concaténation chronologique de deux segments
+d'exécution compatibles. L'exécution de \(\mathcal H_2\) depuis l'état
+atteint après \(\mathcal H_1\) est donc le suffixe terminal de
+l'exécution composée ; elle n'est pas, en général, identique à
+l'exécution complète de \(\mathcal H_1\cdot\mathcal H_2\).
+
+Une résolution \(\rho\) associe à une exécution une observation dans un
+espace \(\mathcal Y_\rho\). Deux types de lectures doivent être
+distingués.
+
+\paragraph{Lecture terminale.}
+Une lecture terminale dépend seulement de l'état terminal, par une
+application
+\[
+\tau_\rho:\mathfrak X\longrightarrow\mathcal Y_\rho,
+\qquad
+\mathcal R_X^\rho(\mathcal H)
+=
+\tau_\rho\!\left(\Phi_{\mathcal H}(X)\right).
+\]
+Elle est supposée invariante par prolongation de la relaxation : dès que
+le régime terminal déclaré est atteint, prolonger une phase de
+relaxation sans nouvel événement pertinent ne modifie pas la lecture.
+Cette condition rend notamment bien définie la lecture du bassin
+terminal.
+
+\paragraph{Lecture de chemin.}
+Une lecture de chemin est une application
+\[
+\omega_\rho:\operatorname{Exec}\longrightarrow\mathcal Y_\rho,
+\qquad
+\mathcal R_X^\rho(\mathcal H)
+=
+\omega_\rho\!\left(\operatorname{Exec}_{\mathcal H}(X)\right).
+\]
+Pour le transport par préfixe, une telle lecture doit être
+\emph{compatible au suffixe}. Cela signifie que la lecture utilisée
+après un préfixe porte sur le segment terminal correspondant à la
+continuation et non sur l'intégralité du chemin antérieur. Formellement,
+pour tout segment initial \(E_0\) et tout segment terminal \(E\) admis,
+la lecture ancrée sur ce segment satisfait
+\begin{equation}
+\label{eq:annexe-G-compatibilite-suffixe}
+\omega_\rho^{\mathrm{fin}}(E_0\frown E)
+=
+\omega_\rho(E).
+\end{equation}
+Cette condition est satisfaite par les lectures effectivement utilisées
+dans la suite, telles que le nombre de Kairos produits par la sonde
+terminale. Elle ne l'est pas par une lecture intégrale comme le nombre
+total de Kairos de toute l'exécution composée.
+
+Les résultats de cette annexe utilisent les conditions de cohérence
+suivantes.
+
+\begin{enumerate}
+\item[\textnormal{(O1)}]
+  Pour tout \(X\) et toute histoire admissible \(\mathcal H\),
+  l'exécution \(\operatorname{Exec}_{\mathcal H}(X)\) et sa lecture
+  \(\mathcal R_X^\rho(\mathcal H)\) sont déterminées.
+\item[\textnormal{(O2)}]
+  La lecture est non invasive : elle compare les exécutions sans modifier
+  la dynamique qu'elle lit.
+\item[\textnormal{(O2$'$)}]
+  Toute lecture terminale est invariante par prolongation admissible de
+  la relaxation après l'atteinte du régime terminal déclaré.
+\item[\textnormal{(O3)}]
+  Si \(\rho_2\) raffine \(\rho_1\), il existe une application
+  \(\pi_{21}:\mathcal Y_{\rho_2}\to\mathcal Y_{\rho_1}\) telle que la
+  lecture grossière s'obtienne par projection de la lecture fine.
+\item[\textnormal{(O4)}]
+  Les projections de lecture associées à trois résolutions emboîtées
+  sont compatibles : si \(\rho_3\) raffine \(\rho_2\), qui raffine
+  \(\rho_1\), alors
+  \[
+  \pi_{31}=\pi_{21}\circ\pi_{32}.
+  \]
+\end{enumerate}
+
+La résolution binaire utilisée dans plusieurs chapitres est terminale :
+elle lit seulement le bassin atteint, par exemple repos ou
+appropriation. Une résolution plus fine peut joindre à cette issue une
+lecture de chemin compatible au suffixe, comme le nombre de Kairos de la
+sonde ou une signature de son calendrier.
+
+\section{Équivalence et quotient d'observation}
+\label{annexe-histoires-equivalence}
+
+Soient une classe admissible \(\mathfrak B\) et une résolution
+\(\rho\). Deux systèmes \(X,Y\in\mathfrak X\) sont
+\emph{observationnellement équivalents relativement à
+\((\mathfrak B,\rho)\)} si leurs réponses coïncident sur toute la
+classe :
+\begin{equation}
+\label{eq:annexe-G-equivalence}
+X\sim_{\mathfrak B,\rho}Y
+\quad\Longleftrightarrow\quad
+\forall\mathcal H\in\mathfrak B,
+\qquad
+\mathcal R_X^\rho(\mathcal H)
+=
+\mathcal R_Y^\rho(\mathcal H).
+\end{equation}
+
+Cette relation est réflexive, symétrique et transitive, puisqu'elle est
+l'égalité de deux fonctions sur un même domaine. Elle définit donc le
+quotient d'observation
+\[
+\mathfrak X/{\sim_{\mathfrak B,\rho}}.
+\]
+La classe de \(X\) est notée
+\[
+[X]_{\mathfrak B,\rho}.
+\]
+
+Le qualificatif \emph{observationnel} est essentiel. Deux états
+physiquement distincts peuvent appartenir à la même classe si aucune
+histoire de \(\mathfrak B\), lue à la résolution \(\rho\), ne les
+sépare. Inversement, une même paire peut être confondue à une
+résolution et séparée à une autre.
+
+\begin{encadre}[title={Vocabulaire}]
+À budget fini, on parle de \emph{quotient d'observation}. Le terme
+\emph{quotient de Nerode} est réservé à la classe complète des
+continuations admissibles, pour laquelle l'équivalence devient une
+congruence comportementale. Le système effectif du Tome III est la
+famille ordonnée des quotients d'observation, non un quotient fini
+isolé supposé définitif.
+\end{encadre}
+
+\section{Transport par préfixe}
+\label{annexe-histoires-transport}
+
+Le transport repose sur la composition des états pour les lectures
+terminales et, pour les lectures de chemin, sur la concaténation des
+exécutions jointe à la compatibilité au suffixe.
+
+\resultstep{lem:G-transport-prefixe}
+\paragraph{Lemme \theproposition{} --- transport par préfixe.}
+Soit \(\rho\) une lecture terminale ou une lecture de chemin compatible
+au suffixe. Pour tous \(X\in\mathfrak X\) et
+\(\mathcal H_0,\mathcal H\in\mathfrak M\), la réponse à la
+continuation \(\mathcal H\) depuis l'état atteint après
+\(\mathcal H_0\) coïncide avec la lecture du segment terminal
+correspondant dans l'exécution composée. On note cette identité
+\begin{equation}
+\label{eq:annexe-G-identite-transport}
+\mathcal R_{\Phi_{\mathcal H_0}(X)}^\rho(\mathcal H)
+=
+\mathcal R_X^{\rho,\mathrm{fin}}
+  (\mathcal H_0\cdot\mathcal H\,;\mathcal H),
+\end{equation}
+où le membre de droite désigne la lecture ancrée sur le suffixe produit
+par \(\mathcal H\). Dans le cas terminal, cette annotation est inutile
+et l'identité se réduit à
+\[
+\tau_\rho\!\left(
+\Phi_{\mathcal H}(\Phi_{\mathcal H_0}(X))
+\right)
+=
+\tau_\rho\!\left(
+\Phi_{\mathcal H_0\cdot\mathcal H}(X)
+\right).
+\]
+
+Par conséquent,
+\begin{equation}
+\label{eq:annexe-G-transport}
+X\sim_{\mathfrak B,\rho}Y
+\quad\Longrightarrow\quad
+\Phi_{\mathcal H_0}(X)
+\sim_{\mathcal H_0^{-1}\mathfrak B,\rho}
+\Phi_{\mathcal H_0}(Y),
+\end{equation}
+à condition que, lorsqu'il s'agit d'une lecture de chemin,
+l'équivalence sur \(\mathfrak B\) soit définie avec la même convention
+d'ancrage terminal pour les histoires préfixées.
+
+\paragraph{Démonstration.}
+Pour une lecture terminale, la convention de composition donne
+\[
+\Phi_{\mathcal H}(\Phi_{\mathcal H_0}(X))
+=
+\Phi_{\mathcal H_0\cdot\mathcal H}(X),
+\]
+et l'application de \(\tau_\rho\) établit immédiatement
+\eqref{eq:annexe-G-identite-transport}.
+
+Pour une lecture de chemin, l'axiome
+\eqref{eq:annexe-G-concatenation-executions} donne
+\[
+\operatorname{Exec}_{\mathcal H_0\cdot\mathcal H}(X)
+=
+\operatorname{Exec}_{\mathcal H_0}(X)
+\frown
+\operatorname{Exec}_{\mathcal H}
+\!\left(\Phi_{\mathcal H_0}(X)\right).
+\]
+La compatibilité au suffixe
+\eqref{eq:annexe-G-compatibilite-suffixe} identifie alors la lecture du
+segment terminal à celle de l'exécution de \(\mathcal H\) depuis
+\(\Phi_{\mathcal H_0}(X)\), ce qui établit la même identité.
+
+Supposons maintenant \(X\sim_{\mathfrak B,\rho}Y\), et prenons
+\(\mathcal H\in\mathcal H_0^{-1}\mathfrak B\). Par définition,
+\(\mathcal H_0\cdot\mathcal H\in\mathfrak B\). L'égalité des réponses
+sur cette histoire, avec la convention terminale déclarée, puis
+l'identité précédente appliquée à \(X\) et à \(Y\), donnent
+\[
+\mathcal R_{\Phi_{\mathcal H_0}(X)}^\rho(\mathcal H)
+=
+\mathcal R_{\Phi_{\mathcal H_0}(Y)}^\rho(\mathcal H).
+\]
+Cette égalité valant pour toute continuation de
+\(\mathcal H_0^{-1}\mathfrak B\),
+\eqref{eq:annexe-G-transport} est démontrée.
+\hfill\(\square\)
+
+\paragraph{Portée.}
+L'identité ne vaut pas pour une lecture de chemin intégrale qui conserve
+le préfixe dans la quantité observée. Par exemple, le nombre total de
+Kairos de l'exécution \(\mathcal H_0\cdot\mathcal H\) peut différer du
+nombre de Kairos produits par la seule continuation \(\mathcal H\).
+Cette restriction ne touche ni les lectures terminales ni les lectures
+de sonde employées dans le Tome III.
+
+Une équivalence à budget fini n'est pas, en général, conservée sur le
+même budget après l'application d'un préfixe. Elle est transportée vers
+la classe exacte des continuations encore testables. Pour obtenir
+\[
+\Phi_{\mathcal H_0}(X)
+\sim_{\mathfrak B,\rho}
+\Phi_{\mathcal H_0}(Y),
+\]
+il suffit naturellement que
+\[
+\mathfrak B\subseteq\mathcal H_0^{-1}\mathfrak B,
+\]
+c'est-à-dire que toute histoire de \(\mathfrak B\) reste admissible
+après \(\mathcal H_0\). Cette condition suffisante n'est pas satisfaite
+par la plupart des budgets finis ; l'implication peut néanmoins tenir
+pour certaines paires par coïncidence de leurs réponses.
+
+\section{Congruence comportementale complète}
+\label{annexe-histoires-nerode}
+
+On considère maintenant le monoïde libre complet
+\(\mathfrak M=\mathcal E^\ast\). Sa stabilité par concaténation découle
+de sa définition.
+
+\resultstep{prop:G-congruence-nerode}
+\paragraph{Proposition \theproposition{} --- congruence de Nerode.}
+Soit \(\rho\) une lecture terminale ou une lecture de chemin compatible
+au suffixe. La relation
+\[
+X\sim_{\mathfrak M,\rho}Y
+\quad\Longleftrightarrow\quad
+\forall\mathcal H\in\mathfrak M,
+\quad
+\mathcal R_X^\rho(\mathcal H)
+=
+\mathcal R_Y^\rho(\mathcal H)
+\]
+est une congruence pour l'action des histoires : pour tout
+\(\mathcal H_0\in\mathfrak M\),
+\begin{equation}
+\label{eq:annexe-G-nerode-congruence}
+X\sim_{\mathfrak M,\rho}Y
+\quad\Longrightarrow\quad
+\Phi_{\mathcal H_0}(X)
+\sim_{\mathfrak M,\rho}
+\Phi_{\mathcal H_0}(Y).
+\end{equation}
+
+\paragraph{Démonstration.}
+Puisque \(\mathfrak M\) est le monoïde libre complet,
+\[
+\mathcal H_0^{-1}\mathfrak M=\mathfrak M.
+\]
+Le lemme de transport par préfixe
+\eqref{eq:annexe-G-transport} donne alors directement
+\eqref{eq:annexe-G-nerode-congruence}.
+\hfill\(\square\)
+
+Le quotient
+\[
+\mathfrak X/{\sim_{\mathfrak M,\rho}}
+\]
+est le quotient comportemental complet à la résolution \(\rho\). Deux
+classes distinctes possèdent nécessairement une histoire séparatrice ;
+deux représentants d'une même classe restent indiscernables après
+toute histoire préalable et sous toute continuation admissible.
+
+La disponibilité de toutes les continuations est utilisée exactement
+ici. Les autres résultats fondamentaux de cette annexe restent valides
+sur une classe minimale.
+
+\section{Budgets et graduations des histoires}
+\label{annexe-histoires-budgets}
+
+Une classe \(\mathfrak B\) peut être construite à partir d'une mesure de
+complexité, mais elle ne s'y réduit pas. Parmi les graduations utilisées
+ou envisageables figurent :
+\[
+|\mathcal H|_{\mathrm{ep}}
+=
+\text{nombre d'épisodes},
+\]
+\[
+|\mathcal H|_{\mathrm{dur}}
+=
+\text{durée active},
+\qquad
+|\mathcal H|_{\mathrm{tot}}
+=
+\text{durée totale},
+\]
+et une dose cumulée telle que
+\[
+|\mathcal H|_{\mathrm{dose}}
+=
+\sum_k g_kT_k.
+\]
+
+Il est souvent préférable de conserver une complexité vectorielle
+\begin{equation}
+\label{eq:annexe-G-complexite-vectorielle}
+\mathbf c(\mathcal H)
+=
+\bigl(
+ n_{\mathrm{ep}},
+ T_{\mathrm{actif}},
+ T_{\mathrm{total}},
+ Q
+\bigr)
+\end{equation}
+et de définir un budget par un ensemble inférieur
+\begin{equation}
+\label{eq:annexe-G-budget-vectoriel}
+\mathfrak B_{\mathbf b}
+=
+\left\{
+\mathcal H\in\mathfrak M
+\;\middle|\;
+\mathbf c(\mathcal H)\preceq\mathbf b
+\right\}.
+\end{equation}
+Cette construction évite d'imposer trop tôt une compensation arbitraire
+entre le nombre d'épisodes, leur durée et leur intensité.
+
+Une fonction scalaire
+\[
+c:\mathfrak M\longrightarrow\mathbb R_+
+\]
+peut néanmoins être introduite pour ordonner les histoires séparatrices
+ou construire une distance. Elle ne participe pas à la définition de
+l'équivalence sur une classe déjà déclarée.
+
+\section{Indépendance du quotient vis-à-vis de la complexité}
+\label{annexe-histoires-c-independance}
+
+\resultstep{prop:G-c-independance-quotient}
+\paragraph{Proposition \theproposition{} --- \(c\)-indépendance du quotient.}
+Pour une classe \(\mathfrak B\) et une résolution \(\rho\) fixées, la
+relation \(\sim_{\mathfrak B,\rho}\) ne dépend d'aucune fonction de
+complexité \(c\). En revanche, la profondeur à laquelle une paire est
+séparée dépend de \(c\).
+
+Cette indépendance est une propriété à classe fixée. Si le budget est
+lui-même défini par la complexité, par exemple
+\(
+\mathfrak B_b^c=\{\mathcal H:c(\mathcal H)\leq b\}
+\), changer \(c\) peut changer \(\mathfrak B_b^c\), donc le quotient
+d'observation. Ce changement passe par la classe admissible et non par
+la définition de l'équivalence sur une classe donnée.
+
+\paragraph{Démonstration.}
+Par définition,
+\[
+X\sim_{\mathfrak B,\rho}Y
+\]
+si et seulement si les réponses de \(X\) et \(Y\) coïncident pour
+toutes les histoires de \(\mathfrak B\). La fonction \(c\) n'apparaît
+pas dans cette condition. Elle ne peut donc modifier ni les paires
+équivalentes ni le quotient associé.
+
+Pour une paire non équivalente, on peut en revanche définir
+\begin{equation}
+\label{eq:annexe-G-longueur-separation}
+\ell_{c,\mathfrak B,\rho}(X,Y)
+=
+\inf\left\{
+ c(\mathcal H)
+ \;\middle|\;
+ \mathcal H\in\mathfrak B,
+ \ \mathcal R_X^\rho(\mathcal H)
+ \neq
+ \mathcal R_Y^\rho(\mathcal H)
+\right\}.
+\end{equation}
+Cette valeur change lorsque \(c\) change, même si l'ensemble des
+histoires séparatrices reste identique. La séparation répond donc à la
+question \emph{les systèmes diffèrent-ils dans ce protocole ?}, tandis
+que \(\ell\) répond à la question \emph{à quelle profondeur la mesure
+choisie rend-elle cette différence visible ?}.
+\hfill\(\square\)
+
+Si aucune histoire de \(\mathfrak B\) ne sépare la paire, on adopte la
+convention
+\[
+\ell_{c,\mathfrak B,\rho}(X,Y)=+\infty.
+\]
+La quantité \(\ell\) est ainsi toujours relative au quadruplet
+\((X,Y,\mathfrak B,\rho)\), puis à la graduation \(c\). Elle n'est pas
+un invariant absolu du couple de systèmes.
+
+\section{Monotonie bidimensionnelle de l'observabilité}
+\label{annexe-histoires-monotonie}
+
+On ordonne les budgets par inclusion. On dit que \(\rho_2\) raffine
+\(\rho_1\), et l'on note
+\[
+\rho_1\preceq\rho_2,
+\]
+lorsque la condition (O3) est satisfaite.
+
+\resultstep{prop:G-monotonie-observabilite}
+\paragraph{Proposition \theproposition{} --- monotonie bidimensionnelle.}
+Si
+\[
+\mathfrak B_1\subseteq\mathfrak B_2
+\qquad\text{et}\qquad
+\rho_1\preceq\rho_2,
+\]
+alors
+\begin{equation}
+\label{eq:annexe-G-monotonie}
+\boxed{
+\sim_{\mathfrak B_2,\rho_2}
+\ \subseteq\ 
+\sim_{\mathfrak B_1,\rho_1}.
+}
+\end{equation}
+Toute augmentation de ce que l'on peut faire vivre ou de ce que l'on
+peut lire peut scinder des classes d'équivalence, mais ne peut pas en
+fusionner.
+
+\paragraph{Démonstration.}
+Soient \(X,Y\in\mathfrak X\) tels que
+\(X\sim_{\mathfrak B_2,\rho_2}Y\). Pour toute
+\(\mathcal H\in\mathfrak B_1\), l'inclusion des budgets donne
+\(\mathcal H\in\mathfrak B_2\), donc
+\[
+\mathcal R_X^{\rho_2}(\mathcal H)
+=
+\mathcal R_Y^{\rho_2}(\mathcal H).
+\]
+Comme \(\rho_2\) raffine \(\rho_1\), il existe \(\pi_{21}\) telle que
+\[
+\mathcal R_Z^{\rho_1}(\mathcal H)
+=
+\pi_{21}\!\left(
+\mathcal R_Z^{\rho_2}(\mathcal H)
+\right)
+\]
+pour tout système \(Z\). En appliquant \(\pi_{21}\) à l'égalité
+précédente, on obtient
+\[
+\mathcal R_X^{\rho_1}(\mathcal H)
+=
+\mathcal R_Y^{\rho_1}(\mathcal H).
+\]
+Cette égalité valant pour toute histoire de \(\mathfrak B_1\), on a
+\(X\sim_{\mathfrak B_1,\rho_1}Y\).
+\hfill\(\square\)
+
+Deux cas particuliers sont utiles :
+\[
+\mathfrak B_1\subseteq\mathfrak B_2
+\quad\Longrightarrow\quad
+\sim_{\mathfrak B_2,\rho}
+\subseteq
+\sim_{\mathfrak B_1,\rho},
+\]
+et
+\[
+\rho_1\preceq\rho_2
+\quad\Longrightarrow\quad
+\sim_{\mathfrak B,\rho_2}
+\subseteq
+\sim_{\mathfrak B,\rho_1}.
+\]
+Le premier raffinement agit en sollicitant davantage le système ; le
+second en lisant plus finement une même sollicitation.
+
+\section{Système inverse des quotients d'observation}
+\label{annexe-histoires-systeme-inverse}
+
+Considérons l'ensemble ordonné des couples \((\mathfrak B,\rho)\), avec
+\begin{equation}
+\label{eq:annexe-G-ordre-produit}
+(\mathfrak B_1,\rho_1)
+\preceq
+(\mathfrak B_2,\rho_2)
+\quad\Longleftrightarrow\quad
+\mathfrak B_1\subseteq\mathfrak B_2
+\ \text{et}\ 
+\rho_1\preceq\rho_2.
+\end{equation}
+La proposition~\ref{prop:G-monotonie-observabilite} fournit, pour chaque paire ordonnée, une
+application naturelle
+\begin{equation}
+\label{eq:annexe-G-projection-quotients}
+q_{21}:
+\mathfrak X/{\sim_{\mathfrak B_2,\rho_2}}
+\longrightarrow
+\mathfrak X/{\sim_{\mathfrak B_1,\rho_1}},
+\qquad
+q_{21}\!\left([X]_{\mathfrak B_2,\rho_2}\right)
+=
+[X]_{\mathfrak B_1,\rho_1}.
+\end{equation}
+Cette application est bien définie grâce à
+\eqref{eq:annexe-G-monotonie}. Pour trois niveaux emboîtés, la
+définition même de \(q_{ji}([X])=[X]\) donne automatiquement
+\[
+q_{31}=q_{21}\circ q_{32}.
+\]
+La condition (O4) assure, en amont, que les projections de lecture
+\(\pi_{ji}\) utilisées pour comparer les résolutions sont elles-mêmes
+cohérentes. Les quotients forment donc un système inverse.
+
+Un élément de la limite projective, lorsqu'on considère formellement
+tous les niveaux, est une famille cohérente
+\[
+\left(C_{\mathfrak B,\rho}\right)_{(\mathfrak B,\rho)}
+\]
+de classes telle que chaque projection d'une classe fine redonne la
+classe plus grossière correspondante. Cette limite ne suppose pas que
+la filtration se stabilise à un budget fini.
+
+\begin{encadre}[title={Lecture effective}]
+L'objet de travail du Tome III est le système inverse des quotients
+d'observation. Un quotient à budget fixé en est une coupe. Le quotient
+comportemental complet est une limite idéale lorsque toutes les
+continuations et la résolution déclarée sont prises en compte.
+\end{encadre}
+
+Cette formulation évite deux confusions. D'une part, l'absence de
+nouvelle séparation sur quelques budgets successifs ne prouve pas la
+stationnarité définitive. D'autre part, une classe observée à un niveau
+ne doit pas être essentialisée : elle peut se scinder dès que le
+protocole ou la lecture sont enrichis.
+
+\section{Conséquences pour les résumés et les seuils}
+\label{annexe-histoires-consequences}
+
+Soit
+\[
+Z_{\mathfrak B,\rho}:\mathfrak X\longrightarrow\mathcal Z
+\]
+un résumé déclaré suffisant à un niveau d'observation. Cette
+suffisance signifie
+\begin{equation}
+\label{eq:annexe-G-resume-suffisant}
+Z_{\mathfrak B,\rho}(X)
+=
+Z_{\mathfrak B,\rho}(Y)
+\quad\Longrightarrow\quad
+X\sim_{\mathfrak B,\rho}Y.
+\end{equation}
+Elle ne vaut pas automatiquement après enrichissement du budget ou de
+la résolution. La proposition~\ref{prop:G-monotonie-observabilite} autorise seulement l'implication
+dans le sens grossier : un résumé suffisant à un niveau fin reste
+suffisant après projection vers un niveau moins exigeant.
+
+De même, un ensemble de commutation \(\Theta\), une surface de frontière
+ou une horloge déclarée active doivent porter les indices
+\((\mathfrak B,\rho)\) dès que leur définition repose sur les réponses
+observées. Deux résolutions peuvent faire apparaître des séparations à
+des niveaux d'histoire différents. Deux budgets peuvent donner des
+valeurs différentes de la profondeur de séparabilité
+\(\ell_{c,\mathfrak B,\rho}\), toutes deux correctes dans leur domaine.
+
+Cette dépendance n'est pas une faiblesse du formalisme. Elle constitue
+son contenu : l'individualité comportementale est ce qui résiste à une
+famille déclarée d'interventions et de lectures.
+
+\section{Niveaux de classe requis par les résultats fondamentaux}
+\label{annexe-histoires-table-portee}
+
+Le tableau suivant résume les hypothèses de fermeture réellement
+utilisées.
+
+\begin{center}
+\begin{longtable}{p{0.24\linewidth}p{0.25\linewidth}p{0.39\linewidth}}
+\toprule
+Résultat & Niveau requis & Raison \\
+\midrule
+\endfirsthead
+\toprule
+Résultat & Niveau requis & Raison \\
+\midrule
+\endhead
+Définition de
+\(\sim_{\mathfrak B,\rho}\)
+& Classe minimale
+& Il suffit que les réponses soient définies sur
+  \(\mathfrak B\). \\
+\addlinespace
+Lemme~\ref{lem:G-transport-prefixe}
+& Classe minimale
+& Le résultat transporte l'équivalence vers la classe de continuations
+  \(\mathcal H_0^{-1}\mathfrak B\), sans supposer qu'il coïncide avec
+  \(\mathfrak B\). \\
+\addlinespace
+Proposition~\ref{prop:G-congruence-nerode}
+& Stabilité par continuation
+& Elle assure
+  \(\mathcal H_0^{-1}\mathfrak M=\mathfrak M\) et transforme le
+  transport par préfixe en congruence sur la même classe. \\
+\addlinespace
+Proposition~\ref{prop:G-monotonie-observabilite}
+& Classes minimales ordonnées
+& Seules l'inclusion des budgets et la projection des résolutions sont
+  utilisées. \\
+\addlinespace
+Proposition~\ref{prop:G-c-independance-quotient}
+& Classe minimale
+& La preuve repose uniquement sur la définition de l'égalité des
+  réponses. \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Ainsi, parmi ces résultats, seule la proposition de congruence complète
+requiert la stabilité par continuation. Les mécanismes de seuil, les
+réductions à une sonde et les frontières construites dans les chapitres
+suivants peuvent être établis dans les classes minimales explicitement
+déclarées.
+
+\section{Table des notations}
+\label{annexe-histoires-notations}
+
+\begin{center}
+\begin{longtable}{p{0.23\linewidth}p{0.65\linewidth}}
+\toprule
+Notation & Signification \\
+\midrule
+\endfirsthead
+\toprule
+Notation & Signification \\
+\midrule
+\endhead
+\(\mathfrak X\)
+& Ensemble des états complets ou des présentations de systèmes. \\
+\addlinespace
+\(\mathcal E\)
+& Alphabet des épisodes élémentaires, comprenant épisodes actifs et délais. \\
+\addlinespace
+\(\mathcal E_{\mathrm{act}}\)
+& Alphabet des épisodes actifs. \\
+\addlinespace
+\(\mathcal D\)
+& Alphabet des délais, considérés comme générateurs à part entière. \\
+\addlinespace
+\(\mathfrak M=\mathcal E^\ast\)
+& Monoïde des histoires finies. \\
+\addlinespace
+\(\varepsilon\)
+& Histoire vide. \\
+\addlinespace
+\(\mathcal H_1\cdot\mathcal H_2\)
+& Concaténation chronologique : \(\mathcal H_1\) puis
+  \(\mathcal H_2\). \\
+\addlinespace
+\(\Phi_{\mathcal H}\)
+& Transformation de l'état produite par l'histoire \(\mathcal H\). \\
+\addlinespace
+\(\mathfrak B\)
+& Classe ou budget d'histoires admissibles. \\
+\addlinespace
+\(\mathcal H_0^{-1}\mathfrak B\)
+& Continuations \(\mathcal H\) telles que
+  \(\mathcal H_0\cdot\mathcal H\in\mathfrak B\). \\
+\addlinespace
+\(\rho\)
+& Résolution d'observation. \\
+\addlinespace
+\(\omega_\rho\)
+& Lecture d'une exécution à la résolution \(\rho\). \\
+\addlinespace
+\(\mathcal R_X^\rho(\mathcal H)\)
+& Réponse du système \(X\) à l'histoire \(\mathcal H\). \\
+\addlinespace
+\(X\sim_{\mathfrak B,\rho}Y\)
+& Égalité des réponses de \(X\) et \(Y\) sur tout
+  \(\mathfrak B\), à la résolution \(\rho\). \\
+\addlinespace
+\([X]_{\mathfrak B,\rho}\)
+& Classe d'équivalence observationnelle de \(X\). \\
+\addlinespace
+\(c,\mathbf c\)
+& Complexité scalaire ou vectorielle d'une histoire. \\
+\addlinespace
+\(\ell_{c,\mathfrak B,\rho}(X,Y)\)
+& Profondeur de séparabilité de \(X\) et \(Y\) : infimum des complexités
+  des histoires séparatrices, ou \(+\infty\) si aucune histoire de
+  \(\mathfrak B\) ne les sépare. \\
+\addlinespace
+\(q_{21}\)
+& Projection naturelle d'un quotient fin vers un quotient plus
+  grossier. \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\section{Conclusion de l'annexe}
+\label{annexe-histoires-conclusion}
+
+Le cadre peut être résumé par les implications suivantes :
+\[
+\text{composition des histoires et compatibilité de la lecture}
+\Longrightarrow
+\text{transport par préfixe},
+\]
+\[
+\text{stabilité par continuation}
+\Longrightarrow
+\text{congruence de Nerode},
+\]
+\[
+\text{budget plus riche ou résolution plus fine}
+\Longrightarrow
+\text{quotient plus fin},
+\]
+\[
+\text{mesure de complexité}
+\Longrightarrow
+\text{géométrie de la séparation, non définition du quotient}.
+\]
+
+La suite du Tome III peut dès lors s'appuyer sur un langage unique. Une
+histoire n'est jamais séparatrice en soi, mais relativement à une
+résolution. Une classe n'est jamais définitive, mais située dans une
+filtration. Un résumé n'est jamais suffisant absolument, mais pour un
+couple \((\mathfrak B,\rho)\) déclaré. Ces précautions formelles sont
+ce qui permet ensuite de parler rigoureusement de contenu survivant,
+d'état lent, de frontière d'appropriation et de plasticité.

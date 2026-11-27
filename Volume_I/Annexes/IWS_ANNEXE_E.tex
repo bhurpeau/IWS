@@ -1,0 +1,1686 @@
+\section{Objet de l'annexe}
+\label{annexe-interfaces-objet}
+
+Cette annexe développe les calculs associés aux deux premières
+interfaces du Tome II.
+
+\begin{itemize}
+\item
+  R1 transforme l'amplitude transmise par une perméabilité dynamique
+  \(q\).
+\item
+  R2 transforme la temporalité de l'écriture : l'influence s'accumule
+  dans une variable d'interface \(\chi\), puis entre dans la trace par
+  quanta lors des Kairos.
+\end{itemize}
+
+L'objectif est de montrer précisément :
+
+\begin{enumerate}
+\item
+  comment R1 transporte ou rend inaccessibles les seuils du modèle
+  continu ;
+\item
+  comment construire l'application de retour de R2 ;
+\item
+  comment obtenir le seuil d'activité événementielle \(g_K\) ;
+\item
+  comment calculer la trace moyenne produite par les quanta ;
+\item
+  comment définir la stabilité hybride du repos et le seuil \(g_F\) ;
+\item
+  pourquoi les seuils \(g_K\), \(g_F\),
+  \(g_{\mathrm{app}}^{R2}\) et \(g_H^{R2}\) doivent rester distincts.
+\end{enumerate}
+
+Les calculs sont effectués sur la réduction diagonale utilisée dans le
+Tome II. Le système source est maintenu sur son puits positif, et
+
+\[
+w=\tanh(x_A)>0
+\]
+
+désigne l'intensité projetée par composante.
+
+\section{R1 : perméabilité dynamique}
+
+\subsection{Modèle}
+\label{annexe-r1-modele}
+
+La perméabilité \(q\) vérifie
+
+\[
+\dot q
+=
+\rho(1-q)
+-
+\eta qgw,
+\]
+
+avec
+
+\[
+\rho>0,
+\qquad
+\eta>0,
+\qquad
+g\geq0.
+\]
+
+Le terme \(\rho(1-q)\) rouvre l'interface en l'absence de trafic. Le
+terme \(\eta qgw\) la ferme progressivement lorsque l'exposition est
+soutenue.
+
+L'écriture continue dans la trace n'est plus
+
+\[
+gw,
+\]
+
+mais
+
+\[
+q(t)gw.
+\]
+
+On suppose généralement
+
+\[
+0\leq q(0)\leq1.
+\]
+
+\subsection{Solution exacte de la perméabilité}
+\label{annexe-r1-solution}
+
+L'équation s'écrit
+
+\[
+\dot q
++
+(\rho+\eta gw)q
+=
+\rho.
+\]
+
+Posons
+
+\[
+a_R(g)
+=
+\rho+\eta gw.
+\]
+
+La solution est
+
+\[
+\boxed{
+q(t)
+=
+q_\infty(g)
++
+\bigl(q_0-q_\infty(g)\bigr)
+e^{-a_R(g)t},
+}
+\]
+
+où
+
+\[
+\boxed{
+q_\infty(g)
+=
+\frac{\rho}
+{\rho+\eta gw}.
+}
+\]
+
+L'équilibre \(q_\infty(g)\) est globalement exponentiellement stable,
+avec un temps caractéristique
+
+\[
+\boxed{
+t_R(g)
+=
+\frac{1}{\rho+\eta gw}.
+}
+\]
+
+Si \(q_0\in[0,1]\), alors \(q(t)\in[0,1]\) pour tout \(t\geq0\).
+
+En effet, le champ au bord vérifie
+
+\[
+\dot q\big|_{q=0}=\rho>0,
+\]
+
+et
+
+\[
+\dot q\big|_{q=1}=-\eta gw\leq0.
+\]
+
+L'intervalle \([0,1]\) est donc invariant.
+
+\subsection{Couplage effectif}
+\label{annexe-r1-couplage-effectif}
+
+L'intensité transmise par l'interface est
+
+\[
+g_{\mathrm{eff}}(t;g)
+=
+gq(t).
+\]
+
+À long terme,
+
+\[
+\boxed{
+g_{\mathrm{eff}}^\infty(g)
+=
+gq_\infty(g)
+=
+\frac{\rho g}
+{\rho+\eta gw}.
+}
+\]
+
+Cette fonction est strictement croissante :
+
+\[
+\frac{\mathrm d}{\mathrm dg}
+g_{\mathrm{eff}}^\infty(g)
+=
+\frac{\rho^2}
+{\left(\rho+\eta gw\right)^2}
+>0,
+\]
+
+mais elle est bornée :
+
+\[
+\boxed{
+\lim_{g\to\infty}
+g_{\mathrm{eff}}^\infty(g)
+=
+\frac{\rho}{\eta w}.
+}
+\]
+
+R1 ne supprime donc pas nécessairement l'influence. Elle lui impose un
+plafond soutenu.
+
+\section{Transport d'un seuil du modèle continu}
+\label{annexe-r1-transport-seuil}
+
+Soit
+
+\[
+g_\star^0>0
+\]
+
+un seuil du modèle continu R0. Par exemple, \(g_\star^0\) peut être le
+seuil transcritique \(g_c^0\) ou le seuil de Hopf \(g_H^0\).
+
+Le seuil quasi-statique de R1 est défini par
+
+\[
+g_{\mathrm{eff}}^\infty
+\left(
+g_\star^{R1}
+\right)
+=
+g_\star^0.
+\]
+
+On résout
+
+\[
+\frac{\rho g_\star^{R1}}
+{\rho+\eta wg_\star^{R1}}
+=
+g_\star^0.
+\]
+
+Après multiplication,
+
+\[
+\rho g_\star^{R1}
+=
+\rho g_\star^0
++
+\eta wg_\star^0g_\star^{R1}.
+\]
+
+Ainsi,
+
+\[
+\left(
+\rho-\eta wg_\star^0
+\right)
+g_\star^{R1}
+=
+\rho g_\star^0.
+\]
+
+Si
+
+\[
+\rho>\eta wg_\star^0,
+\]
+
+on obtient le seuil fini
+
+\[
+\boxed{
+g_\star^{R1}
+=
+\frac{\rho g_\star^0}
+{\rho-\eta wg_\star^0}.
+}
+\]
+
+Si
+
+\[
+\rho\leq\eta wg_\star^0,
+\]
+
+alors
+
+\[
+\frac{\rho}{\eta w}
+\leq
+g_\star^0.
+\]
+
+Le plafond de R1 reste sous le seuil continu, ou ne l'atteint qu'à la
+limite \(g\to\infty\). Aucun \(g\) fini ne permet donc de franchir ce
+seuil en régime soutenu.
+
+\begin{quote}
+\resultheading{Proposition}{prop:E-transport-seuil-R1}{}
+R1 transporte un seuil \(g_\star^0\) par la formule précédente lorsque
+\[
+\frac{\rho}{\eta w}>g_\star^0.
+\]
+Lorsque
+\[
+\frac{\rho}{\eta w}\leq g_\star^0,
+\]
+le seuil est inaccessible par une augmentation finie de \(g\).
+\end{quote}
+
+\section{Protection absolue et protection de la résistance}
+\label{annexe-r1-protection}
+
+Deux cas sont particulièrement importants.
+
+\subsection{Protection du repos}
+
+Si
+
+\[
+\frac{\rho}{\eta w}
+\leq
+g_c^0,
+\]
+
+le couplage soutenu ne peut jamais atteindre le seuil qui déstabilise
+le repos. L'interface protège alors le système receveur contre tout
+allumage quasi-statique, quelle que soit l'amplitude extérieure brute.
+
+\subsection{Protection de la branche résistante}
+
+Si
+
+\[
+g_c^0
+<
+\frac{\rho}{\eta w}
+\leq
+g_H^0,
+\]
+
+le repos peut perdre sa stabilité, mais le seuil de Hopf de la branche
+résistante reste inaccessible.
+
+La résistance peut donc apparaître sans pouvoir être rompue par une
+simple augmentation de l'amplitude soutenue.
+
+Pour les paramètres étudiés,
+
+\[
+\rho=0{,}05,
+\qquad
+\eta=1,
+\]
+
+et
+
+\[
+\frac{\rho}{\eta w}
+=
+0{,}0510.
+\]
+
+Comme
+
+\[
+g_c^0=0{,}0327
+<
+0{,}0510
+<
+g_H^0=0{,}1285,
+\]
+
+R1 autorise l'apparition de la résistance, mais protège
+structurellement cette branche contre la rupture de Hopf du modèle
+continu.
+
+\section{Fenêtre initiale d'ouverture}
+\label{annexe-r1-fenetre-initiale}
+
+La formule de transport précédente porte sur le régime soutenu. Elle
+ne décrit pas exactement un protocole démarrant avec une interface
+ouverte.
+
+Si
+
+\[
+q_0>q_\infty(g),
+\]
+
+alors
+
+\[
+g_{\mathrm{eff}}(t;g)
+>
+g_{\mathrm{eff}}^\infty(g)
+\]
+
+pour tout temps fini.
+
+L'excès transmis au-dessus du régime asymptotique vaut
+
+\[
+g_{\mathrm{eff}}(t;g)
+-
+g_{\mathrm{eff}}^\infty(g)
+=
+g
+\bigl(
+q_0-q_\infty(g)
+\bigr)
+e^{-a_R(g)t}.
+\]
+
+Son intégrale totale est
+
+\[
+\boxed{
+\int_0^\infty
+\left[
+g_{\mathrm{eff}}(t;g)
+-
+g_{\mathrm{eff}}^\infty(g)
+\right]
+\,\mathrm dt
+=
+\frac{
+g\bigl(q_0-q_\infty(g)\bigr)
+}{
+\rho+\eta gw
+}.
+}
+\]
+
+Cette quantité mesure la fenêtre initiale d'ouverture.
+
+Avec \(q_0=1\), le seuil quasi-statique calculé pour
+\(g_c^{R1}\) vaut
+
+\[
+0{,}0913,
+\]
+
+alors que le seuil observé sous mise en contact brutale vaut
+
+\[
+0{,}0863.
+\]
+
+Cette différence ne contredit pas la formule analytique : le système
+profite du surcroît initial de perméabilité avant la fermeture de
+l'interface.
+
+\section{Absence d'hystérésis dans R1 minimal}
+\label{annexe-r1-absence-hysteresis}
+
+Pour chaque valeur fixée de \(g\), la dynamique de \(q\) possède un
+équilibre unique \(q_\infty(g)\), globalement stable.
+
+Il n'existe donc ni branche ouverte ni branche fermée coexistantes à
+la même valeur de \(g\). La loi R1 minimale ne produit pas
+d'hystérésis propre.
+
+Une hystérésis demanderait un mécanisme supplémentaire, par exemple :
+
+\begin{itemize}
+\item
+  deux seuils distincts d'ouverture et de fermeture ;
+\item
+  une usure cumulative ;
+\item
+  une variable lente modifiant durablement \(\rho\) ou \(\eta\).
+\end{itemize}
+
+\section{Effet sur la durée d'appropriation}
+\label{annexe-r1-duree}
+
+R1 réduit l'amplitude transmise après la fenêtre initiale. La charge de
+trace monte donc plus lentement et la durée minimale d'exposition
+augmente.
+
+Pour le protocole de référence :
+
+\[
+\begin{array}{c|cc}
+g
+&
+T^\ast\text{ sous R0}
+&
+T^\ast\text{ sous R1}
+\\
+\hline
+0{,}10&24{,}8&88{,}9\\
+0{,}20&15{,}0&32{,}1\\
+0{,}30&12{,}3&26{,}2
+\end{array}
+\]
+
+Ces valeurs sont numériques. La partie démontrée ici est la loi de
+filtrage \(g\mapsto g_{\mathrm{eff}}(t;g)\), non une formule fermée
+pour \(T^\ast\).
+
+\section{R2 : écriture événementielle}
+
+\subsection{Modèle réduit au repos}
+\label{annexe-r2-modele}
+
+R2 ne laisse plus l'influence écrire directement dans la trace. Elle
+s'accumule d'abord dans une variable d'interface \(\chi\).
+
+Sur la diagonale positive, chaque composante de \(\chi\) vérifie
+
+\[
+\dot\chi
+=
+gw-\lambda_\chi\chi.
+\]
+
+Comme le vecteur complet vaut \((\chi,\chi)\),
+
+\[
+\|\boldsymbol\chi\|
+=
+\sqrt2\,\chi.
+\]
+
+Au repos exact du système receveur,
+
+\[
+x=0,
+\qquad
+v=0,
+\]
+
+la pression vérifie
+
+\[
+\dot p
+=
+\kappa_\chi\sqrt2\,\chi
+-
+\kappa_3p.
+\]
+
+Lors d'un Kairos,
+
+\[
+\theta^+
+=
+\theta^-
++
+\kappa_Q\chi^-,
+\]
+
+\[
+\chi^+
+=
+(1-r_\chi)\chi^-,
+\]
+
+\[
+p^+
+=
+r_P\Theta.
+\]
+
+La variable \(\theta\) désigne ici une composante de la trace
+diagonale
+
+\[
+\tau=(\theta,\theta).
+\]
+
+Entre les événements, au repos exact,
+
+\[
+\dot\theta=-\beta\theta.
+\]
+
+Les paramètres de référence sont
+
+\[
+\lambda_\chi=0{,}2,
+\qquad
+\kappa_Q=0{,}6,
+\qquad
+r_\chi=0{,}8,
+\qquad
+\kappa_\chi=2{,}5.
+\]
+Aux paramètres de référence, \(\kappa_3=0{,}5\neq
+\lambda_\chi=0{,}2\) : la forme générique de la solution ci-dessous
+est donc celle effectivement utilisée.
+
+Cette règle réalise une écriture événementielle. Elle n'est pas encore
+conditionnelle à une compatibilité entre le contenu reçu et l'état de
+l'interface.
+
+\subsection{Solution de \texorpdfstring{$\chi$}{chi} entre deux événements}
+\label{annexe-r2-solution-chi}
+
+Posons
+
+\[
+\chi_\infty(g)
+=
+\frac{gw}{\lambda_\chi}.
+\]
+
+À partir d'une valeur post-événement \(\chi_0\),
+
+\[
+\boxed{
+\chi(t)
+=
+\chi_\infty
++
+\left(
+\chi_0-\chi_\infty
+\right)
+e^{-\lambda_\chi t}.
+}
+\]
+
+La variable \(\chi\) tend donc vers la charge d'interface
+\(\chi_\infty\) tant que le contact reste actif.
+
+\subsection{Solution de la pression}
+\label{annexe-r2-solution-pression}
+
+Posons
+
+\[
+c_\chi
+=
+\kappa_\chi\sqrt2.
+\]
+
+La pression satisfait
+
+\[
+\dot p+\kappa_3p=c_\chi\chi(t).
+\]
+
+Avec
+
+\[
+p(0)=p_0,
+\]
+
+la variation des constantes donne
+
+\[
+p(t)
+=
+p_0e^{-\kappa_3t}
++
+c_\chi
+\int_0^t
+e^{-\kappa_3(t-s)}
+\chi(s)
+\,\mathrm ds.
+\]
+
+Lorsque
+
+\[
+\kappa_3\neq\lambda_\chi,
+\]
+
+on obtient
+
+\[
+\boxed{
+\begin{aligned}
+p(t)
+={}&
+p_0e^{-\kappa_3t}
++
+\frac{c_\chi\chi_\infty}{\kappa_3}
+\left(
+1-e^{-\kappa_3t}
+\right)
+\\
+&+
+c_\chi
+\left(
+\chi_0-\chi_\infty
+\right)
+\frac{
+e^{-\lambda_\chi t}
+-
+e^{-\kappa_3t}
+}{
+\kappa_3-\lambda_\chi
+}.
+\end{aligned}
+}
+\]
+
+Dans le cas particulier
+
+\[
+\kappa_3=\lambda_\chi,
+\]
+
+le dernier quotient doit être remplacé par sa limite :
+
+\[
+te^{-\kappa_3t}.
+\]
+
+Après un événement,
+
+\[
+p_0=r_P\Theta.
+\]
+
+Le prochain Kairos se produit au plus petit temps positif
+\(\Delta\) tel que
+
+\[
+p(\Delta)=\Theta.
+\]
+
+Cette équation combine deux exponentielles de taux différents. Elle
+est explicite en \(p(t)\), mais transcendante en \(\Delta\).
+
+\subsection{Seuil d'activité événementielle soutenue}
+\label{annexe-r2-gk}
+
+En l'absence de nouveau saut, le couple \((\chi,p)\) tend vers
+
+\[
+\chi_\infty
+=
+\frac{gw}{\lambda_\chi},
+\]
+
+et
+
+\[
+p_\infty
+=
+\frac{c_\chi}{\kappa_3}\chi_\infty.
+\]
+
+Ainsi,
+
+\[
+p_\infty
+=
+\frac{
+\kappa_\chi\sqrt2\,gw
+}{
+\kappa_3\lambda_\chi
+}.
+\]
+
+Une activité événementielle soutenue est possible lorsque la pression
+asymptotique dépasse le seuil :
+
+\[
+p_\infty>\Theta.
+\]
+
+Le seuil limite est défini par
+
+\[
+p_\infty=\Theta.
+\]
+
+On obtient
+
+\[
+\boxed{
+g_K
+=
+\frac{
+\Theta\kappa_3\lambda_\chi
+}{
+\kappa_\chi\sqrt2\,w
+}.
+}
+\]
+
+Pour les paramètres de référence,
+
+\[
+\boxed{
+g_K=0{,}03608.
+}
+\]
+
+À \(g=g_K\), le seuil n'est atteint qu'asymptotiquement dans le modèle
+sans perturbation : la période diverge. Pour \(g>g_K\), la pression
+finit par franchir \(\Theta\) après chaque relaxation.
+
+Cette formule caractérise l'apparition d'une activité événementielle
+soutenue. Elle ne dit rien, à elle seule, sur la stabilité du repos
+dans les variables \((x,v)\).
+
+\subsection{Application de retour de \texorpdfstring{$\chi$}{chi}}
+\label{annexe-r2-retour-chi}
+
+Notons
+
+\[
+\chi_n^+
+\]
+
+la charge immédiatement après le \(n\)-ième événement.
+
+Pour une valeur donnée \(\chi_n^+\), le temps
+\(\Delta_n\) jusqu'au prochain événement est le plus petit zéro positif
+de
+
+\[
+p(t;\chi_n^+,r_P\Theta)-\Theta.
+\]
+
+La charge juste avant l'événement suivant vaut
+
+\[
+\chi_{n+1}^-
+=
+\chi_\infty
++
+\left(
+\chi_n^+-\chi_\infty
+\right)
+e^{-\lambda_\chi\Delta_n}.
+\]
+
+Après le saut,
+
+\[
+\boxed{
+\chi_{n+1}^+
+=
+(1-r_\chi)
+\left[
+\chi_\infty
++
+\left(
+\chi_n^+-\chi_\infty
+\right)
+e^{-\lambda_\chi\Delta_n}
+\right].
+}
+\]
+
+Cette relation définit une application de retour scalaire
+
+\[
+\chi_{n+1}^+
+=
+\mathcal R_g(\chi_n^+).
+\]
+
+Elle est explicite une fois \(\Delta_n\) calculé, mais
+\(\Delta_n\) reste la solution d'une équation transcendante.
+
+\subsection{Cycle fixe de l'interface}
+\label{annexe-r2-cycle-fixe}
+
+Sur un cycle périodique, la période est constante :
+
+\[
+\Delta_n=\Delta.
+\]
+
+Posons
+
+\[
+E_\chi
+=
+e^{-\lambda_\chi\Delta}.
+\]
+
+Les valeurs pré- et post-événement vérifient
+
+\[
+\chi_\ast^+
+=
+(1-r_\chi)\chi_\ast^-,
+\]
+
+et
+
+\[
+\chi_\ast^-
+=
+\chi_\infty
++
+\left(
+\chi_\ast^+-\chi_\infty
+\right)E_\chi.
+\]
+
+En éliminant \(\chi_\ast^+\), on obtient
+
+\[
+\chi_\ast^-
+\left[
+1-(1-r_\chi)E_\chi
+\right]
+=
+\chi_\infty
+\left(
+1-E_\chi
+\right).
+\]
+
+Ainsi,
+
+\[
+\boxed{
+\chi_\ast^-(\Delta)
+=
+\chi_\infty
+\frac{
+1-e^{-\lambda_\chi\Delta}
+}{
+1-(1-r_\chi)e^{-\lambda_\chi\Delta}
+}.
+}
+\]
+
+Et
+
+\[
+\boxed{
+\chi_\ast^+(\Delta)
+=
+(1-r_\chi)\chi_\ast^-(\Delta).
+}
+\]
+
+La période est déterminée par l'équation
+
+\[
+\boxed{
+p
+\left(
+\Delta;
+\chi_\ast^+(\Delta),
+r_P\Theta
+\right)
+=
+\Theta.
+}
+\]
+
+Il s'agit d'une équation scalaire transcendante en \(\Delta\).
+
+Pour les paramètres étudiés et \(g>g_K\), la résolution numérique
+donne un cycle attractif de l'interface. L'existence du seuil \(g_K\)
+et les formules précédentes sont analytiques ; l'unicité et
+l'attractivité globales du cycle pour toute valeur admissible des
+paramètres ne sont pas démontrées ici.
+
+\subsection{Application de retour de la trace}
+\label{annexe-r2-retour-trace}
+
+Entre deux événements,
+
+\[
+\theta(t)
+=
+\theta_n^+e^{-\beta t}.
+\]
+
+Juste avant l'événement suivant,
+
+\[
+\theta_{n+1}^-
+=
+e^{-\beta\Delta}\theta_n^+.
+\]
+
+Le quantum ajoute
+
+\[
+\kappa_Q\chi_\ast^-.
+\]
+
+La carte de la trace est donc
+
+\[
+\boxed{
+\theta_{n+1}^+
+=
+e^{-\beta\Delta}\theta_n^+
++
+\kappa_Q\chi_\ast^-.
+}
+\]
+
+Il s'agit d'une application affine contractante, car
+
+\[
+0<e^{-\beta\Delta}<1.
+\]
+
+Son point fixe est
+
+\[
+\boxed{
+\theta_\infty^+
+=
+\frac{
+\kappa_Q\chi_\ast^-
+}{
+1-e^{-\beta\Delta}
+}.
+}
+\]
+
+La valeur juste avant l'événement est
+
+\[
+\boxed{
+\theta_\infty^-
+=
+e^{-\beta\Delta}
+\theta_\infty^+.
+}
+\]
+
+\subsection{Moyenne temporelle exacte de la trace}
+\label{annexe-r2-moyenne-trace}
+
+Sur le cycle fixe,
+
+\[
+\theta_\ast(t)
+=
+\theta_\infty^+
+e^{-\beta t},
+\qquad
+0\leq t<\Delta.
+\]
+
+Sa moyenne temporelle est
+
+\[
+\bar\theta
+=
+\frac{1}{\Delta}
+\int_0^\Delta
+\theta_\infty^+
+e^{-\beta t}
+\,\mathrm dt.
+\]
+
+Donc
+
+\[
+\bar\theta
+=
+\frac{
+\theta_\infty^+
+\left(
+1-e^{-\beta\Delta}
+\right)
+}{
+\beta\Delta
+}.
+\]
+
+En utilisant la formule du point fixe,
+
+\[
+\boxed{
+\bar\theta
+=
+\frac{
+\kappa_Q\chi_\ast^-
+}{
+\beta\Delta
+}.
+}
+\]
+
+La quantité
+
+\[
+\frac{\kappa_Q\chi_\ast^-}{\Delta}
+\]
+
+est le débit moyen de trace livré par les événements. La trace moyenne
+est ce débit divisé par le taux d'oubli \(\beta\).
+
+\begin{quote}
+\resultheading{Proposition}{prop:E-trace-moyenne-R2}{}
+Dans le cycle événementiel stationnaire de R2,
+\[
+\text{trace moyenne}
+=
+\frac{
+\text{quantum par événement}
+}{
+\text{période}\times\text{taux d'oubli}
+}.
+\]
+\end{quote}
+
+Cette identité est exacte une fois \(\Delta\) connu.
+
+\subsection{Vérification de la loi moyenne}
+\label{annexe-r2-verification-moyenne}
+
+Pour quatre intensités testées, les valeurs prédites et mesurées de
+\(\bar\theta\) sont :
+
+\[
+\begin{array}{c|cc}
+ & \text{prédite} & \text{mesurée}\\
+\hline
+1&0{,}1293&0{,}1288\\
+2&0{,}2886&0{,}2885\\
+3&0{,}3953&0{,}3952\\
+4&0{,}7216&0{,}7216
+\end{array}
+\]
+
+Les écarts observés viennent de l'intégration et de la détection
+numériques des événements. La relation analytique elle-même ne
+contient aucun paramètre ajusté. Pour une reproduction complète, le
+rapport numérique associé doit exporter, pour chaque ligne, le couple
+\((\Delta(g),\chi_\ast^-(g))\) utilisé dans
+\(\bar\theta=\kappa_Q\chi_\ast^-/(\beta\Delta)\). Ces valeurs
+intermédiaires ne sont pas reconstruites à partir des seules valeurs
+arrondies du tableau.
+
+\subsection{Dynamique linéaire de \texorpdfstring{$(x,v)$}{(x,v)} sur le cycle}
+\label{annexe-r2-dynamique-lineaire}
+
+Le cycle de l'interface crée une trace en dent de scie. Sur la
+diagonale,
+
+\[
+\tau(t)
+=
+(\theta_\ast(t),\theta_\ast(t)),
+\]
+
+donc
+
+\[
+r_\ast(t)
+=
+\|\tau(t)\|
+=
+\sqrt2\,\theta_\ast(t).
+\]
+
+La linéarisation de la dynamique de l'état autour du repos est
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\begin{pmatrix}
+\delta x\\
+\delta v
+\end{pmatrix}
+=
+A_g(t)
+\begin{pmatrix}
+\delta x\\
+\delta v
+\end{pmatrix},
+\]
+
+avec
+
+\[
+\boxed{
+A_g(t)
+=
+\begin{pmatrix}
+0&1\\
+\zeta-m(r_\ast(t))
+&
+-\Gamma(r_\ast(t))
+\end{pmatrix}.
+}
+\]
+
+La matrice \(A_g(t)\) est périodique de période \(\Delta(g)\).
+
+Notons \(\Phi_g(t)\) la matrice fondamentale définie par
+
+\[
+\dot\Phi_g(t)
+=
+A_g(t)\Phi_g(t),
+\qquad
+\Phi_g(0)=I_2.
+\]
+
+Lors du Kairos, la position est inchangée et la vitesse est relaxée :
+
+\[
+\delta x^+=\delta x^-,
+\qquad
+\delta v^+=r_V\delta v^-.
+\]
+
+La matrice de saut linéaire est donc
+
+\[
+R_V
+=
+\begin{pmatrix}
+1&0\\
+0&r_V
+\end{pmatrix}.
+\]
+
+La matrice de monodromie, d'un instant immédiatement postérieur à un
+événement au suivant, est
+
+\[
+\boxed{
+\mathcal M_g
+=
+R_V\Phi_g(\Delta(g)).
+}
+\]
+
+Le repos périodique est linéairement stable dans cette réduction si
+
+\[
+\rho_{\mathrm{sp}}(\mathcal M_g)<1,
+\]
+
+où \(\rho_{\mathrm{sp}}\) désigne le rayon spectral.
+
+Il perd sa stabilité lorsque le multiplicateur dominant traverse le
+cercle unité :
+
+\[
+\boxed{
+\rho_{\mathrm{sp}}(\mathcal M_{g_F})=1.
+}
+\]
+
+La période \(\Delta(g)\) et la matrice fondamentale doivent être
+calculées numériquement. Le multiplicateur de Floquet n'est donc pas
+disponible sous forme fermée.
+
+\subsection{Portée de la monodromie utilisée}
+\label{annexe-r2-portee-monodromie}
+
+La formule précédente est la monodromie du cycle réduit utilisé dans
+le Tome II :
+
+\begin{itemize}
+\item
+  l'horaire des événements est déterminé par le sous-système
+  \((\chi,p)\) au repos ;
+\item
+  les variables \((x,v)\) évoluent linéairement le long de cet horaire ;
+\item
+  la relaxation de \(v\) est incluse par \(R_V\).
+\end{itemize}
+
+Dans le noyau complet, la pression contient aussi des termes en
+\(\|x\|\) et \(\|v\|\). Ces normes ne sont pas différentiables au
+repos. Une analyse de saltation complète demanderait soit une
+régularisation, soit une étude directionnelle de cette dépendance des
+instants d'événement.
+
+Le seuil calculé ci-dessous a donc le statut de seuil de stabilité du
+cycle R2 réduit, celui effectivement utilisé dans les expériences du
+Tome II.
+
+\subsection{Seuil de Floquet}
+\label{annexe-r2-gf}
+
+Le calcul numérique du multiplicateur dominant donne
+
+\[
+\boxed{
+g_F=0{,}0763.
+}
+\]
+
+Ce seuil est l'analogue local du seuil de stabilité du repos dans un
+système à coefficients périodiques.
+
+Il est distinct de \(g_K\) :
+
+\[
+g_K<g_F.
+\]
+
+Pour
+
+\[
+g_K<g<g_F,
+\]
+
+l'interface produit déjà des événements soutenus, mais le repos reste
+stable dans les variables \((x,v)\).
+
+\subsection{Approximation quasi-statique}
+\label{annexe-r2-quasi-statique}
+
+Définissons le seuil scalaire par composante
+
+\[
+\theta_{\mathrm{ign}}
+=
+\frac{\tau_{\mathrm{ign}}}{\sqrt2}.
+\]
+
+Une approximation simple remplace la trace périodique par sa moyenne
+et impose
+
+\[
+\bar\theta(g)
+=
+\theta_{\mathrm{ign}}.
+\]
+
+Le seuil obtenu est
+
+\[
+\boxed{
+g_F^{qs}=0{,}0760.
+}
+\]
+
+L'écart relatif avec le calcul de Floquet est d'environ
+
+\[
+0{,}4\,\%.
+\]
+
+Cette proximité s'explique par la séparation des temps :
+
+\[
+\Delta(g)
+\simeq3\text{ à }4,
+\]
+
+alors que
+
+\[
+\frac{1}{\beta}
+\simeq8{,}3.
+\]
+
+La trace varie peu à l'échelle d'un cycle. La moyenne conserve donc
+l'information locale essentielle.
+
+Le symbole \(g_F^{qs}\) ne désigne pas un cinquième seuil. Il s'agit
+d'une approximation de \(g_F\).
+
+\subsection{Validation, instabilité et appropriation}
+\label{annexe-r2-validation-appropriation}
+
+Trois événements logiques doivent être séparés.
+
+\subsubsection{Activité événementielle}
+
+\[
+g>g_K
+\]
+
+signifie que l'interface peut produire indéfiniment des Kairos sous
+contact soutenu.
+
+\subsubsection{Perte de stabilité du repos}
+
+\[
+g>g_F
+\]
+
+signifie que le cycle périodique du repos est localement instable dans
+la réduction de Floquet.
+
+\subsubsection{Appropriation}
+
+L'appropriation exige que la trajectoire franchisse une séparatrice et
+rejoigne, après découplage, un autre attracteur autonome.
+
+Pour la perturbation initiale et le protocole de référence,
+
+\[
+\boxed{
+g_{\mathrm{app}}^{R2}
+(x_0;\mathcal P)
+=
+0{,}1632.
+}
+\]
+
+Cette valeur dépend :
+
+\begin{itemize}
+\item
+  de la perturbation initiale \(x_0\) ;
+\item
+  du protocole \(\mathcal P\) ;
+\item
+  de la phase du cycle événementiel ;
+\item
+  de la structure des bassins.
+\end{itemize}
+
+Elle n'est donc ni \(g_K\), ni \(g_F\), ni un seuil structurel
+universel.
+
+À \(g=0{,}10\), le protocole de référence produit
+
+\[
+271
+\]
+
+Kairos et une trace maximale supérieure au seuil d'instabilité, sans
+appropriation. Le système est capturé par une configuration résistante
+sous charge pulsée.
+
+Ainsi,
+
+\[
+\boxed{
+\text{validation événementielle}
+\neq
+\text{appropriation}.
+}
+\]
+
+\subsection{Résistance pulsée}
+\label{annexe-r2-resistance-pulsee}
+
+Dans le modèle continu R0, la branche résistante perd sa stabilité à
+
+\[
+g_H^0=0{,}1285.
+\]
+
+Sous R2, une rampe lente initialisée sur l'attracteur résistant pulsé
+ne montre aucune perte de stabilité jusqu'à
+
+\[
+g=0{,}30.
+\]
+
+La conclusion correcte est donc
+
+\[
+\boxed{
+g_H^{R2}>0{,}30
+}
+\]
+
+au sens d'une borne expérimentale.
+
+Cette écriture ne signifie pas qu'un seuil de Hopf a été localisé
+au-delà de \(0{,}30\). Plusieurs possibilités restent ouvertes :
+
+\begin{itemize}
+\item
+  un seuil plus lointain ;
+\item
+  une autre bifurcation ;
+\item
+  une résistance stable pour toute l'étendue testable ;
+\item
+  un changement d'attracteur suivi par la rampe.
+\end{itemize}
+
+\subsection{Hiérarchie des quatre seuils}
+\label{annexe-r2-hierarchie}
+
+Pour le protocole et les paramètres étudiés,
+
+\[
+\boxed{
+g_K
+<
+g_F
+<
+g_{\mathrm{app}}^{R2}
+<
+g_H^{R2}.
+}
+\]
+
+Les quatre objets sont :
+
+\[
+\begin{array}{c|c|l}
+\text{symbole}
+&
+\text{valeur}
+&
+\text{nature}
+\\
+\hline
+g_K
+&
+0{,}03608
+&
+\text{activité événementielle soutenue}
+\\
+g_F
+&
+0{,}0763
+&
+\text{perte de stabilité du repos périodique}
+\\
+g_{\mathrm{app}}^{R2}(x_0;\mathcal P)
+&
+0{,}1632
+&
+\text{franchissement de bassin et persistance}
+\\
+g_H^{R2}
+&
+>0{,}30
+&
+\text{aucune rupture résistante observée avant cette borne}
+\end{array}
+\]
+
+Le seuil quasi-statique
+
+\[
+g_F^{qs}=0{,}0760
+\]
+
+est une approximation de \(g_F\), pas un objet supplémentaire.
+
+\section{Comparaison structurale de R1 et R2}
+\label{annexe-interfaces-comparaison}
+
+R1 et R2 protègent le système par deux mécanismes distincts.
+
+\subsection{R1 agit sur l'amplitude}
+
+\[
+g
+\longmapsto
+g_{\mathrm{eff}}^\infty(g)
+=
+\frac{\rho g}{\rho+\eta gw}.
+\]
+
+Le couplage est continu, mais plafonné.
+
+\subsection{R2 agit sur la temporalité}
+
+\[
+gw
+\longmapsto
+\left\{
+\kappa_Q\chi_n^-
+\right\}_{n\geq0}.
+\]
+
+Le couplage brut alimente l'interface en continu, mais la trace reçoit
+des quanta séparés par une cadence endogène.
+
+La charge continue équivalente est
+
+\[
+\boxed{
+\text{débit moyen d'écriture}
+=
+\frac{\kappa_Q\chi_\ast^-}{\Delta}.
+}
+\]
+
+Ainsi :
+
+\[
+\boxed{
+\begin{aligned}
+\text{R1}
+&:
+\text{combien peut entrer ?}
+\\
+\text{R2}
+&:
+\text{quand et sous quelle forme cela entre-t-il ?}
+\end{aligned}
+}
+\]
+
+\section{Résultats établis et limites}
+\label{annexe-interfaces-limites}
+
+\subsection{Résultats analytiques}
+
+Cette annexe établit :
+
+\begin{itemize}
+\item
+  la solution exacte de R1 ;
+\item
+  le couplage effectif et son plafond ;
+\item
+  la formule de transport des seuils ;
+\item
+  la condition d'inaccessibilité d'un seuil ;
+\item
+  l'absence d'hystérésis dans R1 minimal ;
+\item
+  les solutions explicites de \(\chi\) et \(p\) entre deux événements ;
+\item
+  la formule exacte de \(g_K\) ;
+\item
+  l'application de retour de \(\chi\) ;
+\item
+  la caractérisation transcendante de \(\Delta\) ;
+\item
+  la carte affine de la trace ;
+\item
+  la formule exacte de sa moyenne temporelle ;
+\item
+  la construction de la matrice de monodromie réduite.
+\end{itemize}
+
+\subsection{Résultats analytiques complétés numériquement}
+
+Les valeurs suivantes demandent une résolution ou une intégration
+numérique :
+
+\[
+g_F=0{,}0763,
+\]
+
+\[
+g_F^{qs}=0{,}0760,
+\]
+
+les périodes \(\Delta(g)\), et les valeurs de
+\(T^\ast\) sous R1.
+
+\subsection{Faits de bassin ou de protocole}
+
+Les quantités suivantes ne sont pas des seuils universels :
+
+\[
+g_{\mathrm{app}}^{R2}
+(x_0;\mathcal P)
+=
+0{,}1632,
+\]
+
+et
+
+\[
+g_H^{R2}>0{,}30.
+\]
+
+La première dépend du protocole et de la condition initiale. La seconde
+est seulement une borne issue d'une rampe numérique.
+
+\subsection{Questions laissées à l'annexe numérique}
+
+Ne sont pas développés ici :
+
+\begin{itemize}
+\item
+  les bandes de sommation selon le délai ;
+\item
+  le prédicteur de phase ;
+\item
+  les contrôles à charge nette comparable ;
+\item
+  l'amorçage scalaire ;
+\item
+  la mémoire vectorielle et la compatibilité directionnelle.
+\end{itemize}
+
+Ces résultats demandent surtout une description précise des protocoles
+et des validations numériques. Ils relèvent donc de l'annexe suivante.

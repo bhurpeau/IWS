@@ -1,0 +1,1954 @@
+\section{Objet de l'annexe}
+\label{annexe-reduction-objet}
+
+Cette annexe établit le lien mathématique entre les deux premiers
+tomes. Elle répond à quatre questions :
+
+\begin{enumerate}
+\item
+  dans quel sens un réseau exactement homogène reste-t-il homogène ?
+\item
+  quel système réduit décrit alors sa dynamique ?
+\item
+  quels équilibres structurent le paysage autonome de ce système ?
+\item
+  quelle réduction scalaire est utilisée dans le Tome II pour étudier
+  la résistance et l'appropriation ?
+\end{enumerate}
+
+Deux précisions sont importantes dès le départ.
+
+Premièrement, l'homogénéité entre les nœuds du réseau et l'égalité des
+composantes internes sont deux réductions différentes. Nous les
+noterons respectivement \(\Delta\) et \(\mathcal D\).
+
+Deuxièmement, la règle de priorité traite une cascade de Kairos nœud
+par nœud. L'ensemble \(\Delta\) n'est donc pas invariant après chaque
+saut élémentaire. Il est invariant pendant le flot et entre le début
+et la fin d'une cascade complète. Cette distinction sera démontrée
+explicitement.
+
+\section{Deux réductions distinctes}
+\label{annexe-reduction-deux-reductions}
+
+\subsection{Homogénéité entre les nœuds}
+
+Pour un réseau de \(N\) nœuds, on définit
+
+\[
+\Delta
+=
+\left\{
+H_i=h,\;
+V_i=v,\;
+\tau_i=\theta,\;
+P_i=p
+\quad
+\text{pour tout }i
+\right\}.
+\]
+
+Les variables réduites
+
+\[
+h,v,\theta\in\mathbb R^d,
+\qquad
+p\in\mathbb R_+
+\]
+
+décrivent alors l'état commun des nœuds.
+
+\subsection{Diagonale des composantes internes}
+
+Lorsque \(d=2\), on introduit également
+
+\[
+\mathcal D
+=
+\left\{
+h=(x,x),\;
+v=(y,y),\;
+\theta=(\vartheta,\vartheta)
+\right\}.
+\]
+
+Cette seconde réduction ne concerne plus l'égalité entre les nœuds.
+Elle concerne l'égalité entre les deux composantes d'un même état
+réduit.
+
+On peut donc avoir :
+
+\[
+\text{homogénéité du réseau}
+\quad\text{sans}\quad
+\text{égalité des composantes},
+\]
+
+ou utiliser successivement
+
+\[
+\text{réseau complet}
+\longrightarrow
+\Delta
+\longrightarrow
+\mathcal D.
+\]
+
+C'est cette double réduction qui conduit au système scalaire du
+Tome II.
+
+\section{Invariance de \texorpdfstring{$\Delta$}{Delta} pendant le flot}
+\label{annexe-reduction-invariance-flot}
+
+La matrice relationnelle normalisée est
+
+\[
+\widetilde A
+=
+\operatorname{Deg}(A+I)^{-1}(A+I).
+\]
+
+Elle est stochastique par lignes :
+
+\[
+\sum_{j=1}^N\widetilde A_{ij}=1.
+\]
+
+Supposons qu'à un instant \(t_0\),
+
+\[
+H_i=h,\qquad
+V_i=v,\qquad
+\tau_i=\theta,\qquad
+P_i=p
+\]
+
+pour tout \(i\), et que l'entrée soit uniforme :
+
+\[
+u_i(t)=u(t).
+\]
+
+Alors
+
+\[
+(\widetilde A H)_i
+=
+\sum_j\widetilde A_{ij}h
+=
+h
+\]
+
+pour tout \(i\), indépendamment de la structure du graphe.
+
+Les équations continues deviennent donc, pour chaque nœud,
+
+\[
+\dot H_i=v,
+\]
+
+\[
+\dot V_i
+=
+-\Gamma(\theta)v
+-
+M(\theta)h
++
+\zeta\tanh(h)
++
+u(t),
+\]
+
+\[
+\dot\tau_i
+=
+\alpha\tanh(h)-\beta\theta,
+\]
+
+\[
+\dot P_i
+=
+\kappa_1\|h\|
++
+\kappa_2\|v\|
+-
+\kappa_3p.
+\]
+
+Les dérivées sont les mêmes pour tous les nœuds. L'unicité de la
+solution continue implique alors que les égalités entre nœuds sont
+préservées.
+
+\begin{quote}
+\resultheading{Proposition}{prop:C-invariance-flot-delta}{}
+Pour tout graphe, toute entrée uniforme et toute condition initiale
+dans \(\Delta\), le flot reste dans \(\Delta\) jusqu'au prochain
+événement.
+\end{quote}
+
+Ce résultat dépend uniquement du caractère stochastique par lignes de
+\(\widetilde A\). Il ne dépend ni de la régularité du graphe ni de son
+degré moyen.
+
+\section{Effet d'une cascade de Kairos}
+\label{annexe-reduction-cascade}
+
+Supposons maintenant que l'état soit dans \(\Delta\) et que
+
+\[
+p=\Theta.
+\]
+
+Tous les nœuds atteignent donc le seuil au même instant. La règle de
+priorité sélectionne d'abord un nœud \(i^\ast\). Après ce saut,
+
+\[
+P_{i^\ast}^+=r_P\Theta,
+\qquad
+V_{i^\ast}^+=r_Vv,
+\]
+
+tandis que les autres nœuds vérifient encore
+
+\[
+P_j=\Theta,
+\qquad
+V_j=v.
+\]
+
+L'état intermédiaire n'appartient généralement plus à \(\Delta\).
+
+Le temps continu n'avance cependant pas pendant la cascade. Les
+pressions des nœuds non encore traités restent égales à \(\Theta\).
+Le nœud déjà traité vérifie
+
+\[
+r_P\Theta<\Theta
+\]
+
+et ne peut pas être sélectionné une seconde fois dans la même
+cascade. Après au plus \(N\) sauts, chaque nœud a été traité exactement
+une fois.
+
+À la fin de la cascade,
+
+\[
+H_i^+=h,
+\qquad
+\tau_i^+=\theta,
+\]
+
+\[
+V_i^+=r_Vv,
+\qquad
+P_i^+=r_P\Theta
+\]
+
+pour tout \(i\).
+
+Le recâblage peut produire un graphe non symétrique sous l'action du
+départage par les indices, mais il ne modifie pas directement les
+états \(H\), \(V\), \(\tau\) et \(P\). Après la cascade,
+\(\widetilde A H=h\) reste vrai puisque chaque ligne de
+\(\widetilde A\) somme à un.
+
+\begin{quote}
+\resultheading{Proposition}{prop:C-invariance-cascade-delta}{}
+L'ensemble \(\Delta\) est préservé par le flot et par l'application
+qui associe à un état précédant une cascade l'état obtenu après la
+cascade complète.
+\end{quote}
+
+Il faut donc distinguer :
+
+\[
+\boxed{
+\text{invariance après chaque saut élémentaire : fausse en général}
+}
+\]
+
+et
+
+\[
+\boxed{
+\text{invariance entre deux cascades complètes : vraie}.
+}
+\]
+
+Si l'on regroupe toute cascade instantanée en un seul saut composé,
+\(\Delta\) est une variété invariante du système hybride ainsi
+regroupé.
+
+\section{Système réduit sur \texorpdfstring{$\Delta$}{Delta}}
+\label{annexe-reduction-systeme-delta}
+
+Sur \(\Delta\), la dynamique continue est
+
+\[
+\dot h=v,
+\]
+
+\[
+\dot v
+=
+-\Gamma(\theta)v
+-
+M(\theta)h
++
+\zeta\tanh(h)
++
+u(t),
+\]
+
+\[
+\dot\theta
+=
+\alpha\tanh(h)-\beta\theta,
+\]
+
+\[
+\dot p
+=
+\kappa_1\|h\|
++
+\kappa_2\|v\|
+-
+\kappa_3p.
+\]
+
+Après une cascade complète,
+
+\[
+h^+=h^-,
+\qquad
+\theta^+=\theta^-,
+\]
+
+\[
+v^+=r_Vv^-,
+\qquad
+p^+=r_P\Theta.
+\]
+
+Le graphe a disparu des équations continues réduites. Il continue à
+évoluer lors des Kairos, mais il ne peut pas différencier les états
+tant que ceux-ci restent exactement homogènes.
+
+La pression \(p\) ne rétroagit sur \((h,v,\theta)\) qu'au moment des
+événements, par la relaxation de \(v\). Entre les événements, le
+sous-système
+
+\[
+(h,v,\theta)\in\mathbb R^{3d}
+\]
+
+est autonome lorsque \(u=0\).
+
+\section{Équilibres structurels du sous-système autonome}
+\label{annexe-reduction-equilibres}
+
+Nous appelons ici \emph{équilibre structurel} un équilibre du
+sous-système \((h,v,\theta)\). La pression sera traitée séparément.
+
+Posons
+
+\[
+k=\frac{\alpha}{\beta},
+\qquad
+s=\tanh(h),
+\]
+
+où \(\tanh\) est appliquée composante par composante.
+
+À l'équilibre,
+
+\[
+v^\ast=0,
+\]
+
+et
+
+\[
+\theta^\ast
+=
+k\,s^\ast.
+\]
+
+L'équation de \(v\) donne
+
+\[
+M(\theta^\ast)h^\ast
+=
+\zeta s^\ast.
+\]
+
+Comme \(Q(\theta)=M(\theta)^{-1}\),
+
+\[
+h^\ast
+=
+\zeta Q(\theta^\ast)s^\ast.
+\]
+
+Or
+
+\[
+Q(\theta)
+=
+I_d
++
+\frac{\lambda}{1+\|\theta\|^2}
+\theta\theta^\top.
+\]
+
+Puisque \(\theta^\ast=ks^\ast\),
+
+\[
+\begin{aligned}
+Q(\theta^\ast)s^\ast
+&=
+s^\ast
++
+\frac{\lambda}
+{1+k^2\|s^\ast\|^2}
+(ks^\ast)(ks^\ast)^\top s^\ast
+\\
+&=
+\left[
+1+
+\frac{\lambda k^2\|s^\ast\|^2}
+{1+k^2\|s^\ast\|^2}
+\right]s^\ast.
+\end{aligned}
+\]
+
+Ainsi,
+
+\[
+h^\ast
+=
+\zeta\Lambda(h^\ast)\tanh(h^\ast),
+\]
+
+avec
+
+\[
+\Lambda(h)
+=
+1+
+\frac{\lambda k^2\|\tanh(h)\|^2}
+{1+k^2\|\tanh(h)\|^2}.
+\]
+
+Le facteur \(\zeta\Lambda(h^\ast)\) est commun à toutes les
+composantes.
+
+\section{Pourquoi toutes les composantes non nulles ont la même
+amplitude}
+\label{annexe-reduction-amplitude-commune}
+
+Une composante non nulle \(y\) d'un équilibre satisfait
+
+\[
+y=C\tanh(y),
+\qquad
+C>0.
+\]
+
+Pour \(y>0\), cette équation équivaut à
+
+\[
+C=\frac{y}{\tanh y}.
+\]
+
+La fonction
+
+\[
+\varphi(y)=\frac{y}{\tanh y}
+\]
+
+est strictement croissante sur \((0,\infty)\). En effet,
+
+\[
+\varphi'(y)
+=
+\frac{\tanh y-y\,\operatorname{sech}^2y}
+{\tanh^2y}.
+\]
+
+Posons
+
+\[
+g(y)
+=
+\tanh y-y\,\operatorname{sech}^2y.
+\]
+
+On a \(g(0)=0\) et
+
+\[
+g'(y)
+=
+2y\,\operatorname{sech}^2y\,\tanh y
+>0
+\]
+
+pour \(y>0\). Donc \(g(y)>0\), puis \(\varphi'(y)>0\).
+
+Pour une valeur donnée de \(C\), il existe donc au plus une solution
+positive. Par imparité de \(\tanh\), les solutions non nulles sont
+\(\pm x\).
+
+Si \(q\) composantes de \(h^\ast\) sont non nulles, alors
+
+\[
+\|s^\ast\|^2
+=
+q\tanh^2x.
+\]
+
+L'amplitude commune \(x>0\) vérifie
+
+\[
+\boxed{
+x
+=
+\zeta\Lambda_q(x)\tanh x
+}
+\]
+
+avec
+
+\[
+\boxed{
+\Lambda_q(x)
+=
+1+
+\frac{\lambda qk^2\tanh^2x}
+{1+qk^2\tanh^2x}.
+}
+\]
+
+\begin{quote}
+\resultheading{Proposition}{prop:C-equilibres-structurels}{}
+Tout équilibre structurel vérifie
+\[
+v^\ast=0,
+\qquad
+\theta^\ast=k\tanh(h^\ast),
+\]
+et les composantes de \(h^\ast\) appartiennent à
+\[
+\{0,\pm x_q\},
+\]
+où \(x_q\) est une racine positive de l'équation précédente et \(q\)
+est le nombre de composantes non nulles.
+\end{quote}
+
+Cette proposition classe la forme possible des équilibres. Le nombre
+de racines positives de l'équation scalaire dépend des paramètres.
+
+\section{Développement près de l'origine}
+\label{annexe-reduction-developpement-origine}
+
+Pour \(x\) petit,
+
+\[
+\tanh x
+=
+x-\frac{x^3}{3}+O(x^5),
+\]
+
+et
+
+\[
+\tanh^2x
+=
+x^2+O(x^4).
+\]
+
+Par conséquent,
+
+\[
+\Lambda_q(x)
+=
+1+\lambda qk^2x^2+O(x^4).
+\]
+
+L'équation non nulle, divisée par \(x\), devient
+
+\[
+1
+=
+\zeta
+\left[
+1+
+\left(
+\lambda qk^2-\frac13
+\right)x^2
++
+O(x^4)
+\right].
+\]
+
+Lorsque
+
+\[
+\lambda qk^2>\frac13,
+\]
+
+la petite racine est donc approximativement
+
+\[
+\boxed{
+x_{u,q}
+\approx
+\sqrt{
+\frac{1/\zeta-1}
+{\lambda qk^2-1/3}
+}.
+}
+\]
+
+Cette formule est une approximation locale. Elle ne démontre pas à
+elle seule l'existence d'une racine haute.
+
+\section{Condition simple d'extinction structurelle}
+\label{annexe-reduction-extinction-structurelle}
+
+Pour tout \(x>0\),
+
+\[
+\tanh x<x,
+\]
+
+et
+
+\[
+\Lambda_q(x)<1+\lambda.
+\]
+
+Si
+
+\[
+\zeta(1+\lambda)\leq1,
+\]
+
+alors
+
+\[
+\zeta\Lambda_q(x)\tanh x
+<
+\zeta(1+\lambda)x
+\leq x.
+\]
+
+L'équation
+
+\[
+x=\zeta\Lambda_q(x)\tanh x
+\]
+
+ne possède donc aucune solution positive.
+
+\begin{quote}
+\resultheading{Proposition}{prop:C-extinction-structurelle}{}
+Si
+\[
+\zeta(1+\lambda)\leq1,
+\]
+l'origine est le seul équilibre structurel sur \(\Delta\).
+\end{quote}
+
+La condition est suffisante. Lorsque
+\(\zeta(1+\lambda)>1\), l'existence d'un équilibre actif dépend encore
+de la forme complète de l'équation.
+
+\section{Stabilité locale de l'origine}
+\label{annexe-reduction-stabilite-origine}
+
+À l'origine,
+
+\[
+M(0)=I_d,
+\qquad
+\Gamma(0)=\gamma_0,
+\qquad
+D\tanh(0)=I_d.
+\]
+
+Le terme
+
+\[
+\|\theta\|v
+\]
+
+est d'ordre deux au voisinage de \((\theta,v)=(0,0)\). Il ne contribue
+donc pas à la linéarisation, malgré la non-différentiabilité de la
+norme en zéro.
+
+La linéarisation est
+
+\[
+\delta\dot h=\delta v,
+\]
+
+\[
+\delta\dot v
+=
+-(1-\zeta)\delta h
+-
+\gamma_0\delta v,
+\]
+
+\[
+\delta\dot\theta
+=
+\alpha\delta h
+-
+\beta\delta\theta.
+\]
+
+La matrice est triangulaire par blocs. Son polynôme caractéristique
+est
+
+\[
+\boxed{
+(s+\beta)^d
+\left(
+s^2+\gamma_0s+1-\zeta
+\right)^d.
+}
+\]
+
+Comme \(\beta>0\) et \(\gamma_0>0\), l'origine est localement
+exponentiellement stable si
+
+\[
+\boxed{\zeta<1}.
+\]
+
+Elle est instable si \(\zeta>1\). Le cas \(\zeta=1\) est
+non hyperbolique.
+
+\section{Seuil de trace qui déstabilise le repos}
+\label{annexe-reduction-seuil-trace}
+
+Le Tome II considère un système maintenu près de
+
+\[
+h=0,
+\qquad
+v=0,
+\]
+
+alors que sa trace peut être chargée par une influence extérieure.
+
+Dans la direction de la trace, la valeur propre du préconditionneur
+est
+
+\[
+m(r)
+=
+\frac{1+r^2}
+{1+(1+\lambda)r^2},
+\qquad
+r=\|\theta\|.
+\]
+
+Pour une trace momentanément fixée, la dynamique linéaire de la
+position dans cette direction est
+
+\[
+\ddot x
++
+\Gamma(r)\dot x
++
+\bigl(m(r)-\zeta\bigr)x
+=
+0.
+\]
+
+Le repos perd sa stabilité lorsque
+
+\[
+m(r)=\zeta.
+\]
+
+L'équation donne
+
+\[
+1+r^2
+=
+\zeta
+\left[
+1+(1+\lambda)r^2
+\right].
+\]
+
+Ainsi,
+
+\[
+r^2
+=
+\frac{1-\zeta}
+{\zeta(1+\lambda)-1}.
+\]
+
+Un seuil fini positif existe si et seulement si
+
+\[
+\frac{1}{1+\lambda}<\zeta<1.
+\]
+
+On obtient alors
+
+\[
+\boxed{
+\tau_{\mathrm{ign}}
+=
+\sqrt{
+\frac{1-\zeta}
+{\zeta(1+\lambda)-1}
+}.
+}
+\]
+
+Pour les paramètres de référence,
+
+\[
+\zeta=0{,}8,
+\qquad
+\lambda=2,
+\]
+
+donc
+
+\[
+\boxed{
+\tau_{\mathrm{ign}}
+=
+0{,}377964\ldots
+}
+\]
+
+Le seuil concerne la norme de la trace. Sur la diagonale interne
+\(\theta=(\vartheta,\vartheta)\),
+
+\[
+\|\theta\|=\sqrt2\,|\vartheta|.
+\]
+
+\section{Extinction globale lorsque la trace n'agit pas sur le rappel}
+\label{annexe-reduction-extinction-lambda-zero}
+
+Prenons
+
+\[
+\lambda=0.
+\]
+
+Alors
+
+\[
+M(\theta)=I_d
+\]
+
+quelle que soit la trace. Le sous-système \((h,v)\) vérifie
+
+\[
+\dot h=v,
+\]
+
+\[
+\dot v
+=
+-\Gamma(\theta)v
+-h
++
+\zeta\tanh h.
+\]
+
+Supposons \(\zeta<1\). Définissons
+
+\[
+\mathcal V(h,v)
+=
+\frac12\|v\|^2
++
+\frac12\|h\|^2
+-
+\zeta
+\sum_{k=1}^d\log\cosh(h_k).
+\]
+
+Comme
+
+\[
+\frac{\partial}{\partial h_k}
+\log\cosh(h_k)
+=
+\tanh(h_k),
+\]
+
+sa dérivée est
+
+\[
+\begin{aligned}
+\dot{\mathcal V}
+&=
+v\cdot\dot v
++
+\bigl(h-\zeta\tanh h\bigr)\cdot\dot h
+\\
+&=
+-\Gamma(\theta)\|v\|^2
+\\
+&\leq
+-\gamma_0\|v\|^2.
+\end{aligned}
+\]
+
+La fonction \(\mathcal V\) est coercive. En effet,
+
+\[
+\log\cosh y\leq |y|,
+\]
+
+et le terme quadratique domine lorsque \(\|h\|\to\infty\).
+
+Elle est également strictement convexe en \(h\), car
+
+\[
+D_h^2\mathcal V
+=
+I_d
+-
+\zeta\,
+\operatorname{diag}
+\bigl(\operatorname{sech}^2h_k\bigr)
+\succeq
+(1-\zeta)I_d.
+\]
+
+Son unique minimum est donc \(h=0\), \(v=0\).
+
+L'ensemble où \(\dot{\mathcal V}=0\) impose \(v=0\). Pour qu'une
+trajectoire reste dans cet ensemble, il faut aussi
+
+\[
+\dot v
+=
+-h+\zeta\tanh h
+=
+0.
+\]
+
+Comme \(\zeta<1\), cette équation n'a que la solution \(h=0\). Enfin,
+
+\[
+\dot\theta=-\beta\theta
+\]
+
+sur cet ensemble.
+
+Le principe d'invariance de LaSalle donne donc
+
+\[
+\boxed{
+(h(t),v(t),\theta(t))
+\longrightarrow
+(0,0,0).
+}
+\]
+
+L'état actif du régime de référence n'existe donc pas sans
+l'affaiblissement du rappel produit par la trace.
+
+\section{Stabilité d'un équilibre en dimension un}
+\label{annexe-reduction-stabilite-d1}
+
+En dimension \(d=1\), écrivons
+
+\[
+x=h,
+\qquad
+\vartheta=\theta.
+\]
+
+La dynamique autonome est
+
+\[
+\dot x=v,
+\]
+
+\[
+\dot v
+=
+-\Gamma(\vartheta)v
+-
+m(\vartheta)x
++
+\zeta\tanh x,
+\]
+
+\[
+\dot\vartheta
+=
+\alpha\tanh x-\beta\vartheta,
+\]
+
+avec
+
+\[
+m(\vartheta)
+=
+\frac{1+\vartheta^2}
+{1+(1+\lambda)\vartheta^2}.
+\]
+
+À un équilibre non nul,
+
+\[
+\vartheta^\ast
+=
+k\tanh x^\ast.
+\]
+
+Posons
+
+\[
+s_\ast
+=
+\operatorname{sech}^2x^\ast,
+\]
+
+\[
+c_\ast
+=
+\zeta s_\ast,
+\]
+
+\[
+m_\ast
+=
+m(\vartheta^\ast),
+\]
+
+et
+
+\[
+b_\ast
+=
+-m'(\vartheta^\ast)x^\ast
+=
+\frac{
+2\lambda\vartheta^\ast x^\ast
+}{
+\left[
+1+(1+\lambda)(\vartheta^\ast)^2
+\right]^2
+}.
+\]
+
+Le produit \(\vartheta^\ast x^\ast\) est positif, donc \(b_\ast>0\).
+
+Le Jacobien est
+
+\[
+J_\ast
+=
+\begin{pmatrix}
+0 & 1 & 0\\
+-(m_\ast-c_\ast) & -\Gamma_\ast & b_\ast\\
+\alpha s_\ast & 0 & -\beta
+\end{pmatrix},
+\]
+
+où
+
+\[
+\Gamma_\ast
+=
+\gamma_0+\gamma_1|\vartheta^\ast|.
+\]
+
+Son polynôme caractéristique est
+
+\[
+p(s)
+=
+s^3+a_2s^2+a_1s+a_0,
+\]
+
+avec
+
+\[
+a_2
+=
+\Gamma_\ast+\beta,
+\]
+
+\[
+a_1
+=
+\Gamma_\ast\beta
++
+m_\ast-c_\ast,
+\]
+
+\[
+a_0
+=
+\beta(m_\ast-c_\ast)
+-
+\alpha b_\ast s_\ast.
+\]
+
+Pour un polynôme cubique réel, les conditions de Routh--Hurwitz sont
+
+\[
+a_2>0,
+\qquad
+a_1>0,
+\qquad
+a_0>0,
+\qquad
+a_2a_1>a_0.
+\]
+
+\subsection{Lien entre \texorpdfstring{$a_0$}{a0} et la branche d'équilibres}
+
+Définissons
+
+\[
+G(x)
+=
+m\!\left(k\tanh x\right)x
+-
+\zeta\tanh x.
+\]
+
+Les équilibres non nuls sont les zéros de \(G\). Par dérivation,
+
+\[
+\begin{aligned}
+G'(x)
+={}&
+m_\ast
+-
+\zeta s_\ast
++
+m'(\vartheta^\ast)
+\left(
+ks_\ast
+\right)x^\ast
+\\
+={}&
+m_\ast-c_\ast
+-
+\frac{\alpha}{\beta}
+b_\ast s_\ast.
+\end{aligned}
+\]
+
+Par conséquent,
+
+\[
+\boxed{
+a_0
+=
+\beta G'(x^\ast).
+}
+\]
+
+Si la branche traverse l'axe avec \(G'(x^\ast)<0\), alors
+\(a_0<0\) et l'équilibre est instable.
+
+Pour les paramètres de référence, la racine basse possède
+\(a_0<0\), tandis que la racine haute satisfait toutes les conditions
+de Routh--Hurwitz.
+
+\section{Classification en dimension deux}
+\label{annexe-reduction-classification-d2}
+
+Pour les paramètres de référence,
+
+\[
+\zeta=0{,}8,
+\qquad
+\lambda=2,
+\qquad
+\alpha=0{,}45,
+\qquad
+\beta=0{,}12,
+\]
+
+\[
+\gamma_0=0{,}25,
+\qquad
+\gamma_1=1{,}25,
+\qquad
+d=2.
+\]
+
+L'équation scalaire possède les racines positives suivantes :
+
+\[
+\begin{array}{c|cc}
+q & \text{racine basse} & \text{racine haute}\\
+\hline
+1 & 0{,}1021426 & 2{,}2376194\\
+2 & 0{,}0717413 & 2{,}2958568
+\end{array}
+\]
+
+Le statut exact de ce tableau est numérique : les racines sont
+obtenues par isolation puis résolution de l'équation scalaire. Leur
+forme possible, en revanche, est donnée analytiquement par la
+Proposition~\ref{prop:C-equilibres-structurels}.
+
+On obtient :
+
+\begin{itemize}
+\item
+  l'origine ;
+\item
+  pour \(q=1\), des points d'axe
+  \[
+  (\pm x,0),
+  \qquad
+  (0,\pm x);
+  \]
+\item
+  pour \(q=2\), des points à deux composantes actives
+  \[
+  (\pm x,\pm x),
+  \]
+  avec choix indépendant des signes.
+\end{itemize}
+
+Chaque famille existe avec une racine basse et une racine haute.
+
+\section{Pourquoi les points d'axe ne sont pas attractifs}
+\label{annexe-reduction-instabilite-axe}
+
+Considérons un point d'axe
+
+\[
+h^\ast=(x^\ast,0),
+\qquad
+\theta^\ast=(\vartheta^\ast,0),
+\]
+
+avec
+
+\[
+\vartheta^\ast=k\tanh x^\ast.
+\]
+
+La dynamique longitudinale, dans la première composante, est celle du
+système scalaire précédent.
+
+Étudions une perturbation dans la seconde composante. À l'équilibre,
+
+\[
+M(\theta^\ast)
+=
+\begin{pmatrix}
+m(\vartheta^\ast)&0\\
+0&1
+\end{pmatrix}.
+\]
+
+La rotation infinitésimale de la direction de la trace produit le
+coefficient
+
+\[
+b_\perp
+=
+\frac{
+\lambda\vartheta^\ast x^\ast
+}{
+1+(1+\lambda)(\vartheta^\ast)^2
+}.
+\]
+
+Le bloc transverse est
+
+\[
+J_\perp^{\mathrm{axe}}
+=
+\begin{pmatrix}
+0&1&0\\
+-(1-\zeta)&-\Gamma_\ast&b_\perp\\
+\alpha&0&-\beta
+\end{pmatrix}.
+\]
+
+Son terme constant est
+
+\[
+\boxed{
+a_{0,\perp}^{\mathrm{axe}}
+=
+\beta(1-\zeta)-\alpha b_\perp.
+}
+\]
+
+Pour la racine haute \(x^\ast=2{,}2376194\),
+
+\[
+\beta(1-\zeta)=0{,}024,
+\]
+
+tandis que
+
+\[
+\alpha b_\perp
+=
+0{,}178700\ldots
+\]
+
+Ainsi,
+
+\[
+a_{0,\perp}^{\mathrm{axe}}
+=
+-0{,}154700\ldots<0.
+\]
+
+Le bloc possède une valeur propre positive :
+
+\[
+\max\Re\operatorname{spec}
+\left(
+J_\perp^{\mathrm{axe}}
+\right)
+=
+0{,}113981\ldots
+\]
+
+Le point d'axe haut est donc stable le long de l'axe, mais instable
+vis-à-vis de l'allumage de la composante éteinte.
+
+\section{Stabilité des points à deux composantes actives}
+\label{annexe-reduction-stabilite-diagonale}
+
+Considérons, par symétrie,
+
+\[
+h^\ast=(x^\ast,x^\ast),
+\qquad
+\theta^\ast=(\vartheta^\ast,\vartheta^\ast).
+\]
+
+Les autres choix de signes ont le même spectre.
+
+Posons
+
+\[
+e_+
+=
+\frac{1}{\sqrt2}(1,1),
+\qquad
+e_-
+=
+\frac{1}{\sqrt2}(1,-1).
+\]
+
+La linéarisation se décompose en deux blocs de dimension trois :
+
+\begin{itemize}
+\item
+  un bloc longitudinal dans la direction \(e_+\) ;
+\item
+  un bloc de désaccord interne entre composantes, dans la direction \(e_-\).
+\end{itemize}
+
+Notons
+
+\[
+r_\ast
+=
+\|\theta^\ast\|
+=
+\sqrt2\,|\vartheta^\ast|,
+\]
+
+\[
+h_\ast^\parallel
+=
+\sqrt2\,|x^\ast|,
+\]
+
+\[
+s_\ast
+=
+\operatorname{sech}^2x^\ast.
+\]
+
+\[
+\Gamma_\ast
+=
+\gamma_0+\gamma_1 r_\ast .
+\]
+
+Le symbole \(\Gamma_\ast\) est ici évalué en \(\|\theta^\ast\|=r_\ast\), et
+non en \(|\vartheta^\ast|\) comme dans la section en dimension un.
+
+Pour le bloc longitudinal,
+
+\[
+\kappa_+
+=
+m(r_\ast)-\zeta s_\ast,
+\]
+
+et
+
+\[
+b_+
+=
+\frac{
+2\lambda r_\ast h_\ast^\parallel
+}{
+\left[
+1+(1+\lambda)r_\ast^2
+\right]^2
+}.
+\]
+
+Pour le bloc de désaccord interne,
+
+\[
+\kappa_-
+=
+1-\zeta s_\ast,
+\]
+
+et
+
+\[
+b_-
+=
+\frac{
+\lambda r_\ast h_\ast^\parallel
+}{
+1+(1+\lambda)r_\ast^2
+}.
+\]
+
+Les deux blocs ont la forme
+
+\[
+J_\pm
+=
+\begin{pmatrix}
+0&1&0\\
+-\kappa_\pm&-\Gamma_\ast&b_\pm\\
+\alpha s_\ast&0&-\beta
+\end{pmatrix}.
+\]
+
+Leurs polynômes caractéristiques sont
+
+\[
+p_\pm(s)
+=
+s^3
++
+(\Gamma_\ast+\beta)s^2
++
+(\Gamma_\ast\beta+\kappa_\pm)s
++
+\left(
+\beta\kappa_\pm
+-
+\alpha b_\pm s_\ast
+\right).
+\]
+
+Pour la racine basse
+
+\[
+x^\ast=0{,}0717413,
+\]
+
+le bloc longitudinal possède un terme constant négatif :
+
+\[
+a_{0,+}
+=
+-0{,}0332873\ldots
+\]
+
+et l'équilibre est instable.
+
+Pour la racine haute
+
+\[
+x^\ast=2{,}2958568,
+\]
+
+les coefficients sont :
+
+\[
+\begin{array}{c|ccc}
+ & a_2 & a_1 & a_0\\
+\hline
+\text{longitudinal}
+&
+6{,}866096
+&
+1{,}119207
+&
+0{,}036982
+\\
+\text{désaccord}
+&
+6{,}866096
+&
+1{,}777746
+&
+0{,}108829
+\end{array}
+\]
+
+Les quatre conditions de Routh--Hurwitz sont satisfaites dans les deux
+blocs. Une évaluation séparée donne
+\[
+\max\Re\operatorname{spec}(J_+)
+=
+-0{,}0458575\ldots,
+\qquad
+\max\Re\operatorname{spec}(J_-)
+=
+-0{,}0971661\ldots.
+\]
+Le spectre complet vérifie donc
+
+\[
+\boxed{
+\max\Re\operatorname{spec}(J_\ast)
+=
+-0{,}0458575\ldots
+}
+\]
+
+La racine haute à deux composantes actives est donc localement
+exponentiellement stable sur le système réduit.
+
+\section{Paysage autonome aux paramètres de référence}
+\label{annexe-reduction-paysage-reference}
+
+Les calculs précédents donnent le paysage suivant pour
+\((h,v,\theta)\) sur \(\Delta\).
+
+\[
+\begin{array}{l|c|c}
+\text{famille} & \|h^\ast\| & \max\Re\operatorname{spec}(J_\ast)\\
+\hline
+\text{origine}
+&
+0
+&
+-0{,}12
+\\
+\text{axe, racine basse}
+&
+0{,}102143
+&
++0{,}141613
+\\
+\text{axe, racine haute}
+&
+2{,}237619
+&
++0{,}113981
+\\
+\text{deux composantes, racine basse}
+&
+0{,}101458
+&
++0{,}143662
+\\
+\text{deux composantes, racine haute}
+&
+3{,}246832
+&
+-0{,}0458575
+\end{array}
+\]
+
+Il existe donc simultanément :
+
+\begin{itemize}
+\item
+  un repos localement stable ;
+\item
+  quatre états actifs stables, correspondant aux quatre choix de signes
+  \[
+  (\pm x_2,\pm x_2);
+  \]
+\item
+  des équilibres instables qui constituent des candidats naturels pour structurer localement les séparations entre bassins.
+\end{itemize}
+
+La coexistence de plusieurs attracteurs locaux implique que leurs
+bassins contiennent des ouverts disjoints. L'état atteint dépend donc
+de la condition initiale.
+
+Cette conclusion est analytique quant à la coexistence et à la
+stabilité locale, modulo l'évaluation numérique des racines et des
+inégalités de Routh--Hurwitz. La géométrie globale des séparatrices
+n'est pas démontrée.
+
+\section{La pression et le sens du mot ``puits''}
+\label{annexe-reduction-pression-puits}
+
+L'origine est un véritable équilibre du système hybride complet :
+
+\[
+h=v=\theta=0,
+\qquad
+p=0.
+\]
+
+Pour un état actif structurel,
+
+\[
+h=h^\ast,
+\qquad
+v=0,
+\qquad
+\theta=\theta^\ast,
+\]
+
+la pression vérifie
+
+\[
+\dot p
+=
+\kappa_1\|h^\ast\|
+-
+\kappa_3p.
+\]
+
+Sa valeur d'équilibre continue serait
+
+\[
+p_\infty
+=
+\frac{\kappa_1}{\kappa_3}
+\|h^\ast\|.
+\]
+
+Pour le puits actif de référence,
+
+\[
+\|h^\ast\|
+=
+3{,}246832,
+\]
+
+donc
+
+\[
+p_\infty
+=
+3{,}896198
+>
+\Theta=1{,}25.
+\]
+
+La pression atteint donc périodiquement le seuil. Comme \(v=0\), la
+relaxation
+
+\[
+v^+=r_Vv^-
+\]
+
+ne modifie pas l'état structurel. Seules la pression et la structure
+du graphe évoluent.
+
+Après une cascade,
+
+\[
+p(0)=r_P\Theta.
+\]
+
+La solution est
+
+\[
+p(t)
+=
+p_\infty
++
+\left(
+r_P\Theta-p_\infty
+\right)e^{-\kappa_3t}.
+\]
+
+Le prochain seuil est atteint après
+
+\[
+\boxed{
+\Delta_p
+=
+\frac{1}{\kappa_3}
+\log
+\left(
+\frac{p_\infty-r_P\Theta}
+{p_\infty-\Theta}
+\right).
+}
+\]
+
+Pour les paramètres de référence,
+
+\[
+\Delta_p
+=
+0{,}535537\ldots
+\]
+
+Ainsi, le ``puits actif'' est exactement un point fixe dans la
+projection \((h,v,\theta)\), mais il correspond dans le système
+hybride complet à un régime invariant comportant des cascades
+répétées de Kairos.
+
+La définition de l'appropriation par les bassins reste correcte si
+l'attracteur autonome \(\mathcal A\) désigne cet ensemble hybride.
+Par commodité, le corps du texte utilise souvent le mot ``puits'' pour
+sa projection structurale.
+
+\section{Réduction scalaire utilisée dans le Tome II}
+\label{annexe-reduction-scalaire-tome-ii}
+
+Considérons maintenant la diagonale interne
+
+\[
+h=(x,x),
+\qquad
+v=(y,y),
+\qquad
+\theta=(\vartheta,\vartheta).
+\]
+
+La fonction \(\tanh\) préserve cette diagonale :
+
+\[
+\tanh(h)
+=
+(\tanh x,\tanh x).
+\]
+
+La trace est parallèle à \(h\), et
+
+\[
+\|\theta\|
+=
+\sqrt2\,|\vartheta|.
+\]
+
+Dans la direction de la trace,
+
+\[
+M(\theta)h
+=
+m(\sqrt2|\vartheta|)h,
+\]
+
+avec
+
+\[
+m(r)
+=
+\frac{1+r^2}
+{1+(1+\lambda)r^2}.
+\]
+
+La dynamique autonome devient
+
+\[
+\dot x=y,
+\]
+
+\[
+\dot y
+=
+-\Gamma(\sqrt2|\vartheta|)y
+-
+m(\sqrt2|\vartheta|)x
++
+\zeta\tanh x,
+\]
+
+\[
+\dot\vartheta
+=
+\alpha\tanh x-\beta\vartheta.
+\]
+
+Si un système extérieur écrit dans la trace avec une projection
+constante \(w\) et une intensité \(g\), seule la dernière équation est
+modifiée :
+
+\[
+\boxed{
+\dot\vartheta
+=
+\alpha\tanh x
++
+gw
+-
+\beta\vartheta.
+}
+\]
+
+C'est le système scalaire utilisé pour étudier la branche résistante.
+
+La diagonale \(\mathcal D\) est invariante parce que :
+
+\begin{itemize}
+\item
+  les deux composantes reçoivent la même entrée ;
+\item
+  \(\tanh\) agit composante par composante ;
+\item
+  \(M(\theta)\) conserve la direction de \(\theta\) ;
+\item
+  les conditions initiales ont des composantes égales.
+\end{itemize}
+
+La réduction est exacte sur \(\mathcal D\). Elle ne décrit pas les
+perturbations qui rendent les deux composantes différentes.
+
+\section{Portée pour le réseau complet}
+\label{annexe-reduction-portee-reseau}
+
+Pour un graphe figé, la stabilité transverse d'un état homogène peut
+être étudiée en décomposant les perturbations selon les modes propres
+de \(\widetilde A\).
+
+Lorsque le graphe est non orienté,
+\(\widetilde A\) est semblable à la matrice symétrique
+
+\[
+\operatorname{Deg}(A+I)^{-1/2}
+(A+I)
+\operatorname{Deg}(A+I)^{-1/2}.
+\]
+
+Ses valeurs propres sont donc réelles. Soit \(\rho\) l'une d'elles.
+
+Autour d'un état homogène \((h^\ast,0,\theta^\ast)\), le bloc de flot
+associé au mode \(\rho\) est
+
+\[
+J(\rho)
+=
+\begin{pmatrix}
+0&I_d&0\\
+-M_\ast+\zeta\rho S_\ast
+&
+-\Gamma_\ast I_d
+&
+-D_\ast
+\\
+\alpha\rho S_\ast
+&
+0
+&
+-\beta I_d
+\end{pmatrix},
+\]
+
+où
+
+\[
+S_\ast
+=
+\operatorname{diag}
+\left(
+\operatorname{sech}^2h_k^\ast
+\right),
+\]
+
+et \(D_\ast\) est l'application linéaire
+
+\[
+\eta
+\longmapsto
+DM(\theta^\ast)[\eta]h^\ast.
+\]
+
+Le mode \(\rho=1\) est le mode homogène et redonne le Jacobien étudié
+plus haut. Les blocs \(J(\rho)\) avec \(\rho\neq1\) sont les
+\emph{blocs modaux transverses au réseau} : ils comparent les nœuds du réseau.
+Ils ne doivent pas être confondus avec le bloc de désaccord interne
+\(J_-\), qui compare les deux composantes internes d'un même état réduit.
+
+Cette formule démontre la réduction modale du flot pour un graphe
+figé. Elle ne constitue pas, à elle seule, une preuve de stabilité du
+système hybride avec recâblage : une analyse complète devrait inclure
+la sensibilité des instants de Kairos et les matrices de saltation.
+
+Aux paramètres et graphes testés, les modes transverses décroissent
+numériquement. Ce fait appartient au registre des validations
+numériques, non à celui des théorèmes établis ici.
+
+\section{Résultats établis et limites}
+\label{annexe-reduction-resultats-limites}
+
+Cette annexe établit analytiquement :
+
+\begin{itemize}
+\item
+  l'invariance de \(\Delta\) pendant le flot ;
+\item
+  son retour après chaque cascade complète ;
+\item
+  le système réduit sur \(\Delta\) ;
+\item
+  la classification structurelle des équilibres ;
+\item
+  la stabilité locale de l'origine ;
+\item
+  le seuil
+  \(\tau_{\mathrm{ign}}\) ;
+\item
+  l'extinction globale lorsque \(\lambda=0\) et \(\zeta<1\) ;
+\item
+  les Jacobiennes et les critères de stabilité des branches ;
+\item
+  la réduction scalaire exacte utilisée dans le Tome II.
+\end{itemize}
+
+Les valeurs numériques des racines et des spectres ont le statut
+\texttt{[PROP-NUM]}.
+
+Ne sont pas démontrés ici :
+
+\begin{itemize}
+\item
+  la géométrie globale des bassins ;
+\item
+  la stabilité hybride transverse avec instants d'événements
+  variables et graphe évolutif ;
+\item
+  l'existence et la stabilité des états mixtes du réseau complet ;
+\item
+  une classification globale du paysage pour tous les paramètres.
+\end{itemize}
+
+Le résultat nécessaire à la suite est néanmoins acquis :
+
+\[
+\boxed{
+\begin{minipage}{0.86\linewidth}
+Le système autonome réduit possède simultanément un repos stable et quatre régimes actifs stables. Les bassins de ces attracteurs contiennent des ouverts disjoints ; la géométrie globale de leurs séparations n'est pas établie ici. Une influence extérieure peut modifier l'accessibilité de ces régimes sans les créer artificiellement : après découplage, le régime atteint appartient encore au paysage autonome du système receveur.
+\end{minipage}
+}
+\]

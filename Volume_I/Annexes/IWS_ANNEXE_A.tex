@@ -1,0 +1,1190 @@
+\section{Objet de l'annexe}
+\label{annexe-existence-objet}
+
+Cette annexe justifie les propriétés élémentaires utilisées dans le
+Tome I :
+
+\begin{itemize}
+\item
+  les bornes associées à la matrice relationnelle, à la trace et au
+  préconditionneur \(M(\tau)\) ;
+\item
+  l'existence et l'unicité de la dynamique continue pour un graphe
+  fixé ;
+\item
+  l'absence d'explosion en temps fini ;
+\item
+  le caractère bien défini des sauts ;
+\item
+  l'absence d'une accumulation infinie de sauts en temps fini.
+\end{itemize}
+
+Le dernier point peut être établi sans supposer que les trajectoires
+restent uniformément bornées lorsque \(t\to\infty\). Il suffit de
+disposer d'une borne sur chaque intervalle de temps fini. Cette borne
+est obtenue directement ci-dessous.
+
+\section{Normes et état continu}
+\label{annexe-existence-normes}
+
+Le graphe \(A\) est d'abord fixé. L'état continu est
+
+\[
+z=(H,V,\tau,P),
+\]
+
+avec
+
+\[
+H,V,\tau\in\mathbb R^{N\times d},
+\qquad
+P\in\mathbb R_+^N.
+\]
+
+Pour une famille \(Y=(Y_1,\ldots,Y_N)\), avec
+\(Y_i\in\mathbb R^d\), on utilise la norme
+
+\[
+\|Y\|_{\infty,2}
+=
+\max_{1\leq i\leq N}\|Y_i\|_2.
+\]
+
+Toutes les normes sont équivalentes en dimension finie. Ce choix est
+simplement adapté à une matrice stochastique par lignes.
+
+L'entrée extérieure est supposée mesurable et essentiellement bornée :
+
+\[
+\|u_i(t)\|_2\leq u_{\max}
+\]
+
+pour presque tout \(t\).
+
+\section{Matrice relationnelle normalisée}
+\label{annexe-existence-matrice-relationnelle}
+
+On rappelle
+
+\[
+\widetilde A
+=
+\operatorname{Deg}(A+I)^{-1}(A+I).
+\]
+
+L'ajout de \(I\) garantit que chaque somme de ligne de \(A+I\) est
+strictement positive. La matrice \(\operatorname{Deg}(A+I)\) est donc
+inversible.
+
+Pour tout \(i\),
+
+\[
+\widetilde A_{ij}\geq0,
+\qquad
+\sum_{j=1}^N\widetilde A_{ij}=1.
+\]
+
+Ainsi,
+
+\[
+(\widetilde A H)_i
+=
+\sum_{j=1}^N\widetilde A_{ij}H_j
+\]
+
+est une combinaison convexe des vecteurs \(H_j\). Par l'inégalité
+triangulaire,
+
+\[
+\begin{aligned}
+\|(\widetilde A H)_i\|_2
+&\leq
+\sum_j\widetilde A_{ij}\|H_j\|_2
+\\
+&\leq
+\|H\|_{\infty,2}
+\sum_j\widetilde A_{ij}
+\\
+&=
+\|H\|_{\infty,2}.
+\end{aligned}
+\]
+
+On obtient donc
+
+\[
+\boxed{
+\|\widetilde A H\|_{\infty,2}
+\leq
+\|H\|_{\infty,2}.
+}
+\]
+
+La même démonstration appliquée à \(H-K\) donne
+
+\[
+\boxed{
+\|\widetilde A H-\widetilde A K\|_{\infty,2}
+\leq
+\|H-K\|_{\infty,2}.
+}
+\]
+
+L'opérateur relationnel est donc non expansif pour cette norme.
+
+\section{Bornes et régularité de la saturation}
+\label{annexe-existence-tanh}
+
+La fonction \(\tanh\) est appliquée composante par composante.
+
+Pour tout \(y\in\mathbb R^d\),
+
+\[
+|\tanh(y_k)|\leq1,
+\]
+
+donc
+
+\[
+\boxed{
+\|\tanh(y)\|_2\leq\sqrt d.
+}
+\]
+
+Par ailleurs,
+
+\[
+|\tanh'(s)|=\operatorname{sech}^2(s)\leq1.
+\]
+
+Le théorème des accroissements finis, appliqué à chaque composante,
+donne
+
+\[
+|\tanh(y_k)-\tanh(z_k)|
+\leq
+|y_k-z_k|.
+\]
+
+Après sommation,
+
+\[
+\boxed{
+\|\tanh(y)-\tanh(z)\|_2
+\leq
+\|y-z\|_2.
+}
+\]
+
+En combinant ce résultat avec la non-expansivité de
+\(\widetilde A\),
+
+\[
+\boxed{
+\left\|
+\tanh(\widetilde A H)
+-
+\tanh(\widetilde A K)
+\right\|_{\infty,2}
+\leq
+\|H-K\|_{\infty,2}.
+}
+\]
+
+\section{Solution et borne de la trace}
+\label{annexe-existence-trace}
+
+Pour chaque nœud,
+
+\[
+\dot\tau_i
+=
+\alpha\,\tanh\!\bigl((\widetilde A H)_i\bigr)
+-
+\beta\tau_i,
+\qquad
+\beta>0.
+\]
+
+Entre deux instants \(t_0\leq t\), la formule de variation des
+constantes donne
+
+\[
+\tau_i(t)
+=
+e^{-\beta(t-t_0)}\tau_i(t_0)
++
+\alpha
+\int_{t_0}^t
+e^{-\beta(t-s)}
+\tanh\!\bigl((\widetilde A H(s))_i\bigr)
+\,\mathrm ds.
+\]
+
+En utilisant la borne précédente,
+
+\[
+\begin{aligned}
+\|\tau_i(t)\|_2
+&\leq
+e^{-\beta(t-t_0)}
+\|\tau_i(t_0)\|_2
+\\
+&\quad+
+\alpha\sqrt d
+\int_{t_0}^t
+e^{-\beta(t-s)}
+\,\mathrm ds
+\\
+&=
+e^{-\beta(t-t_0)}
+\|\tau_i(t_0)\|_2
++
+\frac{\alpha\sqrt d}{\beta}
+\left(
+1-e^{-\beta(t-t_0)}
+\right).
+\end{aligned}
+\]
+
+Le membre de droite est une combinaison convexe de
+\(\|\tau_i(t_0)\|_2\) et de \(\alpha\sqrt d/\beta\). Ainsi,
+
+\[
+\boxed{
+\|\tau_i(t)\|_2
+\leq
+\max\left(
+\|\tau_i(t_0)\|_2,
+\frac{\alpha\sqrt d}{\beta}
+\right).
+}
+\]
+
+Comme la trace ne change pas lors d'un Kairos, cette borne reste
+valable le long de toute l'exécution hybride.
+
+\section{Préconditionneur : formule et bornes spectrales}
+\label{annexe-existence-preconditionneur}
+
+On pose
+
+\[
+Q(\tau)
+=
+I_d+
+\frac{\lambda}{1+\|\tau\|^2}
+\tau\tau^\top,
+\qquad
+\lambda\geq0.
+\]
+
+Si \(z\perp\tau\), alors
+
+\[
+Q(\tau)z=z.
+\]
+
+Dans la direction de \(\tau\),
+
+\[
+Q(\tau)\tau
+=
+\left(
+1+
+\frac{\lambda\|\tau\|^2}
+{1+\|\tau\|^2}
+\right)\tau.
+\]
+
+Les valeurs propres de \(Q(\tau)\) sont donc
+
+\[
+1
+\]
+
+dans les directions orthogonales à \(\tau\), et
+
+\[
+q_\parallel(\tau)
+=
+1+
+\frac{\lambda\|\tau\|^2}
+{1+\|\tau\|^2}
+\]
+
+dans la direction de \(\tau\). En particulier,
+
+\[
+1\leq q_\parallel(\tau)<1+\lambda.
+\]
+
+La matrice \(Q(\tau)\) est symétrique définie positive et donc
+inversible.
+
+En appliquant la formule de Sherman--Morrison
+\cite{sherman1950adjustment}, on obtient
+
+\[
+\boxed{
+M(\tau)
+=
+Q(\tau)^{-1}
+=
+I_d
+-
+\frac{\lambda}
+{1+(1+\lambda)\|\tau\|^2}
+\tau\tau^\top.
+}
+\]
+
+Les valeurs propres de \(M(\tau)\) sont \(1\) dans les directions
+orthogonales à \(\tau\), et
+
+\[
+m_\parallel(\tau)
+=
+\frac{1+\|\tau\|^2}
+{1+(1+\lambda)\|\tau\|^2}
+\]
+
+dans la direction de \(\tau\).
+
+Comme
+
+\[
+\frac{1}{1+\lambda}
+\leq
+m_\parallel(\tau)
+\leq1,
+\]
+
+on a, pour tout \(y\in\mathbb R^d\),
+
+\[
+\boxed{
+m_0\|y\|_2^2
+\leq
+y^\top M(\tau)y
+\leq
+\|y\|_2^2,
+\qquad
+m_0:=\frac{1}{1+\lambda}.
+}
+\]
+
+En notation matricielle,
+
+\[
+\boxed{
+m_0I_d
+\preceq
+M(\tau)
+\preceq
+I_d.
+}
+\]
+
+Il en résulte notamment
+
+\[
+\boxed{
+\|M(\tau)\|_{\mathrm{op}}\leq1.
+}
+\]
+
+\section{Régularité et dérivée de \texorpdfstring{$M$}{M}}
+\label{annexe-existence-derivee-M}
+
+Posons
+
+\[
+c=1+\lambda,
+\qquad
+a(\tau)
+=
+\frac{\lambda}{1+c\|\tau\|^2}.
+\]
+
+Alors
+
+\[
+M(\tau)=I_d-a(\tau)\tau\tau^\top.
+\]
+
+Pour une direction \(h\in\mathbb R^d\),
+
+\[
+Da(\tau)[h]
+=
+-\frac{2\lambda c\,\tau\cdot h}
+{\left(1+c\|\tau\|^2\right)^2}.
+\]
+
+Par conséquent,
+
+\[
+\begin{aligned}
+DM(\tau)[h]
+={}&
+\frac{2\lambda c\,(\tau\cdot h)}
+{\left(1+c\|\tau\|^2\right)^2}
+\tau\tau^\top
+\\
+&-
+\frac{\lambda}
+{1+c\|\tau\|^2}
+\left(
+h\tau^\top+\tau h^\top
+\right).
+\end{aligned}
+\]
+
+Cette expression est définie et continue pour tout \(\tau\), y
+compris en \(\tau=0\). La fonction \(M\) est donc lisse.
+
+Nous pouvons également obtenir une borne globale sur sa différentielle.
+En posant \(r=\|\tau\|_2\),
+
+\[
+\left\|
+\frac{\lambda}
+{1+cr^2}
+\left(
+h\tau^\top+\tau h^\top
+\right)
+\right\|_{\mathrm{op}}
+\leq
+\frac{2\lambda r}{1+cr^2}\|h\|_2.
+\]
+
+Or
+
+\[
+\sup_{r\geq0}\frac{r}{1+cr^2}
+=
+\frac{1}{2\sqrt c}.
+\]
+
+Le premier terme vérifie
+
+\[
+\left\|
+\frac{2\lambda c\,(\tau\cdot h)}
+{(1+cr^2)^2}
+\tau\tau^\top
+\right\|_{\mathrm{op}}
+\leq
+\frac{2\lambda c r^3}{(1+cr^2)^2}
+\|h\|_2.
+\]
+
+Après le changement de variable \(y=\sqrt c\,r\), on a
+\(r^3=c^{-3/2}y^3\) et \((1+cr^2)^2=(1+y^2)^2\). Le facteur
+\(c\,c^{-3/2}=c^{-1/2}\) donne donc
+
+\[
+\sup_{r\geq0}
+\frac{2\lambda c r^3}{(1+cr^2)^2}
+=
+\frac{2\lambda}{\sqrt c}
+\sup_{y\geq0}
+\frac{y^3}{(1+y^2)^2}.
+\]
+
+La fonction \(y^3/(1+y^2)^2\) atteint son maximum en
+\(y=\sqrt3\), avec
+
+\[
+\frac{y^3}{(1+y^2)^2}
+=
+\frac{3\sqrt3}{16}.
+\]
+
+On obtient finalement
+
+\[
+\boxed{
+\|DM(\tau)[h]\|_{\mathrm{op}}
+\leq
+L_M(\lambda)\|h\|_2,
+}
+\]
+
+avec la constante explicite
+
+\[
+\boxed{
+L_M(\lambda)
+=
+\frac{\lambda}{\sqrt{1+\lambda}}
+\left(
+1+\frac{3\sqrt3}{8}
+\right).
+}
+\]
+
+Cette borne est conservative, mais elle montre que \(M\) est
+globalement lipschitzienne.
+
+Dans la suite, on utilise la borne uniforme
+\[
+\bar\tau
+:=
+\max_i\max\left\{\|\tau_i(t_0)\|_2,
+\frac{\alpha\sqrt d}{\beta}\right\},
+\]
+qui est précisément celle obtenue à la section précédente.
+
+Comme
+
+\[
+\|\dot\tau_i\|_2
+\leq
+\alpha\sqrt d+\beta\bar\tau,
+\]
+
+elle donne aussi
+
+\[
+\boxed{
+\|\dot M(\tau_i)\|_{\mathrm{op}}
+\leq
+L_M(\lambda)
+\left(
+\alpha\sqrt d+\beta\bar\tau
+\right).
+}
+\]
+
+C'est la constante notée \(\mu\) dans l'annexe consacrée à l'énergie.
+
+\section{Régularité de la friction}
+\label{annexe-existence-friction}
+
+La friction est
+
+\[
+\Gamma(\tau)
+=
+\gamma_0+\gamma_1\|\tau\|_2.
+\]
+
+L'inégalité triangulaire inverse donne
+
+\[
+\left|
+\|\tau\|_2-\|\sigma\|_2
+\right|
+\leq
+\|\tau-\sigma\|_2.
+\]
+
+Ainsi,
+
+\[
+\boxed{
+|\Gamma(\tau)-\Gamma(\sigma)|
+\leq
+\gamma_1\|\tau-\sigma\|_2.
+}
+\]
+
+La fonction \(\Gamma\) est donc globalement lipschitzienne. Elle n'est
+pas différentiable en \(\tau=0\) lorsque \(\gamma_1>0\), mais la
+différentiabilité n'est pas nécessaire à l'existence et à l'unicité
+des solutions.
+
+\section{Champ de vecteurs pour un graphe fixé}
+\label{annexe-existence-champ}
+
+Pour un graphe \(A\) fixé, la dynamique continue s'écrit
+
+\[
+\dot z=F_A(t,z).
+\]
+
+La seule dépendance explicite en \(t\) vient de l'entrée mesurable
+\(u(t)\).
+
+Nous vérifions les hypothèses de Carathéodory.
+
+\subsection{Mesurabilité en temps}
+\label{annexe-existence-mesurabilite}
+
+Pour tout état \(z\) fixé, les termes internes sont constants en
+\(t\) : \(M(\tau)\), \(\Gamma(\tau)\) et
+\(\tanh(\widetilde A H)\) sont des fonctions de l'état seul. La
+dépendance temporelle explicite est entièrement portée par l'entrée
+mesurable \(u(t)\). La fonction
+
+\[
+t\longmapsto F_A(t,z)
+\]
+
+est donc mesurable.
+
+\subsection{Continuité et caractère localement lipschitzien}
+\label{annexe-existence-lipschitz}
+
+Pour presque tout \(t\), les termes suivants sont localement
+lipschitziens en \(z\) :
+
+\begin{itemize}
+\item
+  \(V\mapsto V\) ;
+\item
+  \(H\mapsto\tanh(\widetilde A H)\), qui est même globalement
+  lipschitzien ;
+\item
+  \((\tau,V)\mapsto\Gamma(\tau)V\) ;
+\item
+  \((\tau,H)\mapsto M(\tau)H\) ;
+\item
+  \((H,V,P)\mapsto
+  \kappa_1\|H_i\|+\kappa_2\|V_i\|-\kappa_3P_i\).
+\end{itemize}
+
+À titre d'exemple, sur un compact où
+\(\|V\|_{\infty,2}\leq R_V\) et
+\(\|\tau\|_{\infty,2}\leq R_\tau\),
+
+\[
+\begin{aligned}
+\|\Gamma(\tau_i)V_i-\Gamma(\sigma_i)W_i\|
+\leq{}&
+\Gamma_{\max}\|V_i-W_i\|
+\\
+&+
+\gamma_1R_V\|\tau_i-\sigma_i\|,
+\end{aligned}
+\]
+
+où
+
+\[
+\Gamma_{\max}
+=
+\gamma_0+\gamma_1R_\tau.
+\]
+
+De même,
+
+\[
+\begin{aligned}
+\|M(\tau_i)H_i-M(\sigma_i)K_i\|
+\leq{}&
+\|H_i-K_i\|
+\\
+&+
+L_M(\lambda)R_H\|\tau_i-\sigma_i\|
+\end{aligned}
+\]
+
+sur un compact où \(\|K_i\|\leq R_H\).
+
+Le champ \(F_A(t,\cdot)\) est donc localement lipschitzien.
+
+\subsection{Majoration sur les compacts}
+\label{annexe-existence-majoration-compacte}
+
+Sur tout compact de l'espace des états, les variables \(H\), \(V\),
+\(\tau\) et \(P\) sont bornées. Les fonctions \(\tanh\), \(M\) et
+\(\Gamma\) y sont bornées. L'entrée \(u(t)\) est essentiellement
+bornée.
+
+Il existe donc une fonction intégrable \(m_K(t)\), que l'on peut ici
+choisir constante, telle que
+
+\[
+\|F_A(t,z)\|
+\leq
+m_K(t)
+\]
+
+pour presque tout \(t\) et tout \(z\) dans le compact \(K\).
+
+\section{Existence et unicité locale}
+\label{annexe-existence-locale}
+
+Les trois propriétés précédentes sont les hypothèses usuelles du
+théorème de Carathéodory
+\cite{filippov1988differential}.
+
+\begin{quote}
+\resultheading{Proposition}{prop:A-existence-unicite-locale}{}
+Pour tout graphe fixé \(A\), toute condition initiale continue
+\(z(t_0)=z_0\) et toute entrée mesurable essentiellement bornée, il
+existe une solution locale absolument continue. Cette solution est
+unique et satisfait les équations presque partout.
+\end{quote}
+
+La solution peut être prolongée tant qu'elle reste dans un ensemble
+borné. Il reste donc à exclure une explosion en temps fini.
+
+\section{Absence d'explosion en temps fini}
+\label{annexe-existence-non-explosion}
+
+Posons
+
+\[
+B=\zeta\sqrt d+u_{\max}.
+\]
+
+Pour une fonction absolument continue, la norme est absolument
+continue. Aux instants où \(H_i\neq0\),
+
+\[
+\frac{\mathrm d}{\mathrm dt}\|H_i\|_2
+=
+\frac{H_i}{\|H_i\|_2}\cdot V_i
+\leq
+\|V_i\|_2.
+\]
+
+Plus généralement, pour toute fonction absolument continue, la
+sous-additivité de la norme donne partout l'inégalité en dérivée
+supérieure de Dini
+
+\[
+D^+\|H_i\|_2\leq\|V_i\|_2,
+\]
+ce qui inclut sans exception le cas \(H_i=0\).
+
+Lorsque \(V_i\neq0\),
+
+\[
+\begin{aligned}
+\frac{\mathrm d}{\mathrm dt}\|V_i\|_2
+&=
+\frac{V_i}{\|V_i\|_2}\cdot\dot V_i
+\\
+&=
+-\Gamma(\tau_i)\|V_i\|_2
+-
+\frac{V_i}{\|V_i\|_2}\cdot M(\tau_i)H_i
+\\
+&\quad+
+\zeta
+\frac{V_i}{\|V_i\|_2}
+\cdot
+\tanh\!\bigl((\widetilde A H)_i\bigr)
++
+\frac{V_i}{\|V_i\|_2}\cdot u_i(t).
+\end{aligned}
+\]
+
+Comme \(\Gamma\geq0\), \(\|M(\tau_i)\|_{\mathrm{op}}\leq1\) et
+\(\|\tanh(\cdot)\|_2\leq\sqrt d\),
+
+\[
+D^+\|V_i\|_2
+\leq
+\|H_i\|_2+B.
+\]
+
+Définissons
+
+\[
+Y(t)
+=
+\max_i
+\left(
+\|H_i(t)\|_2+\|V_i(t)\|_2
+\right).
+\]
+
+La dérivée supérieure du maximum vérifie
+
+\[
+D^+Y(t)
+\leq
+Y(t)+B.
+\]
+
+L'inégalité de Grönwall donne, pour \(t\geq t_0\),
+
+\[
+\boxed{
+Y(t)
+\leq
+\left(
+Y(t_0)+B
+\right)
+e^{t-t_0}
+-
+B.
+}
+\]
+
+Cette estimation est finie sur tout intervalle de temps fini.
+
+La trace est bornée par la formule obtenue plus haut. La pression
+vérifie
+
+\[
+\dot P_i
++
+\kappa_3P_i
+=
+\kappa_1\|H_i\|_2+\kappa_2\|V_i\|_2.
+\]
+
+Ainsi,
+
+\[
+\begin{aligned}
+P_i(t)
+={}&
+e^{-\kappa_3(t-t_0)}P_i(t_0)
+\\
+&+
+\int_{t_0}^t
+e^{-\kappa_3(t-s)}
+\left(
+\kappa_1\|H_i(s)\|_2
++
+\kappa_2\|V_i(s)\|_2
+\right)
+\,\mathrm ds.
+\end{aligned}
+\]
+
+Le membre de droite est fini sur tout intervalle borné. Il est
+également non négatif si \(P_i(t_0)\geq0\).
+
+Aucune composante continue ne peut donc diverger en temps fini.
+
+\begin{quote}
+\resultheading{Proposition}{prop:A-non-explosion-flot}{}
+Pour un graphe fixé, la solution de Carathéodory unique se prolonge
+pour tout temps positif, tant qu'aucun saut n'est imposé par la règle
+hybride.
+\end{quote}
+
+Cette affirmation ne signifie pas que les trajectoires restent
+uniformément bornées lorsque \(t\to\infty\). Elle exclut seulement une
+explosion à temps fini.
+
+\section{Premier instant de saut}
+\label{annexe-existence-premier-saut}
+
+Supposons l'état initial admissible :
+
+\[
+0\leq P_i(t_0)\leq\Theta
+\]
+
+pour tout \(i\).
+
+Chaque \(P_i(t)\) est continu pendant le flot. Deux cas sont possibles.
+
+\begin{enumerate}
+\item
+  Aucun \(P_i\) n'atteint \(\Theta\). La solution continue se poursuit
+  indéfiniment.
+\item
+  Au moins une pression atteint \(\Theta\). On définit
+  \[
+  t_1
+  =
+  \inf\left\{
+  t\geq t_0:
+  \max_iP_i(t)=\Theta
+  \right\}.
+  \]
+  Par continuité, ce temps est atteint et au moins un indice vérifie
+  \(P_i(t_1)=\Theta\).
+\end{enumerate}
+
+La règle de priorité impose alors un saut.
+
+\section{Le saut est bien défini}
+\label{annexe-existence-saut-bien-defini}
+
+À l'instant du saut, le modèle choisit
+
+\[
+i^\ast
+=
+\min\left\{
+i:
+P_i=\Theta
+\right\}.
+\]
+
+Les similarités sont définies par
+
+\[
+s(i,j)
+=
+\frac{\langle\tau_i,\tau_j\rangle}
+{\|\tau_i\|_2\|\tau_j\|_2}
+\]
+
+lorsque les deux traces sont non nulles, et par \(s(i,j)=0\) sinon.
+
+Les égalités de similarité sont départagées par l'indice. Les ensembles
+de voisins et de non-voisins sont finis. Le choix des arêtes à retirer
+et à ajouter est donc déterministe.
+
+Le nombre d'arêtes modifiées est
+
+\[
+m
+=
+\min\left(
+2,
+|\mathcal N(i^\ast)|,
+|\mathcal N^c(i^\ast)|
+\right).
+\]
+
+Le saut retire \(m\) arêtes existantes et ajoute \(m\) arêtes
+absentes. Il ne crée ni boucle ni arête multiple. La symétrie de la
+matrice d'adjacence est maintenue.
+
+Ainsi :
+
+\[
+\boxed{
+\text{le graphe reste simple, non orienté et conserve son nombre
+d'arêtes.}
+}
+\]
+
+L'ajout de la boucle de calcul \(I\) dans la définition de
+\(\widetilde A\) garantit que la normalisation reste définie après le
+recâblage, même si un nœud n'a plus aucun voisin.
+
+Les autres composantes vérifient
+
+\[
+H^+=H^-,
+\qquad
+\tau^+=\tau^-,
+\]
+
+\[
+V_{i^\ast}^+
+=
+r_VV_{i^\ast}^-,
+\qquad
+P_{i^\ast}^+
+=
+r_P\Theta,
+\]
+
+avec \(r_V,r_P\in[0,1)\).
+
+Le saut ne peut donc pas augmenter
+\(\|H\|_{\infty,2}\), \(\|\tau\|_{\infty,2}\) ni
+\(\|V\|_{\infty,2}\). Il préserve également \(P_i\geq0\).
+
+\section{Événements simultanés}
+\label{annexe-existence-evenements-simultanes}
+
+Plusieurs pressions peuvent atteindre \(\Theta\) au même instant. Les
+sauts sont alors appliqués successivement sans faire avancer le temps
+continu.
+
+Après le saut du nœud sélectionné,
+
+\[
+P_{i^\ast}^+
+=
+r_P\Theta
+<
+\Theta.
+\]
+
+Les pressions des autres nœuds ne changent pas. Le nœud sélectionné
+sort donc de l'ensemble des indices au seuil, tandis qu'aucun nouvel
+indice n'y entre sans écoulement du temps.
+
+Il y a par conséquent au plus \(N\) sauts dans une cascade
+instantanée.
+
+\section{Borne sur un horizon fini malgré les sauts}
+\label{annexe-existence-borne-horizon-fini}
+
+La borne de Grönwall établie pour le flot reste valable le long d'une
+exécution hybride.
+
+En effet, lors d'un saut,
+
+\[
+H^+=H^-,
+\]
+
+et
+
+\[
+\|V_{i^\ast}^+\|_2
+=
+r_V\|V_{i^\ast}^-\|_2
+\leq
+\|V_{i^\ast}^-\|_2.
+\]
+
+La quantité
+
+\[
+Y
+=
+\max_i
+\left(
+\|H_i\|_2+\|V_i\|_2
+\right)
+\]
+
+ne peut donc pas augmenter lors d'un saut. Les changements du graphe
+ne modifient pas la constante \(B\), car la matrice normalisée reste
+stochastique par lignes après chaque recâblage.
+
+Pour tout horizon continu \(T>0\),
+
+\[
+\boxed{
+Y(t,j)
+\leq
+\left(
+Y(0,0)+B
+\right)e^T-B
+=:
+R_T
+}
+\]
+
+pour tout point hybride \((t,j)\) tel que \(0\leq t\leq T\).
+
+Cette borne dépend de \(T\), mais elle ne dépend pas du nombre de
+sauts déjà effectués.
+
+\section{Absence d'accumulation de sauts en temps fini}
+\label{annexe-existence-non-zenon}
+
+Fixons un horizon continu \(T>0\). La borne précédente donne, pour
+tout nœud et tout \(t\leq T\),
+
+\[
+\|H_i(t)\|_2\leq R_T,
+\qquad
+\|V_i(t)\|_2\leq R_T.
+\]
+
+Ainsi,
+
+\[
+\dot P_i
+\leq
+\kappa_1R_T+\kappa_2R_T
+=:
+K_T.
+\]
+
+Si \(K_T=0\), aucune pression ne peut remonter après un saut.
+
+Supposons \(K_T>0\). Après un saut du nœud \(i\),
+
+\[
+P_i^+=r_P\Theta.
+\]
+
+Pour atteindre à nouveau \(\Theta\), il doit gagner au moins
+
+\[
+(1-r_P)\Theta.
+\]
+
+Le temps continu séparant deux sauts successifs du même nœud est donc
+au moins
+
+\[
+\boxed{
+\delta_T
+=
+\frac{(1-r_P)\Theta}{K_T}
+>0.
+}
+\]
+
+Sur l'intervalle \([0,T]\), chaque nœud saute au plus
+
+\[
+1+\frac{T}{\delta_T}
+\]
+
+fois, en comptant un éventuel saut initial. Le nombre total de sauts
+est donc majoré par
+
+\[
+\boxed{
+N\left(
+1+\frac{T}{\delta_T}
+\right).
+}
+\]
+
+Il est fini.
+
+\begin{quote}
+\resultheading{Proposition}{prop:A-absence-zenon}{}
+Sous les hypothèses du noyau, avec \(r_P<1\), une exécution issue d'un
+état admissible ne peut pas contenir une infinité de sauts sur un
+intervalle de temps continu fini.
+\end{quote}
+
+Cette propriété exclut le phénomène de Zénon
+\cite{goebel2012hybrid}.
+
+\section{Existence et unicité de l'exécution hybride}
+\label{annexe-existence-hybride}
+
+Nous pouvons maintenant assembler les résultats.
+
+\begin{enumerate}
+\item
+  Pour un graphe donné, le flot possède une solution unique.
+\item
+  Le premier instant de saut est déterminé par la continuité des
+  pressions.
+\item
+  Le choix du nœud et le recâblage sont déterministes grâce aux règles
+  de départage.
+\item
+  Une cascade simultanée comporte au plus \(N\) sauts.
+\item
+  Il n'y a pas d'accumulation infinie de sauts en temps fini.
+\item
+  Entre deux sauts, aucune composante ne peut exploser en temps fini.
+\end{enumerate}
+
+\begin{quote}
+\resultheading{Proposition}{prop:A-execution-hybride-unique}{}
+Pour toute condition initiale admissible et toute entrée mesurable
+essentiellement bornée, le noyau définit une exécution hybride unique
+pour tout temps continu positif.
+\end{quote}
+
+L'unicité est entendue pour les conventions déterministes retenues :
+priorité au saut sur \(C\cap D\), choix du plus petit indice et
+départage des similarités par l'indice.
+
+\section{Portée et limites}
+\label{annexe-existence-limites}
+
+Les résultats de cette annexe établissent :
+
+\[
+\boxed{
+\text{existence, unicité et absence de Zénon sur tout horizon fini.}
+}
+\]
+
+Ils ne montrent pas que les trajectoires \(H(t)\) et \(V(t)\) restent dans un même ensemble borné lorsque \(t\to\infty\).
+
+Cette question asymptotique est différente. Elle est traitée par les estimations d'énergie de l'Annexe~\ref{annexe-energie-flots-sauts}, sous des conditions suffisantes explicites.
+
+Enfin, le saut est déterministe mais il n'est pas continu par rapport à l'état aux points où l'ordre des similarités change. La robustesse des trajectoires vis-à-vis de petites perturbations des classements n'est pas étudiée ici.

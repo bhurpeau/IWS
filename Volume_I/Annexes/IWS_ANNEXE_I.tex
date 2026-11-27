@@ -1,0 +1,581 @@
+\section{Objet et portée de l'annexe}
+\label{annexe-I-objet}
+
+Cette annexe établit la suffisance de l'état lent aligné pour la réponse
+à une sonde déclarée. Elle prolonge l'Appendice~H : celui-ci traitait la
+section éteinte $p=\chi=\theta=0$ et montrait que le contenu survivant
+$\mathbf s$ suffit alors à prédire l'issue. Ici, les variables lentes
+résiduelles sont conservées. Le résumé devient
+\[
+z=(p,\chi,\theta,s),
+\]
+sur une famille où les variables vectorielles internes demeurent
+alignées sur une direction déclarée $\mathbf u_1$.
+
+Le résultat est une proposition de fermeture, non un principe universel.
+Il dépend de trois faits à vérifier : l'invariance du sous-espace aligné,
+l'inertie de toute variable omise et le déterminisme de l'exécution. Il
+ne prétend ni que quatre coordonnées suffisent hors alignement, ni que
+la même réduction subsiste sous une loi qui lirait une variable
+actuellement inerte.
+
+\begin{encadre}[title={Résultat directeur}]
+Sur la famille alignée et sous la loi $\mathcal G_{\mathrm{lin}}$, la
+réponse à une sonde admissible $\mathcal P$ est exactement paramétrée
+par l'état lent
+\[
+z=(p,\chi,\theta,s).
+\]
+Il existe une carte
+\[
+\widehat\Omega_{\mathcal P,\rho}:Z\longrightarrow\mathcal Y_\rho
+\]
+telle que
+\[
+\mathcal R_z^\rho(\mathcal P)
+=
+\widehat\Omega_{\mathcal P,\rho}(p,\chi,\theta,s).
+\]
+La réduction de l'Appendice~H est la restriction de cette carte à la
+section $p=\chi=\theta=0$.
+\end{encadre}
+
+\section{Cadre déclaré}
+\label{annexe-I-cadre}
+
+\subsection{État complet et regraine canonique}
+\label{annexe-I-etat-complet}
+
+On note l'état complet du modèle canonique
+\[
+X=(y,p,\boldsymbol\chi,\boldsymbol\theta,\mathbf s,ssc),
+\]
+où $y$ rassemble les variables mécaniques, $p$ la pression scalaire,
+$\boldsymbol\chi$ la variable d'interface, $\boldsymbol\theta$ la phase
+intermédiaire, $\mathbf s$ le contenu mnésique et $ssc$ une variable
+interne additionnelle du modèle de référence.
+
+La regraine canonique $\mathcal G$ appartient au protocole, conformément
+à A-H1. Elle impose le même état mécanique $y_0$ aux systèmes comparés
+et préserve les variables internes :
+\[
+\Phi_{\mathcal G}
+(y,p,\boldsymbol\chi,\boldsymbol\theta,\mathbf s,ssc)
+=
+(y_0,p,\boldsymbol\chi,\boldsymbol\theta,\mathbf s,ssc).
+\]
+La sonde commence donc depuis une section mécanique commune, sans effacer
+les traces lentes dont on cherche l'effet.
+
+\subsection{Sous-espace aligné}
+\label{annexe-I-sous-espace-aligne}
+
+Fixons une direction unitaire $\mathbf u_1$ appartenant au sous-espace des
+points fixes d'une équivariance déclarée du flot et des événements. Dans
+le modèle canonique, on choisit la diagonale
+$\mathbf u_1=(1,1)/\sqrt2$, fixe par échange des composantes. Les axes
+et l'anti-diagonale peuvent également être traités lorsqu'ils sont
+préservés par les entrées et les règles considérées. Une direction
+générique n'est pas supposée admissible. Le sous-espace aligné est
+l'ensemble
+\[
+\mathcal M_{\mathrm{al}}
+=
+\left\{
+(y,p,\boldsymbol\chi,\boldsymbol\theta,\mathbf s,ssc)
+\ \middle|\
+\boldsymbol\chi=\chi\mathbf u_1,
+\ \boldsymbol\theta=\theta\mathbf u_1,
+\ \mathbf s=s\mathbf u_1
+\right\}.
+\]
+Après regraine, la partie pertinente de cet état est décrite par
+\[
+z=(p,\chi,\theta,s)\in Z\subseteq\mathbb R^4.
+\]
+On définit l'injection canonique
+\begin{equation}
+\label{eq:annexe-I-injection}
+\iota(z;ssc)
+=
+(y_0,p,\chi\mathbf u_1,\theta\mathbf u_1,s\mathbf u_1,ssc).
+\end{equation}
+
+Le paramètre $ssc$ est laissé visible dans
+\eqref{eq:annexe-I-injection} afin de ne pas confondre égalité littérale
+des états et suffisance comportementale du résumé $z$.
+
+\subsection{Lecture et segmentation}
+\label{annexe-I-lecture}
+
+Le couple d'observation $(\mathfrak B,\rho)$ et la sonde $\mathcal P$
+sont déclarés. Pour une lecture terminale, aucune condition
+supplémentaire n'est nécessaire. Pour une lecture de chemin, on suppose
+la compatibilité à la segmentation et au suffixe définie dans
+l'Appendice~G. La réponse est
+\[
+\mathcal R_X^\rho(\mathcal P)
+=
+\omega_\rho\!\left(
+\operatorname{Exec}_{\mathcal P}(X)
+\right).
+\]
+
+\section{Hypothèses de fermeture}
+\label{annexe-I-hypotheses}
+
+\paragraph{(A1) --- Déterminisme.}
+Pour tout $X$ de la classe considérée et toute sonde admissible
+$\mathcal P$, l'exécution $\operatorname{Exec}_{\mathcal P}(X)$ est
+unique.
+
+\paragraph{(A2) --- Invariance du sous-espace aligné.}
+Le flot continu, les événements et les épisodes de la sonde préservent
+$\mathcal M_{\mathrm{al}}$. Autrement dit, un état aligné soumis à des
+entrées alignées ne produit aucune composante transverse.
+
+\paragraph{(A3) --- Suffisance comportementale de $z$.}
+Pour deux états alignés ayant le même quadruplet $z$, toute composante
+interne omise du résumé est comportementalement inerte sous la sonde et
+la loi déclarées. Formellement, pour tous $ssc_1,ssc_2$ admissibles,
+\begin{equation}
+\label{eq:annexe-I-inertie}
+\mathcal R_{\iota(z;ssc_1)}^\rho(\mathcal P)
+=
+\mathcal R_{\iota(z;ssc_2)}^\rho(\mathcal P).
+\end{equation}
+
+\paragraph{(A4) --- Regraine commune.}
+Les systèmes comparés sont ramenés au même état mécanique autonome
+$y_0$ avant la sonde, sans altération de $z$.
+
+\begin{encadre}[title={Statut de l'hypothèse markovienne}]
+(A3) est l'hypothèse décisive. Elle ne découle pas de l'alignement. Dans
+le modèle canonique sous $\mathcal G_{\mathrm{lin}}$, $ssc$ n'apparaît
+dans aucune équation active : elle est donc inerte et
+\eqref{eq:annexe-I-inertie} est satisfaite. Sous une loi lisant $ssc$,
+le résumé devrait devenir $(p,\chi,\theta,s,ssc)$, ou la proposition
+cesserait d'être applicable.
+\end{encadre}
+
+\section{Lemme d'invariance alignée}
+\label{annexe-I-lemme-invariance}
+
+\resultstep{lem:I-invariance-alignee}
+\begin{encadre}[title={Lemme \theproposition{} --- Invariance de la famille alignée}]
+Supposons qu'une symétrie déclarée du modèle fixe $\mathbf u_1$, que le
+flot et les règles événementielles soient équivariants sous cette
+symétrie, et que la graine, les entrées et les contenus appartiennent à
+son sous-espace de points fixes. Alors
+$\mathcal M_{\mathrm{al}}$ est invariant par toute exécution admissible
+de la sonde.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Écrivons toute variable vectorielle $q$ comme
+\[
+q=q_\parallel\mathbf u_1+q_\perp,
+\qquad q_\perp\cdot\mathbf u_1=0.
+\]
+Par équivariance, le champ de vecteurs restreint à $q_\perp=0$ ne crée
+aucune composante transverse : la dérivée de $q_\perp$ y est nulle. Par
+unicité du flot, une trajectoire initialement dans cette sous-variété y
+reste jusqu'au premier événement. Les règles événementielles appliquent
+les mêmes opérations aux composantes symétriques et reçoivent des
+entrées alignées ; elles préservent donc elles aussi $q_\perp=0$. Une
+induction sur la suite finie des épisodes et événements établit
+l'invariance de l'exécution entière. \hfill$\square$
+
+\paragraph{Portée.}
+Le lemme ne dit rien des perturbations transverses ni de leur stabilité.
+Il établit une fermeture exacte de la famille déclarée. La stabilité au
+voisinage de $\mathcal M_{\mathrm{al}}$ est une question distincte.
+
+\section{Suffisance de l'état lent aligné}
+\label{annexe-I-suffisance-etat-lent}
+
+\resultstep{prop:I-etat-lent-aligne}
+\begin{encadre}[title={Proposition \theproposition{} --- Paramétrage exact par l'état lent aligné}]
+Sous (A1)--(A4), pour toute sonde admissible $\mathcal P$ et toute
+résolution $\rho$, il existe une application unique sur le domaine
+atteignable
+\[
+\widehat\Omega_{\mathcal P,\rho}:Z\longrightarrow\mathcal Y_\rho
+\]
+telle que, pour tout état aligné regrainé de résumé
+$z=(p,\chi,\theta,s)$,
+\begin{equation}
+\label{eq:annexe-I-proposition}
+\boxed{
+\mathcal R_z^\rho(\mathcal P)
+=
+\widehat\Omega_{\mathcal P,\rho}(p,\chi,\theta,s).
+}
+\end{equation}
+Deux histoires qui déposent le même $z$ avant la sonde sont donc
+indiscernables par cette sonde à la résolution $\rho$.
+\end{encadre}
+
+\paragraph{Démonstration.}
+Par (A4), tout état comparé possède la même composante mécanique $y_0$.
+Par le Lemme~\ref{lem:I-invariance-alignee} et (A2), l'exécution reste dans
+$\mathcal M_{\mathrm{al}}$ ; ses composantes vectorielles actives sont
+donc entièrement décrites par les scalaires $(\chi,\theta,s)$, auxquels
+s'ajoute $p$. Pour $z\in Z$, choisissons une valeur admissible quelconque
+$ssc_0$ et posons
+\begin{equation}
+\label{eq:annexe-I-definition-Omega}
+\widehat\Omega_{\mathcal P,\rho}(z)
+:=
+\omega_\rho\!\left(
+\operatorname{Exec}_{\mathcal P}
+\bigl(\iota(z;ssc_0)\bigr)
+\right).
+\end{equation}
+Par (A3), cette définition ne dépend pas du choix de $ssc_0$. Par (A1),
+l'exécution et sa lecture sont univoques. Ainsi
+$\widehat\Omega_{\mathcal P,\rho}$ est bien définie et toute histoire
+qui dépose le même $z$ reçoit la même réponse. L'unicité sur le domaine
+atteignable est immédiate, puisque la valeur de la carte y est imposée
+par la réponse du système. \hfill$\square$
+
+\section{Relation avec la réduction au contenu survivant}
+\label{annexe-I-relation-H}
+
+Soit la section éteinte
+\[
+Z_{\mathrm{ext}}
+=
+\{(0,0,0,s):s\in I\}.
+\]
+La carte nue de l'Appendice~H est la restriction de la carte lente :
+\begin{equation}
+\label{eq:annexe-I-restriction-H}
+\boxed{
+\Omega_{\mathcal P,\rho}(s)
+=
+\widehat\Omega_{\mathcal P,\rho}(0,0,0,s).
+}
+\end{equation}
+Le Théorème~\ref{thm:H-contenu-survivant} n'est donc pas un mécanisme séparé. Il décrit la trace
+de la carte complète sur la section où toutes les autres coordonnées
+lentes sont éteintes.
+
+\resultstep{cor:I-emboitement-resumes}
+\begin{encadre}[title={Corollaire \theproposition{} --- Emboîtement des résumés suffisants}]
+Si un protocole d'oubli annule successivement certaines coordonnées de
+$z$, la réponse se factorise par le résumé restant. En particulier :
+\[
+(p,\chi,\theta,s)
+\longrightarrow
+(\theta,s)
+\longrightarrow
+s
+\]
+chaque fois que les coordonnées supprimées sont exactement éteintes ou
+comportementalement inertes sous la sonde déclarée. Sous l'extension
+plastique, la même mécanique conduit au cinquième étage
+$z_5=(p,\chi,\theta,s,\gamma)$ étudié dans l'Appendice~\ref{annexe-equivalence-presentation-plasticite}.
+\end{encadre}
+
+Cette chaîne n'est pas une hiérarchie ontologique des variables. Elle
+exprime une hiérarchie expérimentale de résumés suffisants, relative au
+protocole et à la résolution.
+
+\section{Ensemble d'appropriation et frontière}
+\label{annexe-I-frontiere}
+
+Pour une lecture binaire, définissons
+\[
+A_{\mathcal P,\rho}
+=
+\left\{
+z\in Z
+\ \middle|\
+\widehat\Omega_{\mathcal P,\rho}(z)=1
+\right\}.
+\]
+Sa frontière relative dans $Z$ est
+\begin{equation}
+\label{eq:annexe-I-Sigma}
+\Sigma_{\mathcal P,\rho}
+=
+\partial_Z A_{\mathcal P,\rho}.
+\end{equation}
+Elle rassemble les états lents pour lesquels une variation arbitrairement
+petite, à la résolution déclarée, peut modifier l'issue.
+
+\resultstep{cor:I-localisation-bascules}
+\begin{encadre}[title={Corollaire \theproposition{} --- Localisation des bascules d'une famille historique}]
+Soit $H:I\to Z$ la carte qui associe à un paramètre initial $a$ l'état
+lent déposé par une histoire complète avant la sonde. Sous les
+hypothèses de la Proposition~\ref{prop:I-etat-lent-aligne}, les points de bascule de la famille
+sont contenus dans
+\[
+H^{-1}(\Sigma_{\mathcal P,\rho}).
+\]
+Si $H$ est continue et si la lecture est localement constante sur chaque
+composante de $Z\setminus\Sigma_{\mathcal P,\rho}$, alors tout changement effectif d'issue se produit en un tel antécédent.
+\end{encadre}
+
+\paragraph{Démonstration.}
+La réponse de la famille est
+$\widehat\Omega_{\mathcal P,\rho}\circ H$. Tant que $H(a)$ demeure dans
+une composante où la carte est localement constante, l'issue ne change
+pas. Une bascule exige donc que la trajectoire historique rencontre la
+frontière. Sous les hypothèses additionnelles, tout passage effectif
+d'une composante de réponse à une autre traverse cette frontière.
+\hfill$\square$
+
+La section étudiée dans l'Appendice~H vérifie
+\[
+\partial A^{\mathrm{ext}}_{\mathcal P,\rho}
+=
+\Sigma_{\mathcal P,\rho}
+\cap Z_{\mathrm{ext}}
+\]
+lorsque l'intersection est transverse et qu'aucune portion de frontière
+ne contient la section entière. En général, la frontière de la
+restriction est à comprendre relativement à $Z_{\mathrm{ext}}$ ; elle
+peut différer de la simple intersection en cas de tangence ou de
+coïncidence locale.
+
+\section{Activité des coordonnées lentes}
+\label{annexe-I-activite}
+
+La suffisance d'un résumé n'implique pas que chacune de ses coordonnées
+soit active pour toute sonde. Il faut distinguer la structure
+géométrique portée par une coordonnée de son activité décisionnelle à la
+résolution déclarée.
+
+Pour une coordonnée $z_i$, notons $\operatorname{abl}_i(z)$ l'état obtenu
+par l'intervention déclarée d'ablation, généralement $z_i:=0$, les autres
+coordonnées étant conservées. Cette intervention est un protocole de
+test privilégié ; elle n'est pas la définition générale de l'activité,
+qui peut être établie par toute paire ne différant que selon $z_i$.
+
+\paragraph{Activité ponctuelle.}
+La coordonnée $z_i$ est active au point $z$ lorsque
+\[
+\widehat\Omega_{\mathcal P,\rho}(z)
+\ne
+\widehat\Omega_{\mathcal P,\rho}(\operatorname{abl}_i(z)).
+\]
+Cette notion dépend du point et de l'intervention d'ablation choisie.
+
+\paragraph{Activité locale.}
+La coordonnée $z_i$ est active localement au voisinage de $z$ s'il existe
+un voisinage $U\ni z$ sur lequel la carte de réponse ne se factorise pas
+par la projection oubliant $z_i$. Équivalemment, il existe dans tout
+voisinage suffisamment petit une paire de points ne différant que selon
+$z_i$ et donnant des réponses distinctes.
+
+\paragraph{Activité globale sur une classe.}
+Pour une classe déclarée $D\subseteq Z$, la coordonnée $z_i$ est active
+globalement sur $D$ s'il existe $z,z'\in D$ ne différant que selon
+$z_i$ tels que
+\[
+\widehat\Omega_{\mathcal P,\rho}(z)
+\ne
+\widehat\Omega_{\mathcal P,\rho}(z').
+\]
+Elle est globalement inactive sur $D$ si aucune telle paire n'existe.
+
+Ces trois niveaux ne se confondent pas. Une coordonnée peut être inactive
+au point testé, active dans un voisinage plus large, ou n'être révélée
+que par une autre classe de sondes. Pour les tableaux de synthèse du
+Tome III, le codage est : $0$ pour aucune activité détectée, $L$ pour
+activité locale, et $P+L$ lorsqu'une activité ponctuelle par ablation est
+également observée.
+
+\resultstep{cor:I-factorisation-ablation}
+\begin{encadre}[title={Corollaire \theproposition{} --- Factorisation et test par ablation}]
+Si $z_i$ est globalement inactive sur le domaine atteignable $D$, alors
+la réponse se factorise par la projection qui oublie $z_i$. Réciproquement,
+toute paire séparatrice ne différant que selon $z_i$ interdit cette
+factorisation. L'ablation fournit une telle paire lorsqu'elle conserve
+les deux états dans $D$ ; elle est donc un cas d'usage suffisant, mais
+non la définition exhaustive du critère.
+\end{encadre}
+
+Ce critère fournit deux voies distinctes. L'insuffisance d'un résumé se
+démontre par exhibition d'une paire séparatrice. Sa suffisance exige une
+preuve de fermeture, ou une vérification exhaustive sur un domaine fini
+déclaré ; l'absence de séparation dans un échantillon ne suffit pas.
+
+\section{Vérification dans le modèle canonique}
+\label{annexe-I-verification-canonique}
+
+La Proposition~\ref{prop:I-etat-lent-aligne} s'applique au modèle de référence sous les
+conditions suivantes.
+
+\paragraph{Symétrie et alignement.}
+Les équations sont symétriques sous l'échange des composantes. La graine,
+les drives et les contenus utilisés dans la famille de référence sont
+alignés. Le sous-espace
+\[
+x_1=x_2,
+\quad v_1=v_2,
+\quad \theta_1=\theta_2,
+\quad \chi_1=\chi_2,
+\quad s_1=s_2
+\]
+est donc invariant par le flot et les événements.
+
+\paragraph{Inertie de $ssc$.}
+Sous $\mathcal G_{\mathrm{lin}}$, $ssc$ n'intervient dans aucune équation
+active. Deux états ayant le même $z$ et des valeurs différentes de
+$ssc$ engendrent la même exécution observable. Cette vérification est
+spécifique à la loi déclarée.
+
+\paragraph{Déterminisme.}
+Le modèle hybride satisfait O1 sur les protocoles admissibles considérés.
+Les règles de saut et le flot déterminent donc une exécution unique.
+
+\paragraph{Fermeture numérique.}
+Les états de regraine produits par les histoires-témoins ont été
+réinjectés à partir de leur quadruplet synthétique. Les résidus
+transverses observés sont nuls sur la famille déclarée et les réponses
+coïncident cellule à cellule. Cette vérification ne remplace pas la
+preuve d'invariance ; elle contrôle que l'implémentation numérique suit
+bien le sous-modèle démontré.
+
+\section{Ce que la proposition ne suppose pas}
+\label{annexe-I-non-hypotheses}
+
+La Proposition~\ref{prop:I-etat-lent-aligne} ne requiert pas :
+\begin{itemize}
+\item que $\widehat\Omega_{\mathcal P,\rho}$ soit continue ;
+\item que $A_{\mathcal P,\rho}$ soit connexe ;
+\item que $\Sigma_{\mathcal P,\rho}$ soit une variété lisse ;
+\item que la réponse soit monotone en $s$, $\theta$, $\chi$ ou $p$ ;
+\item que toutes les coordonnées de $z$ soient actives ;
+\item que le résumé demeure suffisant pour une autre sonde, une autre
+  résolution ou une autre loi de mémoire.
+\end{itemize}
+
+Elle établit uniquement une factorisation exacte de la réponse dans le
+cadre déclaré.
+
+\section{Limites de portée}
+\label{annexe-I-limites}
+
+\paragraph{Hors alignement.}
+Si $\boldsymbol\chi$, $\boldsymbol\theta$ et $\mathbf s$ ne sont pas
+colinéaires, les quatre scalaires $(p,\chi,\theta,s)$ ne déterminent plus
+les directions relatives. Le résumé doit être remplacé par l'état lent
+vectoriel complet, ou par tout autre quotient dont la suffisance est
+démontrée.
+
+\paragraph{Loi lisant $ssc$.}
+Dès que $ssc$ intervient dans le flot, les événements ou la lecture,
+(A3) tombe. Deux histoires de même $z$ peuvent alors être séparées. Il
+faut ajouter $ssc$ au résumé.
+
+\paragraph{Regraine non canonique.}
+Si la regraine dépend de l'histoire ou ne ramène pas les systèmes au
+même état mécanique autonome, $z$ ne suffit plus à déterminer l'état de
+départ de la sonde.
+
+\paragraph{Entrées transverses.}
+Une sonde non alignée peut quitter $\mathcal M_{\mathrm{al}}$ même si
+l'état initial y appartient. L'invariance doit alors être redémontrée
+dans un espace plus grand.
+
+\paragraph{Lectures historiques intégrales.}
+Pour une lecture portant sur le chemin entier, la simple égalité des
+états terminaux ne suffit pas à comparer des histoires complètes. La
+factorisation de cette annexe concerne la réponse de la sonde suffixe à
+partir de l'état regrainé ; son transport à une histoire concaténée
+requiert la compatibilité au suffixe de l'Appendice~G.
+
+\paragraph{Extinction approchée.}
+Lorsque certaines coordonnées sont petites mais non nulles, on ne peut
+les supprimer sans hypothèse quantitative de stabilité. Pour une observable pré-binaire, une borne de la
+forme
+\[
+d_\rho\!\left(
+\widehat\Omega(p,\chi,\theta,s),
+\Omega(s)
+\right)
+\le
+L_p|p|+L_\chi|\chi|+L_\theta|\theta|
+\]
+exige une régularité locale qui n'est pas contenue dans la Proposition~\ref{prop:I-etat-lent-aligne}. Pour une lecture binaire munie de la distance discrète, une telle
+borne ne peut pas être uniforme au voisinage de
+$\Sigma_{\mathcal P,\rho}$ ; il faut exclure une bande de frontière,
+comme dans Proposition~\ref{prop:H-extinction-approchee}.
+
+\paragraph{Changement de résolution.}
+Une coordonnée inactive à une résolution grossière peut devenir active
+à une résolution plus fine. La suffisance et l'activité sont toujours
+relatives à $(\mathfrak B,\rho)$.
+
+\section{Dépendances logiques et usages}
+\label{annexe-I-dependances}
+
+La chaîne de dépendance est :
+\[
+\begin{aligned}
+&\text{A-H1 + O1 + invariance alignée + inertie des variables omises}\\
+&\qquad\Longrightarrow \text{Proposition~\ref{prop:I-etat-lent-aligne}}\\
+&\qquad\Longrightarrow \text{carte }\widehat\Omega_{\mathcal P,\rho}\\
+&\qquad\Longrightarrow \text{frontière }\Sigma_{\mathcal P,\rho}.
+\end{aligned}
+\]
+
+La proposition est utilisée de quatre manières :
+\begin{enumerate}
+\item elle identifie l'espace minimal actuellement démontré pour
+  cartographier la réponse des histoires non complètement éteintes ;
+\item elle replace le Théorème~\ref{thm:H-contenu-survivant} comme une section de la géométrie
+  lente complète ;
+\item elle permet d'interpréter facilitation et anti-facilitation comme
+  des déplacements de l'état déposé relativement à
+  $\Sigma_{\mathcal P,\rho}$ ;
+\item elle prépare la limite de la Proposition~\ref{prop:J-pli-couture} : une modification du mécanisme
+  d'exécution peut déformer la frontière même lorsque le dépôt historique
+  est maintenu fixe.
+\end{enumerate}
+
+\section{Table des notations}
+\label{annexe-I-notations}
+
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.62\textwidth}}
+\toprule
+Notation & Signification \\
+\midrule
+$z=(p,\chi,\theta,s)$ & état lent aligné \\
+$Z$ & domaine déclaré des états lents atteignables \\
+$\mathcal M_{\mathrm{al}}$ & sous-espace invariant des états alignés \\
+$\iota(z;ssc)$ & injection de l'état lent dans l'état complet regrainé \\
+$\widehat\Omega_{\mathcal P,\rho}$ & carte de réponse sur l'état lent aligné \\
+$\Omega_{\mathcal P,\rho}$ & restriction à la section éteinte, carte nue de l'Appendice~H \\
+$A_{\mathcal P,\rho}$ & ensemble d'appropriation dans $Z$ \\
+$\Sigma_{\mathcal P,\rho}$ & frontière relative de l'ensemble d'appropriation \\
+$H$ & carte de dépôt d'une famille historique dans $Z$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+\label{annexe-I-conclusion}
+
+La suffisance de l'état lent aligné repose sur une fermeture précise :
+les exécutions restent dans le sous-espace aligné, les variables omises
+sont inertes et la regraine fixe la composante mécanique. Sous ces
+conditions, toute histoire n'agit sur la sonde que par le quadruplet
+qu'elle dépose,
+\[
+(p,\chi,\theta,s).
+\]
+La carte de réponse nue du régime éteint en est la section
+$p=\chi=\theta=0$. La frontière d'appropriation devient ainsi un objet
+dans l'état lent complet, et les histoires peuvent être étudiées comme
+des trajectoires ou des cartes de dépôt qui la rencontrent.
+
+Le résultat est volontairement local à la famille et à la loi déclarées.
+Cette limitation n'est pas une faiblesse : elle indique exactement ce
+qui doit être agrandi lorsque l'alignement, l'inertie de $ssc$ ou la
+regraine canonique cessent d'être valides.

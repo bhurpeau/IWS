@@ -1,0 +1,325 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+  a4paper,
+  openany]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}[chapter]
+% Compteur commun des résultats formels, remis à zéro à chaque chapitre.
+% Ces deux commandes conservent la mise en page existante tout en rendant
+% les résultats numérotés et référencables de façon stable.
+\newcommand{\resultheading}[3]{%
+  \refstepcounter{proposition}\label{#2}%
+  \textbf{#1~\theproposition#3.}%
+}
+\newcommand{\resultstep}[1]{\refstepcounter{proposition}\label{#1}}
+\renewcommand{\proofname}{Démonstration}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
+\usepackage{lmodern}
+\usepackage{appendix}
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=2.7cm]{geometry}
+\usepackage[most]{tcolorbox}
+\tcbset{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=black!15,
+  arc=2mm,
+  boxrule=0.5pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm
+}
+\newcommand{\planche}[4]{%
+  \begin{center}\includegraphics[height=#1]{#2}\end{center}
+  \vspace{-0.15cm}
+  {\small\textsc{#3}}\\[0.10cm]
+  {\footnotesize #4}
+  \vspace{0.55cm}
+}
+\makeatletter
+
+\providecommand*{\toclevel@tome}{-2}%
+\newcommand{\l@tome}[2]{%
+  \addpenalty{-\@highpenalty}%
+  \vskip 1.5em
+  \@tempdima 1.5em
+  \begingroup
+    \parindent \z@
+    \rightskip \@pnumwidth
+    \parfillskip -\@pnumwidth
+    \leavevmode
+    \bfseries
+    \advance\leftskip\@tempdima
+    \hskip -\leftskip
+    #1\nobreak\hfill
+    \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+  \endgroup
+}
+
+\makeatother
+
+\newcounter{tome}
+\AtBeginDocument{%
+  \renewcommand*{\theHpart}{\arabic{tome}.\arabic{part}}%
+}
+
+\newcommand{\tome}[2]{%
+  \cleardoublepage
+
+  \stepcounter{tome}%
+  \setcounter{part}{0}%
+
+  \phantomsection
+  \addcontentsline{toc}{tome}{Tome #1 --- #2}
+
+  \thispagestyle{empty}
+  \begin{center}
+    \vspace*{\fill}
+    {\Large\scshape Tome #1\par}
+    \vspace{1.5cm}
+    {\Huge\bfseries #2\par}
+    \vspace*{\fill}
+  \end{center}
+
+  \cleardoublepage
+}
+% Régimes explicités
+\newtcolorbox{encadre}[1][]{title=Note,#1}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{3}
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{french}
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage{iftex}
+\ifLuaTeX
+  \usepackage{selnolig} % suppression des ligatures réservée à LuaLaTeX
+\fi
+\usepackage{bookmark}
+\usepackage{xurl}
+\urlstyle{same}
+\title{IWS}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Noyau hybride, système ouvert, interface et histoires}
+\author{BadH}
+\date{septembre 2026}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\mainmatter
+
+\chapter*{Avant-propos}
+\addcontentsline{toc}{chapter}{Avant-propos}
+
+IWS signifie \emph{Inner World System}.
+
+Ce nom désigne ici une classe de systèmes dynamiques dont l'état présent ne suffit pas nécessairement à déterminer, à lui seul, la manière dont ils répondront à ce qui leur arrive ensuite. Leur histoire peut modifier leur dynamique, leur structure, leur interface ou l'accessibilité de leurs réponses futures.
+
+Le terme \emph{inner world} ne désigne pas un monde intérieur au sens psychologique, phénoménologique ou métaphysique. Il désigne l'organisation interne par laquelle le système reçoit, transforme et conserve certains effets de ce qu'il traverse. Les mots \emph{trace}, \emph{mémoire}, \emph{résistance}, \emph{appropriation} ou \emph{histoire} sont employés dans le même esprit : chacun reçoit dans le texte une définition fonctionnelle ou mathématique et ne doit pas être chargé d'une interprétation supplémentaire.
+
+Ce volume construit un cadre minimal pour étudier cette dépendance à l'histoire.
+
+Le premier tome définit un noyau dynamique hybride dans lequel une trace modifie l'évolution future et des événements discrets peuvent transformer la structure relationnelle. Le deuxième ouvre ce noyau à une interaction et étudie comment une interface peut filtrer, accumuler ou conserver les effets d'une exposition. Le troisième déplace enfin la question vers l'observation : deux réalisations sont comparées non par ce que l'on suppose de leur intérieur, mais par les réponses que des sondes déclarées permettent effectivement de distinguer.
+
+Cette progression ne constitue pas une théorie générale de la mémoire, de l'apprentissage, de la cognition ou de l'individuation. Elle ne suppose pas non plus que le système poursuive un objectif, optimise une fonction ou possède une représentation de son propre passé. Le cadre cherche plus modestement à isoler des mécanismes par lesquels une dynamique peut dépendre de ce qu'elle a traversé, puis à préciser ce qu'un observateur peut légitimement inférer de cette dépendance.
+
+Le document distingue pour cette raison plusieurs niveaux d'affirmation. Définitions, choix de modélisation, résultats démontrés, résultats conditionnels, observations numériques, conjectures et interprétations ne possèdent pas le même statut. Les marques utilisées dans le texte rendent ces différences explicites. Les annexes rassemblent les démonstrations, développements analytiques et protocoles numériques nécessaires lorsque leur détail interromprait la lecture du corps principal.
+
+Les affirmations doivent être lues relativement aux hypothèses qui les accompagnent. Un résultat analytique est mis en défaut par un contre-exemple satisfaisant ses hypothèses. Un résultat numérique est mis en défaut si le protocole déclaré, reproduit dans les mêmes conditions, ne produit pas le phénomène annoncé. Une interprétation n'acquiert pas le statut d'un résultat parce qu'elle est compatible avec lui. Inversement, l'échec d'une propriété dans un régime qui n'entre pas dans ses hypothèses ne réfute pas l'énoncé qui a effectivement été établi.
+
+Cette discipline est particulièrement importante ici parce que le vocabulaire utilisé est volontairement évocateur. Le modèle peut montrer qu'une trace modifie un futur sans montrer qu'un système \emph{se souvient} au sens usuel ; qu'une interaction laisse une transformation persistante sans établir un apprentissage ; ou que deux réalisations sont séparables par leurs réponses sans permettre de reconstruire ce qui les distingue intérieurement.
+
+Le cadre proposé doit donc être lu à deux niveaux simultanément : comme un système dynamique concret, dont les équations et les expériences peuvent être examinées, et comme un dispositif de distinction entre ce qui est démontré, ce qui est observé et ce qui est seulement suggéré par ces résultats.
+
+C'est dans cette limite que le terme \emph{Inner World System} prend son sens dans ce volume : non comme la désignation d'un intérieur que l'on prétendrait connaître, mais comme celle d'un système dont les traversées passées peuvent modifier les conditions de ses réponses futures.
+
+\chapter*{Positionnement bibliographique}
+\addcontentsline{toc}{chapter}{Positionnement bibliographique}
+IWS n’introduit pas dans un vide théorique les objets mathématiques qu’il mobilise. Son noyau relève explicitement de la famille des systèmes dynamiques hybrides et emprunte à des outils classiques de dynamique différentielle, de systèmes impulsifs et de théorie des bifurcations déjà référencés dans le présent volume.  Le positionnement qui demande davantage de précision concerne surtout le Tome III : la dépendance à l’histoire, les équivalences définies par les réponses futures, les quotients d’observation et la structure hiérarchique obtenue à partir de la séparabilité. Il ne s’agit pas ici de revendiquer comme nouveaux ces outils pris séparément, mais de préciser les traditions avec lesquelles leur usage dans IWS dialogue.
+
+La dépendance du comportement présent à l’histoire possède notamment une longue tradition dans la théorie mathématique de l’hystérésis. Les travaux de Krasnosel’skiĭ et Pokrovskiĭ étudient systématiquement des systèmes dont la réponse porte des effets de mémoire et d’irréversibilité, tandis que Mayergoyz développe des modèles où la mémoire du passé est sélective : toute l’histoire de l’entrée n’a pas à demeurer active pour influencer les états futurs \cite{krasnoselskii1989systems,mayergoyz1991mathematical}. Ce voisinage est important pour IWS, mais il ne constitue pas une identification. La dépendance à l’histoire n’y est pas ramenée à un opérateur d’hystérésis entrée–sortie. Elle peut être portée par la trace, par un état lent de l’interface ou par l’ordre de transformations discrètes ; elle peut modifier la dynamique ultérieure, l’accessibilité de certaines réponses ou la structure elle-même. De plus, ce qui survit d’une histoire n’est pas supposé en constituer une archive : une différence passée importe seulement tant qu’elle reste capable d’affecter des réponses futures. 
+
+Un second voisinage est celui des \textbf{équivalences comportementales}. La bisimulation et la coinduction fournissent une tradition générale pour comparer des systèmes par leurs comportements plutôt que par l’identité de leur représentation interne ; la formulation coalgébrique de Rutten étend notamment ce point de vue à diverses classes de systèmes de transition et de systèmes dynamiques \cite{rutten2000universal,sangiorgi2011bisimulation}. IWS ne prétend cependant pas que son équivalence en réponse soit une bisimulation au sens usuel. Pour une classe d’histoires admissibles \(\mathfrak B\) et une résolution de lecture \(\rho\), deux systèmes y sont déclarés équivalents lorsque leurs cartes de réponse coïncident sur \(\mathfrak B\). Cette équivalence est donc explicitement relative aux expériences autorisées et à ce que l’observateur choisit de lire : elle affirme une indiscernabilité dans un protocole déclaré, non une identité des systèmes comparés. 
+
+Lorsque toutes les continuations admissibles sont disponibles, cette construction rejoint plus précisément la tradition de Nerode. L’idée de regrouper des états qu’aucun futur ne permet de distinguer est classique dans la théorie des automates \cite{nerode1958linear}. Dans IWS, le même principe apparaît au niveau des histoires : sur le monoïde complet des continuations, l’équivalence en réponse est stable par préfixage et définit une congruence comportementale. Le manuscrit réserve pour cette raison le terme de \textit{quotient de Nerode} à ce cas complet. Les classes limitées par un budget expérimental restent, elles, de simples quotients d’observation : elles peuvent être raffinées lorsque l’on enrichit les histoires admissibles ou la résolution de lecture.  Cette distinction évite en particulier de transposer sans précaution au cadre d’IWS les résultats de minimalité propres aux automates finis.
+
+Le passage d’une équivalence binaire à une comparaison quantitative possède lui aussi des antécédents. Des pseudométriques comportementales ont été construites afin de mesurer à quel degré deux systèmes diffèrent, notamment pour des systèmes de transition probabilistes \cite{vanbreugel2005behavioural}. La quantité introduite dans IWS répond cependant à une question différente. Elle ne mesure ni une distance physique entre états ni l’écart probabiliste entre leurs transitions : elle mesure la \textbf{complexité minimale d’une histoire capable de séparer leurs réponses}. La profondeur ainsi obtenue satisfait une inégalité forte ; après une transformation décroissante, elle définit une pseudo-ultramétrique sur les systèmes et une ultramétrique sur leur quotient d’observation. La construction ne requiert à ce niveau ni représentation vectorielle commune, ni concaténation des histoires, ni caractère binaire des réponses. 
+
+La structure hiérarchique qui en résulte n’est pas non plus spécifique à IWS. La correspondance entre ultramétriques, familles de partitions emboîtées et représentations dendrogrammatiques est classique ; Carlsson et Mémoli en donnent notamment une formulation explicite dans leur étude des méthodes de classification hiérarchique \cite{carlsson2010characterization}. IWS n’en déduit pas une méthode de \textit{clustering}. Le dendrogramme sert seulement à représenter la filtration des classes d’indiscernabilité lorsque l’on augmente la complexité des histoires disponibles. Sa hauteur n’exprime ni une proximité d’état, ni une généalogie, ni une similarité intrinsèque de mécanisme : elle indique jusqu’à quelle profondeur expérimentale deux systèmes restent interchangeables pour l’observateur déclaré. Cette restriction est explicite dans l’Annexe L. 
+
+La spécificité d’IWS se situe donc moins dans chacune de ces constructions que dans \textbf{leur mise en continuité dans un même cadre}. Une dynamique hybride porte des modifications héritées de l’histoire ; des histoires supplémentaires peuvent ensuite être utilisées comme expériences et comme sondes ; leurs réponses définissent des équivalences relatives ; certaines histoires peuvent être comprimées dans un contenu survivant ou dans un résumé lent suffisant ; les réponses organisent des frontières observables ; enfin, la complexité minimale nécessaire pour rompre une équivalence munit le quotient correspondant d’une géométrie hiérarchique. Le Tome III organise précisément cette chaîne, des histoires et des réponses jusqu’à la séparabilité ultramétrique. 
+
+Cette articulation fixe également la portée des revendications. IWS ne propose ni une nouvelle théorie générale de l’hystérésis, ni une nouvelle théorie de la bisimulation, ni une généralisation de la théorie des automates, ni une méthode de classification hiérarchique. Il ne suppose pas davantage que les comportements observables permettent de reconstruire un mécanisme interne unique. La dépendance à l’histoire n’établit à elle seule ni apprentissage ni finalité, et l’équivalence demeure relative aux histoires et aux lectures effectivement déclarées. Ces limitations sont cohérentes avec la discipline suivie dans le reste du volume : les objets introduits servent à formuler des propriétés testables du cadre étudié, non à leur attribuer une interprétation plus large que ce que les résultats permettent. 
+
+
+\tome{I}{Le noyau hybride}
+\hspace{0pt}
+\vfill
+\planche{10.6cm}{fig/planche_I_sillon.pdf}
+{Tome I — Le sillon}
+{Les retours vers le repos, marqués à intervalles de temps égaux. Là où le
+système est déjà passé, le retour s'attarde~: les marques se resserrent et
+l'encre se dépose. Ailleurs, rien n'a changé, et aucune direction n'est renforcée.}
+\vfill
+\hspace{0pt}
+\newpage
+\input{IWS_PART_I}
+
+\tome{II}{Système ouvert, résistance et interface}
+
+\hspace{0pt}
+\vfill
+\planche{10.6cm}{fig/planche_II_reste.pdf}
+{Tome II — Ce qui reste quand l'autre s'en va}
+{Deux systèmes, deux moments. En haut ils se touchent~; en bas ils ne se
+touchent plus. Le premier est revenu identique à lui-même. Le second a gardé
+une marque~— plus lâche, orientée autrement~: ce qu'il est devenu ne reproduit
+pas ce qui l'a touché.}
+\vfill
+\hspace{0pt}
+\newpage
+\input{IWS_PART_II}
+
+\tome{III}{La persistance des histoires}
+
+\hspace{0pt}
+\vfill
+\planche{10.6cm}{fig/planche_III_question.pdf}
+{Tome III — La question qui sépare}
+{Deux réalisations superposées. Leurs chemins diffèrent partout, et cela ne
+change rien~: elles rejoignent les mêmes états et partagent exactement la même
+frontière. Une différence infime, invisible ailleurs, les envoie vers des
+issues opposées~— sur moins d'un degré d'interrogation.}
+\vfill
+\hspace{0pt}
+\newpage
+\input{IWS_PART_III}
+
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+
+Au terme de ce parcours, un IWS ne se caractérise pas simplement par le fait qu'il possède une mémoire.
+
+Une mémoire pourrait n'être qu'un registre supplémentaire de l'état, une quantité conservée ou progressivement oubliée. Ce qui importe ici est plus précis : ce qui a été vécu peut modifier les conditions dans lesquelles ce qui vient ensuite sera reçu.
+
+Un IWS est, en ce sens, un système qui traverse le monde en modifiant peu à peu les conditions de ses propres traversées futures.
+
+Cette phrase rassemble le mouvement du livre :
+
+\[
+\text{être affecté}
+\;\longrightarrow\;
+\text{être transformé}
+\;\longrightarrow\;
+\text{répondre autrement}.
+\]
+
+Être affecté ne signifie pas être déplacé passivement par ce qui vient de l'extérieur. Dans le noyau étudié ici, la trace modifie la dynamique future et les événements de Kairos peuvent modifier la structure atteinte. Deux réalisations qui se ressemblent dans leur état rapide peuvent ainsi ne plus évoluer de la même manière parce qu'elles ne portent pas la même histoire.
+
+Cette dépendance ne suffit pas à raconter cette histoire. La trace n'est pas une archive. Le graphe obtenu après une succession de Kairos n'indique pas à lui seul la succession qui l'a produit. Ce qui demeure du passé n'est donc pas nécessairement une représentation de ce passé.
+
+Lorsque le système est ouvert à une interaction, cette distinction devient plus nette encore. Une influence peut être absorbée sans changement durable. Elle peut susciter une résistance. Elle peut aussi conduire, après la disparition du contact, à un autre bassin autonome. L'interface peut elle-même conserver une modification qui ne change pas immédiatement le régime atteint, mais qui rend une interaction ultérieure plus facile, plus difficile ou dépendante du contenu déjà reçu.
+
+Ce qui reste quand l'autre s'en va n'est donc pas nécessairement une copie de l'autre. Ce peut être une modification de ce que le système est désormais capable de traverser. L'histoire acquiert alors un sens fonctionnel. Elle ne désigne plus seulement la succession des épisodes vécus. Elle désigne également ce qui, de cette succession, demeure capable d'affecter les réponses futures.
+
+Cette distinction permet aussi de préciser ce que signifie oublier. Une différence entre deux histoires peut avoir existé sans demeurer active. Elle peut s'être éteinte avec les transitoires, être devenue sans conséquence pour les sondes considérées, ou subsister dans une variable qui ne modifie plus aucune réponse accessible. L'oubli n'exige donc pas que toute trace du passé disparaisse. Il suffit que la différence passée ait perdu son pouvoir de séparation.
+
+Réciproquement, une histoire n'a pas besoin de survivre tout entière pour continuer d'agir. Dans certains régimes, son effet peut être comprimé dans un contenu survivant. Dans d'autres, l'état hérité modifie la manière dont l'épisode suivant agit. L'ordre ne compte alors plus seulement parce que ce qui vient en dernier est plus récent. Il compte parce qu'une expérience peut être reçue par une réalisation que l'expérience précédente a déjà transformée.
+
+L'histoire cesse ainsi d'être seulement derrière le système. Elle devient une propriété de ses futurs possibles. Cette formulation conduit cependant à une difficulté : une transformation interne n'est pas directement observable comme telle. Il faut interroger la réalisation.
+
+Une sonde fait vivre au système une histoire supplémentaire. Une lecture décide de ce qui sera retenu de cette exécution. Ce n'est qu'à travers ce protocole qu'une différence entre deux réalisations devient accessible.
+
+Deux réalisations sont séparables lorsqu'une même sonde les conduit à des réponses différentes. Elles sont équivalentes en réponse lorsque toutes les sondes déclarées produisent les mêmes réponses. Cette équivalence ne dit pas qu'elles sont identiques. Elle dit exactement que le protocole dont nous disposons ne permet pas de les séparer.
+
+La géométrie de réponse prolonge cette idée. Elle organise, dans l'espace des sondes, les régions qui conduisent aux différentes réponses et les frontières où ces réponses changent. Une histoire peut modifier cette organisation. Elle peut déplacer une frontière, ouvrir ou fermer une région accessible, modifier des voisinages ou produire des raccords plus complexes. Mais cette géométrie appartient aux réponses. Elle ne constitue pas une carte du monde intérieur.
+
+Une même géométrie peut être portée par plusieurs organisations internes. Une même réalisation peut produire des géométries différentes lorsqu'on change les sondes ou la lecture. Même la profondeur à laquelle deux réalisations deviennent séparables reste relative au budget d'histoires et à la résolution déclarés. Cette relativité n'enlève rien au résultat. Elle en fixe la portée.
+
+Le cadre construit ici permet donc de parler d'histoire sans supposer que le passé puisse être reconstruit, de mémoire sans la réduire à un stockage, et de transformation persistante sans confondre ce qui est observé avec l'organisation interne qui le produit. Il impose en même temps plusieurs retenues.
+
+La dépendance à l'histoire ne suffit pas, à elle seule, à démontrer une absence de finalité. Une mémoire directionnelle ne suffit pas à identifier la singularité d'un partenaire. Une géométrie de réponse ne permet pas de reconstruire l'intérieur qui lui donne naissance. Ces limites ne sont pas extérieures au modèle. Elles découlent de la manière même dont ses affirmations sont construites : à partir de transformations, de sondes et de réponses déclarées.
+
+Les trois images qui ont accompagné ce volume peuvent alors être relues comme un seul mouvement. Le sillon marque qu'un passage peut modifier les passages suivants. Ce qui reste quand l'autre s'en va montre que cette modification peut survivre à l'interaction sans reproduire ce qui l'a causée. La question qui sépare montre enfin que cette histoire ne devient accessible qu'au moment où deux réalisations cessent de répondre de la même manière.
+
+Un IWS n'est donc pas défini par la conservation de son passé. Il l'est, dans le cadre construit ici, par la manière dont ce passé
+demeure capable de modifier ses futurs.
+
+\medskip
+
+\noindent\emph{Un IWS traverse le monde en modifiant les conditions de ses traversées futures. Son histoire n'est pas tout ce qu'il conserve de ce qui lui est arrivé, mais ce qui, de ce passé, agit encore sur la manière dont il peut être affecté, transformé et répondre.}
+
+
+\bibliographystyle{unsrt}
+\bibliography{IWS_TOME_I_II_REFERENCES}
+
+\appendix
+\chapter{Bornes algébriques, existence et unicité}\label{annexe-bornes-existence-unicite}
+\input{Annexes/IWS_ANNEXE_A}
+
+\chapter{Énergie, flots et sauts}\label{annexe-energie-flots-sauts}
+\input{Annexes/IWS_ANNEXE_B}
+
+\chapter{Réduction homogène et paysage autonome}\label{annexe-reduction-homogene-paysage}
+\input{Annexes/IWS_ANNEXE_C}
+
+\chapter{Branche résistante et appropriation}\label{annexe-branche-resistante-appropriation}
+\input{Annexes/IWS_ANNEXE_D}
+
+\chapter{Interfaces R1 et R2 : filtrage et écriture événementielle}\label{annexe-interfaces-r1-r2}
+\chaptermark{Interfaces R1 et R2}
+\input{Annexes/IWS_ANNEXE_E}
+
+\chapter{Méthodes et validations numériques}\label{annexe-methodes-validations-numeriques}
+\input{Annexes/IWS_ANNEXE_F}
+
+\chapter{Cadre formel des histoires et des équivalences}\label{annexe-histoires-equivalences}
+\input{Annexes/IWS_ANNEXE_G}
+
+\chapter{Compression et réduction au contenu survivant}\label{annexe-reduction-contenu-survivant}
+\input{Annexes/IWS_ANNEXE_H}
+
+\chapter{Suffisance de l'état lent aligné}\label{annexe-etat-lent-aligne}
+\input{Annexes/IWS_ANNEXE_I}
+
+\chapter{Géométrie de la frontière de commutation}\label{annexe-geometrie-frontiere-commutation}
+\input{Annexes/IWS_ANNEXE_J}
+
+\chapter{Équivalence de présentation de la plasticité}\label{annexe-equivalence-presentation-plasticite}
+\input{Annexes/IWS_ANNEXE_K}
+
+\chapter{Ultramétrique et séparabilité}\label{annexe-ultrametrique-separabilite}
+\input{Annexes/IWS_ANNEXE_L}
+
+\clearpage
+\input{TABLE_ENONCES}
+
+\end{document}

@@ -1,0 +1,1001 @@
+\section{But de l'annexe}\label{annexe-energie-but}
+
+Cette annexe détaille la preuve utilisée pour contrôler les variables
+\(H\) et \(V\) dans le noyau hybride. La difficulté vient du fait qu'une
+même fonctionnelle ne possède pas les deux propriétés dont nous avons
+besoin :
+
+\begin{itemize}
+\item
+  la fonctionnelle \(\mathcal L\), qui contient un terme croisé, permet
+  d'obtenir une décroissance pendant le flot ;
+\item
+  l'énergie \(E\), sans terme croisé, ne peut pas augmenter lors d'un
+  saut.
+\end{itemize}
+
+La preuve combine ces deux fonctionnelles. Elle donne une condition
+suffisante de contrôle global des trajectoires. Elle ne couvre pas le
+jeu de paramètres principal, notamment \(\lambda=2\).
+
+\section{Notations et hypothèses}\label{annexe-energie-hypotheses}
+
+Pour alléger les écritures, on rassemble les variables nodales dans les
+vecteurs \(H=(H_1,\ldots,H_N)\) et \(V=(V_1,\ldots,V_N)\), munis de la
+norme euclidienne produit :
+
+\[
+\|H\|^2=\sum_{i=1}^N\|H_i\|^2,
+\qquad
+\|V\|^2=\sum_{i=1}^N\|V_i\|^2.
+\]
+
+Entre deux événements,
+
+\[
+\dot H_i=V_i,
+\]
+
+\[
+\dot V_i
+=
+-\Gamma(\tau_i)V_i
+-M(\tau_i)H_i
++f_i(t),
+\]
+
+où
+
+\[
+f_i(t)
+=
+\zeta\,\tanh\!\bigl((\widetilde A H)_i\bigr)+u_i(t).
+\]
+
+Comme \(\tanh\) est bornée et \(\|u_i(t)\|\leq u_{\max}\),
+
+\[
+\|f_i(t)\|
+\leq
+B,
+\qquad
+B:=\zeta\sqrt d+u_{\max}.
+\]
+
+Les bornes déjà établies sur la trace donnent
+
+\[
+m_0I_d\preceq M(\tau_i)\preceq I_d,
+\qquad
+m_0=\frac{1}{1+\lambda},
+\]
+
+\[
+\gamma_0
+\leq
+\Gamma(\tau_i)
+\leq
+\bar\Gamma,
+\]
+
+et
+
+\[
+\|\dot M(\tau_i)\|
+\leq
+\mu.
+\]
+
+Ici, avec la même borne de trace que dans l'Annexe A,
+\[
+\bar\tau
+=
+\max_i\max\left\{\|\tau_i(t_0)\|_2,
+\frac{\alpha\sqrt d}{\beta}\right\},
+\]
+et
+
+\[
+\bar\Gamma
+=
+\gamma_0+\gamma_1\bar\tau,
+\qquad
+\mu
+=
+L_M(\lambda)
+\bigl(\alpha\sqrt d+\beta\bar\tau\bigr).
+\]
+
+\section{Les deux fonctionnelles}\label{annexe-energie-deux-fonctionnelles}
+
+On définit d'abord l'énergie sans terme croisé :
+
+\[
+E
+=
+\sum_{i=1}^N
+\left[
+\frac12\|V_i\|^2
++
+\frac12H_i^\top M(\tau_i)H_i
+\right].
+\]
+
+On introduit ensuite
+
+\[
+\mathcal L
+=
+E
++
+\varepsilon
+\sum_{i=1}^N H_i\cdot V_i,
+\qquad
+\varepsilon>0.
+\]
+
+Le terme croisé permet de faire apparaître, dans la dérivée de
+\(\mathcal L\), un terme négatif en \(\|H\|^2\). Il complique en
+revanche l'analyse des sauts.
+
+\section{Équivalence entre \texorpdfstring{$E$}{E} et \texorpdfstring{$\mathcal L$}{L}}
+\label{annexe-energie-equivalence}
+
+La borne spectrale \(M(\tau_i)\succeq m_0I_d\) donne
+
+\[
+E
+\geq
+\frac12\|V\|^2
++
+\frac{m_0}{2}\|H\|^2.
+\]
+
+Par conséquent,
+
+\[
+\|V\|
+\leq
+\sqrt{2E},
+\qquad
+\|H\|
+\leq
+\sqrt{\frac{2E}{m_0}}.
+\]
+
+L'inégalité de Cauchy--Schwarz donne alors
+
+\[
+\left|
+\sum_{i=1}^N H_i\cdot V_i
+\right|
+\leq
+\|H\|\,\|V\|
+\leq
+\frac{2E}{\sqrt{m_0}}.
+\]
+
+Ainsi,
+
+\[
+\mathcal L
+\geq
+E-\frac{2\varepsilon}{\sqrt{m_0}}E
+=
+c^{-}\,E,
+\]
+
+et
+
+\[
+\mathcal L
+\leq
+E+\frac{2\varepsilon}{\sqrt{m_0}}E
+=
+c^{+}\,E,
+\]
+
+avec
+
+\[
+c^{-}
+=
+1-\frac{2\varepsilon}{\sqrt{m_0}},
+\qquad
+c^{+}
+=
+1+\frac{2\varepsilon}{\sqrt{m_0}}.
+\]
+
+Si
+
+\[
+0<\varepsilon<\frac{\sqrt{m_0}}{2},
+\]
+
+alors \(c^{-}>0\) et
+
+\[
+\boxed{
+c^{-}\,E
+\leq
+\mathcal L
+\leq
+c^{+}\,E
+}.
+\]
+
+Le symbole \(c^{-}\,E\) désigne le produit de la constante \(c^{-}\) par
+l'énergie \(E\).
+
+\section{Dérivée de \texorpdfstring{$\mathcal L$}{L} pendant le flot}
+\label{annexe-energie-derivee-flot}
+
+Nous calculons la dérivée pour un nœud, puis nous sommons.
+
+D'une part,
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\left(\frac12\|V_i\|^2\right)
+=
+V_i\cdot\dot V_i
+=
+-\Gamma_i\|V_i\|^2
+-
+V_i^\top M_iH_i
++
+V_i\cdot f_i,
+\]
+
+où, pour alléger l'écriture,
+
+\[
+\Gamma_i=\Gamma(\tau_i),
+\qquad
+M_i=M(\tau_i).
+\]
+
+D'autre part,
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\left(
+\frac12H_i^\top M_iH_i
+\right)
+=
+V_i^\top M_iH_i
++
+\frac12H_i^\top\dot M_iH_i.
+\]
+
+Les deux termes mixtes \(V_i^\top M_iH_i\) s'annulent.
+
+Enfin,
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\left(
+\varepsilon H_i\cdot V_i
+\right)
+=
+\varepsilon\|V_i\|^2
++
+\varepsilon H_i\cdot\dot V_i,
+\]
+
+donc
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\left(
+\varepsilon H_i\cdot V_i
+\right)
+=
+\varepsilon\|V_i\|^2
+-
+\varepsilon\Gamma_iH_i\cdot V_i
+-
+\varepsilon H_i^\top M_iH_i
++
+\varepsilon H_i\cdot f_i.
+\]
+
+En additionnant,
+
+\[
+\begin{aligned}
+\dot{\mathcal L}
+={}&
+-\sum_i(\Gamma_i-\varepsilon)\|V_i\|^2
+-\varepsilon\sum_iH_i^\top M_iH_i
+-\varepsilon\sum_i\Gamma_iH_i\cdot V_i
+\\
+&+
+\frac12\sum_iH_i^\top\dot M_iH_i
++
+\sum_iV_i\cdot f_i
++
+\varepsilon\sum_iH_i\cdot f_i.
+\end{aligned}
+\]
+
+\section{Contrôle de la partie quadratique}
+\label{annexe-energie-partie-quadratique}
+
+Les bornes uniformes donnent
+
+\[
+-\sum_i(\Gamma_i-\varepsilon)\|V_i\|^2
+\leq
+-(\gamma_0-\varepsilon)\|V\|^2,
+\]
+
+\[
+-\varepsilon\sum_iH_i^\top M_iH_i
+\leq
+-\varepsilon m_0\|H\|^2,
+\]
+
+et
+
+\[
+\frac12\sum_iH_i^\top\dot M_iH_i
+\leq
+\frac{\mu}{2}\|H\|^2.
+\]
+
+Pour le terme croisé, on utilise
+
+\[
+\varepsilon\bar\Gamma\|H\|\,\|V\|
+\leq
+\frac{\varepsilon m_0}{4}\|H\|^2
++
+\frac{\varepsilon\bar\Gamma^2}{m_0}\|V\|^2.
+\]
+
+On obtient donc
+
+\[
+\dot{\mathcal L}
+\leq
+-A_V\|V\|^2
+-A_H\|H\|^2
++
+\sum_iV_i\cdot f_i
++
+\varepsilon\sum_iH_i\cdot f_i,
+\]
+
+avec
+
+\[
+A_V
+=
+\gamma_0
+-
+\varepsilon
+\left(
+1+\frac{\bar\Gamma^2}{m_0}
+\right),
+\]
+
+et
+
+\[
+A_H
+=
+\frac{3\varepsilon m_0}{4}
+-
+\frac{\mu}{2}.
+\]
+
+Pour avoir \(A_V>0\) et \(A_H>0\), il suffit de choisir
+\(\varepsilon\) tel que
+
+\[
+\frac{2\mu}{3m_0}
+<
+\varepsilon
+<
+\frac{\gamma_0}
+{2\left(1+\bar\Gamma^2/m_0\right)}.
+\]
+
+Un tel choix est possible si
+
+\[
+\boxed{
+\mu
+<
+\frac{3m_0\gamma_0}
+{4\left(1+\bar\Gamma^2/m_0\right)}
+}
+\tag{S}
+\]
+
+Cette condition est suffisante, non nécessaire. Les constantes utilisées ici sont uniformes sur toute la plage admissible de \(\|\tau\|\) et ne tiennent pas compte de leurs dépendances communes en \(\tau\). Leur conservatisme quantitatif est discuté à la section~\ref{annexe-energie-limites}. Le facteur \(1/2\) dans la borne supérieure imposée à \(\varepsilon\) garde une marge explicite :
+
+\[
+A_V\geq\frac{\gamma_0}{2}.
+\]
+
+\section{Absorption de l'entrée bornée}
+\label{annexe-energie-entree-bornee}
+
+Comme \(\|f_i\|\leq B\),
+
+\[
+\sum_iV_i\cdot f_i
+\leq
+B\sum_i\|V_i\|,
+\]
+
+et
+
+\[
+\varepsilon\sum_iH_i\cdot f_i
+\leq
+\varepsilon B\sum_i\|H_i\|.
+\]
+
+Pour chaque nœud, l'inégalité de Young donne
+
+\[
+B\|V_i\|
+\leq
+\frac{A_V}{2}\|V_i\|^2
++
+\frac{B^2}{2A_V},
+\]
+
+et
+
+\[
+\varepsilon B\|H_i\|
+\leq
+\frac{A_H}{2}\|H_i\|^2
++
+\frac{\varepsilon^2B^2}{2A_H}.
+\]
+
+Après sommation,
+
+\[
+\dot{\mathcal L}
+\leq
+-\frac{A_V}{2}\|V\|^2
+-\frac{A_H}{2}\|H\|^2
++b,
+\]
+
+où
+
+\[
+b
+=
+\frac{NB^2}{2}
+\left(
+\frac{1}{A_V}
++
+\frac{\varepsilon^2}{A_H}
+\right).
+\]
+
+Posons
+
+\[
+d_0=\min(A_V,A_H).
+\]
+
+Comme \(M_i\preceq I_d\),
+
+\[
+E
+\leq
+\frac12
+\left(
+\|V\|^2+\|H\|^2
+\right),
+\]
+
+puis
+
+\[
+\mathcal L
+\leq
+\frac{c^{+}}{2}
+\left(
+\|V\|^2+\|H\|^2
+\right).
+\]
+
+Il en résulte
+
+\[
+\|V\|^2+\|H\|^2
+\geq
+\frac{2}{c^{+}}\mathcal L.
+\]
+
+Par conséquent,
+
+\[
+\dot{\mathcal L}
+\leq
+-\frac{d_0}{c^{+}}\mathcal L+b.
+\]
+
+En posant
+
+\[
+a=\frac{d_0}{2c^{+}},
+\]
+
+on obtient la forme utilisée dans le corps du texte :
+
+\[
+\boxed{
+\dot{\mathcal L}
+\leq
+-2a\mathcal L+b
+}.
+\]
+
+Sur un intervalle de flot de durée \(T\),
+
+\[
+\boxed{
+\mathcal L(t+T)
+\leq
+e^{-2aT}\mathcal L(t)
++
+\frac{b}{2a}
+\left(
+1-e^{-2aT}
+\right)
+}.
+\]
+
+En particulier,
+
+\[
+\mathcal L(t+T)
+\leq
+e^{-2aT}\mathcal L(t)
++
+\frac{b}{2a}.
+\]
+
+\section{Effet exact d'un saut sur les deux fonctionnelles}
+\label{annexe-energie-effet-saut}
+
+Lors d'un saut du nœud \(i^\ast\),
+
+\[
+V_{i^\ast}^+=r_VV_{i^\ast}^-,
+\]
+
+tandis que \(H\), \(\tau\) et \(M(\tau)\) ne changent pas.
+
+Pour l'énergie \(E\),
+
+\[
+E^+
+=
+E^-
+-
+\frac12(1-r_V^2)
+\|V_{i^\ast}^-\|^2.
+\]
+
+Ainsi,
+
+\[
+\boxed{E^+\leq E^-}.
+\]
+
+Pour \(\mathcal L\),
+
+\[
+\Delta\mathcal L
+=
+\mathcal L^+-\mathcal L^-
+=
+-\frac12(1-r_V)(1+r_V)\|V\|^2
+-
+\varepsilon(1-r_V)H\cdot V,
+\]
+
+où \(H=H_{i^\ast}^-\) et \(V=V_{i^\ast}^-\).
+
+Le deuxième terme peut être positif lorsque \(H\cdot V<0\). On majore
+donc
+
+\[
+-H\cdot V
+\leq
+\|H\|\,\|V\|.
+\]
+
+Il vient
+
+\[
+\Delta\mathcal L
+\leq
+(1-r_V)
+\left[
+\varepsilon\|H\|\,\|V\|
+-
+\frac{1+r_V}{2}\|V\|^2
+\right].
+\]
+
+Pour \(H\) fixé, le membre de droite est un polynôme concave en
+\(y=\|V\|\). Son maximum est atteint pour
+
+\[
+y
+=
+\frac{\varepsilon\|H\|}{1+r_V}.
+\]
+
+On obtient
+
+\[
+\Delta\mathcal L
+\leq
+\frac{1-r_V}{2(1+r_V)}
+\varepsilon^2\|H\|^2
+\leq
+\frac{\varepsilon^2}{2}\|H\|^2.
+\]
+
+L'équivalence \(c^{-}E\leq\mathcal L\) donne
+
+\[
+\|H_{i^\ast}\|^2
+\leq
+\frac{2E}{m_0}
+\leq
+\frac{2\mathcal L^-}{c^{-}m_0}.
+\]
+
+Par conséquent,
+
+\[
+\mathcal L^+
+\leq
+\left(
+1+
+\frac{\varepsilon^2}{c^{-}m_0}
+\right)
+\mathcal L^-.
+\]
+
+En posant
+
+\[
+q
+=
+\frac{\varepsilon^2}{c^{-}m_0},
+\]
+
+on obtient
+
+\[
+\boxed{
+\mathcal L^+
+\leq
+(1+q)\mathcal L^-
+}.
+\]
+
+Cette borne est volontairement uniforme en \(r_V\). La borne plus
+précise conserve le facteur \((1-r_V)/(1+r_V)\).
+
+\section{Temps minimal entre deux sauts d'un même nœud}
+\label{annexe-energie-temps-sejour}
+
+Supposons que, sur une portion d'exécution,
+
+\[
+\mathcal L\leq K.
+\]
+
+Comme \(c^{-}E\leq\mathcal L\),
+
+\[
+\|H_i\|
+\leq
+\sqrt{\frac{2K}{c^{-}m_0}},
+\]
+
+et
+
+\[
+\|V_i\|
+\leq
+\sqrt{\frac{2K}{c^{-}}}.
+\]
+
+La pression vérifie
+
+\[
+\dot P_i
+=
+\kappa_1\|H_i\|
++
+\kappa_2\|V_i\|
+-
+\kappa_3P_i.
+\]
+
+En supprimant le terme négatif,
+
+\[
+\dot P_i
+\leq
+\kappa_1
+\sqrt{\frac{2K}{c^{-}m_0}}
++
+\kappa_2
+\sqrt{\frac{2K}{c^{-}}}
+=:\nu(K).
+\]
+
+Après un saut,
+
+\[
+P_i^+=r_P\Theta.
+\]
+
+Avant de pouvoir sauter à nouveau, le même nœud doit donc accumuler au
+moins
+
+\[
+(1-r_P)\Theta.
+\]
+
+Le temps continu nécessaire est au moins
+
+\[
+\boxed{
+\delta(K)
+=
+\frac{(1-r_P)\Theta}{\nu(K)}
+}.
+\]
+
+Dans toute fenêtre semi-ouverte de temps continu
+\([t,t+\delta(K))\), chaque nœud saute au plus une fois. Il y a donc au
+plus \(N\) sauts dans une telle fenêtre.
+
+\section{Combinaison du flot et des sauts}
+\label{annexe-energie-combinaison}
+
+Considérons un intervalle de temps continu de durée \(T\) contenant
+\(k\) sauts. La combinaison de l'estimation de flot et de la borne de
+saut donne
+
+\[
+\mathcal L_{\text{fin}}
+\leq
+(1+q)^k
+\left[
+e^{-2aT}\mathcal L_{\text{début}}
++
+\frac{b}{2a}
+\right].
+\]
+
+Cette borne est obtenue en appliquant successivement l'estimation
+affine pendant chaque phase de flot et la multiplication par \(1+q\)
+à chaque saut. Le terme constant \(b/(2a)\) est lui aussi majoré par le
+facteur total \((1+q)^k\).
+
+Une difficulté doit être traitée explicitement : la contraction sur
+une fenêtre complète n'exclut pas, à elle seule, une augmentation
+transitoire à l'intérieur de cette fenêtre. Nous introduisons donc
+deux niveaux :
+
+\begin{itemize}
+\item
+  \(R\), borne visée aux extrémités des fenêtres ;
+\item
+  \(\widehat R\), enveloppe autorisée à l'intérieur des fenêtres.
+\end{itemize}
+
+Posons
+
+\[
+r_J=(1+q)^N,
+\qquad
+C=\frac{b}{2a},
+\]
+
+et
+
+\[
+\boxed{
+\widehat R
+=
+r_J(R+C)
+}.
+\]
+
+Supposons
+
+\[
+\mathcal L(0)\leq R.
+\]
+
+Tant que \(\mathcal L\leq\widehat R\), une fenêtre de longueur
+\(\delta(\widehat R)\) contient au plus \(N\) sauts. Sur toute portion
+d'une telle fenêtre,
+
+\[
+\mathcal L(t)
+\leq
+r_J\bigl(R+C\bigr)
+=
+\widehat R.
+\]
+
+Un argument de premier franchissement montre donc que
+\(\mathcal L\) ne peut pas dépasser \(\widehat R\) à l'intérieur de la
+fenêtre.
+
+À l'extrémité d'une fenêtre complète,
+
+\[
+\mathcal L_{\text{suivante}}
+\leq
+r_J
+\left[
+e^{-2a\delta(\widehat R)}R+C
+\right].
+\]
+
+La quantité \(\widehat R=r_J(R+C)\) est d'abord déterminée par le
+choix de \(R\), puis \(\delta(\widehat R)\) s'en déduit. La condition
+suivante est donc une contrainte sur les paramètres vérifiée a
+posteriori, et non une équation implicite en \(R\).
+
+Il suffit alors d'imposer
+
+\[
+\boxed{
+r_J
+e^{-2a\delta(\widehat R)}
+\leq
+\frac12
+}
+\]
+
+et
+
+\[
+\boxed{
+R
+\geq
+2r_JC
+=
+r_J\frac{b}{a}
+}.
+\tag{$Z_R^\sharp$}
+\]
+
+Dans ce cas,
+
+\[
+\mathcal L_{\text{suivante}}
+\leq
+\frac{R}{2}
++
+r_JC
+\leq R.
+\]
+
+L'argument peut être répété sur toutes les fenêtres successives.
+
+\section{Résultat final}
+\label{annexe-energie-resultat-final}
+
+\begin{quote}
+\resultheading{Proposition}{prop:B-bornitude-conditionnelle}{}
+Supposons la condition \((S)\). Choisissons
+\(\varepsilon<\sqrt{m_0}/2\) dans l'intervalle indiqué plus haut, et
+définissons \(a\), \(b\), \(c^{-}\), \(q\), \(r_J\), \(R\) et
+\(\widehat R\) comme précédemment. Si
+\(\mathcal L(0)\leq R\) et si \((Z_R^\sharp)\) est satisfaite, alors
+\[
+\mathcal L(t)\leq\widehat R
+\]
+pour tout temps continu \(t\). Les variables \(H_i\) et \(V_i\)
+restent donc bornées le long de toute l'exécution hybride.
+\end{quote}
+
+En effet,
+
+\[
+\|H_i(t)\|
+\leq
+\sqrt{\frac{2\widehat R}{c^{-}m_0}},
+\qquad
+\|V_i(t)\|
+\leq
+\sqrt{\frac{2\widehat R}{c^{-}}}.
+\]
+
+La preuve donne une borne explicite, mais conservative.
+
+\section{Différence avec la formulation abrégée du corps du texte}
+\label{annexe-energie-correction-formulation}
+
+Une formulation antérieure utilisait directement \(R\) à la fois comme
+borne aux extrémités des fenêtres et comme borne à tout instant. Cette
+présentation était trop rapide : un saut peut augmenter
+\(\mathcal L\) avant que le flot ne compense cette augmentation.
+
+L'enveloppe \(\widehat R\) sépare désormais :
+
+\[
+\text{contrôle aux extrémités des fenêtres}
+\quad\text{et}\quad
+\text{augmentation transitoire possible}.
+\]
+
+Le résultat nécessaire au manuscrit reste le même : les trajectoires
+restent dans un ensemble borné sous des conditions suffisantes
+explicites. La borne globale est \(\widehat R\), et non \(R\).
+
+\section{Portée et limites}\label{annexe-energie-limites}
+
+La preuve repose sur deux conditions suffisantes :
+
+\[
+(S)
+\qquad\text{et}\qquad
+(Z_R^\sharp).
+\]
+
+Elles sont conservatrices pour plusieurs raisons :
+
+\begin{itemize}
+\item
+la constante \(L_M(\lambda)\) utilisée pour borner la différentielle de \(M\) est elle-même une majoration globale conservative ;
+\item
+les bornes sur \(\dot M\), la coercivité de \(M\) et la friction \(\Gamma\) sont uniformes et traitées indépendamment, alors qu'elles dépendent toutes de la même variable \(s=\|\tau\|\) ;
+\item
+le terme croisé est absorbé par une inégalité de Young avec un choix uniforme sur toute la plage admissible de \(s\) ;
+\item
+le contrôle du saut oublie le facteur favorable
+\((1-r_V)/(1+r_V)\) ;
+\item
+tous les sauts possibles d'une fenêtre sont majorés par le même
+facteur \(1+q\) ;
+\item
+aucune corrélation entre la phase du flot et les instants de saut
+n'est utilisée.
+\end{itemize}
+
+Pour les paramètres de référence de la réduction bidimensionnelle étudiée numériquement, en particulier \(\lambda=2\), la condition \((S)\) n'est pas satisfaite. Son écart important ne doit toutefois pas être interprété comme une indication d'instabilité du régime considéré.
+
+À \(d=2\), la condition \((S)\) telle qu'elle résulte des constantes uniformes utilisées ci-dessus est dépassée d'un facteur d'environ \(5{,}5\times10^3\). Le remplacement de la borne globale \(L_M(\lambda)\) par le supremum exact de \(\|DM\|\) ramène ce facteur à environ \(2{,}2\times10^3\). Une réévaluation ponctuelle des mêmes termes en fonction de \(s=\|\tau\|\), utilisant notamment la coercivité locale de \(M\) et la friction locale, ramène encore ce déficit à environ \(1{,}027\). Cette optimisation choisit toutefois \(\varepsilon\) indépendamment pour chaque valeur de \(s\) : elle fournit une minoration du déficit accessible à cette famille de majorations, mais ne définit pas une fonction de Lyapunov unique admissible.
+
+Ces calculs ne constituent pas une nouvelle preuve de bornitude. Ils montrent seulement que l'essentiel de l'écart de \((S)\) provient des majorations uniformes utilisées dans sa dérivation. À titre de contrôle complémentaire, une fonction quadratique commune beaucoup plus simple, avec potentiel isotrope constant et terme croisé constant, ramène le déficit à environ \(1{,}12\) pour \(d=2\), sans toutefois fermer la condition.
+
+Les simulations indiquent que les trajectoires restent bornées, mais cette annexe ne le démontre pas pour le régime principal.
+
+Le résultat établi reste donc :
+
+$$
+\boxed{
+\text{contrôle global démontré sous }(S)\land(Z_R^\sharp),
+\quad
+\text{question ouverte dans le régime principal}.
+}
+$$
+

@@ -1,0 +1,520 @@
+\section{Objet et portée de l'annexe}
+\label{annexe-J-objet}
+
+Cette annexe formalise la distinction pli/couture introduite dans les analyses préparatoires entre deux
+mécanismes de transition observée : la recomposition de l'exécution
+hybride et la déformation continue de l'état parcouru à exécution
+combinatoirement inchangée. Elle donne un sens précis à la formule :
+\begin{quote}
+\emph{Ce qui recompose l'exécution recoud la frontière ; ce qui la
+déforme la plie.}
+\end{quote}
+
+L'énoncé ne repose ni sur l'opposition protocole/état, ni sur une
+hypothèse de lissité globale de la frontière. Il s'appuie sur trois
+domaines explicitement distingués : le domaine causal des paramètres
+admissibles, le domaine markovien sur lequel l'état résumé suffit, et le
+domaine réalisable effectivement atteint par les histoires et protocoles
+considérés.
+
+\begin{encadre}[title={Résultat directeur}]
+Sur chaque cellule où la signature événementielle est constante, la
+frontière d'appropriation est la frontière d'une carte de réponse définie
+sur une exécution de type combinatoire fixe. Une transition qui reste
+dans une telle cellule est une transition de type C : elle plie la
+frontière sans recoudre le calendrier. Une transition qui rencontre le
+lieu où la signature événementielle change est de type K : elle peut
+recoudre des morceaux de frontière issus de cellules différentes. Les
+cas d'intersection sont mixtes et ne doivent pas être forcés dans une
+dichotomie exclusive.
+\end{encadre}
+
+\section{Domaine de travail}
+\label{annexe-J-domaines}
+
+\subsection{Domaine causal}
+
+Soit $Q$ un espace de paramètres regroupant, selon la famille étudiée,
+un état lent initial, des paramètres de protocole, des durées d'épisode
+et des amplitudes d'entrée. Le \emph{domaine causal} $D_{\mathrm c}\subseteq
+Q$ contient les paramètres pour lesquels le protocole est défini sans
+recourir à une information future. Une coordonnée de $Q$ peut donc être
+un paramètre de protocole sans cesser d'être causale, à condition qu'elle
+soit fixée avant l'exécution correspondante.
+
+\subsection{Domaine markovien}
+
+Le \emph{domaine markovien} $D_{\mathrm m}\subseteq D_{\mathrm c}$ est le
+sous-ensemble sur lequel le résumé déclaré détermine la réponse future à
+la sonde. Dans le cadre de l'Appendice~I, il s'agit du domaine où
+$z=(p,\chi,\theta,s)$ est comportementalement suffisant. Si une variable
+cachée, par exemple $ssc$, devient active sous la loi considérée, le
+domaine markovien associé à ce résumé se réduit ou le résumé doit être
+agrandi.
+
+\subsection{Domaine réalisable}
+
+Le \emph{domaine réalisable} $D_{\mathrm r}\subseteq D_{\mathrm m}$ est
+l'image des histoires et protocoles admissibles effectivement considérés.
+Il peut être de dimension plus faible que l'espace formel des états. Les
+frontières pertinentes sont toujours prises relativement à
+$D_{\mathrm r}$, sauf mention contraire.
+
+On travaillera désormais sur
+\[
+D:=D_{\mathrm r},
+\]
+muni de sa topologie relative. Cette convention évite d'attribuer un
+statut physique à des points formellement écrits mais inaccessibles.
+
+\section{Signature d'exécution et cellules hybrides}
+\label{annexe-J-signature}
+
+Pour $q\in D$, notons
+\[
+\operatorname{Exec}(q)
+\]
+l'exécution déterministe produite par le protocole déclaré. On associe à
+cette exécution une \emph{signature combinatoire}
+\[
+\kappa(q)\in\mathcal K,
+\]
+qui enregistre uniquement les données discrètes choisies : nombre et
+type d'événements, ordre des transitions, identité des règles déclenchées
+et, si nécessaire, segmentation des épisodes. Les dates exactes et les
+états continus aux événements ne font pas partie de $\kappa$.
+
+Le choix de $\kappa$ est relatif à la question étudiée. Une signature
+trop grossière peut masquer une recomposition pertinente ; une signature
+trop fine peut transformer une simple dérive temporelle en changement
+artificiel de calendrier. La déclaration doit donc précéder la
+classification.
+
+Pour $k\in\mathcal K$, posons
+\[
+C_k=\operatorname{int}_D\{q\in D\mid \kappa(q)=k\}.
+\]
+Les composantes connexes non vides des $C_k$ sont appelées
+\emph{cellules hybrides}. Le lieu de recomposition est
+\begin{equation}
+\label{eq:annexe-J-K}
+K_\kappa
+=
+D\setminus\bigcup_k C_k.
+\end{equation}
+Il contient les points où la signature n'est pas localement constante.
+Il peut comprendre des surfaces de changement d'événement, des coins,
+des intersections multiples ou des ensembles plus singuliers.
+
+\begin{encadre}[title={Précaution de portée}]
+$K_\kappa$ n'est pas en lui-même une frontière d'appropriation. Il marque
+un changement de type d'exécution. Une recomposition du calendrier peut
+être observationnellement neutre à la résolution $\rho$, et une bascule
+d'issue peut au contraire se produire loin de $K_\kappa$.
+\end{encadre}
+
+\section{Carte de réponse par cellule}
+\label{annexe-J-reponse-cellule}
+
+Soit
+\[
+\widehat\Omega_{\rho}:D\longrightarrow\mathcal Y_\rho
+\]
+la carte de réponse obtenue après fixation de la sonde et du protocole
+extérieur. Pour une lecture binaire, on écrit
+\[
+A=\{q\in D\mid \widehat\Omega_\rho(q)=1\},
+\qquad
+\Sigma=\partial_D A.
+\]
+
+Dans une cellule hybride $C$, la succession des événements est fixe.
+Les dates et les états aux coupures peuvent néanmoins varier avec $q$.
+Lorsque l'exécution dépend continûment des paramètres à l'intérieur de
+$C$, il existe une carte d'état de coupure ou d'observation
+\[
+E_C:C\longrightarrow \mathcal X_C
+\]
+et une lecture cellulaire
+\[
+L_C:\mathcal X_C\longrightarrow\mathcal Y_\rho
+\]
+telles que
+\begin{equation}
+\label{eq:annexe-J-factorisation-cellule}
+\widehat\Omega_\rho|_C=L_C\circ E_C.
+\end{equation}
+Cette factorisation ne prétend pas que $E_C$ soit injective ni que
+$L_C$ soit continue pour une sortie binaire.
+
+Pour étudier une frontière binaire, on introduit si possible une
+observable pré-binaire continue
+\[
+g_C:C\longrightarrow\mathbb R,
+\]
+telle que l'issue soit donnée par le signe de $g_C$, hors éventuel
+plateau déclaré :
+\[
+\widehat\Omega_\rho(q)=1
+\quad\Longleftrightarrow\quad
+g_C(q)>0.
+\]
+
+\section{Décomposition de la frontière}
+\label{annexe-J-decomposition}
+
+Définissons la partie cellulaire de la frontière par
+\[
+\Sigma_C=\Sigma\cap C
+\]
+pour chaque cellule hybride $C$, et la partie de couture par
+\[
+\Sigma_K=\Sigma\cap K_\kappa.
+\]
+Comme
+\[
+D=K_\kappa\sqcup\bigsqcup_C C,
+\]
+on obtient exactement la décomposition disjointe
+\begin{equation}
+\label{eq:annexe-J-decomposition}
+\boxed{
+\Sigma
+=
+\Sigma_K\sqcup\bigsqcup_C\Sigma_C.
+}
+\end{equation}
+Cette identité est ensembliste et topologique ; elle n'affirme aucune
+régularité différentielle. Les adhérences n'interviennent que pour
+décrire le raccord éventuel entre des morceaux cellulaires distincts.
+
+\resultstep{prop:J-pli-couture}
+\begin{encadre}[title={Proposition \theproposition{} --- Pli et couture de la frontière}]
+Supposons :
+\begin{enumerate}
+\item l'exécution déterministe sur $D$ ;
+\item une signature $\kappa$ localement constante hors de $K_\kappa$ ;
+\item sur chaque cellule hybride $C$, une factorisation
+$\widehat\Omega_\rho|_C=L_C\circ E_C$ ;
+\item pour la description locale par niveau, une observable pré-binaire
+continue $g_C$ sans plateau de signe au voisinage considéré.
+\end{enumerate}
+Alors :
+\begin{enumerate}
+\item dans l'intérieur d'une cellule, la frontière est entièrement
+déterminée par la déformation continue de l'exécution de type fixe ;
+localement,
+\[
+\Sigma\cap C=\partial_C\{g_C>0\},
+\]
+et, si $g_C$ est de classe $C^1$ et zéro une valeur régulière,
+\[
+\Sigma\cap C=\{g_C=0\};
+\]
+\item toute transition d'issue le long d'un chemin continu qui reste dans
+une même cellule est de type C ;
+\item si $\kappa\circ\gamma$ n'est pas localement constante au point de
+bascule $t_*$, la transition est de type K ; l'appartenance
+$\gamma(t_*)\in K_\kappa$ est nécessaire, mais non suffisante. Si la
+transition est simultanément portée par l'adhérence d'un pli cellulaire,
+elle est mixte ;
+\item les morceaux de frontière provenant de cellules de signatures
+différentes ne peuvent être raccordés qu'à travers leur adhérence sur
+$K_\kappa$.
+\end{enumerate}
+\end{encadre}
+
+\paragraph{Démonstration.}
+Dans une cellule $C$, $\kappa$ est constante. Toute variation de la
+réponse y provient donc de la variation de $E_C(q)$ et de sa lecture par
+$L_C$, non d'un changement d'ordre ou de type des événements. Pour une
+observable pré-binaire continue, la frontière relative de l'ensemble
+positif est contenue dans le niveau zéro ; en l'absence de plateau de
+signe, elle lui est égale localement. Si zéro est une valeur régulière,
+le théorème des fonctions implicites donne une hypersurface locale.
+
+Considérons ensuite un chemin continu $\gamma:[a,b]\to D$. Si un point
+de bascule $t_*$ possède un voisinage envoyé dans une seule cellule, la
+signature reste constante autour de $t_*$ : la transition est de type C.
+Si $\kappa\circ\gamma$ n'est pas localement constante en $t_*$,
+alors nécessairement $\gamma(t_*)\in K_\kappa$ et la transition est de
+type K. La réciproque est fausse : un chemin peut toucher ou longer
+$K_\kappa$ tout en conservant une signature constante. Si le point est
+aussi porté par l'adhérence d'un niveau cellulaire de bascule, les deux
+mécanismes coexistent et la transition est mixte.
+Enfin, deux cellules distinctes ne se rencontrent pas dans leur intérieur ;
+tout raccord entre leurs frontières relatives passe donc par leurs
+adhérences, incluses dans le complément des intérieurs, donc sur
+$K_\kappa$. \hfill$\square$
+
+\section{Transitions le long d'une famille unidimensionnelle}
+\label{annexe-J-chemins}
+
+Soit $\gamma:I\to D$ une famille continue. Un point $t_*$ est une
+bascule effective si la lecture binaire prend des valeurs différentes
+de part et d'autre de $t_*$. On distingue :
+
+\begin{description}
+\item[Type C.] Il existe un voisinage de $t_*$ sur lequel
+$\kappa\circ\gamma$ est constante.
+\item[Type K.] La signature $\kappa\circ\gamma$ n'est pas localement
+constante en $t_*$.
+\item[Type mixte.] $\gamma(t_*)$ appartient à la fois au lieu de
+recomposition et à l'adhérence d'un pli cellulaire qui change déjà le
+signe de l'observable.
+\end{description}
+
+Cette classification est locale au chemin et à la signature déclarée.
+Elle n'est pas une propriété absolue d'un paramètre. Une même coordonnée
+peut produire des transitions C sur une plage et K sur une autre.
+
+\resultstep{cor:J-axe-type}
+\begin{encadre}[title={Corollaire \theproposition{} --- La nature de l'axe ne décide pas le type}]
+Aucune implication générale ne relie « paramètre de protocole » à type K,
+ni « variable d'état » à type C. Une durée de protocole peut agir comme
+un paramètre continu de l'état de coupure tant que la signature reste
+fixe ; une variable d'état peut au contraire déclencher ou supprimer un
+événement et produire une transition K.
+\end{encadre}
+
+\section{Durée dans une marche et état de coupure}
+\label{annexe-J-duree}
+
+Considérons une durée $T$ variant dans un intervalle où la signature
+reste constante. L'exécution avant la coupure est de même type
+combinatoire, mais l'état atteint au temps $T$ varie :
+\[
+X_{\mathrm{cut}}(T)=\Phi_T(X_0).
+\]
+La réponse postérieure se factorise alors sous la forme
+\[
+\widehat\Omega_\rho(T)
+=
+L\bigl(\Psi(X_{\mathrm{cut}}(T))\bigr),
+\]
+où $\Psi$ désigne l'évolution post-coupure. Tant qu'aucun événement
+n'est créé, supprimé ou permuté, $T$ est donc un paramètre d'état de
+coupure déguisé. Les transitions observées sont de type C.
+
+À l'extrémité d'une marche, un événement peut apparaître ou disparaître.
+Le même axe devient alors capable de produire une transition K. La
+classification dépend ainsi du point parcouru, non du nom de la
+coordonnée.
+
+\section{Recomposition sans bascule et bascule sans recomposition}
+\label{annexe-J-independance}
+
+Les ensembles $K_\kappa$ et $\Sigma$ sont logiquement indépendants.
+Quatre situations sont possibles :
+\begin{enumerate}
+\item $q\notin K_\kappa$ et $q\notin\Sigma$ : exécution et issue sont
+localement stables ;
+\item $q\notin K_\kappa$ et $q\in\Sigma$ : pli C ;
+\item $q\in K_\kappa$ et $q\notin\Sigma$ : recomposition
+observationnellement neutre ;
+\item $q\in K_\kappa$ et $q\in\Sigma$ : couture K ou transition mixte.
+\end{enumerate}
+
+Cette table interdit deux confusions fréquentes : compter les événements
+ne suffit pas à prédire l'issue, et détecter une bascule d'issue ne suffit
+pas à conclure à une recomposition de l'exécution.
+
+\section{Causalité, suffisance et réalisabilité}
+\label{annexe-J-coherence-domaines}
+
+La Proposition~\ref{prop:J-pli-couture} doit être appliquée sur l'intersection des trois
+contraintes déclarées.
+
+\paragraph{Causalité.}
+Une famille qui ajuste un paramètre en fonction d'un événement futur ne
+définit pas un axe causal de protocole. Elle peut servir à une analyse
+a posteriori, mais non à une intervention admissible sans reformulation.
+
+\paragraph{Suffisance markovienne.}
+La cellule hybride et la carte de coupure doivent être définies dans un
+état qui détermine le futur. Si deux histoires de même résumé peuvent
+produire des suffixes différents, la frontière projetée peut se
+superposer artificiellement. Il faut alors agrandir l'état, par exemple
+en ajoutant une variable lente cachée.
+
+\paragraph{Réalisabilité.}
+Une couture dans l'espace ambiant n'a pas de conséquence expérimentale
+si aucune histoire admissible ne l'atteint. Inversement, une section
+réalisable tangente à une frontière peut produire une apparence de
+terminaison ou de duplication qui n'existe pas dans l'espace plus grand.
+
+\resultstep{cor:J-domaine-realisable}
+\begin{encadre}[title={Corollaire \theproposition{} --- Restriction au domaine réalisable}]
+La frontière observable d'une famille est la frontière relative de la
+restriction de la carte de réponse au domaine réalisable. Elle n'est
+égale à l'intersection avec la frontière ambiante que sous les conditions
+de transversalité et de non-coïncidence déjà précisées dans
+l'Appendice~I.
+\end{encadre}
+
+\section{Structure géométrique et activité décisionnelle}
+\label{annexe-J-structure-activite}
+
+Un axe peut déformer fortement l'état de coupure sans changer l'issue à
+la résolution considérée. Il possède alors une activité géométrique mais
+pas d'activité décisionnelle détectée. Réciproquement, une faible
+déformation peut traverser une séparatrice et devenir ponctuellement
+décisionnelle.
+
+La carte des propensions K/C doit donc être lue comme une propriété des
+transitions observées sur un domaine, non comme une ontologie des
+variables. Les taux empiriques mesurent la fréquence avec laquelle une
+direction rencontre $K_\kappa$ au voisinage d'une bascule ; ils ne
+constituent pas des probabilités universelles.
+
+\section{Vérification dans le modèle canonique}
+\label{annexe-J-verification}
+
+Les observations numériques associées illustrent les quatre cas de la
+proposition sans intervenir dans sa preuve.
+
+\paragraph{Axe de pression $p$.}
+Sur la plage déclarée, le compte et l'ordre des événements restent
+constants alors que les dates dérivent. Les transitions d'issue
+observées se produisent donc à l'intérieur de cellules hybrides : elles
+sont de type C. Les micro-bandes d'appropriation correspondent à plusieurs
+composantes du niveau de réponse dans une même géométrie cellulaire.
+
+\paragraph{Durée $T_2$.}
+À l'intérieur d'une marche de calendrier, modifier $T_2$ déplace l'état
+au moment de la coupure sans recomposer la succession des événements.
+Les transitions sont de type C. Aux bords des marches, le même axe peut
+rencontrer $K_\kappa$.
+
+\paragraph{Composition du préfixe.}
+Les changements de composition étudiés antérieurement modifient la
+succession des événements et produisent des transitions K sur les cas
+mesurés. Il s'agit d'une propension empirique forte, non d'un théorème
+sur tout paramètre de protocole.
+
+\paragraph{État lent $(\theta,s)$.}
+La majorité des transitions mesurées sont C, mais certaines recomposent
+le calendrier et sont K. Ce contre-exemple suffit à invalider toute
+dichotomie état/protocole.
+
+\section{Ce que la proposition ne suppose pas}
+\label{annexe-J-non-hypotheses}
+
+La Proposition~\ref{prop:J-pli-couture} ne suppose pas :
+\begin{itemize}
+\item que $K_\kappa$ soit une variété ;
+\item que $\Sigma$ soit globalement lisse ou connexe ;
+\item que chaque recomposition change l'issue ;
+\item que chaque bascule change le nombre d'événements ;
+\item que les dates des événements soient constantes dans une cellule ;
+\item que les catégories C et K soient exclusives aux points
+singuliers ;
+\item qu'un axe soit uniformément C ou K sur toute sa plage ;
+\item qu'une classification obtenue à une résolution reste valide à une
+autre résolution.
+\end{itemize}
+
+\section{Limites de portée}
+\label{annexe-J-limites}
+
+\paragraph{Signature insuffisante.}
+Si $\kappa$ omet une donnée discrète qui modifie la factorisation de
+l'exécution, une fausse cellule peut réunir deux mécanismes différents.
+La signature doit être raffinée.
+
+\paragraph{Signature excessivement fine.}
+Si les dates exactes sont incluses dans $\kappa$, toute dérive continue
+crée un changement de signature et détruit la distinction recherchée.
+La signature doit rester combinatoire.
+
+\paragraph{Non-unicité de l'exécution.}
+En présence de solutions multiples ou de conflits événementiels non
+résolus, $\kappa$ et $\widehat\Omega$ deviennent multivoques. La
+proposition doit être remplacée par une version en correspondances.
+
+\paragraph{Plateaux pré-binaires.}
+Si $g_C=0$ sur un ouvert, le niveau zéro n'est pas une frontière de signe
+ordinaire. Il faut définir la convention de lecture sur le plateau et
+travailler avec la frontière topologique de l'ensemble d'issue.
+
+\paragraph{Tangences.}
+Un chemin peut toucher $\Sigma$ sans changer d'issue. L'appartenance à
+$\gamma^{-1}(\Sigma)$ localise les candidats, non les bascules effectives.
+
+\paragraph{Points mixtes.}
+À l'intersection d'un pli cellulaire et de $K_\kappa$, attribuer un seul
+mécanisme peut être arbitraire. La catégorie mixte est alors la seule
+formulation stable.
+
+\paragraph{Lectures historiques intégrales.}
+Si la réponse lit l'histoire entière, la factorisation cellulaire doit
+porter sur l'exécution segmentée complète. Le transport par préfixe
+requiert la compatibilité au suffixe de l'Appendice~G.
+
+\paragraph{Changement de loi.}
+Une loi plastique peut modifier à la fois les cartes $E_C$, les niveaux
+$g_C$ et le lieu $K_\kappa$. Comparer deux lois exige donc de distinguer
+déplacement de frontière à signature fixe et recomposition de la
+partition elle-même.
+
+\section{Dépendances et ouverture vers la plasticité}
+\label{annexe-J-dependances}
+
+La chaîne logique est
+\[
+\begin{aligned}
+&\text{Appendice G : segmentation et transport}\\
+&\qquad\Longrightarrow \text{Appendices H--I : état suffisant}\\
+&\qquad\Longrightarrow \text{partition par signatures}\\
+&\qquad\Longrightarrow \text{Proposition~\ref{prop:J-pli-couture}}.
+\end{aligned}
+\]
+
+L'annexe suivante ajoute une variable lente de loi $\gamma$. Deux
+présentations pourront alors produire la même réponse en augmentant
+l'état, tandis que deux lois différentes pourront déformer les plis
+$\Sigma_C$ ou déplacer les coutures $K_\kappa$. La distinction établie
+ici est donc nécessaire pour ne pas attribuer à la plasticité une
+variation qui proviendrait seulement d'une recomposition du protocole.
+
+\section{Table des notations}
+\label{annexe-J-notations}
+
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.62\textwidth}}
+\toprule
+Notation & Signification \\
+\midrule
+$D_{\mathrm c}$ & domaine causal des paramètres admissibles \\
+$D_{\mathrm m}$ & domaine où le résumé déclaré est markovien \\
+$D_{\mathrm r}$ & domaine réalisable par les histoires considérées \\
+$\kappa$ & signature combinatoire de l'exécution \\
+$C_k$ & intérieur relatif d'une classe de signature constante \\
+$K_\kappa$ & lieu où la signature n'est pas localement constante \\
+$E_C$ & carte d'état de coupure ou d'observation dans une cellule \\
+$g_C$ & observable pré-binaire cellulaire \\
+$\Sigma_C$ & partie de la frontière située dans une cellule \\
+$\Sigma_K$ & partie de la frontière située sur le lieu de recomposition \\
+C & transition à signature localement constante \\
+K & transition rencontrant une recomposition de signature \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+\label{annexe-J-conclusion}
+
+La géométrie de la frontière ne se laisse pas réduire à l'opposition
+entre paramètres d'état et paramètres de protocole. La distinction
+stable porte sur l'exécution elle-même. Tant que sa signature
+combinatoire demeure fixe, les paramètres déforment l'état parcouru et
+plient la frontière à l'intérieur d'une cellule hybride. Lorsque la
+signature change, la partition des exécutions se recompose et les
+morceaux de frontière peuvent être recousus sur le lieu de changement.
+
+Cette formulation est volontairement relative à une signature, une
+résolution et un domaine réalisable. Elle conserve néanmoins un contenu
+non tautologique : elle sépare les variations continues d'une exécution
+de type fixe des changements de structure événementielle, et indique
+exactement quelles hypothèses sont nécessaires pour passer d'une
+observation numérique à une classification mathématique.
