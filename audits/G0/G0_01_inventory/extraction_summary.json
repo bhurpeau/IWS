@@ -1,0 +1,346 @@
+{
+ "comments": {
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": 0,
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": 0,
+  "Volume_I/IWS_PART_I.tex": 0,
+  "Volume_I/IWS_PART_II.tex": 0,
+  "Volume_I/IWS_PART_III.tex": 0,
+  "Volume_I/TABLE_ENONCES.tex": 0,
+  "Volume_I/main.tex": 24,
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": 5,
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": 0,
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": 0
+ },
+ "counts": {
+  "compagnons": 1419,
+  "volI": 11697,
+  "volII": 3605
+ },
+ "macros": {
+  "Volume_I/main.tex": {
+   "l@tome": {
+    "body": "\\addpenalty{-\\@highpenalty} \\vskip 1.5em \\@tempdima 1.5em \\begingroup \\parindent",
+    "math": false,
+    "nargs": 2
+   },
+   "planche": {
+    "body": "\\begin{center}\\includegraphics[height=#1]{#2}\\end{center} \\vspace{-0.15cm} {\\sma",
+    "math": false,
+    "nargs": 4
+   },
+   "proofname": {
+    "body": "Démonstration",
+    "math": false,
+    "nargs": 0
+   },
+   "resultheading": {
+    "body": "\\refstepcounter{proposition}\\label{#2} \\textbf{#1~\\theproposition#3.}",
+    "math": false,
+    "nargs": 3
+   },
+   "resultstep": {
+    "body": "\\refstepcounter{proposition}\\label{#1}",
+    "math": false,
+    "nargs": 1
+   },
+   "subtitle": {
+    "body": "\\apptocmd{\\@title}{\\par {\\large #1 \\par}}{}{}",
+    "math": false,
+    "nargs": 1
+   },
+   "theHpart": {
+    "body": "\\arabic{tome}.\\arabic{part}",
+    "math": false,
+    "nargs": 0
+   },
+   "tightlist": {
+    "body": "\\setlength{\\itemsep}{0pt}\\setlength{\\parskip}{0pt}",
+    "math": false,
+    "nargs": 0
+   },
+   "toclevel@tome": {
+    "body": "-2",
+    "math": false,
+    "nargs": 0
+   },
+   "tome": {
+    "body": "\\cleardoublepage \\stepcounter{tome} \\setcounter{part}{0} \\phantomsection \\addcon",
+    "math": false,
+    "nargs": 2
+   }
+  },
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": {
+   "End": {
+    "body": "\\operatorname{End}",
+    "math": true,
+    "nargs": 0
+   },
+   "Exec": {
+    "body": "\\operatorname{Exec}",
+    "math": true,
+    "nargs": 0
+   },
+   "Hyb": {
+    "body": "\\mathfrak H",
+    "math": true,
+    "nargs": 0
+   },
+   "IWS": {
+    "body": "\\mathfrak{IWS}",
+    "math": true,
+    "nargs": 0
+   },
+   "Id": {
+    "body": "\\operatorname{Id}",
+    "math": true,
+    "nargs": 0
+   },
+   "M": {
+    "body": "\\mathfrak M",
+    "math": true,
+    "nargs": 0
+   },
+   "Madm": {
+    "body": "\\mathfrak M^{\\mathrm{adm}}",
+    "math": true,
+    "nargs": 0
+   },
+   "Reach": {
+    "body": "\\operatorname{Reach}",
+    "math": true,
+    "nargs": 0
+   },
+   "Rep": {
+    "body": "\\operatorname{Rep}",
+    "math": true,
+    "nargs": 0
+   },
+   "Sstruct": {
+    "body": "\\mathcal S",
+    "math": true,
+    "nargs": 0
+   },
+   "Supp": {
+    "body": "\\operatorname{Supp}",
+    "math": true,
+    "nargs": 0
+   },
+   "Word": {
+    "body": "\\operatorname{Word}",
+    "math": true,
+    "nargs": 0
+   },
+   "X": {
+    "body": "\\mathcal X",
+    "math": true,
+    "nargs": 0
+   },
+   "commonkept": {
+    "body": "\\draw[kept] (#1-1)--(#1-4); \\draw[kept] (#1-2)--(#1-5); \\draw[kept] (#1-3)--(#1-",
+    "math": false,
+    "nargs": 1
+   },
+   "panelnodes": {
+    "body": "\\node[pivot] (#1-0) at (0,0) {$0$}; \\node[vertex] (#1-1) at (2,1.55) {$1$}; \\nod",
+    "math": false,
+    "nargs": 1
+   }
+  },
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": {
+   "R": {
+    "body": "\\mathbb R",
+    "math": true,
+    "nargs": 0
+   },
+   "norm": {
+    "body": "\\lVert #1\\rVert",
+    "math": false,
+    "nargs": 1
+   },
+   "vth": {
+    "body": "\\vartheta",
+    "math": true,
+    "nargs": 0
+   }
+  },
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": {
+   "R": {
+    "body": "\\mathbb R",
+    "math": true,
+    "nargs": 0
+   },
+   "norm": {
+    "body": "\\lVert #1\\rVert",
+    "math": false,
+    "nargs": 1
+   },
+   "thelemme": {
+    "body": "\\Alph{lemme}",
+    "math": false,
+    "nargs": 0
+   },
+   "vth": {
+    "body": "\\vartheta",
+    "math": true,
+    "nargs": 0
+   }
+  }
+ },
+ "markdown": {
+  "code_spans": 131,
+  "occurrences": 23
+ },
+ "math_chars": {
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": 6994,
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": 6541,
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": 10449,
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": 9203,
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": 7718,
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": 6276,
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": 7926,
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": 6398,
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": 3913,
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": 2017,
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": 2726,
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": 3728,
+  "Volume_I/IWS_PART_I.tex": 6929,
+  "Volume_I/IWS_PART_II.tex": 6707,
+  "Volume_I/IWS_PART_III.tex": 11045,
+  "Volume_I/TABLE_ENONCES.tex": 52,
+  "Volume_I/main.tex": 137,
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": 26169,
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": 3190,
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": 4275
+ },
+ "problems": [],
+ "segments": {
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": {
+   "display": 86,
+   "inline": 125
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": {
+   "display": 84,
+   "display$$": 1,
+   "inline": 107
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": {
+   "display": 171,
+   "inline": 121
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": {
+   "display": 191,
+   "inline": 86
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": {
+   "display": 134,
+   "inline": 95
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": {
+   "display": 97,
+   "inline": 103
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": {
+   "display": 45,
+   "env:equation": 15,
+   "inline": 165
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": {
+   "display": 33,
+   "env:equation": 14,
+   "inline": 143
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": {
+   "display": 22,
+   "env:equation": 6,
+   "inline": 131
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": {
+   "display": 18,
+   "env:equation": 3,
+   "inline": 102
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": {
+   "display": 26,
+   "inline": 63
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": {
+   "display": 23,
+   "env:equation": 6,
+   "inline": 80
+  },
+  "Volume_I/IWS_PART_I.tex": {
+   "display": 106,
+   "inline": 194
+  },
+  "Volume_I/IWS_PART_II.tex": {
+   "display": 124,
+   "inline": 170
+  },
+  "Volume_I/IWS_PART_III.tex": {
+   "display": 153,
+   "env:equation": 6,
+   "inline": 227
+  },
+  "Volume_I/TABLE_ENONCES.tex": {
+   "inline": 10
+  },
+  "Volume_I/main.tex": {
+   "display": 1,
+   "inline": 3
+  },
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": {
+   "display": 187,
+   "inline": 1055
+  },
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": {
+   "display": 4,
+   "inline": 213
+  },
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": {
+   "display": 5,
+   "inline": 288
+  }
+ },
+ "unknown": {
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": {
+   "texte_en_mode_math:minipage": 1
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": {
+   "texte_en_mode_math:minipage": 1
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": {
+   "texte_en_mode_math:minipage": 1
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": {},
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": {},
+  "Volume_I/IWS_PART_I.tex": {},
+  "Volume_I/IWS_PART_II.tex": {},
+  "Volume_I/IWS_PART_III.tex": {},
+  "Volume_I/TABLE_ENONCES.tex": {},
+  "Volume_I/main.tex": {},
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": {},
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": {
+   "macro_non_developpee:\\norm": 13
+  },
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": {
+   "macro_non_developpee:\\norm": 17
+  }
+ }
+}

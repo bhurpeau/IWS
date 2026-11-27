@@ -1,0 +1,515 @@
+expr_id,fichier,ligne_debut,ligne_fin,contexte,nb_atomes,source
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:13:17,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,13,13,definition_macro,1,\mathbb R
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:15:19,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,15,15,definition_macro,1,\vartheta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:19:45,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,19,19,inline,1,C^2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:55,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,1,C^2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:446,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,3,"q_0=(\vth,\varepsilon)=(0,0)"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:510,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,1,R=8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:816,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,0,2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:822,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,0,8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:1157,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:25:1186,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,25,25,inline,1,R
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:47,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:77,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,1,\mathcal N
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:93,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:106,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,1,R
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:165,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,2,T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:34:176,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,34,34,inline,1,C^2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:35:54,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,35,35,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:35:65,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,35,35,inline,1,R=8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:36:91,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,36,36,inline,4,s^a\sqrt{q(s)}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:41:43,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,41,41,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:41:102,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,41,41,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:22,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,N=6
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:29,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,d=2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:67,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\zeta=\tfrac45
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:85,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\alpha=\tfrac9{20}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:107,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\beta=\tfrac3{25}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:128,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\gamma_0=\tfrac14
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:149,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,3,"(\kappa_1,\kappa_2,\kappa_3)=(\tfrac35,\tfrac25,\tfrac12)"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:210,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\Theta=\tfrac54
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:229,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,2,r_P=\tfrac7{20}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:248,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,2,r_V=\tfrac12
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:282,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,4,"u_0\equiv U=\tfrac52(\cos37^\circ,\sin37^\circ)"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:365,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,2,\tau_{\rm ref}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:440,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\cos
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:44:450,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,44,44,inline,1,\sin
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:47:278,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,47,47,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:47:292,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,47,47,inline,1,R=8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:48,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,2,i_1=\dots=i_7=0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:67,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,1,i_8=1
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:111,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,5,\dot P_{i_r}(\bar T_r)>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:185,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,8,\Theta-\max_{j\ne i_r}\sup P_j>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:233,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,3,"\forall t\in[0,\bar T_r)"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:261,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,6,\max_jP_j(t)<\Theta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:301,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,2,"[0,\bar T_r)"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:49:321,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,49,49,inline,1,\Theta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:51:21,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,51,51,inline,11,"\min_{1\le r\le8}\min_{t\le\bar T_r}\min_j\norm{\bar\tau_j(t)}\ge 0{,}0166"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:34,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,1,2\le r\le8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:48,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,"\norm{V_j}\ge0{,}00465"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:76,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,"\norm{H_j}\ge0{,}00109"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:105,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,"[0,\bar T_r]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:130,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,1,j
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:192,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,4,"\norm{V_j}/t^{2m+1}\ge 9{,}1\cdot10^{-4}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:238,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,4,"\norm{H_j}/t^{2m+2}\ge1{,}5\cdot10^{-4}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:284,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,"[t_0,\bar T_1]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:302,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,1,t_0=\tfrac1{100}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:342,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,t^k
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:349,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,2,k<2m+1
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:366,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,1,2m+2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:415,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,1,t=0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:433,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,0,"1{,}3\cdot10^{-3}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:52:461,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,52,52,inline,0,"2{,}2\cdot10^{-4}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:53:53,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,53,53,inline,2,u_0\equiv U\neq0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:58:31,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,58,58,inline,1,\mathcal N
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:58:47,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,58,58,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:58:173,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,58,58,inline,2,"T_1,\dots,T_8"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:58:204,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,58,58,inline,1,C^2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:58:213,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,58,58,inline,1,q
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:60:106,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,60,60,inline,1,\square
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:63:69,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,63,63,inline,1,\mathcal N
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:63:100,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,63,63,inline,1,\mathcal N
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:63:119,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,63,63,inline,1,R
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:66:27,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,66,66,inline,7,\dot P=\kappa_1\norm H+\kappa_2\norm V-\kappa_3P
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:8,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,9,\hat x(s)=\sum_{k<n}a_ks^k
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:40,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,9,\hat y(s)=\sum_{k<n}b_ks^k
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:91,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,10,q=\hat x^2+\hat y^2=\sum_{k\le2n-2}q_ks^k
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:140,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,1,q_0>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:152,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,2,a\in\mathbb N
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:69:174,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,69,69,inline,1,r>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:70:1,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,70,70,display,9,S(r):=\sum_{k\ge1}|q_k|r^k\le q_0/2 .
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:8,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,2,c_j
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:56,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,1,\sqrt q
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:69,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,2,g_j
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:83,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,5,s\mapsto s^a\sqrt{q(s)}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:115,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,5,g_j=c_{j-a}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:134,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,2,j\ge a
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:144,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,0,0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:163,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,2,M=\sqrt{3q_0/2}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:187,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,2,K\ge a
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:197,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,3,0\le s\le h<r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:71:214,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,71,71,inline,3,x=h/r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:72:1,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,72,72,display,19,"\Bigl|\,s^a\norm{(\hat x,\hat y)(s)}-\sum_{j\le K}g_js^j\Bigr|\;\le\;h^a\,M\,\frac{x^{K-a+1}}{1-x}."
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:73:36,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,73,73,inline,3,S(r)\le q_0/2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:73:64,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,73,73,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:73:89,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,73,73,inline,2,|q_k|
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:73:127,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,73,73,inline,1,M
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:73:143,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,73,73,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:10,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,s\in\mathbb C
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:27,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,|s|\le r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:40,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,6,|q(s)-q_0|\le S(r)\le q_0/2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:76,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,q(s)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:114,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:132,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,q_0/2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:167,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,\operatorname{Re}>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:230,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,\sqrt q
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:275,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,|s|\le r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:306,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,|q|\le \tfrac32q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:333,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,|\sqrt q|\le M
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:377,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,5,|c_j|\le M r^{-j}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:407,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,\mathbb R_+
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:422,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,1,q>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:481,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,3,"\sqrt q=\norm{(\hat x,\hat y)}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:524,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,2,"s\in[0,h]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:538,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,23,|\sqrt{q(s)}-\sum_{j\le K-a}c_js^j|\le\sum_{j>K-a}M(s/r)^j\le Mx^{K-a+1}/(1-x)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:76:637,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,76,76,inline,4,s^a\le h^a
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:12,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,1,"[0,h]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:28,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,4,"H_{\rm pol},V_{\rm pol}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:86,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,1,\mathrm{ORD}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:114,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,4,"e_H,e_V"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:141,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,5,"\sup_{[0,h]}\norm{H-H_{\rm pol}}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:177,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,5,"\sup_{[0,h]}\norm{V-V_{\rm pol}}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:218,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,2,g_K
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:248,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,1,K
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:255,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,6,\kappa_1\norm{H_{\rm pol}}+\kappa_2\norm{V_{\rm pol}}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:356,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,4,"R_H,R_V"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:370,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,9,P_{\rm pol}=\sum_{k\le K+1}P_ks^k
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:411,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,8,P_{k+1}=(g_k-\kappa_3P_k)/(k+1)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:446,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,2,P_0\ni P(0)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:80:472,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,80,80,inline,2,"s\in[0,h]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:81:1,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,81,81,display,23,"|P(s)-P_{\rm pol}(s)|\le s\,\delta,\qquad \delta:=\kappa_1(R_H+e_H)+\kappa_2(R_V+e_V)+\kappa_3|P_{K+1}|h^{K+1}."
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:18,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,8,P_{\rm pol}'=g_K-\kappa_3P_{\rm pol}+\rho
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:67,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,6,\rho=\kappa_3P_{K+1}s^{K+1}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:105,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,4,E=P-P_{\rm pol}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:131,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,1,E(0)=0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:150,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,1,P(0)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:172,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,1,P_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:182,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,4,E'=-\kappa_3E+\eta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:208,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,6,\eta=(g_{\rm vrai}-g_K)-\rho
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:285,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,10,|g_{\rm vrai}-g_{\rm pol}|\le\kappa_1e_H+\kappa_2e_V
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:357,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,10,|g_{\rm pol}-g_K|\le\kappa_1R_H+\kappa_2R_V
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:410,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,3,|\eta(u)|\le\delta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:84:435,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,84,84,inline,1,"[0,h]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:85:1,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,85,85,display,21,"E(s)=\int_0^se^{-\kappa_3(s-u)}\eta(u)\,du,\qquad |E(s)|\le\frac{\delta}{\kappa_3}\bigl(1-e^{-\kappa_3s}\bigr)\le s\,\delta .\qedhere"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:87:38,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,87,87,inline,2,"\hat x,\hat y"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:87:87,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,87,87,inline,4,"\hat V_k,\hat H_k"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:87:142,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,87,87,inline,2,a=2m+1
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:87:159,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,87,87,inline,1,2m+2
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:87:249,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,87,87,inline,1,<a
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:92:342,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,92,92,inline,2,T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:92:435,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,92,92,inline,4,"[T_{\rm lo},T_{\rm hi}]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:94:167,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,94,94,inline,0,\le\tfrac1{64}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:94:202,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,94,94,inline,1,\varepsilon
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:94:242,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,94,94,inline,3,L=1+\gamma_0+\zeta=\tfrac{41}{20}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:94:532,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,94,94,inline,2,\operatorname{Re}q>0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:94:563,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,94,94,inline,4,"(\kappa_1+\kappa_2)\sqrt2\,\varepsilon_{\rm pas}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:96:46,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,96,96,inline,2,\tau_{\rm ref}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:96:64,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,96,96,inline,1,U
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:1,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,1,r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:7,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,2,i_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:15,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,2,\bar T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:44,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,0,\ge
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:67,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,0,\ge
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:103:89,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,103,103,inline,0,\ge
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:105:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,105,105,inline,0,"1{,}353301412736^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:105:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,105,105,inline,0,"(0,\{1,2,3\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:106:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,106,106,inline,0,"0{,}581221987146^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:106:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,106,106,inline,0,"(0,\{1,4,5\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:107:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,107,107,inline,0,"0{,}532400358719^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:107:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,107,107,inline,0,"(0,\{1,2,3\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:108:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,108,108,inline,0,"0{,}517063751284^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:108:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,108,108,inline,0,"(0,\{1,4,5\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:109:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,109,109,inline,0,"0{,}511475147021^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:109:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,109,109,inline,0,"(0,\{1,2,3\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:110:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,110,110,inline,0,"0{,}508204784559^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:110:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,110,110,inline,0,"(0,\{1,4,5\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:111:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,111,111,inline,0,"0{,}505625265862^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:111:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,111,111,inline,0,"(0,\{1,2,3\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:112:9,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,112,112,inline,0,"0{,}495001915900^{+}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:112:78,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,112,112,inline,0,"(1,\{2,5\})"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:40,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,2,\bar T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:135,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,2,"[T,T+10^{-12}]"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:295,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,8,\Theta-\max_{j\ne i_r}\sup P_j
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:566,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,2,\bar T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:582,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,0,2\cdot10^{-23}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:601,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,0,2\cdot10^{-13}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:627,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,0,7\cdot10^{-29}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:115:646,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,115,115,inline,0,4\cdot10^{-24}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:118:66,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,118,118,inline,2,\bar T_r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:118:438,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,118,118,inline,0,"0{,}004323"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:118:458,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,118,118,inline,0,"0{,}011489"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:141,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:179,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,2,|q_k|
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:190,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,1,M
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:213,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,1,q
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:227,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,2,s^a
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:241,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,5,\kappa_3P_{K+1}h^{K+1}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:371,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,4,|E'|\le-\kappa_3E+\delta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:121:425,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,121,121,inline,1,E<0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:123:59,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,123,123,inline,1,q
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:123:66,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,123,123,inline,2,\pm iz_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:123:210,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,123,123,inline,2,|s|=r
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:124:183,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,124,124,inline,0,"3{,}9\cdot10^{-31}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:130:82,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,130,130,inline,4,"\hat V_k,\hat H_k"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:130:206,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,130,130,inline,1,\bar T_1
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:130:364,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,130,130,inline,0,0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:130:383,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,130,130,inline,0,1
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:130:388,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,130,130,inline,0,5
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:131:225,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,131,131,inline,1,\Theta
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:131:235,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,131,131,inline,0,"<0{,}83"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:131:330,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,131,131,inline,0,"\ge0{,}004323"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:133:65,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,133,133,inline,0,10^{-12}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:133:83,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,133,133,inline,1,\bar T_8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:133:97,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,133,133,inline,0,10^{-11}
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:133:172,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,133,133,inline,0,"0{,}4950019159007"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:134:63,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,134,134,inline,1,R
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:135:145,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,135,135,inline,0,"4{,}4\cdot10^{-16}"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:146:15,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,146,146,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:146:22,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,146,146,inline,1,R=8
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:147:14,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,147,147,inline,1,q_0
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex:148:36,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,148,148,inline,1,R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:12:17,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,12,12,definition_macro,1,\mathbb R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:14:19,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,14,14,definition_macro,1,\vartheta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:17:42,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,17,17,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:23:683,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,23,23,inline,1,R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:21,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,5,"x'=(H,V,\tau)\in\R^{36}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,1,N=6
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:64,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,1,d=2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:72,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,2,P\in\R^6
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:96,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,5,"q=(\vth,\varepsilon)\in\R^{12}\times\R"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:157,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,4,"x'(0)=(0,0,\tau_{\rm ref}+\vth)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:192,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,2,P(0)=P^0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:26:212,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,26,26,inline,5,"(\gamma_1,\lambda)=\varepsilon(\bar\gamma,\bar\lambda)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:28:22,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,28,28,inline,1,r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:28:34,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,28,28,inline,2,A_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:28:56,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,28,28,inline,1,t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:29:1,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,29,29,display,38,"\dot H_i=V_i,\quad \dot V_i=-(\gamma_0+\gamma_1\norm{\tau_i})V_i-M_\lambda(\tau_i)H_i+\zeta\tanh\bigl((\tilde A_rH)_i\bigr)+u_i(t),\quad \dot\tau_i=\alpha\tanh\bigl((\tilde A_rH)_i\bigr)-\beta\tau_i, \tag{1}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:30:1,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,30,30,display,11,"\dot P_j=\kappa_1\norm{H_j}+\kappa_2\norm{V_j}-\kappa_3P_j, \tag{2}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:31:6,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,31,31,inline,9,M_\lambda(\tau)H=H-c(\tau\!\cdot\!H)\tau
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:31:50,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,31,31,inline,4,c=\lambda/(1+(1+\lambda)\norm\tau^2)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:31:129,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,31,31,inline,1,P
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:31:136,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,31,31,inline,1,P
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:21,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,7,\tilde A_r=D_r^{-1}(A_r+I)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:85,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,3,A_r+I
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:95,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,2,\tilde A_r\ge0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:205,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,2,A_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:241,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,1,A_1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:276,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,3,"d(k,0)<\infty"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:310,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,1,k
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:383,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,2,A_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:33:490,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,33,33,inline,1,A_1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:21,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,11,T_r(q)=\inf\{t>0:\max_jP_j(t)=\Theta\}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:63,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,2,i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:89,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,1,\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:106,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,2,"H,\tau"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:129,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,8,V_{i_r}\leftarrow r_VV_{i_r}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:161,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,8,P_{i_r}\leftarrow r_PP_{i_r}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:207,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,8,"A_{r+1}=\mathrm{Rew}(A_r,\tau(T_r))"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:387,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,4,y_r^+(q)\in\R^{42}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:434,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,1,r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:35:451,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35,35,inline,6,"y_0^+(q)=(0,0,\tau_{\rm ref}+\vth,P^0)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:37:40,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,37,37,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:38:9,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,38,38,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:38:18,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,38,38,inline,1,R\ge1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:38:35,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,38,38,inline,1,\bar x(\cdot)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:38:65,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,38,38,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:38:116,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,38,38,inline,2,"r=1,\dots,R"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:40:52,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,40,40,inline,4,\bar\tau_j(\bar T_r)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:40:142,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,40,40,inline,1,\mathrm{Rew}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:40:343,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,40,40,inline,3,"\mathrm{Rew}(A_r,\cdot)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:40:410,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,40,40,inline,3,\bar\tau(\bar T_r)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:91,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,1,j
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:96,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,3,"m=d(j,0)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:108,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,3,V_j(t)\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:125,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,3,H_j(t)\ne0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:142,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,1,"(0,\bar T_1]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:172,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,6,\hat V_j=V_j/t^{2m+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:197,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,6,\hat H_j=H_j/t^{2m+2}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:273,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,1,"[0,\bar T_1]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:301,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,2,2\le r\le R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:317,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,3,V_j(t)\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:334,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,3,H_j(t)\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:352,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,2,"[0,\bar T_r]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:41:378,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,41,41,inline,1,j
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:79,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,6,P_{i_r}(\bar T_r)=\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:107,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,5,\dot P_{i_r}(\bar T_r)>0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:135,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,5,P_j(\bar T_r)<\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:163,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,3,j\neq i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:179,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,6,\max_jP_j(t)<\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:206,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,3,0\le t<\bar T_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:258,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,3,P_j(0)<\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:284,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,1,j
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:42:325,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,42,42,inline,2,r_P<1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,7,"u_i(t)=\delta_{i0}\,u_0(t)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:83,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,u_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:93,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:103,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,"[0,\infty)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:144,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,t=0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:156,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,2,u_0(0)=U\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:227,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,u
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:235,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:263,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:357,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,2,u_0\equiv U
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:433,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,2,u_1\equiv W\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:43:463,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,43,43,inline,5,V_1=Wt+O(t^2)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:44:43,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,44,44,inline,1,\bar\gamma\ne0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:44:62,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,44,44,inline,12,\min_{1\le r\le R}\min_{0\le t\le\bar T_r}\min_j\norm{\bar\tau_j(t)}>0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:44:150,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,44,44,inline,1,\bar\gamma=0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:47:31,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,47,47,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,1,\mathcal N
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:64,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:84,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,2,"r=1,\dots,R"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:129,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,1,\mathcal N
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:164,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,2,i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:181,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,2,A_{r+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:48:208,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,48,48,inline,1,\mathcal N
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:49:1,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,49,49,display,11,q\mapsto T_r(q)\quad\text{et}\quad q\mapsto y_r^+(q)\in\R^{42}\quad\text{sont de classe }C^2\text{ sur }\mathcal N.
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:10,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,6,"(t,q)\mapsto(x',P)(t;q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:50,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:60,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,8,"\{(t,q):q\in\mathcal N,\ 0\le t\le T_r(q)\}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:128,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,2,r\le R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:171,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,3,\partial_qV_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:50:188,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,50,50,inline,3,\partial_q^2V_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:38,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,6,\Omega=\{x'\in\R^{36}:\tau_i\neq0\ \forall i\}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:90,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,\bar\gamma\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:111,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,2,\Omega=\R^{36}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:140,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,A
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:161,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,4,"F(x',\varepsilon,t)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:194,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:203,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,2,"(x',\varepsilon)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:226,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,4,\Omega\times\{\varepsilon:\ 1+\varepsilon\bar\lambda>0\}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:305,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,c
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:338,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,2,1+(1+\lambda)\norm\tau^2>0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:371,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:380,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:408,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,4,"\varphi(t;x_0,\varepsilon)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:451,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:54:481,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,inline,3,"(t,x_0,\varepsilon)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:16,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:25,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,2,"(x_0,\varepsilon)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:203,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:234,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:240,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,7,"\partial_t\varphi=F(\varphi,\varepsilon,t)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:289,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:298,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,3,"(t,x_0,\varepsilon)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:325,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,2,F\in C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:339,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:350,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,10,\partial_t\partial_{x_0}\varphi=F_x\partial_{x_0}\varphi
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:410,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,8,\partial_t^2\varphi=F_xF+F_t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:500,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,0,\le2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:56:523,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,56,56,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:44,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,\varphi
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:74,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,3,"I=[0,\bar T+\delta]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:100,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,4,V_j(t;q_0)\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:121,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,4,H_j(t;q_0)\ne0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:142,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,I
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:215,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:229,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:259,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:268,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:273,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,6,"(t,q)\mapsto P_j(t;q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:301,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:58:311,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,58,inline,2,I\times\mathcal N'
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:59:1,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,59,59,display,30,"P_j(t;q)=e^{-\kappa_3t}P_j(0;q)+\int_0^te^{-\kappa_3(t-s)}g_j(s;q)\,ds,\qquad g_j=\kappa_1\norm{H_j}+\kappa_2\norm{V_j}."
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:29,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,C^\infty
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,0,0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:76,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,"[0,\bar T_r]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:107,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,4,"I=[0,\bar T_r+\delta]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:136,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,\delta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:187,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,I
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:208,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,\norm{V_j}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:222,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,\norm{H_j}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:257,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,I\times\mathcal N'
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:288,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,3,V_j(\cdot;q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:327,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:338,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,10,g_j=\kappa_1\norm{H_j\circ\varphi}+\kappa_2\norm{V_j\circ\varphi}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:410,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:497,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,3,P_j\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:559,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,9,\partial_tP_j=g_j-\kappa_3P_j
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:594,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,13,\partial_t^2P_j=\partial_tg_j-\kappa_3\partial_tP_j
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:700,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,s=0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:760,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,14,g_j(s;q)=\kappa_1s^{2m+2}\norm{\hat H_j}+\kappa_2s^{2m+1}\norm{\hat V_j}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:840,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,4,"\hat H_j,\hat V_j"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:889,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,C^\infty
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:918,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,"[0,t_0]\times\mathcal N'"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:960,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,s
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:1001,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,2,"s\in[0,t_0)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:61:1048,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,61,61,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,9,"\Pi(t,q)=P_{i_r}(t;q)-\Theta"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:80,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:116,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,4,"\Pi(\bar T_r,q_0)=0"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:141,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,6,"\partial_t\Pi(\bar T_r,q_0)>0"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:195,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,2,\mathcal N''\ni q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:233,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:246,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,4,T_r:\mathcal N''\to\R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:280,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,5,"\Pi(T_r(q),q)=0"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:328,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,1,\mathcal N''
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:344,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,3,T_r(q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:388,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,5,\max_jP_j=\Theta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:63:430,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,inline,2,i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:55,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:138,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,2,"\eta,\delta_1>0"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:165,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,8,\max_jP_j(t;q_0)\le\Theta-\eta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:202,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,3,"[0,\bar T_r-\delta_1]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:227,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,6,P_j(t;q_0)\le\Theta-\eta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:259,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,3,j\neq i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:275,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,6,"[\bar T_r-\delta_1,\bar T_r+\delta_1]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:319,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,6,\partial_tP_{i_r}\ge\eta
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:396,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,P
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:403,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,2,"(t,q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:450,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:467,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,\eta/2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:502,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,\Pi
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:65:557,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,65,65,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:46,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,3,T_r\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:62,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,6,"(t,q)\mapsto(x',P)(t;q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:92,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:119,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,2,A_{r+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:162,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:171,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,3,y_r^+\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:67:202,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,inline,1,q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:16,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,7,"q\mapsto(x',P)(T_r(q);q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:47,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:102,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,3,D_{i_r}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:123,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,2,i_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:161,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,6,q\mapsto\tau(T_r(q);q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:213,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,3,"\mathrm{Rew}(A_r,\cdot)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:267,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,3,\bar\tau(\bar T_r)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:290,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,2,A_{r+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:336,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,11,"y_r^+=D_{i_r}(x',P)(T_r(q);q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:372,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:68:379,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,68,68,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:67,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,1,k
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:76,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,3,"m=d(k,0)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:102,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,1,A_1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:117,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:207,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,1,\bar\gamma\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:228,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,6,V_k=t^{2m+1}\hat V_k
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:252,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,6,H_k=t^{2m+2}\hat H_k
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:280,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,4,"\hat V_k,\hat H_k"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:70:315,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,70,inline,2,"(t,q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:71:1,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,71,71,display,14,"\hat V_k(0)=\frac{\zeta^m(\tilde A^m)_{k0}}{(2m+1)!}\,U,\qquad \hat H_k(0)=\frac{\hat V_k(0)}{2m+2},"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:72:19,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,72,72,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:77,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,t=0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:131,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,d
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:140,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,4,\operatorname{ord}V_k=q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:172,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,7,"\operatorname{ord}\dot V_k=q-1\ge\min(q,2d)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:226,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,2,q\ge2d+1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:268,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,\ge d-1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:283,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,4,\operatorname{ord}H_j\ge2d
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:359,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,4,\zeta(\tilde AH)_k
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:415,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,d-1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:438,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,2,M_\lambda
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:491,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,\tilde A\ge0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:600,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:717,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,4,"\hat V_k,\hat H_k"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:753,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,t=0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:782,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:73:787,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,73,73,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:18,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,2,"r\in\{0,\dots,R\}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:48,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,2,I(r)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:81,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,3,\mathcal N_r\ni q_0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:114,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,3,"A_1,\dots,A_{r+1}"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:154,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,2,A_{r+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:169,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,r\ge1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:188,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,3,"T_1,\dots,T_r"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:209,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:218,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,6,y_r^+\in C^2(\mathcal N_r;\R^{42})
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:256,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,I(0)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:274,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,y_0^+
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:296,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,\vth
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:76:304,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,76,76,inline,1,A_1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:11,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,I(r-1)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:21,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,1\le r\le R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:40,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,\mathcal N_{r-1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:81,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,y_{r-1}^+(q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:111,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:119,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:142,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,A_r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:176,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,\bar\gamma\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:218,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,4,"\bar x'([0,\bar T_r+\delta])"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:260,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,\Omega
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:297,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,x'
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:310,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,y_{r-1}^+(q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:329,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:352,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,"(t,q)"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:412,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,\norm{V_j}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:426,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,\norm{H_j}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:458,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,"[0,\bar T_r+\delta]"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:541,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,P_j\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:629,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,T_r\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:700,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,4,\mathcal N_r\subset\mathcal N_{r-1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:777,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,A_{r+1}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:799,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,y_r^+\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:822,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,2,I(r)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:841,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,3,\mathcal N=\mathcal N_R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:928,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,4,\{0\le t\le T_r(q)\}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:78:980,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,78,78,inline,1,\square
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:22,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,1,u
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:137,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,2,u\in C^1
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:160,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,8,\partial_t^2\varphi=F_xF+F_t
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:232,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,6,\sum_{k<r}T_k(q)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:263,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,1,q
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:309,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,3,\partial_t^2u
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:85:341,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,85,85,inline,2,u\in C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:88:99,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,88,88,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:88:144,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,88,88,inline,0,0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:88:367,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,88,88,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:88:403,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,88,88,inline,1,\gamma_1\neq0
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:91:14,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,91,91,inline,2,\mathcal N_R
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:91:335,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,91,91,inline,1,C^2
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:91:348,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,91,91,inline,2,R\to\infty
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:91:430,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,91,91,inline,1,r
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:91:472,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,91,91,inline,4,\norm{\partial_q^2y_r^+}
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:102:29,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,102,102,inline,1,R=8
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex:104:20,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,104,104,inline,2,R\to\infty

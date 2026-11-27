@@ -1,0 +1,630 @@
+{
+ "rho": {
+  "total": 455,
+  "attendu_total": 455,
+  "par_categorie": {
+   "lecture_resolution": 395,
+   "R1_reouverture": 48,
+   "valeur_propre_modale": 8,
+   "rayon_spectral": 4
+  },
+  "attendu": {
+   "R1_reouverture": 48,
+   "valeur_propre_modale": 8,
+   "rayon_spectral": 4,
+   "lecture_resolution": 395
+  },
+  "par_fichier": {
+   "main.tex": 1,
+   "IWS_PART_II.tex": 11,
+   "IWS_PART_III.tex": 87,
+   "Annexes/IWS_ANNEXE_C.tex": 8,
+   "Annexes/IWS_ANNEXE_E.tex": 39,
+   "Annexes/IWS_ANNEXE_F.tex": 2,
+   "Annexes/IWS_ANNEXE_G.tex": 109,
+   "Annexes/IWS_ANNEXE_H.tex": 56,
+   "Annexes/IWS_ANNEXE_I.tex": 46,
+   "Annexes/IWS_ANNEXE_J.tex": 9,
+   "Annexes/IWS_ANNEXE_K.tex": 29,
+   "Annexes/IWS_ANNEXE_L.tex": 58
+  },
+  "concordance": true,
+  "classes": {
+   "nu": 403,
+   "indexe": 52
+  },
+  "niveaux": {
+   "0": 141,
+   "1": 313,
+   "2": 1
+  }
+ },
+ "crosscheck": {
+  "commandes_controlees": 408,
+  "ecarts": 0,
+  "ecarts_detail": []
+ },
+ "v516": {
+  "table": [
+   {
+    "symbole_audit": "C",
+    "occurrences_V516": 181,
+    "occurrences_V517_inventaire": 71,
+    "dont_niveau0": 66,
+    "premiere_ligne": 59
+   },
+   {
+    "symbole_audit": "\\Xi",
+    "occurrences_V516": 7,
+    "occurrences_V517_inventaire": 7,
+    "dont_niveau0": 6,
+    "premiere_ligne": 873
+   },
+   {
+    "symbole_audit": "\\Sigma",
+    "occurrences_V516": 28,
+    "occurrences_V517_inventaire": 28,
+    "dont_niveau0": 28,
+    "premiere_ligne": 873
+   },
+   {
+    "symbole_audit": "\\Omega",
+    "occurrences_V516": 25,
+    "occurrences_V517_inventaire": 25,
+    "dont_niveau0": 25,
+    "premiere_ligne": 875
+   },
+   {
+    "symbole_audit": "\\Phi",
+    "occurrences_V516": 11,
+    "occurrences_V517_inventaire": 11,
+    "dont_niveau0": 11,
+    "premiere_ligne": 875
+   },
+   {
+    "symbole_audit": "\\vartheta",
+    "occurrences_V516": 26,
+    "occurrences_V517_inventaire": 27,
+    "dont_niveau0": 27,
+    "premiere_ligne": 875
+   },
+   {
+    "symbole_audit": "Dep(Σ)",
+    "occurrences_V516": 19,
+    "occurrences_V517_inventaire": 19,
+    "dont_niveau0": 19,
+    "premiere_ligne": 1443
+   },
+   {
+    "symbole_audit": "k",
+    "occurrences_V516": 18,
+    "occurrences_V517_inventaire": 189,
+    "dont_niveau0": 79,
+    "premiere_ligne": 210
+   },
+   {
+    "symbole_audit": "r",
+    "occurrences_V516": 9,
+    "occurrences_V517_inventaire": 145,
+    "dont_niveau0": 31,
+    "premiere_ligne": 145
+   },
+   {
+    "symbole_audit": "u",
+    "occurrences_V516": 22,
+    "occurrences_V517_inventaire": 21,
+    "dont_niveau0": 21,
+    "premiere_ligne": 639
+   },
+   {
+    "symbole_audit": "v",
+    "occurrences_V516": 1,
+    "occurrences_V517_inventaire": 10,
+    "dont_niveau0": 10,
+    "premiere_ligne": 771
+   },
+   {
+    "symbole_audit": "s_i",
+    "occurrences_V516": 1,
+    "occurrences_V517_inventaire": 11,
+    "dont_niveau0": 11,
+    "premiere_ligne": 1549
+   },
+   {
+    "symbole_audit": "\\mathscr F_w",
+    "occurrences_V516": 3,
+    "occurrences_V517_inventaire": 3,
+    "dont_niveau0": 3,
+    "premiere_ligne": 1615
+   },
+   {
+    "symbole_audit": "Ω_w",
+    "occurrences_V516": 5,
+    "occurrences_V517_inventaire": 5,
+    "dont_niveau0": 5,
+    "premiere_ligne": 1625
+   },
+   {
+    "symbole_audit": "b_{i,w}, λ_{r,w}",
+    "occurrences_V516": 8,
+    "occurrences_V517_inventaire": 15,
+    "dont_niveau0": 15,
+    "premiere_ligne": 1412
+   },
+   {
+    "symbole_audit": "τ_*",
+    "occurrences_V516": 9,
+    "occurrences_V517_inventaire": 9,
+    "dont_niveau0": 9,
+    "premiere_ligne": 1545
+   }
+  ],
+  "motifs": [
+   {
+    "motif": "Références internes V5.10",
+    "regex": "V5\\.10",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Partition indexée par r (\\mathcal P_r)",
+    "regex": "\\\\mathcal\\s*P_r(?![A-Za-z])",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Partition indexée par r (\\mathcal P_{r...})",
+    "regex": "\\\\mathcal\\s*P_\\{r",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien Dep(\\vartheta)",
+    "regex": "Dep\\}?\\s*\\(\\s*\\\\vartheta",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien indexage b_{i,\\Xi}",
+    "regex": "b_\\{i,\\s*\\\\Xi",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien indexage \\lambda_{r,\\Xi}",
+    "regex": "\\\\lambda_\\{r,\\s*\\\\Xi",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien compteur s_w",
+    "regex": "(?<![A-Za-z\\\\])s_w(?![A-Za-z])",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien compteur \\ell_w",
+    "regex": "\\\\ell_w(?![A-Za-z])",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Réemploi u:=\\tau",
+    "regex": "u\\s*:=\\s*\\\\tau",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Réemploi v_i:=\\tau",
+    "regex": "v_i\\s*:=\\s*\\\\tau",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien compteur récursif 3^\\ell",
+    "regex": "3\\^\\{?\\\\ell",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien \\pi_0(E)",
+    "regex": "\\\\pi_0\\s*\\(\\s*E\\s*\\)",
+    "occurrences": 0,
+    "lignes": ""
+   },
+   {
+    "motif": "Ancien compteur \\mu_w",
+    "regex": "\\\\mu_w(?![A-Za-z])",
+    "occurrences": 0,
+    "lignes": ""
+   }
+  ],
+  "glyphes_hors_audit": 131,
+  "glyphes_apparus_apres_l1600": [
+   [
+    "\\mu",
+    1661
+   ],
+   [
+    "\\ell",
+    1716
+   ],
+   [
+    "\\epsilon",
+    1712
+   ],
+   [
+    "\\Psi",
+    1682
+   ],
+   [
+    "O",
+    1636
+   ],
+   [
+    "\\upsilon",
+    1689
+   ],
+   [
+    "\\mathbf{e}",
+    1710
+   ],
+   [
+    "\\operatorname{sign}",
+    1734
+   ],
+   [
+    "\\arg",
+    1672
+   ],
+   [
+    "\\mathcal{V}",
+    1672
+   ],
+   [
+    "\\det",
+    1685
+   ],
+   [
+    "p",
+    1629
+   ],
+   [
+    "\\mathcal{W}",
+    1639
+   ],
+   [
+    "\\xi",
+    1712
+   ],
+   [
+    "\\bigsqcup",
+    1641
+   ],
+   [
+    "\\sum",
+    1645
+   ],
+   [
+    "\\operatorname{int}",
+    1680
+   ],
+   [
+    "\\mathrm{constante}",
+    1687
+   ],
+   [
+    "o",
+    1690
+   ],
+   [
+    "\\arccos",
+    1728
+   ],
+   [
+    "\\mathrm{rad}",
+    1768
+   ]
+  ]
+ },
+ "labels": {
+  "volI": {
+   "labels_aux": 525,
+   "labels_utilises_comme_ancre": 443,
+   "absents_aux": [],
+   "occurrences_sans_ancre": 20,
+   "occurrences": 11697
+  },
+  "volII": {
+   "labels_aux": 19,
+   "labels_utilises_comme_ancre": 19,
+   "absents_aux": [],
+   "occurrences_sans_ancre": 1330,
+   "occurrences": 3605
+  }
+ },
+ "delimiteurs": {
+  "Volume_I/main.tex": {
+   "segments": 4,
+   "problemes": 0,
+   "brut_paren": 3,
+   "brut_crochet": 1,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 137
+  },
+  "Volume_I/IWS_PART_I.tex": {
+   "segments": 300,
+   "problemes": 0,
+   "brut_paren": 195,
+   "brut_crochet": 106,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 6929
+  },
+  "Volume_I/IWS_PART_II.tex": {
+   "segments": 294,
+   "problemes": 0,
+   "brut_paren": 166,
+   "brut_crochet": 124,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 6707
+  },
+  "Volume_I/IWS_PART_III.tex": {
+   "segments": 386,
+   "problemes": 0,
+   "brut_paren": 26,
+   "brut_crochet": 153,
+   "brut_envs_math": 6,
+   "envs_detectes": 6,
+   "caracteres_maths": 11045
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": {
+   "segments": 211,
+   "problemes": 0,
+   "brut_paren": 124,
+   "brut_crochet": 86,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 6994
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": {
+   "segments": 192,
+   "problemes": 0,
+   "brut_paren": 104,
+   "brut_crochet": 84,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 6541
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": {
+   "segments": 292,
+   "problemes": 0,
+   "brut_paren": 118,
+   "brut_crochet": 171,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 10449
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": {
+   "segments": 277,
+   "problemes": 0,
+   "brut_paren": 84,
+   "brut_crochet": 191,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 9203
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": {
+   "segments": 229,
+   "problemes": 0,
+   "brut_paren": 92,
+   "brut_crochet": 134,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 7718
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": {
+   "segments": 200,
+   "problemes": 0,
+   "brut_paren": 75,
+   "brut_crochet": 97,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 6276
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": {
+   "segments": 225,
+   "problemes": 0,
+   "brut_paren": 164,
+   "brut_crochet": 45,
+   "brut_envs_math": 15,
+   "envs_detectes": 15,
+   "caracteres_maths": 7926
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": {
+   "segments": 190,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 33,
+   "brut_envs_math": 14,
+   "envs_detectes": 14,
+   "caracteres_maths": 6398
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": {
+   "segments": 159,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 22,
+   "brut_envs_math": 6,
+   "envs_detectes": 6,
+   "caracteres_maths": 3913
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": {
+   "segments": 123,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 18,
+   "brut_envs_math": 3,
+   "envs_detectes": 3,
+   "caracteres_maths": 2017
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": {
+   "segments": 89,
+   "problemes": 0,
+   "brut_paren": 1,
+   "brut_crochet": 26,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 2726
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": {
+   "segments": 109,
+   "problemes": 0,
+   "brut_paren": 80,
+   "brut_crochet": 23,
+   "brut_envs_math": 6,
+   "envs_detectes": 6,
+   "caracteres_maths": 3728
+  },
+  "Volume_I/TABLE_ENONCES.tex": {
+   "segments": 10,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 0,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 52
+  },
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": {
+   "segments": 1242,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 187,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 25957
+  },
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": {
+   "segments": 217,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 4,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 3172
+  },
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": {
+   "segments": 293,
+   "problemes": 0,
+   "brut_paren": 0,
+   "brut_crochet": 5,
+   "brut_envs_math": 0,
+   "envs_detectes": 0,
+   "caracteres_maths": 4257
+  }
+ },
+ "latin": {
+  "Volume_I/main.tex": {
+   "brut": 0,
+   "inventaire": 0,
+   "ecart": 0
+  },
+  "Volume_I/IWS_PART_I.tex": {
+   "brut": 765,
+   "inventaire": 767,
+   "ecart": -2
+  },
+  "Volume_I/IWS_PART_II.tex": {
+   "brut": 521,
+   "inventaire": 521,
+   "ecart": 0
+  },
+  "Volume_I/IWS_PART_III.tex": {
+   "brut": 695,
+   "inventaire": 695,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_A.tex": {
+   "brut": 687,
+   "inventaire": 687,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_B.tex": {
+   "brut": 680,
+   "inventaire": 682,
+   "ecart": -2
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_C.tex": {
+   "brut": 649,
+   "inventaire": 649,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_D.tex": {
+   "brut": 792,
+   "inventaire": 792,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_E.tex": {
+   "brut": 535,
+   "inventaire": 535,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_F.tex": {
+   "brut": 301,
+   "inventaire": 301,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_G.tex": {
+   "brut": 155,
+   "inventaire": 155,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_H.tex": {
+   "brut": 211,
+   "inventaire": 211,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_I.tex": {
+   "brut": 265,
+   "inventaire": 265,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_J.tex": {
+   "brut": 185,
+   "inventaire": 185,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_K.tex": {
+   "brut": 112,
+   "inventaire": 112,
+   "ecart": 0
+  },
+  "Volume_I/Annexes/IWS_ANNEXE_L.tex": {
+   "brut": 224,
+   "inventaire": 224,
+   "ecart": 0
+  },
+  "Volume_I/TABLE_ENONCES.tex": {
+   "brut": 13,
+   "inventaire": 13,
+   "ecart": 0
+  },
+  "Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex": {
+   "brut": 2219,
+   "inventaire": 2220,
+   "ecart": -1
+  },
+  "Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex": {
+   "brut": 411,
+   "inventaire": 411,
+   "ecart": 0
+  },
+  "Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex": {
+   "brut": 697,
+   "inventaire": 697,
+   "ecart": 0
+  }
+ }
+}

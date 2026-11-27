@@ -1,0 +1,24 @@
+corpus,volume,fichier,ligne,colonne,symbole_source,contexte,statut_extraction,extrait
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,7,53,Σ,markdown_code,unicode_markdown,x̂(s) = Σ_{k=0}^{n-1} a_k s^k
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,7,87,Σ,markdown_code,unicode_markdown,ŷ(s) = Σ b_k s^k
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,7,151,Σ,markdown_code,unicode_markdown,q = x̂² + ŷ² = Σ q_k s^k
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,8,10,Σ,markdown_code,unicode_markdown,S(r) := Σ_{k≥1} |q_k| r^k ≤ q_0 / 2
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,11,11,Σ,markdown_code,unicode_markdown,| g(s) − Σ_{j ≤ K} g_j s^j | ≤ h^a · M · x^{K−a+1} / (1 − x).
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,13,542,Σ,markdown_code,unicode_markdown,|√q(s) − Σ_{j ≤ K−a} c_j s^j| ≤ Σ_{j>K−a} M (s/r)^j ≤ M x^{K−a+1}/(1−x)
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,13,565,Σ,markdown_code,unicode_markdown,|√q(s) − Σ_{j ≤ K−a} c_j s^j| ≤ Σ_{j>K−a} M (s/r)^j ≤ M x^{K−a+1}/(1−x)
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,17,76,Σ,markdown_code,unicode_markdown,x(s) = Σ_{k ≤ ORD} c_k s^k + ρ_L s^{ORD+1}
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,17,98,ρ,markdown_code,unicode_markdown,x(s) = Σ_{k ≤ ORD} c_k s^k + ρ_L s^{ORD+1}
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,17,208,ρ,markdown_code,unicode_markdown,e_H = ‖ρ_L^H‖ h^{ORD+1}
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,73,ρ,markdown_code,unicode_markdown,E' = −k₃ E + (g_vrai − g_K) − ρ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,148,ρ,markdown_code,unicode_markdown,ρ = k₃ P_{K+1} s^{K+1}
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,237,η,markdown_code,unicode_markdown,η := (g_vrai − g_K) − ρ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,259,ρ,markdown_code,unicode_markdown,η := (g_vrai − g_K) − ρ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,290,η,markdown_code,unicode_markdown,E' = −k₃ E + η
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,438,η,markdown_code,unicode_markdown,|η(u)| ≤ δ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,446,δ,markdown_code,unicode_markdown,|η(u)| ≤ δ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,478,δ,markdown_code,unicode_markdown,δ := k₁(R_H+e_H) + k₂(R_V+e_V) + k₃|P_{K+1}|h^{K+1}
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,602,η,markdown_code,unicode_markdown,E(s) = ∫₀ˢ e^{−k₃(s−u)} η(u) du
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,628,δ,markdown_code,unicode_markdown,|E(s)| ≤ (δ/k₃)(1 − e^{−k₃ s}) ≤ s δ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,20,653,δ,markdown_code,unicode_markdown,|E(s)| ≤ (δ/k₃)(1 − e^{−k₃ s}) ≤ s δ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,22,99,δ,markdown_code,unicode_markdown,|E'| ≤ −k₃E + δ
+compagnon,II,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,33,35,ρ,markdown_code,unicode_markdown,‖ρ_L‖ h^{ORD+1}

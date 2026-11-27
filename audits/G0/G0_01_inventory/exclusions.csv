@@ -1,0 +1,11 @@
+type,fichier,ligne,detail
+verbatim,Volume_I/Annexes/IWS_ANNEXE_F.tex,59-62,verbatim
+verbatim,Volume_I/Annexes/IWS_ANNEXE_F.tex,66-69,verbatim
+verbatim,Volume_I/Annexes/IWS_ANNEXE_F.tex,567-570,verbatim
+texte_en_mode_math,Volume_I/Annexes/IWS_ANNEXE_C.tex,,texte_en_mode_math:minipage (1)
+texte_en_mode_math,Volume_I/Annexes/IWS_ANNEXE_D.tex,,texte_en_mode_math:minipage (1)
+texte_en_mode_math,Volume_I/Annexes/IWS_ANNEXE_F.tex,,texte_en_mode_math:minipage (1)
+macro_non_developpee,Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,,macro_non_developpee:\norm (13)
+macro_non_developpee,Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,,macro_non_developpee:\norm (17)
+markdown_extraction_limitee,Volume_II/NOTES_V5_17.md,,Unicode dans les spans de code seulement
+markdown_extraction_limitee,Volume_II/preuves_compagnons/audit_cauchy_lemme_V2.md,,Unicode dans les spans de code seulement
