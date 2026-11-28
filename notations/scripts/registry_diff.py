@@ -36,10 +36,13 @@ def occ_counts(path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default='audits/G0/G0_02bis')
+    ap.add_argument('--ref', default=REF)
+    ap.add_argument('--ref-occ', default=REF_OCC)
+    ap.add_argument('--name', default='registry_diff.csv')
     a = ap.parse_args()
-    ref = {o['id']: o for o in registry_io.load(REF)['objets']}
+    ref = {o['id']: o for o in registry_io.load(a.ref)['objets']}
     cur = {o['id']: o for o in registry_io.load(CUR)['objets']}
-    oref, ocur = occ_counts(REF_OCC), occ_counts(CUR_OCC)
+    oref, ocur = occ_counts(a.ref_occ), occ_counts(CUR_OCC)
     rows = []
     for i in sorted(set(ref) | set(cur)):
         o_r, o_c = ref.get(i), cur.get(i)
@@ -59,7 +62,7 @@ def main():
                          statut_ref=(o_r or {}).get('statut_definition', ''), statut_courant=(o_c or {}).get('statut_definition', ''),
                          occ_ref=oref.get(i, 0), occ_courant=ocur.get(i, 0)))
     os.makedirs(a.out, exist_ok=True)
-    with open(os.path.join(a.out, 'registry_diff.csv'), 'w', newline='', encoding='utf-8') as fh:
+    with open(os.path.join(a.out, a.name), 'w', newline='', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)

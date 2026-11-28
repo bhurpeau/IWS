@@ -1,0 +1,594 @@
+# G0.3 — Source des correspondances intervolumes (candidat, non normatif).
+# notations/crosswalk.csv est GÉNÉRÉ à partir de ce fichier et du registre par notations/scripts/build_crosswalk.py.
+#
+# Orientation : toutes les relations sont lues du volume I (ou d'un compagnon, préfixe C.) vers le volume II :
+#   ID   même objet dans le cadre indiqué
+#   GEN  l'objet II généralise l'objet I (l'objet I en est un cas, une instance ou une spécialisation)
+#   SPEC l'objet II spécialise l'objet I
+#   PROJ l'objet II est obtenu par projection ou restriction de l'objet I (préciser l'application)
+#   DER  l'objet II est dérivé de l'objet I (préciser la construction)
+#   ANA  analogie sans identification établie
+#   DIST objets distincts (relevé utile en cas d'homonymie ou de proximité trompeuse)
+#   UNK  relation non déterminée
+#   NEW  objet propre à un volume relativement au corpus étudié (champ « volume_propre »)
+# statut : etablie (justifiée par les définitions et, le cas échéant, par un renvoi explicite du texte)
+#          | candidate (plausible, conditions à vérifier ou à arbitrer par l'auteur) | indeterminee.
+# Une relation entre familles n'entraîne aucune relation entre leurs composants.
+# Les relations intravolume (portee: intravolume) répondent aux décisions D3 et à l'anomalie A-G02-08 ;
+# elles ne sont pas des correspondances intervolumes.
+
+meta:
+  phase: G0.3
+  date: '2026-11-28'
+  registre: notations/registry.yaml (305 entrées après E5 ; références historiques 301 et 95 conservées)
+  statut: candidat ; aucune notation canonique choisie ; aucun manuscrit modifié
+
+relations:
+
+# ---------------------------------------------------------------- 1. Socle hybride : le noyau comme spécimen de la classe
+- id: X001
+  I: I.CORE.HYBRID_SYSTEM
+  II: II.HYB.BASE_SYSTEM
+  relation: GEN
+  statut: etablie
+  confiance: haute
+  conditions: "le noyau est lu comme un système S=(\\X,C,F,D,K;\\Exec) avec \\X=\\mathcal X, C, F (champ entre événements), D, K=\\mathcal K et une sémantique d'exécution déterministe (priorité au saut sur C∩D, plus petit indice, départage des similarités par l'indice : annexe A l. 1171) ; les entrées u(t) du noyau sont portées par les histoires au volume II"
+  justification: "volume II l. 64 : « Le noyau du Volume I fournit un spécimen » ; la définition du volume II (l. 75–81) n'impose ni produit ni graphe ; le noyau est un cas particulier de la donnée (\\X,C,F,D,K;\\Exec)"
+- id: X002
+  I: I.CORE.HYBRID_SYSTEM
+  II: II.HYB.AMBIENT_CLASS
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "appartenance du noyau à \\Hyb : H1–H4 (existence et unicité du flot, déterminisme des événements simultanés, priorité au saut, absence de Zénon) établis pour toute condition initiale admissible et toute entrée mesurable essentiellement bornée (annexe A, prop. A-execution-hybride-unique, A-absence-zenon) ; invariance d'admissibilité : P_i≤Θ pendant le flot et P^+_{i*}<Θ au saut (livre I l. 529–552, 666) ; relativité à la famille (\\Madm_x) déclarée (volume II l. 99) non vérifiée pour d'autres familles que la classe maximale des entrées bornées"
+  justification: "le volume II invoque lui-même ces résultats du volume I pour le noyau (l. 1159) ; H1–H4 ne sont énumérées que « provisoirement » (l. 91), d'où le statut candidat ; décision E2 : statut candidat maintenu ; le fait que le noyau soit un SPÉCIMEN du cadre hybride (X001, établi) est distinct de la DÉMONSTRATION de son appartenance à \\Hyb, qui exige un raccord explicite entre H1–H4, l'invariance d'admissibilité et les résultats de l'annexe A ; question inscrite en réserve de recherche (R-G0-15) ; aucune démonstration engagée en G0"
+- id: X003
+  I: I.CORE.STATE_SPACE
+  II: II.HYB.STATE_SPACE
+  relation: GEN
+  statut: etablie
+  confiance: haute
+  conditions: "\\mathcal X=R^{N×d}×R^{N×d}×R^{N×d}×R_+^N×\\mathfrak G_N est un ensemble d'états complets au sens du volume II : variables continues (H,V), configuration structurelle (A) et variable de mémoire (τ), plus P"
+  justification: "volume II l. 75–81 : un état de \\X comprend « les variables continues, la configuration structurelle et les variables de mémoire nécessaires à la poursuite de l'évolution » ; livre I l. 145–168"
+- id: X004
+  I: I.CORE.FLOW_SET
+  II: II.HYB.FLOW_SET
+  relation: GEN
+  statut: etablie
+  confiance: haute
+  conditions: "C={x∈\\mathcal X : P_i≤Θ ∀i} est un ensemble de flot du système S du noyau ; le volume II réécrit la même condition pour le noyau (l. 1775 : P_i≤Θ)"
+  justification: "définitions livre I l. 537 et volume II l. 80 ; le volume II ne contraint pas la forme de C"
+- id: X005
+  I: I.CORE.JUMP_SET
+  II: II.HYB.JUMP_SET
+  relation: GEN
+  statut: etablie
+  confiance: haute
+  conditions: "D={x : ∃i, P_i≥Θ} ; le volume II cite textuellement ce D pour le noyau (l. 626) ; ce D du noyau a désormais sa propre entrée (X086, E5)"
+  justification: "livre I l. 546 ; volume II l. 80 et l. 626"
+- id: X006
+  I: I.A.FIXED_GRAPH_FIELD
+  II: II.HYB.FLOW_GENERATOR
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "changement de représentation : au volume I, F_A(t,z) dépend du graphe A fixé et du temps par l'entrée u(t) ; au volume II, F est le générateur continu de S, le graphe faisant partie de l'état et l'entrée étant portée par l'histoire ; l'identification demande de déclarer F(x)=F_{A(x)}(·,z) sous l'entrée courante"
+  justification: "annexe A l. 602–608 ; volume II l. 75 (F générateur continu, sans hypothèse d'autonomie précisée)"
+- id: X007
+  I: I.CORE.KAIROS_OPERATOR
+  II: II.HYB.JUMP_OPERATOR
+  relation: GEN
+  statut: etablie
+  confiance: haute
+  conditions: "K=\\mathcal K=\\mathcal K_{ι(x)} à granularité G0 (un saut élémentaire par nœud sélectionné)"
+  justification: "livre I l. 556–578 ; volume II l. 80 et l. 463 (G0 : chaque saut élémentaire est conservé)"
+- id: X008
+  I: I.CORE.KAIROS_OPERATOR
+  II: II.HYB.CASCADE_MAP
+  relation: DER
+  statut: candidate
+  confiance: moyenne
+  conditions: "construction : K^* est la composée des sauts élémentaires \\mathcal K appliqués sans avancement du temps tant que l'état reste dans D ; la cascade du noyau comporte au plus N sauts (livre I l. 670, annexe A l. 1006) et se termine hors de D ; le volume II ne définit K^* qu'implicitement (statut IMPLICIT du registre)"
+  justification: "livre I l. 660–670 ; annexe C l. 278 (« saut composé ») ; volume II l. 476 (γ^+(t)=K^*(γ^-(t)) lorsque la cascade est déterministe et finie) et l. 628 (« K^* écrit la structure »)"
+- id: X009
+  I: I.CORE.HYBRID_SYSTEM
+  II: II.HYB.EXEC_SEMANTICS
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "les conventions déterministes du noyau (priorité au saut sur C∩D, plus petit indice ι(x), départage des similarités par l'indice, cascade séquentielle) constituent une sémantique d'exécution au sens du volume II ; le volume I ne les regroupe pas en un objet"
+  justification: "annexe A l. 1171 ; livre I l. 552, 568, 618, 662 ; volume II l. 75 (\\Exec « lorsque celle-ci ne se déduit pas sans ambiguïté des seules données »)"
+- id: X010
+  I: I.III.EXECUTION
+  II: II.HYB.EXECUTION
+  relation: ID
+  statut: candidate
+  confiance: moyenne
+  conditions: "dépend de E3 (sens de \\mathfrak X) : (i) réalisation X lue comme état x∈C, ce qui n'est licite que pour les occurrences où \\mathfrak X désigne les états d'un système fixé (A-G02 : \\mathfrak X est AMBIGUOUS en annexe G) ; (ii) histoire H∈\\Madm_x ; (iii) l'exécution du volume I « rassemble la trajectoire continue, les événements, les états avant et après chaque saut et l'état terminal » (livre III l. 282 ; annexe G l. 192), ce que contient γ_{x,H} sur dom⊆R_{≥0}×N à granularité G0 ; à G1, seuls les bords de cascade sont conservés"
+  justification: "livre III l. 277 ; annexe G l. 192 ; volume II l. 85 (γ_{x,H}:=\\Exec(x,H))"
+- id: X011
+  I: I.III.TRANSITIONS
+  II: II.HIST.END_STATE
+  relation: ID
+  statut: candidate
+  confiance: moyenne
+  conditions: "dépend de E3 : End(x,H)=Φ_H(x) pour x∈C et H∈\\Madm_x, sous l'identification de X avec un état (X010), licite seulement là où \\mathfrak X désigne les états d'un système fixé ; à G1, End désigne l'état post-cascade (volume II l. 114) ; Φ_H est défini sur tout \\mathfrak X au volume I, End seulement pour une histoire exécutable"
+  justification: "livre III l. 128–140 (Φ_e, Φ_H) ; volume II l. 114"
+- id: X012
+  I: I.G.COMPOSITION_CONVENTION
+  II: II.HIST.MONOID
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "le volume II emploie la concaténation H_1·H_2 dans l'ordre chronologique (continuations, End) sans énoncer la convention Φ_{H_1·H_2}=Φ_{H_2}∘Φ_{H_1} ; compatibilité constatée, convention non reprise explicitement"
+  justification: "annexe G eq:annexe-G-composition (l. 89) ; volume II l. 118 (H_0·H)"
+
+# ---------------------------------------------------------------- 2. Histoires et admissibilité
+- id: X013
+  I: I.G.HISTORY_MONOID
+  II: II.HIST.MONOID
+  relation: ID
+  statut: etablie
+  confiance: haute
+  conditions: "même monoïde de mots sur l'alphabet des épisodes, pour un système donné (le volume II indexe \\M_S par le système) ; le volume II ne réénonce pas la liberté du monoïde ni l'inclusion des délais (décision D-06 de l'annexe G)"
+  justification: "volume II l. 108 : « Conformément à l'Annexe G du manuscrit, une histoire finie est un mot d'un monoïde d'épisodes (\\M,·,ε) »"
+- id: X014
+  I: I.III.HISTORIES
+  II: II.HIST.MONOID
+  relation: ID
+  statut: candidate
+  confiance: moyenne
+  conditions: "mêmes mots e_1⋯e_n, histoire vide ε et concaténation ; l'entrée du livre III porte sur les histoires, l'entrée II sur leur monoïde : correspondance élément ↔ ensemble ambiant"
+  justification: "livre III l. 134–166 ; volume II l. 108"
+- id: X015
+  I: I.III.EPISODES
+  II: II.HIST.MONOID
+  relation: DER
+  statut: candidate
+  confiance: moyenne
+  conditions: "construction : \\M est le monoïde des mots sur l'alphabet \\mathcal E des épisodes ; le volume II ne nomme pas l'alphabet"
+  justification: "livre III l. 128 ; annexe G l. 46–66 ; volume II l. 108"
+- id: X016
+  I: I.G.ADMISSIBLE_CLASS
+  II: II.EXP.REGIME
+  relation: ID
+  statut: candidate
+  confiance: moyenne
+  conditions: "porte sur la composante \\mathcal B⊆\\M du régime (I,\\mathcal B) ; au volume I, \\mathfrak B⊆\\mathfrak M est déclarée par le protocole et supposée exécutable depuis tout système comparé (annexe G l. 128) ; au volume II, les histoires effectivement utilisées depuis x sont \\mathcal B_x=\\mathcal B∩\\Madm_x (l. 200) ; ID sous l'hypothèse \\mathfrak B⊆\\Madm_x pour tous les états comparés"
+  justification: "annexe G l. 119 ; volume II l. 163–167 et l. 200"
+- id: X017
+  I: I.G.ADMISSIBLE_CLASS
+  II: II.HIST.ADMISSIBLE_FAMILY
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "le volume II indexe l'admissibilité par l'état ((\\Madm_x)_{x∈C}) ; une classe \\mathfrak B indépendante de l'état correspond au cas \\Madm_x=\\mathfrak B pour tout x ; le volume I ne connaît pas d'admissibilité dépendant de l'état"
+  justification: "annexe G l. 119–128 ; volume II l. 83, 108–112"
+- id: X018
+  I: I.G.ADMISSIBLE_CLASS
+  II: II.HIST.CONTINUATIONS
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "\\mathcal H_0^{-1}\\mathfrak B (annexe G eq:annexe-G-quotient-gauche) et \\mathcal H_0^{-1}\\Madm_{x_0}, \\mathcal H_k^{-1}\\mathcal B_{x_0} (volume II) ont la même définition (quotient à gauche du langage) ; le volume II l'applique à un langage dépendant de l'état"
+  justification: "annexe G l. 170 ; volume II l. 118, 200"
+- id: X019
+  I: I.G.CLOSURE_LEVELS
+  II: II.HIST.PREFIX_STATE_COMPATIBILITY
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "les niveaux de fermeture du volume I portent sur la classe (préfixes, continuation) ; la compatibilité préfixe–état du volume II (\\mathcal H_0^{-1}\\Madm_{x_0}=\\Madm_{End(x_0,H_0)}) relie continuations et états ; rôle voisin (rendre les continuations utilisables), énoncés différents"
+  justification: "annexe G l. 133–166 ; volume II l. 124–131"
+- id: X020
+  I: I.CORE.INPUT
+  II: II.HIST.ADMISSIBLE_FAMILY
+  relation: GEN
+  statut: candidate
+  confiance: moyenne
+  conditions: "dans le noyau, les histoires sont réalisées par des entrées ; la classe maximale considérée est celle des entrées mesurables essentiellement bornées (volume II l. 654, 1159) et \\Madm_x est alors constant sur une fibre \\mathcal O_y ; correspondance entre l'entrée (objet I) et la famille d'histoires (objet II) : changement de représentation à déclarer"
+  justification: "livre I l. 458–464 ; volume II l. 654–658, 1159"
+- id: X021
+  I: I.CORE.INPUT
+  II: II.KERNEL.INPUT_BOUND
+  relation: DER
+  statut: etablie
+  confiance: haute
+  conditions: "construction : u_max:=ess sup_t max_i ‖u_i(t)‖ pour une entrée donnée ; au volume I, u_max est une borne supposée (‖u_i(t)‖≤u_max, livre I l. 460) qui intervient dans B=ζ√d+u_max ; la borne du volume I majore la valeur du volume II pour toute entrée qui la satisfait ; les deux statuts (borne supposée / grandeur attachée à l'entrée) sont distincts"
+  justification: "livre I l. 460, 711 ; volume II l. 656–658 (« et non un paramètre fixé du modèle »)"
+
+# ---------------------------------------------------------------- 3. Lectures, réponses et équivalences
+- id: X022
+  I: I.III.READING
+  II: II.PRES.READOUT
+  relation: ANA
+  statut: etablie
+  confiance: haute
+  conditions: "la lecture ρ du volume I est un choix de protocole appliqué aux exécutions de sonde (« Le symbole ρ ne décrit pas une variable interne du système », livre III l. 302) ; ρ_X=(π_s,ρ_int) est une application des états vers \\Sstruct×Y_int, déclarée avec la présentation et constante en sa composante π_s pendant le flot ; ni le domaine, ni le rôle, ni la structure produit ne coïncident ; l'identification n'est pas établie (exemple désigné par le plan, § 7)"
+  justification: "livre III l. 286–318 ; annexe G l. 220–262 ; volume II l. 136–145"
+- id: X023
+  I: I.G.TERMINAL_READING
+  II: II.PRES.READOUT
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "τ_ρ et ρ_X sont deux applications des états vers un espace d'observation ; τ_ρ est supposée invariante par prolongation de la relaxation (annexe G (O2′)) et lit l'état terminal d'une sonde, ρ_X lit le présent ; si un protocole déclarait τ_ρ:=ρ_X, la condition (O2′) imposerait une invariance que ρ_X ne possède pas en général"
+  justification: "annexe G l. 224–238, 269–292 ; volume II l. 136"
+- id: X024
+  I: I.G.PATH_READING
+  II: II.PRES.READOUT
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "la construction va dans le sens II→I et n'est donc pas codée DER (orientation I→II) : à partir de ρ_X, le volume II emploie la lecture de trajectoire γ↦ρ_X∘γ (l. 229 : « la lecture de trajectoire la plus fine compatible avec ρ_X ») ; c'est une lecture de chemin au sens de l'annexe G si elle est compatible au suffixe ; l'objet II (ρ_X) n'est pas lui-même une lecture de chemin"
+  justification: "annexe G l. 240–262 ; volume II l. 200–231"
+- id: X025
+  I: I.G.OBS_SPACE
+  II: II.PRES.OBS_SPACE
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "\\mathcal Y_ρ est le codomaine d'une lecture de sonde ; Y=\\Sstruct×Y_int est le codomaine de ρ_X, muni d'une structure produit propre au volume II"
+  justification: "annexe G l. 220 ; volume II l. 136–160"
+- id: X026
+  I: I.III.RESPONSE
+  II: II.EFF.INTERNAL_RESPONSE
+  relation: SPEC
+  statut: candidate
+  confiance: moyenne
+  conditions: "décision E4 : statut candidat maintenu ; R_x^{ρ_int}(H)=ρ_int∘γ_{x,H} coïncide avec \\mathcal R_x^ρ(H) sous la compatibilité simultanée de : (a) ÉTATS OU RÉALISATIONS : X est un état x∈C d'un système fixé (dépend de E3) ; (b) DOMAINES D'HISTOIRES : H∈\\Madm_x, le volume I supposant au contraire chaque histoire de \\mathfrak B exécutable depuis tout système comparé (annexe G l. 128) ; (c) CONVENTIONS D'EXÉCUTION : même sémantique Exec et même granularité (G0 ou G1, volume II l. 461–478), concaténation des exécutions (annexe G l. 201) ; (d) ESPACES ET OBJETS DE SORTIE : \\mathcal Y_ρ égal à l'espace des trajectoires Traj(Y_int) ; (e) LECTURE DE CHEMIN choisie comme trajectoire de ρ_int, ω_ρ(γ)=ρ_int∘γ, compatible au suffixe ; enfin le volume II prend pour objet l'application H↦R entière, domaine compris (l. 290–298), alors que le volume I considère la réponse à une histoire donnée ; ces conditions ne sont pas démontrées suffisantes dans le corpus"
+  justification: "livre III l. 304–345 ; annexe G l. 192–262 ; volume II l. 290–298"
+- id: X027
+  I: I.II.HISTORY_RESPONSE_FUNCTION
+  II: II.EFF.INTERNAL_RESPONSE
+  relation: ANA
+  statut: candidate
+  confiance: faible
+  conditions: "la fonction de réponse du livre II est un triplet (T^*_H(u), g_app,H(u), \\mathcal A_{∞,H}(u)) défini sur une famille de sondes ; R_x^{ρ_int} est une application d'histoires vers des trajectoires lues ; même rôle de « réponse d'une histoire », types distincts"
+  justification: "livre II l. 1818–1835 ; livre III l. 333–341 ; volume II l. 290"
+- id: X028
+  I: I.G.OBS_EQUIVALENCE
+  II: II.OPAC.NERODE_EQUIVALENCE
+  relation: SPEC
+  statut: candidate
+  confiance: moyenne
+  conditions: "décision E4 : statut candidat maintenu ; RÉSERVE EXPLICITE sur l'égalité des domaines : ∼_N exige \\Madm_x=\\Madm_{x'} en plus de l'égalité des réponses ; l'égalité des réponses sur un domaine commun n'entraîne pas l'égalité des domaines, et celle-ci n'est pas automatique (elle n'est établie par le volume II que pour le noyau découplé et la classe maximale des entrées bornées, l. 1159) ; x∼_N x' ⟺ \\Madm_x=\\Madm_{x'} et R_x^{ρ_int}=R_{x'}^{ρ_int} (volume II l. 1137) correspond à X∼_{\\mathfrak B,ρ}Y lorsque (i) \\mathfrak B=\\mathfrak M ou la classe maximale \\Madm_x (quotient « de Nerode » au sens du volume I, annexe G l. 335), (ii) ρ est la lecture de trajectoire de ρ_int, (iii) X,Y sont restreints à une fibre \\mathcal O_y ; la clause d'égalité des domaines n'a pas d'équivalent au volume I, où chaque histoire de \\mathfrak B est supposée exécutable depuis tout système (annexe G l. 128) ; dans le noyau découplé, le volume II établit que le domaine est constant sur \\mathcal O_y (l. 1159)"
+  justification: "annexe G l. 302–342, 464–507 ; volume II l. 1137–1159"
+- id: X029
+  I: I.III.RESPONSE_EQUIVALENCE
+  II: II.OPAC.NERODE_EQUIVALENCE
+  relation: SPEC
+  statut: candidate
+  confiance: moyenne
+  conditions: "décision E4 : statut candidat maintenu ; même réserve explicite sur l'égalité des domaines d'histoires admissibles que X028 (égalité des réponses sur un domaine commun ≠ égalité des domaines) ; mêmes conditions que X028 (le livre III énonce la même équivalence que l'annexe G, eq:t3-equivalence-observationnelle)"
+  justification: "livre III l. 356 ; volume II l. 1137"
+- id: X030
+  I: I.III.SEPARATING_HISTORY
+  II: II.OPAC.SEPARATING_FAMILY
+  relation: DER
+  statut: candidate
+  confiance: moyenne
+  conditions: "construction : une famille \\mathcal U est séparante sur \\mathcal O_y si, pour toute paire non équivalente au sens ∼_N, elle contient une histoire séparatrice (par admissibilité ou par ≢_k^H) ; la notion du volume II porte sur ∼_N et sur les chemins structurels à profondeur finie, non sur ∼_{\\mathfrak B,ρ}"
+  justification: "livre III l. 372–396 ; volume II l. 1180–1187"
+- id: X031
+  I: I.L.SEPARATORS
+  II: II.OPAC.SEPARATING_FAMILY
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "Sep_{\\mathfrak B,ρ}(X,Y) est l'ensemble des séparateurs d'une paire ; \\mathcal U est séparante si Sep (au sens de ∼_N et des chemins) rencontre \\mathcal U pour toute paire non équivalente d'une fibre"
+  justification: "annexe L l. 54 ; volume II l. 1180"
+- id: X032
+  I: I.III.FUNCTIONAL_HISTORY_EQUIVALENCE
+  II: II.HIST.EFFECTIVE_HISTORICITY
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "H_{ρ,I,\\mathcal B} exige deux préhistoires à présent lu égal (ρ_X(x_1)=ρ_X(x_2)) et une continuation commune qui sépare les trajectoires lues ; le volume I compare les histoires par leurs réponses futures (\\mathcal H_1≡\\mathcal H_2) sans condition d'égalité du présent lu ; l'historicité effective est la négation, sous contrainte de présent égal, d'une équivalence fonctionnelle"
+  justification: "livre III l. 86–93, 462 ; volume II l. 200–231"
+- id: X033
+  I: I.CORE.STRUCTURAL_HISTORICITY
+  II: II.HIST.ORDINAL_HISTORICITY
+  relation: DIST
+  statut: etablie
+  confiance: haute
+  conditions: "même terme « historicité structurelle », propriétés différentes : au volume I, non-commutativité des opérateurs nodaux de Kairos (propriété de la famille \\mathcal K_i) ; au volume II, existence de deux préhistoires invisibles dans le présent lu suivies d'une continuation commune produisant des mots structurels incomparables (propriété d'une présentation et d'un régime)"
+  justification: "livre I l. 1361–1386 ; volume II l. 259–276 ; terminologie à examiner en G0.4–G0.5"
+- id: X034
+  I: I.CORE.STRUCTURAL_HISTORICITY
+  II: II.HIST.CHRONOLOGICAL_HISTORICITY
+  relation: DIST
+  statut: etablie
+  confiance: haute
+  conditions: "H_t^s porte sur les dates des changements structurels ; la propriété du livre I porte sur l'ordre des opérateurs"
+  justification: "livre I l. 1380 ; volume II l. 243–245"
+- id: X035
+  I: I.III.ACCESSIBILITY
+  II: II.EFF.MAX_REPERTOIRE
+  relation: DIST
+  statut: etablie
+  confiance: haute
+  conditions: "Acc_{\\mathfrak B,ρ}(X) est l'ensemble des réponses d'une réalisation sur les sondes ; \\Rep^{max}(s) est l'ensemble des applications de réponse des états d'une fibre d'organisation ; rôle voisin (« ce qui reste possible ») mais types et quantificateurs différents (ANA conceptuelle)"
+  justification: "livre III l. 1385 ; volume II l. 300–312"
+- id: X036
+  I: I.L.BUDGET_FILTRATION
+  II: II.OPAC.WORD_PARTITION
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "deux filtrations décroissantes de relations d'équivalence indexées par une profondeur (≡_{b_2}⊆≡_{b_1} pour b_1≤b_2 ; \\mathcal P_{k+1} raffine \\mathcal P_k) ; budgets de complexité d'un côté, nombre de Kairos sous un protocole fixé de l'autre ; le volume II précise que \\mathcal P_k « n'est pas identifiée au quotient comportemental complet ni à une équivalence de Nerode » (l. 875)"
+  justification: "annexe L l. 223–275 ; volume II l. 873–875, 1122"
+- id: X037
+  I: I.L.SEPARABILITY_DEPTH
+  II: II.DEPTH.DEPTH_RANK
+  relation: UNK
+  statut: indeterminee
+  confiance: faible
+  conditions: "même terme « profondeur » ; ℓ_{c,\\mathfrak B,ρ} est un infimum de complexités de séparateurs, k un nombre de Kairos ; un rapport n'est envisageable que si la complexité c comptait les Kairos d'une histoire, ce qui n'est déclaré nulle part ; relation laissée indéterminée"
+  justification: "annexe L l. 70 ; volume II l. 320"
+- id: X038
+  I: I.J.SIGNATURE
+  II: II.HIST.STRUCTURAL_WORD
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "κ(q) enregistre les données discrètes déclarées d'une exécution (nombre, type et ordre des événements, règles déclenchées) ; Word_s(γ)=red(π_s∘γ) enregistre la suite réduite des valeurs structurelles ; si la signature retient la suite des graphes produits par les Kairos, le mot structurel en est une image (dans la présentation naturelle du noyau) ; non établi en général"
+  justification: "annexe J l. 73–92 ; volume II l. 249–251"
+- id: X039
+  I: I.J.HYBRID_CELLS
+  II: II.OPAC.CHAMBER
+  relation: ANA
+  statut: candidate
+  confiance: moyenne
+  conditions: "cellule hybride : composante connexe de l'intérieur d'un ensemble de signature constante dans le domaine réalisable ; chambre : composante connexe d'une classe de mot dans une coupe Σ ; analogie forte (même schéma : partition par donnée discrète d'exécution puis composantes connexes), espaces et données discrètes différents"
+  justification: "annexe J l. 93–115 ; volume II l. 873"
+- id: X040
+  I: I.J.CELL_RESPONSE
+  II: II.WALLS.SCORES_WALLS
+  relation: ANA
+  statut: candidate
+  confiance: faible
+  conditions: "le lieu de recomposition K_κ et la frontière Σ=Σ_K⊔⨆Σ_C (annexe J) ; les murs W_{ij}^{(k)} contenant les égalités de scores (volume II) : rôle voisin (localiser les changements combinatoires d'exécution), aucune identification"
+  justification: "annexe J l. 93–190 ; volume II l. 1299–1326"
+- id: X041
+  I: I.G.OBSERVATIONAL_RELATIVITY
+  II: II.CLASS.IWS_CANDIDATE
+  relation: ANA
+  statut: candidate
+  confiance: faible
+  conditions: "principe de relativité des classes au couple (\\mathfrak B,ρ) (annexe G) ; relativité du statut IWS à une présentation structurelle déclarée (volume II, crash-test « Pendule anharmonique fatigué », l. 597) ; énoncés de méthode voisins"
+  justification: "annexe G l. 32 ; volume II l. 597–599"
+- id: X042
+  I: I.K.PRESENTATIONS
+  II: II.PRES.PRESENTATION
+  relation: DIST
+  statut: etablie
+  confiance: haute
+  conditions: "même terme « présentation » : au volume I (annexe K), découpage d'un mécanisme entre état et loi (plastique / figée) ; au volume II, triplet (S,ρ_X,(\\Madm_x)) ; objets distincts"
+  justification: "annexe K l. 23–75 ; volume II l. 136"
+- id: X043
+  I: I.G.REALIZATION_SPACE
+  II: II.HYB.STATE_SPACE
+  relation: UNK
+  statut: indeterminee
+  confiance: faible
+  conditions: "blocage : \\mathfrak X désigne « l'ensemble des états complets ou, plus généralement, des présentations de systèmes » (annexe G l. 46 ; entrée AMBIGUOUS) ; si \\mathfrak X est l'ensemble des états complets du noyau, la relation serait GEN (comme X003) ; si \\mathfrak X contient des présentations, aucune relation à \\X n'est définie ; décision D4 : relation indéterminée ; décision E3 : UNK maintenu, \\mathcal X du volume II réservé aux états complets, aucune identification globale de \\mathfrak X à \\mathcal X ; examen des occurrences de \\mathfrak X en G0.4 (états d'un système fixé, réalisations, présentations, niveau indéterminé)"
+  justification: "annexe G l. 46 ; volume II l. 75"
+- id: X044
+  I: I.III.REALIZATION_SPACE
+  II: II.HYB.STATE_SPACE
+  relation: UNK
+  statut: indeterminee
+  confiance: faible
+  conditions: "même blocage que X043 (« l'espace dans lequel est représentée la réalisation du système », livre III l. 128) ; E3 : UNK maintenu"
+  justification: "livre III l. 128–132 ; volume II l. 75"
+
+# ---------------------------------------------------------------- 4. Le noyau lu par le volume II (usages sans redéfinition)
+- {id: X045, I: I.CORE.ADJACENCY, II: II.KERNEL.ADJACENCY, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I (renvoi explicite) ; graphes des témoins N=6, N=9",
+   justification: "volume II l. 605–628 (« Dans le Volume I ») ; livre I l. 85–87"}
+- {id: X046, I: I.CORE.FAST_STATE, II: II.KERNEL.FAST_STATE, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I", justification: "volume II l. 605–628 ; livre I l. 113–116"}
+- {id: X047, I: I.CORE.VELOCITY, II: II.KERNEL.VELOCITY, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I", justification: "volume II l. 605–628 ; livre I l. 117–126"}
+- {id: X048, I: I.CORE.PRESSURE, II: II.KERNEL.PRESSURE, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I ; la relaxation au saut est rappelée par le compagnon de transmission sous la forme P←r_P P (voir X070)",
+   justification: "volume II l. 626, 1775 ; livre I l. 141–144"}
+- {id: X049, I: I.CORE.TRACE, II: II.KERNEL.TRACE, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I ; τ cachée relativement à la lecture ρ_X=(A,H,V,P) dans le régime découplé",
+   justification: "volume II l. 605–628, 861–865 ; livre I l. 127–140"}
+- {id: X050, I: I.CORE.NODES, II: II.KERNEL.NODE_COUNT, relation: ID, statut: etablie, confiance: haute,
+   conditions: "N fixé (N=6, N=9 pour les témoins)", justification: "livre I l. 77 ; volume II l. 859"}
+- {id: X051, I: I.CORE.THRESHOLD, II: II.KERNEL.THRESHOLD, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I", justification: "livre I l. 525 ; volume II l. 626, 1775"}
+- {id: X052, I: I.CORE.COUPLING_GAIN, II: II.KERNEL.COUPLING_GAIN, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I ; régime ζ>0", justification: "livre I l. 424–431 ; volume II l. 605–628, 660"}
+- {id: X053, I: I.CORE.FRICTION_COEFFS, II: II.KERNEL.FRICTION_COEFFS, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I ; le volume II étudie surtout γ_1=0 et, en V5.17, la déformation γ_1=εγ̄ (X067)",
+   justification: "livre I l. 392 ; volume II l. 605–628 (formule Γ(τ)=γ_0+γ_1‖τ‖ citée)"}
+- {id: X054, I: I.CORE.ANISOTROPY, II: II.KERNEL.ANISOTROPY, relation: ID, statut: etablie, confiance: haute,
+   conditions: "noyau du volume I ; régime λ=0 au volume II, puis λ=ελ̄ (X067)",
+   justification: "livre I l. 290 ; volume II l. 605–628 (formule Q(τ) citée)"}
+- {id: X055, I: I.CORE.DIMENSION, II: II.KERNEL.EXTERNAL_VARIABLES, relation: ID, statut: etablie, confiance: moyenne,
+   conditions: "correspondance avec le composant d de la famille (d n'a pas d'élément propre dans le registre du volume II) ; d=2 pour les témoins",
+   justification: "livre I l. 77 ; volume II l. 630 ((R^d)^N), 1775"}
+- {id: X056, I: I.CORE.STATE_SPACE, II: II.KERNEL.DECOUPLED_READOUT, relation: PROJ, statut: etablie, confiance: haute,
+   conditions: "application : x=(H,V,τ,P,A)↦(A,H,V,P) (oubli de la trace) ; dans le régime γ_1=λ=0",
+   justification: "volume II l. 861–871 ; livre I l. 148"}
+- {id: X057, I: I.CORE.GRAPH_SPACE, II: II.PRES.STRUCT_VALUES, relation: GEN, statut: etablie, confiance: haute,
+   conditions: "présentation naturelle du noyau : \\Sstruct=\\mathfrak G_N, π_s=A",
+   justification: "volume II l. 607 (« La présentation naturelle du noyau est π_s=A, ρ_int=(H,V,P) »)"}
+- {id: X058, I: I.CORE.STATE_SPACE, II: II.PRES.STRUCT_READOUT, relation: PROJ, statut: etablie, confiance: haute,
+   conditions: "π_s(x)=A ; constante pendant le flot (Ȧ=0, livre I l. 454), condition C1 du volume II",
+   justification: "volume II l. 607 ; livre I l. 454"}
+- {id: X059, I: I.CORE.STATE_SPACE, II: II.PRES.INTERNAL_READOUT, relation: PROJ, statut: etablie, confiance: haute,
+   conditions: "ρ_int(x)=(H,V,P) dans la présentation naturelle", justification: "volume II l. 607"}
+- {id: X060, I: I.CORE.STATE_SPACE, II: II.OPAC.OPACITY_FIBRE, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : pour y=(A,H,V,P), \\mathcal O_y=ρ_X^{-1}(y)∩C est l'ensemble des états de C qui ne diffèrent que par la trace ; régime γ_1=λ=0",
+   justification: "volume II l. 861–865"}
+- {id: X061, I: I.CORE.FLOW_SET, II: II.KERNEL.ADMISSIBLE_READINGS, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : C≃Y_adm×T avec Y_adm:=ρ_X(C) et T=(R^d)^N, parce que la contrainte P_i≤Θ ne dépend pas de la trace",
+   justification: "volume II l. 1775 ; livre I l. 537"}
+- {id: X062, I: I.CORE.REWIRING, II: II.HIST.STRUCTURAL_WORD, relation: DER, statut: etablie, confiance: moyenne,
+   conditions: "construction : dans la présentation naturelle (π_s=A), le mot structurel d'une exécution est la suite réduite des graphes produits par les recâblages successifs",
+   justification: "volume II l. 249, 607 ; livre I l. 580–620"}
+- {id: X063, I: I.CORE.REWIRING, II: II.OPAC.SELECTION_MARGIN, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : marge signée de sélection d'un nœud q au r-ième Kairos à partir de la règle de recâblage ; composants identiques : i_r^* est le nœud sélectionné i^* au r-ième Kairos et m_r=min(2,d_r,N−1−d_r) coïncide avec m=min(2,|\\mathcal N(i^*)|,|\\mathcal N^c(i^*)|) puisque |\\mathcal N(i^*)|=d_r et |\\mathcal N^c(i^*)|=N−1−d_r",
+   justification: "livre I l. 582–618 ; volume II l. 1262–1264"}
+- {id: X064, I: I.CORE.SIMILARITY, II: II.WALLS.SCORES_WALLS, relation: SPEC, statut: etablie, confiance: haute,
+   conditions: "c_j^{(k)}(x)=cos(τ_{i_k^*}^{(k)},τ_j^{(k)})=s(i_k^*,j) évalué sur l'état au k-ième Kairos, là où les traces sont non nulles ; au volume I, s(i,j)=0 si une trace est nulle, cas exclu au volume II (« région où les similarités cosinus sont définies »)",
+   justification: "livre I l. 586–593 ; volume II l. 882, 1299"}
+- {id: X065, I: I.CORE.TRACE, II: II.KERNEL.ANTISYMMETRIC_TRACE_INCREMENT, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : intégration de l'équation de la trace τ̇=α tanh(ÃH)−βτ le long des boucles H^±=±h (variation des constantes) ; régime γ_1=λ=0",
+   justification: "livre I l. 231 ; volume II l. 630–650"}
+- {id: X066, I: I.CORE.TRACE, II: II.KERNEL.HIDDEN_TRACE_DIFFERENCE, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : différence de deux solutions de l'équation de la trace sous le même chemin structurel ; décroissance e^{−β(t−t_0)} ; le saut ne modifie pas τ (livre I l. 644)",
+   justification: "livre I l. 231, 644 ; volume II l. 1217–1236"}
+- {id: X067, I: I.CORE.FRICTION_COEFFS, II: II.TRANS.PROTOCOL_PARAMETER, relation: DER, statut: etablie, confiance: moyenne,
+   conditions: "construction : chemin de déformation (γ_1,λ)=ε(γ̄,λ̄) dans l'espace des paramètres du noyau, issu du régime découplé ε=0 ; le paramètre q=(ϑ,ε) réunit une coordonnée cachée et ε",
+   justification: "volume II l. 1794 ; compagnon de transmission l. 26"}
+- {id: X068, I: I.CORE.ANISOTROPY, II: II.TRANS.PROTOCOL_PARAMETER, relation: DER, statut: etablie, confiance: moyenne,
+   conditions: "même construction que X067 (λ=ελ̄)", justification: "volume II l. 1794"}
+- {id: X069, I: I.CORE.ADJACENCY, II: II.SYM.GRAPH_AUTOMORPHISMS, relation: DER, statut: etablie, confiance: haute,
+   conditions: "construction : groupe des automorphismes du graphe A et action par permutation Π_σ sur les variables nodales",
+   justification: "volume II l. 792–807 ; objet sans équivalent au volume I"}
+
+# ---------------------------------------------------------------- 5. Compagnons (corpus auxiliaire, provenance)
+- {id: X070, I: C.CERT.KERNEL_PARAMS, II: II.KERNEL.EXTERNAL_VARIABLES, relation: ID, statut: candidate, confiance: moyenne,
+   conditions: "la note de certification déclare ζ=4/5, α=9/20, β=3/25, γ_0=1/4, (κ_1,κ_2,κ_3)=(3/5,2/5,1/2), Θ=5/4, r_P=7/20, r_V=1/2, numériquement égaux au jeu de référence du volume I (annexe F l. 132) ; la relaxation de pression y est linéaire (P←r_P P, transmission l. 35), comme au livre I l. 626 ; identité des paramètres du noyau, non des régimes",
+   justification: "certification l. 44 ; transmission l. 35 ; volume II l. 1794"}
+- {id: X071, I: C.CERT.SECTION_PARAMETER, II: II.TRANS.PROTOCOL_PARAMETER, relation: ID, statut: etablie, confiance: haute,
+   conditions: "même paramètre q=(ϑ,ε), point de base q_0=(0,0) ; le volume II renvoie à la note compagnon",
+   justification: "transmission l. 26 ; volume II l. 1792–1794"}
+- {id: X072, I: C.CERT.IMPACT_SEQUENCE, II: II.OPAC.SELECTION_MARGIN, relation: ID, statut: etablie, confiance: haute,
+   conditions: "porte sur le composant déclencheur : i_r (compagnon) = i_r^* (volume II)",
+   justification: "volume II l. 1262 (« noté i_r dans la certification ») ; transmission l. 35"}
+- {id: X073, I: C.TRANS.HYPOTHESES, II: II.HYB.WELL_POSEDNESS, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "(H1)–(H5) de la transmission C² et H1–H4 du socle hybride : familles d'hypothèses différentes sous des étiquettes homonymes (A-G02-06)",
+   justification: "volume II l. 1792 (« ne doivent pas être confondues »)"}
+- {id: X074, I: C.TRANS.REGULARITY_NEIGHBOURHOOD, II: II.TRANS.EIGHT_KAIROS_NEIGHBOURHOOD, relation: SPEC, statut: etablie, confiance: moyenne,
+   conditions: "le voisinage du volume II est le voisinage \\mathcal N du théorème compagnon pour R=8, au point q_0 du protocole kept1, sous validation des enclosures",
+   justification: "volume II l. 1825–1828 ; transmission l. 47 ; certification l. 57"}
+
+# ---------------------------------------------------------------- 6. Homonymies relevées (DIST), utiles à G0.4
+- {id: X075, I: I.C.INTERNAL_DIAGONAL, II: II.OPAC.HIDDEN_PARAMETER, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "ϑ désigne au volume I (annexe C) la composante commune de la trace sur la diagonale interne θ=(ϑ,ϑ) ; au volume II, le paramètre caché d'une coupe Φ:Ω→Σ (réservation de l'audit V5.16)",
+   justification: "annexe C l. 65, 973, 1731 ; volume II l. 875"}
+- {id: X076, I: I.H.EXTINCTION_REGIME, II: II.OPAC.SECTION, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "Σ_ext (régime d'extinction exacte) et Σ_{\\mathcal P,ρ} (annexe I) contre la coupe Σ⊂\\mathcal O_y (volume II)",
+   justification: "annexe H l. 106 ; annexe I l. 288 ; volume II l. 871"}
+- {id: X077, I: I.III.PROBE_FAMILY, II: II.OPAC.PARAM_DOMAIN, relation: ANA, statut: candidate, confiance: faible,
+   conditions: "Ω⊂R^m espace de paramètres de sondes (livre III) contre Ω domaine de paramétrisation d'une coupe cachée (volume II) : deux espaces de paramètres d'une exploration, de natures différentes (sonde contre état initial caché) ; homonymie du glyphe",
+   justification: "livre III l. 1660–1673 ; volume II l. 875"}
+- {id: X078, I: I.III.TRANSITIONS, II: II.OPAC.PARAMETRIZATION, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "Φ_e, Φ_H (transitions d'épisodes) contre Φ:Ω→Σ (homéomorphisme de paramétrisation)",
+   justification: "livre III l. 128 ; volume II l. 875"}
+- {id: X079, I: I.G.HISTORY_MONOID, II: II.PRES.ADMISSIBLE_PAIRS, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "\\mathcal E désigne l'alphabet des épisodes au volume I ; \\mathcal E_I^{adm} le domaine des paires admissibles au volume II",
+   justification: "annexe G l. 46 ; volume II l. 178"}
+- {id: X080, I: I.R2.RETURN_MAP, II: II.OPAC.JOINT_REACHABLE_SET, relation: DIST, statut: etablie, confiance: haute,
+   conditions: "\\mathcal R_g (application de retour de R2) contre \\mathcal R_0^{(1,2)}(\\mathcal U_4) (ensemble conjoint atteignable) ; aussi distincts de la réponse \\mathcal R_X^ρ",
+   justification: "annexe E l. 858 ; volume II l. 1243"}
+- {id: X081, I: I.III.RESPONSE_REGION, II: II.OPAC.WORD_PARTITION, relation: ANA, statut: candidate, confiance: faible,
+   conditions: "régions de réponse S_A(X) dans l'espace des sondes contre classes de mot de \\mathcal P_k(Σ) dans une coupe d'états cachés : partitions d'un espace de paramètres par une issue discrète, espaces et issues différents",
+   justification: "livre III l. 1715 ; volume II l. 873"}
+- {id: X082, I: I.I.ALIGNED_SUBSPACE, II: II.SYM.GRAPH_AUTOMORPHISMS, relation: ANA, statut: candidate, confiance: moyenne,
+   conditions: "dans les deux cas, le lieu fixe d'une symétrie déclarée est invariant par le flot (lemme I-invariance-alignee ; proposition « Invariance d'un lieu fixe pendant le flot du noyau », volume II l. 792) ; symétries différentes (échange des composantes internes contre automorphismes du graphe)",
+   justification: "annexe I l. 164–189 ; volume II l. 792–798"}
+
+# ---------------------------------------------------------------- 9. Objets repris par référence (décision E5)
+- {id: X083, I: I.CORE.TRACE_METRIC, II: II.KERNEL.TRACE_METRIC, relation: ID, statut: etablie, confiance: haute,
+   conditions: "définition de référence au volume I (livre I l. 286–312) ; le volume II la cite textuellement (l. 614) après un renvoi explicite (« Dans le Volume I », l. 612) ; provenance BY_REFERENCE",
+   justification: "livre I l. 290 ; volume II l. 612–616"}
+- {id: X084, I: I.CORE.PRECONDITIONER, II: II.KERNEL.PRECONDITIONER, relation: ID, statut: etablie, confiance: haute,
+   conditions: "définition de référence au volume I (livre I l. 313–387) ; citée au volume II (l. 615) ; régime λ=0 : M=I_d (l. 624)",
+   justification: "livre I l. 309, 358 ; volume II l. 612–624, 801"}
+- {id: X085, I: I.CORE.FRICTION, II: II.KERNEL.FRICTION, relation: ID, statut: etablie, confiance: haute,
+   conditions: "définition de référence au volume I (livre I l. 388–412) ; citée au volume II (l. 616) ; régime γ_1=0 : Γ=γ_0 (l. 624)",
+   justification: "livre I l. 392 ; volume II l. 612–624, 801"}
+- {id: X086, I: I.CORE.JUMP_SET, II: II.KERNEL.JUMP_SET, relation: ID, statut: etablie, confiance: haute,
+   conditions: "D du noyau, cité au volume II l. 626 et employé l. 658–690 ; à NE PAS confondre avec l'ensemble de saut abstrait du socle (II.HYB.JUMP_SET, relation GEN X005) ni avec la différentielle D_{(φ,μ)} (l. 1709) ; le D du noyau est l'instance du D du socle (relation intravolume II consignée au registre)",
+   justification: "livre I l. 546 ; volume II l. 626–690"}
+
+# ---------------------------------------------------------------- 7. Relations intravolume demandées (D3, A-G02-08)
+- id: R001
+  portee: intravolume
+  I: I.II.APPROPRIATION
+  I_cible: I.D.APPROPRIATION
+  relation: ID
+  statut: etablie
+  confiance: haute
+  conditions: "décision E6 : IDENTITÉ CONDITIONNELLE ÉTABLIE ENTRE LES PRÉDICATS, sans présumer l'identité inconditionnelle de leurs domaines d'application ; deux entrées conservées jusqu'à G0.5 ; les deux prédicats coïncident par substitution de y_T=Φ^T_{g,\\mathcal P}(z_0) et renommage de l'attracteur final (\\mathcal A ↔ \\mathcal A_1), SOUS LES CONDITIONS : (C1) même système receveur, sur la même réduction (dyade A→B, diagonale interne, livre II l. 114–207 ; annexe D l. 39–118) ; (C2) même application d'interaction Φ^T_{g,\\mathcal P} (même protocole \\mathcal P, même couplage g pendant T, puis découplage) ; (C3) même dynamique autonome après découplage, de sorte que ω_0 soit le même ensemble limite, défini sur le même domaine d'états ; (C4) même notion d'attracteur autonome : l'annexe D explicite (l. 1456) l'application aux régimes hybrides invariants (annexe C l. 1721), ce que le livre II ne précise pas ; l'identification vaut donc sans restriction pour les attracteurs que le livre II admet, et l'annexe D la prolonge explicitement aux attracteurs non ponctuels sans changer le prédicat ; ni identité inconditionnelle ni généralisation stricte n'est affirmée (D3)"
+  justification: "livre II l. 619–665 ; annexe D l. 1406–1469 ; table des énoncés (renvoi « Ann. D.3 »)"
+- id: R002
+  portee: intravolume
+  I: I.CORE.PRESSURE_RESET
+  I_cible: I.CORE.PRESSURE_RESET
+  relation: ID
+  statut: etablie
+  confiance: haute
+  conditions: "les écritures P^+_{i*}=r_P P^-_{i*} (livre I l. 626 ; livre II l. 1057 ; compagnon l. 35) et P^+_{i*}=r_PΘ (annexes A l. 969, B l. 750, C l. 205, E l. 564) définissent des opérateurs de saut qui coïncident exactement sur {x∈\\mathcal D_{i*} : P_{i*}=Θ} et diffèrent sur {P_{i*}>Θ} ; or, pour une condition initiale admissible (P_i(0)∈[0,Θ], livre I l. 759) : (a) pendant le flot P_i≤Θ et P_i est continue, donc le premier saut a lieu avec P_{i*}^-=Θ (livre I l. 552) ; (b) dans une cascade, les pressions des nœuds non encore traités ne changent pas et restent égales à Θ (livre I l. 652, 666–670) ; (c) après un saut P_{i*}^+=r_PΘ<Θ ; par récurrence, tout saut d'une exécution issue d'une condition initiale admissible vérifie P^-_{i*}=Θ ; les deux écritures produisent donc les mêmes exécutions sur ce domaine ; équivalence CONDITIONNELLE au domaine atteignable, non identité des opérateurs sur tout D ; décision E6 : équivalence conditionnelle acceptée pour le noyau lorsque P⁻=Θ ; sur les états où P⁻>Θ, les deux écritures diffèrent en général, sauf notamment si r_P=0 ; NON étendue automatiquement à R2 (livre II l. 1057, annexe E l. 564), dont la portée reste à instruire"
+  justification: "A-G02-08 ; livre I l. 529–552, 626, 652–670, 759"
+
+# ---------------------------------------------------------------- 8. Bilans « NEW » (objets sans correspondant identifié)
+# Chaque bilan résulte d'un examen ; « NEW » signifie : aucun correspondant identifié dans le corpus étudié (volume II V5.17 et
+# compagnons), non preuve d'absence. Les groupes sont motivés par le contenu du volume II (sections 1–14 lues en G0.2/G0.2bis).
+bilans_new:
+  volume_I:
+    - motif: "Bornes, existence et énergie (annexes A–B, livre I ch. 6–9) : le volume II suppose H1–H4 au niveau du socle et renvoie au volume I pour le noyau (l. 1159) ; il ne reprend ni les bornes, ni les fonctionnelles d'énergie, ni les conditions suffisantes de bornitude"
+      objets: [I.A.CONTINUOUS_STATE, I.A.NORM_INF2, I.A.PRECOND_SPECTRUM, I.CORE.TRACE_BOUND, I.A.FORCING_BOUND, I.A.FINITE_HORIZON_BOUNDS,
+               I.B.ENERGY, I.CORE.LYAPUNOV, I.B.CROSS_TERM_PARAMETER, I.B.UNIFORM_BOUNDS, I.B.LYAPUNOV_CONSTANTS, I.B.JUMP_ENVELOPE,
+               I.B.CONDITION_S, I.B.CONDITION_ZR, I.CORE.COERCIVITY, I.CORE.ADMISSIBLE_INITIAL_CONDITION, I.CORE.PRESSURE_RESET]
+    - motif: "Composants du noyau sans entrée au registre du volume II : α, β (écriture de la trace, citée dans Δτ_h l. 630–650 sans entrée), coefficients de pression et de relaxation au saut (employés par le compagnon seulement), \\widetilde A (employée l. 633, 801 sans entrée) ; Q, M, Γ ont reçu une entrée en G0.3 (E5) ; examen d'éventuels ajouts analogues renvoyé à G0.4–G0.5"
+      objets: [I.CORE.WRITE_RATE, I.CORE.FORGET_RATE, I.CORE.PRESSURE_GAIN_H, I.CORE.PRESSURE_GAIN_V, I.CORE.PRESSURE_RELAXATION, I.CORE.VELOCITY_RESET,
+               I.CORE.RELATIONAL_MATRIX]
+    - motif: "Réduction homogène et paysage autonome (annexe C, livre I ch. 13) : le volume II n'en retient que la mention du crash-test « Réduction homogène S_Δ » (l. 601), sans objet propre"
+      objets: [I.C.HOMOGENEOUS_MANIFOLD, I.C.REDUCED_VARIABLES, I.C.INTERNAL_DIAGONAL, I.C.STRUCTURAL_EQUILIBRIUM, I.C.AMPLITUDE_FACTOR,
+               I.C.IGNITION_TRACE_THRESHOLD, I.C.PARALLEL_STIFFNESS, I.C.REFERENCE_PARAMETERS, I.C.EQUILIBRIUM_JACOBIAN, I.C.DIAGONAL_STABILITY_BLOCKS,
+               I.C.ACTIVE_WELL_CYCLE, I.C.LYAPUNOV_LAMBDA0, I.C.MODAL_EIGENVALUE, I.C.SCALAR_DIAGONAL_REDUCTION]
+    - motif: "Dyade, résistance et appropriation (livre II, annexe D) : le volume II ne traite pas l'interaction entre deux systèmes"
+      objets: [I.II.TWO_SYSTEM_COUPLING, I.II.COUPLING_INTENSITY, I.II.TWO_SYSTEM_STATES, I.II.CRITICAL_COUPLING, I.II.APPROPRIATION, I.II.INTERFACE_PRIMING,
+               I.II.AUTONOMOUS_ATTRACTORS, I.II.INTERACTION_OUTCOMES, I.II.INTERFACE_AXIOMS, I.II.STATE_PROJECTION, I.II.INTERACTION_TRANSFORMATIONS,
+               I.D.APPROPRIATION, I.D.CONTACT_PROTOCOL, I.D.INTERACTION_MAP, I.D.LIMIT_SET, I.D.SOURCE_PROJECTION, I.D.REST_LOAD, I.D.EQUILIBRIUM_RESIDUAL,
+               I.D.RESISTANT_BRANCH, I.D.BRANCH_EXPANSION_COEFFS, I.D.HOPF_THRESHOLD, I.D.CAPTURE_THRESHOLD, I.D.MIN_EXPOSURE_TIME, I.D.LINEAR_PREDICTOR,
+               I.D.EFFECTIVE_WRITE_RATE, I.D.FORCED_EQUILIBRIUM]
+    - motif: "Interfaces R1, R2, protocoles numériques et mémoire d'interface (annexes E–F) : absents du volume II"
+      objets: [I.R1.PERMEABILITY, I.R1.REOPENING_RATE, I.R1.CLOSURE_RATE, I.R1.EFFECTIVE_COUPLING, I.R1.TRANSPORTED_THRESHOLD,
+               I.R2.INTERFACE_VARIABLE, I.R2.PARAMETERS, I.R2.RELAXATION_RATE, I.R2.QUANTUM_GAIN, I.R2.RESET_FRACTION, I.R2.PRESSURE_GAIN,
+               I.R2.EVENT_CYCLE, I.R2.RETURN_MAP, I.R2.EVENT_THRESHOLD, I.R2.FLOQUET_THRESHOLD, I.R2.APPROPRIATION_THRESHOLD, I.E.SPECTRAL_RADIUS, I.E.MONODROMY,
+               I.F.STATUS_LABELS, I.F.TWO_EXPOSURE_PROTOCOL, I.F.PHASE_PREDICTOR, I.F.INTERFACE_MEMORY, I.CORE.STATEMENT_TAXONOMY]
+    - motif: "Mémoire, compression et conditionnalité (livre III ch. 2–4, annexe H) : le volume II n'introduit ni contenu survivant, ni regraine, ni compression ; ses objets d'historicité portent sur les chemins structurels"
+      objets: [I.III.SURVIVING_CONTENT, I.III.SUBCRITICAL_EPISODE, I.III.REST_REALIZATION, I.III.SLOW_MEMORY, I.III.RESIDUAL_CONTRIBUTION,
+               I.III.COMPOSITION_EFFECT, I.III.RELAXATION_PROTOCOL, I.H.REGRAINING, I.H.EXTINCTION_REGIME, I.H.REDUCTION_HYPOTHESES, I.H.CONTENT_SPACE,
+               I.H.PROBE, I.H.APPROPRIATION_SET, I.H.PREFIX, I.H.WRITING_MAP, I.H.SWITCH_POINT, I.H.RESPONSE_MAP, I.H.SLOW_SUMMARY_VARIABLES,
+               I.H.RESIDUAL_LOAD, I.H.FAST_INTERFACE, I.H.SLOW_CLOCK, I.H.MEMORY_CONTENT]
+    - motif: "Géométrie de réponse, état lent, frontières, plasticité et ultramétrique (livre III ch. 5–7, annexes I–L) : le volume II étudie des partitions d'états cachés, non des géométries de réponse dans un espace de sondes ; les analogies relevées sont consignées (X036–X040, X081, X082)"
+      objets: [I.III.PROBE_FAMILY, I.III.RESPONSE_REGION, I.III.NEIGHBOURHOOD_GRAPH, I.III.FOLD_SEAM, I.III.RESPONSE_GEOMETRY, I.III.ACCESSIBILITY,
+               I.I.ALIGNED_SLOW_STATE, I.I.ALIGNED_SUBSPACE, I.I.INJECTION, I.I.CLOSURE_HYPOTHESES, I.I.SLOW_RESPONSE_MAP, I.I.SLOW_APPROPRIATION_SET,
+               I.I.DEPOSIT_MAP, I.I.COORDINATE_ACTIVITY, I.I.OBSERVATION_DISTANCE, I.J.DOMAINS, I.J.SIGNATURE, I.J.HYBRID_CELLS, I.J.CELL_RESPONSE,
+               I.J.TRANSITION_TYPES, I.K.PLASTIC_VARIABLE, I.K.PRESENTATIONS, I.K.EQUIVALENCE_HYPOTHESES, I.K.FIVE_CLOCK_STATE, I.K.EXTENDED_RESPONSE,
+               I.K.SPECIES_INDIVIDUAL_DECISION, I.K.ACTIVE_CLOCK_SPECTRUM, I.K.AUGMENTED_STATE, I.K.CLASS_RESPONSE, I.L.SEPARATORS, I.L.COMPLEXITY,
+               I.L.BUDGET_FILTRATION, I.L.SEPARABILITY_TREE, I.L.SEPARABILITY_DEPTH, I.L.SEPARABILITY_PSEUDOMETRIC, I.L.SEPARATION_GEOMETRY]
+    - motif: "Cadre formel des observations (annexe G) : le volume II reprend le monoïde (X013) mais ni les lectures de sonde, ni le transport par préfixe, ni les budgets, ni le système inverse des quotients"
+      objets: [I.G.EXECUTION_CONCATENATION, I.G.SUFFIX_TRANSPORT, I.G.RESOLUTION_REFINEMENT, I.G.QUOTIENT_SYSTEM, I.G.SUFFICIENT_SUMMARY,
+               I.G.OBSERVATION_CONDITIONS, I.G.COMPLEXITY_BUDGETS, I.G.RESOLUTION, I.G.OBSERVATIONAL_RELATIVITY, I.G.COMPOSITION_CONVENTION,
+               I.G.CLOSURE_LEVELS, I.III.FUNCTIONAL_HISTORY_EQUIVALENCE, I.II.HISTORY_RESPONSE_FUNCTION, I.G.OBS_SPACE, I.G.TERMINAL_READING,
+               I.G.PATH_READING, I.III.READING]
+  volume_II:
+    - motif: "Classe IWS, taxonomie mécanistique, efficacité et questions ouvertes : objets propres au volume II (le volume I ne définit pas de classe IWS formelle)"
+      objets: [II.CLASS.IWS_CANDIDATE, II.CLASS.C23_ACT, II.QUEST.C5, II.TAX.MECHANISM_WITNESSES, II.EFF.MAX_REPERTOIRE, II.EFF.SUPPORT_REACH,
+               II.EFF.SUPPORT, II.EFF.REACH, II.HIST.EFFECTIVE_HISTORICITY, II.HIST.CHRONOLOGICAL_HISTORICITY, II.HIST.ORDINAL_HISTORICITY, II.HIST.PREFIX_ORDER]
+    - motif: "Présentations et tour des lectures : structure produit de l'espace des lectures et fibres, propres au volume II"
+      objets: [II.PRES.PRESENTATION, II.PRES.READOUT, II.PRES.OBS_SPACE, II.PRES.INTERNAL_OBS_SPACE, II.PRES.STRUCT_PROJECTION, II.PRES.ADMISSIBLE_PAIRS,
+               II.PRES.ORGANISATION_FIBRE, II.PRES.OPACITY_FIBRE_READOUT, II.PRES.FIBRE_CONVENTION]
+    - motif: "Morphismes et granularités : le volume I regroupe les cascades (annexe C l. 278) sans théorie des granularités ni des flèches"
+      objets: [II.MOR.AMBIENT_CATEGORY, II.MOR.DYNAMIC_MORPHISM, II.GRAN.G1, II.GRAN.G2]
+    - motif: "Exploration des fibres d'opacité, murs, blocs semi-algébrique et conique, symétries et transmission : objets propres au volume II, construits sur le noyau (relations DER consignées quand elles existent)"
+      objets: [II.OPAC.SECTION_PARAM, II.OPAC.SECTION, II.OPAC.PARAM_DOMAIN, II.OPAC.PARAMETRIZATION, II.OPAC.HIDDEN_PARAMETER, II.OPAC.WORD_PARTITION,
+               II.OPAC.CHAMBER, II.OPAC.REALIZABLE_WORDS, II.OPAC.JOINT_REACHABLE_SET, II.OPAC.DEPTH_EQUIVALENCE, II.DEPTH.DEPTH_RANK,
+               II.SA.DEPENDENCE_SUPPORT, II.SA.SEMIALGEBRAIC_BLOCK, II.CONIC.BLOCK, II.SYM.TRACE_STABILISER]
+    - motif: "Socle : hypothèses du socle sans objet correspondant au volume I (le noyau les satisfait : X002)"
+      objets: [II.HYB.WELL_POSEDNESS, II.HYB.ADMISSIBILITY_INVARIANCE, II.HIST.ADMISSIBLE_UNION]
+  compagnons:
+    - motif: "Dynamique d'épisode et état de la note de transmission : le volume II résume la note (l. 1790–1833) sans enregistrer ces objets ; leur rapport au noyau du volume I relève de la provenance (B4), hors de l'orientation I→II"
+      objets: [C.TRANS.EPISODE_DYNAMICS, C.TRANS.STATE]

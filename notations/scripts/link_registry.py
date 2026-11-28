@@ -34,6 +34,7 @@ REQUIRED = ['id', 'phase', 'designation', 'notations', 'nature', 'type', 'domain
             'confiance', 'notation_canonique']
 SEUIL = 5
 GRANULARITES = {'famille', 'element'}
+PROVENANCES = {'LOCAL', 'BY_REFERENCE', 'DERIVED'}
 
 
 def key(r):
@@ -91,6 +92,8 @@ def main():
         for rel in o.get('relations_intra', []):
             if rel['cible'] not in idset:
                 errors.append('%s : relation vers objet inconnu %s' % (o['id'], rel['cible']))
+        if o.get('provenance_definition') not in PROVENANCES:
+            errors.append('%s : provenance_definition invalide ou absente %s' % (o['id'], o.get('provenance_definition')))
         gran = o.get('granularite')
         if gran is not None and gran not in GRANULARITES:
             errors.append('%s : granularité invalide %s' % (o['id'], gran))
@@ -171,6 +174,7 @@ def main():
         par_phase=dict(collections.Counter(o['phase'] for o in objs)),
         par_confiance=dict(collections.Counter(o['confiance'] for o in objs)),
         par_volume=dict(collections.Counter(o['id'].split('.')[0] for o in objs)),
+        par_provenance=dict(collections.Counter(o.get('provenance_definition') for o in objs)),
         par_granularite=dict(collections.Counter(o.get('granularite', 'non renseignée') for o in objs)),
         par_nature=dict(collections.Counter(o['nature'].split(' (')[0].split(';')[0] for o in objs)),
         avec_anomalie=sorted({o.get('anomalie') for o in objs if o.get('anomalie')}),

@@ -1,0 +1,21 @@
+depot,fichier,ligne,valeur_ecrite,valeur_recalculee,nature,statut_correction,remarque
+IWS,Volume_I/IWS_PART_II.tex,482,-2{,}1774,-2{,}1779,coefficient linéaire de x_res,à corriger ultérieurement (D2),développement du second ordre (encadré)
+IWS,Volume_I/IWS_PART_II.tex,484,0{,}3216,0{,}3220,coefficient quadratique de x_res,à corriger ultérieurement (D2),A-G02-14
+IWS,Volume_I/IWS_PART_II.tex,490,« quasi-annulation … origine générale … pas encore établie »,annulation exacte des termes en m_2,énoncé qualitatif,à reformuler ultérieurement (correction scientifique),la compensation des termes en m_2 est exacte (c_2 = -ζc_1²/(3m_1A))
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,612,-2{,}17791…,-2{,}17791,coefficient linéaire -w/α,correct,—
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,783–788,"27,40 ; −52,31 ; 26,15","27,41 ; −52,29 ; 26,15",contributions au numérateur de c_2,écart d'arrondi à examiner,somme exacte ζc_1²/3 = 1,264879 ; les deux premières valeurs diffèrent à la deuxième décimale
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,793,« Elles s'annulent presque »,les termes en m_2 s'annulent exactement ; il reste ζc_1²/3,énoncé qualitatif,à reformuler ultérieurement (correction scientifique),voir D2_resistant_branch.md § 3
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,798,0{,}3220,0{,}3220,coefficient quadratique,correct,—
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,809,-2{,}1774,-2{,}1779,coefficient linéaire (forme finale encadrée),à corriger ultérieurement (D2),incohérent avec l. 612 de la même annexe
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,811,0{,}3220,0{,}3220,coefficient quadratique,correct,—
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,819,« compensation entre trois contributions distinctes »,annulation exacte des termes en m_2,énoncé qualitatif,à reformuler ultérieurement (correction scientifique),—
+IWS,Volume_I/Annexes/IWS_ANNEXE_D.tex,2017,0{,}3220,0{,}3220,coefficient quadratique (résumé des statuts),correct,—
+IWS,Volume_I/Annexes/IWS_ANNEXE_F.tex,319,-2{,}1774,-2{,}1779,coefficient linéaire,à corriger ultérieurement (D2),—
+IWS,Volume_I/Annexes/IWS_ANNEXE_F.tex,321,0{,}3220,0{,}3220,coefficient quadratique,correct,—
+IWS,Volume_I/Annexes/IWS_ANNEXE_F.tex,330,"développement à 3g_c : −0,1411",−0{,}1412 avec c_1 recalculé (−0,14116),résultat numérique dépendant,à recalculer ultérieurement,à 2g_c : −0,0709 inchangé (−0,07092) ; racines numériques −0,0710 / −0,1421 indépendantes des coefficients (recalcul −0,07105 / −0,14213, soit −0,0710 et −0,1421)
+IWS,Volume_I/Annexes/IWS_ANNEXE_F.tex,337,« compensation de ses différentes contributions »,annulation exacte des termes en m_2,énoncé qualitatif,à reformuler ultérieurement,—
+iws-lean (lecture seule),tex/IWS_ANNEXE_D.tex,809,-2.1774,-2.1779,copie de l'annexe D,hors périmètre (dépôt connexe non modifié),copie de la source
+iws-lean (lecture seule),tex/IWS_ANNEXE_F.tex,319,-2.1774,-2.1779,copie de l'annexe F,hors périmètre,copie de la source
+iws-lean (lecture seule),IWS/AnnexD/QuadraticTerm.lean,26,0.3220,0.3220,commentaire [PROP-NUM],conforme,la formalisation établit A c_1 + B = 0 et c_2 = -ζc_1²/(3m_1A) (README l. 230)
+IWS_1 (lecture seule),fii1_addendum.py,5,"-2.1774 ; 0.3216 ; 27.40 − 52.31 + 26.14",-2.1779 ; 0.3220,provenance historique probable,hors périmètre,note de session ; origine numérique non reconstruite
+IWS_1 (lecture seule),NOTE_FII1_INTERFACE.md,11,-2.1774 ; 0.3216,-2.1779 ; 0.3220,provenance historique probable,hors périmètre,—

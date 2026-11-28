@@ -7681,13 +7681,17 @@ II-001072,II.KERNEL.FAST_STATE,1,Volume_II/IWS_volume_II_classe_objets_transform
 II-001073,II.KERNEL.VELOCITY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,610,V,0
 II-001074,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,610,P,0
 II-001075,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,612,\tau,0
+II-001076,II.KERNEL.TRACE_METRIC,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,Q,0
 II-001077,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,\tau,0
 II-001080,II.KERNEL.ANISOTROPY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,\lambda,0
 II-001081,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,\tau,0
 II-001082,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,\tau,0
 II-001083,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,614,\tau^\top,0
+II-001085,II.KERNEL.PRECONDITIONER,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,615,M,0
 II-001086,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,615,\tau,0
+II-001087,II.KERNEL.TRACE_METRIC,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,615,Q,0
 II-001088,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,615,\tau,0
+II-001089,II.KERNEL.FRICTION,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,616,\Gamma,0
 II-001090,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,616,\tau,0
 II-001091,II.KERNEL.FRICTION_COEFFS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,616,\gamma_0,0
 II-001092,II.KERNEL.FRICTION_COEFFS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,616,\gamma_1,0
@@ -7695,15 +7699,17 @@ II-001093,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformation
 II-001094,II.KERNEL.FRICTION_COEFFS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,620,\gamma_1,0
 II-001095,II.KERNEL.ANISOTROPY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,620,\lambda,0
 II-001096,II.KERNEL.COUPLING_GAIN,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,622,\zeta,0
+II-001097,II.KERNEL.PRECONDITIONER,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,M,0
 II-001098,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,\tau,0
+II-001101,II.KERNEL.FRICTION,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,\Gamma,0
 II-001102,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,\tau,0
 II-001103,II.KERNEL.FRICTION_COEFFS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,\gamma_0,0
 II-001104,II.KERNEL.FAST_STATE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,H,0
 II-001105,II.KERNEL.VELOCITY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,V,0
 II-001106,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,P,0
 II-001107,II.HYB.CASCADE_MAP,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,K^*,0
-II-001113,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,D,1
-II-001114,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,626,D,0
+II-001113,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,624,D,1
+II-001114,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,626,D,0
 II-001117,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,626,P_i,0
 II-001119,II.KERNEL.THRESHOLD,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,626,\Theta,0
 II-001120,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,628,P,0
@@ -7738,7 +7744,7 @@ II-001203,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformation
 II-001208,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,652,\tau_0,0
 II-001214,II.KERNEL.INPUT_BOUND,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,656,u_{\max},0
 II-001224,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,658,C,0
-II-001225,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,658,D,0
+II-001225,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,658,D,0
 II-001229,II.KERNEL.FRICTION_COEFFS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,\gamma_1,0
 II-001230,II.KERNEL.ANISOTROPY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,\lambda,0
 II-001231,II.KERNEL.COUPLING_GAIN,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,\zeta,0
@@ -7746,18 +7752,18 @@ II-001232,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transforma
 II-001233,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,A',0
 II-001235,II.PRES.ORGANISATION_FIBRE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,X_A,0
 II-001237,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,C,0
-II-001238,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,D,0
+II-001238,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,661,D,0
 II-001239,II.EFF.INTERNAL_RESPONSE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,664,R_x^{\rho_{\mathrm{int}}},0
 II-001241,II.PRES.INTERNAL_READOUT,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,664,\rho_{\mathrm{int}},1
 II-001243,II.EFF.MAX_REPERTOIRE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,664,\Rep^{\max},0
 II-001245,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,664,A',0
 II-001247,II.PRES.ORGANISATION_FIBRE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,X_{A'},0
 II-001249,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,C,0
-II-001251,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,D,0
+II-001251,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,D,0
 II-001252,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,P,0
 II-001253,II.KERNEL.PRESSURE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,P,0
 II-001254,II.PRES.INTERNAL_READOUT,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,\rho_{\mathrm{int}},0
-II-001256,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,D,0
+II-001256,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,669,D,0
 II-001258,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,671,\widetilde A,0
 II-001260,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,673,\widetilde A',0
 II-001266,II.KERNEL.FAST_STATE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,677,H,0
@@ -7777,7 +7783,7 @@ II-001300,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transforma
 II-001301,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,A,0
 II-001302,II.PRES.ORGANISATION_FIBRE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,X_A,0
 II-001304,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,C,0
-II-001305,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,D,0
+II-001305,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,D,0
 II-001306,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,A,0
 II-001307,II.KERNEL.FAST_STATE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,H,0
 II-001308,II.KERNEL.VELOCITY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,V,0
@@ -7791,7 +7797,7 @@ II-001316,II.EFF.MAX_REPERTOIRE,1,Volume_II/IWS_volume_II_classe_objets_transfor
 II-001318,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,688,A',0
 II-001319,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,A_1^+,0
 II-001320,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,A_2^+,0
-II-001321,II.HYB.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,D,0
+II-001321,II.KERNEL.JUMP_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,D,0
 II-001322,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,C,0
 II-001324,II.HYB.FLOW_SET,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,C,0
 II-001326,II.HYB.CASCADE_MAP,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,690,K^*,0
@@ -7836,7 +7842,9 @@ II-001430,II.SYM.GRAPH_AUTOMORPHISMS,1,Volume_II/IWS_volume_II_classe_objets_tra
 II-001431,II.SYM.GRAPH_AUTOMORPHISMS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\sigma,1
 II-001432,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\widetilde A,0
 II-001433,II.KERNEL.ADJACENCY,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,A,0
+II-001434,II.KERNEL.PRECONDITIONER,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,M,0
 II-001435,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\tau_i,0
+II-001437,II.KERNEL.FRICTION,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\Gamma,0
 II-001438,II.KERNEL.TRACE,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\tau_i,0
 II-001441,II.SYM.GRAPH_AUTOMORPHISMS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\Pi_\sigma,0
 II-001442,II.SYM.GRAPH_AUTOMORPHISMS,1,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,801,\sigma,1

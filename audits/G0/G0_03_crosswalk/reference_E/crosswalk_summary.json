@@ -1,0 +1,49 @@
+{
+ "relations": 88,
+ "par_relation": {
+  "GEN": 12,
+  "DER": 13,
+  "ID": 23,
+  "ANA": 17,
+  "SPEC": 5,
+  "DIST": 10,
+  "UNK": 3,
+  "PROJ": 3
+ },
+ "par_statut": {
+  "etablie": 50,
+  "candidate": 33,
+  "indeterminee": 3
+ },
+ "intravolume": [
+  "R001",
+  "R002"
+ ],
+ "couverture": {
+  "I": {
+   "correspondant_etabli": 24,
+   "famille_bilan_par_composants": 6,
+   "sans_correspondant_identifie": 139,
+   "indetermine": 3,
+   "sans_correspondant_identifie_avec_analogie_ou_distinction": 22,
+   "correspondant_candidat": 10,
+   "analogie_ou_distinction_seulement": 1
+  },
+  "II": {
+   "correspondant_etabli": 36,
+   "correspondant_candidat": 12,
+   "sans_correspondant_identifie_avec_analogie_ou_distinction": 17,
+   "sans_correspondant_identifie": 25,
+   "analogie_ou_distinction_seulement": 1,
+   "indetermine": 1
+  },
+  "C": {
+   "famille_bilan_par_composants": 1,
+   "correspondant_etabli": 3,
+   "correspondant_candidat": 1,
+   "analogie_ou_distinction_seulement": 1,
+   "sans_correspondant_identifie": 2
+  }
+ },
+ "erreurs": []
+}

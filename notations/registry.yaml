@@ -1,9 +1,9 @@
 # Registre sémantique candidat — voir _meta. YAML 1.2 style bloc, généré par registry_io.py.
 _meta:
-  titre: Registre sémantique CANDIDAT INTERMÉDIAIRE — G0.2bis (itération 2)
-  statut: candidat intermédiaire ; non normatif ; G0.2bis validée et G0.2 clôturée (D1, 28/11/2026)
-  etat_reference: audits/G0/G0_02_semantic/reference_95/registry_G0_02_iter1.json (copie figée des 95 objets, base
-    du différentiel G0.2bis)
+  titre: 'Registre sémantique CANDIDAT INTERMÉDIAIRE — G0.3 (itération 3 : 305 entrées)'
+  statut: candidat intermédiaire ; non normatif ; G0.2 clôturée (D1) ; enrichi en G0.3 (E5, 4 entrées)
+  etat_reference: 'références historiques conservées : reference_95/ (G0.2, itération 1), reference_301/ (G0.2bis,
+    D1) ; état courant figé en reference_305/ après intégration des arbitrages E2–E6'
   format: YAML 1.2 style bloc (PyYAML 6.0.2, environnement .venv-g0 ; notations/requirements-g0.txt) ; écrit par
     notations/scripts/registry_io.py
   commit_sources: c74fa047171ff51e308f1855d8f636add2ac33ca
@@ -28,6 +28,10 @@ _meta:
     ; aucune n''établit d''identité intervolumes.'
   - 'Sélecteurs : motifs de fichier ancrés (IWS_PART_I\.tex ne capte plus IWS_PART_II ni IWS_PART_III) ; champs
     « decoration » et « police » disponibles.'
+  - 'provenance_definition : LOCAL (définition dans le passage), BY_REFERENCE (définition reprise par renvoi explicite
+    à un autre volume ou à une annexe), DERIVED (objet défini par une construction explicite à partir d''objets
+    déjà enregistrés : union, composition, restriction, préimage) ; attribut indépendant de statut_definition ;
+    classement DERIVED indicatif (E5)'
 objets:
 - id: II.HYB.BASE_SYSTEM
   phase: G0.2a
@@ -72,6 +76,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.STATE_SPACE
   phase: G0.2a
   designation: Ensemble des états complets
@@ -107,6 +112,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.FLOW_SET
   phase: G0.2a
   designation: Ensemble de flot
@@ -146,6 +152,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.FLOW_GENERATOR
   phase: G0.2a
   designation: Générateur continu
@@ -183,6 +190,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.JUMP_SET
   phase: G0.2a
   designation: Ensemble de saut
@@ -210,7 +218,7 @@ objets:
     indice: ^$
     lignes:
     - 75
-    - 700
+    - 480
   statut_definition: EXPLICIT
   motif_statut: « D\subseteq\X l'ensemble de saut »
   confiance: haute
@@ -220,6 +228,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: correction_selecteur
+    motif: 'E5 : le sélecteur couvrait l. 75–700 et captait le D du noyau (l. 626–690), désormais II.KERNEL.JUMP_SET'
+  provenance_definition: LOCAL
 - id: II.HYB.JUMP_OPERATOR
   phase: G0.2a
   designation: Opérateur de saut (élémentaire, granularité G0)
@@ -258,6 +270,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.CASCADE_MAP
   phase: G0.2a
   designation: Application de cascade (saut agrégé à granularité G1)
@@ -298,6 +311,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.HYB.EXEC_SEMANTICS
   phase: G0.2a
   designation: Sémantique d'exécution
@@ -332,6 +349,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.EXECUTION
   phase: G0.2a
   designation: Exécution hybride issue de x sous l'histoire H
@@ -375,6 +393,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.WELL_POSEDNESS
   phase: G0.2a
   designation: Socle de bonne position H1–H4
@@ -413,6 +432,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: II.HYB.ADMISSIBILITY_INVARIANCE
   phase: G0.2a
   designation: Invariance d'admissibilité
@@ -445,6 +465,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HYB.AMBIENT_CLASS
   phase: G0.2a
   designation: Classe ambiante des systèmes hybrides bien posés
@@ -488,6 +509,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: II.MOR.AMBIENT_CATEGORY
   phase: G0.2a
   designation: Catégorie ambiante à granularité G et couche observationnelle
@@ -541,6 +563,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: II.HIST.MONOID
   phase: G0.2a
   designation: Monoïde des histoires (épisodes)
@@ -580,6 +603,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
+  provenance_definition: BY_REFERENCE
 - id: II.HIST.ADMISSIBLE_FAMILY
   phase: G0.2a
   designation: Famille des histoires admissibles depuis chaque état
@@ -616,6 +643,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HIST.ADMISSIBLE_UNION
   phase: G0.2a
   designation: Union des histoires admissibles quelque part
@@ -653,6 +681,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.HIST.END_STATE
   phase: G0.2a
   designation: État terminal d'une histoire exécutée
@@ -687,6 +719,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.HIST.CONTINUATIONS
   phase: G0.2a
   designation: Continuations admissibles après un préfixe
@@ -724,6 +760,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.HIST.PREFIX_STATE_COMPATIBILITY
   phase: G0.2a
   designation: Compatibilité préfixe–état
@@ -756,6 +796,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.PRESENTATION
   phase: G0.2a
   designation: Présentation IWS candidate
@@ -792,6 +833,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.READOUT
   phase: G0.2a
   designation: Lecture séparée (lecture complète de l'état)
@@ -832,6 +874,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.STRUCT_READOUT
   phase: G0.2a
   designation: Lecture structurelle
@@ -867,6 +910,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.INTERNAL_READOUT
   phase: G0.2a
   designation: Lecture non structurelle (interne)
@@ -900,6 +944,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.STRUCT_VALUES
   phase: G0.2a
   designation: Espace des valeurs structurelles
@@ -933,6 +978,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.INTERNAL_OBS_SPACE
   phase: G0.2a
   designation: Espace des lectures internes
@@ -966,6 +1012,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.OBS_SPACE
   phase: G0.2a
   designation: Espace des lectures (codomaine observable)
@@ -1005,6 +1052,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.PRES.STRUCT_PROJECTION
   phase: G0.2a
   designation: Projection structurelle dans l'espace des lectures
@@ -1041,6 +1092,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.EXP.REGIME
   phase: G0.2a
   designation: 'Régime expérimental : états initiaux et classe d''histoires'
@@ -1091,6 +1143,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.PRES.ADMISSIBLE_PAIRS
   phase: G0.2a
   designation: Domaine des paires admissibles
@@ -1126,6 +1179,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.PRES.ORGANISATION_FIBRE
   phase: G0.2a
   designation: Fibre d'organisation
@@ -1163,6 +1220,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.PRES.OPACITY_FIBRE_READOUT
   phase: G0.2a
   designation: Fibre d'opacité complète (désignation provisoire, décision C2)
@@ -1213,7 +1274,11 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   granularite: element
+  provenance_definition: DERIVED
 - id: II.OPAC.OPACITY_FIBRE
   phase: G0.2a
   designation: Fibre d'opacité admissible au flot \mathcal O_y (désignation provisoire, décision C2)
@@ -1259,7 +1324,11 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   granularite: element
+  provenance_definition: DERIVED
 - id: II.HIST.EFFECTIVE_HISTORICITY
   phase: G0.2a
   designation: Historicité effective générale
@@ -1303,6 +1372,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HIST.CHRONOLOGICAL_HISTORICITY
   phase: G0.2a
   designation: Historicité structurelle chronologique
@@ -1337,6 +1407,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HIST.STRUCTURAL_WORD
   phase: G0.2a
   designation: Mot structurel d'une exécution
@@ -1375,6 +1446,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HIST.PREFIX_ORDER
   phase: G0.2a
   designation: Ordre préfixe et incomparabilité des mots
@@ -1407,6 +1479,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.HIST.ORDINAL_HISTORICITY
   phase: G0.2a
   designation: Historicité structurelle ordinale
@@ -1444,6 +1517,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.EFF.INTERNAL_RESPONSE
   phase: G0.2a
   designation: Application partielle de réponse interne
@@ -1481,6 +1555,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.EFF.MAX_REPERTOIRE
   phase: G0.2a
   designation: Répertoire comportemental maximal d'une structure
@@ -1518,6 +1593,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.EFF.SUPPORT_REACH
   phase: G0.2a
   designation: Support et ensembles atteints (régime, granularité G1)
@@ -1558,6 +1634,7 @@ objets:
     nature: decomposition
     motif: 'support et ensembles atteints individualisés ; l''anomalie A-G02-02 se répartit (\Supp : usage avant
       définition ; \Reach^{flow} : non défini)'
+  provenance_definition: LOCAL
 - id: II.CLASS.IWS_CANDIDATE
   phase: G0.2a
   designation: Classe IWS — candidat courant (C0, C1, C23^pot, C4)
@@ -1599,6 +1676,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.CLASS.C23_ACT
   phase: G0.2a
   designation: Renforcement actualisé de C23
@@ -1633,6 +1711,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.TAX.MECHANISM_WITNESSES
   phase: G0.2a
   designation: Témoins mécanistiques I1_ρ et I2 (F, D, K^*)
@@ -1679,6 +1758,7 @@ objets:
     nature: granularite
     motif: 'non décomposé : témoins I1/I2 indexés par mécanisme : une famille paramétrée, non une collection d''objets
       hétérogènes'
+  provenance_definition: LOCAL
 - id: II.GRAN.G1
   phase: G0.2a
   designation: Granularités G0 et G1 ; trajectoire G1, temps événementiels, bords de cascade
@@ -1726,6 +1806,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'non décomposé : granularité et ses dérivées (γ̄, \mathcal T_ev, γ^±) définies ensemble'
+  provenance_definition: LOCAL
 - id: II.MOR.DYNAMIC_MORPHISM
   phase: G0.2a
   designation: Morphisme dynamique, flèches observationnelles et structurelles
@@ -1778,6 +1859,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.DEPTH.DEPTH_RANK
   phase: G0.2a
   designation: Profondeur comportementale k et rang local r d'un Kairos
@@ -1826,6 +1908,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.OPAC.SECTION_PARAM
   phase: G0.2a
   designation: Coupe d'une fibre d'opacité et sa paramétrisation (Σ, Ω, Φ, ϑ)
@@ -1872,6 +1955,7 @@ objets:
     nature: decomposition
     motif: 'Σ, Ω, Φ, ϑ individualisés : réservations V5.16 distinctes et homonymes au volume I (ϑ annexe C, Σ annexes
       H–K, Ω livre III, Φ_g annexe E)'
+  provenance_definition: LOCAL
 - id: II.OPAC.WORD_PARTITION
   phase: G0.2a
   designation: Partition expérimentale à profondeur k ; classes de mot ; chambres
@@ -1926,6 +2010,7 @@ objets:
     nature: decomposition
     motif: chambre Ξ individualisée ; partition \mathcal P_k et Ω_w restent dans l'entrée (élément principal de
       la famille)
+  provenance_definition: LOCAL
 - id: II.OPAC.DEPTH_EQUIVALENCE
   phase: G0.2a
   designation: Équivalence à profondeur k sous une histoire commune
@@ -1959,6 +2044,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.OPAC.NERODE_EQUIVALENCE
   phase: G0.2a
   designation: Équivalence comportementale de Nerode dans une fibre d'opacité
@@ -1991,6 +2077,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.OPAC.SEPARATING_FAMILY
   phase: G0.2a
   designation: Famille séparante ; familles emboîtées de protocoles du noyau
@@ -2028,6 +2115,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: II.WALLS.SCORES_WALLS
   phase: G0.2a
   designation: Scores cosinus, candidats, murs actifs et lieux dégénérés au k-ième Kairos
@@ -2092,6 +2180,7 @@ objets:
     nature: granularite
     motif: 'non décomposé : bloc de murs du volume II ; composants sans homonyme candidat au volume I ; individualisation
       différée à G0.3 si nécessaire'
+  provenance_definition: LOCAL
 - id: II.SA.DEPENDENCE_SUPPORT
   phase: G0.2a
   designation: Support nodal de dépendance d'une coupe et comptages associés
@@ -2135,6 +2224,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'non décomposé : support de dépendance et ses comptages définis ensemble'
+  provenance_definition: LOCAL
 - id: II.SA.SEMIALGEBRAIC_BLOCK
   phase: G0.2a
   designation: 'Bloc semi-algébrique : trace du déclencheur, coefficients, normes, polynômes de signe'
@@ -2208,6 +2298,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'non décomposé : bloc semi-algébrique du volume II ; composants techniques locaux à la preuve'
+  provenance_definition: LOCAL
 - id: II.KERNEL.DECOUPLED_READOUT
   phase: G0.2a
   designation: Lecture du noyau dans le régime découplé
@@ -2249,6 +2340,10 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: I.CORE.HYBRID_SYSTEM
   phase: G0.2b
   designation: 'Système hybride du noyau : données (\mathcal X, C, F, D, \mathcal K)'
@@ -2283,6 +2378,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.CORE.STATE_SPACE
   phase: G0.2b
   designation: Espace des états du noyau
@@ -2322,6 +2418,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.NODAL_VARIABLES
   phase: G0.2b
   designation: 'Variables nodales : état rapide, vitesse, trace, pression'
@@ -2364,6 +2461,7 @@ objets:
     nature: decomposition
     motif: famille conservée pour l'organisation ; ses quatre composants deviennent des éléments (sélecteurs transférés
       à l'identique) ; x=(H,V,τ,P,A) reste noté ici comme état complet (cf. I.CORE.STATE_SPACE)
+  provenance_definition: LOCAL
 - id: I.CORE.GRAPH
   phase: G0.2b
   designation: Nœuds, graphe, matrice d'adjacence et matrice relationnelle normalisée
@@ -2410,6 +2508,7 @@ objets:
     motif: 'famille conservée ; nœuds, dimension, adjacence, espace des graphes et matrice normalisée individualisés
       (sélecteurs A, \mathfrak G, N transférés ; d et \widetilde A sans sélecteur : glyphe d polysémique, \widetilde
       A porté par la décoration du glyphe A)'
+  provenance_definition: LOCAL
 - id: I.CORE.FLOW_JUMP_SETS
   phase: G0.2b
   designation: Seuil, ensemble de flot et ensemble de saut du noyau
@@ -2453,6 +2552,7 @@ objets:
     nature: decomposition
     motif: Θ, C, D individualisés ; sélecteur ajouté pour D (livre I, ch. Kairos, l. 521–680) ; le volume II possède
       des objets C et D distincts (II.HYB.FLOW_SET, II.HYB.JUMP_SET) dont la relation relève de G0.3
+  provenance_definition: LOCAL
 - id: I.CORE.KAIROS_OPERATOR
   phase: G0.2b
   designation: Opérateurs de Kairos nodaux et opérateur sélectionné
@@ -2504,6 +2604,7 @@ objets:
     nature: correction_selecteur
     motif: 'motif de fichier ancré (IWS_PART_I ne capte plus IWS_PART_II ni IWS_PART_III) : défaut de G0.2 corrigé
       en G0.2bis'
+  provenance_definition: LOCAL
 - id: I.CORE.REWIRING
   phase: G0.2b
   designation: 'Recâblage conservatif : nœud sélectionné, voisinages, similarité, nombre d''arêtes modifiées'
@@ -2555,6 +2656,7 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: sélecteur du nœud sélectionné i*
+  provenance_definition: LOCAL
 - id: I.CORE.DISSIPATION_PRECONDITIONER
   phase: G0.2b
   designation: Friction et préconditionneur dépendant de la trace
@@ -2602,6 +2704,7 @@ objets:
     motif: 'famille conservée ; Γ, (γ_0,γ_1), Q, M, λ, m_0 individualisés (sélecteurs transférés à l''identique).
       γ_0 et γ_1 restent groupés : un seul sélecteur les distingue par indice, et le volume II les emploie conjointement
       (régime γ_1=λ=0)'
+  provenance_definition: LOCAL
 - id: I.CORE.DYNAMICS_PARAMETERS
   phase: G0.2b
   designation: Paramètres d'écriture et de couplage de la dynamique nodale
@@ -2651,6 +2754,7 @@ objets:
   - I.CORE.PRESSURE_RELAXATION
   - I.CORE.PRESSURE_RESET
   - I.CORE.VELOCITY_RESET
+  provenance_definition: LOCAL
 - id: I.B.ENERGY
   phase: G0.2b
   designation: Énergie sans terme croisé (annexe B)
@@ -2687,6 +2791,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.R1.PERMEABILITY
   phase: G0.2b
   designation: Perméabilité dynamique de l'interface (R1)
@@ -2736,6 +2841,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.R1.REOPENING_RATE
   phase: G0.2b
   designation: Coefficient de réouverture de la perméabilité (R1)
@@ -2797,6 +2903,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.C.MODAL_EIGENVALUE
   phase: G0.2b
   designation: Valeur propre de la matrice relationnelle (mode du réseau)
@@ -2836,6 +2943,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.E.SPECTRAL_RADIUS
   phase: G0.2b
   designation: Rayon spectral (analyse de Floquet de R2)
@@ -2871,6 +2979,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.E.MONODROMY
   phase: G0.2b
   designation: Matrice fondamentale et matrice de monodromie du bloc réduit (R2)
@@ -2924,6 +3033,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.D.APPROPRIATION
   phase: G0.2b
   designation: Appropriation d'une interaction (définition par les bassins, annexe D)
@@ -2975,6 +3085,7 @@ objets:
   signature: (g,T,\mathcal P) appropriée depuis z_0 ⇔ ω_0(Φ^T_{g,\mathcal P}(z_0))=\mathcal A_1, ω_0(z_0)=\mathcal
     A_0, \mathcal A_1≠\mathcal A_0
   granularite: element
+  provenance_definition: LOCAL
 - id: I.III.EPISODES_HISTORIES
   phase: G0.2c
   designation: Épisodes, transitions et histoires (livre III)
@@ -3016,6 +3127,7 @@ objets:
   - phase: G0.2bis
     nature: decomposition
     motif: épisodes, transitions et histoires individualisés (rôles et types distincts)
+  provenance_definition: LOCAL
 - id: I.III.REALIZATION_SPACE
   phase: G0.2c
   designation: Espace des réalisations du système (livre III)
@@ -3053,6 +3165,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.III.READING
   phase: G0.2c
   designation: Lecture (résolution d'observation) d'une sonde
@@ -3095,6 +3208,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.III.EXECUTION
   phase: G0.2c
   designation: Exécution d'une sonde
@@ -3128,6 +3242,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.III.RESPONSE
   phase: G0.2c
   designation: Réponse observée d'une réalisation sous une sonde et une lecture
@@ -3173,6 +3288,7 @@ objets:
     nature: correction_selecteur
     motif: exclut \mathcal R^{ρ,fin} (lecture ancrée sur le suffixe, I.G.SUFFIX_TRANSPORT)
   granularite: element
+  provenance_definition: LOCAL
 - id: I.G.HISTORY_MONOID
   phase: G0.2d
   designation: Monoïde libre des histoires sur l'alphabet des épisodes (actifs et délais)
@@ -3213,6 +3329,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   remarques: 'Décision D-06 : l''alphabet comprend les épisodes actifs et les délais (l. 46).'
+  provenance_definition: LOCAL
 - id: I.G.REALIZATION_SPACE
   phase: G0.2d
   designation: Ensemble des états complets ou des présentations admises (annexe G)
@@ -3247,6 +3364,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.G.ADMISSIBLE_CLASS
   phase: G0.2d
   designation: Classe admissible d'histoires (déclarée) et continuations après un préfixe
@@ -3289,7 +3407,11 @@ objets:
   - phase: G0.2bis
     nature: correction_selecteur
     motif: exclut les budgets \mathfrak B_b, \mathfrak B_{\mathbf b} (I.G.COMPLEXITY_BUDGETS)
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   granularite: element
+  provenance_definition: DERIVED
 - id: I.G.RESOLUTION
   phase: G0.2d
   designation: 'Résolution : lecture terminale, lecture de chemin, espace d''observation'
@@ -3335,6 +3457,7 @@ objets:
   - phase: G0.2bis
     nature: decomposition
     motif: espace d'observation, lecture terminale et lecture de chemin individualisés
+  provenance_definition: LOCAL
 - id: I.G.OBS_EQUIVALENCE
   phase: G0.2d
   designation: Équivalence observationnelle relative à (\mathfrak B,ρ) et quotient d'observation
@@ -3369,6 +3492,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.H.SLOW_SUMMARY_VARIABLES
   phase: G0.2d
   designation: 'Variables du résumé lent : charge résiduelle, interface rapide, horloge lente, contenu mnésique'
@@ -3409,6 +3533,7 @@ objets:
     nature: decomposition
     motif: 'quatre composants individualisés (rôles distincts : p, χ, θ éteintes, \mathbf s survivante) ; l''état
       lent z_4=(p,χ,θ,s) devient I.I.ALIGNED_SLOW_STATE'
+  provenance_definition: LOCAL
 - id: I.I.OBSERVATION_DISTANCE
   phase: G0.2d
   designation: Distance d'observation implicite (cas d'étude)
@@ -3452,6 +3577,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.K.CLASS_RESPONSE
   phase: G0.2d
   designation: Réponse relative à une classe (\mathfrak B, ρ) sans réalisation indiquée (cas d'étude)
@@ -3495,6 +3621,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: I.K.AUGMENTED_STATE
   phase: G0.2d
   designation: État augmenté d'une présentation plastique et exécutions plastique / figée
@@ -3536,6 +3663,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
+  provenance_definition: LOCAL
 - id: C.CERT.KERNEL_STATE_PARAMS
   phase: G0.2e
   designation: État, paramètre caché et données du protocole kept1 (compagnons)
@@ -3581,6 +3709,7 @@ objets:
   - phase: G0.2bis
     nature: decomposition
     motif: état individualisé
+  provenance_definition: LOCAL
 - id: C.CERT.IMPACT_SEQUENCE
   phase: G0.2e
   designation: Temps d'impact, nœud déclencheur, état post-saut et recâblage par rang (compagnons)
@@ -3637,6 +3766,7 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: suite de graphes A_r (sélecteur)
+  provenance_definition: LOCAL
 - id: II.KERNEL.EXTERNAL_VARIABLES
   phase: G0.2a
   designation: Variables et paramètres du noyau employés par le volume II sans redéfinition
@@ -3676,6 +3806,9 @@ objets:
     nature: decomposition
     motif: chaque symbole du noyau employé au volume II devient un élément IMPLICIT (sélecteurs transférés) ; d
       n'a pas de sélecteur et reste mentionné dans la famille
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   granularite: famille
   composants:
   - II.KERNEL.ADJACENCY
@@ -3688,6 +3821,11 @@ objets:
   - II.KERNEL.TRACE
   - II.KERNEL.FRICTION_COEFFS
   - II.KERNEL.ANISOTROPY
+  - II.KERNEL.TRACE_METRIC
+  - II.KERNEL.PRECONDITIONER
+  - II.KERNEL.FRICTION
+  - II.KERNEL.JUMP_SET
+  provenance_definition: BY_REFERENCE
 - id: II.CONIC.BLOCK
   phase: G0.2a
   designation: 'Bloc de bifurcation conique : paramètre visible, translation, rayon, discriminant'
@@ -3752,6 +3890,7 @@ objets:
   - phase: G0.2bis
     nature: granularite
     motif: 'non décomposé : bloc conique (V5.17) ; composants techniques locaux à la preuve'
+  provenance_definition: LOCAL
 - id: I.CORE.INPUT
   phase: G0.2b
   designation: Entrée exogène du noyau
@@ -3790,6 +3929,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.LYAPUNOV
   phase: G0.2b
   designation: Fonction de Lyapunov pour le flot et sa variation au saut
@@ -3829,6 +3969,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.II.TWO_SYSTEM_COUPLING
   phase: G0.2b
   designation: Couplage unidirectionnel d'un système source A vers un système B ; intensité du couplage
@@ -3870,6 +4011,7 @@ objets:
   - phase: G0.2bis
     nature: decomposition
     motif: intensité g individualisée (seuils g_c, g_H, g_ign… en dépendent)
+  provenance_definition: LOCAL
 - id: I.II.CRITICAL_COUPLING
   phase: G0.2b
   designation: Seuil critique de couplage (perte de stabilité du repos)
@@ -3912,6 +4054,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.H.RESPONSE_MAP
   phase: G0.2d
   designation: Carte de réponse d'une sonde en fonction du contenu survivant
@@ -3958,6 +4101,7 @@ objets:
     nature: granularite
     motif: 'évaluée : élément (une définition, un type, un rôle ; variantes S/T ou indices de la même notion)'
   granularite: element
+  provenance_definition: LOCAL
 - id: I.L.SEPARATION_GEOMETRY
   phase: G0.2d
   designation: Profondeur de séparabilité et pseudo-ultramétrique d'observation
@@ -3999,6 +4143,7 @@ objets:
   - phase: G0.2bis
     nature: decomposition
     motif: profondeur ℓ et pseudo-ultramétrique d individualisées
+  provenance_definition: LOCAL
 - id: I.CORE.FAST_STATE
   phase: G0.2bis
   designation: État rapide H_i
@@ -4036,6 +4181,7 @@ objets:
   familles:
   - I.CORE.NODAL_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.VELOCITY
   phase: G0.2bis
   designation: Vitesse V_i (non nécessairement physique)
@@ -4073,6 +4219,7 @@ objets:
   familles:
   - I.CORE.NODAL_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.TRACE
   phase: G0.2bis
   designation: Trace τ_i
@@ -4119,6 +4266,7 @@ objets:
   familles:
   - I.CORE.NODAL_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRESSURE
   phase: G0.2bis
   designation: Pression de Kairos P_i (non physique)
@@ -4157,6 +4305,7 @@ objets:
   familles:
   - I.CORE.NODAL_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.WRITE_RATE
   phase: G0.2bis
   designation: Taux d'écriture interne de la trace α
@@ -4201,6 +4350,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.FORGET_RATE
   phase: G0.2bis
   designation: Taux d'oubli de la trace β
@@ -4245,6 +4395,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.COUPLING_GAIN
   phase: G0.2bis
   designation: Gain du couplage relationnel ζ
@@ -4289,6 +4440,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRESSURE_GAIN_H
   phase: G0.2bis
   designation: Coefficient de contribution de ‖H_i‖ à la pression κ_1
@@ -4328,6 +4480,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRESSURE_GAIN_V
   phase: G0.2bis
   designation: Coefficient de contribution de ‖V_i‖ à la pression κ_2
@@ -4367,6 +4520,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRESSURE_RELAXATION
   phase: G0.2bis
   designation: Taux de relaxation de la pression κ_3
@@ -4406,6 +4560,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRESSURE_RESET
   phase: G0.2bis
   designation: Coefficient de relaxation de la pression au saut r_P
@@ -4446,6 +4601,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.VELOCITY_RESET
   phase: G0.2bis
   designation: Coefficient de relaxation de la vitesse au saut r_V
@@ -4484,6 +4640,7 @@ objets:
   familles:
   - I.CORE.DYNAMICS_PARAMETERS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.FRICTION
   phase: G0.2bis
   designation: Friction dépendant de la trace Γ(τ)
@@ -4533,6 +4690,7 @@ objets:
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.FRICTION_COEFFS
   phase: G0.2bis
   designation: Friction minimale γ_0 et dépendance de la friction à la trace γ_1
@@ -4572,6 +4730,7 @@ objets:
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.TRACE_METRIC
   phase: G0.2bis
   designation: Matrice Q(τ)
@@ -4611,6 +4770,7 @@ objets:
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.PRECONDITIONER
   phase: G0.2bis
   designation: Préconditionneur M(τ)=Q(τ)^{-1}
@@ -4646,9 +4806,13 @@ objets:
     nature: ajout
     motif: 'décomposition de I.CORE.DISSIPATION_PRECONDITIONER : composant doté d''une définition, d''un type ou
       d''un rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
+  provenance_definition: DERIVED
 - id: I.CORE.ANISOTROPY
   phase: G0.2bis
   designation: Anisotropie du préconditionneur historique λ
@@ -4690,6 +4854,7 @@ objets:
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.COERCIVITY
   phase: G0.2bis
   designation: Constante de coercivité m_0 du préconditionneur
@@ -4727,11 +4892,15 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: site du livre I relevé
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   familles:
   - I.CORE.DISSIPATION_PRECONDITIONER
   granularite: element
   remarques: 'double site : livre I l. 882–884 (« On pose m_0 ») et annexe A l. 373 ; μ posé au livre I l. 896 et
     annexe B l. 98'
+  provenance_definition: DERIVED
 - id: I.CORE.THRESHOLD
   phase: G0.2bis
   designation: Seuil de déclenchement des Kairos Θ
@@ -4769,6 +4938,7 @@ objets:
   familles:
   - I.CORE.FLOW_JUMP_SETS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.FLOW_SET
   phase: G0.2bis
   designation: Ensemble de flot du noyau C
@@ -4812,6 +4982,7 @@ objets:
   familles:
   - I.CORE.FLOW_JUMP_SETS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.JUMP_SET
   phase: G0.2bis
   designation: Ensemble de saut du noyau D
@@ -4855,6 +5026,7 @@ objets:
   familles:
   - I.CORE.FLOW_JUMP_SETS
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.NODES
   phase: G0.2bis
   designation: Ensemble des nœuds \mathcal V et nombre de nœuds N
@@ -4891,6 +5063,7 @@ objets:
   familles:
   - I.CORE.GRAPH
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.DIMENSION
   phase: G0.2bis
   designation: Dimension interne d d'un nœud
@@ -4924,6 +5097,7 @@ objets:
   familles:
   - I.CORE.GRAPH
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.ADJACENCY
   phase: G0.2bis
   designation: Matrice d'adjacence A
@@ -4973,6 +5147,7 @@ objets:
   familles:
   - I.CORE.GRAPH
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.GRAPH_SPACE
   phase: G0.2bis
   designation: Ensemble des graphes admissibles \mathfrak G_N
@@ -5008,6 +5183,7 @@ objets:
   familles:
   - I.CORE.GRAPH
   granularite: element
+  provenance_definition: LOCAL
 - id: I.CORE.RELATIONAL_MATRIX
   phase: G0.2bis
   designation: Matrice relationnelle normalisée \widetilde A
@@ -5056,9 +5232,13 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: opérateur Deg défini l. 187 rattaché (classé auparavant comme notation usuelle)
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   familles:
   - I.CORE.GRAPH
   granularite: element
+  provenance_definition: DERIVED
 - id: I.CORE.SIMILARITY
   phase: G0.2bis
   designation: Similarité de traces s(i,j)
@@ -5091,6 +5271,7 @@ objets:
     nature: ajout
     motif: 'individualisation depuis I.CORE.REWIRING : définition propre (formule) ; aucun sélecteur (glyphe s polysémique,
       AMBIGU_LEXICAL)'
+  provenance_definition: LOCAL
 - id: I.H.RESIDUAL_LOAD
   phase: G0.2bis
   designation: Pression ou charge résiduelle p (résumé lent)
@@ -5128,6 +5309,7 @@ objets:
   familles:
   - I.H.SLOW_SUMMARY_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.H.FAST_INTERFACE
   phase: G0.2bis
   designation: Variable d'interface rapide χ (résumé lent)
@@ -5164,6 +5346,7 @@ objets:
   familles:
   - I.H.SLOW_SUMMARY_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.H.SLOW_CLOCK
   phase: G0.2bis
   designation: Horloge ou phase lente intermédiaire θ (résumé lent)
@@ -5200,6 +5383,7 @@ objets:
   familles:
   - I.H.SLOW_SUMMARY_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.H.MEMORY_CONTENT
   phase: G0.2bis
   designation: Contenu mnésique survivant \mathbf s
@@ -5239,6 +5423,7 @@ objets:
   familles:
   - I.H.SLOW_SUMMARY_VARIABLES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.G.OBS_SPACE
   phase: G0.2bis
   designation: Espace d'observation \mathcal Y_ρ
@@ -5273,6 +5458,7 @@ objets:
   familles:
   - I.G.RESOLUTION
   granularite: element
+  provenance_definition: LOCAL
 - id: I.G.TERMINAL_READING
   phase: G0.2bis
   designation: Lecture terminale τ_ρ
@@ -5308,6 +5494,7 @@ objets:
   familles:
   - I.G.RESOLUTION
   granularite: element
+  provenance_definition: LOCAL
 - id: I.G.PATH_READING
   phase: G0.2bis
   designation: Lecture de chemin ω_ρ
@@ -5343,6 +5530,7 @@ objets:
   familles:
   - I.G.RESOLUTION
   granularite: element
+  provenance_definition: LOCAL
 - id: I.III.EPISODES
   phase: G0.2bis
   designation: Épisodes e∈\mathcal E (livre III)
@@ -5380,6 +5568,7 @@ objets:
   familles:
   - I.III.EPISODES_HISTORIES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.III.TRANSITIONS
   phase: G0.2bis
   designation: Transitions Φ_e et Φ_{\mathcal H}
@@ -5415,9 +5604,13 @@ objets:
     nature: ajout
     motif: 'décomposition de I.III.EPISODES_HISTORIES : composant doté d''une définition, d''un type ou d''un rôle
       propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   familles:
   - I.III.EPISODES_HISTORIES
   granularite: element
+  provenance_definition: DERIVED
 - id: I.III.HISTORIES
   phase: G0.2bis
   designation: Histoires \mathcal H=e_1\cdots e_n, histoire vide ε, concaténation
@@ -5459,6 +5652,7 @@ objets:
   familles:
   - I.III.EPISODES_HISTORIES
   granularite: element
+  provenance_definition: LOCAL
 - id: I.II.COUPLING_INTENSITY
   phase: G0.2bis
   designation: Intensité du couplage g
@@ -5494,6 +5688,7 @@ objets:
   familles:
   - I.II.TWO_SYSTEM_COUPLING
   granularite: element
+  provenance_definition: LOCAL
 - id: I.II.TWO_SYSTEM_STATES
   phase: G0.2bis
   designation: Variables réduites des systèmes A et B
@@ -5540,6 +5735,7 @@ objets:
   familles:
   - I.II.TWO_SYSTEM_COUPLING
   granularite: element
+  provenance_definition: LOCAL
 - id: II.KERNEL.ADJACENCY
   phase: G0.2bis
   designation: Matrice d'adjacence A du noyau (usage)
@@ -5576,9 +5772,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.FAST_STATE
   phase: G0.2bis
   designation: État rapide H du noyau (usage)
@@ -5617,9 +5817,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.VELOCITY
   phase: G0.2bis
   designation: Vitesse V du noyau (usage)
@@ -5656,9 +5860,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.PRESSURE
   phase: G0.2bis
   designation: Pression P du noyau (usage)
@@ -5695,9 +5903,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.NODE_COUNT
   phase: G0.2bis
   designation: Nombre de nœuds N (témoins N=6, N=9)
@@ -5734,9 +5946,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.THRESHOLD
   phase: G0.2bis
   designation: Seuil Θ du noyau (usage)
@@ -5773,9 +5989,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.COUPLING_GAIN
   phase: G0.2bis
   designation: Gain de couplage ζ du noyau (usage)
@@ -5812,9 +6032,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.TRACE
   phase: G0.2bis
   designation: Trace τ, τ_i du noyau (usage)
@@ -5852,9 +6076,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.FRICTION_COEFFS
   phase: G0.2bis
   designation: Coefficients de friction γ_0, γ_1 du noyau (usage)
@@ -5888,9 +6116,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.KERNEL.ANISOTROPY
   phase: G0.2bis
   designation: Anisotropie λ du noyau (usage)
@@ -5927,9 +6159,13 @@ objets:
     nature: ajout
     motif: 'décomposition de II.KERNEL.EXTERNAL_VARIABLES : composant doté d''une définition, d''un type ou d''un
       rôle propres, susceptible d''une correspondance intervolumes individuelle'
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = BY_REFERENCE'
   familles:
   - II.KERNEL.EXTERNAL_VARIABLES
   granularite: element
+  provenance_definition: BY_REFERENCE
 - id: II.OPAC.SECTION
   phase: G0.2bis
   designation: Coupe Σ⊂\mathcal O_y d'une fibre d'opacité
@@ -5965,6 +6201,7 @@ objets:
   familles:
   - II.OPAC.SECTION_PARAM
   granularite: element
+  provenance_definition: LOCAL
 - id: II.OPAC.PARAM_DOMAIN
   phase: G0.2bis
   designation: Domaine paramétrique Ω
@@ -6001,6 +6238,7 @@ objets:
   familles:
   - II.OPAC.SECTION_PARAM
   granularite: element
+  provenance_definition: LOCAL
 - id: II.OPAC.PARAMETRIZATION
   phase: G0.2bis
   designation: Homéomorphisme de paramétrisation Φ:Ω→Σ
@@ -6036,6 +6274,7 @@ objets:
   familles:
   - II.OPAC.SECTION_PARAM
   granularite: element
+  provenance_definition: LOCAL
 - id: II.OPAC.HIDDEN_PARAMETER
   phase: G0.2bis
   designation: Paramètre caché ϑ∈Ω
@@ -6071,6 +6310,7 @@ objets:
   familles:
   - II.OPAC.SECTION_PARAM
   granularite: element
+  provenance_definition: LOCAL
 - id: II.OPAC.CHAMBER
   phase: G0.2bis
   designation: 'Chambre Ξ : composante connexe d''une classe de mot'
@@ -6104,6 +6344,7 @@ objets:
   familles:
   - II.OPAC.WORD_PARTITION
   granularite: element
+  provenance_definition: LOCAL
 - id: C.CERT.SECTION_PARAMETER
   phase: G0.2bis
   designation: Paramètre de coupe q=(ϑ,ε) du certificat
@@ -6151,6 +6392,7 @@ objets:
   granularite: element
   remarques: ε est ici un paramètre de déformation, (γ_1,λ)=ε(γ̄,λ̄) ; distinct du paramètre de terme croisé ε du
     volume I (annexe B)
+  provenance_definition: LOCAL
 - id: C.CERT.KERNEL_PARAMS
   phase: G0.2bis
   designation: Jeu de paramètres du noyau déclaré par le certificat
@@ -6194,6 +6436,7 @@ objets:
   - C.CERT.KERNEL_STATE_PARAMS
   remarques: 'valeurs ζ=4/5, α=9/20, β=3/25, γ_0=1/4, (κ_1,κ_2,κ_3)=(3/5,2/5,1/2), Θ=5/4, r_P=7/20, r_V=1/2 : numériquement
     égales au jeu de référence du volume I (annexe F l. 132) ; constat, non identité'
+  provenance_definition: LOCAL
 - id: I.II.APPROPRIATION
   phase: G0.2bis
   designation: Appropriation d'une interaction (définition par les bassins, livre II)
@@ -6241,6 +6484,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.II.INTERFACE_PRIMING
   phase: G0.2bis
   designation: Amorçage d'interface
@@ -6272,6 +6516,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.II.AUTONOMOUS_ATTRACTORS
   phase: G0.2bis
   designation: Attracteurs autonomes du système receveur
@@ -6307,6 +6552,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.CONTACT_PROTOCOL
   phase: G0.2bis
   designation: Protocole de mise sous contact \mathcal P
@@ -6341,6 +6587,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.INTERACTION_MAP
   phase: G0.2bis
   designation: Application d'interaction Φ^T_{g,\mathcal P}
@@ -6374,6 +6621,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.LIMIT_SET
   phase: G0.2bis
   designation: Ensemble limite sous la dynamique autonome ω_0(z)
@@ -6408,6 +6656,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.CONTINUOUS_STATE
   phase: G0.2bis
   designation: État continu à graphe fixé z=(H,V,τ,P)
@@ -6442,6 +6691,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.NORM_INF2
   phase: G0.2bis
   designation: Norme ‖·‖_{∞,2}
@@ -6472,6 +6722,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.FIXED_GRAPH_FIELD
   phase: G0.2bis
   designation: Champ de vecteurs à graphe fixé F_A(t,z)
@@ -6505,6 +6756,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.PRECOND_SPECTRUM
   phase: G0.2bis
   designation: Valeurs propres parallèles q_∥(τ), m_∥(τ) et constante de Lipschitz L_M(λ)
@@ -6546,6 +6798,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.CORE.TRACE_BOUND
   phase: G0.2bis
   designation: Borne uniforme de trace \bar τ
@@ -6583,6 +6836,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.FORCING_BOUND
   phase: G0.2bis
   designation: Borne du forçage B=ζ√d+u_max
@@ -6627,6 +6881,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.A.FINITE_HORIZON_BOUNDS
   phase: G0.2bis
   designation: Bornes sur horizon fini R_T, K_T, δ_T
@@ -6670,6 +6925,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.B.CROSS_TERM_PARAMETER
   phase: G0.2bis
   designation: Paramètre du terme croisé ε de la fonctionnelle \mathcal L
@@ -6712,6 +6968,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.B.UNIFORM_BOUNDS
   phase: G0.2bis
   designation: Bornes uniformes \bar Γ, μ et forçage f_i
@@ -6757,6 +7014,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.B.LYAPUNOV_CONSTANTS
   phase: G0.2bis
   designation: Constantes d'équivalence et de décroissance c^±, A_V, A_H, a, b, d_0
@@ -6813,6 +7071,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.B.JUMP_ENVELOPE
   phase: G0.2bis
   designation: Facteur de saut q, facteur de fenêtre r_J, bornes R et \widehat R, constante C=b/(2a)
@@ -6878,6 +7137,7 @@ objets:
     nature: enrichissement
     motif: 'variante notationnelle R_b (livre I) de \widehat R (annexe B) : A-G02-11'
   anomalie: A-G02-11
+  provenance_definition: LOCAL
 - id: I.B.CONDITION_S
   phase: G0.2bis
   designation: Condition suffisante (S) de contrôle pendant le flot
@@ -6913,6 +7173,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.B.CONDITION_ZR
   phase: G0.2bis
   designation: Condition (Z_R^♯) sur les fenêtres de saut
@@ -6946,6 +7207,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.HOMOGENEOUS_MANIFOLD
   phase: G0.2bis
   designation: Variété homogène Δ du réseau
@@ -7001,6 +7263,7 @@ objets:
     nature: enrichissement
     motif: occurrence du livre I (chapitre Réduction homogène)
   remarques: rappelée au livre I (l. 1441), définie en annexe C (l. 38)
+  provenance_definition: LOCAL
 - id: I.C.REDUCED_VARIABLES
   phase: G0.2bis
   designation: Variables réduites (h,v,θ,p) sur Δ
@@ -7063,6 +7326,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.INTERNAL_DIAGONAL
   phase: G0.2bis
   designation: Diagonale des composantes internes \mathcal D (d=2)
@@ -7097,6 +7361,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.STRUCTURAL_EQUILIBRIUM
   phase: G0.2bis
   designation: Équilibre structurel (h*,v*,θ*) et amplitude commune x_q
@@ -7153,6 +7418,7 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: sélecteurs x*, ϑ* (annexe C, d=1 et d=2)
+  provenance_definition: LOCAL
 - id: I.C.AMPLITUDE_FACTOR
   phase: G0.2bis
   designation: Facteurs Λ(h), Λ_q(x), Λ_q(x;k) et rapport k=α/β
@@ -7189,6 +7455,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.IGNITION_TRACE_THRESHOLD
   phase: G0.2bis
   designation: Seuil de trace τ_ign qui déstabilise le repos
@@ -7227,6 +7494,7 @@ objets:
     motif: site de définition du livre II (l. 273) relevé
   remarques: 'double site : livre II l. 273 (« On note τ_ign la norme de trace pour laquelle m(τ_ign)=ζ ») et annexe
     C l. 806 (formule fermée)'
+  provenance_definition: LOCAL
 - id: I.C.PARALLEL_STIFFNESS
   phase: G0.2bis
   designation: Rappel effectif dans la direction de la trace m(r)
@@ -7267,6 +7535,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.REFERENCE_PARAMETERS
   phase: G0.2bis
   designation: Jeu de paramètres de référence
@@ -7300,6 +7569,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.EQUILIBRIUM_JACOBIAN
   phase: G0.2bis
   designation: Jacobien J_* et coefficients de Routh–Hurwitz (a_2,a_1,a_0)
@@ -7379,6 +7649,7 @@ objets:
   - phase: G0.2bis
     nature: correction_selecteur
     motif: 'a_1, a_2 du livre II (l. 430–446) sont des coefficients de Taylor : rattachés à I.D.BRANCH_EXPANSION_COEFFS'
+  provenance_definition: LOCAL
 - id: I.C.DIAGONAL_STABILITY_BLOCKS
   phase: G0.2bis
   designation: Blocs transverses J_⊥, J_± et coefficients κ_±, b_±, b_⊥
@@ -7421,6 +7692,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.ACTIVE_WELL_CYCLE
   phase: G0.2bis
   designation: Pression asymptotique p_∞ du puits actif et période Δ_p des cascades
@@ -7460,6 +7732,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.C.LYAPUNOV_LAMBDA0
   phase: G0.2bis
   designation: Fonction de Lyapunov \mathcal V(h,v) du cas λ=0
@@ -7497,6 +7770,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.SOURCE_PROJECTION
   phase: G0.2bis
   designation: Projection du système source w=tanh(x_A)
@@ -7531,6 +7805,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.REST_LOAD
   phase: G0.2bis
   designation: Charge de trace au repos forcé θ_0(g), r_0(g)
@@ -7594,6 +7869,7 @@ objets:
     nature: enrichissement
     motif: 'variante notationnelle θ_∞ (livre II) : A-G02-13'
   anomalie: A-G02-13
+  provenance_definition: LOCAL
 - id: I.D.EQUILIBRIUM_RESIDUAL
   phase: G0.2bis
   designation: Résidu de la branche F(x,g), F_g(x) et quotient G(x,g)
@@ -7638,6 +7914,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.RESISTANT_BRANCH
   phase: G0.2bis
   designation: Branche résistante x_res(g)
@@ -7674,6 +7951,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.BRANCH_EXPANSION_COEFFS
   phase: G0.2bis
   designation: Coefficients du développement de la branche (r_c, m_1, m_2, A, B, δ, a_1, a_2, a_xx, a_xg, a_gg,
@@ -7743,6 +8021,7 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: coefficients du livre II ; écart de valeur numérique relevé (A-G02-14)
+  provenance_definition: LOCAL
 - id: I.D.HOPF_THRESHOLD
   phase: G0.2bis
   designation: Seuil de Hopf g_H et pulsation ω_H de la branche résistante (R0)
@@ -7784,6 +8063,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.CAPTURE_THRESHOLD
   phase: G0.2bis
   designation: Seuil de capture g_ign(x_0,v_0,θ_0;\mathcal P)
@@ -7817,6 +8097,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.MIN_EXPOSURE_TIME
   phase: G0.2bis
   designation: Durée minimale d'exposition T^*(g;z_0,\mathcal P)
@@ -7855,6 +8136,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.LINEAR_PREDICTOR
   phase: G0.2bis
   designation: 'Prédicteur linéaire de T^* : charge θ^{(0)}_{g,T}, matrice A_{g,T}(t), selle x_u, T^*_lin'
@@ -7912,6 +8194,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.D.EFFECTIVE_WRITE_RATE
   phase: G0.2bis
   designation: Taux d'écriture effectif α_eff=α±g et seuil de compétition g_comp
@@ -7960,6 +8243,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R1.CLOSURE_RATE
   phase: G0.2bis
   designation: Coefficient de fermeture de la perméabilité η (R1)
@@ -7993,6 +8277,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R1.EFFECTIVE_COUPLING
   phase: G0.2bis
   designation: Couplage effectif g_eff(t;g)=gq(t), plafond g_eff^∞
@@ -8028,6 +8313,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R1.TRANSPORTED_THRESHOLD
   phase: G0.2bis
   designation: 'Seuil d''un modèle R0 transporté par R1 : g_⋆^0, g_⋆^{R1}, g_c^{R1}'
@@ -8069,6 +8355,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R2.INTERFACE_VARIABLE
   phase: G0.2bis
   designation: Variable d'interface χ de R2 (et vecteur \boldsymbol χ)
@@ -8112,6 +8399,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R2.RELAXATION_RATE
   phase: G0.2bis
   designation: Taux de relaxation λ_χ de l'interface
@@ -8148,6 +8436,7 @@ objets:
     motif: objet nouveau, lecture intégrale G0.2bis
   familles:
   - I.R2.PARAMETERS
+  provenance_definition: LOCAL
 - id: I.R2.QUANTUM_GAIN
   phase: G0.2bis
   designation: Gain des quanta κ_Q
@@ -8184,6 +8473,7 @@ objets:
     motif: objet nouveau, lecture intégrale G0.2bis
   familles:
   - I.R2.PARAMETERS
+  provenance_definition: LOCAL
 - id: I.R2.RESET_FRACTION
   phase: G0.2bis
   designation: Fraction de décharge r_χ de l'interface
@@ -8220,6 +8510,7 @@ objets:
     motif: objet nouveau, lecture intégrale G0.2bis
   familles:
   - I.R2.PARAMETERS
+  provenance_definition: LOCAL
 - id: I.R2.PRESSURE_GAIN
   phase: G0.2bis
   designation: Gain de pression κ_χ de l'interface
@@ -8256,6 +8547,7 @@ objets:
     motif: objet nouveau, lecture intégrale G0.2bis
   familles:
   - I.R2.PARAMETERS
+  provenance_definition: LOCAL
 - id: I.R2.PARAMETERS
   phase: G0.2bis
   designation: Paramètres de l'interface R2
@@ -8294,6 +8586,7 @@ objets:
   - I.R2.QUANTUM_GAIN
   - I.R2.RESET_FRACTION
   - I.R2.PRESSURE_GAIN
+  provenance_definition: LOCAL
 - id: I.R2.EVENT_CYCLE
   phase: G0.2bis
   designation: 'Cycle événementiel de R2 : charge χ_∞, période Δ, charges χ_*^±, trace θ_∞^±, moyenne \bar θ'
@@ -8364,6 +8657,7 @@ objets:
   - phase: G0.2bis
     nature: correction_selecteur
     motif: θ_∞ sans exposant (livre II l. 295) relève de I.D.REST_LOAD
+  provenance_definition: LOCAL
 - id: I.R2.RETURN_MAP
   phase: G0.2bis
   designation: Application de retour \mathcal R_g de la charge d'interface
@@ -8398,6 +8692,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R2.EVENT_THRESHOLD
   phase: G0.2bis
   designation: Seuil d'activité événementielle soutenue g_K
@@ -8431,6 +8726,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R2.FLOQUET_THRESHOLD
   phase: G0.2bis
   designation: Seuil de Floquet g_F, approximation g_F^{qs}, multiplicateur μ_max, seuil par composante θ_ign
@@ -8477,6 +8773,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.R2.APPROPRIATION_THRESHOLD
   phase: G0.2bis
   designation: Seuil d'appropriation sous R2 g_app^{R2}(x_0;\mathcal P) et borne g_H^{R2}
@@ -8518,6 +8815,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.F.STATUS_LABELS
   phase: G0.2bis
   designation: Étiquettes de statut [PROP-NUM], [NUM], [CTRL]
@@ -8556,6 +8854,7 @@ objets:
   - type: sous_ensemble_de
     cible: I.CORE.STATEMENT_TAXONOMY
     source: étiquettes reprises de la taxonomie du livre I (annexe F l. 24)
+  provenance_definition: LOCAL
 - id: I.F.TWO_EXPOSURE_PROTOCOL
   phase: G0.2bis
   designation: 'Protocole des deux expositions : délai D, durée sous-critique T_sub, durée T_2'
@@ -8596,6 +8895,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.F.PHASE_PREDICTOR
   phase: G0.2bis
   designation: 'Prédicteur de phase : pulsation ω de la spirale libre, extrapolation x_lib, temps de recharge t_c,
@@ -8650,6 +8950,7 @@ objets:
     nature: enrichissement
     motif: site de définition du livre II (l. 1379)
   remarques: Q_net « On définit » au livre II l. 1379 et annexe F l. 794 (même formule)
+  provenance_definition: LOCAL
 - id: I.F.INTERFACE_MEMORY
   phase: G0.2bis
   designation: 'Mémoire lente d''interface : scalaire s (ε_s, c_s) et vectorielle \boldsymbol s'
@@ -8717,6 +9018,7 @@ objets:
     motif: occurrences du livre II ; variante \mathbf s / \boldsymbol s
   remarques: la mémoire vectorielle est notée \mathbf s au livre II (l. 1582) et \boldsymbol s en annexe F (l. 998)
   anomalie: A-G02-13
+  provenance_definition: LOCAL
 - id: I.III.RESPONSE_EQUIVALENCE
   phase: G0.2bis
   designation: Équivalence en réponse X∼_{𝔅,ρ}Y (livre III)
@@ -8755,6 +9057,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.SEPARATING_HISTORY
   phase: G0.2bis
   designation: Histoire séparatrice
@@ -8785,6 +9088,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.FUNCTIONAL_HISTORY_EQUIVALENCE
   phase: G0.2bis
   designation: Équivalence fonctionnelle entre histoires \mathcal H_1≡\mathcal H_2
@@ -8815,6 +9119,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.SURVIVING_CONTENT
   phase: G0.2bis
   designation: Contenu survivant d'une histoire
@@ -8845,6 +9150,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.SUBCRITICAL_EPISODE
   phase: G0.2bis
   designation: Épisode sous-critique ; histoire compressible
@@ -8875,6 +9181,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.REST_REALIZATION
   phase: G0.2bis
   designation: Réalisation au repos à mémoire lente donnée X_repos[\vec s]
@@ -8910,6 +9217,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.SLOW_MEMORY
   phase: G0.2bis
   designation: Mémoire lente \vec s, \vec s_{\mathcal H} (livre III)
@@ -8954,6 +9262,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.RESIDUAL_CONTRIBUTION
   phase: G0.2bis
   designation: Contribution résiduelle \vec r(e), \vec r(e;\vec s) et poids de récence w_k
@@ -8997,6 +9306,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.COMPOSITION_EFFECT
   phase: G0.2bis
   designation: Effet de composition ; épisode conditionnel
@@ -9029,6 +9339,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.RELAXATION_PROTOCOL
   phase: G0.2bis
   designation: Protocole de relaxation \mathcal L, \mathcal L_Δ
@@ -9065,6 +9376,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.ACCESSIBILITY
   phase: G0.2bis
   designation: Ensemble des réponses accessibles Acc_{𝔅,ρ}(X)
@@ -9097,6 +9409,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: I.III.PROBE_FAMILY
   phase: G0.2bis
   designation: Famille paramétrée de sondes u∈Ω⊂R^m, \mathcal H_u, \mathfrak B_Ω
@@ -9142,6 +9458,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.RESPONSE_REGION
   phase: G0.2bis
   designation: Région de réponse S_A(X) et frontière de réponse ∂_Ω S_A(X)
@@ -9181,6 +9498,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.NEIGHBOURHOOD_GRAPH
   phase: G0.2bis
   designation: Graphe des voisinages \mathcal G_{Ω,ρ}(X)
@@ -9214,6 +9532,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.FOLD_SEAM
   phase: G0.2bis
   designation: Pli et couture d'une frontière de réponse
@@ -9246,6 +9565,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.III.RESPONSE_GEOMETRY
   phase: G0.2bis
   designation: Géométrie de réponse
@@ -9276,6 +9596,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.REGRAINING
   phase: G0.2bis
   designation: Regraine canonique \mathcal G et configuration mécanique y_0
@@ -9316,6 +9637,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.EXTINCTION_REGIME
   phase: G0.2bis
   designation: Régime d'extinction exacte Σ_ext et état réduit X_r(\mathbf s)
@@ -9354,6 +9676,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: I.H.REDUCTION_HYPOTHESES
   phase: G0.2bis
   designation: Hypothèses de réduction O1, (E1)–(E3), A-H1
@@ -9390,6 +9716,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.CONTENT_SPACE
   phase: G0.2bis
   designation: Espace des contenus \mathcal S
@@ -9423,6 +9750,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.PROBE
   phase: G0.2bis
   designation: Sonde \mathcal P (annexes H–K)
@@ -9457,6 +9785,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.APPROPRIATION_SET
   phase: G0.2bis
   designation: Ensemble d'appropriation A_{\mathcal P,ρ}⊆\mathcal S et frontière ∂A_{\mathcal P,ρ}
@@ -9497,6 +9826,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: I.H.PREFIX
   phase: G0.2bis
   designation: Préfixe complet \mathcal A=\mathcal A_act·\mathcal D·\mathcal G
@@ -9533,6 +9866,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.WRITING_MAP
   phase: G0.2bis
   designation: Carte totale d'écriture S_{\mathcal A} et écriture nette δ_{\mathcal A}
@@ -9575,6 +9909,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.H.SWITCH_POINT
   phase: G0.2bis
   designation: Commutation de la sonde nue s^⋆ et points de bascule b
@@ -9614,6 +9949,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.ALIGNED_SLOW_STATE
   phase: G0.2bis
   designation: État lent aligné z=(p,χ,θ,s)∈Z
@@ -9660,6 +9996,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.ALIGNED_SUBSPACE
   phase: G0.2bis
   designation: Sous-espace aligné \mathcal M_al et direction \mathbf u_1
@@ -9698,6 +10035,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.INJECTION
   phase: G0.2bis
   designation: Injection canonique ι(z;ssc) et variable additionnelle ssc
@@ -9732,6 +10070,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.CLOSURE_HYPOTHESES
   phase: G0.2bis
   designation: Hypothèses de fermeture (A1)–(A4)
@@ -9764,6 +10103,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.SLOW_RESPONSE_MAP
   phase: G0.2bis
   designation: Carte de réponse sur l'état lent aligné \widehat Ω_{\mathcal P,ρ}
@@ -9804,6 +10144,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.SLOW_APPROPRIATION_SET
   phase: G0.2bis
   designation: Ensemble d'appropriation A_{\mathcal P,ρ}⊆Z et frontière Σ_{\mathcal P,ρ}=∂_Z A
@@ -9849,6 +10190,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: I.I.DEPOSIT_MAP
   phase: G0.2bis
   designation: Carte de dépôt H:I→Z d'une famille historique
@@ -9883,6 +10228,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.I.COORDINATE_ACTIVITY
   phase: G0.2bis
   designation: Activité ponctuelle, locale, globale d'une coordonnée ; ablation abl_i
@@ -9917,6 +10263,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.J.DOMAINS
   phase: G0.2bis
   designation: Domaines causal D_c, markovien D_m, réalisable D_r (D:=D_r)
@@ -9960,6 +10307,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.J.SIGNATURE
   phase: G0.2bis
   designation: Signature combinatoire d'exécution κ(q)∈\mathcal K
@@ -9998,6 +10346,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.J.HYBRID_CELLS
   phase: G0.2bis
   designation: Cellules hybrides C_k et lieu de recomposition K_κ
@@ -10037,6 +10386,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.J.CELL_RESPONSE
   phase: G0.2bis
   designation: Carte de réponse \widehat Ω_ρ sur D, frontière Σ=Σ_K⊔⨆Σ_C, factorisation L_C∘E_C, observable g_C
@@ -10094,6 +10444,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.J.TRANSITION_TYPES
   phase: G0.2bis
   designation: Types de transition C, K, mixte le long d'un chemin γ
@@ -10133,6 +10484,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.PLASTIC_VARIABLE
   phase: G0.2bis
   designation: Variable plastique γ∈Γ et sa dynamique (G, K_e ; r_γ, ε_γ)
@@ -10187,6 +10539,7 @@ objets:
   - phase: G0.2bis
     nature: correction_selecteur
     motif: γ de l'annexe J désigne un chemin (I.J.TRANSITION_TYPES)
+  provenance_definition: LOCAL
 - id: I.K.PRESENTATIONS
   phase: G0.2bis
   designation: Présentations plastique (Ψ,\mathcal G_pl) et à loi figée (Ψ⊕γ,\mathcal G_fig) ; lois F_γ, J_{γ,e}
@@ -10233,6 +10586,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.EQUIVALENCE_HYPOTHESES
   phase: G0.2bis
   designation: Hypothèses (P1)–(P6) de l'équivalence de présentation
@@ -10264,6 +10618,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.FIVE_CLOCK_STATE
   phase: G0.2bis
   designation: Extension plastique z_5=(p,χ,θ,s,γ), Z_5, projection π_4
@@ -10305,6 +10660,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.EXTENDED_RESPONSE
   phase: G0.2bis
   designation: Carte \widehat Ω^{(5)}, ensemble A^{(5)}, frontière Σ^{(5)} et section Σ^γ
@@ -10349,6 +10705,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.SPECIES_INDIVIDUAL_DECISION
   phase: G0.2bis
   designation: 'Décision D-08 : frontière espèce/individu déclarative'
@@ -10380,6 +10737,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.K.ACTIVE_CLOCK_SPECTRUM
   phase: G0.2bis
   designation: Spectre des horloges actives
@@ -10410,6 +10768,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.L.SEPARATORS
   phase: G0.2bis
   designation: Ensemble des histoires séparatrices Sep_{𝔅,ρ}(X,Y)
@@ -10443,6 +10802,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.L.COMPLEXITY
   phase: G0.2bis
   designation: Complexité des histoires c:𝔅→R_+
@@ -10483,6 +10843,7 @@ objets:
     nature: correction
     motif: 'site de définition premier : annexe G l. 564 (domaine \mathfrak M), repris en annexe L (domaine \mathfrak
       B)'
+  provenance_definition: LOCAL
 - id: I.L.BUDGET_FILTRATION
   phase: G0.2bis
   designation: Budgets stricts \mathfrak B^c_{<b} et indiscernabilité ≡_b
@@ -10518,6 +10879,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: I.L.SEPARABILITY_TREE
   phase: G0.2bis
   designation: Arbre (dendrogramme) de séparabilité
@@ -10548,6 +10910,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, lecture intégrale G0.2bis
+  provenance_definition: LOCAL
 - id: C.TRANS.HYPOTHESES
   phase: G0.2bis
   designation: Hypothèses (H1)–(H5) au point de base q_0 de la transmission C²
@@ -10581,6 +10944,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: C.TRANS.EPISODE_DYNAMICS
   phase: G0.2bis
   designation: Dynamique d'épisode (1)–(2), préconditionneur M_λ et normalisation \tilde A_r=D_r^{-1}(A_r+I)
@@ -10623,6 +10987,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: C.TRANS.REGULARITY_NEIGHBOURHOOD
   phase: G0.2bis
   designation: Voisinage de régularité \mathcal N de q_0
@@ -10655,6 +11020,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.KERNEL.ANTISYMMETRIC_TRACE_INCREMENT
   phase: G0.2bis
   designation: Incrément antisymétrique de trace Δτ_h écrit par une boucle h
@@ -10686,6 +11052,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.KERNEL.HIDDEN_TRACE_DIFFERENCE
   phase: G0.2bis
   designation: Écart de trace Δτ_j(t) entre deux exécutions de même chemin structurel
@@ -10717,6 +11084,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.SYM.GRAPH_AUTOMORPHISMS
   phase: G0.2bis
   designation: Groupe d'automorphismes du graphe Aut(A), Aut_k, permutation σ et action Π_σ
@@ -10759,6 +11127,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.SYM.TRACE_STABILISER
   phase: G0.2bis
   designation: Stabilisateur de la trace Aut_k^τ
@@ -10794,6 +11163,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.OPAC.SELECTION_MARGIN
   phase: G0.2bis
   designation: Marge signée de sélection mar_q^{(r)}, déclencheur i_r^*, nombre d'arêtes échangées m_r, rang k_min
@@ -10850,6 +11223,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.OPAC.JOINT_REACHABLE_SET
   phase: G0.2bis
   designation: Angles θ_r(u) de τ_0 et ensemble conjoint atteignable \mathcal R_0^{(1,2)}(\mathcal U_4)
@@ -10892,6 +11266,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.TRANS.PROTOCOL_PARAMETER
   phase: G0.2bis
   designation: Paramètre de protocole q, point de base q_0=(ϑ,ε)=(0,0), déformation γ_1=εγ̄, λ=ελ̄
@@ -10931,6 +11306,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.TRANS.EIGHT_KAIROS_NEIGHBOURHOOD
   phase: G0.2bis
   designation: Voisinage de transmission à huit impacts (énoncé conditionnel)
@@ -10962,6 +11338,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.QUEST.C5
   phase: G0.2bis
   designation: Condition C5 — fermeture de la boucle historique (question ouverte)
@@ -10993,6 +11370,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.GRAN.G2
   phase: G0.2bis
   designation: Granularité G_2 — temps intrinsèque (question ouverte)
@@ -11023,6 +11401,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, examen des énoncés formels du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.EFF.SUPPORT
   phase: G0.2bis
   designation: Support d'un régime \Supp, \Supp^{G_1}_{\mathcal B}(I)
@@ -11060,6 +11439,7 @@ objets:
       distincts'
   familles:
   - II.EFF.SUPPORT_REACH
+  provenance_definition: LOCAL
 - id: II.EFF.REACH
   phase: G0.2bis
   designation: Ensembles atteints \Reach^{G_1}_{\mathcal B}(I) et \Reach^{\mathrm{flow}}_{\mathcal B}(I)
@@ -11097,6 +11477,7 @@ objets:
     motif: décomposition de II.EFF.SUPPORT_REACH
   familles:
   - II.EFF.SUPPORT_REACH
+  provenance_definition: LOCAL
 - id: I.L.SEPARABILITY_DEPTH
   phase: G0.2bis
   designation: Profondeur de séparabilité ℓ_{c,𝔅,ρ}(X,Y)
@@ -11138,6 +11519,7 @@ objets:
   remarques: 'double site de définition : annexe G eq:annexe-G-longueur-separation (l. 600) et annexe L def:L-profondeur-separabilite
     (l. 70) ; formules équivalentes par définition de Sep ; annexe L l. 11 : « déjà introduite dans l''Appendice
     G »'
+  provenance_definition: LOCAL
 - id: I.L.SEPARABILITY_PSEUDOMETRIC
   phase: G0.2bis
   designation: Pseudo-ultramétrique de séparabilité d_{c,𝔅,ρ}
@@ -11173,8 +11555,12 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: décomposition de I.L.SEPARATION_GEOMETRY
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
   familles:
   - I.L.SEPARATION_GEOMETRY
+  provenance_definition: DERIVED
 - id: I.C.SCALAR_DIAGONAL_REDUCTION
   phase: G0.2bis
   designation: Réduction scalaire sur la diagonale interne (x, vitesse, composante de trace)
@@ -11262,6 +11648,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: 'objet nouveau : réduction utilisée au livre II (lecture intégrale des annexes C–F)'
+  provenance_definition: LOCAL
 - id: I.D.FORCED_EQUILIBRIUM
   phase: G0.2bis
   designation: Équilibre forcé (x*,0,θ*) et quantités locales r*, Γ_*, s_*, c_*, κ_*, b_*
@@ -11325,6 +11712,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau (lecture intégrale de l'annexe D)
+  provenance_definition: LOCAL
 - id: C.TRANS.STATE
   phase: G0.2bis
   designation: État x'=(H,V,τ)∈R^36 et pression P∈R^6 (note de transmission)
@@ -11367,6 +11755,7 @@ objets:
     motif: 'décomposition de C.CERT.KERNEL_STATE_PARAMS : l''état x'', P reçoit une entrée propre'
   familles:
   - C.CERT.KERNEL_STATE_PARAMS
+  provenance_definition: LOCAL
 - id: I.G.COMPOSITION_CONVENTION
   phase: G0.2bis
   designation: Convention de composition chronologique Φ_{H_1·H_2}=Φ_{H_2}∘Φ_{H_1}
@@ -11405,6 +11794,7 @@ objets:
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
   remarques: 'double site : livre III eq:t3-composition-histoires (l. 155) et annexe G eq:annexe-G-composition (l.
     89), même formule'
+  provenance_definition: LOCAL
 - id: I.G.EXECUTION_CONCATENATION
   phase: G0.2bis
   designation: Axiome de concaténation des exécutions (⌢)
@@ -11437,6 +11827,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
+  provenance_definition: LOCAL
 - id: I.G.SUFFIX_TRANSPORT
   phase: G0.2bis
   designation: Lecture ancrée sur le suffixe \mathcal R_X^{ρ,fin} et transport par préfixe
@@ -11472,6 +11863,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
+  provenance_definition: LOCAL
 - id: I.G.RESOLUTION_REFINEMENT
   phase: G0.2bis
   designation: Raffinement des résolutions ρ_1⪯ρ_2 (condition (O3))
@@ -11512,6 +11904,7 @@ objets:
     nature: enrichissement
     motif: ordre produit et projections π_{21} (l. 661, 712)
   remarques: les occurrences ρ_1, ρ_2 sont des lectures (I.III.READING) ; la relation ⪯ n'est pas inventoriée lexicalement
+  provenance_definition: LOCAL
 - id: I.G.QUOTIENT_SYSTEM
   phase: G0.2bis
   designation: Quotient d'observation, quotient de Nerode et système inverse des quotients
@@ -11547,6 +11940,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
+  provenance_definition: LOCAL
 - id: I.G.SUFFICIENT_SUMMARY
   phase: G0.2bis
   designation: Résumé suffisant Z_{𝔅,ρ} à un niveau d'observation
@@ -11583,6 +11977,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
+  provenance_definition: LOCAL
 - id: I.G.OBSERVATIONAL_RELATIVITY
   phase: G0.2bis
   designation: Principe de relativité observationnelle
@@ -11613,6 +12008,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle de complétude des parties lues en G0.2 (sites de définition non couverts)
+  provenance_definition: LOCAL
 - id: I.II.HISTORY_RESPONSE_FUNCTION
   phase: G0.2bis
   designation: Fonction de réponse d'une histoire \mathcal R_{\mathcal H}(u) (passage vers le tome III)
@@ -11659,6 +12055,7 @@ objets:
   - phase: G0.2bis
     nature: enrichissement
     motif: relation au livre III (l. 333–341) documentée
+  provenance_definition: LOCAL
 - id: I.CORE.STATEMENT_TAXONOMY
   phase: G0.2bis
   designation: Taxonomie des statuts d'énoncé
@@ -11689,6 +12086,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.CORE.ADMISSIBLE_INITIAL_CONDITION
   phase: G0.2bis
   designation: Condition initiale admissible
@@ -11725,6 +12123,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.CORE.STRUCTURAL_HISTORICITY
   phase: G0.2bis
   designation: Historicité structurelle (non-commutativité des opérateurs de Kairos)
@@ -11759,6 +12158,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.II.INTERACTION_OUTCOMES
   phase: G0.2bis
   designation: Inertie, résistance et appropriation (trois réponses à une influence)
@@ -11790,6 +12190,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.II.INTERFACE_AXIOMS
   phase: G0.2bis
   designation: Axiomes minimaux de l'interface [CHOIX]
@@ -11829,6 +12230,7 @@ objets:
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
   composants:
   - I.II.STATE_PROJECTION
+  provenance_definition: LOCAL
 - id: I.II.STATE_PROJECTION
   phase: G0.2bis
   designation: Projection de l'état de la source π(h_A)=σ(h_A), σ=tanh
@@ -11871,6 +12273,7 @@ objets:
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
   familles:
   - I.II.INTERFACE_AXIOMS
+  provenance_definition: LOCAL
 - id: I.II.INTERACTION_TRANSFORMATIONS
   phase: G0.2bis
   designation: Appropriation, amorçage, mémoire spécifique ; écriture événementielle ; inhibition directionnelle
@@ -11910,6 +12313,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale des livres I et II (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.G.CLOSURE_LEVELS
   phase: G0.2bis
   designation: 'Niveaux de fermeture des classes : minimale, préfixe-fermée, stable par continuation'
@@ -11945,6 +12349,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale de l'annexe G (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.G.OBSERVATION_CONDITIONS
   phase: G0.2bis
   designation: Conditions de cohérence (O1), (O2), (O2′), (O3) des lectures
@@ -11978,6 +12383,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale de l'annexe G (G0.2bis)
+  provenance_definition: LOCAL
 - id: I.G.COMPLEXITY_BUDGETS
   phase: G0.2bis
   designation: 'Graduations et budgets d''histoires : |\mathcal H|_ep, durées, dose, complexité vectorielle \mathbf
@@ -12023,6 +12429,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, relecture intégrale de l'annexe G (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.PRES.FIBRE_CONVENTION
   phase: G0.2bis
   designation: 'Convention : fibre = préimage d''un point, sans structure de fibré'
@@ -12059,6 +12466,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle des sites de définition du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.KERNEL.INPUT_BOUND
   phase: G0.2bis
   designation: Borne essentielle d'une entrée u_max
@@ -12095,6 +12503,10 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle des sites de définition du volume II (G0.2bis)
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
 - id: II.OPAC.REALIZABLE_WORDS
   phase: G0.2bis
   designation: Mots réalisables de profondeur k \mathcal W_k
@@ -12130,6 +12542,7 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle des sites de définition du volume II (G0.2bis)
+  provenance_definition: LOCAL
 - id: II.KERNEL.ADMISSIBLE_READINGS
   phase: G0.2bis
   designation: Lectures admissibles du noyau Y_adm:=ρ_X(C), espace des traces T et famille y↦\mathcal P_k(T;y)
@@ -12173,3 +12586,174 @@ objets:
   - phase: G0.2bis
     nature: ajout
     motif: objet nouveau, contrôle des sites de définition du volume II (G0.2bis)
+  - phase: G0.3
+    nature: provenance
+    motif: 'E5 : provenance_definition = DERIVED'
+  provenance_definition: DERIVED
+- id: II.KERNEL.TRACE_METRIC
+  phase: G0.3
+  designation: Matrice Q(τ) du noyau (reprise par renvoi)
+  notations:
+  - forme: Q(\tau)=I_d+\frac{\lambda}{1+\|\tau\|^2}\tau\tau^\top
+    portee: volume II, noyau (l. 600–830)
+  nature: objet du noyau employé par le volume II
+  type: null
+  domaine: null
+  codomaine: null
+  definition:
+    fichier: Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex
+    lignes:
+    - 612
+    - 616
+    label: null
+    environnement: null
+  hypotheses: []
+  portee: volume II, sections sur le noyau
+  dependances: []
+  selecteurs:
+  - vol: volII
+    glyphe: Q
+    lignes:
+    - 600
+    - 630
+  statut_definition: IMPLICIT
+  motif_statut: défini au volume I, repris par renvoi explicite ; citée l. 614 après « Dans le Volume I, la dépendance
+    directe du flot à la trace passe par » (l. 612)
+  confiance: haute
+  notation_canonique: ''
+  granularite: element
+  provenance_definition: BY_REFERENCE
+  provenance_externe: 'définition de référence : I.CORE.TRACE_METRIC (volume I) ; relation ID consignée dans notations/crosswalk.csv'
+  familles:
+  - II.KERNEL.EXTERNAL_VARIABLES
+  revisions:
+  - phase: G0.3
+    nature: ajout
+    motif: 'décision E5 : objet repris par référence (renvoi l. 612–628 vérifié)'
+- id: II.KERNEL.PRECONDITIONER
+  phase: G0.3
+  designation: Préconditionneur M(τ)=Q(τ)^{-1} du noyau (reprise par renvoi)
+  notations:
+  - forme: M(\tau)=Q(\tau)^{-1}
+    portee: volume II, noyau (l. 600–830)
+  nature: objet du noyau employé par le volume II
+  type: null
+  domaine: null
+  codomaine: null
+  definition:
+    fichier: Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex
+    lignes:
+    - 612
+    - 624
+    label: null
+    environnement: null
+  hypotheses: []
+  portee: volume II, sections sur le noyau
+  dependances: []
+  selecteurs:
+  - vol: volII
+    glyphe: M
+    lignes:
+    - 600
+    - 830
+  statut_definition: IMPLICIT
+  motif_statut: défini au volume I, repris par renvoi explicite ; cité l. 615 ; M(τ)=I_d dans le régime λ=0 (l.
+    624) ; transporté par permutation (l. 801)
+  confiance: haute
+  notation_canonique: ''
+  granularite: element
+  provenance_definition: BY_REFERENCE
+  provenance_externe: 'définition de référence : I.CORE.PRECONDITIONER (volume I) ; relation ID consignée dans notations/crosswalk.csv'
+  familles:
+  - II.KERNEL.EXTERNAL_VARIABLES
+  revisions:
+  - phase: G0.3
+    nature: ajout
+    motif: 'décision E5 : objet repris par référence (renvoi l. 612–628 vérifié)'
+- id: II.KERNEL.FRICTION
+  phase: G0.3
+  designation: Friction Γ(τ) du noyau (reprise par renvoi)
+  notations:
+  - forme: \Gamma(\tau)=\gamma_0+\gamma_1\|\tau\|
+    portee: volume II, noyau (l. 600–830)
+  nature: objet du noyau employé par le volume II
+  type: null
+  domaine: null
+  codomaine: null
+  definition:
+    fichier: Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex
+    lignes:
+    - 612
+    - 624
+    label: null
+    environnement: null
+  hypotheses: []
+  portee: volume II, sections sur le noyau
+  dependances: []
+  selecteurs:
+  - vol: volII
+    glyphe: \Gamma
+    lignes:
+    - 600
+    - 830
+  statut_definition: IMPLICIT
+  motif_statut: défini au volume I, repris par renvoi explicite ; citée l. 616 ; Γ(τ)=γ_0 dans le régime γ_1=0 (l.
+    624) ; transportée par permutation (l. 801)
+  confiance: haute
+  notation_canonique: ''
+  granularite: element
+  provenance_definition: BY_REFERENCE
+  provenance_externe: 'définition de référence : I.CORE.FRICTION (volume I) ; relation ID consignée dans notations/crosswalk.csv'
+  familles:
+  - II.KERNEL.EXTERNAL_VARIABLES
+  revisions:
+  - phase: G0.3
+    nature: ajout
+    motif: 'décision E5 : objet repris par référence (renvoi l. 612–628 vérifié)'
+- id: II.KERNEL.JUMP_SET
+  phase: G0.3
+  designation: Ensemble de saut du noyau D={x:∃i,P_i≥Θ} (reprise par renvoi)
+  notations:
+  - forme: D=\{x:\exists i,\ P_i\geq\Theta\}
+    portee: volume II, noyau (l. 600–830)
+  nature: objet du noyau employé par le volume II
+  type: null
+  domaine: null
+  codomaine: null
+  definition:
+    fichier: Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex
+    lignes:
+    - 626
+    - 628
+    label: null
+    environnement: null
+  hypotheses: []
+  portee: volume II, sections sur le noyau
+  dependances: []
+  selecteurs:
+  - vol: volII
+    glyphe: D
+    indice: ^$
+    lignes:
+    - 600
+    - 700
+  statut_definition: IMPLICIT
+  motif_statut: défini au volume I, repris par renvoi explicite ; cité l. 626 dans le crash-test « Noyau IWS et
+    cas pur K^* » ; employé l. 658–690 (C∖D, D ne dépend que de P)
+  confiance: haute
+  notation_canonique: ''
+  granularite: element
+  provenance_definition: BY_REFERENCE
+  provenance_externe: 'définition de référence : I.CORE.JUMP_SET (volume I) ; relation ID consignée dans notations/crosswalk.csv'
+  familles:
+  - II.KERNEL.EXTERNAL_VARIABLES
+  revisions:
+  - phase: G0.3
+    nature: ajout
+    motif: 'décision E5 : objet repris par référence (renvoi l. 612–628 vérifié)'
+  relations_intra:
+  - type: instance_de
+    cible: II.HYB.JUMP_SET
+    source: 'l''ensemble de saut abstrait D du socle (l. 78–477) et l''ensemble D du noyau (l. 626–690) ont des
+      rôles distincts : le second est l''instance du premier pour le noyau ; D_{(φ,μ)} (l. 1709) est une différentielle,
+      sans rapport'

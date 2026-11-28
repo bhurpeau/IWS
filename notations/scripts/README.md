@@ -14,7 +14,8 @@ Outils en lecture seule, à lancer depuis la racine du dépôt. Python 3 standar
 | `coverage_matrix.py` | Matrice de couverture documentaire par livre, annexe et section | G0.2bis |
 | `classify_unresolved.py` | Classement des clés structurantes non rattachées (table manuelle + règles) | G0.2bis |
 | `registry_diff.py` | Différentiel avec le registre de référence (95 objets) | G0.2bis |
-| `tests/` | Tests unitaires (extraction ; outils du registre) | G0.1, G0.2bis |
+| `build_crosswalk.py` | Génère `notations/crosswalk.csv` depuis `notations/crosswalk_relations.yaml` et le registre ; contrôles de cohérence et bilan par objet | G0.3 |
+| `tests/` | Tests unitaires (extraction ; registre ; table de correspondance) | G0.1, G0.2bis, G0.3 |
 
 ```bash
 python3 -I notations/scripts/extract_symbols.py --out audits/G0/G0_01_inventory
@@ -31,6 +32,7 @@ python3 -m venv .venv-g0 && .venv-g0/bin/pip install -r notations/requirements-g
 python3 -I notations/scripts/classify_unresolved.py
 .venv-g0/bin/python -I notations/scripts/coverage_matrix.py --out audits/G0/G0_02bis
 .venv-g0/bin/python -I notations/scripts/registry_diff.py --out audits/G0/G0_02bis
+.venv-g0/bin/python -I notations/scripts/build_crosswalk.py
 .venv-g0/bin/python -I -m unittest discover -s notations/scripts/tests
 ```
 

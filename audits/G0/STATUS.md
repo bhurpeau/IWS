@@ -1,10 +1,10 @@
 # G0 — État d'avancement
 
 **Dernière mise à jour :** 28 novembre 2026
-**Phase courante :** G0.2 **clôturée** (D1) ; G0.3 **en cours** (D6)
+**Phase courante :** G0.3 **clôturée** (E1) ; G0.4 **en cours** (E7)
 **Commit de base :** `c74fa047171ff51e308f1855d8f636add2ac33ca` (IWS, tag `g0-baseline`)
 **Branche de travail :** `harmonisation/g0` (poussée sur `origin`, non fusionnée dans `main`)
-**Dernier commit de travail :** `2588875` (G0.2, itération 1 : registre candidat intermédiaire, 95 objets ; poussé) ; G0.1 : `05afddd` (tag `g0.1-inventaire-ref`, poussé) ; G0.2bis : commit « G0.2bis » (référence 301 entrées)
+**Dernier commit de travail :** `3e837cb` (G0.2bis, clôture de G0.2, référence 301 entrées ; poussé) ; G0.3 : commit « G0.3 » (registre 305 entrées, table figée)
 **PDF de référence :** prépublication [IWS — G0 Baseline](https://github.com/bhurpeau/IWS/releases/tag/g0-baseline) (4 PDF + `SHA256SUMS`, empreintes vérifiées après téléchargement)
 
 ## Références figées
@@ -26,7 +26,8 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | G0.1 | **Clôturée, validée le 27/11/2026** | `G0_01_inventory/` (occurrences, expressions, familles, glyphes, exclusions, couverture, `extraction_report.md`) ; `notations/scripts/extract_symbols.py`, `check_coverage.py`, tests |
 | G0.2 | **Clôturée le 28/11/2026 (D1)** | `notations/registry.yaml` (registre candidat **intermédiaire** ; itération 1 : 95 objets, copie figée `G0_02_semantic/reference_95/`), `G0_02_objects_report.md`, `RESERVES.md`, `G0_02_semantic/`, scripts `definition_sites.py`, `link_registry.py` ; addendum G0.1 (B2a) et `check_regression.py` |
 | G0.2bis | **Validée, clôturée (D1)** | registre candidat intermédiaire, itération 2 (301 objets, YAML style bloc) ; `G0_02bis_completeness_report.md` ; `G0_02bis/` (journal de lecture, matrice de couverture, énoncés formels, classement des non-rattachés, revue des sites de définition, différentiel, échantillon) ; `RESERVES.md` ; scripts `registry_io.py`, `formal_environments.py`, `coverage_matrix.py`, `classify_unresolved.py`, `registry_diff.py`, tests |
-| G0.3 – G0.9 | Non entamées | — |
+| G0.3 | **Validée, clôturée (E1)** | `notations/crosswalk.csv` (généré), `notations/crosswalk_relations.yaml` (source), `G0_03_crosswalk_report.md`, `G0_03_crosswalk/` (bilan par objet, décomptes, recalcul D2), script `build_crosswalk.py`, tests |
+| G0.4 – G0.9 | Non entamées | — |
 
 ## Résultats des contrôles G0.0
 
@@ -88,6 +89,16 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | Échantillon | 40 rattachements : 38 corrects, 2 recevables avec réserve |
 | Intégrité des sources | `git diff c74fa04 -- Volume_I Volume_II` vide ; dépôts connexes non modifiés |
 
+## Résultats des contrôles G0.3
+
+| Contrôle | Résultat |
+|---|---|
+| Table | 82 relations intervolumes à la remise (46 établies, 33 candidates, 3 indéterminées) ; après E2–E6 : 86 (50 établies, 33 candidates, 3 indéterminées) + 2 intravolume établies (R001, R002) |
+| Couverture | 301 objets sur 301 avec bilan ; volume I : 21 correspondants établis, 10 candidats, 3 indéterminés ; volume II : 32 établis, 12 candidats, 1 indéterminé ; « sans correspondant identifié » motivé par groupe (non preuve d'absence) |
+| Cohérence | 0 erreur (identifiants, codes, orientation, contradictions, NEW contre identification, propagation de familles) |
+| D2 | Recalcul reproduit : c₁ = −2,1779, c₂ = 0,3220 ; annulation exacte des termes en m₂ ; occurrences et dépendances recensées |
+| Non-régression | Registre identique à `reference_301` ; inventaire G0.1 : 0 différence ; 30 tests verts ; sources et dépôts connexes inchangés |
+
 ## Décisions rendues
 
 | Id | Date | Décision |
@@ -113,6 +124,13 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | D4 | 28/11/2026 | Homonymies internes : relèvent de G0.4 ; en G0.3, un blocage dû à une homonymie est documenté et la relation est UNK |
 | D5 | 28/11/2026 | Les 50 clés ambiguës relèvent de G0.4 ; G0.3 ne résout que les ambiguïtés indispensables à une correspondance ; occurrences non résolues et provenance préservées |
 | D6 | 28/11/2026 | G0.3 autorisée après clôture, commit et poussée de G0.2 ; exécuter exclusivement G0.3 selon `PLAN_G0.md` ; relations ID, GEN, SPEC, PROJ, DER, ANA, DIST, UNK, NEW orientées ; arrêt avant G0.4 |
+| E1 | 28/11/2026 | G0.3 **validée** sous réserve de l'intégration de E2–E6 (faite) ; commit et poussée autorisés ; pas de fusion dans `main` ; registre de 301 entrées conservé comme référence historique ; enrichissements documentés ; table figée après arbitrages (`G0_03_crosswalk/reference_E/`) |
+| E2 | 28/11/2026 | X002 maintenue **candidate** ; spécimen (X001) distingué de la démonstration de l'appartenance à \Hyb (raccord H1–H4 / invariance d'admissibilité / annexe A) ; réserve de recherche du volume II R-G0-15 ; aucune démonstration en G0 |
+| E3 | 28/11/2026 | \mathcal X réservé aux états complets ; pas d'identification globale de \mathfrak X à \mathcal X ; généralité de \mathfrak X préservée ; X043, X044 maintenues UNK ; examen des occurrences de \mathfrak X en G0.4 (états d'un système fixé, réalisations, présentations, niveau indéterminé) et conséquences pour X010, X011, X026 ; arbitrage notationnel en G0.5 |
+| E4 | 28/11/2026 | X026, X028, X029 maintenues candidates ; compatibilités de X026 documentées ; réserve explicite sur l'égalité des domaines d'histoires pour X028, X029 |
+| E5 | 28/11/2026 | 4 entrées du volume II ajoutées par renvoi (Q, M, Γ, D du noyau) ; attribut `provenance_definition` (LOCAL, BY_REFERENCE, DERIVED) ; relations ID X083–X086 ; rôles de D distingués ; registre de 305 entrées figé (`reference_305/`) |
+| E6 | 28/11/2026 | R001 : identité conditionnelle établie entre les prédicats (C1–C4), domaines d'application non identifiés, deux entrées conservées ; R002 : équivalence conditionnelle acceptée pour le noyau (P⁻=Θ), non étendue à R2, différence hors de P⁻=Θ sauf r_P=0 |
+| E7 | 28/11/2026 | G0.4 autorisée après intégration, clôture, commit et poussée de G0.3 ; exécuter exclusivement G0.4 ; arrêt avant G0.5 |
 
 ## Réserves
 
@@ -130,11 +148,15 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | R-G0-10 | Lecture partielle du volume I en G0.2 (couverture 35 %) | Levée en G0.2bis (lecture intégrale journalisée) | Validation G0.2bis |
 | R-G0-11 | Motifs de fichier non ancrés dans les sélecteurs de G0.2 | Corrigés en G0.2bis, effet documenté | — |
 | R-G0-12 | 50 clés à usage ambigu partiellement non rattachées | Documentée | G0.4 (D5) |
-| A-G02-01 à 14 | Anomalies sémantiques G0.2 et G0.2bis (détail dans `RESERVES.md`) ; 01 instruite (C2), 03 documentée, 07 requalifiée | Ouvertes, non corrigées | Auteur |
+| A-G02-01 à 15 | Anomalies sémantiques (détail dans `RESERVES.md`) ; 01 instruite (C2), 03 et 08 instruites en G0.3 (R001, R002), 07 requalifiée, 14 instruite (D2), 15 nouvelle (annulation exacte en m₂) | Ouvertes, non corrigées | Auteur |
+| R-G0-13 | Registre du volume II sans entrées pour Q, M, Γ, D cités par renvoi | Traitée (E5) | — |
+| R-G0-15 | Appartenance du noyau à \Hyb (réserve de recherche du volume II) | Ouverte, recherche | Auteur |
+| R-G0-16 | Reset de pression : portée R2 non instruite | Ouverte | Auteur |
+| R-G0-14 | 33 correspondances candidates et 3 indéterminées | Ouverte | Auteur (G0.3 → G0.5) |
 
 Aucune réserve n'est bloquante en l'état. A-G02-03 (appropriation), A-G02-10 et A-G02-13 (variantes notationnelles) ainsi que R-G0-12 (usages ambigus) conditionnent la lecture de G0.3.
 
 ## Prochaine action
 
-G0.3 en cours (D6) ; arrêt avant G0.4.
+G0.4 en cours (E7) ; arrêt avant G0.5.
 

@@ -339,7 +339,7 @@ volII,s,19,0,0.0,non_resolue,,IWS_volume_II_classe_objets_transformations_v5_17.
 volII,\operatorname{Dep},19,19,1.0,resolue,II.SA.DEPENDENCE_SUPPORT(19),IWS_volume_II_classe_objets_transformations_v5_17.tex:19,IWS_volume_II_classe_objets_transformations_v5_17.tex:1443
 volII,b,18,0,0.0,non_resolue,,IWS_volume_II_classe_objets_transformations_v5_17.tex:18,IWS_volume_II_classe_objets_transformations_v5_17.tex:149
 volII,r,18,10,0.556,partielle,II.DEPTH.DEPTH_RANK(10),IWS_volume_II_classe_objets_transformations_v5_17.tex:18,IWS_volume_II_classe_objets_transformations_v5_17.tex:444
-volII,D,17,17,1.0,resolue,II.HYB.JUMP_SET(17),IWS_volume_II_classe_objets_transformations_v5_17.tex:17,IWS_volume_II_classe_objets_transformations_v5_17.tex:78
+volII,D,17,17,1.0,resolue,II.HYB.JUMP_SET(10) II.KERNEL.JUMP_SET(7),IWS_volume_II_classe_objets_transformations_v5_17.tex:17,IWS_volume_II_classe_objets_transformations_v5_17.tex:78
 volII,\gamma_{1},17,17,1.0,resolue,II.KERNEL.FRICTION_COEFFS(17),IWS_volume_II_classe_objets_transformations_v5_17.tex:17,IWS_volume_II_classe_objets_transformations_v5_17.tex:616
 volII,K,16,5,0.312,partielle,II.HYB.JUMP_OPERATOR(5),IWS_volume_II_classe_objets_transformations_v5_17.tex:16,IWS_volume_II_classe_objets_transformations_v5_17.tex:78
 volII,j,16,0,0.0,non_resolue,,IWS_volume_II_classe_objets_transformations_v5_17.tex:16,IWS_volume_II_classe_objets_transformations_v5_17.tex:95
