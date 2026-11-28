@@ -1,0 +1,391 @@
+corpus,fichier,niveau,titre,ligne_debut,ligne_fin,lecture,phase_lecture,enonces,definitions,objets_definis,occurrences,rattachees,taux,non_rattachees_structurantes,dont_structurant_non_instruit,dont_ambigu,dont_local_muet_usuel,dont_non_classe,cles_principales_non_rattachees
+volI,IWS_ANNEXE_A.tex,section,Objet de l'annexe,1,26,integrale,G0.2bis,0,0,0,4,2,0.5,2,0,0,2,0,t:1 \infty:1
+volI,IWS_ANNEXE_A.tex,section,Normes et état continu,27,63,integrale,G0.2bis,0,0,2,24,12,0.5,5,0,0,5,0,Y:2 t:2 \mathbb{R}^{d}:1
+volI,IWS_ANNEXE_A.tex,section,Matrice relationnelle normalisée,64,134,integrale,G0.2bis,0,0,0,42,29,0.69,11,0,5,6,0,I:5 K:3 \sum_{j}:2 i:1
+volI,IWS_ANNEXE_A.tex,section,Bornes et régularité de la saturation,135,193,integrale,G0.2bis,0,0,0,33,7,0.212,21,0,3,18,0,\tanh:10 y:4 s:2 K:2
+volI,IWS_ANNEXE_A.tex,section,Solution et borne de la trace,194,266,integrale,G0.2bis,0,0,0,55,25,0.455,22,0,13,9,0,t_{0}:6 t:4 d:4 s:3
+volI,IWS_ANNEXE_A.tex,section,Préconditionneur : formule et bornes spectrales,267,396,integrale,G0.2bis,0,0,2,76,66,0.868,9,0,0,9,0,I_{d}:4 y:4 \mathbb{R}^{d}:1
+volI,IWS_ANNEXE_A.tex,section,Régularité et dérivée de \texorpdfstring{$M$}{M},397,562,integrale,G0.2bis,0,0,0,144,65,0.451,60,0,47,13,0,c:21 h:12 r^{2}:7 r:4
+volI,IWS_ANNEXE_A.tex,section,Régularité de la friction,563,598,integrale,G0.2bis,0,0,0,19,15,0.789,4,0,4,0,0,\sigma:4
+volI,IWS_ANNEXE_A.tex,section,Champ de vecteurs pour un graphe fixé,599,707,integrale,G0.2bis,0,0,1,107,72,0.673,20,0,2,18,0,t:14 \tanh:3 R_{V}:2 K:1
+volI,IWS_ANNEXE_A.tex,section,Existence et unicité locale,708,725,integrale,G0.2bis,1,0,0,4,3,0.75,1,0,1,0,0,t_{0}:1
+volI,IWS_ANNEXE_A.tex,section,Absence d'explosion en temps fini,726,869,integrale,G0.2bis,1,0,1,100,58,0.58,35,0,9,26,0,t:12 \mathrm{d}:5 Y:5 t_{0}:4
+volI,IWS_ANNEXE_A.tex,section,Premier instant de saut,870,902,integrale,G0.2bis,0,0,0,20,10,0.5,8,0,2,6,0,t:3 t_{0}:2 i:1 \inf:1
+volI,IWS_ANNEXE_A.tex,section,Le saut est bien défini,903,984,integrale,G0.2bis,0,0,0,41,27,0.659,13,0,6,7,0,i:3 m:3 \min:2 s:2
+volI,IWS_ANNEXE_A.tex,section,Événements simultanés,985,1008,integrale,G0.2bis,0,0,0,6,5,0.833,0,0,0,0,0,
+volI,IWS_ANNEXE_A.tex,section,Borne sur un horizon fini malgré les sauts,1009,1064,integrale,G0.2bis,0,0,1,25,12,0.48,12,0,3,9,0,Y:3 T:3 t:3 j:2
+volI,IWS_ANNEXE_A.tex,section,Absence d'accumulation de sauts en temps fini,1065,1141,integrale,G0.2bis,1,0,0,35,26,0.743,9,0,5,4,0,T:5 t:3 i:1
+volI,IWS_ANNEXE_A.tex,section,Existence et unicité de l'exécution hybride,1142,1174,integrale,G0.2bis,1,0,0,3,1,0.333,2,0,2,0,0,C:1 D:1
+volI,IWS_ANNEXE_A.tex,section,Portée et limites,1175,1191,integrale,G0.2bis,0,0,0,6,2,0.333,4,0,0,4,0,t:3 \infty:1
+volI,IWS_ANNEXE_B.tex,section,But de l'annexe,1,20,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_B.tex,section,Notations et hypothèses,21,108,integrale,G0.2bis,0,0,1,75,58,0.773,17,0,4,13,0,t:5 d:3 \sum_{i=1}^{N}:2 \tanh:2
+volI,IWS_ANNEXE_B.tex,section,Les deux fonctionnelles,109,140,integrale,G0.2bis,0,0,2,16,14,0.875,2,0,0,2,0,\sum_{i=1}^{N}:2
+volI,IWS_ANNEXE_B.tex,section,Équivalence entre \texorpdfstring{$E$}{E} et \texorpdfstring{$\mathcal L$}{L},141,230,integrale,G0.2bis,0,0,1,54,52,0.963,2,0,0,2,0,I_{d}:1 \sum_{i=1}^{N}:1
+volI,IWS_ANNEXE_B.tex,section,Dérivée de \texorpdfstring{$\mathcal L$}{L} pendant le flot,231,322,integrale,G0.2bis,0,0,0,91,64,0.703,27,0,0,27,0,M_{i}:9 \mathrm{d}:8 \sum_{i}:6 t:4
+volI,IWS_ANNEXE_B.tex,section,Contrôle de la partie quadratique,323,423,integrale,G0.2bis,0,0,1,72,65,0.903,7,0,0,7,0,\sum_{i}:5 M_{i}:2
+volI,IWS_ANNEXE_B.tex,section,Absorption de l'entrée bornée,424,570,integrale,G0.2bis,0,0,0,89,72,0.809,14,0,3,11,0,\sum_{i}:4 t:4 T:3 \min:1
+volI,IWS_ANNEXE_B.tex,section,Effet exact d'un saut sur les deux fonctionnelles,571,697,integrale,G0.2bis,0,0,1,84,79,0.94,5,0,3,2,0,\Delta:3 y:2
+volI,IWS_ANNEXE_B.tex,section,Temps minimal entre deux sauts d'un même nœud,698,774,integrale,G0.2bis,0,0,0,45,30,0.667,13,0,2,11,0,K:9 \delta:2 t:2
+volI,IWS_ANNEXE_B.tex,section,Combinaison du flot et des sauts,775,902,integrale,G0.2bis,0,0,1,65,57,0.877,5,0,4,1,0,\delta:2 T:1 k:1 t:1
+volI,IWS_ANNEXE_B.tex,section,Résultat final,903,933,integrale,G0.2bis,1,0,0,28,24,0.857,4,0,0,4,0,t:4
+volI,IWS_ANNEXE_B.tex,section,Différence avec la formulation abrégée du corps du texte,934,953,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_B.tex,section,Portée et limites,954,1002,integrale,G0.2bis,0,0,0,31,24,0.774,7,0,7,0,0,s:4 d:2 D:1
+volI,IWS_ANNEXE_C.tex,section,Objet de l'annexe,1,30,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_C.tex,section,Deux réductions distinctes,31,99,integrale,G0.2bis,0,0,3,30,22,0.733,7,0,3,4,0,x:2 y:2 i:1 \mathbb{R}^{d}:1
+volI,IWS_ANNEXE_C.tex,section,Invariance de \texorpdfstring{$\Delta$}{Delta} pendant le flot,100,192,integrale,G0.2bis,1,0,0,60,46,0.767,13,0,5,8,0,t:3 A:2 I:2 i:2
+volI,IWS_ANNEXE_C.tex,section,Effet d'une cascade de Kairos,193,281,integrale,G0.2bis,1,0,0,41,39,0.951,1,0,0,1,0,i:1
+volI,IWS_ANNEXE_C.tex,section,Système réduit sur \texorpdfstring{$\Delta$}{Delta},282,346,integrale,G0.2bis,0,0,0,49,45,0.918,3,0,0,3,0,\tanh:2 t:1
+volI,IWS_ANNEXE_C.tex,section,Équilibres structurels du sous-système autonome,347,445,integrale,G0.2bis,0,0,2,75,52,0.693,21,0,6,15,0,k:5 \tanh:5 k^{2}:5 Q:4
+volI,IWS_ANNEXE_C.tex,section,Pourquoi toutes les composantes non nulles ont la même,446,550,integrale,G0.2bis,1,0,0,82,13,0.159,66,0,22,44,0,y:25 \tanh:9 x:9 q:5
+volI,IWS_ANNEXE_C.tex,section,Développement près de l'origine,551,615,integrale,G0.2bis,0,0,0,36,7,0.194,26,0,10,16,0,x:6 O:4 q:4 k^{2}:4
+volI,IWS_ANNEXE_C.tex,section,Condition simple d'extinction structurelle,616,666,integrale,G0.2bis,1,0,0,29,14,0.483,15,0,12,3,0,x:11 \tanh:3 \Delta:1
+volI,IWS_ANNEXE_C.tex,section,Stabilité locale de l'origine,667,733,integrale,G0.2bis,0,0,0,42,27,0.643,15,0,11,4,0,\delta:8 I_{d}:2 s:2 D:1
+volI,IWS_ANNEXE_C.tex,section,Seuil de trace qui déstabilise le repos,734,841,integrale,G0.2bis,0,0,2,42,29,0.69,13,0,8,5,0,r:5 r^{2}:5 x:3
+volI,IWS_ANNEXE_C.tex,section,Extinction globale lorsque la trace n'agit pas sur le rappel,842,967,integrale,G0.2bis,0,0,1,85,55,0.647,21,0,0,21,0,h_{k}:5 \tanh:4 I_{d}:3 t:3
+volI,IWS_ANNEXE_C.tex,section,Stabilité d'un équilibre en dimension un,968,1171,integrale,G0.2bis,0,0,1,130,105,0.808,24,0,12,12,0,\tanh:5 G:5 v:3 k:3
+volI,IWS_ANNEXE_C.tex,section,Classification en dimension deux,1172,1232,integrale,G0.2bis,0,0,0,14,10,0.714,4,0,4,0,0,q:3 d:1
+volI,IWS_ANNEXE_C.tex,section,Pourquoi les points d'axe ne sont pas attractifs,1233,1334,integrale,G0.2bis,0,0,1,39,32,0.821,5,0,1,4,0,k:1 \tanh:1 \max:1 \Re:1
+volI,IWS_ANNEXE_C.tex,section,Stabilité des points à deux composantes actives,1335,1541,integrale,G0.2bis,0,0,0,86,63,0.733,13,0,2,11,0,\max:3 \Re:3 \operatorname{spec}:3 s:2
+volI,IWS_ANNEXE_C.tex,section,Paysage autonome aux paramètres de référence,1542,1606,integrale,G0.2bis,0,0,0,11,2,0.182,7,0,4,3,0,h:1 v:1 \theta:1 \Delta:1
+volI,IWS_ANNEXE_C.tex,section,La pression et le sens du mot ``puits'',1607,1725,integrale,G0.2bis,0,0,1,48,28,0.583,17,0,15,2,0,p:5 v:4 h:3 \theta:3
+volI,IWS_ANNEXE_C.tex,section,Réduction scalaire utilisée dans le Tome II,1726,1827,integrale,G0.2bis,0,0,1,64,42,0.656,22,0,12,10,0,\tanh:8 h:5 \theta:5 r^{2}:2
+volI,IWS_ANNEXE_C.tex,section,Portée pour le réseau complet,1828,1901,integrale,G0.2bis,0,0,1,45,23,0.511,15,0,11,4,0,A:3 I:3 I_{d}:3 J:2
+volI,IWS_ANNEXE_C.tex,section,Résultats établis et limites,1902,1955,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_D.tex,section,Objet de l'annexe,1,38,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_D.tex,section,Système forcé réduit,39,121,integrale,G0.2bis,0,0,1,47,33,0.702,13,0,8,5,0,r:5 \tanh:3 B:2 r^{2}:2
+volI,IWS_ANNEXE_D.tex,section,Le repos exact reste invariant,122,203,integrale,G0.2bis,1,0,1,40,31,0.775,9,0,0,9,0,t:6 e^{-\beta t}:2 \tanh:1
+volI,IWS_ANNEXE_D.tex,section,Perte de stabilité du repos,204,312,integrale,G0.2bis,0,0,0,60,55,0.917,5,0,1,4,0,\mathrm{d}:2 t:1 s^{2}:1 s:1
+volI,IWS_ANNEXE_D.tex,section,Équation de la branche d'équilibres,313,392,integrale,G0.2bis,0,0,1,65,54,0.831,10,0,4,6,0,\tanh:6 r:4
+volI,IWS_ANNEXE_D.tex,section,Dérivées utiles,393,466,integrale,G0.2bis,0,0,1,38,24,0.632,14,0,9,5,0,r:6 r^{2}:5 A:1 B:1
+volI,IWS_ANNEXE_D.tex,section,Naissance transcritique de la résistance,467,588,integrale,G0.2bis,1,0,1,92,70,0.761,20,0,12,8,0,\delta:4 O:4 A:4 B:3
+volI,IWS_ANNEXE_D.tex,section,Développement au premier ordre,589,649,integrale,G0.2bis,0,0,0,36,34,0.944,2,0,0,2,0,O:2
+volI,IWS_ANNEXE_D.tex,section,Développement au second ordre,650,822,integrale,G0.2bis,0,0,0,78,60,0.769,13,0,10,3,0,\delta:4 O:3 B:3 A:3
+volI,IWS_ANNEXE_D.tex,section,La trace n'est pas exactement épinglée au seuil,823,885,integrale,G0.2bis,0,0,0,35,29,0.829,6,0,0,6,0,\tanh:4 O:2
+volI,IWS_ANNEXE_D.tex,section,Jacobien sur une branche forcée,886,990,integrale,G0.2bis,0,0,1,56,50,0.893,5,0,3,2,0,s:2 \operatorname{sech}^{2}:1 p:1 s^{2}:1
+volI,IWS_ANNEXE_D.tex,section,Signe des coefficients sur la branche résistante,991,1111,integrale,G0.2bis,0,0,0,70,62,0.886,8,0,0,8,0,\tanh:5 \operatorname{sech}^{2}:3
+volI,IWS_ANNEXE_D.tex,section,Condition de Hopf,1112,1159,integrale,G0.2bis,0,0,1,17,12,0.706,5,0,3,2,0,s:2 p:1 s^{2}:1 i:1
+volI,IWS_ANNEXE_D.tex,section,Localisation numérique de la rupture,1160,1261,integrale,G0.2bis,0,0,0,16,15,0.938,1,0,0,1,0,\pi:1
+volI,IWS_ANNEXE_D.tex,section,Trois seuils de nature différente,1262,1374,integrale,G0.2bis,0,0,2,36,25,0.694,11,0,10,1,0,x_{0}:3 v_{0}:3 \theta_{0}:3 r_{0}:1
+volI,IWS_ANNEXE_D.tex,section,Influence du protocole,1375,1405,integrale,G0.2bis,0,0,0,4,4,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_D.tex,section,Définition de l'appropriation par les bassins,1406,1470,integrale,G0.2bis,1,1,3,23,15,0.652,8,0,8,0,0,z_{0}:4 T:2 z:2
+volI,IWS_ANNEXE_D.tex,section,Durée minimale d'exposition,1471,1504,integrale,G0.2bis,0,0,1,17,10,0.588,7,0,5,2,0,z_{0}:3 T:2 \inf:1 \infty:1
+volI,IWS_ANNEXE_D.tex,section,Trajectoire de charge utilisée dans le prédicteur,1505,1566,integrale,G0.2bis,0,0,1,26,13,0.5,11,0,3,8,0,t:6 T:3 \tanh:1 e^{-\beta t}:1
+volI,IWS_ANNEXE_D.tex,section,Système linéaire non autonome,1567,1645,integrale,G0.2bis,0,0,0,36,22,0.611,13,0,4,9,0,t:6 \mathrm{d}:2 T:2 x_{0}:1
+volI,IWS_ANNEXE_D.tex,section,Statut du prédicteur,1646,1675,integrale,G0.2bis,0,0,0,8,7,0.875,1,0,0,1,0,\tanh:1
+volI,IWS_ANNEXE_D.tex,section,Comparaison avec la dynamique complète,1676,1754,integrale,G0.2bis,0,0,0,9,6,0.667,3,0,0,3,0,\infty:3
+volI,IWS_ANNEXE_D.tex,section,Pourquoi prolonger l'exposition ne suffit pas toujours,1755,1788,integrale,G0.2bis,0,0,0,4,3,0.75,1,0,0,1,0,\infty:1
+volI,IWS_ANNEXE_D.tex,section,Réductions exactes sous couplage mutuel,1789,1868,integrale,G0.2bis,0,0,1,36,26,0.722,10,0,4,6,0,\tanh:6 h:4
+volI,IWS_ANNEXE_D.tex,section,Seuil de compétition,1869,1972,integrale,G0.2bis,0,0,0,53,37,0.698,15,0,8,7,0,k:5 q:3 \tanh:3 k^{2}:2
+volI,IWS_ANNEXE_D.tex,section,Résumé des statuts,1973,2055,integrale,G0.2bis,0,0,0,12,12,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_D.tex,section,Limites,2056,2093,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_E.tex,section,Objet de l'annexe,1,44,integrale,G0.2bis,0,0,0,11,9,0.818,2,0,1,1,0,q:1 \tanh:1
+volI,IWS_ANNEXE_E.tex,section,R1 : perméabilité dynamique,45,212,integrale,G0.2bis,0,0,3,103,91,0.883,8,0,0,8,0,t:6 \mathrm{d}:2
+volI,IWS_ANNEXE_E.tex,section,Transport d'un seuil du modèle continu,213,313,integrale,G0.2bis,1,0,1,61,60,0.984,1,0,0,1,0,\infty:1
+volI,IWS_ANNEXE_E.tex,section,Protection absolue et protection de la résistance,314,380,integrale,G0.2bis,0,0,0,16,16,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_E.tex,section,Fenêtre initiale d'ouverture,381,456,integrale,G0.2bis,0,0,0,36,29,0.806,5,0,0,5,0,t:4 \mathrm{d}:1
+volI,IWS_ANNEXE_E.tex,section,Absence d'hystérésis dans R1 minimal,457,477,integrale,G0.2bis,0,0,0,7,7,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_E.tex,section,Effet sur la durée d'appropriation,478,505,integrale,G0.2bis,0,0,0,8,7,0.875,1,0,0,1,0,t:1
+volI,IWS_ANNEXE_E.tex,section,R2 : écriture événementielle,506,1541,integrale,G0.2bis,1,0,13,397,294,0.741,78,0,26,52,0,t:27 p:13 \delta:8 e^{-\beta\Delta}:6
+volI,IWS_ANNEXE_E.tex,section,Comparaison structurale de R1 et R2,1542,1597,integrale,G0.2bis,0,0,0,16,16,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_E.tex,section,Résultats établis et limites,1598,1687,integrale,G0.2bis,0,0,0,14,12,0.857,2,0,2,0,0,p:1 x_{0}:1
+volI,IWS_ANNEXE_F.tex,section,Objet et statut de l'annexe,1,52,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Fichiers de calcul et traçabilité,53,100,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Réduction et conventions numériques,101,199,integrale,G0.2bis,0,0,1,38,35,0.921,3,0,2,1,0,h:1 \tanh:1 d:1
+volI,IWS_ANNEXE_F.tex,section,Détection des événements,200,227,integrale,G0.2bis,0,0,0,5,3,0.6,2,0,1,1,0,p:1 t:1
+volI,IWS_ANNEXE_F.tex,section,Continuation de la branche résistante,228,310,integrale,G0.2bis,0,0,0,28,15,0.536,13,0,3,10,0,\max:3 \Re:3 \operatorname{spec}:3 J:3
+volI,IWS_ANNEXE_F.tex,section,Validation du développement asymptotique,311,341,integrale,G0.2bis,0,0,0,13,12,0.923,1,0,0,1,0,O:1
+volI,IWS_ANNEXE_F.tex,section,Durée minimale d'appropriation sous R0,342,371,integrale,G0.2bis,0,0,0,8,4,0.5,2,0,0,2,0,\infty:2
+volI,IWS_ANNEXE_F.tex,section,Contrôle par le protocole de montée,372,399,integrale,G0.2bis,0,0,0,7,4,0.571,3,0,3,0,0,x_{0}:1 v_{0}:1 \theta_{0}:1
+volI,IWS_ANNEXE_F.tex,section,Calcul du cycle R2,400,445,integrale,G0.2bis,0,0,0,21,20,0.952,1,0,1,0,0,p:1
+volI,IWS_ANNEXE_F.tex,section,Multiplicateur de Floquet,446,519,integrale,G0.2bis,0,0,0,36,29,0.806,6,0,0,6,0,t:5 \theta_{\ast}:1
+volI,IWS_ANNEXE_F.tex,section,Rampe sur la résistance pulsée,520,544,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Protocole des deux expositions,545,573,integrale,G0.2bis,0,0,1,5,4,0.8,1,0,0,1,0,S:1
+volI,IWS_ANNEXE_F.tex,section,Spirale libre et période prédite,574,604,integrale,G0.2bis,0,0,1,10,9,0.9,1,0,0,1,0,\pi:1
+volI,IWS_ANNEXE_F.tex,section,État de découplage et extrapolation libre,605,650,integrale,G0.2bis,0,0,0,23,12,0.522,5,0,0,5,0,e^{-\beta t}:3 t:2
+volI,IWS_ANNEXE_F.tex,section,Temps de recharge avant la seconde instabilité,651,681,integrale,G0.2bis,0,0,0,8,8,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Performance du prédicteur de phase,682,726,integrale,G0.2bis,0,0,0,4,3,0.75,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Trois régimes de mémoire temporelle,727,787,integrale,G0.2bis,0,0,0,19,13,0.684,2,0,2,0,0,p:1 A:1
+volI,IWS_ANNEXE_F.tex,section,Contrôle à charge livrée comparable,788,824,integrale,G0.2bis,0,0,0,10,9,0.9,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Amorçage scalaire de l'interface,825,884,integrale,G0.2bis,0,0,1,19,18,0.947,1,0,1,0,0,p:1
+volI,IWS_ANNEXE_F.tex,section,Effet de l'amorçage,885,925,integrale,G0.2bis,0,0,0,11,11,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Contrôle : gain constant contre boucle dynamique,926,957,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Contrôle du signe scalaire,958,988,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Mémoire vectorielle et compatibilité,989,1032,integrale,G0.2bis,0,0,0,13,11,0.846,1,0,0,1,0,\max:1
+volI,IWS_ANNEXE_F.tex,section,Protocole de spécificité,1033,1062,integrale,G0.2bis,0,0,0,7,3,0.429,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Résultats de spécificité,1063,1151,integrale,G0.2bis,0,0,0,4,2,0.5,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Interprétation permise,1152,1162,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Synthèse des contrôles,1163,1210,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Hiérarchie des résultats numériques,1211,1261,integrale,G0.2bis,0,0,0,11,10,0.909,1,0,1,0,0,x_{0}:1
+volI,IWS_ANNEXE_F.tex,section,Sources d'incertitude,1262,1279,integrale,G0.2bis,0,0,0,3,2,0.667,1,0,1,0,0,T:1
+volI,IWS_ANNEXE_F.tex,section,Tests de robustesse recommandés,1280,1306,integrale,G0.2bis,0,0,0,8,7,0.875,1,0,1,0,0,p:1
+volI,IWS_ANNEXE_F.tex,section,Questions ouvertes,1307,1356,integrale,G0.2bis,0,0,0,4,4,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_F.tex,section,Conclusion,1357,1386,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_G.tex,section,Objet et statut de l'annexe,1,42,integrale,G0.2bis,1,0,1,4,4,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_G.tex,section,"Systèmes, épisodes et histoires",43,115,integrale,G0.2bis,1,0,3,35,19,0.543,14,0,4,10,0,\mathcal{H}_{1}:3 \mathcal{H}_{2}:3 \mathcal{D}:2 \varepsilon:2
+volI,IWS_ANNEXE_G.tex,section,Protocoles et classes admissibles,116,188,integrale,G0.2bis,0,0,2,35,19,0.543,16,0,0,16,0,\mathcal{H}_{0}:6 \mathcal{H}:5 \mathcal{H}_{1}:2 \mathcal{H}_{0}^{-1}:2
+volI,IWS_ANNEXE_G.tex,section,"Exécutions, résolutions et lectures",189,298,integrale,G0.2bis,0,0,6,59,34,0.576,23,0,0,23,0,X:10 \mathcal{H}:6 E:3 \mathcal{H}_{2}:2
+volI,IWS_ANNEXE_G.tex,section,Équivalence et quotient d'observation,299,343,integrale,G0.2bis,1,0,2,20,11,0.55,9,0,0,9,0,X:4 \mathcal{H}:3 Y:2
+volI,IWS_ANNEXE_G.tex,section,Transport par préfixe,344,456,integrale,G0.2bis,2,0,1,74,32,0.432,42,0,0,42,0,X:14 \mathcal{H}:13 \mathcal{H}_{0}:6 Y:5
+volI,IWS_ANNEXE_G.tex,section,Congruence comportementale complète,457,510,integrale,G0.2bis,2,0,0,26,14,0.538,12,0,0,12,0,X:3 Y:3 \mathcal{H}:3 \mathcal{H}_{0}:1
+volI,IWS_ANNEXE_G.tex,section,Budgets et graduations des histoires,511,571,integrale,G0.2bis,0,0,2,23,7,0.304,8,0,0,8,0,\mathcal{H}:7 Q:1
+volI,IWS_ANNEXE_G.tex,section,Indépendance du quotient vis-à-vis de la complexité,572,629,integrale,G0.2bis,2,0,0,44,22,0.5,22,0,1,21,0,\mathcal{H}:6 X:5 Y:5 \ell:2
+volI,IWS_ANNEXE_G.tex,section,Monotonie bidimensionnelle de l'observabilité,630,708,integrale,G0.2bis,2,0,1,43,27,0.628,16,0,0,16,0,\mathcal{H}:8 X:3 Y:3 Z:1
+volI,IWS_ANNEXE_G.tex,section,Système inverse des quotients d'observation,709,767,integrale,G0.2bis,1,0,0,24,13,0.542,4,0,0,4,0,X:4
+volI,IWS_ANNEXE_G.tex,section,Conséquences pour les résumés et les seuils,768,801,integrale,G0.2bis,0,0,1,13,8,0.615,4,0,0,4,0,X:2 Y:2
+volI,IWS_ANNEXE_G.tex,section,Niveaux de classe requis par les résultats fondamentaux,802,854,integrale,G0.2bis,0,0,0,7,5,0.714,2,0,0,2,0,\mathcal{H}_{0}^{-1}:2
+volI,IWS_ANNEXE_G.tex,section,Table des notations,855,930,integrale,G0.2bis,0,0,0,45,19,0.422,25,0,2,23,0,X:7 \mathcal{H}:5 Y:4 \mathcal{H}_{1}:2
+volI,IWS_ANNEXE_G.tex,section,Conclusion de l'annexe,931,963,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_H.tex,section,Objet et portée de l'annexe,1,39,integrale,G0.2bis,1,0,2,12,12,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_H.tex,section,État de départ de la sonde,40,141,integrale,G0.2bis,1,0,8,52,42,0.808,8,0,3,5,0,y:4 s:2 X:1 I:1
+volI,IWS_ANNEXE_H.tex,section,Hypothèses de réduction,142,192,integrale,G0.2bis,5,0,0,27,17,0.63,9,0,6,3,0,s:4 X:2 c:2 y:1
+volI,IWS_ANNEXE_H.tex,section,Réduction au contenu survivant,193,305,integrale,G0.2bis,2,0,2,64,57,0.891,6,0,3,3,0,s:3 X:1 \square:1 \Omega:1
+volI,IWS_ANNEXE_H.tex,section,Préfixes éteints et carte totale d'écriture,306,399,integrale,G0.2bis,2,0,2,62,55,0.887,4,0,2,2,0,\mathcal{D}:1 X_{0}:1 I:1 \square:1
+volI,IWS_ANNEXE_H.tex,section,Cas à commutation unique et équation de seuil,400,477,integrale,G0.2bis,2,0,1,47,23,0.489,23,0,18,5,0,b:6 J:5 \delta:4 s:3
+volI,IWS_ANNEXE_H.tex,section,Proposition~\ref{prop:t3-compression-sous-critique} comme cas de compression,478,547,integrale,G0.2bis,2,0,0,34,14,0.412,10,0,0,10,0,\mathcal{H}:9 \square:1
+volI,IWS_ANNEXE_H.tex,section,Structure générale des motifs,548,624,integrale,G0.2bis,2,0,0,33,21,0.636,11,0,4,7,0,\Omega:3 S:3 \delta:3 I:1
+volI,IWS_ANNEXE_H.tex,section,Extinction approchée,625,667,integrale,G0.2bis,2,0,0,26,17,0.654,9,0,8,1,0,\varepsilon:4 \eta:2 z:1 z_{0}:1
+volI,IWS_ANNEXE_H.tex,section,Vérifications numériques associées,668,728,integrale,G0.2bis,0,0,0,15,12,0.8,1,0,1,0,0,s:1
+volI,IWS_ANNEXE_H.tex,section,Limites de portée,729,762,integrale,G0.2bis,0,0,0,9,8,0.889,1,0,0,1,0,\gamma:1
+volI,IWS_ANNEXE_H.tex,section,Dépendances logiques et usages,763,812,integrale,G0.2bis,0,0,0,30,17,0.567,13,0,13,0,0,m:12 b:1
+volI,IWS_ANNEXE_H.tex,section,Table des notations,813,856,integrale,G0.2bis,0,0,0,30,26,0.867,4,0,2,2,0,X:1 y:1 \eta:1 \varepsilon:1
+volI,IWS_ANNEXE_H.tex,section,Conclusion,857,882,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_I.tex,section,Objet et portée de l'annexe,1,42,integrale,G0.2bis,1,0,0,30,26,0.867,3,0,3,0,0,s:3
+volI,IWS_ANNEXE_I.tex,section,Cadre déclaré,43,123,integrale,G0.2bis,0,0,3,91,44,0.484,45,0,27,18,0,s:19 c:8 \boldsymbol{\chi}:6 \boldsymbol{\theta}:6
+volI,IWS_ANNEXE_I.tex,section,Hypothèses de fermeture,124,160,integrale,G0.2bis,5,0,1,33,14,0.424,18,0,14,4,0,s:11 c:3 X:2 c_{1}:1
+volI,IWS_ANNEXE_I.tex,section,Lemme d'invariance alignée,161,193,integrale,G0.2bis,2,0,0,14,6,0.429,8,0,2,6,0,q_{\perp}:5 q:2 \square:1
+volI,IWS_ANNEXE_I.tex,section,Suffisance de l'état lent aligné,194,241,integrale,G0.2bis,2,0,1,45,32,0.711,10,0,9,1,0,s:9 \square:1
+volI,IWS_ANNEXE_I.tex,section,Relation avec la réduction au contenu survivant,242,284,integrale,G0.2bis,2,0,0,22,13,0.591,9,0,9,0,0,s:8 I:1
+volI,IWS_ANNEXE_I.tex,section,Ensemble d'appropriation et frontière,285,342,integrale,G0.2bis,2,0,2,28,22,0.786,5,0,3,2,0,a:2 I:1 \square:1 \partial:1
+volI,IWS_ANNEXE_I.tex,section,Activité des coordonnées lentes,343,405,integrale,G0.2bis,2,0,1,39,29,0.744,7,0,7,0,0,D:6 P:1
+volI,IWS_ANNEXE_I.tex,section,Vérification dans le modèle canonique,406,442,integrale,G0.2bis,0,0,0,21,5,0.238,11,0,9,2,0,s:6 c:3 s_{1}:1 s_{2}:1
+volI,IWS_ANNEXE_I.tex,section,Ce que la proposition ne suppose pas,443,459,integrale,G0.2bis,0,0,0,8,7,0.875,1,0,1,0,0,s:1
+volI,IWS_ANNEXE_I.tex,section,Limites de portée,460,513,integrale,G0.2bis,0,0,1,36,17,0.472,16,0,12,4,0,s:9 c:3 \Omega:2 \boldsymbol{\chi}:1
+volI,IWS_ANNEXE_I.tex,section,Dépendances logiques et usages,514,540,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_I.tex,section,Table des notations,541,561,integrale,G0.2bis,0,0,0,19,15,0.789,4,0,4,0,0,s:3 c:1
+volI,IWS_ANNEXE_I.tex,section,Conclusion,562,582,integrale,G0.2bis,0,0,0,10,6,0.6,4,0,4,0,0,s:3 c:1
+volI,IWS_ANNEXE_J.tex,section,Objet et portée de l'annexe,1,31,integrale,G0.2bis,1,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Domaine de travail,32,69,integrale,G0.2bis,0,0,1,19,15,0.789,4,0,4,0,0,s:3 c:1
+volI,IWS_ANNEXE_J.tex,section,Signature d'exécution et cellules hybrides,70,115,integrale,G0.2bis,1,0,2,26,17,0.654,7,0,7,0,0,q:5 k:2
+volI,IWS_ANNEXE_J.tex,section,Carte de réponse par cellule,116,162,integrale,G0.2bis,0,0,1,33,19,0.576,11,0,11,0,0,q:5 C:4 A:2
+volI,IWS_ANNEXE_J.tex,section,Décomposition de la frontière,163,249,integrale,G0.2bis,2,0,0,59,45,0.763,11,0,10,1,0,C:7 q:1 a:1 b:1
+volI,IWS_ANNEXE_J.tex,section,Transitions le long d'une famille unidimensionnelle,250,279,integrale,G0.2bis,2,0,1,13,12,0.923,1,0,1,0,0,I:1
+volI,IWS_ANNEXE_J.tex,section,Durée dans une marche et état de coupure,280,303,integrale,G0.2bis,0,0,0,14,1,0.071,9,0,6,3,0,T:6 \Psi:2 X_{0}:1
+volI,IWS_ANNEXE_J.tex,section,Recomposition sans bascule et bascule sans recomposition,304,321,integrale,G0.2bis,0,0,0,18,10,0.556,8,0,8,0,0,q:8
+volI,IWS_ANNEXE_J.tex,section,"Causalité, suffisance et réalisabilité",322,354,integrale,G0.2bis,2,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Structure géométrique et activité décisionnelle,355,369,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Vérification dans le modèle canonique,370,399,integrale,G0.2bis,0,0,0,6,5,0.833,1,0,1,0,0,s:1
+volI,IWS_ANNEXE_J.tex,section,Ce que la proposition ne suppose pas,400,416,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Limites de portée,417,459,integrale,G0.2bis,0,0,0,12,11,0.917,1,0,0,1,0,\Omega:1
+volI,IWS_ANNEXE_J.tex,section,Dépendances et ouverture vers la plasticité,460,479,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Table des notations,480,503,integrale,G0.2bis,0,0,0,10,10,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_J.tex,section,Conclusion,504,521,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Objet et portée de l'annexe,1,22,integrale,G0.2bis,1,0,0,7,7,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Deux présentations d'un même mécanisme,23,75,integrale,G0.2bis,1,0,3,53,29,0.547,23,0,14,9,0,x:14 u:6 e:2 F:1
+volI,IWS_ANNEXE_K.tex,section,Hypothèses de l'équivalence,76,114,integrale,G0.2bis,0,0,2,8,6,0.75,2,0,2,0,0,D:1 x:1
+volI,IWS_ANNEXE_K.tex,section,Correspondance trajectorielle,115,162,integrale,G0.2bis,2,0,0,36,18,0.5,17,0,9,8,0,\mathcal{H}:5 x:5 x_{0}:4 u:2
+volI,IWS_ANNEXE_K.tex,section,Théorème d'équivalence de présentation,163,206,integrale,G0.2bis,3,0,0,24,20,0.833,4,0,0,4,0,\mathcal{H}:3 \square:1
+volI,IWS_ANNEXE_K.tex,section,Détection de la plasticité et indécidabilité de son support,207,250,integrale,G0.2bis,2,0,1,33,23,0.697,10,0,2,8,0,\mathcal{H}_{1}:4 \mathcal{H}_{2}:4 s:2
+volI,IWS_ANNEXE_K.tex,section,Fermeture du résumé étendu,251,301,integrale,G0.2bis,2,0,1,44,39,0.886,4,0,3,1,0,s:3 \square:1
+volI,IWS_ANNEXE_K.tex,section,Frontières de réponse sous présentation plastique,302,339,integrale,G0.2bis,2,0,0,22,21,0.955,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Décision de modélisation : frontière espèce/individu,340,358,integrale,G0.2bis,1,0,1,1,1,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Spectre des horloges actives,359,376,integrale,G0.2bis,0,0,1,2,2,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Instance canonique à cinq horloges,377,400,integrale,G0.2bis,0,0,0,24,21,0.875,3,0,3,0,0,s:3
+volI,IWS_ANNEXE_K.tex,section,Limites de portée,401,438,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Dépendances logiques,439,454,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Registre de statut,455,475,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_K.tex,section,Conclusion,476,487,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_L.tex,section,Objet et portée de l'annexe,1,35,integrale,G0.2bis,1,0,0,7,6,0.857,0,0,0,0,0,
+volI,IWS_ANNEXE_L.tex,section,"Réponses, indiscernabilité et séparateurs",36,97,integrale,G0.2bis,2,2,2,49,19,0.388,30,0,0,30,0,X:9 Y:8 \mathcal{H}:8 \inf:2
+volI,IWS_ANNEXE_L.tex,section,L'inégalité forte,98,154,integrale,G0.2bis,2,0,0,47,12,0.255,35,0,4,31,0,\mathcal{H}:8 X:6 Z:6 Y:5
+volI,IWS_ANNEXE_L.tex,section,Pseudo-ultramétrique et quotient,155,219,integrale,G0.2bis,3,0,2,48,6,0.125,40,0,10,30,0,X:11 Y:7 \infty:6 d:5
+volI,IWS_ANNEXE_L.tex,section,Filtration par profondeur,220,276,integrale,G0.2bis,2,0,1,32,8,0.25,20,0,4,16,0,X:8 Y:6 b:4 \mathcal{H}:2
+volI,IWS_ANNEXE_L.tex,section,Arbre de séparabilité,277,305,integrale,G0.2bis,1,0,1,4,3,0.75,1,0,1,0,0,b:1
+volI,IWS_ANNEXE_L.tex,section,Monotonie des observateurs,306,344,integrale,G0.2bis,0,0,0,21,13,0.619,8,0,0,8,0,X:4 Y:4
+volI,IWS_ANNEXE_L.tex,section,Invariance sous changement de présentation,345,381,integrale,G0.2bis,2,0,0,16,7,0.438,8,0,3,5,0,\mathcal{H}:4 P:2 r:1 \square:1
+volI,IWS_ANNEXE_L.tex,section,Compatibilité avec les résumés suffisants,382,413,integrale,G0.2bis,0,0,0,21,9,0.429,12,0,4,8,0,z:3 X:3 Y:2 Z:1
+volI,IWS_ANNEXE_L.tex,section,Exemple fondateur à trois systèmes,414,439,integrale,G0.2bis,0,0,0,24,5,0.208,17,0,14,3,0,b:6 a:5 \ell:3 d:3
+volI,IWS_ANNEXE_L.tex,section,Limites de portée,440,472,integrale,G0.2bis,0,0,0,4,3,0.75,1,0,1,0,0,b:1
+volI,IWS_ANNEXE_L.tex,section,Dépendances logiques,473,491,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_ANNEXE_L.tex,section,Table des notations,492,512,integrale,G0.2bis,0,0,0,20,7,0.35,12,0,2,10,0,X:5 Y:4 \ell:1 d:1
+volI,IWS_ANNEXE_L.tex,section,Conclusion,513,519,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Statut du document,1,36,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Question traitée,37,72,integrale,G0.2bis,0,0,2,15,11,0.733,4,0,2,2,0,F:2 D:2
+volI,IWS_PART_I.tex,chapter,État du système,73,74,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Graphe et dimensions,75,96,integrale,G0.2bis,0,0,4,8,6,0.75,2,0,2,0,0,d:1 \mathcal{V}:1
+volI,IWS_PART_I.tex,section,Variables nodales,97,171,integrale,G0.2bis,1,0,6,38,27,0.711,6,0,2,4,0,\mathbb{R}^{d}:3 i:1 x:1 \mathcal{V}:1
+volI,IWS_PART_I.tex,chapter,Influence du graphe,172,173,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Matrice relationnelle,174,218,integrale,G0.2bis,0,0,0,26,16,0.615,7,0,4,3,0,I:3 \sum_{j}:3 B:1
+volI,IWS_PART_I.tex,section,Ce que le couplage ne fait pas,219,224,integrale,G0.2bis,0,0,0,4,4,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Trace et préconditionneur,225,226,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Écriture de la trace,227,285,integrale,G0.2bis,0,0,4,41,29,0.707,12,0,3,9,0,\tanh:4 d:3 \mathrm{d}:2 t:2
+volI,IWS_PART_I.tex,section,Matrice \texorpdfstring{\(Q(\tau)\)}{Q(tau)},286,312,integrale,G0.2bis,0,0,3,25,24,0.96,1,0,0,1,0,I_{d}:1
+volI,IWS_PART_I.tex,section,Calcul de \texorpdfstring{\(M(\tau)\)}{M(tau)},313,387,integrale,G0.2bis,0,0,1,61,50,0.82,11,0,10,1,0,c:6 I:2 z:2 I_{d}:1
+volI,IWS_PART_I.tex,section,Friction dépendant de la trace,388,413,integrale,G0.2bis,0,0,2,10,10,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Dynamique continue,414,415,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Équations,416,465,integrale,G0.2bis,0,0,2,37,31,0.838,6,0,1,5,0,t:3 \tanh:2 A:1
+volI,IWS_PART_I.tex,section,Lecture terme par terme,466,502,integrale,G0.2bis,0,0,0,18,15,0.833,3,0,1,2,0,\tanh:1 d:1 t:1
+volI,IWS_PART_I.tex,section,Pression de Kairos,503,520,integrale,G0.2bis,0,0,3,12,12,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Déclenchement et effet des Kairos,521,522,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Ensemble de flot et ensemble de saut,523,555,integrale,G0.2bis,0,0,5,22,16,0.727,6,0,2,4,0,i:3 x:2 t:1
+volI,IWS_PART_I.tex,section,Opérateurs nodaux,556,579,integrale,G0.2bis,0,0,0,18,9,0.5,7,0,4,3,0,x:4 i:2 \min:1
+volI,IWS_PART_I.tex,section,Recâblage conservatif,580,621,integrale,G0.2bis,0,0,2,27,15,0.556,12,0,7,5,0,m:5 s:2 i:2 j:2
+volI,IWS_PART_I.tex,section,Relaxation locale,622,659,integrale,G0.2bis,0,0,2,18,15,0.833,1,0,0,1,0,j:1
+volI,IWS_PART_I.tex,section,Événements simultanés,660,671,integrale,G0.2bis,0,0,0,6,6,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Premières propriétés mathématiques,672,673,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Existence et unicité entre deux événements,674,706,integrale,G0.2bis,0,0,0,18,13,0.722,5,0,0,5,0,t:4 \tanh:1
+volI,IWS_PART_I.tex,section,Absence d'explosion pendant le flot,707,771,integrale,G0.2bis,1,0,1,46,23,0.5,22,0,1,21,0,t:9 Y:5 \mathrm{d}:4 d:1
+volI,IWS_PART_I.tex,section,Invariants et bornes immédiates,772,826,integrale,G0.2bis,0,0,0,28,22,0.786,6,0,1,5,0,t:3 \max:1 d:1 \max_{i}:1
+volI,IWS_PART_I.tex,chapter,Quand les trajectoires restent-elles bornées ?,827,830,integrale,G0.2bis,0,0,0,3,3,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,Cas sans préconditionnement historique,831,865,integrale,G0.2bis,0,0,0,15,13,0.867,2,0,1,1,0,I:1 \sum_{i}:1
+volI,IWS_PART_I.tex,section,Difficulté créée par \texorpdfstring{\(M(\tau)\)}{M(tau)},866,922,integrale,G0.2bis,0,0,0,42,40,0.952,2,0,2,0,0,d:1 s:1
+volI,IWS_PART_I.tex,section,Fonction de Lyapunov pour le flot,923,957,integrale,G0.2bis,0,0,1,22,17,0.773,5,0,4,1,0,a:2 b:2 \sum_{i}:1
+volI,IWS_PART_I.tex,section,Effet d'un saut sur \texorpdfstring{\(\mathcal L\)}{L},958,1034,integrale,G0.2bis,0,0,0,47,37,0.787,7,0,4,3,0,\Delta:2 E:2 q:2 \sum_{i}:1
+volI,IWS_PART_I.tex,section,Combinaison du flot et des sauts,1035,1182,integrale,G0.2bis,1,0,0,75,48,0.64,25,0,13,12,0,R:9 C:6 t:3 b:2
+volI,IWS_PART_I.tex,section,Limite de la preuve,1183,1201,integrale,G0.2bis,0,0,0,10,7,0.7,3,0,3,0,0,s:2 d:1
+volI,IWS_PART_I.tex,chapter,Absence d'accumulation de sauts en temps fini,1202,1328,integrale,G0.2bis,1,0,0,79,41,0.519,36,0,14,22,0,t:11 T:8 Y:6 B:5
+volI,IWS_PART_I.tex,chapter,Deux formes de dépendance à l'histoire,1329,1332,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,La trace modifie le futur,1333,1360,integrale,G0.2bis,1,0,0,27,27,1.0,0,0,0,0,0,
+volI,IWS_PART_I.tex,section,L'ordre des Kairos modifie le graphe,1361,1387,integrale,G0.2bis,1,0,1,7,5,0.714,2,0,2,0,0,x:2
+volI,IWS_PART_I.tex,chapter,Ce que ce noyau permet d'affirmer,1388,1436,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_I.tex,chapter,Réduction homogène utilisée dans le Tome II,1437,1459,integrale,G0.2bis,0,0,0,13,6,0.462,7,0,6,1,0,d:2 h:1 v:1 \theta:1
+volI,IWS_PART_II.tex,preambule,(préambule du fichier),1,31,integrale,G0.2bis,0,0,2,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Axiomes minimaux de l'interface,32,36,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Projection de l'état {[}CHOIX{]},37,55,integrale,G0.2bis,0,0,1,13,6,0.462,6,0,5,1,0,A:3 B:2 \tanh:1
+volI,IWS_PART_II.tex,section,Co-modification de l'interface {[}CHOIX{]},56,75,integrale,G0.2bis,0,0,0,2,0,0.0,2,0,2,0,0,q:1 s:1
+volI,IWS_PART_II.tex,section,Intégration conditionnelle {[}CHOIX{]},76,89,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,L'influence agit par la trace {[}CHOIX{]},90,111,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,La dyade minimale,112,113,integrale,G0.2bis,0,0,3,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Deux systèmes réduits,114,151,integrale,G0.2bis,0,0,0,34,18,0.529,11,0,8,3,0,A:4 B:4 X:1 \Gamma:1
+volI,IWS_PART_II.tex,section,Réduction scalaire,152,210,integrale,G0.2bis,0,0,0,42,31,0.738,10,0,4,6,0,\tanh:3 r:2 r^{2}:2 d:1
+volI,IWS_PART_II.tex,chapter,L'influence ne déplace pas directement le repos,211,288,integrale,G0.2bis,1,0,0,39,30,0.769,9,0,1,8,0,t:3 \Gamma:2 \mathrm{d}:2 \tanh:1
+volI,IWS_PART_II.tex,chapter,Trois réponses à une influence continue,289,290,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Seuil local du repos,291,320,integrale,G0.2bis,0,0,1,11,10,0.909,1,0,1,0,0,B:1
+volI,IWS_PART_II.tex,section,Inertie,321,334,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Résistance,335,390,integrale,G0.2bis,0,0,0,41,35,0.854,5,0,1,4,0,\tanh:4 B:1
+volI,IWS_PART_II.tex,section,Appropriation,391,404,integrale,G0.2bis,0,0,0,2,0,0.0,2,0,2,0,0,B:1 A:1
+volI,IWS_PART_II.tex,chapter,La branche résistante,405,406,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Naissance par bifurcation transcritique,407,460,integrale,G0.2bis,1,0,0,41,39,0.951,2,0,0,2,0,\tanh:2
+volI,IWS_PART_II.tex,section,Développement local,461,493,integrale,G0.2bis,0,0,0,21,18,0.857,3,0,1,2,0,O:2 B:1
+volI,IWS_PART_II.tex,section,Stabilité et rupture de type Hopf,494,528,integrale,G0.2bis,1,0,0,11,11,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Trois seuils qui ne décrivent pas le même phénomène,529,533,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,\texorpdfstring{\(g_c\)}{gc} : seuil de stabilité locale,534,542,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,\texorpdfstring{\(g_{ign}\)}{g ign} : seuil de capture pour un protocole,543,587,integrale,G0.2bis,0,0,0,15,8,0.533,7,0,7,0,0,x_{0}:2 v_{0}:2 \theta_{0}:2 \varepsilon:1
+volI,IWS_PART_II.tex,section,\texorpdfstring{\(g_H\)}{gH} : seuil de stabilité de la branche,588,618,integrale,G0.2bis,0,0,0,14,11,0.786,3,0,3,0,0,x_{0}:1 \theta_{0}:1 v_{0}:1
+volI,IWS_PART_II.tex,chapter,Définition et loi d'appropriation,619,620,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Définition par les bassins {[}DEF{]},621,666,integrale,G0.2bis,1,1,1,28,14,0.5,12,0,12,0,0,z_{0}:4 B:2 T:2 z:2
+volI,IWS_PART_II.tex,section,Durée minimale d'exposition,667,697,integrale,G0.2bis,0,0,0,17,10,0.588,7,0,5,2,0,z_{0}:3 T:2 \inf:1 \infty:1
+volI,IWS_PART_II.tex,section,Linéarisation le long de la trace,698,774,integrale,G0.2bis,0,0,0,32,20,0.625,12,0,5,7,0,t:6 z:3 A:2 \Gamma:1
+volI,IWS_PART_II.tex,chapter,Couplage mutuel : alliance et compétition,775,790,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,États alignés,791,829,integrale,G0.2bis,0,0,0,15,14,0.933,1,0,1,0,0,h:1
+volI,IWS_PART_II.tex,section,États antipodaux,830,874,integrale,G0.2bis,0,0,0,22,21,0.955,1,0,1,0,0,h:1
+volI,IWS_PART_II.tex,chapter,R1 : perméabilité dynamique,876,881,integrale,G0.2bis,0,0,0,1,0,0.0,1,0,1,0,0,q:1
+volI,IWS_PART_II.tex,section,Équation de perméabilité,882,930,integrale,G0.2bis,0,0,1,33,32,0.97,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Transport des seuils,931,977,integrale,G0.2bis,0,0,0,21,21,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Protection de la résistance,978,993,integrale,G0.2bis,0,0,0,5,5,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Effet sur la durée d'exposition,994,1013,integrale,G0.2bis,0,0,0,7,5,0.714,2,0,1,1,0,q:1 q_{\infty}:1
+volI,IWS_PART_II.tex,chapter,R2 : écriture aux Kairos,1014,1018,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Accumulation à l'interface,1019,1078,integrale,G0.2bis,0,0,0,24,21,0.875,1,0,1,0,0,p:1
+volI,IWS_PART_II.tex,section,Validation et appropriation sont distinctes,1079,1089,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Application de retour du cycle événementiel,1090,1091,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Cycle au repos,1092,1110,integrale,G0.2bis,0,0,0,14,8,0.571,6,0,6,0,0,\Delta:4 p:2
+volI,IWS_PART_II.tex,section,Carte de la trace,1111,1156,integrale,G0.2bis,0,0,0,15,12,0.8,3,0,1,2,0,e^{-\beta\Delta}:2 \Delta:1
+volI,IWS_PART_II.tex,section,Stabilité du repos,1157,1184,integrale,G0.2bis,0,0,0,6,6,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Les seuils de R2,1185,1240,integrale,G0.2bis,0,0,0,21,20,0.952,1,0,1,0,0,x_{0}:1
+volI,IWS_PART_II.tex,chapter,Deux expositions : la phase de réception,1241,1242,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Protocole,1243,1275,integrale,G0.2bis,0,0,0,9,6,0.667,3,0,2,1,0,D:2 \pi:1
+volI,IWS_PART_II.tex,section,Trois régimes,1276,1338,integrale,G0.2bis,0,0,0,9,4,0.444,5,0,5,0,0,D:5
+volI,IWS_PART_II.tex,section,Pourquoi la période vaut \texorpdfstring{\(2\pi/\omega\)}{2 pi / omega},1339,1376,integrale,G0.2bis,0,0,0,16,5,0.312,7,0,4,3,0,\pi:3 D:3 A:1
+volI,IWS_PART_II.tex,chapter,La dose totale ne détermine pas l'issue,1377,1412,integrale,G0.2bis,0,0,0,8,5,0.625,2,0,2,0,0,D:2
+volI,IWS_PART_II.tex,chapter,Amorçage par une variable lente de l'interface,1415,1418,integrale,G0.2bis,0,0,0,5,4,0.8,1,0,1,0,0,p:1
+volI,IWS_PART_II.tex,section,Mémoire scalaire,1419,1449,integrale,G0.2bis,0,0,0,12,12,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Effet sur une seconde exposition,1450,1487,integrale,G0.2bis,1,1,1,1,1,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Tête d'avance et boucle dynamique,1488,1520,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Temps fini et contact soutenu,1521,1535,integrale,G0.2bis,0,0,0,4,3,0.75,1,0,1,0,0,\Delta:1
+volI,IWS_PART_II.tex,chapter,Limite de la mémoire scalaire,1536,1575,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Mémoire directionnelle et compatibilité,1576,1577,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Variable vectorielle,1578,1619,integrale,G0.2bis,0,0,0,17,15,0.882,2,0,1,1,0,s:1 \max:1
+volI,IWS_PART_II.tex,section,Trois cas,1620,1648,integrale,G0.2bis,0,0,0,7,7,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Résultats,1649,1696,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Statut de l'intégration conditionnelle,1697,1717,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,"Appropriation, amorçage et mémoire spécifique",1718,1721,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Appropriation,1722,1732,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Amorçage,1733,1742,integrale,G0.2bis,0,0,0,2,2,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,section,Mémoire spécifique,1743,1754,integrale,G0.2bis,0,0,0,3,1,0.333,2,0,2,0,0,\varphi:2
+volI,IWS_PART_II.tex,chapter,Ce que le Tome II établit,1755,1812,integrale,G0.2bis,0,0,0,1,1,1.0,0,0,0,0,0,
+volI,IWS_PART_II.tex,chapter,Passage vers le Tome III,1813,1858,integrale,G0.2bis,0,0,1,13,5,0.385,6,0,0,6,0,u:4 \mathcal{H}_{1}:1 \mathcal{H}_{2}:1
+volI,IWS_PART_III.tex,preambule,(préambule du fichier),1,1,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,chapter,Des trajectoires aux histoires,2,59,integrale,G0.2bis,0,0,0,11,9,0.818,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Pourquoi la trajectoire ne suffit pas,60,122,integrale,G0.2bis,0,0,0,21,15,0.714,5,0,0,5,0,X_{0}:2 X_{\mathcal H}:2 j:1
+volI,IWS_PART_III.tex,section,"Histoires, épisodes et composition",123,253,integrale,G0.2bis,0,0,5,58,49,0.845,6,0,1,5,0,e_{1}:2 e_{2}:2 e:1 \varepsilon:1
+volI,IWS_PART_III.tex,section,"Sondes, lectures et séparabilité relative",254,433,integrale,G0.2bis,0,0,5,67,47,0.701,20,0,0,20,0,X:11 Y:8 X_{0}:1
+volI,IWS_PART_III.tex,section,Ce qui survit d'une histoire,434,531,integrale,G0.2bis,0,0,2,26,17,0.654,9,0,0,9,0,X_{0}:5 X_{1}:2 X_{2}:2
+volI,IWS_PART_III.tex,chapter,Compression des histoires sous-critiques,532,562,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Une classe d'histoires compressibles,563,643,integrale,G0.2bis,0,0,3,23,15,0.652,7,0,0,7,0,e_{1}:2 e_{2}:2 e_{k}:2 X_{0}:1
+volI,IWS_PART_III.tex,section,Superposition et poids de récence,644,727,integrale,G0.2bis,1,0,1,33,26,0.788,6,0,0,6,0,e_{k}:3 e_{A}:1 e_{B}:1 X_{0}:1
+volI,IWS_PART_III.tex,section,Ce que la compression permet d'exclure,728,813,integrale,G0.2bis,0,0,1,45,26,0.578,19,0,2,17,0,e_{A}:8 e_{B}:8 e:1 p:1
+volI,IWS_PART_III.tex,chapter,Quand les expériences deviennent conditionnelles,814,843,integrale,G0.2bis,0,0,0,10,0,0.0,10,0,0,10,0,e_{B}:5 e_{A}:5
+volI,IWS_PART_III.tex,section,Un épisode n'agit pas sur une réalisation neutre,844,901,integrale,G0.2bis,0,0,0,33,11,0.333,22,0,0,22,0,e:7 X_{0}:6 X_{\mathcal H}:3 X_{1}:3
+volI,IWS_PART_III.tex,section,Quand la mémoire héritée modifie l'écriture,902,987,integrale,G0.2bis,0,0,0,53,39,0.736,14,0,0,14,0,e:11 X_{1}:1 X_{2}:1 j:1
+volI,IWS_PART_III.tex,section,Quand le même épisode change d'issue,988,1147,integrale,G0.2bis,0,0,1,68,34,0.5,32,0,19,13,0,C:9 P:8 e:6 X_{0}:3
+volI,IWS_PART_III.tex,section,Quand les transitoires se rencontrent,1148,1314,integrale,G0.2bis,0,0,0,52,20,0.385,27,0,26,1,0,C:15 P:5 \Delta:4 X_{0}:1
+volI,IWS_PART_III.tex,section,Trois manières pour l'ordre de compter,1315,1347,integrale,G0.2bis,0,0,0,6,4,0.667,2,0,0,2,0,e:2
+volI,IWS_PART_III.tex,chapter,Quand l'histoire change le terrain,1349,1372,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,L'accessibilité comme propriété de la réalisation,1373,1528,integrale,G0.2bis,0,0,1,39,26,0.667,11,0,0,11,0,X:4 X_{0}:3 X_{1}:2 X_{2}:2
+volI,IWS_PART_III.tex,section,Comparer deux terrains,1529,1592,integrale,G0.2bis,0,0,0,20,16,0.8,4,0,0,4,0,X_{1}:2 X_{2}:2
+volI,IWS_PART_III.tex,section,Comparer avant et après l'histoire,1593,1653,integrale,G0.2bis,0,0,0,26,16,0.615,8,0,4,4,0,X_{0}:3 z:1 p:1 \chi:1
+volI,IWS_PART_III.tex,section,Du terrain aux frontières de réponse,1654,1691,integrale,G0.2bis,0,0,1,13,11,0.846,1,0,0,1,0,X:1
+volI,IWS_PART_III.tex,chapter,Géométrie des frontières de réponse,1692,1707,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Régions de réponse,1708,1729,integrale,G0.2bis,0,0,1,22,15,0.682,7,0,3,4,0,X:4 A:3
+volI,IWS_PART_III.tex,section,Comparer deux frontières,1730,1791,integrale,G0.2bis,0,0,0,43,22,0.512,21,0,5,16,0,X_{1}:7 X_{2}:7 A:5 \varnothing:2
+volI,IWS_PART_III.tex,section,Ce qu'une frontière permet de dire,1792,1819,integrale,G0.2bis,0,0,0,6,4,0.667,2,0,0,2,0,X:2
+volI,IWS_PART_III.tex,section,Trois niveaux de changement,1820,1900,integrale,G0.2bis,0,0,0,17,11,0.647,2,0,2,0,0,A:1 m:1
+volI,IWS_PART_III.tex,section,Changer de frontière sans changer de réponse,1901,1935,integrale,G0.2bis,0,0,0,15,6,0.4,9,0,1,8,0,X_{1}:3 X_{2}:3 \varnothing:2 A:1
+volI,IWS_PART_III.tex,section,"Même organisation, géométrie différente",1936,1966,integrale,G0.2bis,0,0,0,8,2,0.25,6,0,2,4,0,X_{1}:2 X_{2}:2 A:2
+volI,IWS_PART_III.tex,section,Le graphe des voisinages,1967,2007,integrale,G0.2bis,0,0,1,16,6,0.375,10,0,2,8,0,X:5 \varnothing:1 A:1 B:1
+volI,IWS_PART_III.tex,section,Reconnaître un changement d'organisation,2008,2044,integrale,G0.2bis,0,0,0,3,1,0.333,2,0,1,1,0,A:1 X:1
+volI,IWS_PART_III.tex,section,Lorsque la frontière cesse d'être simple,2045,2062,integrale,G0.2bis,0,0,1,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Pli d'une frontière de réponse,2063,2093,integrale,G0.2bis,0,0,0,11,2,0.182,9,0,9,0,0,A:5 B:4
+volI,IWS_PART_III.tex,section,Pli et histoire,2094,2105,integrale,G0.2bis,0,0,0,4,0,0.0,4,0,0,4,0,X_{1}:2 X_{2}:2
+volI,IWS_PART_III.tex,section,Lorsque les régions se rencontrent,2106,2135,integrale,G0.2bis,0,0,0,11,2,0.182,9,0,4,5,0,A:2 B:2 X:2 \overline{...}:2
+volI,IWS_PART_III.tex,section,Rencontre de plusieurs réponses,2136,2160,integrale,G0.2bis,0,0,0,10,4,0.4,6,0,3,3,0,\overline{...}:3 A:1 B:1 C:1
+volI,IWS_PART_III.tex,section,Couture de régions de réponse,2161,2172,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,chapter,Lire une géométrie de réponse,2175,2182,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Ce que les frontières permettent d'inférer,2183,2189,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Une même géométrie n'identifie pas une histoire,2190,2229,integrale,G0.2bis,0,0,0,15,8,0.533,7,0,1,6,0,X_{1}:2 X_{0}:2 X_{2}:2 A:1
+volI,IWS_PART_III.tex,section,Une même réalisation peut produire plusieurs géométries,2230,2276,integrale,G0.2bis,0,0,1,11,8,0.727,2,0,0,2,0,X:2
+volI,IWS_PART_III.tex,section,La géométrie de réponse comme invariant relatif,2277,2295,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Les histoires et les changements de géométrie,2296,2318,integrale,G0.2bis,0,0,0,5,2,0.4,3,0,0,3,0,X:3
+volI,IWS_PART_III.tex,section,Transformations observables et propriétés préservées,2319,2350,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volI,IWS_PART_III.tex,section,Une notion d'équivalence,2351,2396,integrale,G0.2bis,0,0,0,21,13,0.619,8,0,2,6,0,X:3 Y:3 A:1 c:1
+volI,IWS_PART_III.tex,section,Ce que l'observation laisse ouvert,2397,2413,integrale,G0.2bis,0,0,0,0,0,,0,0,0,0,0,
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,preambule,(préambule du fichier),1,61,integrale,G0.2,0,0,0,1,0,0.0,1,0,0,1,0,C^{2}:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Changement de niveau : du spécimen à la classe,62,72,integrale,G0.2,0,0,0,0,0,,0,0,0,0,0,
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Socle hybride ambiant,73,131,integrale,G0.2,1,1,17,97,67,0.691,24,0,1,23,0,\mathcal{H}:10 x:9 x_{0}:2 t:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Le système présenté et la tour des projections,132,195,integrale,G0.2,1,1,13,100,77,0.77,14,0,0,14,0,s:6 x:2 \mathcal{H}:2 f:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Historicité : du calendrier à la bifurcation structurelle,196,285,integrale,G0.2,2,1,5,111,76,0.685,17,0,0,17,0,\mathcal{H}:5 x_{0}:4 x_{1}:4 x_{2}:4
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Efficacité de la structure et couplage avec l'historicité,286,313,integrale,G0.2,0,0,2,25,19,0.76,5,0,0,5,0,x:2 s:2 \mathcal{H}:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,"Candidat constitutif : C0, C1, C23, C4",314,373,integrale,G0.2,2,2,3,42,34,0.81,2,0,0,2,0,\mathcal{P}_{k}:1 j:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Taxonomie mécanistique : expliquer sans définir,374,458,integrale,G0.2,0,0,2,123,67,0.545,50,0,0,50,0,x_{1}:22 x_{2}:22 r:3 x:2
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Granularités d'exécution,459,544,integrale,G0.2,0,0,6,106,72,0.679,24,0,0,24,0,t:15 s:4 x_{0}:2 y:2
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,"Morphismes dynamiques, observationnels et histoires",545,578,integrale,G0.2,1,0,0,53,40,0.755,7,0,3,4,0,G:2 x:2 \mathcal{H}:2 T:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Crash-tests de la définition candidate,579,855,integrale,G0.2,13,0,4,421,213,0.506,163,0,43,120,0,T:15 h:14 a:13 c:12
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Exploration à profondeur finie des fibres d'opacité,856,1862,integrale,G0.2,23,2,23,1400,840,0.6,387,0,75,312,0,x:46 y:25 \varphi:15 m:14
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Deux questions laissées volontairement ouvertes,1863,1881,integrale,G0.2,2,0,2,14,8,0.571,6,0,0,6,0,t:2 \lambda:1 \eta:1 x_{0}:1
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,Réserve géométrique : des fibres de projection aux structures fibrées éventuelles,1882,1902,integrale,G0.2,0,0,0,15,13,0.867,2,0,0,2,0,Y:2
+volII,IWS_volume_II_classe_objets_transformations_v5_17.tex,section,État de travail actuel,1903,1925,integrale,G0.2,0,0,0,13,6,0.462,5,0,1,4,0,e:1 m:1 \lambda:1 S^{1}:1
+compagnons,certification_huit_episodes_V2.tex,preambule,(préambule du fichier),1,26,integrale,G0.2bis,0,0,0,8,4,0.5,4,0,0,4,0,C^{2}:2 R:2
+compagnons,certification_huit_episodes_V2.tex,section,"Ce qui est démontré à la main, ce qui est calculé",27,42,integrale,G0.2bis,0,0,0,13,8,0.615,5,0,0,5,0,R:2 C^{2}:1 s^{a}:1 s:1
+compagnons,certification_huit_episodes_V2.tex,section,Énoncé principal (conditionnel),43,64,integrale,G0.2bis,2,0,1,72,25,0.347,21,0,1,20,0,t:4 u_{0}:2 U:2 R:2
+compagnons,certification_huit_episodes_V2.tex,section,Lemme de Cauchy autonome,65,88,integrale,G0.2bis,2,0,0,229,62,0.271,89,0,1,88,0,s:21 r:9 x:7 M:7
+compagnons,certification_huit_episodes_V2.tex,section,Les deux méthodes,89,97,integrale,G0.2bis,0,0,0,14,5,0.357,1,0,0,1,0,U:1
+compagnons,certification_huit_episodes_V2.tex,section,Résultats,98,119,integrale,G0.2bis,0,0,0,12,7,0.583,1,0,0,1,0,r:1
+compagnons,certification_huit_episodes_V2.tex,section,Audit du lemme de Cauchy,120,127,integrale,G0.2bis,0,0,0,18,6,0.333,8,0,0,8,0,E:3 M:1 s^{a}:1 \delta:1
+compagnons,certification_huit_episodes_V2.tex,section,Limites explicites,128,137,integrale,G0.2bis,0,0,0,6,3,0.5,2,0,0,2,0,T_{1}:1 R:1
+compagnons,certification_huit_episodes_V2.tex,section,Statut,138,155,integrale,G0.2bis,0,0,0,4,2,0.5,2,0,0,2,0,R:2
+compagnons,transmission_profondeur_finie_V2.tex,preambule,(préambule du fichier),1,24,integrale,G0.2bis,0,0,0,2,0,0.0,2,0,0,2,0,C^{2}:1 R:1
+compagnons,transmission_profondeur_finie_V2.tex,section,Cadre,25,36,integrale,G0.2bis,0,0,5,118,75,0.636,20,0,4,16,0,\lambda:4 t:4 x:2 d:2
+compagnons,transmission_profondeur_finie_V2.tex,section,Hypoth\`eses au point de base $q_0$,37,52,integrale,G0.2bis,1,0,2,126,58,0.46,51,0,1,50,0,t:15 R:5 j:5 r:4
+compagnons,transmission_profondeur_finie_V2.tex,section,Lemmes,53,74,integrale,G0.2bis,5,0,0,320,148,0.463,125,0,14,111,0,t:24 C^{2}:15 \varphi:9 d:8
+compagnons,transmission_profondeur_finie_V2.tex,section,D\'emonstration du th\'eor\`eme,75,79,integrale,G0.2bis,0,0,0,63,30,0.476,29,0,4,25,0,r:7 C^{2}:7 I:4 R:2
+compagnons,transmission_profondeur_finie_V2.tex,section,Remarques,80,93,integrale,G0.2bis,4,0,0,26,4,0.154,13,0,0,13,0,u:4 C^{2}:4 C^{1}:1 \varphi:1
+compagnons,transmission_profondeur_finie_V2.tex,section,Statut,94,109,integrale,G0.2bis,0,0,0,3,0,0.0,2,0,0,2,0,R:2

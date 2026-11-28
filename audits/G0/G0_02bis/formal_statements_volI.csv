@@ -1,0 +1,109 @@
+fichier,ligne,fin,forme,type,label,titre,section
+Volume_I/IWS_PART_I.tex,145,170,env:encadre,BOX,,,État du système > Variables nodales > Pression \texorpdfstring{\(P_i\)}{Pi}
+Volume_I/IWS_PART_I.tex,769,,resultheading,PROP,prop:t1-existence-flot,Proposition,Premières propriétés mathématiques > Absence d'explosion pendant le flot
+Volume_I/IWS_PART_I.tex,1172,,resultheading,PROP,prop:t1-bornitude-conditionnelle,Proposition,Quand les trajectoires restent-elles bornées ? > Combinaison du flot et des sauts
+Volume_I/IWS_PART_I.tex,1319,,resultheading,PROP,prop:t1-absence-zenon,Proposition,Absence d'accumulation de sauts en temps fini
+Volume_I/IWS_PART_I.tex,1356,,resultheading,PROP,prop:t1-trace-modifie-futur,Proposition,Deux formes de dépendance à l'histoire > La trace modifie le futur
+Volume_I/IWS_PART_I.tex,1377,,resultheading,PROP,prop:t1-historicite-structurelle,Proposition,Deux formes de dépendance à l'histoire > L'ordre des Kairos modifie le graphe
+Volume_I/IWS_PART_II.tex,238,,resultheading,PROP,prop:t2-repos-invariant,Proposition,De l’influence à l’appropriation > L'influence ne déplace pas directement le repos
+Volume_I/IWS_PART_II.tex,456,,resultheading,PROP,prop:t2-branche-resistante,Proposition,De l’influence à l’appropriation > La branche résistante > Naissance par bifurcation transcritique
+Volume_I/IWS_PART_II.tex,524,,resultheading,PROP,prop:t2-rupture-hopf,Proposition,De l’influence à l’appropriation > La branche résistante > Stabilité et rupture de type Hopf
+Volume_I/IWS_PART_II.tex,640,,resultheading,DEF,def:t2-appropriation,Définition,De l’influence à l’appropriation > Définition et loi d'appropriation > Définition par les bassins {[}DEF{]}
+Volume_I/IWS_PART_II.tex,1485,,resultheading,DEF,def:t2-amorcage-interface,Définition,Ce qui reste d’une interaction > Amorçage par une variable lente de l'interface > Effet sur une seconde exposition
+Volume_I/IWS_PART_III.tex,689,714,env:proposition,PROP,prop:t3-compression-sous-critique,Compression des histoires sous-critiques,Des histoires à l'observation > Compression des histoires sous-critiques > Superposition et poids de récence
+Volume_I/Annexes/IWS_ANNEXE_A.tex,716,,resultheading,PROP,prop:A-existence-unicite-locale,Proposition,Existence et unicité locale
+Volume_I/Annexes/IWS_ANNEXE_A.tex,860,,resultheading,PROP,prop:A-non-explosion-flot,Proposition,Absence d'explosion en temps fini
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1133,,resultheading,PROP,prop:A-absence-zenon,Proposition,Absence d'accumulation de sauts en temps fini
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1165,,resultheading,PROP,prop:A-execution-hybride-unique,Proposition,Existence et unicité de l'exécution hybride
+Volume_I/Annexes/IWS_ANNEXE_B.tex,907,,resultheading,PROP,prop:B-bornitude-conditionnelle,Proposition,Résultat final
+Volume_I/Annexes/IWS_ANNEXE_C.tex,183,,resultheading,PROP,prop:C-invariance-flot-delta,Proposition,Invariance de \texorpdfstring{$\Delta$}{Delta} pendant le flot
+Volume_I/Annexes/IWS_ANNEXE_C.tex,256,,resultheading,PROP,prop:C-invariance-cascade-delta,Proposition,Effet d'une cascade de Kairos
+Volume_I/Annexes/IWS_ANNEXE_C.tex,533,,resultheading,PROP,prop:C-equilibres-structurels,Proposition,Pourquoi toutes les composantes non nulles ont la même
+Volume_I/Annexes/IWS_ANNEXE_C.tex,655,,resultheading,PROP,prop:C-extinction-structurelle,Proposition,Condition simple d'extinction structurelle
+Volume_I/Annexes/IWS_ANNEXE_D.tex,195,,resultheading,PROP,prop:D-repos-invariant,Proposition,Le repos exact reste invariant
+Volume_I/Annexes/IWS_ANNEXE_D.tex,580,,resultheading,PROP,prop:D-bifurcation-transcritique,Proposition,Naissance transcritique de la résistance
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1429,,resultheading,DEF,def:D-appropriation,Définition,Définition de l'appropriation par les bassins
+Volume_I/Annexes/IWS_ANNEXE_E.tex,302,,resultheading,PROP,prop:E-transport-seuil-R1,Proposition,Transport d'un seuil du modèle continu
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1099,,resultheading,PROP,prop:E-trace-moyenne-R2,Proposition,R2 : écriture événementielle > Moyenne temporelle exacte de la trace
+Volume_I/Annexes/IWS_ANNEXE_G.tex,32,41,env:encadre,BOX,,Principe de relativité observationnelle,Objet et statut de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_G.tex,107,114,env:encadre,BOX,,A-H1 --- statut de la regraine,"Systèmes, épisodes et histoires"
+Volume_I/Annexes/IWS_ANNEXE_G.tex,335,342,env:encadre,BOX,,Vocabulaire,Équivalence et quotient d'observation
+Volume_I/Annexes/IWS_ANNEXE_G.tex,351,,resultstep,LEM,lem:G-transport-prefixe,,Transport par préfixe
+Volume_I/Annexes/IWS_ANNEXE_G.tex,352,,paragraph,LEM,,Lemme # --- transport par préfixe.,Transport par préfixe
+Volume_I/Annexes/IWS_ANNEXE_G.tex,464,,resultstep,PROP,prop:G-congruence-nerode,,Congruence comportementale complète
+Volume_I/Annexes/IWS_ANNEXE_G.tex,465,,paragraph,PROP,,Proposition # --- congruence de Nerode.,Congruence comportementale complète
+Volume_I/Annexes/IWS_ANNEXE_G.tex,575,,resultstep,PROP,prop:G-c-independance-quotient,,Indépendance du quotient vis-à-vis de la complexité
+Volume_I/Annexes/IWS_ANNEXE_G.tex,576,,paragraph,PROP,,Proposition # --- \(c\)-indépendance du quotient.,Indépendance du quotient vis-à-vis de la complexité
+Volume_I/Annexes/IWS_ANNEXE_G.tex,640,,resultstep,PROP,prop:G-monotonie-observabilite,,Monotonie bidimensionnelle de l'observabilité
+Volume_I/Annexes/IWS_ANNEXE_G.tex,641,,paragraph,PROP,,Proposition # --- monotonie bidimensionnelle.,Monotonie bidimensionnelle de l'observabilité
+Volume_I/Annexes/IWS_ANNEXE_G.tex,755,760,env:encadre,BOX,,Lecture effective,Système inverse des quotients d'observation
+Volume_I/Annexes/IWS_ANNEXE_H.tex,23,38,env:encadre,BOX,,Résultat directeur,Objet et portée de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_H.tex,80,84,env:encadre,BOX,,A-H1 --- Appartenance de la regraine au protocole,État de départ de la sonde > La regraine comme opération du protocole
+Volume_I/Annexes/IWS_ANNEXE_H.tex,147,,paragraph,LABELLED,,O1 --- Déterminisme de l'exécution.,Hypothèses de réduction
+Volume_I/Annexes/IWS_ANNEXE_H.tex,156,,paragraph,LABELLED,,(E1) --- Regraine canonique.,Hypothèses de réduction
+Volume_I/Annexes/IWS_ANNEXE_H.tex,161,,paragraph,LABELLED,,(E2) --- Extinction des variables non survivantes.,Hypothèses de réduction
+Volume_I/Annexes/IWS_ANNEXE_H.tex,164,,paragraph,LABELLED,,(E3) --- Suffisance comportementale du résumé.,Hypothèses de réduction
+Volume_I/Annexes/IWS_ANNEXE_H.tex,181,191,env:encadre,BOX,,Ce que le théorème ne suppose pas,Hypothèses de réduction
+Volume_I/Annexes/IWS_ANNEXE_H.tex,196,,resultstep,THM,thm:H-contenu-survivant,,Réduction au contenu survivant
+Volume_I/Annexes/IWS_ANNEXE_H.tex,197,218,env:encadre,BOX,,Théorème # --- Réduction au contenu survivant,Réduction au contenu survivant
+Volume_I/Annexes/IWS_ANNEXE_H.tex,361,,resultstep,COR,cor:H-prediction-prefixe,,Préfixes éteints et carte totale d'écriture > Formule de composition
+Volume_I/Annexes/IWS_ANNEXE_H.tex,362,385,env:encadre,BOX,,Corollaire # --- Prédiction d'une sonde après un préfixe éteint,Préfixes éteints et carte totale d'écriture > Formule de composition
+Volume_I/Annexes/IWS_ANNEXE_H.tex,421,,resultstep,COR,cor:H-equation-seuil,,Cas à commutation unique et équation de seuil > Hypothèse locale de commutation unique
+Volume_I/Annexes/IWS_ANNEXE_H.tex,422,443,env:encadre,BOX,,Corollaire # --- Équation de seuil,Cas à commutation unique et équation de seuil > Hypothèse locale de commutation unique
+Volume_I/Annexes/IWS_ANNEXE_H.tex,509,,resultstep,COR,cor:H-compression-sous-critique,,Proposition~\ref{prop:t3-compression-sous-critique} comme cas de compression
+Volume_I/Annexes/IWS_ANNEXE_H.tex,510,529,env:encadre,BOX,,"Corollaire # --- Compression sous-critique, Proposition~\ref{prop:t3-compression-sous-critique}",Proposition~\ref{prop:t3-compression-sous-critique} comme cas de compression
+Volume_I/Annexes/IWS_ANNEXE_H.tex,583,,resultstep,COR,cor:H-localisation-bascules,,Structure générale des motifs > Décomposition des sources de non-monotonie
+Volume_I/Annexes/IWS_ANNEXE_H.tex,584,597,env:encadre,BOX,,Corollaire # --- Localisation exhaustive des bascules,Structure générale des motifs > Décomposition des sources de non-monotonie
+Volume_I/Annexes/IWS_ANNEXE_H.tex,646,,resultstep,PROP,prop:H-extinction-approchee,,Extinction approchée
+Volume_I/Annexes/IWS_ANNEXE_H.tex,647,661,env:encadre,BOX,,"Proposition # --- Extinction approchée, énoncé conditionnel",Extinction approchée
+Volume_I/Annexes/IWS_ANNEXE_I.tex,22,41,env:encadre,BOX,,Résultat directeur,Objet et portée de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_I.tex,127,,paragraph,LABELLED,,(A1) --- Déterminisme.,Hypothèses de fermeture
+Volume_I/Annexes/IWS_ANNEXE_I.tex,132,,paragraph,LABELLED,,(A2) --- Invariance du sous-espace aligné.,Hypothèses de fermeture
+Volume_I/Annexes/IWS_ANNEXE_I.tex,137,,paragraph,LABELLED,,(A3) --- Suffisance comportementale de $z$.,Hypothèses de fermeture
+Volume_I/Annexes/IWS_ANNEXE_I.tex,148,,paragraph,LABELLED,,(A4) --- Regraine commune.,Hypothèses de fermeture
+Volume_I/Annexes/IWS_ANNEXE_I.tex,152,159,env:encadre,BOX,,Statut de l'hypothèse markovienne,Hypothèses de fermeture
+Volume_I/Annexes/IWS_ANNEXE_I.tex,164,,resultstep,LEM,lem:I-invariance-alignee,,Lemme d'invariance alignée
+Volume_I/Annexes/IWS_ANNEXE_I.tex,165,172,env:encadre,BOX,,Lemme # --- Invariance de la famille alignée,Lemme d'invariance alignée
+Volume_I/Annexes/IWS_ANNEXE_I.tex,197,,resultstep,PROP,prop:I-etat-lent-aligne,,Suffisance de l'état lent aligné
+Volume_I/Annexes/IWS_ANNEXE_I.tex,198,217,env:encadre,BOX,,Proposition # --- Paramétrage exact par l'état lent aligné,Suffisance de l'état lent aligné
+Volume_I/Annexes/IWS_ANNEXE_I.tex,264,,resultstep,COR,cor:I-emboitement-resumes,,Relation avec la réduction au contenu survivant
+Volume_I/Annexes/IWS_ANNEXE_I.tex,265,279,env:encadre,BOX,,Corollaire # --- Emboîtement des résumés suffisants,Relation avec la réduction au contenu survivant
+Volume_I/Annexes/IWS_ANNEXE_I.tex,308,,resultstep,COR,cor:I-localisation-bascules,,Ensemble d'appropriation et frontière
+Volume_I/Annexes/IWS_ANNEXE_I.tex,309,319,env:encadre,BOX,,Corollaire # --- Localisation des bascules d'une famille historique,Ensemble d'appropriation et frontière
+Volume_I/Annexes/IWS_ANNEXE_I.tex,391,,resultstep,COR,cor:I-factorisation-ablation,,Activité des coordonnées lentes
+Volume_I/Annexes/IWS_ANNEXE_I.tex,392,399,env:encadre,BOX,,Corollaire # --- Factorisation et test par ablation,Activité des coordonnées lentes
+Volume_I/Annexes/IWS_ANNEXE_J.tex,20,30,env:encadre,BOX,,Résultat directeur,Objet et portée de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_J.tex,109,114,env:encadre,BOX,,Précaution de portée,Signature d'exécution et cellules hybrides
+Volume_I/Annexes/IWS_ANNEXE_J.tex,191,,resultstep,PROP,prop:J-pli-couture,,Décomposition de la frontière
+Volume_I/Annexes/IWS_ANNEXE_J.tex,192,225,env:encadre,BOX,,Proposition # --- Pli et couture de la frontière,Décomposition de la frontière
+Volume_I/Annexes/IWS_ANNEXE_J.tex,271,,resultstep,COR,cor:J-axe-type,,Transitions le long d'une famille unidimensionnelle
+Volume_I/Annexes/IWS_ANNEXE_J.tex,272,278,env:encadre,BOX,,Corollaire # --- La nature de l'axe ne décide pas le type,Transitions le long d'une famille unidimensionnelle
+Volume_I/Annexes/IWS_ANNEXE_J.tex,346,,resultstep,COR,cor:J-domaine-realisable,,"Causalité, suffisance et réalisabilité"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,347,353,env:encadre,BOX,,Corollaire # --- Restriction au domaine réalisable,"Causalité, suffisance et réalisabilité"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,18,21,env:encadre,BOX,,Résultat directeur,Objet et portée de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_K.tex,69,74,env:encadre,BOX,,Convention de présentation,Deux présentations d'un même mécanisme > Présentation à loi figée
+Volume_I/Annexes/IWS_ANNEXE_K.tex,128,,resultstep,LEM,lem:K-identite-executions,,Correspondance trajectorielle
+Volume_I/Annexes/IWS_ANNEXE_K.tex,129,139,env:encadre,BOX,,Lemme # --- Identité des exécutions,Correspondance trajectorielle
+Volume_I/Annexes/IWS_ANNEXE_K.tex,166,,resultstep,THM,thm:K-equivalence-plasticite,,Théorème d'équivalence de présentation
+Volume_I/Annexes/IWS_ANNEXE_K.tex,167,190,env:encadre,BOX,,Théorème # --- Équivalence de présentation de la plasticité,Théorème d'équivalence de présentation
+Volume_I/Annexes/IWS_ANNEXE_K.tex,199,205,env:encadre,BOX,,Ce que le théorème ne suppose pas,Théorème d'équivalence de présentation
+Volume_I/Annexes/IWS_ANNEXE_K.tex,239,,resultstep,COR,cor:K-horloge-ontologie,,Détection de la plasticité et indécidabilité de son support
+Volume_I/Annexes/IWS_ANNEXE_K.tex,240,249,env:encadre,BOX,,"Corollaire # --- Détectable comme horloge, indécidable comme ontologie",Détection de la plasticité et indécidabilité de son support
+Volume_I/Annexes/IWS_ANNEXE_K.tex,284,,resultstep,PROP,prop:K-cinquieme-coordonnee,,Fermeture du résumé étendu
+Volume_I/Annexes/IWS_ANNEXE_K.tex,285,295,env:encadre,BOX,,Proposition # --- Critère de nécessité de la cinquième coordonnée,Fermeture du résumé étendu
+Volume_I/Annexes/IWS_ANNEXE_K.tex,333,,resultstep,COR,cor:K-invariance-frontiere,,Frontières de réponse sous présentation plastique
+Volume_I/Annexes/IWS_ANNEXE_K.tex,334,338,env:encadre,BOX,,Corollaire # --- Invariance de la frontière complète,Frontières de réponse sous présentation plastique
+Volume_I/Annexes/IWS_ANNEXE_K.tex,343,352,env:encadre,BOX,,D-08 --- Frontière déclarative,Décision de modélisation : frontière espèce/individu
+Volume_I/Annexes/IWS_ANNEXE_L.tex,28,34,env:encadre,BOX,,Résultat directeur,Objet et portée de l'annexe
+Volume_I/Annexes/IWS_ANNEXE_L.tex,70,,resultstep,DEF,def:L-profondeur-separabilite,,"Réponses, indiscernabilité et séparateurs"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,71,,paragraph,DEF,,Définition # --- profondeur de séparabilité.,"Réponses, indiscernabilité et séparateurs"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,101,,resultstep,PROP,prop:L-inegalite-ultrametrique,,L'inégalité forte
+Volume_I/Annexes/IWS_ANNEXE_L.tex,102,115,env:encadre,BOX,,Proposition # --- Inégalité ultramétrique de séparabilité,L'inégalité forte
+Volume_I/Annexes/IWS_ANNEXE_L.tex,182,,resultstep,COR,cor:L-geometrie-ultrametrique,,Pseudo-ultramétrique et quotient
+Volume_I/Annexes/IWS_ANNEXE_L.tex,183,195,env:encadre,BOX,,Corollaire # --- Géométrie ultramétrique,Pseudo-ultramétrique et quotient
+Volume_I/Annexes/IWS_ANNEXE_L.tex,212,218,env:encadre,BOX,,Ce que la proposition ne suppose pas,Pseudo-ultramétrique et quotient
+Volume_I/Annexes/IWS_ANNEXE_L.tex,240,,resultstep,COR,cor:L-boules-budgets,,Filtration par profondeur
+Volume_I/Annexes/IWS_ANNEXE_L.tex,241,256,env:encadre,BOX,,Corollaire # --- Boules et budgets,Filtration par profondeur
+Volume_I/Annexes/IWS_ANNEXE_L.tex,294,300,env:encadre,BOX,,Interprétation --- profondeur commune de décision,Arbre de séparabilité
+Volume_I/Annexes/IWS_ANNEXE_L.tex,359,,resultstep,COR,cor:L-invariance-rebapteme,,Invariance sous changement de présentation
+Volume_I/Annexes/IWS_ANNEXE_L.tex,360,366,env:encadre,BOX,,Corollaire # --- Invariance par rebaptême,Invariance sous changement de présentation

@@ -1,0 +1,25 @@
+fichier,niveau,ligne,fin,titre
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,27,42,"Ce qui est démontré à la main, ce qui est calculé"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,43,64,Énoncé principal (conditionnel)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,44,64,Données.
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,65,88,Lemme de Cauchy autonome
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,89,97,Les deux méthodes
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,92,93,Méthode 1 --- Taylor--Picard (\texttt{certif\_episodes.py}).
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,94,95,Méthode 2 --- Gronwall--Cauchy--Kovalevskaya (\texttt{certif\_independant.py}).
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,96,97,Ce qui est partagé.
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,98,119,Résultats
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,118,119,Concordance.
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,120,127,Audit du lemme de Cauchy
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,128,137,Limites explicites
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,section,138,155,Statut
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,paragraph,153,155,Fichiers.
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,25,36,Cadre
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,paragraph,26,27,\'Etat.
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,paragraph,28,32,"\'Episode $r$ (graphe $A_r$, horloge locale $t$)."
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,paragraph,33,34,Graphe.
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,paragraph,35,36,Impact.
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,37,52,Hypoth\`eses au point de base $q_0$
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,53,74,Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,75,79,D\'emonstration du th\'eor\`eme
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,80,93,Remarques
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,section,94,109,Statut

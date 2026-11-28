@@ -1,10 +1,10 @@
 # G0 — État d'avancement
 
-**Dernière mise à jour :** 27 novembre 2026
-**Phase courante :** G0.2 **validée comme première itération, non clôturée** ; G0.2bis (complétude) **en cours** ; G0.3 non autorisée (C5)
+**Dernière mise à jour :** 28 novembre 2026
+**Phase courante :** G0.2 **clôturée** (D1) ; G0.3 **en cours** (D6)
 **Commit de base :** `c74fa047171ff51e308f1855d8f636add2ac33ca` (IWS, tag `g0-baseline`)
 **Branche de travail :** `harmonisation/g0` (poussée sur `origin`, non fusionnée dans `main`)
-**Dernier commit de travail :** voir `git log` ; G0.1 : `05afddd` (tag `g0.1-inventaire-ref`, poussé, référence de non-régression) ; G0.2 itération 1 : commit « G0.2 (itération 1) » (registre candidat intermédiaire, 95 objets)
+**Dernier commit de travail :** `2588875` (G0.2, itération 1 : registre candidat intermédiaire, 95 objets ; poussé) ; G0.1 : `05afddd` (tag `g0.1-inventaire-ref`, poussé) ; G0.2bis : commit « G0.2bis » (référence 301 entrées)
 **PDF de référence :** prépublication [IWS — G0 Baseline](https://github.com/bhurpeau/IWS/releases/tag/g0-baseline) (4 PDF + `SHA256SUMS`, empreintes vérifiées après téléchargement)
 
 ## Références figées
@@ -24,7 +24,8 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 |---|---|---|
 | G0.0 | **Clôturée, validée le 27/11/2026** | `G0_00_manifest.md`, `G0_00_controls/`, `ERRATA_PLAN_G0.md`, ce fichier, README actualisé, release `g0-baseline` |
 | G0.1 | **Clôturée, validée le 27/11/2026** | `G0_01_inventory/` (occurrences, expressions, familles, glyphes, exclusions, couverture, `extraction_report.md`) ; `notations/scripts/extract_symbols.py`, `check_coverage.py`, tests |
-| G0.2 | **Itération 1 acceptée (C1) ; non clôturée** | `notations/registry.yaml` (registre candidat **intermédiaire**, 95 objets ; copie figée `G0_02_semantic/reference_95/`), `G0_02_objects_report.md`, `RESERVES.md`, `G0_02_semantic/`, scripts `definition_sites.py`, `link_registry.py` ; addendum G0.1 (B2a) et `check_regression.py` |
+| G0.2 | **Clôturée le 28/11/2026 (D1)** | `notations/registry.yaml` (registre candidat **intermédiaire** ; itération 1 : 95 objets, copie figée `G0_02_semantic/reference_95/`), `G0_02_objects_report.md`, `RESERVES.md`, `G0_02_semantic/`, scripts `definition_sites.py`, `link_registry.py` ; addendum G0.1 (B2a) et `check_regression.py` |
+| G0.2bis | **Validée, clôturée (D1)** | registre candidat intermédiaire, itération 2 (301 objets, YAML style bloc) ; `G0_02bis_completeness_report.md` ; `G0_02bis/` (journal de lecture, matrice de couverture, énoncés formels, classement des non-rattachés, revue des sites de définition, différentiel, échantillon) ; `RESERVES.md` ; scripts `registry_io.py`, `formal_environments.py`, `coverage_matrix.py`, `classify_unresolved.py`, `registry_diff.py`, tests |
 | G0.3 – G0.9 | Non entamées | — |
 
 ## Résultats des contrôles G0.0
@@ -71,6 +72,22 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | Intégrité des sources | `git diff c74fa04 -- Volume_I Volume_II` vide |
 
 
+## Résultats des contrôles G0.2bis
+
+| Contrôle | Résultat |
+|---|---|
+| Lecture | Volume I lu intégralement et journalisé (livres I–III, annexes A–L, table des énoncés) ; volume II : 31 énoncés et sites non couverts relus ; compagnons lus intégralement ; 390 unités de la matrice de couverture lues intégralement, 0 non lue |
+| Registre | 301 objets (I : 205 ; II : 88 ; C : 8) ; 271 éléments, 30 familles ; 265 EXPLICIT, 28 IMPLICIT, 5 AMBIGUOUS, 3 UNDEFINED |
+| Schéma | 0 erreur (y compris granularité et réciprocité famille ↔ composants) ; 0 rattachement multiple ; 0 sélecteur vide |
+| Couverture des clés structurantes | Volume I 69,9 % ; volume II 63,8 % ; compagnons 50,8 % (indicatif, non visé) |
+| Non-rattachés | Toutes les clés structurantes non rattachées classées ; 0 objet structurant non instruit, 0 usage non résolu ; 50 clés à usage ambigu (R-G0-12) |
+| Sites de définition | 198 passages non couverts revus et classés (`definition_sites_review.csv`) |
+| Différentiel | 95 identifiants de référence conservés ; 206 ajoutés ; 16 décompositions ; 1 changement de statut (C2) |
+| Format (C4) | YAML style bloc, PyYAML 6.0.2 en environnement `.venv-g0` ; conversion sans perte (0 écart) |
+| Non-régression | Inventaire G0.1 : 0 différence ; référence 95 objets inchangée ; 27 tests verts |
+| Échantillon | 40 rattachements : 38 corrects, 2 recevables avec réserve |
+| Intégrité des sources | `git diff c74fa04 -- Volume_I Volume_II` vide ; dépôts connexes non modifiés |
+
 ## Décisions rendues
 
 | Id | Date | Décision |
@@ -90,6 +107,12 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | C3 | 27/11/2026 | Correspondance intervolumes non limitée aux objets instruits ; ouverture de **G0.2bis** (complétude et consolidation) : lecture intégrale du volume I, complétude du volume II, environnements formels, matrice de couverture documentaire, classement des non-rattachés, différentiel ; pas de pourcentage lexical cible |
 | C4 | 27/11/2026 | JSON compatible YAML recevable pour le registre intermédiaire ; PyYAML autorisé dans un environnement virtuel dédié, version épinglée, dépendance documentée ; YAML lisible privilégié pour le registre pérenne ; conversion à vérifier sans perte ; aucune installation globale |
 | C5 | 27/11/2026 | G0.3 **non autorisée** avant validation de G0.2bis et clôture de G0.2 |
+| D1 | 28/11/2026 | G0.2bis **validée**, G0.2 **clôturée** ; commit et poussée autorisés sur `harmonisation/g0` (pas de fusion dans `main`) ; état intermédiaire des 95 objets conservé ; nouvel état de référence des 301 entrées figé (`G0_02_semantic/reference_301/`) ; le registre reste candidat, non normatif |
+| D2 | 28/11/2026 | Coefficients de la branche résistante : recalcul indépendant (annexe D, paramètres de l'annexe F) : c₁ = −2,1779, c₂ = 0,3220 ; la valeur 0,3216 (livre II) et le coefficient linéaire −2,1774 sont à corriger ultérieurement ; recalcul à reproduire et tracer ; occurrences et dépendances à recenser ; annulation exacte des contributions en m₂ à documenter ; corrections numériques distinguées des corrections notationnelles ; aucun manuscrit modifié |
+| D3 | 28/11/2026 | Appropriation : deux entrées conservées ; correspondance des deux définitions à instruire en G0.3 (prédicats coïncidant par substitution de y_T et renommage de l'attracteur final, sous réserve des domaines et de la dynamique autonome), sans identité inconditionnelle ni généralisation stricte présumées ; conditions de validité à documenter |
+| D4 | 28/11/2026 | Homonymies internes : relèvent de G0.4 ; en G0.3, un blocage dû à une homonymie est documenté et la relation est UNK |
+| D5 | 28/11/2026 | Les 50 clés ambiguës relèvent de G0.4 ; G0.3 ne résout que les ambiguïtés indispensables à une correspondance ; occurrences non résolues et provenance préservées |
+| D6 | 28/11/2026 | G0.3 autorisée après clôture, commit et poussée de G0.2 ; exécuter exclusivement G0.3 selon `PLAN_G0.md` ; relations ID, GEN, SPEC, PROJ, DER, ANA, DIST, UNK, NEW orientées ; arrêt avant G0.4 |
 
 ## Réserves
 
@@ -104,12 +127,14 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | R-G0-07 | Volume II : 8 avertissements hyperref | Conservée, cosmétique | — |
 | R-G0-08 | README Lean : ventilation 901 pour 905 audités | Reportée, sans intervention Lean | G0.8 |
 | R-G0-09 | Volume II : 19 labels seulement ; 37 % des occurrences sans label pertinent | Amélioration documentaire, non bloquante | G0.7 (B3) |
-| R-G0-10 | Lecture partielle du volume I en G0.2 (couverture 35 %) | Traitée en G0.2bis (C3) | G0.2bis |
-| A-G02-01 à 07 | Anomalies sémantiques G0.2 (détail dans `RESERVES.md`) | Ouvertes, non corrigées | Auteur |
+| R-G0-10 | Lecture partielle du volume I en G0.2 (couverture 35 %) | Levée en G0.2bis (lecture intégrale journalisée) | Validation G0.2bis |
+| R-G0-11 | Motifs de fichier non ancrés dans les sélecteurs de G0.2 | Corrigés en G0.2bis, effet documenté | — |
+| R-G0-12 | 50 clés à usage ambigu partiellement non rattachées | Documentée | G0.4 (D5) |
+| A-G02-01 à 14 | Anomalies sémantiques G0.2 et G0.2bis (détail dans `RESERVES.md`) ; 01 instruite (C2), 03 documentée, 07 requalifiée | Ouvertes, non corrigées | Auteur |
 
-Aucune réserve n'est bloquante en l'état ; A-G02-01 et R-G0-10 conditionnent la qualité de G0.3.
+Aucune réserve n'est bloquante en l'état. A-G02-03 (appropriation), A-G02-10 et A-G02-13 (variantes notationnelles) ainsi que R-G0-12 (usages ambigus) conditionnent la lecture de G0.3.
 
 ## Prochaine action
 
-G0.2bis en cours ; arrêt avant G0.3.
+G0.3 en cours (D6) ; arrêt avant G0.4.
 

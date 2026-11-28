@@ -1,0 +1,3 @@
+# Environnement virtuel du chantier G0 (non versionné)
+.venv-g0/
+__pycache__/

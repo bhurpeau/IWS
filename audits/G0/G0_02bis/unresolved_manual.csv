@@ -1,0 +1,234 @@
+corpus,cle,categorie,justification
+compagnons,A_{1},VARIABLE_LOCALE,résidus de la suite de graphes
+compagnons,A_{r+1},VARIABLE_LOCALE,résidus de la suite de graphes
+compagnons,A_{r},VARIABLE_LOCALE,résidus de la suite de graphes
+compagnons,C^{1},NOTATION_USUELLE,notation usuelle
+compagnons,C^{2},NOTATION_USUELLE,notation usuelle
+compagnons,E,VARIABLE_LOCALE,quantités E de la certification
+compagnons,F,VARIABLE_LOCALE,champ F et fonction Π du lemme C
+compagnons,H,VARIABLE_LOCALE,résidus
+compagnons,H_{j},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,H_{k},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,I,USAGE_AMBIGU,intervalle I ; identité
+compagnons,M,VARIABLE_LOCALE,M_λ (rattaché) : résidus
+compagnons,P,VARIABLE_LOCALE,résidus
+compagnons,P_{\rm pol},VARIABLE_LOCALE,polynôme local (certification)
+compagnons,P_{i_r},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,P_{j},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,R,VARIABLE_LOCALE,nombre d'épisodes R
+compagnons,T_{1},VARIABLE_LOCALE,premier instant d'impact
+compagnons,U,VARIABLE_LOCALE,"forçage u, u_0, U"
+compagnons,V_{j},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,V_{k},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,\Pi,VARIABLE_LOCALE,champ F et fonction Π du lemme C
+compagnons,\delta,VARIABLE_LOCALE,marges δ locales
+compagnons,\eta,VARIABLE_LOCALE,marge η (lemme C)
+compagnons,\gamma,VARIABLE_LOCALE,"paramètres λ, γ dans (γ_1,λ)=ε(γ̄,λ̄)"
+compagnons,\lambda,VARIABLE_LOCALE,"paramètres λ, γ dans (γ_1,λ)=ε(γ̄,λ̄)"
+compagnons,\max_{j},NOTATION_USUELLE,notation usuelle
+compagnons,\partial_{t},NOTATION_USUELLE,notation usuelle
+compagnons,\square,NOTATION_USUELLE,notation usuelle
+compagnons,\tau,VARIABLE_LOCALE,résidus
+compagnons,\tau_{i},VARIABLE_LOCALE,composantes nodales de l'état C.TRANS.STATE (résidus indexés non sélectionnés)
+compagnons,\varepsilon,VARIABLE_LOCALE,résidus
+compagnons,\varphi,VARIABLE_LOCALE,"flot φ(t;x_0,ε) (lemme A)"
+compagnons,a,VARIABLE_LOCALE,variables locales des preuves
+compagnons,d,USAGE_AMBIGU,"dimension d ; distance d(k,0) dans A_1"
+compagnons,g_{j},VARIABLE_LOCALE,forçage g_j de la pression (lemme B)
+compagnons,h,VARIABLE_LOCALE,variables locales des preuves
+compagnons,j,VARIABLE_LOCALE,variables locales des preuves
+compagnons,k,VARIABLE_LOCALE,variables locales des preuves
+compagnons,m,VARIABLE_LOCALE,variables locales des preuves
+compagnons,r,VARIABLE_LOCALE,variables locales des preuves
+compagnons,s,VARIABLE_LOCALE,variables locales des preuves
+compagnons,s^{a},VARIABLE_LOCALE,exposant local (certification)
+compagnons,t,VARIABLE_LOCALE,variables locales des preuves
+compagnons,u,VARIABLE_LOCALE,"forçage u, u_0, U"
+compagnons,u_{0},VARIABLE_LOCALE,"forçage u, u_0, U"
+compagnons,x,VARIABLE_LOCALE,variables locales des preuves
+volI,A,USAGE_AMBIGU,"adjacence (livre I, rattachée), réponse A (livre III S_A, région), constante A=√2α/β (annexe D), A_V/A_H (annexe B) : rôles distincts ; résidus en livre III (réponse générique A)"
+volI,B,USAGE_AMBIGU,"système receveur B (livre II), argument Deg(B) (livre I l. 188), borne B (rattachée), constante B=√2w/β (annexe D)"
+volI,C,USAGE_AMBIGU,"ensemble de flot C (livre I), constante C=b/(2a) (annexe B), épisode C (livre III l. 1089), cellules C (annexe J) : résidus en livre III (épisode test C)"
+volI,D,USAGE_AMBIGU,"ensemble de saut D (livre I), délai D (annexe F, rattaché), domaine D (annexes J–K) ; résidus en livre II et annexe I (classe D⊆Z)"
+volI,E,VARIABLE_LOCALE,résidus hors annexe B (annexe G : E…?)
+volI,F,VARIABLE_LOCALE,résidus (livre I : F générique du système hybride)
+volI,G,VARIABLE_LOCALE,"résidus (annexe C : G(x) l. 1124, fonction locale)"
+volI,I,USAGE_AMBIGU,"identité I (livre I, annexes A, C), intervalle I (annexes H–J)"
+volI,J,USAGE_AMBIGU,"jacobien J (annexe C), intervalle J (annexe H), J sans indice (annexe F)"
+volI,K,VARIABLE_LOCALE,"borne K (annexe B l. 703), compact K (annexe A l. 706), lieu K (annexe H) : locales"
+volI,M,VARIABLE_LOCALE,résidu unique (livre II)
+volI,M_{i},VARIABLE_LOCALE,abréviation M_i=M(τ_i) (annexe B l. 253)
+volI,O,NOTATION_USUELLE,notation de Landau O(·)
+volI,P,USAGE_AMBIGU,"pression P (noyau, rattachée), amorce P (livre III), présentation P (annexe L)"
+volI,Q,VARIABLE_LOCALE,résidus (annexe G ; Q espace de paramètres annexe J rattaché)
+volI,R,VARIABLE_LOCALE,"résidus (livre I : R borne visée, cf. I.B.JUMP_ENVELOPE)"
+volI,R_{V},USAGE_AMBIGU,"borne R_V sur un compact (annexe A l. 649) ; matrice de saut R_V (annexes E–F, rattachée)"
+volI,R_{b},STRUCTURANT_NON_INSTRUIT,"R_b (livre I, 12 occurrences) : borne de la discussion de bornitude ; non instruit"
+volI,S,VARIABLE_LOCALE,résidus (annexe H : S générique ; annexe F : succès S)
+volI,T,USAGE_AMBIGU,"durée d'exposition T (livre II, annexes D–F), horizon T (livre I, annexe A), durée T (annexe J) : rôles distincts"
+volI,X,VARIABLE_LOCALE,"réalisation générique X∈\mathfrak X (livre III, annexes G–L) ; état de base (annexe K, rattaché à I.K.AUGMENTED_STATE)"
+volI,X_{0},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,X_{1},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,X_{2},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,X_{\mathcal H},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,Y,VARIABLE_LOCALE,"réalisation générique Y (annexes G, L ; livre III) ; quantité de Grönwall Y(t) (livre I l. 734, annexe A l. 789) : deux rôles locaux distincts"
+volI,Z,VARIABLE_LOCALE,résidus (annexe L : espace Z d'un résumé générique)
+volI,\Delta,USAGE_AMBIGU,"variété homogène Δ (annexe C), période Δ (annexes E–F, rattachée), variation ΔL (livre I, annexe B), délai Δ (livre III) : résidus"
+volI,\Gamma,VARIABLE_LOCALE,"résidus : Γ dans des formules locales (Γ_i, Γ_max) ; même objet que I.CORE.FRICTION"
+volI,\Omega,VARIABLE_LOCALE,"résidus : Ω hors livre III (annexes H–J, cartes non indicées)"
+volI,\Phi_{\mathcal H_0},VARIABLE_LOCALE,transition générique
+volI,\Phi_{\mathcal H_1},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\Phi_{\mathcal H_2},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\Phi_{\mathcal H},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\Phi_{e},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\Psi,VARIABLE_LOCALE,"évolution post-coupure Ψ (annexe J, locale)"
+volI,\alpha,VARIABLE_LOCALE,résidus : α dans des formules locales hors noyau ; même rôle que I.CORE.WRITE_RATE
+volI,\beta,VARIABLE_LOCALE,résidus : β dans des formules locales hors fichiers du noyau (livre III ?) ou en exposant ; même rôle que I.CORE.FORGET_RATE
+volI,\boldsymbol{\chi},VARIABLE_LOCALE,résidus (annexe I : vecteur d'interface du modèle canonique)
+volI,\boldsymbol{\theta},VARIABLE_LOCALE,phase intermédiaire vectorielle du modèle canonique (annexe I l. 49)
+volI,\chi,VARIABLE_LOCALE,résidu unique hors sélecteurs
+volI,\delta,USAGE_AMBIGU,"écart δ=g−g_c (annexe D), perturbation δh, δv (annexe C), δ(K) (annexe B), δ_T (rattaché) : rôles locaux"
+volI,\ell,VARIABLE_LOCALE,profondeur ℓ sans indice dans les preuves (annexe L) ; même objet que I.L.SEPARABILITY_DEPTH
+volI,\eta,USAGE_AMBIGU,"coefficient de fermeture η (R1, rattaché) ; η(ε) largeur d'exclusion (annexe H) ; η variation (annexe C l. 1881)"
+volI,\gamma,VARIABLE_LOCALE,résidu unique
+volI,\kappa_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,\lambda,USAGE_AMBIGU,anisotropie λ (rattachée au noyau) ; λ comme valeur propre ou paramètre local (annexe C l. 1236–1540 ; annexe D) : résidus
+volI,\mathcal{D},USAGE_AMBIGU,"diagonale \mathcal D (annexe C, rattachée), délais \mathcal D (annexes G–H)"
+volI,\mathcal{H},VARIABLE_LOCALE,"histoire générique de \mathfrak B ou \mathfrak M (annexes G, L ; livre III hors définitions)"
+volI,\mathcal{H}_{0},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\mathcal{H}_{0}^{-1},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\mathcal{H}_{1},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\mathcal{H}_{2},VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III)
+volI,\mathcal{V},USAGE_AMBIGU,"ensemble des nœuds \mathcal V (livre I) ; fonction de Lyapunov \mathcal V (annexe C, rattachée)"
+volI,\mathrm{d},NOTATION_USUELLE,différentielle
+volI,\partial,NOTATION_USUELLE,dérivée partielle ou frontière (usage générique)
+volI,\pi,NOTATION_USUELLE,constante π (2π/ω)
+volI,\pi_{21},VARIABLE_LOCALE,projection locale (annexe G)
+volI,\sigma,USAGE_AMBIGU,variable d'intégration σ (annexe A) ; permutation σ (livre II)
+volI,\tanh^{2},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,\theta,USAGE_AMBIGU,"composante de trace (annexes C–F, livre II), horloge lente (annexes H–K) ; résidus : θ dans les blocs de stabilité (annexe C l. 1236–1540) et contrôles numériques"
+volI,\theta^{\ast},VARIABLE_LOCALE,équilibre θ* au livre II (rattaché en C et D)
+volI,\theta_{0},USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)"
+volI,\theta_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,\varepsilon,USAGE_AMBIGU,"paramètre de terme croisé (rattaché), histoire vide ε (livre III, annexe G), ε d'approximation (annexe H)"
+volI,\varphi,USAGE_AMBIGU,"φ(y)=y/tanh y (annexe C), φ décroissante (annexe L), phase φ (livre II)"
+volI,\vartheta^{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,\zeta,VARIABLE_LOCALE,"résidus : ζ dans des expressions locales (Λ_q, ζ_min) ou en annexe D au-delà des sélecteurs ; même paramètre que I.CORE.COUPLING_GAIN, non rattaché par prudence (indice ou décoration)"
+volI,a,USAGE_AMBIGU,"coefficient a (annexe B, rattaché), a(τ) (annexe A), a profondeur (annexe L), paramètre initial a (annexe I)"
+volI,b,USAGE_AMBIGU,"coefficient b (annexe B, rattaché), point de bascule b (annexe H), budget b (annexe L), constante b (livre I)"
+volI,b_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,c,USAGE_AMBIGU,"constantes locales c=1+λ (annexe A l. 403), complexité c (annexe L, rattachée), constante c (annexes G, I) : rôles distincts"
+volI,c_{1},VARIABLE_LOCALE,résidu (annexe I : constantes locales)
+volI,c_{2},VARIABLE_LOCALE,résidu (annexe I : constantes locales)
+volI,c_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,d,USAGE_AMBIGU,"dimension d (livre I ; I.CORE.DIMENSION sans sélecteur, glyphe polysémique), distance d_ρ/d_{c,…} (annexes I, L, rattachées sous indice)"
+volI,e,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,e_{1},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,e_{2},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,e_{A},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,e_{B},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,e_{k},VARIABLE_LOCALE,épisodes et réalisations génériques (livre III)
+volI,h,USAGE_AMBIGU,"état réduit h (annexe C, rattaché sur 30–970) ; direction de dérivée h∈R^d (annexe A l. 416) ; h dans les blocs (annexe C 1236+)"
+volI,h_{k},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,i^{\ast},STRUCTURANT_NON_INSTRUIT,"nœud sélectionné i* (livre I l. 571, annexe A l. 908) : composant de I.CORE.REWIRING sans sélecteur dédié"
+volI,k,USAGE_AMBIGU,"rapport k=α/β (annexes C–D, en partie rattaché via Λ), indice k, mode k (annexe C)"
+volI,k^{2},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,m,USAGE_AMBIGU,"nombre d'arêtes modifiées m (livre I, annexe A), rappel m(r) (annexes C–F, rattaché), m dans les annexes H (non instruit)"
+volI,m_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,p,USAGE_AMBIGU,"pression réduite p (annexe C), polynôme caractéristique p(s) (annexes C–D), charge résiduelle p (annexes H–K, rattachée), solution p(t) (annexe E) : résidus hors plages"
+volI,q,USAGE_AMBIGU,"perméabilité q (R1, rattachée), facteur de saut q (annexe B, rattaché), nombre de composantes actives q (annexes C–D), points q∈D (annexe J), vecteur q=q_∥u_1+q_⊥ (annexe I) : cinq rôles"
+volI,q_{\infty},VARIABLE_LOCALE,"q_∞(g) (annexe E, rattaché) : résidu au livre II"
+volI,q_{\perp},VARIABLE_LOCALE,composante transverse (preuve du lemme I-invariance-alignee)
+volI,r,USAGE_AMBIGU,"norme de trace r=‖τ‖ ou r=√2|θ| (annexes A, C–F), rang r (livre III ?), rayon r (annexe A) : rôles locaux"
+volI,r^{2},VARIABLE_LOCALE,carré de la norme de trace (calculs)
+volI,r^{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,r_{0},VARIABLE_LOCALE,r_0(g) (rattaché) : résidu
+volI,r_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,s,USAGE_AMBIGU,"similarité s(i,j) (livre I), s=tanh(h) (annexe C l. 355), variable spectrale p(s) (annexes C–D), variable d'intégration (annexes A, E), contenu scalaire s (annexes H–L, en partie rattaché) : au moins cinq rôles"
+volI,s^{2},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,s_{1},VARIABLE_LOCALE,valeurs de mémoire indexées (livre III)
+volI,s_{2},VARIABLE_LOCALE,valeurs de mémoire indexées (livre III)
+volI,s_{\ast},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,t,VARIABLE_LOCALE,temps continu (variable d'intégration ou instant générique)
+volI,t_{0},USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)"
+volI,u,VARIABLE_LOCALE,entrée u (livre I) ou paramètre de sonde u (livre III) : résidus en annexe K et livre II
+volI,v,USAGE_AMBIGU,"vitesse réduite (annexes C–F) ; score v (non) ; résidus en annexe C hors plage 30–970 (v_B, bloc diagonal)"
+volI,v_{0},USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)"
+volI,x,USAGE_AMBIGU,"position scalaire de la réduction diagonale (annexes C–F, livre II : rattachée à I.C.SCALAR_DIAGONAL_REDUCTION) ; état de base x∈X (annexe K) ; variable générique (annexes A, C l. 450–520) : résidus non rattachés hors plages"
+volI,x^{2},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,x^{4},VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé"
+volI,x^{\ast},VARIABLE_LOCALE,"équilibre réduit x* (livre II, annexes C–D ; rattaché en C et D) : résidus au livre II"
+volI,x_{0},USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)"
+volI,x_{A},STRUCTURANT_NON_INSTRUIT,"état x_A du système source (livre II, annexes D–F) : composant de I.II.TWO_SYSTEM_STATES non sélectionné"
+volI,y,VARIABLE_LOCALE,"variable générique y∈R^d (annexe A), vitesse y (annexe C l. 1731, rattachée sur plage), variables mécaniques y (annexes H–I)"
+volI,z,USAGE_AMBIGU,"état continu z (annexe A, rattaché), état initial z_0 (livre II, annexe D), état lent z (annexes I–L, rattaché) : résidus en annexe I (z_i, z dans les preuves)"
+volI,z_{0},USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)"
+volII,B,VARIABLE_LOCALE,"point b∈B (définition générale de fibre, l. 149)"
+volII,C^{2},NOTATION_USUELLE,notation usuelle
+volII,F,VARIABLE_LOCALE,résidus du générateur F
+volII,G,USAGE_AMBIGU,"groupe G du lemme orbital ; granularités G_0, G_1, G_2"
+volII,I,USAGE_AMBIGU,ensemble initial I du régime (rattaché) ; identité I (\widetilde A) ; intervalle
+volII,K,VARIABLE_LOCALE,résidus (opérateur K hors sélecteur)
+volII,O,NOTATION_USUELLE,notation de Landau
+volII,R,VARIABLE_LOCALE,rayon R_j(μ) sans indice (bloc conique)
+volII,S,VARIABLE_LOCALE,système S (résidus)
+volII,S^{1},NOTATION_USUELLE,notation usuelle
+volII,T,USAGE_AMBIGU,système cible des morphismes S→T ; horizon T
+volII,X,VARIABLE_LOCALE,ensemble fini X du lemme orbital
+volII,Y,VARIABLE_LOCALE,résidus
+volII,\Delta,USAGE_AMBIGU,"Δτ_h, Δτ_j (objets enregistrés, glyphe composé) ; Δ de la réduction homogène S_Δ"
+volII,"\Delta_{4,w}^{(4)}",VARIABLE_LOCALE,fonction locale du témoin N=6
+volII,\Pi_{\sigma},VARIABLE_LOCALE,résidus
+volII,\Psi_{j},VARIABLE_LOCALE,application de l'inversion locale (bloc conique)
+volII,\cos,NOTATION_USUELLE,notation usuelle
+volII,\deg,NOTATION_USUELLE,notation usuelle
+volII,\ell_{\pm},VARIABLE_LOCALE,demi-droites ℓ_± du secteur conique (l. 1733)
+volII,\epsilon,USAGE_AMBIGU,ε du bloc conique (distinct de \varepsilon ?) : non vérifié
+volII,\eta,VARIABLE_LOCALE,transport d'histoires η (résidu)
+volII,\gamma,VARIABLE_LOCALE,exécution γ (résidu)
+volII,\infty,NOTATION_USUELLE,notation usuelle
+volII,\lambda,VARIABLE_LOCALE,"résidus (λ(t)=ct, question G_2)"
+volII,"\lambda_{r,w}",VARIABLE_LOCALE,résidus
+volII,\mathcal{H},VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,\mathcal{P}_{k},VARIABLE_LOCALE,résidu de la partition hors plage
+volII,\operatorname{Aut},VARIABLE_LOCALE,résidus (Aut sans exposant hors plage)
+volII,\rho,VARIABLE_LOCALE,résidus de ρ hors sélecteurs (lecture)
+volII,\sigma,VARIABLE_LOCALE,résidus
+volII,\sin,NOTATION_USUELLE,notation usuelle
+volII,\tanh,NOTATION_USUELLE,notation usuelle
+volII,\theta,USAGE_AMBIGU,"angle θ_r(u) (rattaché) ; θ action-angle (crash-test pendule, l. 597)"
+volII,\upsilon_{\mathrm{cone}},VARIABLE_LOCALE,quantité locale du bloc conique
+volII,\varepsilon,USAGE_AMBIGU,monoïde (unité ε) ; paramètre ε du protocole (V5.17)
+volII,\varphi,USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux"
+volII,\varphi_{4},USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux"
+volII,\varphi_{5},USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux"
+volII,a,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales"
+volII,b,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales"
+volII,"b_{i,w}^{(r)}",VARIABLE_LOCALE,résidus
+volII,c,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales"
+volII,c_{i},VARIABLE_LOCALE,"scores c_j(τ) (prop. Finitude de profondeur un, l. 882)"
+volII,c_{j},VARIABLE_LOCALE,"scores c_j(τ) (prop. Finitude de profondeur un, l. 882)"
+volII,d,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales"
+volII,e,VARIABLE_LOCALE,"variable e (épisode, vecteur e(φ))"
+volII,f,VARIABLE_LOCALE,application f d'un morphisme (résidu)
+volII,h,VARIABLE_LOCALE,"boucle h (prop. Écriture cachée, l. 630) : objet local"
+volII,i,INDICE_MUET,indice de nœud ou indice discret d'exécution
+volII,i^{*},VARIABLE_LOCALE,déclencheur i* (témoins)
+volII,i_{r}^{*},VARIABLE_LOCALE,résidus (rattachés à II.OPAC.SELECTION_MARGIN)
+volII,j,INDICE_MUET,indice de nœud ou indice discret d'exécution
+volII,m,USAGE_AMBIGU,"nombre d'arêtes modifiées m (crash-tests, l. 697 ; noyau) ; m dans l'obstruction orbitale (cardinal)"
+volII,m_{r},VARIABLE_LOCALE,résidus (rattachés à II.OPAC.SELECTION_MARGIN)
+volII,q,USAGE_AMBIGU,"nœud q (l. 1262–1286, rattaché à II.OPAC.SELECTION_MARGIN) ; paramètre de protocole q (l. 1787–1832, rattaché) : résidus"
+volII,r,VARIABLE_LOCALE,résidus du rang r hors plage
+volII,s,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,t,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,u,VARIABLE_LOCALE,"entrées u^±, u_0 (boucles symétriques, forçage)"
+volII,u_{0},VARIABLE_LOCALE,"entrées u^±, u_0 (boucles symétriques, forçage)"
+volII,v,VARIABLE_LOCALE,fonction-score v du lemme orbital (audit V5.16 : réservé)
+volII,w,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,x,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,x_{0},VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,x_{1},VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,x_{2},VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,y,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)"
+volII,z,VARIABLE_LOCALE,"variable z des comparaisons (l. 1529, bloc semi-algébrique)"

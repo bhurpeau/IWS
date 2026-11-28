@@ -1,0 +1,15 @@
+fichier,ligne,fin,forme,type,label,titre,section
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,46,55,env:proposition,PROP,prop:cert,"certifiée, conditionnelle à la validité des enclosures",Énoncé principal (conditionnel)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,57,59,env:corollaire,COR,cor:nbhd,sous la proposition et le théorème compagnon,Énoncé principal (conditionnel)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,68,74,env:lemme,LEM,lem:cauchy,racine d'un polynôme,Lemme de Cauchy autonome
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,79,82,env:proposition,PROP,prop:P,passage à la pression,Lemme de Cauchy autonome
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,47,51,env:theoreme,THM,thm:main,transmission $C^2$ en profondeur finie,Hypoth\`eses au point de base $q_0$
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,54,54,env:lemme,LEM,lem:A,flot,Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,58,60,env:lemme,LEM,lem:B,pression,Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,63,63,env:lemme,LEM,lem:C,franchissement,Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,67,67,env:lemme,LEM,lem:D,saut et graphe,Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,70,72,env:lemme,LEM,lem:fact,"d\'epart au repos, \'episode~1",Lemmes
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,81,83,env:remarque,REM,rem:nonum,ce que la preuve n'utilise pas,Remarques
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,84,86,env:remarque,REM,rem:horloge,for\c{c}age et horloge,Remarques
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,87,89,env:remarque,REM,,r\^ole de chaque hypoth\`ese,Remarques
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,90,92,env:remarque,REM,rem:unif,uniformit\'e en profondeur,Remarques

@@ -1,0 +1,41 @@
+fichier,ligne_debut,ligne_fin,phase,mode,remarque
+Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,1,1924,G0.2,integrale,"G0.2a ; relu en G0.2bis pour les 31 énoncés formels non couverts et l. 95–108, 476–572, 1236–1266, 1787–1833"
+Volume_I/IWS_PART_I.tex,1,1459,G0.2,integrale_declaree,"G0.2b (rapport G0.2 § 9) ; relu en G0.2bis l. 227–285, 503–640, 860–900, 1230–1275 ; sites de définition contrôlés"
+Volume_I/IWS_PART_II.tex,1,1858,G0.2,integrale_declaree,"G0.2b ; relu en G0.2bis l. 268–280, 600–700, 1372–1385, 1810–1835 ; sites de définition contrôlés"
+Volume_I/IWS_PART_III.tex,1,345,G0.2,integrale_declaree,G0.2c (première moitié)
+Volume_I/Annexes/IWS_ANNEXE_G.tex,1,962,G0.2,integrale_declaree,"G0.2d ; relu en G0.2bis l. 28–45, 75–118, 185–230, 330–372, 590–640, 750–830"
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1,1190,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_B.tex,1,1001,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1,1954,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1,2092,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1,1686,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_F.tex,1,1385,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_H.tex,1,881,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_I.tex,1,581,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_J.tex,1,520,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_K.tex,1,486,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_I/Annexes/IWS_ANNEXE_L.tex,1,518,G0.2,extraits,lecture partielle déclarée (R-G0-10)
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,1,108,G0.2,extraits,corpus auxiliaire (B4)
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,1,154,G0.2,extraits,corpus auxiliaire (B4)
+Volume_I/Annexes/IWS_ANNEXE_A.tex,1,1190,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/Annexes/IWS_ANNEXE_B.tex,1,1001,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/Annexes/IWS_ANNEXE_C.tex,1,1954,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/Annexes/IWS_ANNEXE_D.tex,1,2092,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/Annexes/IWS_ANNEXE_E.tex,1,1686,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/Annexes/IWS_ANNEXE_F.tex,1,1385,G0.2bis,integrale,"lecture intégrale, objets enregistrés (phase G0.2bis)"
+Volume_I/IWS_PART_III.tex,346,2413,G0.2bis,integrale,seconde moitié du livre III
+Volume_I/Annexes/IWS_ANNEXE_H.tex,1,881,G0.2bis,integrale,"lecture intégrale, tables de notations des annexes H–L exploitées"
+Volume_I/Annexes/IWS_ANNEXE_I.tex,1,581,G0.2bis,integrale,"lecture intégrale, tables de notations des annexes H–L exploitées"
+Volume_I/Annexes/IWS_ANNEXE_J.tex,1,520,G0.2bis,integrale,"lecture intégrale, tables de notations des annexes H–L exploitées"
+Volume_I/Annexes/IWS_ANNEXE_K.tex,1,486,G0.2bis,integrale,"lecture intégrale, tables de notations des annexes H–L exploitées"
+Volume_I/Annexes/IWS_ANNEXE_L.tex,1,518,G0.2bis,integrale,"lecture intégrale, tables de notations des annexes H–L exploitées"
+Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,1,110,G0.2bis,integrale,"cadre, hypothèses (H1)–(H5), théorème, lemmes A–E, remarques ; section Statut (l. 94) : (H1)–(H5) « étayées, non certifiées » dans cette note, certifiées par la note de certification"
+Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,1,154,G0.2bis,integrale,"statut, énoncé conditionnel, lemme de Cauchy, proposition de passage à la pression, méthodes, résultats, limites ; objets locaux aux preuves (aucun objet structurant nouveau)"
+Volume_I/TABLE_ENONCES.tex,1,88,G0.2bis,integrale,table des énoncés
+Volume_I/main.tex,100,325,G0.2bis,integrale,"avant-propos, positionnement, conclusion générale ; aucun objet mathématique nouveau"
+Volume_II/NOTES_V5_17.md,1,26,G0.2,integrale,notes de version (corpus auxiliaire)
+Volume_I/IWS_PART_III.tex,254,345,G0.2bis,integrale,"relecture de la section « Sondes, lectures et séparabilité relative » (l. 333–341 : précision de \mathcal R_{\mathcal H_0}(u))"
+Volume_I/IWS_PART_I.tex,1,1459,G0.2bis,integrale,relecture intégrale G0.2bis
+Volume_I/IWS_PART_II.tex,1,1858,G0.2bis,integrale,relecture intégrale G0.2bis
+Volume_I/IWS_PART_III.tex,1,253,G0.2bis,integrale,relecture intégrale G0.2bis
+Volume_I/Annexes/IWS_ANNEXE_G.tex,1,962,G0.2bis,integrale,relecture intégrale G0.2bis

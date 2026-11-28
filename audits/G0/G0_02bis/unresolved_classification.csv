@@ -1,0 +1,214 @@
+corpus,cle,occurrences,rattachees,non_rattachees,statut_couverture,categorie,justification,source_classement,fichiers
+volI,x,225,165,60,partielle,USAGE_AMBIGU,"position scalaire de la réduction diagonale (annexes C–F, livre II : rattachée à I.C.SCALAR_DIAGONAL_REDUCTION) ; état de base x∈X (annexe K) ; variable générique (annexes A, C l. 450–520) : résidus non rattachés hors plages",manuel,IWS_ANNEXE_D.tex:91 IWS_ANNEXE_C.tex:54 IWS_PART_II.tex:29 IWS_ANNEXE_K.tex:20 IWS_ANNEXE_F.tex:14
+volI,t,184,0,184,non_resolue,VARIABLE_LOCALE,temps continu (variable d'intégration ou instant générique),manuel,IWS_ANNEXE_A.tex:45 IWS_ANNEXE_E.tex:38 IWS_PART_I.tex:37 IWS_ANNEXE_B.tex:20 IWS_ANNEXE_D.tex:19
+volI,s,166,32,134,partielle,USAGE_AMBIGU,"similarité s(i,j) (livre I), s=tanh(h) (annexe C l. 355), variable spectrale p(s) (annexes C–D), variable d'intégration (annexes A, E), contenu scalaire s (annexes H–L, en partie rattaché) : au moins cinq rôles",manuel,IWS_ANNEXE_I.tex:72 IWS_PART_III.tex:15 IWS_ANNEXE_H.tex:13 IWS_PART_II.tex:12 IWS_ANNEXE_A.tex:10
+volI,\theta,156,142,14,partielle,USAGE_AMBIGU,"composante de trace (annexes C–F, livre II), horloge lente (annexes H–K) ; résidus : θ dans les blocs de stabilité (annexe C l. 1236–1540) et contrôles numériques",manuel,IWS_ANNEXE_C.tex:43 IWS_ANNEXE_H.tex:22 IWS_ANNEXE_I.tex:22 IWS_PART_II.tex:17 IWS_ANNEXE_D.tex:17
+volI,X,151,5,146,partielle,VARIABLE_LOCALE,"réalisation générique X∈\mathfrak X (livre III, annexes G–L) ; état de base (annexe K, rattaché à I.K.AUGMENTED_STATE)",manuel,IWS_ANNEXE_G.tex:52 IWS_ANNEXE_L.tex:46 IWS_PART_III.tex:38 IWS_ANNEXE_H.tex:5 IWS_ANNEXE_K.tex:5
+volI,\mathcal{H},136,40,96,partielle,VARIABLE_LOCALE,"histoire générique de \mathfrak B ou \mathfrak M (annexes G, L ; livre III hors définitions)",manuel,IWS_ANNEXE_G.tex:57 IWS_PART_III.tex:40 IWS_ANNEXE_L.tex:22 IWS_ANNEXE_H.tex:9 IWS_ANNEXE_K.tex:8
+volI,\tanh,113,0,113,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:41 IWS_ANNEXE_D.tex:32 IWS_ANNEXE_A.tex:17 IWS_PART_II.tex:11 IWS_PART_I.tex:8
+volI,A,104,49,55,partielle,USAGE_AMBIGU,"adjacence (livre I, rattachée), réponse A (livre III S_A, région), constante A=√2α/β (annexe D), A_V/A_H (annexe B) : rôles distincts ; résidus en livre III (réponse générique A)",manuel,IWS_PART_III.tex:24 IWS_ANNEXE_A.tex:22 IWS_PART_I.tex:20 IWS_PART_II.tex:13 IWS_ANNEXE_C.tex:12
+volI,p,100,65,35,partielle,USAGE_AMBIGU,"pression réduite p (annexe C), polynôme caractéristique p(s) (annexes C–D), charge résiduelle p (annexes H–K, rattachée), solution p(t) (annexe E) : résidus hors plages",manuel,IWS_ANNEXE_I.tex:25 IWS_ANNEXE_H.tex:22 IWS_ANNEXE_C.tex:14 IWS_ANNEXE_E.tex:14 IWS_ANNEXE_K.tex:8
+volI,Y,92,0,92,non_resolue,VARIABLE_LOCALE,"réalisation générique Y (annexes G, L ; livre III) ; quantité de Grönwall Y(t) (livre I l. 734, annexe A l. 789) : deux rôles locaux distincts",manuel,IWS_ANNEXE_L.tex:36 IWS_ANNEXE_G.tex:24 IWS_PART_I.tex:11 IWS_PART_III.tex:11 IWS_ANNEXE_A.tex:10
+volI,v,92,82,10,partielle,USAGE_AMBIGU,"vitesse réduite (annexes C–F) ; score v (non) ; résidus en annexe C hors plage 30–970 (v_B, bloc diagonal)",manuel,IWS_ANNEXE_C.tex:48 IWS_PART_II.tex:16 IWS_ANNEXE_D.tex:16 IWS_ANNEXE_E.tex:9 IWS_ANNEXE_F.tex:2
+volI,\chi,89,88,1,partielle,VARIABLE_LOCALE,résidu unique hors sélecteurs,manuel,IWS_ANNEXE_H.tex:22 IWS_ANNEXE_I.tex:21 IWS_ANNEXE_E.tex:19 IWS_PART_II.tex:10 IWS_ANNEXE_K.tex:8
+volI,c,80,29,51,partielle,USAGE_AMBIGU,"constantes locales c=1+λ (annexe A l. 403), complexité c (annexe L, rattachée), constante c (annexes G, I) : rôles distincts",manuel,IWS_ANNEXE_A.tex:21 IWS_ANNEXE_I.tex:19 IWS_ANNEXE_L.tex:18 IWS_ANNEXE_G.tex:11 IWS_PART_I.tex:6
+volI,m,80,59,21,partielle,USAGE_AMBIGU,"nombre d'arêtes modifiées m (livre I, annexe A), rappel m(r) (annexes C–F, rattaché), m dans les annexes H (non instruit)",manuel,IWS_ANNEXE_D.tex:29 IWS_PART_II.tex:14 IWS_ANNEXE_C.tex:14 IWS_ANNEXE_H.tex:12 IWS_PART_I.tex:5
+volI,M,74,73,1,partielle,VARIABLE_LOCALE,résidu unique (livre II),manuel,IWS_PART_I.tex:30 IWS_ANNEXE_A.tex:20 IWS_ANNEXE_B.tex:12 IWS_ANNEXE_C.tex:10 IWS_PART_II.tex:1
+volI,h,74,44,30,partielle,USAGE_AMBIGU,"état réduit h (annexe C, rattaché sur 30–970) ; direction de dérivée h∈R^d (annexe A l. 416) ; h dans les blocs (annexe C 1236+)",manuel,IWS_ANNEXE_C.tex:54 IWS_ANNEXE_A.tex:12 IWS_ANNEXE_D.tex:4 IWS_PART_II.tex:2 IWS_PART_I.tex:1
+volI,q,72,29,43,partielle,USAGE_AMBIGU,"perméabilité q (R1, rattachée), facteur de saut q (annexe B, rattaché), nombre de composantes actives q (annexes C–D), points q∈D (annexe J), vecteur q=q_∥u_1+q_⊥ (annexe I) : cinq rôles",manuel,IWS_ANNEXE_J.tex:19 IWS_ANNEXE_E.tex:17 IWS_ANNEXE_C.tex:12 IWS_PART_II.tex:8 IWS_ANNEXE_B.tex:8
+volI,\Delta,71,52,19,partielle,USAGE_AMBIGU,"variété homogène Δ (annexe C), période Δ (annexes E–F, rattachée), variation ΔL (livre I, annexe B), délai Δ (livre III) : résidus",manuel,IWS_ANNEXE_E.tex:25 IWS_ANNEXE_C.tex:17 IWS_ANNEXE_F.tex:10 IWS_PART_II.tex:6 IWS_PART_I.tex:4
+volI,z,62,48,14,partielle,USAGE_AMBIGU,"état continu z (annexe A, rattaché), état initial z_0 (livre II, annexe D), état lent z (annexes I–L, rattaché) : résidus en annexe I (z_i, z dans les preuves)",manuel,IWS_ANNEXE_I.tex:33 IWS_ANNEXE_A.tex:14 IWS_PART_II.tex:5 IWS_ANNEXE_L.tex:3 IWS_PART_I.tex:2
+volI,u,60,48,12,partielle,VARIABLE_LOCALE,entrée u (livre I) ou paramètre de sonde u (livre III) : résidus en annexe K et livre II,manuel,IWS_PART_III.tex:37 IWS_ANNEXE_K.tex:8 IWS_PART_I.tex:4 IWS_PART_II.tex:4 IWS_ANNEXE_C.tex:4
+volI,D,59,31,28,partielle,USAGE_AMBIGU,"ensemble de saut D (livre I), délai D (annexe F, rattaché), domaine D (annexes J–K) ; résidus en livre II et annexe I (classe D⊆Z)",manuel,IWS_ANNEXE_F.tex:19 IWS_PART_II.tex:12 IWS_ANNEXE_J.tex:10 IWS_ANNEXE_I.tex:6 IWS_PART_I.tex:4
+volI,\gamma,59,58,1,partielle,VARIABLE_LOCALE,résidu unique,manuel,IWS_ANNEXE_K.tex:47 IWS_ANNEXE_J.tex:10 IWS_ANNEXE_H.tex:1 IWS_ANNEXE_I.tex:1
+volI,C,58,11,47,partielle,USAGE_AMBIGU,"ensemble de flot C (livre I), constante C=b/(2a) (annexe B), épisode C (livre III l. 1089), cellules C (annexe J) : résidus en livre III (épisode test C)",manuel,IWS_PART_III.tex:25 IWS_ANNEXE_J.tex:11 IWS_PART_I.tex:10 IWS_ANNEXE_B.tex:7 IWS_ANNEXE_C.tex:4
+volI,\varepsilon,58,45,13,partielle,USAGE_AMBIGU,"paramètre de terme croisé (rattaché), histoire vide ε (livre III, annexe G), ε d'approximation (annexe H)",manuel,IWS_ANNEXE_B.tex:40 IWS_PART_I.tex:5 IWS_ANNEXE_H.tex:5 IWS_PART_III.tex:3 IWS_ANNEXE_G.tex:3
+volI,B,57,20,37,partielle,USAGE_AMBIGU,"système receveur B (livre II), argument Deg(B) (livre I l. 188), borne B (rattachée), constante B=√2w/β (annexe D)",manuel,IWS_PART_II.tex:14 IWS_PART_I.tex:11 IWS_ANNEXE_D.tex:9 IWS_PART_III.tex:8 IWS_ANNEXE_A.tex:8
+volI,y,56,5,51,partielle,VARIABLE_LOCALE,"variable générique y∈R^d (annexe A), vitesse y (annexe C l. 1731, rattachée sur plage), variables mécaniques y (annexes H–I)",manuel,IWS_ANNEXE_C.tex:34 IWS_ANNEXE_A.tex:10 IWS_ANNEXE_H.tex:6 IWS_ANNEXE_I.tex:4 IWS_ANNEXE_B.tex:2
+volI,\Gamma,54,49,5,partielle,VARIABLE_LOCALE,"résidus : Γ dans des formules locales (Γ_i, Γ_max) ; même objet que I.CORE.FRICTION",manuel,IWS_PART_I.tex:12 IWS_ANNEXE_A.tex:11 IWS_ANNEXE_C.tex:8 IWS_ANNEXE_B.tex:7 IWS_ANNEXE_D.tex:6
+volI,r,49,19,30,partielle,USAGE_AMBIGU,"norme de trace r=‖τ‖ ou r=√2|θ| (annexes A, C–F), rang r (livre III ?), rayon r (annexe A) : rôles locaux",manuel,IWS_PART_III.tex:19 IWS_ANNEXE_D.tex:16 IWS_ANNEXE_C.tex:6 IWS_ANNEXE_A.tex:4 IWS_PART_II.tex:2
+volI,d,41,0,41,non_resolue,USAGE_AMBIGU,"dimension d (livre I ; I.CORE.DIMENSION sans sélecteur, glyphe polysémique), distance d_ρ/d_{c,…} (annexes I, L, rattachées sous indice)",manuel,IWS_PART_I.tex:12 IWS_ANNEXE_A.tex:10 IWS_ANNEXE_L.tex:9 IWS_ANNEXE_B.tex:5 IWS_ANNEXE_C.tex:3
+volI,\eta,41,36,5,partielle,USAGE_AMBIGU,"coefficient de fermeture η (R1, rattaché) ; η(ε) largeur d'exclusion (annexe H) ; η variation (annexe C l. 1881)",manuel,IWS_ANNEXE_E.tex:27 IWS_PART_II.tex:8 IWS_ANNEXE_H.tex:3 IWS_ANNEXE_C.tex:2 IWS_ANNEXE_F.tex:1
+volI,T,40,0,40,non_resolue,USAGE_AMBIGU,"durée d'exposition T (livre II, annexes D–F), horizon T (livre I, annexe A), durée T (annexe J) : rôles distincts",manuel,IWS_ANNEXE_D.tex:9 IWS_PART_I.tex:8 IWS_ANNEXE_A.tex:8 IWS_ANNEXE_J.tex:6 IWS_PART_II.tex:4
+volI,R,38,29,9,partielle,VARIABLE_LOCALE,"résidus (livre I : R borne visée, cf. I.B.JUMP_ENVELOPE)",manuel,IWS_ANNEXE_B.tex:29 IWS_PART_I.tex:9
+volI,\delta,38,0,38,non_resolue,USAGE_AMBIGU,"écart δ=g−g_c (annexe D), perturbation δh, δv (annexe C), δ(K) (annexe B), δ_T (rattaché) : rôles locaux",manuel,IWS_ANNEXE_D.tex:9 IWS_ANNEXE_C.tex:8 IWS_ANNEXE_E.tex:8 IWS_ANNEXE_H.tex:7 IWS_ANNEXE_B.tex:4
+volI,b,37,11,26,partielle,USAGE_AMBIGU,"coefficient b (annexe B, rattaché), point de bascule b (annexe H), budget b (annexe L), constante b (livre I)",manuel,IWS_ANNEXE_L.tex:13 IWS_ANNEXE_B.tex:11 IWS_ANNEXE_H.tex:7 IWS_PART_I.tex:4 IWS_ANNEXE_G.tex:1
+volI,\mathrm{d},34,0,34,non_resolue,NOTATION_USUELLE,différentielle,manuel,IWS_ANNEXE_B.tex:8 IWS_ANNEXE_A.tex:7 IWS_ANNEXE_E.tex:7 IWS_PART_I.tex:6 IWS_ANNEXE_D.tex:4
+volI,\mathcal{H}_{1},31,17,14,partielle,VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III),manuel,IWS_PART_III.tex:17 IWS_ANNEXE_G.tex:9 IWS_ANNEXE_K.tex:4 IWS_PART_II.tex:1
+volI,e,31,0,31,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:28 IWS_ANNEXE_K.tex:2 IWS_ANNEXE_G.tex:1
+volI,\mathcal{H}_{2},30,17,13,partielle,VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III),manuel,IWS_PART_III.tex:17 IWS_ANNEXE_G.tex:8 IWS_ANNEXE_K.tex:4 IWS_PART_II.tex:1
+volI,X_{0},30,0,30,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:28 IWS_ANNEXE_H.tex:1 IWS_ANNEXE_J.tex:1
+volI,X_{1},29,0,29,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:29
+volI,X_{2},29,0,29,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:29
+volI,\infty,28,0,28,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_L.tex:9 IWS_ANNEXE_D.tex:5 IWS_PART_I.tex:3 IWS_ANNEXE_A.tex:3 IWS_ANNEXE_C.tex:2
+volI,a,28,9,19,partielle,USAGE_AMBIGU,"coefficient a (annexe B, rattaché), a(τ) (annexe A), a profondeur (annexe L), paramètre initial a (annexe I)",manuel,IWS_ANNEXE_B.tex:9 IWS_ANNEXE_L.tex:9 IWS_PART_I.tex:4 IWS_ANNEXE_A.tex:3 IWS_ANNEXE_I.tex:2
+volI,E,28,23,5,partielle,VARIABLE_LOCALE,résidus hors annexe B (annexe G : E…?),manuel,IWS_ANNEXE_B.tex:23 IWS_ANNEXE_G.tex:3 IWS_PART_I.tex:2
+volI,\Omega,28,18,10,partielle,VARIABLE_LOCALE,"résidus : Ω hors livre III (annexes H–J, cartes non indicées)",manuel,IWS_PART_III.tex:18 IWS_ANNEXE_H.tex:7 IWS_ANNEXE_I.tex:2 IWS_ANNEXE_J.tex:1
+volI,P,24,8,16,partielle,USAGE_AMBIGU,"pression P (noyau, rattachée), amorce P (livre III), présentation P (annexe L)",manuel,IWS_PART_III.tex:13 IWS_ANNEXE_A.tex:4 IWS_PART_I.tex:3 IWS_ANNEXE_L.tex:2 IWS_ANNEXE_C.tex:1
+volI,i,23,0,23,non_resolue,INDICE_MUET,règle lexicale (indice),règle,IWS_PART_I.tex:12 IWS_ANNEXE_A.tex:6 IWS_ANNEXE_C.tex:4 IWS_ANNEXE_D.tex:1
+volI,I,23,0,23,non_resolue,USAGE_AMBIGU,"identité I (livre I, annexes A, C), intervalle I (annexes H–J)",manuel,IWS_PART_I.tex:6 IWS_ANNEXE_A.tex:6 IWS_ANNEXE_C.tex:5 IWS_ANNEXE_H.tex:3 IWS_ANNEXE_I.tex:2
+volI,r^{2},23,0,23,non_resolue,VARIABLE_LOCALE,carré de la norme de trace (calculs),manuel,IWS_ANNEXE_A.tex:7 IWS_ANNEXE_C.tex:7 IWS_ANNEXE_D.tex:7 IWS_PART_II.tex:2
+volI,Z,22,12,10,partielle,VARIABLE_LOCALE,résidus (annexe L : espace Z d'un résumé générique),manuel,IWS_ANNEXE_I.tex:12 IWS_ANNEXE_L.tex:9 IWS_ANNEXE_G.tex:1
+volI,Q,20,15,5,partielle,VARIABLE_LOCALE,résidus (annexe G ; Q espace de paramètres annexe J rattaché),manuel,IWS_PART_I.tex:6 IWS_ANNEXE_A.tex:6 IWS_ANNEXE_C.tex:4 IWS_ANNEXE_J.tex:3 IWS_ANNEXE_G.tex:1
+volI,I_{d},20,0,20,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:9 IWS_ANNEXE_A.tex:5 IWS_ANNEXE_B.tex:4 IWS_PART_I.tex:2
+volI,S,19,14,5,partielle,VARIABLE_LOCALE,résidus (annexe H : S générique ; annexe F : succès S),manuel,IWS_PART_I.tex:6 IWS_ANNEXE_B.tex:6 IWS_ANNEXE_H.tex:4 TABLE_ENONCES.tex:2 IWS_ANNEXE_F.tex:1
+volI,\boldsymbol{\chi},19,12,7,partielle,VARIABLE_LOCALE,résidus (annexe I : vecteur d'interface du modèle canonique),manuel,IWS_PART_II.tex:9 IWS_ANNEXE_I.tex:7 IWS_ANNEXE_F.tex:2 IWS_ANNEXE_E.tex:1
+volI,\square,19,0,19,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_H.tex:5 IWS_ANNEXE_G.tex:4 IWS_ANNEXE_I.tex:3 IWS_ANNEXE_K.tex:3 IWS_ANNEXE_L.tex:3
+volI,\sum_{i},18,0,18,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_B.tex:15 IWS_PART_I.tex:3
+volI,O,18,0,18,non_resolue,NOTATION_USUELLE,notation de Landau O(·),manuel,IWS_ANNEXE_D.tex:11 IWS_ANNEXE_C.tex:4 IWS_PART_II.tex:2 IWS_ANNEXE_F.tex:1
+volI,x_{0},18,0,18,non_resolue,USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)",manuel,IWS_PART_II.tex:4 IWS_ANNEXE_D.tex:4 IWS_ANNEXE_E.tex:4 IWS_ANNEXE_K.tex:4 IWS_ANNEXE_F.tex:2
+volI,\mathcal{H}_{0},18,4,14,partielle,VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III),manuel,IWS_ANNEXE_G.tex:14 IWS_PART_III.tex:4
+volI,k,18,0,18,non_resolue,USAGE_AMBIGU,"rapport k=α/β (annexes C–D, en partie rattaché via Λ), indice k, mode k (annexe C)",manuel,IWS_ANNEXE_C.tex:10 IWS_ANNEXE_D.tex:5 IWS_ANNEXE_J.tex:2 IWS_ANNEXE_B.tex:1
+volI,\max,16,0,16,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:5 IWS_ANNEXE_F.tex:4 IWS_PART_I.tex:2 IWS_ANNEXE_A.tex:2 IWS_PART_II.tex:1
+volI,z_{0},16,1,15,partielle,USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)",manuel,IWS_PART_II.tex:7 IWS_ANNEXE_D.tex:7 IWS_ANNEXE_A.tex:1 IWS_ANNEXE_H.tex:1
+volI,K,16,0,16,non_resolue,VARIABLE_LOCALE,"borne K (annexe B l. 703), compact K (annexe A l. 706), lieu K (annexe H) : locales",manuel,IWS_ANNEXE_B.tex:9 IWS_ANNEXE_A.tex:6 IWS_ANNEXE_H.tex:1
+volI,t_{0},16,0,16,non_resolue,USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)",manuel,IWS_ANNEXE_A.tex:14 IWS_ANNEXE_B.tex:1 IWS_ANNEXE_C.tex:1
+volI,G,16,11,5,partielle,VARIABLE_LOCALE,"résidus (annexe C : G(x) l. 1124, fonction locale)",manuel,IWS_ANNEXE_D.tex:8 IWS_ANNEXE_C.tex:5 IWS_ANNEXE_K.tex:3
+volI,\sigma,15,11,4,partielle,USAGE_AMBIGU,variable d'intégration σ (annexe A) ; permutation σ (livre II),manuel,IWS_PART_II.tex:11 IWS_ANNEXE_A.tex:4
+volI,e_{A},14,0,14,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:14
+volI,e_{B},14,0,14,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:14
+volI,k^{2},13,0,13,non_resolue,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:11 IWS_ANNEXE_D.tex:2
+volI,q_{\infty},12,11,1,partielle,VARIABLE_LOCALE,"q_∞(g) (annexe E, rattaché) : résidu au livre II",manuel,IWS_ANNEXE_E.tex:9 IWS_PART_II.tex:3
+volI,\operatorname{sech}^{2},12,0,12,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:7 IWS_ANNEXE_D.tex:4 IWS_ANNEXE_A.tex:1
+volI,M_{i},12,0,12,non_resolue,VARIABLE_LOCALE,abréviation M_i=M(τ_i) (annexe B l. 253),manuel,IWS_ANNEXE_B.tex:12
+volI,\ell,12,0,12,non_resolue,VARIABLE_LOCALE,profondeur ℓ sans indice dans les preuves (annexe L) ; même objet que I.L.SEPARABILITY_DEPTH,manuel,IWS_ANNEXE_L.tex:10 IWS_ANNEXE_G.tex:2
+volI,\theta_{0},10,3,7,partielle,USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)",manuel,IWS_ANNEXE_D.tex:6 IWS_PART_II.tex:3 IWS_ANNEXE_F.tex:1
+volI,\partial,10,5,5,partielle,NOTATION_USUELLE,dérivée partielle ou frontière (usage générique),manuel,IWS_ANNEXE_H.tex:5 IWS_ANNEXE_C.tex:2 IWS_ANNEXE_D.tex:2 IWS_ANNEXE_I.tex:1
+volI,J,10,0,10,non_resolue,USAGE_AMBIGU,"jacobien J (annexe C), intervalle J (annexe H), J sans indice (annexe F)",manuel,IWS_ANNEXE_H.tex:5 IWS_ANNEXE_F.tex:3 IWS_ANNEXE_C.tex:2
+volI,j,9,0,9,non_resolue,INDICE_MUET,règle lexicale (indice),règle,IWS_ANNEXE_A.tex:4 IWS_PART_I.tex:3 IWS_PART_III.tex:2
+volI,\varphi,9,0,9,non_resolue,USAGE_AMBIGU,"φ(y)=y/tanh y (annexe C), φ décroissante (annexe L), phase φ (livre II)",manuel,IWS_ANNEXE_L.tex:4 IWS_ANNEXE_C.tex:3 IWS_PART_II.tex:2
+volI,\mathcal{D},9,5,4,partielle,USAGE_AMBIGU,"diagonale \mathcal D (annexe C, rattachée), délais \mathcal D (annexes G–H)",manuel,IWS_ANNEXE_C.tex:5 IWS_ANNEXE_G.tex:3 IWS_ANNEXE_H.tex:1
+volI,r_{\ast},9,6,3,partielle,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:6 IWS_ANNEXE_E.tex:3
+volI,e^{-\beta t},9,0,9,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_D.tex:3 IWS_ANNEXE_E.tex:3 IWS_ANNEXE_F.tex:3
+volI,r_{0},9,8,1,partielle,VARIABLE_LOCALE,r_0(g) (rattaché) : résidu,manuel,IWS_ANNEXE_D.tex:9
+volI,\mathcal{H}_{0}^{-1},9,0,9,non_resolue,VARIABLE_LOCALE,histoires et transitions génériques indexées (annexe G hors sélecteurs du livre III),manuel,IWS_ANNEXE_G.tex:9
+volI,\mathbb{R}^{d},8,0,8,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_A.tex:4 IWS_PART_I.tex:3 IWS_ANNEXE_C.tex:1
+volI,\max_{i},8,0,8,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_A.tex:4 IWS_PART_I.tex:3 IWS_ANNEXE_B.tex:1
+volI,\pi,8,1,7,partielle,NOTATION_USUELLE,constante π (2π/ω),manuel,IWS_PART_II.tex:5 IWS_ANNEXE_F.tex:2 IWS_ANNEXE_D.tex:1
+volI,x^{2},8,5,3,partielle,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_D.tex:4 IWS_ANNEXE_C.tex:3 IWS_PART_II.tex:1
+volI,v_{0},8,0,8,non_resolue,USAGE_AMBIGU,"conditions ou instants initiaux génériques ; θ_0 désigne aussi θ_0(g) (rattaché, annexe D l. 186)",manuel,IWS_ANNEXE_D.tex:4 IWS_PART_II.tex:3 IWS_ANNEXE_F.tex:1
+volI,e^{-\beta\Delta},8,0,8,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_E.tex:6 IWS_PART_II.tex:2
+volI,\Re,8,0,8,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:5 IWS_ANNEXE_F.tex:3
+volI,\operatorname{spec},8,0,8,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_C.tex:5 IWS_ANNEXE_F.tex:3
+volI,\mathcal{V},7,5,2,partielle,USAGE_AMBIGU,"ensemble des nœuds \mathcal V (livre I) ; fonction de Lyapunov \mathcal V (annexe C, rattachée)",manuel,IWS_ANNEXE_C.tex:5 IWS_PART_I.tex:2
+volI,\min,7,0,7,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_PART_I.tex:2 IWS_ANNEXE_A.tex:2 IWS_ANNEXE_L.tex:2 IWS_ANNEXE_B.tex:1
+volI,\inf,7,0,7,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_D.tex:2 IWS_ANNEXE_L.tex:2 IWS_PART_II.tex:1 IWS_ANNEXE_A.tex:1 IWS_ANNEXE_G.tex:1
+volI,s_{1},7,6,1,partielle,VARIABLE_LOCALE,valeurs de mémoire indexées (livre III),manuel,IWS_PART_III.tex:6 IWS_ANNEXE_I.tex:1
+volI,s_{2},7,6,1,partielle,VARIABLE_LOCALE,valeurs de mémoire indexées (livre III),manuel,IWS_PART_III.tex:6 IWS_ANNEXE_I.tex:1
+volI,\varnothing,7,0,7,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_PART_III.tex:6 IWS_ANNEXE_L.tex:1
+volI,R_{V},7,5,2,partielle,USAGE_AMBIGU,"borne R_V sur un compact (annexe A l. 649) ; matrice de saut R_V (annexes E–F, rattachée)",manuel,IWS_ANNEXE_E.tex:3 IWS_ANNEXE_A.tex:2 IWS_ANNEXE_F.tex:2
+volI,\tanh^{2},7,0,7,non_resolue,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:5 IWS_ANNEXE_D.tex:2
+volI,\boldsymbol{\theta},7,0,7,non_resolue,VARIABLE_LOCALE,phase intermédiaire vectorielle du modèle canonique (annexe I l. 49),manuel,IWS_ANNEXE_I.tex:7
+volI,F,6,3,3,partielle,VARIABLE_LOCALE,résidus (livre I : F générique du système hybride),manuel,IWS_ANNEXE_D.tex:3 IWS_PART_I.tex:2 IWS_ANNEXE_K.tex:1
+volI,\sum_{j},6,0,6,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_PART_I.tex:3 IWS_ANNEXE_A.tex:2 IWS_ANNEXE_C.tex:1
+volI,s^{2},6,0,6,non_resolue,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:3 IWS_ANNEXE_D.tex:3
+volI,e^{-\kappa_3t},6,0,6,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_E.tex:5 IWS_ANNEXE_C.tex:1
+volI,c_{1},6,5,1,partielle,VARIABLE_LOCALE,résidu (annexe I : constantes locales),manuel,IWS_ANNEXE_D.tex:5 IWS_ANNEXE_I.tex:1
+volI,\Psi,6,4,2,partielle,VARIABLE_LOCALE,"évolution post-coupure Ψ (annexe J, locale)",manuel,IWS_ANNEXE_K.tex:4 IWS_ANNEXE_J.tex:2
+volI,X_{\mathcal H},5,0,5,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:5
+volI,e_{1},5,0,5,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:4 IWS_ANNEXE_G.tex:1
+volI,e_{2},5,0,5,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:4 IWS_ANNEXE_G.tex:1
+volI,e_{k},5,0,5,non_resolue,VARIABLE_LOCALE,épisodes et réalisations génériques (livre III),manuel,IWS_PART_III.tex:5
+volI,\overline{...},5,0,5,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_PART_III.tex:5
+volI,\sum_{i=1}^{N},5,0,5,non_resolue,NOTATION_USUELLE,règle lexicale (fonction ou symbole usuel),règle,IWS_ANNEXE_B.tex:5
+volI,x^{4},5,2,3,partielle,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:3 IWS_ANNEXE_D.tex:2
+volI,h_{k},5,0,5,non_resolue,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_C.tex:5
+volI,c_{2},5,4,1,partielle,VARIABLE_LOCALE,résidu (annexe I : constantes locales),manuel,IWS_ANNEXE_D.tex:4 IWS_ANNEXE_I.tex:1
+volI,\theta_{\ast},5,0,5,non_resolue,VARIABLE_LOCALE,"quantités locales des calculs d'équilibre et de stabilité (annexes C–E), en partie rattachées aux objets Jacobien et équilibre forcé",manuel,IWS_ANNEXE_E.tex:4 IWS_ANNEXE_F.tex:1
+volI,q_{\perp},5,0,5,non_resolue,VARIABLE_LOCALE,composante transverse (preuve du lemme I-invariance-alignee),manuel,IWS_ANNEXE_I.tex:5
+volII,x,72,0,72,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:72
+volII,t,37,0,37,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:37
+volII,I,34,31,3,partielle,USAGE_AMBIGU,ensemble initial I du régime (rattaché) ; identité I (\widetilde A) ; intervalle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:34
+volII,\varphi,30,15,15,partielle,USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:30
+volII,y,28,0,28,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:28
+volII,\mathcal{H},27,0,27,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:27
+volII,x_{1},26,0,26,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:26
+volII,x_{2},26,0,26,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:26
+volII,m,26,0,26,non_resolue,USAGE_AMBIGU,"nombre d'arêtes modifiées m (crash-tests, l. 697 ; noyau) ; m dans l'obstruction orbitale (cardinal)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:26
+volII,a,24,0,24,non_resolue,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:24
+volII,T,23,3,20,partielle,USAGE_AMBIGU,système cible des morphismes S→T ; horizon T,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:23
+volII,\lambda,21,15,6,partielle,VARIABLE_LOCALE,"résidus (λ(t)=ct, question G_2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:21
+volII,s,19,0,19,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:19
+volII,b,18,0,18,non_resolue,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:18
+volII,r,18,10,8,partielle,VARIABLE_LOCALE,résidus du rang r hors plage,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:18
+volII,K,16,5,11,partielle,VARIABLE_LOCALE,résidus (opérateur K hors sélecteur),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:16
+volII,j,16,0,16,non_resolue,INDICE_MUET,indice de nœud ou indice discret d'exécution,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:16
+volII,\mathcal{P}_{k},15,14,1,partielle,VARIABLE_LOCALE,résidu de la partition hors plage,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:15
+volII,c,15,3,12,partielle,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:15
+volII,h,14,0,14,non_resolue,VARIABLE_LOCALE,"boucle h (prop. Écriture cachée, l. 630) : objet local",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:14
+volII,\theta,13,0,13,non_resolue,USAGE_AMBIGU,"angle θ_r(u) (rattaché) ; θ action-angle (crash-test pendule, l. 597)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:13
+volII,z,13,0,13,non_resolue,VARIABLE_LOCALE,"variable z des comparaisons (l. 1529, bloc semi-algébrique)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:13
+volII,S,12,7,5,partielle,VARIABLE_LOCALE,système S (résidus),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:12
+volII,f,12,11,1,partielle,VARIABLE_LOCALE,application f d'un morphisme (résidu),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:12
+volII,i,12,0,12,non_resolue,INDICE_MUET,indice de nœud ou indice discret d'exécution,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:12
+volII,\cos,12,0,12,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:12
+volII,\gamma,11,10,1,partielle,VARIABLE_LOCALE,exécution γ (résidu),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:11
+volII,e,11,0,11,non_resolue,VARIABLE_LOCALE,"variable e (épisode, vecteur e(φ))",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:11
+volII,w,11,0,11,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:11
+volII,C^{2},10,0,10,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,x_{0},10,0,10,non_resolue,VARIABLE_LOCALE,"variables génériques (états, lecture, structure, mot, histoire, temps) ; types portés par des objets enregistrés (cf. G0.2)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,G,10,0,10,non_resolue,USAGE_AMBIGU,"groupe G du lemme orbital ; granularités G_0, G_1, G_2",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,v,10,0,10,non_resolue,VARIABLE_LOCALE,fonction-score v du lemme orbital (audit V5.16 : réservé),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,\Psi_{j},10,0,10,non_resolue,VARIABLE_LOCALE,application de l'inversion locale (bloc conique),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,R,10,0,10,non_resolue,VARIABLE_LOCALE,rayon R_j(μ) sans indice (bloc conique),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:10
+volII,\eta,9,8,1,partielle,VARIABLE_LOCALE,transport d'histoires η (résidu),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:9
+volII,c_{j},9,6,3,partielle,VARIABLE_LOCALE,"scores c_j(τ) (prop. Finitude de profondeur un, l. 882)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:9
+volII,\sin,9,0,9,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:9
+volII,\deg,9,0,9,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:9
+volII,\epsilon,9,0,9,non_resolue,USAGE_AMBIGU,ε du bloc conique (distinct de \varepsilon ?) : non vérifié,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:9
+volII,Y,8,6,2,partielle,VARIABLE_LOCALE,résidus,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,B,8,0,8,non_resolue,VARIABLE_LOCALE,"point b∈B (définition générale de fibre, l. 149)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,\rho,8,0,8,non_resolue,VARIABLE_LOCALE,résidus de ρ hors sélecteurs (lecture),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,\tanh,8,0,8,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,\Delta,8,0,8,non_resolue,USAGE_AMBIGU,"Δτ_h, Δτ_j (objets enregistrés, glyphe composé) ; Δ de la réduction homogène S_Δ",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,u,8,0,8,non_resolue,VARIABLE_LOCALE,"entrées u^±, u_0 (boucles symétriques, forçage)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:8
+volII,u_{0},7,0,7,non_resolue,VARIABLE_LOCALE,"entrées u^±, u_0 (boucles symétriques, forçage)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:7
+volII,\varphi_{5},7,0,7,non_resolue,USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:7
+volII,"\lambda_{r,w}",7,3,4,partielle,VARIABLE_LOCALE,résidus,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:7
+volII,\varepsilon,6,0,6,non_resolue,USAGE_AMBIGU,monoïde (unité ε) ; paramètre ε du protocole (V5.17),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,i^{*},6,0,6,non_resolue,VARIABLE_LOCALE,déclencheur i* (témoins),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,X,6,0,6,non_resolue,VARIABLE_LOCALE,ensemble fini X du lemme orbital,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,c_{i},6,4,2,partielle,VARIABLE_LOCALE,"scores c_j(τ) (prop. Finitude de profondeur un, l. 882)",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,\infty,6,0,6,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,\varphi_{4},6,0,6,non_resolue,USAGE_AMBIGU,"angle φ (bloc conique, rattaché) ; boucles φ_4, φ_5 du témoin (l. 948) : objets locaux",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,S^{1},6,0,6,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,O,6,0,6,non_resolue,NOTATION_USUELLE,notation de Landau,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,\upsilon_{\mathrm{cone}},6,0,6,non_resolue,VARIABLE_LOCALE,quantité locale du bloc conique,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:6
+volII,F,5,4,1,partielle,VARIABLE_LOCALE,résidus du générateur F,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:5
+volII,d,5,0,5,non_resolue,VARIABLE_LOCALE,"structures a,b,c,d du crash-test Juxtaposition interne (l. 593) et constantes locales",manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:5
+volII,"b_{i,w}^{(r)}",5,3,2,partielle,VARIABLE_LOCALE,résidus,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:5
+volII,\ell_{\pm},5,0,5,non_resolue,VARIABLE_LOCALE,demi-droites ℓ_± du secteur conique (l. 1733),manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:5
+volII,"\Delta_{4,w}^{(4)}",5,0,5,non_resolue,VARIABLE_LOCALE,fonction locale du témoin N=6,manuel,IWS_volume_II_classe_objets_transformations_v5_17.tex:5
+compagnons,t,49,0,49,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,transmission_profondeur_finie_V2.tex:45 certification_huit_episodes_V2.tex:4
+compagnons,C^{2},35,0,35,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,transmission_profondeur_finie_V2.tex:31 certification_huit_episodes_V2.tex:4
+compagnons,s,29,0,29,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,certification_huit_episodes_V2.tex:23 transmission_profondeur_finie_V2.tex:6
+compagnons,r,26,0,26,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,transmission_profondeur_finie_V2.tex:14 certification_huit_episodes_V2.tex:12
+compagnons,R,20,0,20,non_resolue,VARIABLE_LOCALE,nombre d'épisodes R,manuel,transmission_profondeur_finie_V2.tex:11 certification_huit_episodes_V2.tex:9
+compagnons,x,19,0,19,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,transmission_profondeur_finie_V2.tex:12 certification_huit_episodes_V2.tex:7
+compagnons,d,13,0,13,non_resolue,USAGE_AMBIGU,"dimension d ; distance d(k,0) dans A_1",manuel,transmission_profondeur_finie_V2.tex:11 certification_huit_episodes_V2.tex:2
+compagnons,I,12,0,12,non_resolue,USAGE_AMBIGU,intervalle I ; identité,manuel,transmission_profondeur_finie_V2.tex:12
+compagnons,\delta,11,0,11,non_resolue,VARIABLE_LOCALE,marges δ locales,manuel,certification_huit_episodes_V2.tex:6 transmission_profondeur_finie_V2.tex:5
+compagnons,\varphi,10,0,10,non_resolue,VARIABLE_LOCALE,"flot φ(t;x_0,ε) (lemme A)",manuel,transmission_profondeur_finie_V2.tex:10
+compagnons,g_{j},9,0,9,non_resolue,VARIABLE_LOCALE,forçage g_j de la pression (lemme B),manuel,transmission_profondeur_finie_V2.tex:6 certification_huit_episodes_V2.tex:3
+compagnons,E,9,0,9,non_resolue,VARIABLE_LOCALE,quantités E de la certification,manuel,certification_huit_episodes_V2.tex:9
+compagnons,\eta,9,0,9,non_resolue,VARIABLE_LOCALE,marge η (lemme C),manuel,transmission_profondeur_finie_V2.tex:5 certification_huit_episodes_V2.tex:4
+compagnons,j,8,0,8,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,transmission_profondeur_finie_V2.tex:6 certification_huit_episodes_V2.tex:2
+compagnons,m,8,0,8,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,certification_huit_episodes_V2.tex:4 transmission_profondeur_finie_V2.tex:4
+compagnons,M,8,0,8,non_resolue,VARIABLE_LOCALE,M_λ (rattaché) : résidus,manuel,certification_huit_episodes_V2.tex:8
+compagnons,u,8,0,8,non_resolue,VARIABLE_LOCALE,"forçage u, u_0, U",manuel,transmission_profondeur_finie_V2.tex:5 certification_huit_episodes_V2.tex:3
+compagnons,\square,7,0,7,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,transmission_profondeur_finie_V2.tex:6 certification_huit_episodes_V2.tex:1
+compagnons,\partial_{t},7,0,7,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,transmission_profondeur_finie_V2.tex:7
+compagnons,u_{0},6,0,6,non_resolue,VARIABLE_LOCALE,"forçage u, u_0, U",manuel,transmission_profondeur_finie_V2.tex:4 certification_huit_episodes_V2.tex:2
+compagnons,U,6,0,6,non_resolue,VARIABLE_LOCALE,"forçage u, u_0, U",manuel,certification_huit_episodes_V2.tex:3 transmission_profondeur_finie_V2.tex:3
+compagnons,T_{1},6,0,6,non_resolue,VARIABLE_LOCALE,premier instant d'impact,manuel,certification_huit_episodes_V2.tex:3 transmission_profondeur_finie_V2.tex:3
+compagnons,k,6,0,6,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,transmission_profondeur_finie_V2.tex:4 certification_huit_episodes_V2.tex:2
+compagnons,h,6,0,6,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,certification_huit_episodes_V2.tex:6
+compagnons,\lambda,6,0,6,non_resolue,VARIABLE_LOCALE,"paramètres λ, γ dans (γ_1,λ)=ε(γ̄,λ̄)",manuel,transmission_profondeur_finie_V2.tex:6
+compagnons,\gamma,6,0,6,non_resolue,VARIABLE_LOCALE,"paramètres λ, γ dans (γ_1,λ)=ε(γ̄,λ̄)",manuel,transmission_profondeur_finie_V2.tex:6
+compagnons,C^{1},6,0,6,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,transmission_profondeur_finie_V2.tex:6
+compagnons,s^{a},5,0,5,non_resolue,VARIABLE_LOCALE,exposant local (certification),manuel,certification_huit_episodes_V2.tex:5
+compagnons,\max_{j},5,0,5,non_resolue,NOTATION_USUELLE,notation usuelle,manuel,transmission_profondeur_finie_V2.tex:4 certification_huit_episodes_V2.tex:1
+compagnons,a,5,0,5,non_resolue,VARIABLE_LOCALE,variables locales des preuves,manuel,certification_huit_episodes_V2.tex:5
+compagnons,P_{\rm pol},5,0,5,non_resolue,VARIABLE_LOCALE,polynôme local (certification),manuel,certification_huit_episodes_V2.tex:5
+compagnons,F,5,0,5,non_resolue,VARIABLE_LOCALE,champ F et fonction Π du lemme C,manuel,transmission_profondeur_finie_V2.tex:5
+compagnons,\Pi,5,0,5,non_resolue,VARIABLE_LOCALE,champ F et fonction Π du lemme C,manuel,transmission_profondeur_finie_V2.tex:5

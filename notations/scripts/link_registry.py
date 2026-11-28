@@ -2,7 +2,8 @@
 """G0.2 — validation du registre candidat et rattachement aux occurrences G0.1 (lecture seule).
 
 Usage (depuis la racine du dépôt) :
-    python3 -I notations/scripts/link_registry.py --out audits/G0/G0_02_semantic
+    .venv-g0/bin/python -I notations/scripts/link_registry.py --out audits/G0/G0_02_semantic
+(PyYAML requis pour le registre YAML style bloc ; voir registry_io.py)
 
 Contrôles : schéma minimal, unicité des identifiants, statuts autorisés, dépendances existantes,
 notation canonique vide (G0.2). Rattachement : chaque sélecteur filtre les occurrences de
@@ -21,6 +22,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import registry_io  # noqa: E402
+
 REG = 'notations/registry.yaml'
 INV = 'audits/G0/G0_01_inventory/'
 STATUTS = {'EXPLICIT', 'IMPLICIT', 'AMBIGUOUS', 'UNDEFINED'}
@@ -29,6 +33,7 @@ REQUIRED = ['id', 'phase', 'designation', 'notations', 'nature', 'type', 'domain
             'hypotheses', 'portee', 'dependances', 'selecteurs', 'statut_definition', 'motif_statut',
             'confiance', 'notation_canonique']
 SEUIL = 5
+GRANULARITES = {'famille', 'element'}
 
 
 def key(r):
@@ -43,7 +48,8 @@ def key(r):
 def match(sel, r):
     if sel.get('glyphe') and r['glyphe'] != sel['glyphe']:
         return False
-    for fld, col in (('indice', 'indice'), ('exposant', 'exposant'), ('symbole', 'symbole_source'), ('fichier', 'fichier')):
+    for fld, col in (('indice', 'indice'), ('exposant', 'exposant'), ('symbole', 'symbole_source'), ('fichier', 'fichier'),
+                     ('decoration', 'decoration'), ('police', 'police')):
         if fld in sel and not re.search(sel[fld], r[col]):
             return False
     if 'lignes' in sel and not (sel['lignes'][0] <= int(r['ligne']) <= sel['lignes'][1]):
@@ -60,7 +66,7 @@ def main():
     ap.add_argument('--out', default='audits/G0/G0_02_semantic')
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
-    reg = json.load(open(REG, encoding='utf-8'))
+    reg = registry_io.load(REG)
     objs = reg['objets']
     errors = []
     ids = [o.get('id') for o in objs]
@@ -68,6 +74,7 @@ def main():
         if c > 1:
             errors.append('identifiant dupliqué : %s' % i)
     idset = set(ids)
+    byid = {o['id']: o for o in objs}
     for o in objs:
         for f in REQUIRED:
             if f not in o:
@@ -84,6 +91,21 @@ def main():
         for rel in o.get('relations_intra', []):
             if rel['cible'] not in idset:
                 errors.append('%s : relation vers objet inconnu %s' % (o['id'], rel['cible']))
+        gran = o.get('granularite')
+        if gran is not None and gran not in GRANULARITES:
+            errors.append('%s : granularité invalide %s' % (o['id'], gran))
+        for comp in o.get('composants', []):
+            if comp not in idset:
+                errors.append('%s : composant inconnu %s' % (o['id'], comp))
+            elif o['id'] not in byid[comp].get('familles', []):
+                errors.append('%s : composant %s sans renvoi à sa famille' % (o['id'], comp))
+        for fam in o.get('familles', []):
+            if fam not in idset:
+                errors.append('%s : famille inconnue %s' % (o['id'], fam))
+            elif o['id'] not in byid[fam].get('composants', []):
+                errors.append('%s : famille %s ne le liste pas' % (o['id'], fam))
+        if gran == 'famille' and not o.get('composants') and not o.get('motif_granularite'):
+            errors.append('%s : famille sans composants ni motif de non-décomposition' % o['id'])
         if not o['id'].startswith(('I.', 'II.', 'C.')):
             errors.append('%s : préfixe de volume absent' % o['id'])
         fichier = o.get('definition', {}).get('fichier', '')
@@ -149,6 +171,7 @@ def main():
         par_phase=dict(collections.Counter(o['phase'] for o in objs)),
         par_confiance=dict(collections.Counter(o['confiance'] for o in objs)),
         par_volume=dict(collections.Counter(o['id'].split('.')[0] for o in objs)),
+        par_granularite=dict(collections.Counter(o.get('granularite', 'non renseignée') for o in objs)),
         par_nature=dict(collections.Counter(o['nature'].split(' (')[0].split(';')[0] for o in objs)),
         avec_anomalie=sorted({o.get('anomalie') for o in objs if o.get('anomalie')}),
     )
