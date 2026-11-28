@@ -1,0 +1,336 @@
+collision,selecteur,role,vol,forme,fichier,occurrences
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_G.tex,36
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_H.tex,4
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_I.tex,4
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_K.tex,7
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_L.tex,11
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/IWS_PART_III.tex,17
+COL-RHO-01,0,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/main.tex,1
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_G.tex,73
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_H.tex,51
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_I.tex,42
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_J.tex,8
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_K.tex,22
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/Annexes/IWS_ANNEXE_L.tex,47
+COL-RHO-01,1,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=1,Volume_I/IWS_PART_III.tex,70
+COL-RHO-01,2,cote_a_examiner,volI,glyphe=\rho fichier=main|IWS_PART_III\.tex|ANNEXE_[G-L] niveau=2,Volume_I/Annexes/IWS_ANNEXE_H.tex,1
+COL-RHO-01,3,reference,volII,glyphe=\rho indice=^X|^\\mathrm\{int\}$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,67
+COL-RHO-02,0,cote_a_examiner,volI,"glyphe=\rho fichier=IWS_PART_II\.tex lignes=[880, 990]",Volume_I/IWS_PART_II.tex,11
+COL-RHO-02,1,cote_a_examiner,volI,glyphe=\rho fichier=ANNEXE_[EF] indice=^$,Volume_I/Annexes/IWS_ANNEXE_E.tex,36
+COL-RHO-02,1,cote_a_examiner,volI,glyphe=\rho fichier=ANNEXE_[EF] indice=^$,Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-RHO-03,0,cote_a_examiner,volI,glyphe=\rho fichier=ANNEXE_C,Volume_I/Annexes/IWS_ANNEXE_C.tex,8
+COL-RHO-03,1,cote_a_examiner,volI,glyphe=\rho indice=mathrm\{sp\},Volume_I/Annexes/IWS_ANNEXE_E.tex,3
+COL-RHO-03,1,cote_a_examiner,volI,glyphe=\rho indice=mathrm\{sp\},Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-RHO-04,0,cote_a_examiner,volI,glyphe=\rho indice=mathrm\{sp\},Volume_I/Annexes/IWS_ANNEXE_E.tex,3
+COL-RHO-04,0,cote_a_examiner,volI,glyphe=\rho indice=mathrm\{sp\},Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-RHO-05,0,reference,volII,"glyphe=\rho indice=^$ lignes=[195, 860] niveau=1",Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,19
+COL-RHO-06,0,reference,volII,"glyphe=\rho lignes=[1660, 1745]",Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,13
+COL-RHO-07,0,cote_a_examiner,volI,glyphe=d indice=^\\rho$,Volume_I/Annexes/IWS_ANNEXE_I.tex,1
+COL-RHO-08,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=ANNEXE_K exposant=mathfrak B,Volume_I/Annexes/IWS_ANNEXE_K.tex,2
+COL-X-01,0,cote_a_examiner,volI,glyphe=\mathfrak{X},Volume_I/Annexes/IWS_ANNEXE_G.tex,13
+COL-X-01,0,cote_a_examiner,volI,glyphe=\mathfrak{X},Volume_I/Annexes/IWS_ANNEXE_L.tex,8
+COL-X-01,0,cote_a_examiner,volI,glyphe=\mathfrak{X},Volume_I/IWS_PART_III.tex,9
+COL-X-01,1,reference,volII,glyphe=\mathcal{X},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,13
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_G.tex,52
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_H.tex,9
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_I.tex,4
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_J.tex,3
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_K.tex,5
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/Annexes/IWS_ANNEXE_L.tex,46
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/IWS_PART_II.tex,1
+COL-X-02,0,cote_a_examiner,volI,glyphe=X,Volume_I/IWS_PART_III.tex,147
+COL-X-02,1,reference,volII,glyphe=X indice=^s$|^A$|^\{A'\}$|^s'$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,12
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_B.tex,1
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_G.tex,2
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_K.tex,29
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/Annexes/IWS_ANNEXE_L.tex,9
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/IWS_PART_III.tex,3
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/TABLE_ENONCES.tex,1
+COL-PRES-01,0,cote_a_examiner,volI,texte:présentation,Volume_I/main.tex,6
+COL-PRES-01,1,reference,volII,texte:présentation,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,8
+COL-FIB-01,0,reference,volII,texte:fibre d'opacité,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,7
+COL-O-01,0,cote_a_examiner,volI,glyphe=O,Volume_I/Annexes/IWS_ANNEXE_C.tex,4
+COL-O-01,0,cote_a_examiner,volI,glyphe=O,Volume_I/Annexes/IWS_ANNEXE_D.tex,11
+COL-O-01,0,cote_a_examiner,volI,glyphe=O,Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-O-01,0,cote_a_examiner,volI,glyphe=O,Volume_I/IWS_PART_II.tex,2
+COL-SIG-01,0,cote_a_examiner,volI,glyphe=\Sigma,Volume_I/Annexes/IWS_ANNEXE_H.tex,6
+COL-SIG-01,0,cote_a_examiner,volI,glyphe=\Sigma,Volume_I/Annexes/IWS_ANNEXE_I.tex,9
+COL-SIG-01,0,cote_a_examiner,volI,glyphe=\Sigma,Volume_I/Annexes/IWS_ANNEXE_J.tex,21
+COL-SIG-01,0,cote_a_examiner,volI,glyphe=\Sigma,Volume_I/Annexes/IWS_ANNEXE_K.tex,4
+COL-SIG-01,1,reference,volII,glyphe=\Sigma,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,28
+COL-OME-01,0,cote_a_examiner,volI,glyphe=\Omega,Volume_I/Annexes/IWS_ANNEXE_H.tex,36
+COL-OME-01,0,cote_a_examiner,volI,glyphe=\Omega,Volume_I/Annexes/IWS_ANNEXE_I.tex,20
+COL-OME-01,0,cote_a_examiner,volI,glyphe=\Omega,Volume_I/Annexes/IWS_ANNEXE_J.tex,7
+COL-OME-01,0,cote_a_examiner,volI,glyphe=\Omega,Volume_I/Annexes/IWS_ANNEXE_K.tex,9
+COL-OME-01,0,cote_a_examiner,volI,glyphe=\Omega,Volume_I/IWS_PART_III.tex,18
+COL-OME-01,1,reference,volII,glyphe=\Omega,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,25
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_D.tex,2
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_E.tex,5
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_F.tex,4
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_G.tex,25
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_H.tex,1
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_I.tex,1
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/IWS_PART_II.tex,1
+COL-PHI-01,0,cote_a_examiner,volI,glyphe=\Phi,Volume_I/IWS_PART_III.tex,36
+COL-PHI-01,1,reference,volII,glyphe=\Phi,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,11
+COL-VTH-01,0,cote_a_examiner,volI,glyphe=\vartheta,Volume_I/Annexes/IWS_ANNEXE_C.tex,40
+COL-VTH-01,1,reference,volII,glyphe=\vartheta,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,27
+COL-SSTRUCT-01,0,cote_a_examiner,volI,glyphe=\mathcal{S},Volume_I/Annexes/IWS_ANNEXE_H.tex,3
+COL-SSTRUCT-01,1,reference,volII,glyphe=\mathcal{S},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,11
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_G.tex,20
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_H.tex,9
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_I.tex,5
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_K.tex,6
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/Annexes/IWS_ANNEXE_L.tex,19
+COL-RESP-01,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_III\.tex|ANNEXE_[G-L],Volume_I/IWS_PART_III.tex,57
+COL-RESP-01,1,reference,volII,glyphe=R exposant=rho,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,7
+COL-RESP-02,0,cote_a_examiner,volI,glyphe=\mathcal{R} indice=^g$,Volume_I/Annexes/IWS_ANNEXE_E.tex,1
+COL-RESP-02,1,reference,volII,glyphe=\mathcal{R},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,1
+COL-RESP-03,0,cote_a_examiner,volI,glyphe=\mathcal{R} fichier=IWS_PART_II\.tex,Volume_I/IWS_PART_II.tex,3
+COL-RESP-03,1,cote_a_examiner,volI,"glyphe=\mathcal{R} fichier=IWS_PART_III\.tex lignes=[1, 345]",Volume_I/IWS_PART_III.tex,15
+COL-EQ-01,0,cote_a_examiner,volI,texte:Nerode,Volume_I/Annexes/IWS_ANNEXE_G.tex,3
+COL-EQ-01,0,cote_a_examiner,volI,texte:Nerode,Volume_I/Annexes/IWS_ANNEXE_L.tex,1
+COL-EQ-01,0,cote_a_examiner,volI,texte:Nerode,Volume_I/TABLE_ENONCES.tex,1
+COL-EQ-01,0,cote_a_examiner,volI,texte:Nerode,Volume_I/main.tex,2
+COL-EQ-01,1,reference,volII,texte:Nerode,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,3
+COL-EQ-02,0,cote_a_examiner,volI,texte:\\equiv,Volume_I/Annexes/IWS_ANNEXE_L.tex,7
+COL-EQ-02,0,cote_a_examiner,volI,texte:\\equiv,Volume_I/IWS_PART_I.tex,1
+COL-EQ-02,0,cote_a_examiner,volI,texte:\\equiv,Volume_I/IWS_PART_III.tex,2
+COL-EQ-02,1,reference,volII,texte:\\equiv,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,8
+COL-HIST-01,0,cote_a_examiner,volI,texte:historicité structurelle,Volume_I/IWS_PART_I.tex,1
+COL-HIST-01,1,reference,volII,texte:istoricité structurelle,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,3
+COL-DEPTH-01,0,cote_a_examiner,volI,glyphe=\ell,Volume_I/Annexes/IWS_ANNEXE_G.tex,6
+COL-DEPTH-01,0,cote_a_examiner,volI,glyphe=\ell,Volume_I/Annexes/IWS_ANNEXE_L.tex,21
+COL-DEPTH-01,0,cote_a_examiner,volI,glyphe=\ell,Volume_I/IWS_PART_III.tex,1
+COL-DEPTH-01,1,reference,volII,glyphe=\ell,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,13
+COL-K-01,0,cote_a_examiner,volI,glyphe=k fichier=ANNEXE_[CD],Volume_I/Annexes/IWS_ANNEXE_C.tex,21
+COL-K-01,0,cote_a_examiner,volI,glyphe=k fichier=ANNEXE_[CD],Volume_I/Annexes/IWS_ANNEXE_D.tex,10
+COL-K-01,1,reference,volII,glyphe=k,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,79
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/Annexes/IWS_ANNEXE_A.tex,14
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/Annexes/IWS_ANNEXE_C.tex,13
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/Annexes/IWS_ANNEXE_D.tex,34
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/Annexes/IWS_ANNEXE_L.tex,2
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/IWS_PART_II.tex,4
+COL-R-01,0,cote_a_examiner,volI,glyphe=r indice=^$,Volume_I/IWS_PART_III.tex,19
+COL-R-01,1,reference,volII,glyphe=r indice=^$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,19
+COL-C-01,0,cote_a_examiner,volI,"glyphe=C indice=^$ fichier=IWS_PART_I\.tex lignes=[1035, 1200]",Volume_I/IWS_PART_I.tex,6
+COL-C-01,1,cote_a_examiner,volI,glyphe=C indice=^$ fichier=ANNEXE_B|IWS_PART_III\.tex,Volume_I/Annexes/IWS_ANNEXE_B.tex,7
+COL-C-01,1,cote_a_examiner,volI,glyphe=C indice=^$ fichier=ANNEXE_B|IWS_PART_III\.tex,Volume_I/IWS_PART_III.tex,25
+COL-C-01,2,cote_a_examiner,volI,glyphe=C indice=^k$,Volume_I/Annexes/IWS_ANNEXE_J.tex,4
+COL-C-01,3,reference,volII,glyphe=C indice=^$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,62
+COL-D-01,0,cote_a_examiner,volI,glyphe=D fichier=ANNEXE_[FIJK],Volume_I/Annexes/IWS_ANNEXE_F.tex,19
+COL-D-01,0,cote_a_examiner,volI,glyphe=D fichier=ANNEXE_[FIJK],Volume_I/Annexes/IWS_ANNEXE_I.tex,6
+COL-D-01,0,cote_a_examiner,volI,glyphe=D fichier=ANNEXE_[FIJK],Volume_I/Annexes/IWS_ANNEXE_J.tex,20
+COL-D-01,0,cote_a_examiner,volI,glyphe=D fichier=ANNEXE_[FIJK],Volume_I/Annexes/IWS_ANNEXE_K.tex,1
+COL-D-01,1,reference,volII,glyphe=D,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,18
+COL-DCAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{D},Volume_I/Annexes/IWS_ANNEXE_C.tex,5
+COL-DCAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{D},Volume_I/Annexes/IWS_ANNEXE_G.tex,3
+COL-DCAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{D},Volume_I/Annexes/IWS_ANNEXE_H.tex,1
+COL-DCAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{D},Volume_I/IWS_PART_I.tex,2
+COL-DCAL-01,1,reference,volII,glyphe=\mathcal{D},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,3
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_A.tex,2
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_B.tex,8
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_C.tex,12
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_D.tex,3
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_E.tex,32
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_G.tex,7
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_I.tex,8
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/Annexes/IWS_ANNEXE_J.tex,19
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/IWS_PART_I.tex,3
+COL-Q-01,0,cote_a_examiner,volI,glyphe=q,Volume_I/IWS_PART_II.tex,11
+COL-Q-02,0,reference,volII,glyphe=q,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,19
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/Annexes/IWS_ANNEXE_B.tex,17
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/Annexes/IWS_ANNEXE_D.tex,12
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/Annexes/IWS_ANNEXE_E.tex,4
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/Annexes/IWS_ANNEXE_H.tex,10
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/Annexes/IWS_ANNEXE_I.tex,5
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/IWS_PART_II.tex,15
+COL-A-01,0,cote_a_examiner,volI,glyphe=A decoration=^$ fichier=IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI],Volume_I/IWS_PART_III.tex,24
+COL-A-01,1,cote_a_examiner,volI,glyphe=B fichier=IWS_PART_II\.tex|ANNEXE_D,Volume_I/Annexes/IWS_ANNEXE_D.tex,10
+COL-A-01,1,cote_a_examiner,volI,glyphe=B fichier=IWS_PART_II\.tex|ANNEXE_D,Volume_I/IWS_PART_II.tex,14
+COL-A-01,2,reference,volII,glyphe=A,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,79
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_E.tex,69
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_F.tex,10
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_H.tex,23
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_I.tex,23
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/Annexes/IWS_ANNEXE_K.tex,8
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/IWS_PART_II.tex,18
+COL-CHI-01,0,cote_a_examiner,volI,glyphe=\chi,Volume_I/IWS_PART_III.tex,5
+COL-CHI-01,1,cote_a_examiner,volI,glyphe=\boldsymbol{\chi},Volume_I/Annexes/IWS_ANNEXE_E.tex,1
+COL-CHI-01,1,cote_a_examiner,volI,glyphe=\boldsymbol{\chi},Volume_I/Annexes/IWS_ANNEXE_F.tex,3
+COL-CHI-01,1,cote_a_examiner,volI,glyphe=\boldsymbol{\chi},Volume_I/Annexes/IWS_ANNEXE_I.tex,7
+COL-CHI-01,1,cote_a_examiner,volI,glyphe=\boldsymbol{\chi},Volume_I/IWS_PART_II.tex,10
+COL-CHI-01,2,reference,volII,glyphe=\chi,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,7
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_A.tex,10
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_B.tex,4
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_C.tex,38
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_D.tex,15
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_E.tex,2
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_F.tex,10
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_H.tex,54
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_I.tex,74
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_J.tex,4
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_K.tex,8
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/Annexes/IWS_ANNEXE_L.tex,1
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/IWS_PART_I.tex,5
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/IWS_PART_II.tex,12
+COL-S-01,0,cote_a_examiner,volI,glyphe=s,Volume_I/IWS_PART_III.tex,61
+COL-S-01,1,cote_a_examiner,volI,glyphe=\mathbf{s},Volume_I/Annexes/IWS_ANNEXE_H.tex,50
+COL-S-01,1,cote_a_examiner,volI,glyphe=\mathbf{s},Volume_I/Annexes/IWS_ANNEXE_I.tex,8
+COL-S-01,1,cote_a_examiner,volI,glyphe=\mathbf{s},Volume_I/IWS_PART_II.tex,8
+COL-S-01,2,cote_a_examiner,volI,glyphe=\boldsymbol{s},Volume_I/Annexes/IWS_ANNEXE_F.tex,6
+COL-S-02,0,reference,volII,glyphe=s,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,48
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_C.tex,60
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_D.tex,32
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_E.tex,31
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_F.tex,19
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_H.tex,23
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_I.tex,24
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_J.tex,2
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/Annexes/IWS_ANNEXE_K.tex,8
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/IWS_PART_I.tex,1
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/IWS_PART_II.tex,32
+COL-THETA-01,0,cote_a_examiner,volI,glyphe=\theta,Volume_I/IWS_PART_III.tex,3
+COL-THETA-01,1,reference,volII,glyphe=\theta,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,25
+COL-U-01,0,cote_a_examiner,volI,glyphe=u fichier=IWS_PART_III\.tex,Volume_I/IWS_PART_III.tex,45
+COL-U-01,1,reference,volII,glyphe=u,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,21
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/Annexes/IWS_ANNEXE_C.tex,54
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/Annexes/IWS_ANNEXE_D.tex,25
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/Annexes/IWS_ANNEXE_E.tex,11
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/Annexes/IWS_ANNEXE_F.tex,5
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/Annexes/IWS_ANNEXE_I.tex,2
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/IWS_PART_I.tex,1
+COL-V-01,0,cote_a_examiner,volI,glyphe=v,Volume_I/IWS_PART_II.tex,24
+COL-V-01,1,reference,volII,glyphe=v,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,10
+COL-E-01,0,cote_a_examiner,volI,glyphe=E indice=^C$|^\\chi$,Volume_I/Annexes/IWS_ANNEXE_E.tex,4
+COL-E-01,0,cote_a_examiner,volI,glyphe=E indice=^C$|^\\chi$,Volume_I/Annexes/IWS_ANNEXE_J.tex,7
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/Annexes/IWS_ANNEXE_B.tex,46
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/Annexes/IWS_ANNEXE_D.tex,1
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/Annexes/IWS_ANNEXE_G.tex,3
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/Annexes/IWS_ANNEXE_H.tex,5
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/IWS_PART_I.tex,7
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/IWS_PART_II.tex,1
+COL-EPS-01,0,cote_a_examiner,volI,glyphe=\varepsilon indice=^$,Volume_I/IWS_PART_III.tex,3
+COL-EPS-01,1,reference,volII,glyphe=\varepsilon,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,8
+COL-EPS-01,2,reference,volII,glyphe=\epsilon,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,11
+COL-DELTA-01,0,cote_a_examiner,volI,glyphe=\Delta fichier=ANNEXE_[EF]|IWS_PART_III\.tex,Volume_I/Annexes/IWS_ANNEXE_E.tex,29
+COL-DELTA-01,0,cote_a_examiner,volI,glyphe=\Delta fichier=ANNEXE_[EF]|IWS_PART_III\.tex,Volume_I/Annexes/IWS_ANNEXE_F.tex,10
+COL-DELTA-01,0,cote_a_examiner,volI,glyphe=\Delta fichier=ANNEXE_[EF]|IWS_PART_III\.tex,Volume_I/IWS_PART_III.tex,4
+COL-DELTA-01,1,reference,volII,glyphe=\Delta,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,18
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_D.tex,9
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_E.tex,4
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_F.tex,2
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_H.tex,14
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_I.tex,9
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/Annexes/IWS_ANNEXE_K.tex,2
+COL-CAL-01,0,cote_a_examiner,volI,glyphe=\mathcal{P},Volume_I/IWS_PART_II.tex,10
+COL-CAL-01,1,cote_a_examiner,volI,glyphe=\mathcal{A},Volume_I/Annexes/IWS_ANNEXE_C.tex,1
+COL-CAL-01,1,cote_a_examiner,volI,glyphe=\mathcal{A},Volume_I/Annexes/IWS_ANNEXE_D.tex,6
+COL-CAL-01,1,cote_a_examiner,volI,glyphe=\mathcal{A},Volume_I/Annexes/IWS_ANNEXE_H.tex,8
+COL-CAL-01,1,cote_a_examiner,volI,glyphe=\mathcal{A},Volume_I/IWS_PART_II.tex,9
+COL-CAL-01,1,cote_a_examiner,volI,glyphe=\mathcal{A},Volume_I/IWS_PART_III.tex,1
+COL-CAL-01,2,cote_a_examiner,volI,glyphe=\mathcal{L} fichier=IWS_PART_III\.tex,Volume_I/IWS_PART_III.tex,24
+COL-CAL-01,3,cote_a_examiner,volI,glyphe=\mathcal{G},Volume_I/Annexes/IWS_ANNEXE_H.tex,4
+COL-CAL-01,3,cote_a_examiner,volI,glyphe=\mathcal{G},Volume_I/Annexes/IWS_ANNEXE_I.tex,4
+COL-CAL-01,3,cote_a_examiner,volI,glyphe=\mathcal{G},Volume_I/Annexes/IWS_ANNEXE_K.tex,4
+COL-CAL-01,3,cote_a_examiner,volI,glyphe=\mathcal{G},Volume_I/IWS_PART_I.tex,1
+COL-CAL-01,3,cote_a_examiner,volI,glyphe=\mathcal{G},Volume_I/IWS_PART_III.tex,4
+COL-E-ALPH-01,0,cote_a_examiner,volI,glyphe=\mathcal{E},Volume_I/Annexes/IWS_ANNEXE_G.tex,10
+COL-E-ALPH-01,0,cote_a_examiner,volI,glyphe=\mathcal{E},Volume_I/IWS_PART_III.tex,3
+COL-E-ALPH-01,1,reference,volII,glyphe=\mathcal{E},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,2
+COL-SYN-01,0,cote_a_examiner,volI,"glyphe=y fichier=ANNEXE_C lignes=[1726, 1830]",Volume_I/Annexes/IWS_ANNEXE_C.tex,5
+COL-SYN-02,0,cote_a_examiner,volI,glyphe=\theta indice=^0$|^\\infty$,Volume_I/Annexes/IWS_ANNEXE_D.tex,6
+COL-SYN-02,0,cote_a_examiner,volI,glyphe=\theta indice=^0$|^\\infty$,Volume_I/Annexes/IWS_ANNEXE_E.tex,6
+COL-SYN-02,0,cote_a_examiner,volI,glyphe=\theta indice=^0$|^\\infty$,Volume_I/Annexes/IWS_ANNEXE_F.tex,3
+COL-SYN-02,0,cote_a_examiner,volI,glyphe=\theta indice=^0$|^\\infty$,Volume_I/IWS_PART_II.tex,6
+COL-SYN-03,0,cote_a_examiner,volI,glyphe=R indice=^b$,Volume_I/IWS_PART_I.tex,12
+COL-SYN-03,1,cote_a_examiner,volI,glyphe=R decoration=\\widehat,Volume_I/Annexes/IWS_ANNEXE_B.tex,14
+COL-SYN-04,0,cote_a_examiner,volI,glyphe=\mathcal{G} indice=^N$,Volume_I/IWS_PART_I.tex,1
+COL-SYN-05,0,cote_a_examiner,volI,glyphe=\mathcal{K},Volume_I/Annexes/IWS_ANNEXE_J.tex,2
+COL-SYN-05,0,cote_a_examiner,volI,glyphe=\mathcal{K},Volume_I/IWS_PART_I.tex,10
+COL-SYN-05,1,reference,volII,glyphe=K,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,43
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/Annexes/IWS_ANNEXE_G.tex,10
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/Annexes/IWS_ANNEXE_H.tex,4
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/Annexes/IWS_ANNEXE_I.tex,3
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/Annexes/IWS_ANNEXE_K.tex,4
+COL-SYN-06,0,cote_a_examiner,volI,glyphe=\operatorname{Exec},Volume_I/IWS_PART_III.tex,2
+COL-SYN-06,1,reference,volII,glyphe=\operatorname{End},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,5
+COL-SYN-07,0,cote_a_examiner,volI,glyphe=i exposant=^\\ast$,Volume_I/Annexes/IWS_ANNEXE_A.tex,3
+COL-SYN-07,0,cote_a_examiner,volI,glyphe=i exposant=^\\ast$,Volume_I/Annexes/IWS_ANNEXE_B.tex,1
+COL-SYN-07,0,cote_a_examiner,volI,glyphe=i exposant=^\\ast$,Volume_I/Annexes/IWS_ANNEXE_C.tex,1
+COL-SYN-07,0,cote_a_examiner,volI,glyphe=i exposant=^\\ast$,Volume_I/IWS_PART_I.tex,8
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/Annexes/IWS_ANNEXE_A.tex,7
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/Annexes/IWS_ANNEXE_B.tex,3
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/Annexes/IWS_ANNEXE_C.tex,7
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/Annexes/IWS_ANNEXE_E.tex,4
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/Annexes/IWS_ANNEXE_F.tex,2
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/IWS_PART_I.tex,10
+COL-SYN-08,0,cote_a_examiner,volI,glyphe=r indice=^P$,Volume_I/IWS_PART_II.tex,1
+COL-SYN-09,0,cote_a_examiner,volI,glyphe=\mathcal{A} indice=^1$|^$ fichier=IWS_PART_II\.tex|ANNEXE_D,Volume_I/Annexes/IWS_ANNEXE_D.tex,3
+COL-SYN-09,0,cote_a_examiner,volI,glyphe=\mathcal{A} indice=^1$|^$ fichier=IWS_PART_II\.tex|ANNEXE_D,Volume_I/IWS_PART_II.tex,4
+COL-SYN-10,0,cote_a_examiner,volI,glyphe=a indice=^[012]$,Volume_I/Annexes/IWS_ANNEXE_C.tex,19
+COL-SYN-10,0,cote_a_examiner,volI,glyphe=a indice=^[012]$,Volume_I/Annexes/IWS_ANNEXE_D.tex,43
+COL-SYN-10,0,cote_a_examiner,volI,glyphe=a indice=^[012]$,Volume_I/IWS_PART_II.tex,5
+COL-H-01,0,reference,volII,texte:H1--H,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,3
+COL-H-01,1,reference,compagnons,texte:\(H[1-5]\),Volume_II/preuves_compagnons/certification_huit_episodes_V2.tex,29
+COL-H-01,1,reference,compagnons,texte:\(H[1-5]\),Volume_II/preuves_compagnons/transmission_profondeur_finie_V2.tex,35
+COL-LAB-01,0,cote_a_examiner,volI,texte:\(A[1-4]\),Volume_I/Annexes/IWS_ANNEXE_I.tex,12
+COL-LAB-01,1,cote_a_examiner,volI,texte:\(P[1-6]\),Volume_I/Annexes/IWS_ANNEXE_K.tex,17
+COL-HYB-01,0,reference,volII,texte:\\Hyb,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,9
+COL-SUPP-01,0,reference,volII,glyphe=\operatorname{Reach},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,3
+COL-SUPP-01,1,reference,volII,glyphe=\operatorname{Supp},Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,2
+COL-G-01,0,reference,volII,glyphe=G indice=^$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,10
+COL-T-01,0,reference,volII,glyphe=T indice=^$,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,23
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_A.tex,3
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_C.tex,14
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_D.tex,29
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_E.tex,1
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/Annexes/IWS_ANNEXE_H.tex,12
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/IWS_PART_I.tex,5
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/IWS_PART_II.tex,14
+COL-M-01,0,cote_a_examiner,volI,glyphe=m indice=^$,Volume_I/IWS_PART_III.tex,1
+COL-M-01,1,reference,volII,glyphe=m,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,35
+COL-PHIV-01,0,reference,volII,glyphe=\varphi,Volume_II/IWS_volume_II_classe_objets_transformations_v5_17.tex,55
+COL-PHIV-01,1,cote_a_examiner,volI,glyphe=\varphi,Volume_I/Annexes/IWS_ANNEXE_C.tex,3
+COL-PHIV-01,1,cote_a_examiner,volI,glyphe=\varphi,Volume_I/Annexes/IWS_ANNEXE_F.tex,1
+COL-PHIV-01,1,cote_a_examiner,volI,glyphe=\varphi,Volume_I/Annexes/IWS_ANNEXE_L.tex,4
+COL-PHIV-01,1,cote_a_examiner,volI,glyphe=\varphi,Volume_I/IWS_PART_II.tex,3
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/Annexes/IWS_ANNEXE_C.tex,80
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/Annexes/IWS_ANNEXE_D.tex,122
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/Annexes/IWS_ANNEXE_E.tex,10
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/Annexes/IWS_ANNEXE_F.tex,14
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/Annexes/IWS_ANNEXE_K.tex,22
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/IWS_PART_I.tex,9
+COL-LOC-01,0,cote_a_examiner,volI,glyphe=x indice=^$,Volume_I/IWS_PART_II.tex,39
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_A.tex,17
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_D.tex,9
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_H.tex,2
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_I.tex,46
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_K.tex,20
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/Annexes/IWS_ANNEXE_L.tex,5
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/IWS_PART_I.tex,2
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/IWS_PART_II.tex,12
+COL-LOC-01,1,cote_a_examiner,volI,glyphe=z,Volume_I/IWS_PART_III.tex,1
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_A.tex,24
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_B.tex,25
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_G.tex,11
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_H.tex,2
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_I.tex,19
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_J.tex,1
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/Annexes/IWS_ANNEXE_L.tex,18
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/IWS_PART_I.tex,13
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/IWS_PART_III.tex,1
+COL-LOC-02,0,cote_a_examiner,volI,glyphe=c indice=^$,Volume_I/TABLE_ENONCES.tex,1
+COL-LOC-02,1,cote_a_examiner,volI,glyphe=P fichier=IWS_PART_III\.tex|ANNEXE_L,Volume_I/Annexes/IWS_ANNEXE_L.tex,2
+COL-LOC-02,1,cote_a_examiner,volI,glyphe=P fichier=IWS_PART_III\.tex|ANNEXE_L,Volume_I/IWS_PART_III.tex,13
+COL-LOC-03,0,cote_a_examiner,volI,glyphe=R indice=^V$,Volume_I/Annexes/IWS_ANNEXE_A.tex,2
+COL-LOC-03,0,cote_a_examiner,volI,glyphe=R indice=^V$,Volume_I/Annexes/IWS_ANNEXE_E.tex,3
+COL-LOC-03,0,cote_a_examiner,volI,glyphe=R indice=^V$,Volume_I/Annexes/IWS_ANNEXE_F.tex,2

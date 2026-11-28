@@ -1,0 +1,33 @@
+occurrence_id,fichier,ligne,niveau_abstraction,justification,extrait
+I-002038,Volume_I/IWS_PART_III.tex,130,REALISATIONS,"Φ_e:𝔛→𝔛 ; « l'espace dans lequel est représentée la réalisation du système » (l. 132) : réalisations d'un système, niveau état plausible non établi","ation de transition \[ \Phi_e:\mathfrak X\longrightarrow\mathfrak X, \]"
+I-002039,Volume_I/IWS_PART_III.tex,130,REALISATIONS,"Φ_e:𝔛→𝔛 ; « l'espace dans lequel est représentée la réalisation du système » (l. 132) : réalisations d'un système, niveau état plausible non établi","i_e:\mathfrak X\longrightarrow\mathfrak X, \] où $\mathfrak X$ désigne"
+I-002040,Volume_I/IWS_PART_III.tex,132,REALISATIONS,déclaration du livre III : espace des réalisations du système,"rightarrow\mathfrak X, \] où $\mathfrak X$ désigne l'espace dans lequel"
+I-002061,Volume_I/IWS_PART_III.tex,150,REALISATIONS,Φ_ε=Id_𝔛 (transitions),epsilon} = \operatorname{Id}_{\mathfrak X}. \] Cette distinction entre
+I-002081,Volume_I/IWS_PART_III.tex,179,REALISATIONS,« à l'échelle décrite par 𝔛 »,"oins à l'échelle décrite par $\mathfrak X$. Réciproquement, deux trans"
+I-002159,Volume_I/IWS_PART_III.tex,353,REALISATIONS,"« deux réalisations X,Y∈𝔛 » comparées par leurs réponses","nt deux réalisations \[ X,Y\in\mathfrak X. \] Elles sont dites \emph{é"
+I-002216,Volume_I/IWS_PART_III.tex,441,REALISATIONS,réalisation initiale X_0,"réalisation initiale \[ X_0\in\mathfrak X, \] soumise à deux histoires"
+I-002451,Volume_I/IWS_PART_III.tex,849,REALISATIONS,réalisation initiale X_0 et histoire déjà vécue,réalisation initiale \[ X_0\in\mathfrak X \] et une histoire déjà vécue
+I-002554,Volume_I/IWS_PART_III.tex,1001,ETATS_SYSTEME_FIXE,"« réalisations au repos » X_1,X_2 du modèle canonique, comparées à lecture terminale : états d'un même système","sations au repos \[ X_1,X_2\in\mathfrak X. \] On suppose qu'elles sont"
+I-002757,Volume_I/IWS_PART_III.tex,1382,REALISATIONS,réalisation X dont on définit Acc,Soit une réalisation \[ X\in\mathfrak X. \] Pour une classe de sonde
+I-008801,Volume_I/Annexes/IWS_ANNEXE_G.tex,46,INDETERMINE,"déclaration : « l'ensemble des états complets ou, plus généralement, des présentations de systèmes »",xe-histoires-monoide} Soit \(\mathfrak X\) l'ensemble des états comple
+I-008822,Volume_I/Annexes/IWS_ANNEXE_G.tex,74,REALISATIONS,Φ_e:𝔛→𝔛 (transitions d'épisodes),ation de transition \[ \Phi_e:\mathfrak X\longrightarrow\mathfrak X. \]
+I-008823,Volume_I/Annexes/IWS_ANNEXE_G.tex,74,REALISATIONS,Φ_e:𝔛→𝔛 (transitions d'épisodes),i_e:\mathfrak X\longrightarrow\mathfrak X. \] Pour une histoire \[ \mat
+I-008839,Volume_I/Annexes/IWS_ANNEXE_G.tex,86,REALISATIONS,Φ_ε=Id_𝔛,arepsilon}=\operatorname{Id}_{\mathfrak X}. \] La convention de compos
+I-008912,Volume_I/Annexes/IWS_ANNEXE_G.tex,228,ETATS_SYSTEME_FIXE,"τ_ρ:𝔛→\mathcal Y_ρ, lecture terminale qui « dépend seulement de l'état terminal » : 𝔛 y contient des états",une application \[ \tau_\rho:\mathfrak X\longrightarrow\mathcal Y_\rho
+I-008974,Volume_I/Annexes/IWS_ANNEXE_G.tex,303,REALISATIONS,"« Deux systèmes X,Y∈𝔛 » : réalisations de systèmes","\rho\). Deux systèmes \(X,Y\in\mathfrak X\) sont \emph{observationnelle"
+I-008991,Volume_I/Annexes/IWS_ANNEXE_G.tex,322,INDETERMINE,quotient 𝔛/∼ : hérite de la déclaration,"le quotient d'observation \[ \mathfrak X/{\sim_{\mathfrak B,\rho}}. \]"
+I-009002,Volume_I/Annexes/IWS_ANNEXE_G.tex,354,REALISATIONS,transport par préfixe pour X∈𝔛,"e au suffixe. Pour tous \(X\in\mathfrak X\) et \(\mathcal H_0,\mathcal"
+I-009155,Volume_I/Annexes/IWS_ANNEXE_G.tex,500,INDETERMINE,"quotient comportemental complet 𝔛/∼_{𝔐,ρ}","ll\(\square\) Le quotient \[ \mathfrak X/{\sim_{\mathfrak M,\rho}} \]"
+I-009269,Volume_I/Annexes/IWS_ANNEXE_G.tex,662,REALISATIONS,"X,Y∈𝔛 dans la preuve de monotonie","émonstration.} Soient \(X,Y\in\mathfrak X\) tels que \(X\sim_{\mathfrak"
+I-009337,Volume_I/Annexes/IWS_ANNEXE_G.tex,728,INDETERMINE,projection entre quotients,"projection-quotients} q_{21}: \mathfrak X/{\sim_{\mathfrak B_2,\rho_2}}"
+I-009340,Volume_I/Annexes/IWS_ANNEXE_G.tex,730,INDETERMINE,projection entre quotients,"B_2,\rho_2}} \longrightarrow \mathfrak X/{\sim_{\mathfrak B_1,\rho_1}}"
+I-009369,Volume_I/Annexes/IWS_ANNEXE_G.tex,773,INDETERMINE,"résumé Z_{𝔅,ρ}:𝔛→\mathcal Z","Soit \[ Z_{\mathfrak B,\rho}:\mathfrak X\longrightarrow\mathcal Z \] u"
+I-009399,Volume_I/Annexes/IWS_ANNEXE_G.tex,868,INDETERMINE,table des notations : « états complets ou présentations de systèmes »,cation \\ \midrule \endhead \(\mathfrak X\) & Ensemble des états comple
+I-011258,Volume_I/Annexes/IWS_ANNEXE_L.tex,22,INDETERMINE,déclaration : « systèmes ou conditions initiales »,ou de conditions initiales \(\mathfrak X\) ; \item une classe déclarée
+I-011265,Volume_I/Annexes/IWS_ANNEXE_L.tex,39,REALISATIONS,carte de réponse de X∈𝔛,"xe-L-separateurs} Pour \(X\in\mathfrak X\), la carte de réponse à réso"
+I-011343,Volume_I/Annexes/IWS_ANNEXE_L.tex,103,REALISATIONS,"X,Y,Z∈𝔛 (inégalité ultramétrique) : systèmes comparés","abilité}] Pour tous \(X,Y,Z\in\mathfrak X\), \begin{equation} \label{eq"
+I-011436,Volume_I/Annexes/IWS_ANNEXE_L.tex,185,INDETERMINE,pseudo-ultramétrique sur 𝔛,"ne pseudo-ultramétrique sur \(\mathfrak X\) : \[ d(X,Z) \leq \max\{d(X,"
+I-011447,Volume_I/Annexes/IWS_ANNEXE_L.tex,193,INDETERMINE,ultramétrique sur le quotient,"ramétrique sur le quotient \[ \mathfrak X/\!\sim_{\mathfrak B,\rho}. \]"
+I-011490,Volume_I/Annexes/IWS_ANNEXE_L.tex,242,REALISATIONS,"X,Y∈𝔛 (boules et budgets)","t budgets}] Pour tous \(X,Y\in\mathfrak X\), \begin{equation} \label{eq"
+I-011600,Volume_I/Annexes/IWS_ANNEXE_L.tex,387,INDETERMINE,résumé z:𝔛→Z,Supposons qu'un résumé \[ z:\mathfrak X\longrightarrow Z \] soit suff
+I-011655,Volume_I/Annexes/IWS_ANNEXE_L.tex,500,INDETERMINE,table des notations : « systèmes ou conditions initiales comparés »,e & Signification \\ \hline \(\mathfrak X\) & systèmes ou conditions in

@@ -1,0 +1,193 @@
+{
+ "collisions": 65,
+ "par_niveau": {
+  "N0": 4,
+  "N1": 18,
+  "N2": 32,
+  "N3": 7,
+  "N4": 4
+ },
+ "par_nature": {
+  "HOMONYMIE": 47,
+  "QUASI_COLLISION": 13,
+  "SYNONYMIE": 14,
+  "AMBIGUITE": 11
+ },
+ "par_portee": {
+  "inter": 40,
+  "intra_I": 18,
+  "intra_II": 6,
+  "inter_C": 1
+ },
+ "par_famille": {
+  "F1 ρ": 8,
+  "F2 espaces": 3,
+  "F3 fibres": 2,
+  "F4 réservés V5.16": 5,
+  "F5 réponses": 3,
+  "F6 équivalences": 2,
+  "F7 historicité": 1,
+  "F8 profondeur": 3,
+  "F9 noyau": 17,
+  "F10 synonymies": 10,
+  "F11 hypothèses": 2,
+  "F12 interne II": 6,
+  "F13 réemplois locaux": 3
+ },
+ "par_intervention": {
+  "A_ARBITRER": 49,
+  "PRESERVER": 10,
+  "DOCUMENTER": 5,
+  "CORRECTION_CANDIDATE": 1
+ },
+ "intervention_par_niveau": {
+  "N0": {
+   "PRESERVER": 4
+  },
+  "N1": {
+   "PRESERVER": 6,
+   "A_ARBITRER": 6,
+   "DOCUMENTER": 5,
+   "CORRECTION_CANDIDATE": 1
+  },
+  "N2": {
+   "A_ARBITRER": 32
+  },
+  "N3": {
+   "A_ARBITRER": 7
+  },
+  "N4": {
+   "A_ARBITRER": 4
+  }
+ },
+ "reclassements": [
+  {
+   "id": "COL-PHI-01",
+   "de": "N3",
+   "vers": "N2"
+  },
+  {
+   "id": "COL-C-01",
+   "de": "N3",
+   "vers": "N2"
+  }
+ ],
+ "facteur_aggravant_reservation": 17,
+ "par_categorie": {
+  "NOTATIONNELLE": 37,
+  "DOCUMENTAIRE": 19,
+  "SCIENTIFIQUE": 4,
+  "TERMINOLOGIQUE": 5
+ },
+ "par_arbitrage": {
+  "notationnel": 30,
+  "aucun": 13,
+  "notationnel_interne_II": 7,
+  "scientifique": 3,
+  "scientifique_et_notationnel": 7,
+  "terminologique": 3,
+  "terminologique_interne_II": 1,
+  "scientifique_interne_II": 1
+ },
+ "niveau_par_famille": {
+  "F1 ρ": {
+   "N0": 1,
+   "N1": 3,
+   "N2": 1,
+   "N3": 1,
+   "N4": 2
+  },
+  "F10 synonymies": {
+   "N1": 5,
+   "N2": 5
+  },
+  "F11 hypothèses": {
+   "N1": 1,
+   "N2": 1
+  },
+  "F12 interne II": {
+   "N0": 1,
+   "N1": 4,
+   "N4": 1
+  },
+  "F13 réemplois locaux": {
+   "N0": 1,
+   "N1": 2
+  },
+  "F2 espaces": {
+   "N2": 1,
+   "N3": 1,
+   "N4": 1
+  },
+  "F3 fibres": {
+   "N0": 1,
+   "N2": 1
+  },
+  "F4 réservés V5.16": {
+   "N2": 2,
+   "N3": 3
+  },
+  "F5 réponses": {
+   "N1": 1,
+   "N2": 2
+  },
+  "F6 équivalences": {
+   "N2": 2
+  },
+  "F7 historicité": {
+   "N3": 1
+  },
+  "F8 profondeur": {
+   "N2": 3
+  },
+  "F9 noyau": {
+   "N1": 2,
+   "N2": 14,
+   "N3": 1
+  }
+ },
+ "cles_ambigues": {
+  "total": 50,
+  "couvertes": 50
+ },
+ "relations_DIST_ANA_UNK": [
+  "X012",
+  "X019",
+  "X022",
+  "X023",
+  "X024",
+  "X025",
+  "X027",
+  "X031",
+  "X032",
+  "X033",
+  "X034",
+  "X035",
+  "X036",
+  "X037",
+  "X038",
+  "X039",
+  "X040",
+  "X041",
+  "X042",
+  "X043",
+  "X044",
+  "X073",
+  "X075",
+  "X076",
+  "X077",
+  "X078",
+  "X079",
+  "X080",
+  "X081",
+  "X082"
+ ],
+ "propagation_cote_a_examiner": 3769,
+ "propagation_N3_N4_cote_a_examiner": 697,
+ "corrections_scientifiques": [
+  "SCI-01",
+  "SCI-02",
+  "SCI-03"
+ ],
+ "erreurs": []
+}

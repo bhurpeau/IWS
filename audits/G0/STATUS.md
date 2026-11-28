@@ -1,10 +1,10 @@
 # G0 — État d'avancement
 
 **Dernière mise à jour :** 28 novembre 2026
-**Phase courante :** G0.3 **clôturée** (E1) ; G0.4 **en cours** (E7)
+**Phase courante :** G0.4 **clôturée** (F2) ; G0.5 **ouverte** (F4), étape G0.5a : préparation des dossiers d'arbitrage scientifique
 **Commit de base :** `c74fa047171ff51e308f1855d8f636add2ac33ca` (IWS, tag `g0-baseline`)
 **Branche de travail :** `harmonisation/g0` (poussée sur `origin`, non fusionnée dans `main`)
-**Dernier commit de travail :** `3e837cb` (G0.2bis, clôture de G0.2, référence 301 entrées ; poussé) ; G0.3 : commit « G0.3 » (registre 305 entrées, table figée)
+**Dernier commit de travail :** `fcf132a` (G0.3, registre 305 entrées, table figée ; poussé) ; G0.4 : commit « G0.4 » (catalogue figé `G0_04_collisions/reference_F/`)
 **PDF de référence :** prépublication [IWS — G0 Baseline](https://github.com/bhurpeau/IWS/releases/tag/g0-baseline) (4 PDF + `SHA256SUMS`, empreintes vérifiées après téléchargement)
 
 ## Références figées
@@ -27,7 +27,9 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | G0.2 | **Clôturée le 28/11/2026 (D1)** | `notations/registry.yaml` (registre candidat **intermédiaire** ; itération 1 : 95 objets, copie figée `G0_02_semantic/reference_95/`), `G0_02_objects_report.md`, `RESERVES.md`, `G0_02_semantic/`, scripts `definition_sites.py`, `link_registry.py` ; addendum G0.1 (B2a) et `check_regression.py` |
 | G0.2bis | **Validée, clôturée (D1)** | registre candidat intermédiaire, itération 2 (301 objets, YAML style bloc) ; `G0_02bis_completeness_report.md` ; `G0_02bis/` (journal de lecture, matrice de couverture, énoncés formels, classement des non-rattachés, revue des sites de définition, différentiel, échantillon) ; `RESERVES.md` ; scripts `registry_io.py`, `formal_environments.py`, `coverage_matrix.py`, `classify_unresolved.py`, `registry_diff.py`, tests |
 | G0.3 | **Validée, clôturée (E1)** | `notations/crosswalk.csv` (généré), `notations/crosswalk_relations.yaml` (source), `G0_03_crosswalk_report.md`, `G0_03_crosswalk/` (bilan par objet, décomptes, recalcul D2), script `build_crosswalk.py`, tests |
-| G0.4 – G0.9 | Non entamées | — |
+| G0.4 | **Validée, clôturée (F2)** | `G0_04_collision_report.md`, `notations/collisions.yaml` (catalogue source), `G0_04_collisions/` (collisions, propagation, bilan des 50 clés, résumé, occurrences de 𝔛), script `build_collisions.py`, tests |
+| G0.5 | **Ouverte (F4)** ; G0.5a en préparation | `G0_05a_scientific_dossiers.md` (dossiers S1–S7, sans décision) |
+| G0.6 – G0.9 | Non entamées | — |
 
 ## Résultats des contrôles G0.0
 
@@ -99,6 +101,18 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | D2 | Recalcul reproduit : c₁ = −2,1779, c₂ = 0,3220 ; annulation exacte des termes en m₂ ; occurrences et dépendances recensées |
 | Non-régression | Registre identique à `reference_301` ; inventaire G0.1 : 0 différence ; 30 tests verts ; sources et dépôts connexes inchangés |
 
+## Résultats des contrôles G0.4
+
+| Contrôle | Résultat |
+|---|---|
+| Catalogue | 65 collisions ; initial : N0 4, N1 18, N2 30, N3 9, N4 4 ; après F1 : N2 32, N3 7 (COL-PHI-01 et COL-C-01 de N3 à N2) ; 0 erreur de validation |
+| Interventions (F1) | A_ARBITRER 49, PRESERVER 10, DOCUMENTER 5, CORRECTION_CANDIDATE 1 ; N0–N1 sans intervention par défaut |
+| 50 clés ambiguës | 50/50 rattachées ; niveau maximal après F1 : N0 10, N1 22, N2 18 |
+| Couverture | 30 relations DIST/ANA/UNK examinées ; synonymies des relations ID et de R001, R002 examinées ; 18 réservations du volume II examinées |
+| 𝔛 (E3) | 32 occurrences : 18 réalisations, 12 indéterminées, 2 états d'un système fixé, 0 présentation explicite |
+| Propagation | 3 619 occurrences distinctes côté à examiner (borne supérieure), dont 643 pour N3–N4 après F1 ; ρ : 395, rapprochées de l'audit historique (l'écart initial de 1 tenait à une occurrence de niveau 2 non sélectionnée) |
+| Non-régression | Registre identique à `reference_305` ; table identique à `reference_E` ; inventaire G0.1 : 0 différence ; 37 tests verts ; sources et dépôts connexes inchangés |
+
 ## Décisions rendues
 
 | Id | Date | Décision |
@@ -131,6 +145,10 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | E5 | 28/11/2026 | 4 entrées du volume II ajoutées par renvoi (Q, M, Γ, D du noyau) ; attribut `provenance_definition` (LOCAL, BY_REFERENCE, DERIVED) ; relations ID X083–X086 ; rôles de D distingués ; registre de 305 entrées figé (`reference_305/`) |
 | E6 | 28/11/2026 | R001 : identité conditionnelle établie entre les prédicats (C1–C4), domaines d'application non identifiés, deux entrées conservées ; R002 : équivalence conditionnelle acceptée pour le noyau (P⁻=Θ), non étendue à R2, différence hors de P⁻=Θ sauf r_P=0 |
 | E7 | 28/11/2026 | G0.4 autorisée après intégration, clôture, commit et poussée de G0.3 ; exécuter exclusivement G0.4 ; arrêt avant G0.5 |
+| F1 | 28/11/2026 | N3 : collision intervolumes entre objets distincts dont les portées, rôles ou contextes sont assez proches pour compromettre l'interprétation du corpus commun ; la réservation par le volume II est un facteur aggravant fixant la priorité notationnelle, ni nécessaire ni suffisante ; classements revus (2 reclassements documentés) ; ρ rapproché (395) ; N0–N1 sans intervention systématique, réemplois à préserver distingués des corrections |
+| F2 | 28/11/2026 | G0.4 clôturée après intégration de F1 ; commit et poussée autorisés sur `harmonisation/g0`, pas de fusion dans `main` ; catalogue figé avec contrôles, bilan et règles (`G0_04_collisions/reference_F/`) ; références antérieures préservées ; le diagnostic initial n'est pas effacé par les décisions ultérieures |
+| F3 | 28/11/2026 | Organisation de G0.5 : G0.5a arbitrages scientifiques (S1–S7, N4, questions de portée ; aucune nouvelle démonstration sans autorisation ; question non résolue conservable en réserve) ; G0.5b collisions internes au volume II (stabiliser les conventions cibles, réutiliser C2 et A-G02-07) ; G0.5c collisions N3 (primauté notationnelle du volume II, définitions du volume I inchangées) ; G0.5d N2 et examen des N0–N1 (réemplois légitimes conservés, pas d'unicité globale artificielle) ; G0.5e consolidation et préparation de G0.6 |
+| F4 | 28/11/2026 | G0.5 ouverte après clôture, commit et poussée de G0.4 ; validation humaine requise pour chaque arbitrage scientifique et notationnel ; dossiers d'arbitrage au format prescrit ; distinction états complets, réalisations du volume I et présentations du volume II (occurrences de 𝔛 documentées séparément ; l'absence d'occurrence explicite pour les présentations ne les exclut pas) ; A-G02-14, A-G02-15 et constat ζ_min dans un circuit distinct ; première étape : dossiers G0.5a seulement, arrêt avant toute décision et avant G0.5b |
 
 ## Réserves
 
@@ -147,7 +165,7 @@ Détail : [G0_00_manifest.md](G0_00_manifest.md), § 1.
 | R-G0-09 | Volume II : 19 labels seulement ; 37 % des occurrences sans label pertinent | Amélioration documentaire, non bloquante | G0.7 (B3) |
 | R-G0-10 | Lecture partielle du volume I en G0.2 (couverture 35 %) | Levée en G0.2bis (lecture intégrale journalisée) | Validation G0.2bis |
 | R-G0-11 | Motifs de fichier non ancrés dans les sélecteurs de G0.2 | Corrigés en G0.2bis, effet documenté | — |
-| R-G0-12 | 50 clés à usage ambigu partiellement non rattachées | Documentée | G0.4 (D5) |
+| R-G0-12 | 50 clés à usage ambigu partiellement non rattachées | Instruite en G0.4 (50/50 rattachées à une collision) | Arbitrages G0.5 |
 | A-G02-01 à 15 | Anomalies sémantiques (détail dans `RESERVES.md`) ; 01 instruite (C2), 03 et 08 instruites en G0.3 (R001, R002), 07 requalifiée, 14 instruite (D2), 15 nouvelle (annulation exacte en m₂) | Ouvertes, non corrigées | Auteur |
 | R-G0-13 | Registre du volume II sans entrées pour Q, M, Γ, D cités par renvoi | Traitée (E5) | — |
 | R-G0-15 | Appartenance du noyau à \Hyb (réserve de recherche du volume II) | Ouverte, recherche | Auteur |
@@ -158,5 +176,4 @@ Aucune réserve n'est bloquante en l'état. A-G02-03 (appropriation), A-G02-10 e
 
 ## Prochaine action
 
-G0.4 en cours (E7) ; arrêt avant G0.5.
-
+G0.5a : dossiers d'arbitrage scientifique S1–S7 remis pour décision de l'auteur ; arrêt avant toute décision définitive et avant G0.5b.

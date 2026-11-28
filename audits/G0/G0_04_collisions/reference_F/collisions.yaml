@@ -1,0 +1,1454 @@
+# G0.4 — Catalogue structuré des collisions (candidat, non normatif ; aucune notation canonique choisie).
+# Exploité par notations/scripts/build_collisions.py, qui valide les identifiants, compte les occurrences
+# (inventaire G0.1) et vérifie la couverture (50 clés ambiguës, relations DIST/ANA, synonymies ID, réservations V5.16).
+#
+# nature : HOMONYMIE (même notation, objets distincts) | SYNONYMIE (plusieurs notations, même objet) |
+#          QUASI_COLLISION (proximité graphique ou conceptuelle) | AMBIGUITE (identification sémantique insuffisante)
+# niveau (plan § 8, précisé par F1) : N0 réemploi local légitime | N1 collision graphique sans ambiguïté de rôle |
+#          N2 collision sémantique dans une portée significative | N3 collision intervolumes entre objets distincts dont les
+#          portées, rôles ou contextes sont assez proches pour compromettre l'interprétation du corpus commun |
+#          N4 ambiguïté mathématique, définition absente ou types incompatibles
+# Règle F1 : la réservation explicite d'une notation par le volume II est un facteur aggravant (champ facteur_aggravant) qui
+#          fixe la priorité notationnelle à l'arbitrage ; elle n'est ni nécessaire ni suffisante pour N3.
+#          Règle initiale de G0.4 (remplacée) : réservation ET (proximité OU portée partagée) ; niveaux modifiés : niveau_G04_initial.
+# intervention : PRESERVER (réemploi légitime, aucune intervention) | DOCUMENTER (mention documentaire, texte inchangé) |
+#          CORRECTION_CANDIDATE (correction évidente, soumise à validation) | A_ARBITRER (décision de G0.5)
+#          N0–N1 n'impliquent pas d'intervention dans les manuscrits.
+# portee : intra_I | intra_II | intra_C | inter (I↔II) | inter_C (compagnons↔II)
+# categorie_correction : NOTATIONNELLE | TERMINOLOGIQUE | DOCUMENTAIRE | SCIENTIFIQUE (distincte, cf. A-G02-14/15)
+# selecteurs : comptage des occurrences ; role = cote_a_examiner (côté susceptible d'être adapté) | reference (côté de référence)
+#              forme : critères de l'inventaire (vol, glyphe, indice, exposant, fichier, lignes, decoration, niveau)
+#              ou motif texte (vol, texte) compté dans les sources
+# action_proposee : proposition sans arbitrage définitif (G0.5 décide).
+
+meta:
+  phase: G0.4
+  date: '2026-11-28'
+  registre: notations/registry.yaml (305 entrées, référence reference_305/)
+  table: notations/crosswalk.csv (référence G0_03_crosswalk/reference_E/)
+
+collisions:
+
+# ======================================================================== F1. ρ et ses lectures
+- id: COL-RHO-01
+  famille: F1 ρ
+  symboles: ['\rho (lecture du volume I)', '\rho_X', '\rho_{\mathrm{int}}']
+  objets: [I.III.READING, I.G.TERMINAL_READING, I.G.PATH_READING, II.PRES.READOUT, II.PRES.INTERNAL_READOUT]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : objets distincts (paramètre de protocole contre application des états) dans le même champ (lectures, réponses, équivalences) ; proximité de rôle suffisante pour compromettre l'interprétation"
+  portee: inter
+  relations: [X022, X023, X024]
+  portees_respectives: "volume I : ρ résolution d'observation, paramètre de protocole (livre III, annexes G–L, 395 occurrences selon l'audit ρ) ; volume II : ρ_X lecture des états déclarée avec la présentation, ρ_int sa composante non structurelle"
+  justification: "même glyphe et même champ sémantique (« lecture ») pour des objets distincts : ρ ne décrit pas une variable du système (livre III l. 302), ρ_X est une application des états ; relations ANA seulement ; l'audit ρ désigne ce couple comme « collision future la plus sensible » ; notation réservée du volume II dans une portée partagée (lectures, réponses, équivalences)"
+  impact_scientifique: "risque d'identifier la réponse \\mathcal R_X^ρ du volume I à une lecture de l'état ; conditionne X026, X028, X029"
+  impact_editorial: "toute la famille dérivée du volume I (\\mathcal Y_ρ, τ_ρ, ω_ρ, \\mathcal R^ρ, ∼_{𝔅,ρ}, Ω_{\\mathcal P,ρ}, Acc_{𝔅,ρ}, ℓ_{c,𝔅,ρ}, d_{c,𝔅,ρ}) porte l'indice ρ"
+  impact_lean: "aucun identifiant Lean (annexes G–L non formalisées) ; OmegaSet (annexe C) emploie ρ comme borne, sans rapport"
+  dependances: [COL-RHO-02, COL-RESP-01, COL-EQ-01]
+  propagation: "élevée au volume I (famille indexée par ρ dans le livre III et les annexes G–L) ; nulle au volume II"
+  action_proposee: "conserver ρ_X, ρ_int (volume II, référence) ; examiner en G0.5 une qualification ou un renommage de la résolution d'observation du volume I et de ses indices, ou un avertissement explicite de non-identification ; ne pas confondre avec τ_ρ/ω_ρ, qui portent formellement le rôle d'application"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'main|IWS_PART_III\.tex|ANNEXE_[G-L]'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'main|IWS_PART_III\.tex|ANNEXE_[G-L]', niveau: '1'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'main|IWS_PART_III\.tex|ANNEXE_[G-L]', niveau: '2'}
+    - {role: reference, vol: volII, glyphe: '\rho', indice: '^X|^\\mathrm\{int\}$'}
+- id: COL-RHO-02
+  famille: F1 ρ
+  symboles: ['\rho (coefficient de réouverture R1)', '\rho (lecture)']
+  objets: [I.R1.REOPENING_RATE, I.III.READING]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  portees_respectives: "R1 : livre II ch. R1, annexes E–F (48 occurrences) ; lecture : livre III, annexes G–L"
+  justification: "deux objets du volume I sous le même symbole nu, de types sans rapport (scalaire positif contre paramètre de protocole) ; portées disjointes mais le volume I est lu d'un bloc ; l'audit ρ qualifie la collision de « forte »"
+  impact_scientifique: "faible (types incompatibles, pas de confusion de raisonnement)"
+  impact_editorial: "moyen : 48 occurrences du ρ de R1"
+  impact_lean: "aucun (R1 non formalisé)"
+  propagation: "48 occurrences (livre II, annexes E–F) si le ρ de R1 était adapté"
+  action_proposee: "si G0.5 réserve ρ aux lectures (vol. II), renommer le coefficient de réouverture de R1 ; sinon documenter la portée"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'IWS_PART_II\.tex', lignes: [880, 990]}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'ANNEXE_[EF]', indice: '^$'}
+- id: COL-RHO-03
+  famille: F1 ρ
+  symboles: ['\rho (valeur propre modale, annexe C)', '\rho_{\mathrm{sp}}']
+  objets: [I.C.MODAL_EIGENVALUE, I.E.SPECTRAL_RADIUS]
+  nature: [HOMONYMIE]
+  niveau: N0
+  intervention: PRESERVER
+  portee: intra_I
+  portees_respectives: "valeur propre : annexe C § Portée pour le réseau complet (8 occurrences) ; ρ_sp : annexes E–F (4)"
+  justification: "réemploi local légitime (ρ modal) et indice discriminant (ρ_sp) ; l'audit ρ les classe « acceptable » et « suffisamment discriminant »"
+  impact_scientifique: "nul"
+  impact_editorial: "nul"
+  impact_lean: "ModalReduction.lean emploie ρ pour les modes (annexe C) : cohérent"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', fichier: 'ANNEXE_C'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', indice: 'mathrm\{sp\}'}
+- id: COL-RHO-04
+  famille: F1 ρ
+  symboles: ['\rho_{\mathrm{sp}}', '\rho_{\mathrm{int}}']
+  objets: [I.E.SPECTRAL_RADIUS, II.PRES.INTERNAL_READOUT]
+  nature: [QUASI_COLLISION]
+  niveau: N1
+  intervention: PRESERVER
+  portee: inter
+  justification: "glyphes indexés proches, objets sans rapport (rayon spectral contre lecture interne) ; indices explicites"
+  impact_scientifique: "nul"
+  impact_editorial: "nul"
+  impact_lean: "aucun"
+  propagation: "aucune"
+  action_proposee: "conserver ; mention dans la table des notations"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\rho', indice: 'mathrm\{sp\}'}
+- id: COL-RHO-05
+  famille: F1 ρ
+  symboles: ['\rho (abrégé de \rho_X dans H_\rho, I1_\rho)', '\rho_X']
+  objets: [II.PRES.READOUT, II.HIST.EFFECTIVE_HISTORICITY, II.TAX.MECHANISM_WITNESSES]
+  nature: [SYNONYMIE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: intra_II
+  portees_respectives: "volume II l. 200–852 : indices H_ρ, H_ρ^{s,ord}, I1_ρ^F… désignent la lecture ρ_X"
+  justification: "ambiguïté interne au volume II : le ρ nu en indice abrège ρ_X sans convention écrite ; sans risque de rôle dans le volume II seul, mais il renforce COL-RHO-01 lors d'une lecture conjointe"
+  impact_scientifique: "nul dans le volume II"
+  impact_editorial: "faible (≈ 30 indices)"
+  impact_lean: "aucun"
+  propagation: "volume II seulement ; décision interne au volume II"
+  action_proposee: "documenter la convention d'abréviation ou l'expliciter (décision interne au volume II, à soumettre)"
+  arbitrage: notationnel_interne_II
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: '\rho', indice: '^$', lignes: [195, 860], niveau: '1'}
+- id: COL-RHO-06
+  famille: F1 ρ
+  symboles: ['\rho (coordonnée polaire, bloc conique)', '\rho_j (norme initiale)', '\rho_X']
+  objets: [II.CONIC.BLOCK, II.PRES.READOUT]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: intra_II
+  portees_respectives: "bloc conique, volume II l. 1660–1740 (ρ polaire, ρ_j) ; ρ_X ailleurs"
+  justification: "réemploi local dans une preuve (coordonnées polaires Ψ_j=ρ e(θ)) ; l'audit V5.16 a délibérément conservé R_j pour éviter la quasi-collision avec ρ_j ; ambiguïté interne au volume II, sans conséquence de rôle"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "volume II, bloc conique"
+  action_proposee: "conserver (réemploi local) ou signaler ; décision interne au volume II"
+  arbitrage: notationnel_interne_II
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: '\rho', lignes: [1660, 1745]}
+- id: COL-RHO-07
+  famille: F1 ρ
+  symboles: ['d_\rho']
+  objets: [I.I.OBSERVATION_DISTANCE, I.L.SEPARABILITY_PSEUDOMETRIC]
+  nature: [AMBIGUITE]
+  niveau: N4
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-04]
+  justification: "définition absente (une occurrence, annexe I l. 497) ; objet voisin défini d_{c,𝔅,ρ} (annexe L) sur les systèmes, non sur \\mathcal Y_ρ ; vérifiée dans les sources courantes (plan § 8)"
+  impact_scientifique: "faible : la borne qui l'emploie est hors de l'énoncé démontré"
+  impact_editorial: "une occurrence"
+  impact_lean: "aucun"
+  propagation: "une occurrence"
+  action_proposee: "décision scientifique en G0.5 : définir une distance sur \\mathcal Y_ρ, ou reformuler la borne (aucune définition proposée ici)"
+  arbitrage: scientifique
+  categorie_correction: SCIENTIFIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'd', indice: '^\\rho$'}
+- id: COL-RHO-08
+  famille: F1 ρ
+  symboles: ['\mathcal R^{\mathfrak B,\rho}']
+  objets: [I.K.CLASS_RESPONSE, I.III.RESPONSE]
+  nature: [AMBIGUITE]
+  niveau: N4
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-05]
+  justification: "employé sans définition (annexe K l. 101, 348 : hypothèse (P5), décision D-08) ; au moins deux lectures (famille des cartes de réponse sur 𝔅, ou quotient associé) ; vérifié dans les sources courantes"
+  impact_scientifique: "moyen : figure dans l'hypothèse (P5) du théorème K"
+  impact_editorial: "2 occurrences"
+  impact_lean: "aucun (annexe K non formalisée)"
+  propagation: "annexe K"
+  action_proposee: "décision scientifique en G0.5 : préciser la lecture retenue"
+  arbitrage: scientifique
+  categorie_correction: SCIENTIFIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{R}', fichier: 'ANNEXE_K', exposant: 'mathfrak B'}
+
+# ======================================================================== F2. 𝔛 et \mathcal X ; réalisations et présentations
+- id: COL-X-01
+  famille: F2 espaces
+  symboles: ['\mathfrak X', '\mathcal X']
+  objets: [I.G.REALIZATION_SPACE, I.III.REALIZATION_SPACE, II.HYB.STATE_SPACE, I.CORE.STATE_SPACE]
+  nature: [AMBIGUITE, QUASI_COLLISION]
+  niveau: N4
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  relations: [X043, X044, X010, X011, X026]
+  portees_respectives: "volume I : 𝔛 dans le livre III et les annexes G, L (32 occurrences) ; \\mathcal X dans le noyau (livre I) ; volume II : \\X=\\mathcal X réservé aux états complets (E3)"
+  justification: "le niveau d'abstraction de 𝔛 est indéterminé dans le volume I lui-même : 18 occurrences portent sur des réalisations, 2 sur des états d'un système fixé (lecture terminale τ_ρ:𝔛→\\mathcal Y_ρ, annexe G l. 228 ; réalisations au repos du livre III l. 1001), 12 héritent de déclarations doubles (« états complets ou présentations », annexe G l. 46, 868 ; « systèmes ou conditions initiales », annexe L l. 22, 500) ; aucune occurrence n'emploie 𝔛 explicitement pour des présentations (détail : G0_04_collisions/mathfrak_X_occurrences.csv) ; la proximité graphique 𝔛/\\mathcal X est réelle et le volume I emploie les deux"
+  impact_scientifique: "conditionne X010 (exécution), X011 (état terminal), X026 (réponse) : l'identification avec un état n'est licite que dans les occurrences de type état ; la lecture terminale de l'annexe G impose ce type là où elle est employée"
+  impact_editorial: "32 occurrences au volume I ; aucune au volume II"
+  impact_lean: "aucun"
+  dependances: [COL-PRES-01]
+  propagation: "faible en nombre, forte en portée (cadre formel du livre III et des annexes G–L)"
+  action_proposee: "préserver la généralité de 𝔛 (E3) ; en G0.5, décider soit d'une précision textuelle du niveau (états, réalisations, présentations), soit de deux symboles ; ne postuler ni espace, ni projection, ni identité"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathfrak{X}'}
+    - {role: reference, vol: volII, glyphe: '\mathcal{X}'}
+- id: COL-X-02
+  famille: F2 espaces
+  symboles: ['X (réalisation générique, vol. I)', 'X∈{A,B} (système, livre II)', 'X (ensemble d états de base, annexe K)', 'X_s, X_A (fibre d organisation, vol. II)', '\mathcal X_C (annexe J)']
+  objets: [I.III.REALIZATION_SPACE, I.II.TWO_SYSTEM_STATES, I.K.AUGMENTED_STATE, II.PRES.ORGANISATION_FIBRE, I.J.CELL_RESPONSE]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  justification: "X nu ou indexé désigne au volume I une réalisation, un indice de système ou un ensemble d'états ; au volume II, X_s et X_A sont des fibres d'organisation ; X_A en particulier existe dans les deux volumes avec des sens différents (état x_A de la source, livre II, contre fibre de structure A, volume II)"
+  impact_scientifique: "faible à moyen (X_A)"
+  impact_editorial: "≈ 150 occurrences de X au volume I"
+  impact_lean: "aucun"
+  propagation: "livre III, annexes G–L ; livre II pour l'indice X"
+  action_proposee: "documenter ; examiner en G0.5 l'indice X∈{A,B} et X_A face à la fibre X_A du volume II"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  cles_ambigues: []
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'X'}
+    - {role: reference, vol: volII, glyphe: 'X', indice: '^s$|^A$|^\{A''\}$|^s''$'}
+- id: COL-PRES-01
+  famille: F2 espaces
+  symboles: ['« présentation » (annexe K ; annexe L : P, P′ ; annexe G : présentations de systèmes)', '« présentation » \mathbf S=(S,\rho_X,(\Madm_x))']
+  objets: [I.K.PRESENTATIONS, II.PRES.PRESENTATION, I.G.REALIZATION_SPACE]
+  nature: [HOMONYMIE]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : même terme, objets distincts, contextes proches (présentation d'un système, invariance des réponses)"
+  portee: inter
+  relations: [X042]
+  justification: "terme technique identique pour des objets distincts (découpage état/loi d'un mécanisme contre triplet système-lecture-histoires) ; proximité conceptuelle forte (les deux portent sur la manière de présenter un système et sur l'invariance des réponses) ; terme réservé par la définition du volume II"
+  impact_scientifique: "moyen : le théorème K (équivalence de présentation) pourrait être lu comme un énoncé sur les présentations du volume II"
+  impact_editorial: "annexes G, K, L, livre III l. 2275"
+  impact_lean: "aucun"
+  propagation: "annexe K surtout"
+  action_proposee: "arbitrage terminologique en G0.5 (qualification du terme au volume I)"
+  arbitrage: terminologique
+  categorie_correction: TERMINOLOGIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, texte: 'présentation'}
+    - {role: reference, vol: volII, texte: 'présentation'}
+
+# ======================================================================== F3. Fibres d'opacité
+- id: COL-FIB-01
+  famille: F3 fibres
+  symboles: ['« fibre d opacité » ρ_X^{-1}(s,y_int)', '« fibre d opacité » \mathcal O_y=ρ_X^{-1}(y)∩C']
+  objets: [II.PRES.OPACITY_FIBRE_READOUT, II.OPAC.OPACITY_FIBRE]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_II
+  anomalies: [A-G02-01]
+  justification: "ambiguïté terminologique interne au volume II (C2 : deux objets, relation de restriction) ; les symboles sont distincts, le terme est le même ; le volume I n'a pas d'objet correspondant"
+  impact_scientifique: "moyen : résultats de la section 13 énoncés sur \\mathcal O_y"
+  impact_editorial: "volume II l. 185–194, 861–865 et suivantes"
+  impact_lean: "aucun"
+  propagation: "volume II seulement"
+  action_proposee: "arbitrage terminologique en G0.5 entre les désignations provisoires « complète » et « admissible au flot » (décision C2)"
+  arbitrage: terminologique_interne_II
+  categorie_correction: TERMINOLOGIQUE
+  selecteurs:
+    - {role: reference, vol: volII, texte: "fibre d'opacité"}
+- id: COL-O-01
+  famille: F3 fibres
+  symboles: ['\mathcal O_y', 'O(·) (Landau)']
+  objets: [II.OPAC.OPACITY_FIBRE]
+  nature: [QUASI_COLLISION]
+  niveau: N0
+  intervention: PRESERVER
+  portee: inter
+  justification: "graphies distinctes (calligraphique contre droite), rôles sans rapport"
+  impact_scientifique: "nul"
+  impact_editorial: "nul"
+  impact_lean: "aucun"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'O'}
+
+# ======================================================================== F4. Symboles réservés Σ, Ω, Φ, ϑ, Ξ (audit V5.16)
+- id: COL-SIG-01
+  famille: F4 réservés V5.16
+  symboles: ['\Sigma (coupe, vol. II)', '\Sigma_{\mathrm{ext}}, \Sigma_{\mathcal P,\rho}, \Sigma, \Sigma_C, \Sigma_K, \Sigma^{(5)}, \Sigma^\gamma (vol. I)']
+  objets: [II.OPAC.SECTION, I.H.EXTINCTION_REGIME, I.I.SLOW_APPROPRIATION_SET, I.J.CELL_RESPONSE, I.K.EXTENDED_RESPONSE]
+  nature: [HOMONYMIE]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1), cas limite : dans les deux volumes, Σ est le lieu où l'on localise les changements d'issue (frontière ∂_D A et frontière relative de l'ensemble d'appropriation au volume I ; coupe portant la partition expérimentale \\mathcal P_k(Σ) au volume II) ; proximité de rôle, indépendamment de la réservation"
+  portee: inter
+  relations: [X076]
+  justification: "Σ est réservé par l'audit V5.16 à la coupe d'une fibre d'opacité ; le volume I l'emploie pour un régime d'extinction et pour des frontières d'appropriation ; proximité conceptuelle : dans les deux cas, sous-ensembles d'espaces d'états cachés ou lents servant à localiser des changements d'issue"
+  impact_scientifique: "moyen (lecture conjointe des frontières du volume I et des coupes du volume II)"
+  impact_editorial: "≈ 40 occurrences au volume I (annexes H–K)"
+  impact_lean: "aucun"
+  propagation: "annexes H, I, J, K"
+  action_proposee: "adapter le volume I dans la portée de réservation (plan § 1.1) ; choix du symbole en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\Sigma'}
+    - {role: reference, vol: volII, glyphe: '\Sigma'}
+- id: COL-OME-01
+  famille: F4 réservés V5.16
+  symboles: ['\Omega (domaine paramétrique, vol. II)', '\Omega (espace des sondes, livre III)', '\Omega_{\mathcal P,\rho}, \widehat\Omega, \Omega^{(5)} (cartes de réponse, annexes H–K)', '\Omega_\rho (annexe J)']
+  objets: [II.OPAC.PARAM_DOMAIN, I.III.PROBE_FAMILY, I.H.RESPONSE_MAP, I.I.SLOW_RESPONSE_MAP, I.J.CELL_RESPONSE, I.K.EXTENDED_RESPONSE]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : espace des paramètres de sonde contre domaine du paramètre caché (X077, ANA) : proximité de rôle"
+  portee: inter
+  relations: [X077]
+  justification: "Ω est réservé par V5.16 au domaine paramétrique semi-algébrique ; au livre III, Ω est un espace de paramètres de sondes, objet conceptuellement proche (X077, ANA) ; aux annexes H–K, Ω désigne une carte de réponse : deux homonymies, dont une proche"
+  impact_scientifique: "moyen à fort pour l'espace des sondes (risque d'assimiler paramètre de sonde et paramètre caché)"
+  impact_editorial: "≈ 90 occurrences au volume I"
+  impact_lean: "OmegaSet (annexe C, Lean) est un ensemble de sous-niveau sans rapport : documentaire"
+  propagation: "livre III (frontières de réponse), annexes H–K"
+  action_proposee: "adapter le volume I dans la portée de réservation ; distinguer en G0.5 espace des sondes et cartes de réponse"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\Omega'}
+    - {role: reference, vol: volII, glyphe: '\Omega'}
+- id: COL-PHI-01
+  famille: F4 réservés V5.16
+  symboles: ['\Phi (paramétrisation Ω→Σ, vol. II)', '\Phi_e, \Phi_{\mathcal H} (transitions)', '\Phi_g (matrice fondamentale)', '\Phi^T_{g,\mathcal P} (interaction)']
+  objets: [II.OPAC.PARAMETRIZATION, I.III.TRANSITIONS, I.E.MONODROMY, I.D.INTERACTION_MAP]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  niveau_G04_initial: N3
+  reclassement_F1: "N3 → N2 (F1) : les rôles (transitions d'histoires contre homéomorphisme de paramétrisation d'une coupe) et les contextes ne sont pas proches ; la portée partagée invoquée (histoires) ne porte pas sur l'objet Φ du volume II ; seule la réservation V5.16 motivait N3, ce qui ne suffit plus ; la réservation demeure un facteur aggravant qui fixe la priorité notationnelle"
+  portee: inter
+  relations: [X078]
+  justification: "Φ est réservé par V5.16 à l'homéomorphisme de paramétrisation ; le volume I en fait ses transitions d'histoires (objet central, relié au volume II par X011 et X012) : portée partagée, puisque le volume II emploie lui aussi des histoires (End)"
+  impact_scientifique: "moyen"
+  impact_editorial: "fort : ≈ 75 occurrences au volume I, dont les transitions Φ_{\\mathcal H} du livre III et de l'annexe G"
+  impact_lean: "aucun pour les transitions ; Φ_g (annexe E) non formalisé"
+  propagation: "livre III, annexes D, E, G–L"
+  action_proposee: "adapter le volume I dans la portée de réservation ; en G0.5, symbole des transitions (le volume II emploie End pour l'état terminal)"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\Phi'}
+    - {role: reference, vol: volII, glyphe: '\Phi'}
+- id: COL-VTH-01
+  famille: F4 réservés V5.16
+  symboles: ['\vartheta (paramètre caché, vol. II ; compagnon q=(ϑ,ε))', '\vartheta (composante diagonale de la trace, annexe C)']
+  objets: [II.OPAC.HIDDEN_PARAMETER, C.CERT.SECTION_PARAMETER, I.C.INTERNAL_DIAGONAL, I.C.SCALAR_DIAGONAL_REDUCTION]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : deux coordonnées de traces (composante diagonale contre paramètre caché des directions de traces)"
+  portee: inter
+  relations: [X075]
+  justification: "ϑ est réservé par V5.16 au paramètre caché ; au volume II, ce paramètre décrit des directions de traces cachées ; à l'annexe C, ϑ est une composante de la trace : proximité conceptuelle forte (deux coordonnées de trace)"
+  impact_scientifique: "moyen"
+  impact_editorial: "≈ 40 occurrences (annexe C)"
+  impact_lean: "Lean emploie ϑ dans AnnexC/AnnexD (11 fichiers) pour la composante de trace : raccord documentaire à prévoir, identifiants conservés par défaut (plan § 1.1)"
+  propagation: "annexe C ; README de iws-lean (correspondances)"
+  action_proposee: "adapter l'annexe C dans la portée de réservation, ou justifier une dérogation (stabilité de l'annexe C, plan § 1.1) en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\vartheta'}
+    - {role: reference, vol: volII, glyphe: '\vartheta'}
+- id: COL-SSTRUCT-01
+  famille: F4 réservés V5.16
+  symboles: ['\mathcal S = \Sstruct (valeurs structurelles, vol. II)', '\mathcal S (espace des contenus, annexe H)']
+  objets: [II.PRES.STRUCT_VALUES, I.H.CONTENT_SPACE]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  justification: "la macro \\Sstruct du volume II produit \\mathcal S ; l'annexe H emploie \\mathcal S pour l'espace des contenus survivants ; objets sans rapport de type, mais tous deux espaces de « ce qui reste » d'une histoire (structure contre contenu)"
+  impact_scientifique: "faible à moyen"
+  impact_editorial: "3 occurrences (annexe H)"
+  impact_lean: "aucun"
+  propagation: "annexe H"
+  action_proposee: "documenter ; adaptation éventuelle de l'annexe H en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{S}'}
+    - {role: reference, vol: volII, glyphe: '\mathcal{S}'}
+
+# ======================================================================== F5. Applications de réponse
+- id: COL-RESP-01
+  famille: F5 réponses
+  symboles: ['\mathcal R_X^\rho(\mathcal H)', 'R_x^{\rho_{\mathrm{int}}}']
+  objets: [I.III.RESPONSE, II.EFF.INTERNAL_RESPONSE]
+  nature: [SYNONYMIE, QUASI_COLLISION]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  relations: [X026]
+  justification: "objets reliés par une spécialisation conditionnelle (X026, candidate) : si les conditions sont admises, même objet sous deux notations (calligraphique et droite, indice de lecture différent) ; sinon, quasi-collision"
+  impact_scientifique: "moyen : dépend de E3 et des compatibilités de X026"
+  impact_editorial: "≈ 120 occurrences de \\mathcal R au volume I"
+  impact_lean: "aucun"
+  dependances: [COL-RHO-01, COL-X-01]
+  propagation: "livre III, annexes G–L"
+  action_proposee: "ne pas harmoniser avant décision sur X026 (G0.5)"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{R}', fichier: 'IWS_PART_III\.tex|ANNEXE_[G-L]'}
+    - {role: reference, vol: volII, glyphe: 'R', exposant: 'rho'}
+- id: COL-RESP-02
+  famille: F5 réponses
+  symboles: ['\mathcal R_g (application de retour R2)', '\mathcal R_X^\rho (réponse)', '\mathcal R_{\mathcal H}(u) (triplet du livre II)', '\mathcal R_0^{(1,2)} (vol. II)']
+  objets: [I.R2.RETURN_MAP, I.III.RESPONSE, I.II.HISTORY_RESPONSE_FUNCTION, II.OPAC.JOINT_REACHABLE_SET]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: DOCUMENTER
+  portee: inter
+  relations: [X080, X027]
+  justification: "\\mathcal R désigne au volume I une application de retour (annexe E) et la réponse ; au volume II un ensemble conjoint atteignable ; portées disjointes, indices discriminants"
+  impact_scientifique: "faible"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "annexe E (1 occurrence) ; volume II l. 1243"
+  action_proposee: "documenter"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{R}', indice: '^g$'}
+    - {role: reference, vol: volII, glyphe: '\mathcal{R}'}
+- id: COL-RESP-03
+  famille: F5 réponses
+  symboles: ['\mathcal R_{\mathcal H}(u) (triplet, livre II)', '\mathcal R_{\mathcal H_0}(u) (livre III)', '\mathcal R_X^\rho(\mathcal H)']
+  objets: [I.II.HISTORY_RESPONSE_FUNCTION, I.III.RESPONSE]
+  nature: [AMBIGUITE, SYNONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  justification: "le livre III (l. 333–341) « précise » l'écriture du livre II comme \\mathcal R^ρ_{Φ_{\\mathcal H_0}(X_0)}(\\mathcal H_u) ; au livre II, la réponse est un triplet (T^*, g_app, \\mathcal A_∞) : la lecture ρ correspondante n'est pas explicitée"
+  impact_scientifique: "faible à moyen"
+  impact_editorial: "livre II l. 1818–1835, livre III l. 1–100, 333–345"
+  impact_lean: "aucun"
+  propagation: "livres II et III"
+  action_proposee: "préciser la lecture associée au triplet (décision éditoriale en G0.5)"
+  arbitrage: notationnel
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{R}', fichier: 'IWS_PART_II\.tex'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{R}', fichier: 'IWS_PART_III\.tex', lignes: [1, 345]}
+
+# ======================================================================== F6. Équivalences
+- id: COL-EQ-01
+  famille: F6 équivalences
+  symboles: ['\sim_{\mathfrak B,\rho} (observationnelle ; « Nerode » pour 𝔅=𝔐)', '\sim_N (Nerode dans une fibre)']
+  objets: [I.G.OBS_EQUIVALENCE, I.III.RESPONSE_EQUIVALENCE, I.G.QUOTIENT_SYSTEM, II.OPAC.NERODE_EQUIVALENCE]
+  nature: [SYNONYMIE, QUASI_COLLISION]
+  niveau: N2
+  intervention: A_ARBITRER
+  revue_F1: "N2 maintenu (F1) ; reclassement N3 à examiner si X028 est rejetée (objets alors distincts sous le même terme « Nerode »)"
+  portee: inter
+  relations: [X028, X029]
+  justification: "même terme « Nerode » : le volume I le réserve à la classe complète des continuations (annexe G l. 335) ; le volume II l'emploie pour une équivalence restreinte à une fibre, avec clause d'égalité des domaines absente au volume I ; si X028 était admise, synonymie conditionnelle (∼_{𝔐,ρ_int} contre ∼_N)"
+  impact_scientifique: "moyen : la réserve sur l'égalité des domaines (E4) doit rester visible"
+  impact_editorial: "faible en nombre"
+  impact_lean: "aucun"
+  propagation: "annexe G, livre III ; volume II section 13"
+  action_proposee: "documenter les deux usages du terme et la clause de domaine ; décision terminologique en G0.5"
+  arbitrage: terminologique
+  categorie_correction: TERMINOLOGIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, texte: 'Nerode'}
+    - {role: reference, vol: volII, texte: 'Nerode'}
+- id: COL-EQ-02
+  famille: F6 équivalences
+  symboles: ['\equiv (histoires, livre III)', '\equiv_b (budgets, annexe L)', '\equiv_k^{\mathcal H} (profondeur, vol. II)']
+  objets: [I.III.FUNCTIONAL_HISTORY_EQUIVALENCE, I.L.BUDGET_FILTRATION, II.OPAC.DEPTH_EQUIVALENCE]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N2
+  intervention: A_ARBITRER
+  revue_F1: "N2 maintenu (F1) ; à réexaminer avec COL-DEPTH-01"
+  portee: inter
+  relations: [X036]
+  justification: "≡ indexé par une profondeur ou un budget dans les deux volumes (≡_b, ≡_k^H) pour des relations différentes ; analogie de filtration (X036) mais objets distincts"
+  impact_scientifique: "moyen (confusion budget de complexité / nombre de Kairos)"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  dependances: [COL-DEPTH-01]
+  propagation: "annexe L ; volume II section 13"
+  action_proposee: "documenter ; décision en G0.5 liée à COL-DEPTH-01"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, texte: '\\equiv'}
+    - {role: reference, vol: volII, texte: '\\equiv'}
+
+# ======================================================================== F7. Historicité
+- id: COL-HIST-01
+  famille: F7 historicité
+  symboles: ['« historicité structurelle » (non-commutativité des \mathcal K_i, livre I)', 'H_\rho^{s,\mathrm{ord}} « historicité structurelle ordinale » ; H_t^s « chronologique » (vol. II)']
+  objets: [I.CORE.STRUCTURAL_HISTORICITY, II.HIST.ORDINAL_HISTORICITY, II.HIST.CHRONOLOGICAL_HISTORICITY]
+  nature: [HOMONYMIE]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : même terme, propriétés distinctes (X033, X034 DIST), la seconde constitutive de la classe IWS"
+  portee: inter
+  relations: [X033, X034]
+  justification: "terme technique identique pour des propriétés distinctes (DIST établies) ; proximité conceptuelle forte, et la propriété du volume II est constitutive de la classe IWS (C23) : risque critique de lecture"
+  impact_scientifique: "fort : la prop. t1-historicite-structurelle pourrait être lue comme établissant H^{s,ord}"
+  impact_editorial: "livre I l. 1361–1386 ; table des énoncés"
+  impact_lean: "aucun"
+  propagation: "livre I (une section, une proposition), table des énoncés"
+  action_proposee: "arbitrage terminologique en G0.5 (qualifier le terme du volume I)"
+  arbitrage: terminologique
+  categorie_correction: TERMINOLOGIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, texte: 'historicité structurelle'}
+    - {role: reference, vol: volII, texte: 'istoricité structurelle'}
+
+# ======================================================================== F8. Profondeur, k, r, ℓ
+- id: COL-DEPTH-01
+  famille: F8 profondeur
+  symboles: ['« profondeur de séparabilité » \ell_{c,\mathfrak B,\rho}', '« profondeur comportementale » k (vol. II)', '\ell (réservé à l indice de coordonnées, V5.16) ; \ell_\pm (bloc conique)']
+  objets: [I.L.SEPARABILITY_DEPTH, II.DEPTH.DEPTH_RANK, II.CONIC.BLOCK]
+  nature: [HOMONYMIE, AMBIGUITE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N2 maintenu (F1) ; reclassement N3 à examiner si S6 (G0.5a) établit la distinction des deux profondeurs : toutes deux mesurent la profondeur de séparation par des histoires, mais X037 est UNK et la distinction des objets n'est pas établie"
+  portee: inter
+  relations: [X037]
+  justification: "même terme pour deux profondeurs de natures différentes (complexité de séparateurs contre nombre de Kairos) ; relation UNK ; de plus ℓ est réservé au volume II à un indice de coordonnées (V5.16) et y désigne ℓ_± dans le bloc conique"
+  impact_scientifique: "moyen (relation indéterminée)"
+  impact_editorial: "≈ 30 occurrences de ℓ au volume I (annexes G, L)"
+  impact_lean: "aucun"
+  propagation: "annexes G, L ; livre III l. 2384"
+  action_proposee: "décision terminologique et notationnelle en G0.5 ; instruire la relation X037 si un lien entre complexité et Kairos est envisagé"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: TERMINOLOGIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\ell'}
+    - {role: reference, vol: volII, glyphe: '\ell'}
+- id: COL-K-01
+  famille: F8 profondeur
+  symboles: ['k (profondeur, réservé V5.16)', 'k=\alpha/\beta (annexes C–D)', 'k (indices, modes, k^2)']
+  objets: [II.DEPTH.DEPTH_RANK, I.C.AMPLITUDE_FACTOR, I.D.EFFECTIVE_WRITE_RATE]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  cles_ambigues: ['volI|k']
+  justification: "k réservé à la profondeur et à la longueur de mot au volume II ; le volume I l'emploie comme rapport α/β (annexes C–D, k_eff) et comme indice ; pas de proximité conceptuelle, mais portée partagée (noyau, lu par les deux volumes)"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 20 occurrences (annexes C–D)"
+  impact_lean: "Lean emploie k pour α/β (LambdaQ lam k, AnnexC) : raccord documentaire"
+  propagation: "annexes C, D ; correspondances Lean"
+  action_proposee: "adapter le rapport k=α/β dans l'annexe C/D ou dérogation documentée en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'k', fichier: 'ANNEXE_[CD]'}
+    - {role: reference, vol: volII, glyphe: 'k'}
+- id: COL-R-01
+  famille: F8 profondeur
+  symboles: ['r (rang local d un Kairos, réservé V5.16)', 'r=\|\tau\|, r=\sqrt2|\theta| (norme de trace)', 'r_P, r_V, r_\chi, r_J, r_c, r_0, r^\ast, \vec r']
+  objets: [II.DEPTH.DEPTH_RANK, I.C.PARALLEL_STIFFNESS, I.D.REST_LOAD, I.CORE.PRESSURE_RESET, I.CORE.VELOCITY_RESET, I.III.RESIDUAL_CONTRIBUTION]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  cles_ambigues: ['volI|r']
+  justification: "r est réservé au rang local au volume II ; au volume I, r est la norme de trace dans m(r) (annexes C–F, livre II), et de nombreux r indexés sont des coefficients ; pas de proximité conceptuelle ; m(r) est central dans les annexes C–D et dans Lean"
+  impact_scientifique: "faible"
+  impact_editorial: "fort si adapté : ≈ 50 occurrences de r nu, plus les indexés"
+  impact_lean: "Lean emploie r et rP (28 fichiers mentionnent rP) : identifiants conservés, raccord documentaire"
+  propagation: "annexes A, C–F, livre II"
+  action_proposee: "documenter la portée ; adapter éventuellement r=‖τ‖ (pas les coefficients r_P, r_V) en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'r', indice: '^$'}
+    - {role: reference, vol: volII, glyphe: 'r', indice: '^$'}
+
+# ======================================================================== F9. C, D, q, A, B, χ, s, θ et lettres du noyau
+- id: COL-C-01
+  famille: F9 noyau
+  symboles: ['C (ensemble de flot, réservé V5.16)', 'C=b/(2a) (livre I l. 1054, annexe B)', 'C (épisode test, livre III)', 'C_k (cellules, annexe J)', 'C>0 (constante, annexe C)']
+  objets: [I.CORE.FLOW_SET, II.HYB.FLOW_SET, I.B.JUMP_ENVELOPE, I.III.COMPOSITION_EFFECT, I.J.HYBRID_CELLS]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  niveau_G04_initial: N3
+  reclassement_F1: "N3 → N2 (F1) : l'ensemble de flot C est le même objet dans les deux volumes (X004) ; la collision oppose C=b/(2a), l'épisode C et les cellules C_k à C au sein du volume I, avec des types incompatibles (constante, épisode, cellule contre ensemble) et des contextes explicites ; pas d'objets intervolumes distincts proches ; la réservation demeure un facteur aggravant"
+  portee: inter
+  cles_ambigues: ['volI|C']
+  justification: "C est réservé à l'ensemble de flot (V5.16) et le volume I l'emploie pour le même objet (X004) ; mais le livre I lui-même emploie C=b/(2a) dans le chapitre de bornitude, à quelques centaines de lignes de la définition de C : collision dans la portée partagée du noyau"
+  impact_scientifique: "faible (contexte clair) mais réel dans le livre I"
+  impact_editorial: "livre I l. 1054–1162 ; annexe B ; livre III l. 1089–1340 (épisode C)"
+  impact_lean: "à vérifier : constantes de l'annexe B non formalisées"
+  propagation: "livre I, annexe B, livre III, annexe J"
+  action_proposee: "adapter la constante b/(2a) et l'épisode test C du volume I en G0.5 ; conserver C ensemble de flot"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'C', indice: '^$', fichier: 'IWS_PART_I\.tex', lignes: [1035, 1200]}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'C', indice: '^$', fichier: 'ANNEXE_B|IWS_PART_III\.tex'}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'C', indice: '^k$'}
+    - {role: reference, vol: volII, glyphe: 'C', indice: '^$'}
+- id: COL-D-01
+  famille: F9 noyau
+  symboles: ['D (ensemble de saut)', 'D (délai, annexe F)', 'D, D_c, D_m, D_r (domaines, annexes J–K)', 'D⊆Z (classe, annexe I)', 'D_{(\varphi,\mu)} (différentielle, vol. II)', 'D_r (matrice des degrés, compagnon)']
+  objets: [I.CORE.JUMP_SET, I.F.TWO_EXPOSURE_PROTOCOL, I.J.DOMAINS, I.K.PLASTIC_VARIABLE, II.HYB.JUMP_SET, II.KERNEL.JUMP_SET, C.TRANS.EPISODE_DYNAMICS]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|D']
+  relations: [X005, X086]
+  justification: "au volume II, trois rôles : ensemble de saut du socle, D du noyau (instance, E5) et différentielle D_{(φ,μ)} (l. 1709) ; au volume I, ensemble de saut, délai, domaines réalisables ; au compagnon, matrice des degrés ; le délai D (annexe F) et le domaine D (annexe J) se trouvent dans des annexes qui parlent aussi de sauts"
+  impact_scientifique: "faible à moyen (domaine D des annexes J–K lu dans le même cadre que les exécutions hybrides)"
+  impact_editorial: "≈ 60 occurrences au volume I"
+  impact_lean: "à vérifier : Lean nomme l'ensemble de saut par prédicats de garde ; aucun D de délai"
+  propagation: "annexes F, I, J, K"
+  action_proposee: "conserver D ensemble de saut ; adapter délai et domaines du volume I en G0.5 ; la différentielle du volume II est un réemploi local (décision interne au volume II)"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'D', fichier: 'ANNEXE_[FIJK]'}
+    - {role: reference, vol: volII, glyphe: 'D'}
+- id: COL-DCAL-01
+  famille: F9 noyau
+  symboles: ['\mathcal D_i (livre I)', '\mathcal D (diagonale interne, annexe C)', '\mathcal D (délais, annexes G–H)', '\mathcal D_k (lieux dégénérés, vol. II)']
+  objets: [I.CORE.KAIROS_OPERATOR, I.C.INTERNAL_DIAGONAL, I.G.HISTORY_MONOID, I.H.PREFIX, II.WALLS.SCORES_WALLS]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|\mathcal{D}']
+  justification: "quatre objets sous \\mathcal D ; le délai \\mathcal D (générateurs d'attente) est un objet du cadre des histoires, partagé avec le volume II (monoïde) ; la diagonale \\mathcal D est centrale dans l'annexe C et dans Lean (ιD)"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 10 occurrences au volume I"
+  impact_lean: "ιD (Reduction.lean) nomme l'injection de la diagonale : raccord documentaire"
+  propagation: "livre I, annexes C, G, H"
+  action_proposee: "documenter ; adaptation éventuelle des délais en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{D}'}
+    - {role: reference, vol: volII, glyphe: '\mathcal{D}'}
+- id: COL-Q-01
+  famille: F9 noyau
+  symboles: ['q (perméabilité R1)', 'q (facteur de saut, annexe B)', 'q (nombre de composantes actives, annexes C–D)', 'q∈D (points, annexe J)', 'q=q_\parallel\mathbf u_1+q_\perp (annexe I)']
+  objets: [I.R1.PERMEABILITY, I.B.JUMP_ENVELOPE, I.C.AMPLITUDE_FACTOR, I.J.DOMAINS, I.I.ALIGNED_SUBSPACE]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  cles_ambigues: ['volI|q']
+  justification: "cinq rôles au volume I ; deux d'entre eux (q de l'annexe B, q de l'annexe C) sont proches de la perméabilité q dans le livre II et l'annexe E par leur statut de paramètre ; portées disjointes"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 70 occurrences"
+  impact_lean: "à vérifier : LambdaQ (Λ_q) en Lean emploie q comme nombre de composantes"
+  dependances: [COL-Q-02]
+  propagation: "livre II, annexes B, C, D, E, I, J"
+  action_proposee: "documenter les portées ; adapter éventuellement q de l'annexe B et de l'annexe J en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'q'}
+- id: COL-Q-02
+  famille: F9 noyau
+  symboles: ['q (nœud, vol. II l. 1262–1286)', 'q, q_0 (paramètre de protocole, vol. II V5.17 ; compagnon q=(ϑ,ε))']
+  objets: [II.OPAC.SELECTION_MARGIN, II.TRANS.PROTOCOL_PARAMETER, C.CERT.SECTION_PARAMETER]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_II
+  relations: [X071]
+  justification: "ambiguïté interne au volume II : q désigne un nœud dans le bloc du premier franchissement et le paramètre de protocole dans la sous-section V5.17 ; le volume II distingue q des coordonnées cachées (l. 1830) mais pas du nœud q"
+  impact_scientifique: "faible à moyen (deux usages dans des sections voisines sur la séparation)"
+  impact_editorial: "≈ 20 occurrences"
+  impact_lean: "aucun"
+  propagation: "volume II, sections 13 et V5.17 ; compagnons"
+  action_proposee: "décision interne au volume II en G0.5 (renommer le nœud q, ou documenter)"
+  arbitrage: notationnel_interne_II
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: 'q'}
+- id: COL-A-01
+  famille: F9 noyau
+  symboles: ['A (matrice d adjacence)', 'A, B (systèmes source et receveur, livre II)', 'A (réponse, région S_A, livre III)', 'A=\sqrt2\alpha/\beta, B=\sqrt2 w/\beta (annexe D)', 'A_V, A_H (annexe B)', 'A_{\mathcal P,\rho} (ensembles d appropriation, annexes H–I)', 'A(t), A_g(t), A_{g,T}(t) (matrices linéarisées)', 'A (paire miroir, vol. II l. 1211)']
+  objets: [I.CORE.ADJACENCY, II.KERNEL.ADJACENCY, I.II.TWO_SYSTEM_STATES, I.III.RESPONSE_REGION, I.D.BRANCH_EXPANSION_COEFFS, I.B.LYAPUNOV_CONSTANTS, I.H.APPROPRIATION_SET, I.I.SLOW_APPROPRIATION_SET, I.D.LINEAR_PREDICTOR, I.E.MONODROMY]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|A', 'volI|B']
+  relations: [X045]
+  justification: "A est l'adjacence dans les deux volumes (ID, X045) ; le volume I réemploie A pour le système source de la dyade (livre II), une réponse (livre III), des constantes (annexes B, D), des ensembles d'appropriation et des matrices ; le volume II emploie A pour une « paire miroir » (l. 1211) ; B suit le même schéma"
+  impact_scientifique: "faible (contextes distincts) ; moyen pour A_{\\mathcal P,ρ} lu à côté de l'adjacence A dans les annexes H–I"
+  impact_editorial: "≈ 100 occurrences hors adjacence"
+  impact_lean: "à vérifier : Lean nomme l'adjacence par un graphe (SimpleGraph) ; constantes A, B de l'annexe D formalisées (D5b) : raccord documentaire"
+  propagation: "livres II–III, annexes B, D, E, H, I"
+  action_proposee: "conserver A pour l'adjacence ; documenter ou adapter les réemplois de portée significative (système source, réponse) en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'A', decoration: '^$', fichier: 'IWS_PART_II\.tex|IWS_PART_III\.tex|ANNEXE_[BDEHI]'}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'B', fichier: 'IWS_PART_II\.tex|ANNEXE_D'}
+    - {role: reference, vol: volII, glyphe: 'A'}
+- id: COL-CHI-01
+  famille: F9 noyau
+  symboles: ['\chi, \boldsymbol\chi (variable d interface R2 ; livre II, annexes E–F)', '\chi (interface rapide, annexes H–K)', '\vec\chi (livre III)', '\chi_{ij} (bloc semi-algébrique, vol. II)']
+  objets: [I.R2.INTERFACE_VARIABLE, I.H.FAST_INTERFACE, I.III.SLOW_MEMORY, II.SA.SEMIALGEBRAIC_BLOCK]
+  nature: [AMBIGUITE, HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  justification: "homonymie intravolume à instruire (D4) : χ de R2 et χ des annexes H–K sont tous deux « variable d'interface » ; l'identité n'est pas établie (relation homonyme_a_instruire au registre) ; au volume II, χ_{ij} est un objet technique sans rapport"
+  impact_scientifique: "moyen : conditionne la lecture des résumés lents (p,χ,θ,s) comme prolongement de R2"
+  impact_editorial: "≈ 90 occurrences de χ au volume I"
+  impact_lean: "Dstar (AnnexC) emploie χ comme variable locale : sans rapport"
+  propagation: "livre II, annexes E, F, H–K, livre III"
+  action_proposee: "décision scientifique en G0.5 : identité ou distinction de χ (R2) et χ (H–K) ; puis notation"
+  arbitrage: scientifique
+  categorie_correction: SCIENTIFIQUE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\chi'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\boldsymbol{\chi}'}
+    - {role: reference, vol: volII, glyphe: '\chi'}
+- id: COL-S-01
+  famille: F9 noyau
+  symboles: ['s(i,j) (similarité)', 's=\tanh h (annexe C)', 's (variable spectrale de p(s))', 's (variable lente scalaire, annexe F ; livre II)', '\mathbf s (contenu mnésique, H–K ; mémoire vectorielle, livre II)', '\boldsymbol s (annexe F)', '\vec s (livre III)', 's_0, s^\star (annexe H)']
+  objets: [I.CORE.SIMILARITY, I.C.STRUCTURAL_EQUILIBRIUM, I.C.EQUILIBRIUM_JACOBIAN, I.F.INTERFACE_MEMORY, I.H.MEMORY_CONTENT, I.III.SLOW_MEMORY, I.H.SWITCH_POINT]
+  nature: [HOMONYMIE, SYNONYMIE, AMBIGUITE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-13]
+  cles_ambigues: ['volI|s']
+  justification: "au moins cinq rôles du s nu au volume I ; en outre la même mémoire d'interface est écrite \\mathbf s (livre II) et \\boldsymbol s (annexe F) [synonymie], et le lien entre s (annexe F), \\vec s (livre III) et \\mathbf s (H–K) n'est pas instruit [ambiguïté, D4]"
+  impact_scientifique: "moyen (identité des mémoires lentes à travers les livres II–III et les annexes F, H–K)"
+  impact_editorial: "fort : ≈ 300 occurrences de s au volume I"
+  impact_lean: "à vérifier : s=tanh h et sech² dans les identifiants de l'annexe C/D"
+  dependances: [COL-S-02, COL-CHI-01]
+  propagation: "livres I–III, annexes A–F, H–L"
+  action_proposee: "décision scientifique en G0.5 sur l'identité des mémoires lentes ; puis notation unifiée de la mémoire et réemplois locaux conservés (s=tanh h, variable spectrale)"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 's'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathbf{s}'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\boldsymbol{s}'}
+- id: COL-S-02
+  famille: F9 noyau
+  symboles: ['s∈\Sstruct (valeur structurelle, vol. II) ; s_i (norme carrée locale, réservé V5.16)', 's, \mathbf s, s_1, s_2 (vol. I)']
+  objets: [II.PRES.STRUCT_VALUES, II.SA.SEMIALGEBRAIC_BLOCK, I.H.MEMORY_CONTENT, I.III.SLOW_MEMORY]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  justification: "au volume II, s est une valeur structurelle (lecture π_s) ; au volume I, le contenu survivant s porte « ce qui reste » d'une histoire : proximité conceptuelle (structure contre contenu mnésique) ; s_i est réservé au bloc semi-algébrique, et le volume I emploie s_1, s_2 pour des mémoires (livre III)"
+  impact_scientifique: "moyen"
+  impact_editorial: "voir COL-S-01"
+  impact_lean: "aucun"
+  propagation: "voir COL-S-01"
+  action_proposee: "examiner en G0.5 avec COL-S-01"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: 's'}
+- id: COL-THETA-01
+  famille: F9 noyau
+  symboles: ['\theta (composante de trace diagonale : annexes C–F, livre II)', '\theta (horloge ou phase lente : annexes H–K, livre III)', '\theta (angles : vol. II θ_r(u), bloc conique e(θ), action-angle)', '\theta_0 (condition initiale ; θ_0(g) charge au repos)']
+  objets: [I.C.SCALAR_DIAGONAL_REDUCTION, I.H.SLOW_CLOCK, II.OPAC.JOINT_REACHABLE_SET, II.CONIC.BLOCK, I.D.REST_LOAD]
+  nature: [HOMONYMIE, AMBIGUITE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  anomalies: [A-G02-10, A-G02-13]
+  cles_ambigues: ['volI|\theta', 'volI|\theta_{0}', 'volII|\theta']
+  justification: "θ désigne au volume I une composante de trace, puis une horloge lente ; au volume II des angles ; θ_0 désigne à la fois la condition initiale de trace et la charge au repos θ_0(g) (annexe D) ; l'identité éventuelle entre la composante de trace (R2) et la phase intermédiaire θ des annexes H–K n'est pas instruite"
+  impact_scientifique: "moyen (lecture des résumés lents)"
+  impact_editorial: "≈ 235 occurrences de θ au volume I"
+  impact_lean: "θ dans 24 fichiers Lean (composante de trace, annexes C–D) : raccord documentaire"
+  dependances: [COL-SYN-01, COL-SYN-02]
+  propagation: "livres II–III, annexes C–K"
+  action_proposee: "décision en G0.5 avec COL-CHI-01 et COL-S-01 ; distinguer θ_0 (condition initiale) et θ_0(g)"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\theta'}
+    - {role: reference, vol: volII, glyphe: '\theta'}
+- id: COL-U-01
+  famille: F9 noyau
+  symboles: ['u (entrée du noyau, réservé V5.16)', 'u∈Ω (paramètre de sonde, livre III)', 'u_1, u_\perp (directions, annexe F)']
+  objets: [II.KERNEL.INPUT_BOUND, I.CORE.INPUT, I.III.PROBE_FAMILY, I.F.INTERFACE_MEMORY]
+  nature: [HOMONYMIE]
+  niveau: N3
+  intervention: A_ARBITRER
+  facteur_aggravant: reservation_volume_II
+  revue_F1: "N3 maintenu (F1) : paramètre de sonde contre entrée du noyau, alors que les sondes sont réalisées par des entrées (X020)"
+  portee: inter
+  relations: [X020, X021]
+  justification: "u est réservé à l'entrée du noyau (V5.16) et employé ainsi par le volume I (livre I) ; le livre III emploie u pour un paramètre de sonde (37 occurrences), alors que, dans le noyau, les sondes sont réalisées par des entrées u (X020) : proximité conceptuelle forte (paramètre de sonde contre entrée)"
+  impact_scientifique: "moyen à fort : \\mathcal R_{\\mathcal H_0}(u) peut être lu comme réponse à une entrée"
+  impact_editorial: "≈ 40 occurrences (livre III)"
+  impact_lean: "aucun (livre III non formalisé)"
+  propagation: "livre III, livre II l. 1818"
+  action_proposee: "adapter le paramètre de sonde du livre III dans la portée de réservation (G0.5)"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'u', fichier: 'IWS_PART_III\.tex'}
+    - {role: reference, vol: volII, glyphe: 'u'}
+- id: COL-V-01
+  famille: F9 noyau
+  symboles: ['v (fonction-score du lemme orbital, réservé V5.16)', 'v (vitesse réduite, annexes C–F, livre II)', 'v_X, v_B (dyade)']
+  objets: [I.C.REDUCED_VARIABLES, I.C.SCALAR_DIAGONAL_REDUCTION, I.II.TWO_SYSTEM_STATES]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: PRESERVER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  cles_ambigues: ['volI|v', 'volI|v_{0}']
+  justification: "réservation du volume II très locale (une occurrence, lemme orbital) ; au volume I, v est la vitesse réduite, cohérente avec V du noyau ; aucune proximité de rôle"
+  impact_scientifique: "nul"
+  impact_editorial: "nul si conservé"
+  impact_lean: "v employé dans les systèmes réduits Lean : sans incidence"
+  propagation: "aucune si dérogation"
+  action_proposee: "conserver au volume I (portée de la réservation limitée au lemme orbital) ; à confirmer en G0.5"
+  arbitrage: notationnel
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'v'}
+    - {role: reference, vol: volII, glyphe: 'v'}
+- id: COL-E-01
+  famille: F9 noyau
+  symboles: ['E (énergie, réservé V5.16)', 'E (énergie sans terme croisé, annexe B)', 'E_C (carte de coupure, annexe J)', 'E_\chi (annexe E)', 'E (quantités de la certification)']
+  objets: [I.B.ENERGY, I.J.CELL_RESPONSE, I.R2.EVENT_CYCLE]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: DOCUMENTER
+  facteur_aggravant: reservation_volume_II
+  portee: inter
+  justification: "E désigne l'énergie dans l'annexe B, conformément à la réservation ; E_C et E_χ sont indexés, de rôles sans rapport ; le volume II n'emploie pas E hors indices historiques"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "annexes E, J"
+  action_proposee: "conserver ; documenter E_C et E_χ"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'E', indice: '^C$|^\\chi$'}
+- id: COL-EPS-01
+  famille: F9 noyau
+  symboles: ['\varepsilon (histoire vide, vol. I et II)', '\varepsilon (terme croisé, annexe B)', '\varepsilon (approximation, annexe H)', '\varepsilon (paramètre de déformation q=(ϑ,ε), vol. II V5.17)', '\epsilon (bloc conique, vol. II)']
+  objets: [I.G.HISTORY_MONOID, II.HIST.MONOID, I.B.CROSS_TERM_PARAMETER, II.TRANS.PROTOCOL_PARAMETER, II.CONIC.BLOCK]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|\varepsilon', 'volII|\varepsilon', 'volII|\epsilon']
+  justification: "au volume II, ε est l'unité du monoïde des histoires ET le paramètre de déformation de la sous-section V5.17 [ambiguïté interne au volume II] ; ε (\\epsilon) du bloc conique est un écart local, graphiquement voisin de \\varepsilon ; au volume I, ε est l'histoire vide (cohérent) mais aussi le paramètre du terme croisé (annexe B, livre I)"
+  impact_scientifique: "faible"
+  impact_editorial: "faible à moyen"
+  impact_lean: "à vérifier : ε (terme croisé) non formalisé ; compagnons : paramètre de déformation"
+  propagation: "volume II (V5.17, bloc conique) ; volume I annexe B"
+  action_proposee: "décision interne au volume II pour le paramètre de déformation ; documenter \\epsilon/\\varepsilon"
+  arbitrage: notationnel_interne_II
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\varepsilon', indice: '^$'}
+    - {role: reference, vol: volII, glyphe: '\varepsilon'}
+    - {role: reference, vol: volII, glyphe: '\epsilon'}
+- id: COL-DELTA-01
+  famille: F9 noyau
+  symboles: ['\Delta (variété homogène)', '\Delta\mathcal L (variation au saut)', '\Delta, \Delta_n (période R2)', '\Delta (délai, livre III)', '\Delta_p (période des cascades)', '\Delta\tau_h, \Delta\tau_j, S_\Delta, \Delta_{j,w}^{(r)} (vol. II)']
+  objets: [I.C.HOMOGENEOUS_MANIFOLD, I.CORE.LYAPUNOV, I.R2.EVENT_CYCLE, I.III.RELAXATION_PROTOCOL, I.C.ACTIVE_WELL_CYCLE, II.KERNEL.ANTISYMMETRIC_TRACE_INCREMENT, II.KERNEL.HIDDEN_TRACE_DIFFERENCE]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|\Delta', 'volII|\Delta']
+  justification: "au volume I, Δ est la variété homogène (annexe C, livre I) mais aussi une période et un délai ; au volume II, S_Δ renvoie à la variété homogène du volume I, et Δτ_h, Δτ_j sont des incréments (même schéma pour deux objets, ambiguïté interne au volume II)"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 70 occurrences au volume I"
+  impact_lean: "liftΔ, InDelta (Lean) nomment la variété homogène : raccord documentaire"
+  propagation: "livre I, annexes B, C, E, F, livre III ; volume II"
+  action_proposee: "conserver Δ pour la variété homogène (renvoi S_Δ du volume II) ; adapter période et délai en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\Delta', fichier: 'ANNEXE_[EF]|IWS_PART_III\.tex'}
+    - {role: reference, vol: volII, glyphe: '\Delta'}
+- id: COL-CAL-01
+  famille: F9 noyau
+  symboles: ['\mathcal A (attracteurs autonomes ; préfixe, annexe H ; \mathcal A_{\infty,\mathcal H})', '\mathcal P (protocole de contact ; sonde, annexes H–K ; \mathcal P_k partition, vol. II)', '\mathcal L (Lyapunov ; protocole de relaxation, livre III ; \mathcal L_F dérivée de Lie, vol. II)', '\mathcal G (regraine ; graphe des voisinages ; lois \mathcal G_{lin,pl,fig} ; \mathcal G_N)', '\mathcal V (nœuds ; Lyapunov λ=0)', '\mathcal M (\mathcal M_al ; \mathcal M_g)']
+  objets: [I.II.AUTONOMOUS_ATTRACTORS, I.H.PREFIX, I.D.CONTACT_PROTOCOL, I.H.PROBE, II.OPAC.WORD_PARTITION, I.CORE.LYAPUNOV, I.III.RELAXATION_PROTOCOL, II.TAX.MECHANISM_WITNESSES, I.H.REGRAINING, I.III.NEIGHBOURHOOD_GRAPH, I.K.PRESENTATIONS, I.CORE.NODES, I.C.LYAPUNOV_LAMBDA0, I.I.ALIGNED_SUBSPACE, I.E.MONODROMY]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  cles_ambigues: ['volI|\mathcal{V}']
+  justification: "réemplois de lettres calligraphiques entre livres et annexes ; les plus significatifs : \\mathcal P protocole de contact (livres II, annexes D–F) contre sonde (annexes H–K), deux histoires expérimentales proches ; \\mathcal A attracteur contre préfixe ; \\mathcal P_k (partition, volume II) contre \\mathcal P (sonde) ; \\mathcal L Lyapunov contre relaxation"
+  impact_scientifique: "faible à moyen (\\mathcal P)"
+  impact_editorial: "≈ 150 occurrences"
+  impact_lean: "IsAppropriated (Lean, annexe D) porte \\mathcal A_0, \\mathcal A_1 et le protocole : raccord documentaire"
+  propagation: "livres II–III, annexes C–K"
+  action_proposee: "documenter ; examiner en G0.5 \\mathcal P (contact contre sonde) et \\mathcal A (attracteur contre préfixe)"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{P}'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{A}'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{L}', fichier: 'IWS_PART_III\.tex'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{G}'}
+- id: COL-E-ALPH-01
+  famille: F9 noyau
+  symboles: ['\mathcal E (alphabet des épisodes, vol. I)', '\mathcal E_I^{\mathrm{adm}} (paires admissibles, vol. II)']
+  objets: [I.G.HISTORY_MONOID, I.III.EPISODES, II.PRES.ADMISSIBLE_PAIRS]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  relations: [X079]
+  justification: "le volume II reprend le monoïde de l'annexe G (X013) sans nommer son alphabet, et emploie \\mathcal E pour un autre objet ; portée partagée (histoires)"
+  impact_scientifique: "faible"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "annexe G, livre III ; volume II l. 169–182"
+  action_proposee: "documenter ; choix de l'alphabet en G0.5 si le volume II le nomme"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{E}'}
+    - {role: reference, vol: volII, glyphe: '\mathcal{E}'}
+
+# ======================================================================== F10. Synonymies (objets identiques ou équivalents, notations différentes)
+- id: COL-SYN-01
+  famille: F10 synonymies
+  symboles: ['(x,y,\vartheta) annexe C', '(x,v,\theta) annexe D, livre II', '(x,\dot x,\theta) annexe F']
+  objets: [I.C.SCALAR_DIAGONAL_REDUCTION]
+  nature: [SYNONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-10]
+  justification: "trois écritures de la même réduction scalaire, utilisée au livre II et formalisée en Lean (field, field6)"
+  impact_scientifique: "faible"
+  impact_editorial: "moyen (annexes C, D, F, livre II)"
+  impact_lean: "Lean suit l'écriture de l'annexe C ou D selon les fichiers : raccord documentaire"
+  propagation: "annexes C, D, F, livre II"
+  action_proposee: "unifier l'écriture en G0.5 (cohérence avec COL-VTH-01 et COL-THETA-01)"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'y', fichier: 'ANNEXE_C', lignes: [1726, 1830]}
+- id: COL-SYN-02
+  famille: F10 synonymies
+  symboles: ['\theta_\infty (livre II l. 295)', '\theta_0(g) (annexe D l. 186)']
+  objets: [I.D.REST_LOAD]
+  nature: [SYNONYMIE, HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-13]
+  justification: "même charge gw/β sous deux notations ; θ_0 désigne aussi la condition initiale de trace, et θ_∞^± les points fixes du cycle R2"
+  impact_scientifique: "faible"
+  impact_editorial: "faible"
+  impact_lean: "tendsto_rest (Lean) : limite gw/β ; raccord documentaire"
+  propagation: "livre II, annexes D, E"
+  action_proposee: "unifier en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\theta', indice: '^0$|^\\infty$'}
+- id: COL-SYN-03
+  famille: F10 synonymies
+  symboles: ['R_b (livre I)', '\widehat R (annexe B)']
+  objets: [I.B.JUMP_ENVELOPE]
+  nature: [SYNONYMIE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-11]
+  justification: "même enveloppe r_J(R+C), deux notations dans le livre I et son annexe"
+  impact_scientifique: "nul"
+  impact_editorial: "≈ 25 occurrences"
+  impact_lean: "aucun (annexe B non formalisée)"
+  propagation: "livre I, annexe B"
+  action_proposee: "unifier en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'R', indice: '^b$'}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'R', decoration: '\\widehat'}
+- id: COL-SYN-04
+  famille: F10 synonymies
+  symboles: ['\mathfrak G_N (livre I l. 154, 168)', '\mathcal G_N (livre I l. 761)']
+  objets: [I.CORE.GRAPH_SPACE, I.CORE.ADMISSIBLE_INITIAL_CONDITION]
+  nature: [SYNONYMIE, QUASI_COLLISION]
+  niveau: N1
+  intervention: CORRECTION_CANDIDATE
+  portee: intra_I
+  anomalies: [A-G02-12]
+  justification: "typographie : même ensemble de graphes ; \\mathcal G désigne par ailleurs le graphe des voisinages et la regraine (livre III, annexe H)"
+  impact_scientifique: "nul"
+  impact_editorial: "1 occurrence"
+  impact_lean: "aucun"
+  propagation: "1 occurrence"
+  action_proposee: "corriger la typographie en G0.7 (correction notationnelle mineure)"
+  arbitrage: aucun
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{G}', indice: '^N$'}
+- id: COL-SYN-05
+  famille: F10 synonymies
+  symboles: ['\mathcal K, \mathcal K_i (opérateur de Kairos, vol. I)', 'K (opérateur de saut), K^* (cascade) (vol. II)', '\mathcal K (ensemble des signatures, annexe J)']
+  objets: [I.CORE.KAIROS_OPERATOR, II.HYB.JUMP_OPERATOR, II.HYB.CASCADE_MAP, I.J.SIGNATURE]
+  nature: [SYNONYMIE, HOMONYMIE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: inter
+  relations: [X007, X008]
+  justification: "le même opérateur est noté \\mathcal K (vol. I) et K (vol. II, GEN) ; au volume I, \\mathcal K désigne aussi l'ensemble des signatures (annexe J)"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 10 occurrences de \\mathcal K"
+  impact_lean: "à vérifier (JumpMechanics : cascadeState, rewiredGraph)"
+  propagation: "livre I, annexes A, J"
+  action_proposee: "appliquer la notation du volume II (K, K^*) dans le volume I en G0.5 si l'identification est retenue ; adapter le \\mathcal K de l'annexe J"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{K}'}
+    - {role: reference, vol: volII, glyphe: 'K'}
+- id: COL-SYN-06
+  famille: F10 synonymies
+  symboles: ['\Phi_{\mathcal H}(X) (vol. I)', '\End(x,\mathcal H) (vol. II)', '\operatorname{Exec}_{\mathcal H}(X) (vol. I)', '\gamma_{x,\mathcal H}=\Exec(x,\mathcal H) (vol. II)']
+  objets: [I.III.TRANSITIONS, II.HIST.END_STATE, I.III.EXECUTION, II.HYB.EXECUTION]
+  nature: [SYNONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter
+  relations: [X010, X011]
+  justification: "même objet sous des notations différentes si X010–X011 sont admises (candidates, dépendant de E3) : état terminal Φ_{\\mathcal H}(X) contre End(x,\\mathcal H) ; exécution Exec_{\\mathcal H}(X) contre Exec(x,\\mathcal H) (ordre et position des arguments)"
+  impact_scientifique: "moyen (dépend de E3)"
+  impact_editorial: "fort : livre III, annexes G–L"
+  impact_lean: "aucun"
+  dependances: [COL-X-01, COL-PHI-01]
+  propagation: "livre III, annexes G–L"
+  action_proposee: "ne pas harmoniser avant décision sur 𝔛 (E3) et sur X010–X011 (G0.5)"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\operatorname{Exec}'}
+    - {role: reference, vol: volII, glyphe: '\operatorname{End}'}
+- id: COL-SYN-07
+  famille: F10 synonymies
+  symboles: ['i^\ast (vol. I)', 'i_r^\ast (vol. II)', 'i_r (certification)']
+  objets: [I.CORE.REWIRING, II.OPAC.SELECTION_MARGIN, C.CERT.IMPACT_SEQUENCE]
+  nature: [SYNONYMIE]
+  niveau: N1
+  intervention: DOCUMENTER
+  portee: inter
+  relations: [X063, X072]
+  justification: "même nœud sélectionné sous trois écritures ; le volume II documente lui-même l'équivalence i_r^*=i_r"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "à vérifier (JumpMechanics)"
+  propagation: "faible"
+  action_proposee: "documenter ; le volume II reste la référence"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'i', exposant: '^\\ast$'}
+- id: COL-SYN-08
+  famille: F10 synonymies
+  symboles: ['P^+=r_PP^- (livre I, livre II R2, compagnon)', 'P^+=r_P\Theta (annexes A, B, C, E ; Lean)']
+  objets: [I.CORE.PRESSURE_RESET]
+  nature: [SYNONYMIE, AMBIGUITE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-08]
+  justification: "deux écritures équivalentes sur les sauts atteignables du noyau (R002, E6), différentes hors de P⁻=Θ (sauf r_P=0) ; non étendue à R2 (R-G0-16)"
+  impact_scientifique: "faible pour le noyau ; ouvert pour R2"
+  impact_editorial: "6 sites"
+  impact_lean: "Lean emploie r_PΘ avec la garde P_i=Θ et signale la coïncidence sur C (README annexe A) : cohérent avec R002"
+  propagation: "livre I, livre II, annexes A, B, C, E"
+  action_proposee: "choisir une écriture de référence en G0.5 en citant la condition P⁻=Θ ; instruire R2 séparément"
+  arbitrage: scientifique_et_notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'r', indice: '^P$'}
+- id: COL-SYN-09
+  famille: F10 synonymies
+  symboles: ['def:t2-appropriation', 'def:D-appropriation']
+  objets: [I.II.APPROPRIATION, I.D.APPROPRIATION]
+  nature: [SYNONYMIE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-03]
+  justification: "deux énoncés d'une même notion, identiques comme prédicats sous C1–C4 (R001, E6) ; attracteur final noté \\mathcal A ou \\mathcal A_1"
+  impact_scientifique: "faible après R001"
+  impact_editorial: "faible"
+  impact_lean: "IsAppropriated (Lean) suit l'annexe D"
+  propagation: "livre II, annexe D"
+  action_proposee: "en G0.5, choix d'un énoncé de référence et d'une notation de l'attracteur final"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: '\mathcal{A}', indice: '^1$|^$', fichier: 'IWS_PART_II\.tex|ANNEXE_D'}
+- id: COL-SYN-10
+  famille: F10 synonymies
+  symboles: ['a_1, a_2 (développement de G(x,g), annexe D l. 658–746 ; livre II l. 430)', 'a_1, a_2 (Routh–Hurwitz, annexe D l. 943–981 ; annexe C)']
+  objets: [I.D.BRANCH_EXPANSION_COEFFS, I.C.EQUILIBRIUM_JACOBIAN]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: intra_I
+  anomalies: [A-G02-09]
+  justification: "deux objets sous la même notation dans la même annexe D"
+  impact_scientifique: "faible"
+  impact_editorial: "≈ 50 occurrences"
+  impact_lean: "charCoeffs (Lean, 6 fichiers) pour Routh–Hurwitz : raccord documentaire"
+  propagation: "annexes C, D, livre II"
+  action_proposee: "renommer l'un des deux jeux dans l'annexe D en G0.5"
+  arbitrage: notationnel
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'a', indice: '^[012]$'}
+
+# ======================================================================== F11. Familles d'hypothèses et étiquettes
+- id: COL-H-01
+  famille: F11 hypothèses
+  symboles: ['H1–H4 (socle, vol. II)', '(H1)–(H5) (transmission C², compagnon ; cités vol. II l. 1792)']
+  objets: [II.HYB.WELL_POSEDNESS, C.TRANS.HYPOTHESES]
+  nature: [HOMONYMIE]
+  niveau: N2
+  intervention: A_ARBITRER
+  portee: inter_C
+  anomalies: [A-G02-06]
+  relations: [X073]
+  justification: "mêmes étiquettes pour des familles distinctes ; le volume II signale la distinction (l. 1792), ce qui confirme le risque ; H désigne aussi les historicités H_ρ du volume II"
+  impact_scientifique: "moyen (H1–H4 conditionnent \\Hyb ; (H1)–(H5) le théorème de transmission)"
+  impact_editorial: "faible en nombre"
+  impact_lean: "aucun"
+  propagation: "volume II l. 91, 1792 ; compagnons"
+  action_proposee: "décision en G0.5 : renommer l'une des familles (probablement celle du compagnon) ; décision interne au volume II et aux compagnons"
+  arbitrage: notationnel_interne_II
+  categorie_correction: NOTATIONNELLE
+  selecteurs:
+    - {role: reference, vol: volII, texte: 'H1--H'}
+    - {role: reference, vol: compagnons, texte: '\(H[1-5]\)'}
+- id: COL-LAB-01
+  famille: F11 hypothèses
+  symboles: ['(A1)–(A4) (annexe I)', 'A.1–A.4 (sections de l annexe A, table des énoncés)', '(E1)–(E3), O1 (annexe H)', '(O1)–(O3) (annexe G)', '(P1)–(P6) (annexe K)', '(S), (Z_R^\sharp)']
+  objets: [I.I.CLOSURE_HYPOTHESES, I.H.REDUCTION_HYPOTHESES, I.G.OBSERVATION_CONDITIONS, I.K.EQUIVALENCE_HYPOTHESES, I.B.CONDITION_S]
+  nature: [HOMONYMIE, QUASI_COLLISION]
+  niveau: N1
+  intervention: DOCUMENTER
+  portee: intra_I
+  justification: "étiquettes d'hypothèses réemployées entre annexes ; O1 (annexe H) reprend en substance (O1) de l'annexe G ; (A1) se lit comme la section A.1 dans la table des énoncés"
+  impact_scientifique: "faible"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "annexes G, H, I, K ; table des énoncés"
+  action_proposee: "documenter ; préfixer éventuellement les étiquettes par l'annexe (G0.5)"
+  arbitrage: notationnel
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, texte: '\(A[1-4]\)'}
+    - {role: cote_a_examiner, vol: volI, texte: '\(P[1-6]\)'}
+
+# ======================================================================== F12. Ambiguïtés internes au volume II (hors familles précédentes)
+- id: COL-HYB-01
+  famille: F12 interne II
+  symboles: ['\Hyb (classe)', '\Hyb_G, \Hyb_{G_0}\subseteq\Hyb_{G_1} (catégories)']
+  objets: [II.HYB.AMBIENT_CLASS, II.MOR.AMBIENT_CATEGORY]
+  nature: [AMBIGUITE]
+  niveau: N1
+  intervention: A_ARBITRER
+  portee: intra_II
+  anomalies: [A-G02-07]
+  justification: "formes notationnelles distinctes (indice obligatoire), donc pas de collision ; reste un usage avant définition (l. 506 avant l. 569) et une inclusion catégorique implicite"
+  impact_scientifique: "faible"
+  impact_editorial: "faible"
+  impact_lean: "aucun"
+  propagation: "volume II l. 504–569"
+  action_proposee: "décision interne au volume II : déplacer ou annoncer la définition"
+  arbitrage: notationnel_interne_II
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, texte: '\\Hyb'}
+- id: COL-SUPP-01
+  famille: F12 interne II
+  symboles: ['\Supp (=C, l. 300)', '\Supp^{G_1}_{\mathcal B}(I)', '\Reach^{\mathrm{flow}}_{\mathcal B}(I)']
+  objets: [II.EFF.SUPPORT, II.EFF.REACH]
+  nature: [AMBIGUITE]
+  niveau: N4
+  intervention: A_ARBITRER
+  portee: intra_II
+  anomalies: [A-G02-02]
+  justification: "\\Reach^{flow} employé sans définition ; \\Supp employé avant sa définition à granularité G_1 : définition absente au sens du plan (N4)"
+  impact_scientifique: "faible à moyen (support des répertoires)"
+  impact_editorial: "5 occurrences"
+  impact_lean: "aucun"
+  propagation: "volume II l. 300, 480–490"
+  action_proposee: "décision interne au volume II en G0.5 : définir \\Reach^{flow} ou reformuler"
+  arbitrage: scientifique_interne_II
+  categorie_correction: SCIENTIFIQUE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: '\operatorname{Reach}'}
+    - {role: reference, vol: volII, glyphe: '\operatorname{Supp}'}
+- id: COL-G-01
+  famille: F12 interne II
+  symboles: ['G (groupe du lemme orbital)', 'G_0, G_1, G_2 (granularités)', 'G(x), G(x,g) (vol. I, annexes C–D)', 'G (dynamique de γ, annexe K)']
+  objets: [II.GRAN.G1, II.GRAN.G2, I.D.EQUILIBRIUM_RESIDUAL, I.K.PLASTIC_VARIABLE]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: PRESERVER
+  portee: inter
+  cles_ambigues: ['volII|G']
+  justification: "au volume II, G nu est un groupe local au lemme orbital et G_k une granularité (indice discriminant) ; au volume I, G est une fonction (annexes C–D) ou une loi (annexe K) : réemplois locaux"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "Gfun, Gg, Gx (Lean, annexe D) : sans incidence"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: 'G', indice: '^$'}
+- id: COL-T-01
+  famille: F12 interne II
+  symboles: ['T (système cible des morphismes S→T)', 'T (horizon fini)', 'T=(\mathbb R^d)^N (espace des traces, l. 1775)', 'T (durée d exposition ; horizon) (vol. I)']
+  objets: [II.MOR.DYNAMIC_MORPHISM, II.KERNEL.ADMISSIBLE_READINGS, I.D.MIN_EXPOSURE_TIME, I.A.FINITE_HORIZON_BOUNDS]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: DOCUMENTER
+  portee: inter
+  cles_ambigues: ['volII|T', 'volI|T']
+  justification: "trois rôles de T au volume II (ambiguïté interne, contextes séparés) ; au volume I, durée et horizon, rôles locaux"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "à vérifier (T* minExposure, horizon T de l'annexe A)"
+  propagation: "faible"
+  action_proposee: "documenter ; décision interne au volume II pour l'espace des traces T"
+  arbitrage: notationnel_interne_II
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: 'T', indice: '^$'}
+- id: COL-M-01
+  famille: F12 interne II
+  symboles: ['m (nombre d arêtes échangées ; m_r)', 'm (cardinal, lemme orbital)', 'm(\theta) (bloc conique, vol. II l. 1715)', 'm(r) (rappel effectif, vol. I)', 'm_0, m_\parallel, m_1, m_2, m_* (vol. I)']
+  objets: [I.CORE.REWIRING, II.OPAC.SELECTION_MARGIN, II.CONIC.BLOCK, I.C.PARALLEL_STIFFNESS, I.D.BRANCH_EXPANSION_COEFFS]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: PRESERVER
+  portee: inter
+  cles_ambigues: ['volI|m', 'volII|m']
+  justification: "m = nombre d'arêtes modifiées dans les deux volumes (cohérent : X063) ; réemplois locaux m(θ) (bloc conique) et m(r) (rappel du volume I), cardinal du lemme orbital ; aucune ambiguïté de rôle dans leurs contextes"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "mpar (Lean) pour m(r) : sans incidence"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'm', indice: '^$'}
+    - {role: reference, vol: volII, glyphe: 'm'}
+- id: COL-PHIV-01
+  famille: F12 interne II
+  symboles: ['\varphi (angle, bloc conique ; \varphi_*)', '\varphi_4, \varphi_5 (boucles du témoin, l. 948)', '\varphi (vol. I : y/\tanh y ; fonction décroissante, annexe L ; phase)']
+  objets: [II.CONIC.BLOCK, I.L.SEPARABILITY_PSEUDOMETRIC]
+  nature: [HOMONYMIE]
+  niveau: N0
+  intervention: PRESERVER
+  portee: inter
+  cles_ambigues: ['volII|\varphi', 'volII|\varphi_{4}', 'volII|\varphi_{5}', 'volI|\varphi']
+  justification: "réemplois locaux dans des preuves ou des témoins, sans rôle partagé"
+  impact_scientifique: "nul"
+  impact_editorial: "nul"
+  impact_lean: "aucun"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: reference, vol: volII, glyphe: '\varphi'}
+    - {role: cote_a_examiner, vol: volI, glyphe: '\varphi'}
+
+# ======================================================================== F13. Réemplois locaux légitimes (N0), regroupés
+- id: COL-LOC-01
+  famille: F13 réemplois locaux
+  symboles: ['x, y, z, h, t, x_0, z_0, t_0, v_0 (variables et conditions initiales)']
+  objets: [I.C.SCALAR_DIAGONAL_REDUCTION, I.A.CONTINUOUS_STATE, I.I.ALIGNED_SLOW_STATE, I.C.REDUCED_VARIABLES]
+  nature: [HOMONYMIE]
+  niveau: N0
+  intervention: PRESERVER
+  portee: intra_I
+  cles_ambigues: ['volI|x', 'volI|z', 'volI|h', 'volI|x_{0}', 'volI|z_{0}', 'volI|t_{0}']
+  justification: "lettres de variables et de conditions initiales réemployées d'une annexe à l'autre ; les objets structurants qu'elles portent sont enregistrés (réduction diagonale, état continu z, état lent z) ; les résidus sont des variables de calcul"
+  impact_scientifique: "nul"
+  impact_editorial: "nul"
+  impact_lean: "aucun"
+  propagation: "aucune"
+  action_proposee: "conserver ; documenter dans la table des notations les rôles structurants de x et z"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'x', indice: '^$'}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'z'}
+- id: COL-LOC-02
+  famille: F13 réemplois locaux
+  symboles: ['c, a, b, d, \delta, \eta, J, \sigma, p, P, I (constantes, coefficients, écarts, jacobiens, variables d intégration, pressions réduites, intervalles, identité)']
+  objets: [I.B.LYAPUNOV_CONSTANTS, I.L.COMPLEXITY, I.CORE.DIMENSION, I.R1.CLOSURE_RATE, I.C.EQUILIBRIUM_JACOBIAN, I.C.REDUCED_VARIABLES, I.III.COMPOSITION_EFFECT, I.L.SEPARATORS]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: PRESERVER
+  portee: intra_I
+  cles_ambigues: ['volI|c', 'volI|a', 'volI|b', 'volI|d', 'volI|\delta', 'volI|\eta', 'volI|J', 'volI|\sigma', 'volI|p', 'volI|P', 'volI|I', 'volII|I', 'compagnons|d', 'compagnons|I']
+  justification: "lettres à plusieurs rôles, chacun local (annexe, preuve) ; trois cas méritent une mention : la complexité c (annexes G, L) face aux constantes c, la dimension d face aux distances d_ρ, d_{c,𝔅,ρ}, et l'amorce P (livre III) et la présentation P (annexe L) face à la pression P du noyau ; aucune ambiguïté de rôle dans leurs portées"
+  impact_scientifique: "nul"
+  impact_editorial: "faible"
+  impact_lean: "à vérifier pour p et c (annexe C) : identifiants c, kap, Dstar"
+  propagation: "faible"
+  action_proposee: "conserver ; documenter c (complexité), d (dimension), P (amorce, présentation)"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'c', indice: '^$'}
+    - {role: cote_a_examiner, vol: volI, glyphe: 'P', fichier: 'IWS_PART_III\.tex|ANNEXE_L'}
+- id: COL-LOC-03
+  famille: F13 réemplois locaux
+  symboles: ['R_V (borne sur un compact, annexe A ; matrice de saut, annexes E–F)']
+  objets: [I.E.MONODROMY]
+  nature: [HOMONYMIE]
+  niveau: N1
+  intervention: PRESERVER
+  portee: intra_I
+  cles_ambigues: ['volI|R_{V}']
+  justification: "deux usages locaux dans des annexes différentes"
+  impact_scientifique: "nul"
+  impact_editorial: "2 occurrences"
+  impact_lean: "aucun"
+  propagation: "aucune"
+  action_proposee: "conserver"
+  arbitrage: aucun
+  categorie_correction: DOCUMENTAIRE
+  selecteurs:
+    - {role: cote_a_examiner, vol: volI, glyphe: 'R', indice: '^V$'}
+
+# ======================================================================== Corrections numériques et scientifiques (catégorie distincte, rappel)
+corrections_scientifiques:
+  - {id: SCI-01, anomalie: A-G02-14, objet: I.D.BRANCH_EXPANSION_COEFFS, nature: numérique, description: "c₁=−2,1779 et c₂=0,3220 ; valeurs anciennes −2,1774 (livre II l. 482, annexe D l. 809, annexe F l. 319) et 0,3216 (livre II l. 484) ; résultat dépendant annexe F l. 330", reference: "audits/G0/G0_03_crosswalk/D2_resistant_branch.md"}
+  - {id: SCI-02, anomalie: A-G02-15, objet: I.D.BRANCH_EXPANSION_COEFFS, nature: scientifique, description: "annulation exacte des termes en m₂ ; énoncés « s'annulent presque » et « origine non établie » inexacts", reference: "audits/G0/G0_03_crosswalk/D2_resistant_branch.md"}
+  - {id: SCI-03, anomalie: null, objet: I.D.EFFECTIVE_WRITE_RATE, nature: scientifique, description: "constat en lecture seule : la formalisation Lean de l'annexe D signale que le minimum ζ_min(k) n'existe pas toujours (infimum non atteint pour k=0) et emploie ζ_inf(k) ; non instruit en G0 (aucune question mathématique résolue)", reference: "iws-lean/README.md, section « Correspondance Annexe D ↔ Lean », écarts signalés"}
+
+# ======================================================================== Réservations du volume II (audit V5.16 et macros) : examen des usages au volume I
+reservations_V5_16:
+  - {symbole: 'C', role_reserve: "ensemble de flot", usage_vol_I: "même objet (X004) ; réemplois C=b/(2a), épisode C, cellules C_k", collision: COL-C-01}
+  - {symbole: 'E', role_reserve: "énergie", usage_vol_I: "énergie (annexe B), conforme ; E_C, E_χ indexés", collision: COL-E-01}
+  - {symbole: '\Xi', role_reserve: "chambre", usage_vol_I: "aucune occurrence", collision: null}
+  - {symbole: '\Sigma', role_reserve: "coupe de fibre d'opacité", usage_vol_I: "régime d'extinction, frontières (annexes H–K)", collision: COL-SIG-01}
+  - {symbole: '\Omega', role_reserve: "domaine paramétrique", usage_vol_I: "espace des sondes (livre III), cartes de réponse (H–K)", collision: COL-OME-01}
+  - {symbole: '\Phi', role_reserve: "homéomorphisme de paramétrisation", usage_vol_I: "transitions, matrice fondamentale, interaction", collision: COL-PHI-01}
+  - {symbole: '\vartheta', role_reserve: "paramètre caché", usage_vol_I: "composante diagonale de la trace (annexe C)", collision: COL-VTH-01}
+  - {symbole: '\operatorname{Dep}', role_reserve: "support nodal de dépendance", usage_vol_I: "aucune occurrence", collision: null}
+  - {symbole: 'k', role_reserve: "profondeur", usage_vol_I: "rapport α/β, indices", collision: COL-K-01}
+  - {symbole: 'r', role_reserve: "rang local d'un Kairos", usage_vol_I: "norme de trace, coefficients indexés", collision: COL-R-01}
+  - {symbole: 'u', role_reserve: "entrée du noyau", usage_vol_I: "entrée (conforme) ; paramètre de sonde (livre III)", collision: COL-U-01}
+  - {symbole: 'v', role_reserve: "fonction-score du lemme orbital", usage_vol_I: "vitesse réduite", collision: COL-V-01}
+  - {symbole: 's_i', role_reserve: "norme carrée locale (bloc semi-algébrique)", usage_vol_I: "s_1, s_2 mémoires (livre III)", collision: COL-S-02}
+  - {symbole: '\mathscr F_w, \Omega_w, b_{i,w}, \lambda_{r,w}, \tau_\star', role_reserve: "bloc semi-algébrique", usage_vol_I: "aucune occurrence de ces formes", collision: null}
+  - {symbole: '\ell', role_reserve: "indice de coordonnées", usage_vol_I: "profondeur de séparabilité ℓ_{c,𝔅,ρ}", collision: COL-DEPTH-01}
+  - {symbole: '\mathcal X (macro \X)', role_reserve: "états complets (E3)", usage_vol_I: "espace des états du noyau (conforme) ; 𝔛 voisin", collision: COL-X-01}
+  - {symbole: '\mathcal S (macro \Sstruct)', role_reserve: "valeurs structurelles", usage_vol_I: "espace des contenus (annexe H)", collision: COL-SSTRUCT-01}
+  - {symbole: '\mathfrak M (macro \M)', role_reserve: "monoïde des histoires", usage_vol_I: "même objet et même glyphe (X013)", collision: null}
+
+# ======================================================================== Relations DIST/ANA de G0.3 sans collision propre
+relations_examinees_sans_collision:
+  - {relation: X012, motif: "convention de composition : notations compatibles (H_1·H_2), aucune collision"}
+  - {relation: X019, motif: "notions différentes sous des noms différents (niveaux de fermeture, compatibilité préfixe–état)"}
+  - {relation: X025, motif: "\\mathcal Y_ρ et Y : glyphes distincts ; rattaché à COL-RHO-01 par l'indice ρ"}
+  - {relation: X030, motif: "« séparatrice » et « séparante » : termes distincts, objets reliés (DER)"}
+  - {relation: X031, motif: "Sep et \\mathcal U : notations distinctes"}
+  - {relation: X032, motif: "≡ (livre III) traité dans COL-EQ-02 ; H_{ρ,I,𝔅} sans homonyme au volume I"}
+  - {relation: X035, motif: "Acc et \\Rep : notations distinctes ; distinction documentée en G0.3"}
+  - {relation: X038, motif: "κ (signature) et Word_s : notations distinctes ; κ réemploie les coefficients de pression (rattaché à COL-SYN-05 pour \\mathcal K)"}
+  - {relation: X039, motif: "« cellule » et « chambre » : termes distincts"}
+  - {relation: X040, motif: "K_κ et W_{ij} : notations distinctes"}
+  - {relation: X041, motif: "énoncés de méthode, sans notation commune"}
+  - {relation: X081, motif: "S_A(X) et \\mathcal P_k : notations distinctes ; \\mathcal P rattaché à COL-CAL-01"}
+  - {relation: X082, motif: "\\mathcal M_al et Aut : notations distinctes"}
+  - {relation: X073, motif: "traité dans COL-H-01"}
+
+# ======================================================================== Synonymies des relations ID examinées
+synonymies_ID_examinees:
+  - {relation: X013, verdict: "même glyphe \\mathfrak M (macro \\M du volume II) : aucune synonymie"}
+  - {relation: X014, verdict: "histoires \\mathcal H, ε, · : mêmes notations"}
+  - {relation: X016, verdict: "\\mathfrak B (vol. I) contre \\mathcal B (vol. II) : synonymie graphique si l'identité candidate est retenue ; rattachée à COL-CAL-01 pour mémoire, à arbitrer en G0.5 avec X016"}
+  - {relation: X010, verdict: "COL-SYN-06"}
+  - {relation: X011, verdict: "COL-SYN-06"}
+  - {relation: X045, verdict: "A : même notation"}
+  - {relation: X046, verdict: "H : même notation"}
+  - {relation: X047, verdict: "V : même notation"}
+  - {relation: X048, verdict: "P : même notation ; écritures du reset : COL-SYN-08"}
+  - {relation: X049, verdict: "τ : même notation"}
+  - {relation: X050, verdict: "N : même notation"}
+  - {relation: X051, verdict: "Θ : même notation"}
+  - {relation: X052, verdict: "ζ : même notation"}
+  - {relation: X053, verdict: "γ_0, γ_1 : même notation ; au volume II, γ désigne aussi l'exécution γ_{x,H} (réemploi, N1, documenté dans COL-CAL-01 pour mémoire)"}
+  - {relation: X054, verdict: "λ : même notation ; λ_{r,w} (vol. II) et λ_χ (vol. I) indexés"}
+  - {relation: X055, verdict: "d : même notation"}
+  - {relation: X070, verdict: "paramètres du noyau : mêmes notations"}
+  - {relation: X071, verdict: "q=(ϑ,ε) : même notation ; ϑ : COL-VTH-01 ; q : COL-Q-02"}
+  - {relation: X072, verdict: "COL-SYN-07"}
+  - {relation: X083, verdict: "Q : même notation"}
+  - {relation: X084, verdict: "M : même notation ; M_λ (compagnon) indexé"}
+  - {relation: X085, verdict: "Γ : même notation"}
+  - {relation: X086, verdict: "D : même notation ; rôles de D : COL-D-01"}
+  - {relation: R001, verdict: "COL-SYN-09"}
+  - {relation: R002, verdict: "COL-SYN-08"}
